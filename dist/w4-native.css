@@ -108,7 +108,7 @@
 }
 
 .w4-input {
-  width: 100%;
+  inline-size: 100%;
   border: 1px solid hsl(var(--w4-base-300));
   border-radius: var(--w4-radius-input);
   background: hsl(var(--w4-base-100));
