@@ -2,6 +2,8 @@
 
 namespace W4\NativeUi\Themes\Presets;
 
+use W4\NativeUi\Themes\Presets\AbstractPreset;
+
 class NightPreset extends AbstractPreset
 {
     public function name(): string

@@ -2,6 +2,8 @@
 
 namespace W4\NativeUi\Themes\Presets;
 
+use W4\NativeUi\Themes\Presets\AbstractPreset;
+
 class DarkPreset extends AbstractPreset
 {
     public function name(): string
