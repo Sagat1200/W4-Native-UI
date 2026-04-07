@@ -35,4 +35,19 @@ class ServiceProviderTest extends TestCase
             'w4-button-disabled',
         ], $classes);
     }
+
+    public function test_ignora_variant_invalida_en_resolver(): void
+    {
+        $theme = $this->app->make(NativeTheme::class);
+
+        $classes = $theme->resolveComponent('button', [
+            'variant' => 'invalid',
+            'size' => 'md',
+        ]);
+
+        $this->assertSame([
+            'w4-button',
+            'w4-button-md',
+        ], $classes);
+    }
 }

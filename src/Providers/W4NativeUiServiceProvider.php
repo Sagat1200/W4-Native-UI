@@ -4,9 +4,15 @@ namespace W4\NativeUi\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use W4\NativeUi\Console\Commands\InstallNativeUiCommand;
+use W4\NativeUi\Console\Commands\BuildNativeUiAssetsCommand;
 use W4\NativeUi\Support\ThemeManifest;
 use W4\NativeUi\Support\ThemeRegistry;
 use W4\NativeUi\Themes\NativeTheme;
+use W4\NativeUi\Themes\Components\AlertTheme;
+use W4\NativeUi\Themes\Components\BadgeTheme;
+use W4\NativeUi\Themes\Components\ButtonTheme;
+use W4\NativeUi\Themes\Components\CardTheme;
+use W4\NativeUi\Themes\Components\InputTheme;
 use W4\NativeUi\Themes\Presets\CorporatePreset;
 use W4\NativeUi\Themes\Presets\DarkPreset;
 use W4\NativeUi\Themes\Presets\DefaultPreset;
@@ -41,7 +47,14 @@ class W4NativeUiServiceProvider extends ServiceProvider
         $this->app->singleton(NativeTheme::class, function ($app) {
             return new NativeTheme(
                 $app->make(ThemeRegistry::class),
-                $app->make(ThemeManifest::class)
+                $app->make(ThemeManifest::class),
+                [
+                    'button' => new ButtonTheme(),
+                    'input' => new InputTheme(),
+                    'card' => new CardTheme(),
+                    'alert' => new AlertTheme(),
+                    'badge' => new BadgeTheme(),
+                ]
             );
         });
     }
@@ -77,6 +90,7 @@ class W4NativeUiServiceProvider extends ServiceProvider
             }
 
             $this->commands([
+                BuildNativeUiAssetsCommand::class,
                 InstallNativeUiCommand::class,
             ]);
         }

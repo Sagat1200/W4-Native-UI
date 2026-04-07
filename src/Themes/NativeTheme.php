@@ -3,6 +3,7 @@
 namespace W4\NativeUi\Themes;
 
 use InvalidArgumentException;
+use W4\NativeUi\Contracts\ComponentThemeContract;
 use W4\NativeUi\Contracts\ThemeContract;
 use W4\NativeUi\Support\ThemeManifest;
 use W4\NativeUi\Support\ThemeRegistry;
@@ -11,9 +12,9 @@ class NativeTheme implements ThemeContract
 {
     public function __construct(
         protected ThemeRegistry $registry,
-        protected ThemeManifest $manifest
-    ) {
-    }
+        protected ThemeManifest $manifest,
+        protected array $components = []
+    ) {}
 
     public function name(): string
     {
@@ -37,20 +38,13 @@ class NativeTheme implements ThemeContract
             throw new InvalidArgumentException('El nombre del componente no puede estar vacío.');
         }
 
-        $classes = ['w4-' . $component];
-
-        if (isset($state['variant']) && $state['variant'] !== '') {
-            $classes[] = "w4-{$component}-{$state['variant']}";
+        if (array_key_exists($component, $this->components)) {
+            $resolver = $this->components[$component];
+            if ($resolver instanceof ComponentThemeContract) {
+                return $resolver->resolve($state);
+            }
         }
 
-        if (isset($state['size']) && $state['size'] !== '') {
-            $classes[] = "w4-{$component}-{$state['size']}";
-        }
-
-        if (!empty($state['disabled'])) {
-            $classes[] = "w4-{$component}-disabled";
-        }
-
-        return array_values(array_unique($classes));
+        return ['w4-' . $component];
     }
 }
