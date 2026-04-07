@@ -1,0 +1,30 @@
+<?php
+
+namespace W4\NativeUi\Support;
+
+class ThemeManifest
+{
+    public function __construct(
+        protected string $defaultPreset,
+        protected array $availablePresets = []
+    ) {
+    }
+
+    public static function fromConfig(array $config): self
+    {
+        return new self(
+            $config['default_preset'] ?? 'native.default',
+            $config['available_presets'] ?? []
+        );
+    }
+
+    public function defaultPreset(): string
+    {
+        return $this->defaultPreset;
+    }
+
+    public function availablePresets(): array
+    {
+        return $this->availablePresets;
+    }
+}

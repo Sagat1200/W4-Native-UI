@@ -1,0 +1,9 @@
+[data-theme="native.dark"] {
+  --w4-primary: 217 91% 60%;
+  --w4-secondary: 262 83% 68%;
+  --w4-accent: 174 72% 53%;
+  --w4-base-100: 222 47% 11%;
+  --w4-base-200: 223 39% 14%;
+  --w4-base-300: 224 31% 18%;
+  --w4-base-content: 210 40% 98%;
+}

@@ -1,0 +1,91 @@
+.w4-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--w4-radius-button);
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.w4-btn-primary {
+  background: hsl(var(--w4-primary));
+  color: hsl(var(--w4-primary-content));
+}
+
+.w4-btn-secondary {
+  background: hsl(var(--w4-secondary));
+  color: hsl(var(--w4-secondary-content));
+}
+
+.w4-btn-lg {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+}
+
+.w4-btn-md {
+  font-size: 0.9375rem;
+}
+
+.w4-btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8125rem;
+}
+
+.w4-btn-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.w4-input {
+  width: 100%;
+  border: 1px solid hsl(var(--w4-base-300));
+  border-radius: var(--w4-radius-input);
+  background: hsl(var(--w4-base-100));
+  color: hsl(var(--w4-base-content));
+  padding: 0.625rem 0.75rem;
+}
+
+.w4-input:focus {
+  outline: 2px solid hsl(var(--w4-primary));
+  outline-offset: 1px;
+}
+
+.w4-card {
+  background: hsl(var(--w4-base-100));
+  border: 1px solid hsl(var(--w4-base-300));
+  border-radius: var(--w4-radius-card);
+  box-shadow: var(--w4-shadow-sm);
+}
+
+.w4-card-body {
+  padding: 1rem;
+}
+
+.w4-alert {
+  border-radius: var(--w4-radius-input);
+  padding: 0.75rem 1rem;
+}
+
+.w4-alert-success {
+  background: hsl(142 70% 93%);
+  color: hsl(142 56% 22%);
+}
+
+.w4-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.w4-badge-primary {
+  background: hsl(var(--w4-primary));
+  color: hsl(var(--w4-primary-content));
+}

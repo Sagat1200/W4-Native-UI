@@ -1,0 +1,17 @@
+:root {
+  --w4-primary: 222 89% 55%;
+  --w4-primary-content: 0 0% 100%;
+  --w4-secondary: 262 83% 58%;
+  --w4-secondary-content: 0 0% 100%;
+  --w4-accent: 174 72% 43%;
+  --w4-accent-content: 0 0% 100%;
+  --w4-base-100: 0 0% 100%;
+  --w4-base-200: 210 20% 96%;
+  --w4-base-300: 214 18% 90%;
+  --w4-base-content: 222 47% 11%;
+  --w4-radius-button: 0.75rem;
+  --w4-radius-input: 0.625rem;
+  --w4-radius-card: 1rem;
+  --w4-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --w4-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

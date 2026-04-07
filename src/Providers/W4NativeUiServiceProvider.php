@@ -4,6 +4,14 @@ namespace W4\NativeUi\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use W4\NativeUi\Console\Commands\InstallNativeUiCommand;
+use W4\NativeUi\Support\ThemeManifest;
+use W4\NativeUi\Support\ThemeRegistry;
+use W4\NativeUi\Themes\NativeTheme;
+use W4\NativeUi\Themes\Presets\CorporatePreset;
+use W4\NativeUi\Themes\Presets\DarkPreset;
+use W4\NativeUi\Themes\Presets\DefaultPreset;
+use W4\NativeUi\Themes\Presets\NightPreset;
+use W4\NativeUi\Themes\Presets\SoftPreset;
 
 class W4NativeUiServiceProvider extends ServiceProvider
 {
@@ -14,6 +22,28 @@ class W4NativeUiServiceProvider extends ServiceProvider
         if (is_file($configPath)) {
             $this->mergeConfigFrom($configPath, 'w4-native-ui');
         }
+
+        $this->app->singleton(ThemeManifest::class, function () {
+            return ThemeManifest::fromConfig(config('w4-native-ui', []));
+        });
+
+        $this->app->singleton(ThemeRegistry::class, function () {
+            $registry = new ThemeRegistry();
+            $registry->registerPreset(new DefaultPreset());
+            $registry->registerPreset(new DarkPreset());
+            $registry->registerPreset(new CorporatePreset());
+            $registry->registerPreset(new SoftPreset());
+            $registry->registerPreset(new NightPreset());
+
+            return $registry;
+        });
+
+        $this->app->singleton(NativeTheme::class, function ($app) {
+            return new NativeTheme(
+                $app->make(ThemeRegistry::class),
+                $app->make(ThemeManifest::class)
+            );
+        });
     }
 
     public function boot(): void

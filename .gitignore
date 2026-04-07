@@ -1,6 +1,6 @@
 /composer.lock
 /vendor
-/phpunit.result.cache
-/phpunit.xml
+/.phpunit.result.cache
+/phpunit.xml.dist
 /node_modules
 /package-lock.json
