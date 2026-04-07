@@ -1,6 +1,8 @@
 <?php
 
-namespace W4\NativeUi\Themes\Components;
+namespace W4\NativeUi\Themes\Components\FeedBack;
+
+use W4\NativeUi\Themes\Components\AbstractComponentTheme;
 
 class BadgeTheme extends AbstractComponentTheme
 {

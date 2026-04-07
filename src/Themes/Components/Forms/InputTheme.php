@@ -1,6 +1,8 @@
 <?php
 
-namespace W4\NativeUi\Themes\Components;
+namespace W4\NativeUi\Themes\Components\Forms;
+
+use W4\NativeUi\Themes\Components\AbstractComponentTheme;
 
 class InputTheme extends AbstractComponentTheme
 {

@@ -1,6 +1,8 @@
 <?php
 
-namespace W4\NativeUi\Themes\Components;
+namespace W4\NativeUi\Themes\Components\UI;
+
+use W4\NativeUi\Themes\Components\AbstractComponentTheme;
 
 class ButtonTheme extends AbstractComponentTheme
 {
