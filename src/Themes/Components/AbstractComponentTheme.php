@@ -21,8 +21,24 @@ abstract class AbstractComponentTheme implements ComponentThemeContract
             $classes[] = "w4-{$component}-{$size}";
         }
 
-        if (!empty($state['disabled'])) {
-            $classes[] = "w4-{$component}-disabled";
+        $allowedStates = $this->states();
+
+        $statesFromList = $state['states'] ?? [];
+        if (is_string($statesFromList) && $statesFromList !== '') {
+            $statesFromList = [$statesFromList];
+        }
+        if (is_array($statesFromList)) {
+            foreach ($statesFromList as $resolvedState) {
+                if (is_string($resolvedState) && in_array($resolvedState, $allowedStates, true)) {
+                    $classes[] = "w4-{$component}-{$resolvedState}";
+                }
+            }
+        }
+
+        foreach ($allowedStates as $allowedState) {
+            if (!empty($state[$allowedState])) {
+                $classes[] = "w4-{$component}-{$allowedState}";
+            }
         }
 
         return array_values(array_unique($classes));
@@ -34,6 +50,11 @@ abstract class AbstractComponentTheme implements ComponentThemeContract
     }
 
     protected function sizes(): array
+    {
+        return [];
+    }
+
+    protected function states(): array
     {
         return [];
     }

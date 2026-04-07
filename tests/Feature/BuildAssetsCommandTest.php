@@ -18,5 +18,7 @@ class BuildAssetsCommandTest extends TestCase
         $this->assertStringContainsString(':root {', $content);
         $this->assertStringContainsString('.w4-btn', $content);
         $this->assertStringContainsString('.w4-select', $content);
+        $this->assertStringContainsString('.w4-panel', $content);
+        $this->assertStringContainsString('.w4-toast', $content);
     }
 }

@@ -9,7 +9,8 @@ class ConfigurableComponentTheme extends AbstractComponentTheme
     public function __construct(
         protected string $name,
         protected array $allowedVariants = [],
-        protected array $allowedSizes = []
+        protected array $allowedSizes = [],
+        protected array $allowedStates = []
     ) {}
 
     public function component(): string
@@ -25,5 +26,10 @@ class ConfigurableComponentTheme extends AbstractComponentTheme
     protected function sizes(): array
     {
         return $this->allowedSizes;
+    }
+
+    protected function states(): array
+    {
+        return $this->allowedStates;
     }
 }

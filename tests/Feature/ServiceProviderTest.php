@@ -67,6 +67,51 @@ class ServiceProviderTest extends TestCase
         ], $classes);
     }
 
+    public function test_resuelve_estados_de_componentes(): void
+    {
+        $theme = $this->app->make(NativeTheme::class);
+
+        $classes = $theme->resolveComponent('toggle', [
+            'variant' => 'primary',
+            'size' => 'sm',
+            'checked' => true,
+            'disabled' => true,
+        ]);
+
+        $this->assertSame([
+            'w4-toggle',
+            'w4-toggle-primary',
+            'w4-toggle-sm',
+            'w4-toggle-disabled',
+            'w4-toggle-checked',
+        ], $classes);
+    }
+
+    public function test_resuelve_componentes_layout_y_feedback(): void
+    {
+        $theme = $this->app->make(NativeTheme::class);
+
+        $panelClasses = $theme->resolveComponent('panel', [
+            'variant' => 'elevated',
+            'size' => 'md',
+        ]);
+
+        $toastClasses = $theme->resolveComponent('toast', [
+            'variant' => 'success',
+        ]);
+
+        $this->assertSame([
+            'w4-panel',
+            'w4-panel-elevated',
+            'w4-panel-md',
+        ], $panelClasses);
+
+        $this->assertSame([
+            'w4-toast',
+            'w4-toast-success',
+        ], $toastClasses);
+    }
+
     public function test_fallback_para_componente_sin_resolver(): void
     {
         $theme = $this->app->make(NativeTheme::class);
