@@ -13,16 +13,46 @@ class RadioTheme extends AbstractComponentTheme
 
     protected function variants(): array
     {
-        return ['primary', 'secondary'];
+        return ['default', 'primary', 'secondary'];
     }
 
     protected function sizes(): array
     {
-        return ['sm', 'md', 'lg'];
+        return ['xs', 'sm', 'md', 'lg', 'xl'];
     }
 
     protected function states(): array
     {
-        return ['disabled', 'readonly', 'checked'];
+        return ['disabled', 'readonly', 'invalid', 'valid', 'loading', 'selected'];
+    }
+
+    public function stateMap(): array
+    {
+        return [
+            'disabled' => [
+                'class' => 'w4-radio-disabled',
+                'js' => 'radio:disable',
+            ],
+            'readonly' => [
+                'class' => 'w4-radio-readonly',
+                'js' => 'radio:readonly',
+            ],
+            'invalid' => [
+                'class' => 'w4-radio-invalid',
+                'js' => 'radio:invalid',
+            ],
+            'valid' => [
+                'class' => 'w4-radio-valid',
+                'js' => 'radio:valid',
+            ],
+            'loading' => [
+                'class' => 'w4-radio-loading',
+                'js' => 'radio:loading',
+            ],
+            'selected' => [
+                'class' => 'w4-radio-selected',
+                'js' => 'radio:select',
+            ],
+        ];
     }
 }

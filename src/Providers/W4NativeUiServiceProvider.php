@@ -9,19 +9,27 @@ use W4\NativeUi\Support\ThemeManifest;
 use W4\NativeUi\Support\ThemeRegistry;
 use W4\NativeUi\Themes\NativeTheme;
 use W4\NativeUi\Themes\Components\UI\ButtonTheme;
+use W4\NativeUi\Themes\Components\UI\IconTheme;
+use W4\NativeUi\Themes\Components\UI\IconButtonTheme;
+use W4\NativeUi\Themes\Components\UI\LabelTheme;
+use W4\NativeUi\Themes\Components\UI\LinkTheme;
+use W4\NativeUi\Themes\Components\UI\TextTheme;
 use W4\NativeUi\Themes\Components\Forms\InputTheme;
+use W4\NativeUi\Themes\Components\Forms\FieldErrorTheme;
+use W4\NativeUi\Themes\Components\Forms\HelperTextTheme;
 use W4\NativeUi\Themes\Components\Forms\SelectTheme;
 use W4\NativeUi\Themes\Components\Forms\TextareaTheme;
 use W4\NativeUi\Themes\Components\Forms\CheckboxTheme;
 use W4\NativeUi\Themes\Components\Forms\RadioTheme;
 use W4\NativeUi\Themes\Components\Forms\ToggleTheme;
 use W4\NativeUi\Themes\Components\Layout\CardTheme;
-use W4\NativeUi\Themes\Components\Layout\DividerTheme;
 use W4\NativeUi\Themes\Components\Layout\ContainerTheme;
 use W4\NativeUi\Themes\Components\Layout\StackTheme;
 use W4\NativeUi\Themes\Components\Layout\GridTheme;
 use W4\NativeUi\Themes\Components\Layout\SectionTheme;
 use W4\NativeUi\Themes\Components\Layout\PanelTheme;
+use W4\NativeUi\Themes\Components\UI\DividerTheme;
+use W4\NativeUi\Themes\Components\UI\HeadingTheme;
 use W4\NativeUi\Themes\Components\FeedBack\AlertTheme;
 use W4\NativeUi\Themes\Components\FeedBack\BadgeTheme;
 use W4\NativeUi\Themes\Components\FeedBack\ToastTheme;
@@ -65,7 +73,14 @@ class W4NativeUiServiceProvider extends ServiceProvider
                 $app->make(ThemeManifest::class),
                 [
                     'button' => new ButtonTheme(),
+                    'icon' => new IconTheme(),
+                    'icon-button' => new IconButtonTheme(),
+                    'label' => new LabelTheme(),
+                    'link' => new LinkTheme(),
+                    'text' => new TextTheme(),
                     'input' => new InputTheme(),
+                    'field-error' => new FieldErrorTheme(),
+                    'helper-text' => new HelperTextTheme(),
                     'select' => new SelectTheme(),
                     'textarea' => new TextareaTheme(),
                     'checkbox' => new CheckboxTheme(),
@@ -75,6 +90,7 @@ class W4NativeUiServiceProvider extends ServiceProvider
                     'alert' => new AlertTheme(),
                     'badge' => new BadgeTheme(),
                     'divider' => new DividerTheme(),
+                    'heading' => new HeadingTheme(),
                     'container' => new ContainerTheme(),
                     'stack' => new StackTheme(),
                     'grid' => new GridTheme(),

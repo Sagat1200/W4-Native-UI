@@ -77,7 +77,12 @@ abstract class AbstractComponentTheme implements ComponentThemeContract
     protected function activeStates(array $state, array $allowedStates): array
     {
         $activeStates = [];
+        $currentState = $state['state'] ?? null;
         $statesFromList = $state['states'] ?? [];
+
+        if (is_string($currentState) && in_array($currentState, $allowedStates, true)) {
+            $activeStates[] = $currentState;
+        }
 
         if (is_string($statesFromList) && $statesFromList !== '') {
             $statesFromList = [$statesFromList];

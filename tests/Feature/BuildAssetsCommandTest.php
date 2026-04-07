@@ -20,5 +20,19 @@ class BuildAssetsCommandTest extends TestCase
         $this->assertStringContainsString('.w4-select', $content);
         $this->assertStringContainsString('.w4-panel', $content);
         $this->assertStringContainsString('.w4-toast', $content);
+        $this->assertStringContainsString('.w4-heading', $content);
+        $this->assertStringContainsString('.w4-icon-button', $content);
+        $this->assertStringContainsString('.w4-icon', $content);
+        $this->assertStringContainsString('.w4-label', $content);
+        $this->assertStringContainsString('.w4-link', $content);
+        $this->assertStringContainsString('.w4-text', $content);
+        $this->assertStringContainsString('.w4-checkbox-readonly', $content);
+        $this->assertStringContainsString('.w4-radio-readonly', $content);
+        $this->assertStringContainsString('.w4-select-readonly', $content);
+        $this->assertStringContainsString('.w4-toggle-readonly', $content);
+        $this->assertStringContainsString('.w4-textarea-readonly', $content);
+        $this->assertStringContainsString('.w4-field-error', $content);
+        $this->assertStringContainsString('.w4-helper-text', $content);
+        $this->assertStringContainsString('.w4-input-readonly', $content);
     }
 }

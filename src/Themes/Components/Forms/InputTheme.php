@@ -13,17 +13,17 @@ class InputTheme extends AbstractComponentTheme
 
     protected function variants(): array
     {
-        return ['bordered', 'ghost'];
+        return ['default', 'bordered', 'ghost'];
     }
 
     protected function sizes(): array
     {
-        return ['sm', 'md', 'lg'];
+        return ['xs', 'sm', 'md', 'lg', 'xl'];
     }
 
     protected function states(): array
     {
-        return ['disabled', 'loading', 'readonly', 'invalid', 'valid', 'focus'];
+        return ['disabled', 'loading', 'readonly', 'invalid', 'valid'];
     }
 
     public function stateMap(): array
@@ -48,10 +48,6 @@ class InputTheme extends AbstractComponentTheme
             'valid' => [
                 'class' => 'w4-input-valid',
                 'js' => 'input:valid',
-            ],
-            'focus' => [
-                'class' => 'w4-input-focus',
-                'js' => 'input:focus',
             ],
         ];
     }
