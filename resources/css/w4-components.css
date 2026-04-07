@@ -42,7 +42,7 @@
 }
 
 .w4-input {
-  width: 100%;
+  inline-size: 100%;
   border: 1px solid hsl(var(--w4-base-300));
   border-radius: var(--w4-radius-input);
   background: hsl(var(--w4-base-100));
@@ -88,4 +88,32 @@
 .w4-badge-primary {
   background: hsl(var(--w4-primary));
   color: hsl(var(--w4-primary-content));
+}
+
+.w4-select,
+.w4-textarea {
+  inline-size: 100%;
+  border: 1px solid hsl(var(--w4-base-300));
+  border-radius: var(--w4-radius-input);
+  background: hsl(var(--w4-base-100));
+  color: hsl(var(--w4-base-content));
+  padding: 0.625rem 0.75rem;
+}
+
+.w4-select:focus,
+.w4-textarea:focus {
+  outline: 2px solid hsl(var(--w4-primary));
+  outline-offset: 1px;
+}
+
+.w4-checkbox,
+.w4-radio,
+.w4-toggle {
+  accent-color: hsl(var(--w4-primary));
+}
+
+.w4-divider {
+  border: 0;
+  border-block-start: 1px solid hsl(var(--w4-base-300));
+  margin: 1rem 0;
 }

@@ -8,11 +8,7 @@ use W4\NativeUi\Console\Commands\BuildNativeUiAssetsCommand;
 use W4\NativeUi\Support\ThemeManifest;
 use W4\NativeUi\Support\ThemeRegistry;
 use W4\NativeUi\Themes\NativeTheme;
-use W4\NativeUi\Themes\Components\AlertTheme;
-use W4\NativeUi\Themes\Components\BadgeTheme;
-use W4\NativeUi\Themes\Components\ButtonTheme;
-use W4\NativeUi\Themes\Components\CardTheme;
-use W4\NativeUi\Themes\Components\InputTheme;
+use W4\NativeUi\Themes\Components\ConfigurableComponentTheme;
 use W4\NativeUi\Themes\Presets\CorporatePreset;
 use W4\NativeUi\Themes\Presets\DarkPreset;
 use W4\NativeUi\Themes\Presets\DefaultPreset;
@@ -49,11 +45,17 @@ class W4NativeUiServiceProvider extends ServiceProvider
                 $app->make(ThemeRegistry::class),
                 $app->make(ThemeManifest::class),
                 [
-                    'button' => new ButtonTheme(),
-                    'input' => new InputTheme(),
-                    'card' => new CardTheme(),
-                    'alert' => new AlertTheme(),
-                    'badge' => new BadgeTheme(),
+                    'button' => new ConfigurableComponentTheme('button', ['primary', 'secondary', 'accent', 'neutral', 'outline', 'ghost'], ['xs', 'sm', 'md', 'lg', 'xl']),
+                    'input' => new ConfigurableComponentTheme('input', ['bordered', 'ghost'], ['sm', 'md', 'lg']),
+                    'select' => new ConfigurableComponentTheme('select', ['bordered', 'ghost'], ['sm', 'md', 'lg']),
+                    'textarea' => new ConfigurableComponentTheme('textarea', ['bordered'], ['sm', 'md', 'lg']),
+                    'checkbox' => new ConfigurableComponentTheme('checkbox', ['primary', 'secondary'], ['sm', 'md', 'lg']),
+                    'radio' => new ConfigurableComponentTheme('radio', ['primary', 'secondary'], ['sm', 'md', 'lg']),
+                    'toggle' => new ConfigurableComponentTheme('toggle', ['primary', 'secondary'], ['sm', 'md', 'lg']),
+                    'card' => new ConfigurableComponentTheme('card', ['default', 'bordered', 'elevated']),
+                    'alert' => new ConfigurableComponentTheme('alert', ['info', 'success', 'warning', 'error']),
+                    'badge' => new ConfigurableComponentTheme('badge', ['primary', 'secondary', 'accent'], ['sm', 'md', 'lg']),
+                    'divider' => new ConfigurableComponentTheme('divider'),
                 ]
             );
         });

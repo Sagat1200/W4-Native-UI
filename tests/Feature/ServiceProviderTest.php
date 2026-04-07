@@ -50,4 +50,29 @@ class ServiceProviderTest extends TestCase
             'w4-button-md',
         ], $classes);
     }
+
+    public function test_resuelve_componentes_form_adicionales(): void
+    {
+        $theme = $this->app->make(NativeTheme::class);
+
+        $classes = $theme->resolveComponent('select', [
+            'variant' => 'bordered',
+            'size' => 'md',
+        ]);
+
+        $this->assertSame([
+            'w4-select',
+            'w4-select-bordered',
+            'w4-select-md',
+        ], $classes);
+    }
+
+    public function test_fallback_para_componente_sin_resolver(): void
+    {
+        $theme = $this->app->make(NativeTheme::class);
+
+        $classes = $theme->resolveComponent('unknown-component');
+
+        $this->assertSame(['w4-unknown-component'], $classes);
+    }
 }

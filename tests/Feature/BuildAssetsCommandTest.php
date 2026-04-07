@@ -12,9 +12,11 @@ class BuildAssetsCommandTest extends TestCase
             ->assertSuccessful();
 
         $distCss = dirname(__DIR__, 2) . '/dist/w4-native.css';
+        $content = (string) file_get_contents($distCss);
 
         $this->assertFileExists($distCss);
-        $this->assertStringContainsString(':root {', (string) file_get_contents($distCss));
-        $this->assertStringContainsString('.w4-btn', (string) file_get_contents($distCss));
+        $this->assertStringContainsString(':root {', $content);
+        $this->assertStringContainsString('.w4-btn', $content);
+        $this->assertStringContainsString('.w4-select', $content);
     }
 }
