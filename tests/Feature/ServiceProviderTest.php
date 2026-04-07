@@ -513,4 +513,48 @@ class ServiceProviderTest extends TestCase
 
         $this->assertContains('helper-text:active', $contract['js_hooks']);
     }
+
+    public function test_todos_los_componentes_registrados_soportan_xs_y_lg(): void
+    {
+        $theme = $this->app->make(NativeTheme::class);
+
+        $components = [
+            'button',
+            'icon',
+            'icon-button',
+            'label',
+            'link',
+            'text',
+            'input',
+            'field-error',
+            'helper-text',
+            'select',
+            'textarea',
+            'checkbox',
+            'radio',
+            'toggle',
+            'card',
+            'container',
+            'stack',
+            'grid',
+            'section',
+            'panel',
+            'divider',
+            'heading',
+            'alert',
+            'badge',
+            'toast',
+            'progress',
+            'skeleton',
+            'tooltip',
+        ];
+
+        foreach ($components as $component) {
+            $xsClasses = $theme->resolveComponent($component, ['size' => 'xs']);
+            $lgClasses = $theme->resolveComponent($component, ['size' => 'lg']);
+
+            $this->assertContains("w4-{$component}-xs", $xsClasses, "El componente {$component} no resuelve size xs");
+            $this->assertContains("w4-{$component}-lg", $lgClasses, "El componente {$component} no resuelve size lg");
+        }
+    }
 }

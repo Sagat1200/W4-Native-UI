@@ -22,6 +22,53 @@ Aceptado
 
 ---
 
+## ADR-011
+
+### Escala de tamaños obligatoria por componente (`xs|sm|md|lg|xl`)
+
+#### Estado
+
+Aceptado
+
+---
+
+### Contexto
+
+Durante la evolución de `v0.1.x` se identificó una inconsistencia:
+
+* algunos resolvers soportaban `xs` y `lg`
+* otros componentes solo definían `sm|md|lg`
+* en ciertos casos existía soporte en resolver pero no en CSS (o viceversa)
+
+Esto introducía comportamientos no uniformes en render y dificultaba pruebas transversales del sistema.
+
+---
+
+### Decisión
+
+Se establece como regla obligatoria:
+
+* todo componente registrado debe soportar `xs|sm|md|lg|xl`
+* el soporte debe existir tanto en resolver (`sizes()`) como en CSS (`.w4-{component}-{size}`)
+* las pruebas deben validar explícitamente `xs` y `lg` para todos los componentes registrados
+
+---
+
+### Consecuencias
+
+Positivas:
+
+* contrato de tamaños uniforme para todo el ecosistema
+* menor riesgo de regressions visuales entre componentes
+* integración más predecible con `W4-UI-Framework`
+
+Costos:
+
+* mayor mantenimiento inicial de CSS por componente
+* necesidad de mantener pruebas de cobertura de tamaños
+
+---
+
 ### Contexto
 
 El ecosistema W4 incluye múltiples paquetes que requieren una interfaz de usuario consistente:

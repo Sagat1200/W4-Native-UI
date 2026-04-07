@@ -380,14 +380,18 @@ Esto ya permite que la capa visual y el core compartan semántica sin acoplarse 
 
 ---
 
-## 19. Próximos pasos: ARIA y data-hooks
+## 19. Runtime JS nativo: ARIA y data-hooks
 
-Para la próxima iteración del runtime visual se definieron estos pasos:
+Estado actual en v0.1.x:
 
-* mapear estados del core a atributos ARIA (`aria-disabled`, `aria-invalid`, `aria-busy`, `aria-pressed`, etc.)
-* publicar `data-w4-component`, `data-w4-state` y `data-w4-hook` por componente
-* habilitar que la capa JS nativa use esos hooks sin depender de nombres CSS
-* agregar pruebas de integración sobre HTML final para validar ARIA y `data-*`
+* el runtime JS publica `data-w4-component`, `data-w4-state` y `data-w4-hook`
+* el runtime emite hooks `w4:hook` y `{component}:{state}`
+* el runtime normaliza ARIA por estado (`aria-disabled`, `aria-readonly`, `aria-invalid`, `aria-busy`, `aria-pressed`, `aria-hidden`)
+* existe API pública `window.W4NativeUI` para consumo en apps (`on`, `once`, `off`, `emit`, `init`, `sync`, `setTheme`)
+
+Contrato formal:
+
+* ver `11-NATIVE-JS-HOOKS-CONTRACT.md`
 
 ---
 

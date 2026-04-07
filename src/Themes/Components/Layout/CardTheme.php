@@ -16,6 +16,11 @@ class CardTheme extends AbstractComponentTheme
         return ['default', 'bordered', 'elevated'];
     }
 
+    protected function sizes(): array
+    {
+        return ['xs', 'sm', 'md', 'lg', 'xl'];
+    }
+
     protected function states(): array
     {
         return ['hover'];

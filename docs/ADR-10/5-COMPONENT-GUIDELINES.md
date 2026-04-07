@@ -173,9 +173,11 @@ w4-{component}-{size}
 Ejemplo:
 
 ```text
+w4-button-xs
 w4-button-sm
 w4-button-md
 w4-button-lg
+w4-button-xl
 ```
 
 Tamaños estándar del sistema:
@@ -187,6 +189,11 @@ md
 lg
 xl
 ```
+
+Regla obligatoria del sistema:
+
+* todo componente nuevo debe soportar la escala completa `xs|sm|md|lg|xl` en resolver y CSS
+* no se aceptan componentes con escala parcial de tamaños
 
 ---
 

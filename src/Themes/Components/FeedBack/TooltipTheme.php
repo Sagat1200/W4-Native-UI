@@ -18,6 +18,6 @@ class TooltipTheme extends AbstractComponentTheme
 
     protected function sizes(): array
     {
-        return ['sm', 'md', 'lg'];
+        return ['xs', 'sm', 'md', 'lg', 'xl'];
     }
 }

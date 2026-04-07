@@ -136,12 +136,13 @@ resources/css/w4-theme.css
 resources/css/w4-components.css
 resources/css/presets/*
 dist/w4-native.css
+dist/w4-native.js
 ```
 
 #### Próximos pasos inmediatos (v0.1.x)
 
-* normalizar atributos ARIA por componente según estado de core
-* exponer `data-w4-*` hooks para capa JS nativa
+* completar normalización de atributos ARIA por componente según estado de core
+* consolidar `data-w4-*` hooks como contrato público de la capa JS nativa
 * definir contrato estable para `state_map` y `js_hooks`
 * agregar pruebas de integración para atributos ARIA/data-hooks en render final
 

@@ -12,9 +12,12 @@ class BuildAssetsCommandTest extends TestCase
             ->assertSuccessful();
 
         $distCss = dirname(__DIR__, 2) . '/dist/w4-native.css';
+        $distJs = dirname(__DIR__, 2) . '/dist/w4-native.js';
         $content = (string) file_get_contents($distCss);
+        $jsContent = (string) file_get_contents($distJs);
 
         $this->assertFileExists($distCss);
+        $this->assertFileExists($distJs);
         $this->assertStringContainsString(':root {', $content);
         $this->assertStringContainsString('.w4-btn', $content);
         $this->assertStringContainsString('.w4-select', $content);
@@ -34,5 +37,18 @@ class BuildAssetsCommandTest extends TestCase
         $this->assertStringContainsString('.w4-field-error', $content);
         $this->assertStringContainsString('.w4-helper-text', $content);
         $this->assertStringContainsString('.w4-input-readonly', $content);
+        $this->assertStringContainsString('.w4-button-xs', $content);
+        $this->assertStringContainsString('.w4-card-lg', $content);
+        $this->assertStringContainsString('.w4-alert-xs', $content);
+        $this->assertStringContainsString('.w4-badge-lg', $content);
+        $this->assertStringContainsString('.w4-section-xs', $content);
+        $this->assertStringContainsString('.w4-tooltip-lg', $content);
+        $this->assertStringContainsString('window.W4NativeUI', $jsContent);
+        $this->assertStringContainsString('data-w4-component', $jsContent);
+        $this->assertStringContainsString('MutationObserver', $jsContent);
+        $this->assertStringContainsString('on: function', $jsContent);
+        $this->assertStringContainsString('off: function', $jsContent);
+        $this->assertStringContainsString('once: function', $jsContent);
+        $this->assertStringContainsString('emit: function', $jsContent);
     }
 }
