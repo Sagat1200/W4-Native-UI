@@ -28,7 +28,7 @@ Los componentes deben utilizar **clases semánticas** en lugar de depender exclu
 Ejemplo correcto:
 
 ```text
-w4-btn
+w4-button
 w4-input
 w4-card
 ```
@@ -95,13 +95,13 @@ Cada componente visual se implementa mediante:
 Ejemplo:
 
 ```text
-w4-btn
-w4-btn-primary
-w4-btn-secondary
-w4-btn-outline
-w4-btn-sm
-w4-btn-md
-w4-btn-lg
+w4-button
+w4-button-primary
+w4-button-secondary
+w4-button-outline
+w4-button-sm
+w4-button-md
+w4-button-lg
 ```
 
 ---
@@ -113,7 +113,7 @@ Cada componente debe tener una **clase base obligatoria**.
 Ejemplo:
 
 ```text
-Button → w4-btn
+Button → w4-button
 Input → w4-input
 Card → w4-card
 Alert → w4-alert
@@ -142,11 +142,11 @@ w4-{component}-{variant}
 Ejemplo para botones:
 
 ```text
-w4-btn-primary
-w4-btn-secondary
-w4-btn-accent
-w4-btn-outline
-w4-btn-ghost
+w4-button-primary
+w4-button-secondary
+w4-button-accent
+w4-button-outline
+w4-button-ghost
 ```
 
 Variantes recomendadas:
@@ -173,9 +173,9 @@ w4-{component}-{size}
 Ejemplo:
 
 ```text
-w4-btn-sm
-w4-btn-md
-w4-btn-lg
+w4-button-sm
+w4-button-md
+w4-button-lg
 ```
 
 Tamaños estándar del sistema:
@@ -207,14 +207,14 @@ hover
 Ejemplo:
 
 ```text
-w4-btn-disabled
+w4-button-disabled
 ```
 
 Los estados también pueden implementarse mediante pseudo clases:
 
 ```css
-.w4-btn:hover
-.w4-btn:focus
+.w4-button:hover
+.w4-button:focus
 ```
 
 ---
@@ -230,7 +230,7 @@ Los estados de interacción se manejan mediante:
 Ejemplo:
 
 ```css
-.w4-btn:hover
+.w4-button:hover
 ```
 
 Estos estados no requieren clases adicionales.
@@ -248,7 +248,7 @@ w4-
 Ejemplos:
 
 ```text
-w4-btn
+w4-button
 w4-input
 w4-card
 w4-alert
@@ -290,7 +290,7 @@ Los componentes deben utilizar tokens para:
 Ejemplo simplificado de botón.
 
 ```css
-.w4-btn {
+.w4-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -300,12 +300,12 @@ Ejemplo simplificado de botón.
   transition: all .2s ease;
 }
 
-.w4-btn-primary {
+.w4-button-primary {
   background: hsl(var(--w4-primary));
   color: hsl(var(--w4-primary-content));
 }
 
-.w4-btn-secondary {
+.w4-button-secondary {
   background: hsl(var(--w4-secondary));
 }
 ```
@@ -319,7 +319,7 @@ Las clases se combinan para formar un componente final.
 Ejemplo:
 
 ```html
-<button class="w4-btn w4-btn-primary w4-btn-lg">
+<button class="w4-button w4-button-primary w4-button-lg">
 Guardar
 </button>
 ```
@@ -339,7 +339,7 @@ Ejemplos:
 Ejemplo:
 
 ```css
-.w4-btn:focus-visible {
+.w4-button:focus-visible {
   outline: 2px solid hsl(var(--w4-primary));
 }
 ```
@@ -357,34 +357,54 @@ ButtonComponent
      ↓
 ButtonThemeResolver
      ↓
-w4-btn w4-btn-primary w4-btn-lg
+w4-button w4-button-primary w4-button-lg
 ```
 
 ---
 
-## 15. Componentes iniciales del sistema
+## 15. Componentes v0.1.0 del sistema
 
-La primera versión del sistema incluirá:
+La versión v0.1.0 incluye:
 
-### Form
+### UI
 
 * Button
+* Divider
+* Heading
+* Icon
+* IconButton
+* Label
+* Link
+* Text
+
+### Forms
+
 * Input
 * Select
 * Textarea
 * Checkbox
 * Radio
 * Toggle
+* FieldError
+* HelperText
 
 ### Layout
 
 * Card
-* Divider
+* Container
+* Stack
+* Grid
+* Section
+* Panel
 
 ### Feedback
 
 * Alert
 * Badge
+* Toast
+* Progress
+* Skeleton
+* Tooltip
 
 ---
 
@@ -405,7 +425,18 @@ Drawer
 
 ---
 
-## 17. Conclusión
+## 17. Próximos pasos (ARIA + data-hooks)
+
+Los próximos componentes y refactors deben incluir:
+
+* atributos ARIA por estado (`aria-disabled`, `aria-invalid`, `aria-busy`, `aria-pressed`, etc.)
+* atributos `data-w4-component`, `data-w4-state` y `data-w4-hook`
+* derivación de hooks desde `stateMap()` del resolver
+* pruebas de integración sobre HTML final para validar accesibilidad y hooks JS
+
+---
+
+## 18. Conclusión
 
 Las guías de componentes aseguran que todo el sistema UI de W4-Native-UI sea:
 

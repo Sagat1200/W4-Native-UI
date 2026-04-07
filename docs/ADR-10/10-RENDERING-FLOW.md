@@ -176,9 +176,9 @@ size = lg
 Salida:
 
 ```text
-w4-btn
-w4-btn-primary
-w4-btn-lg
+w4-button
+w4-button-primary
+w4-button-lg
 ```
 
 ---
@@ -190,7 +190,7 @@ Las clases generadas dependen de **design tokens**.
 Ejemplo:
 
 ```css
-.w4-btn-primary {
+.w4-button-primary {
   background: hsl(var(--w4-primary));
 }
 ```
@@ -222,7 +222,7 @@ El wrapper recibe:
 Resultado final:
 
 ```html
-<button class="w4-btn w4-btn-primary w4-btn-lg">
+<button class="w4-button w4-button-primary w4-button-lg">
 Guardar
 </button>
 ```
@@ -278,15 +278,15 @@ size = lg
 Resolver:
 
 ```text
-w4-btn
-w4-btn-primary
-w4-btn-lg
+w4-button
+w4-button-primary
+w4-button-lg
 ```
 
 Render final:
 
 ```html
-<button class="w4-btn w4-btn-primary w4-btn-lg">
+<button class="w4-button w4-button-primary w4-button-lg">
 Guardar
 </button>
 ```
@@ -367,7 +367,31 @@ Cada resolver implementa la lógica visual.
 
 ---
 
-## 18. Futuro del sistema
+## 18. Estado v0.1.0
+
+Cobertura actual de v0.1.0:
+
+* resolvers dedicados por componente en `src/Themes/Components/*`
+* contrato de estados por componente mediante `stateMap()`
+* salida de contrato de integración desde `NativeTheme::resolveComponentContract()`
+* mapeo activo `state -> class -> js hook`
+
+Esto ya permite que la capa visual y el core compartan semántica sin acoplarse a frameworks CSS externos.
+
+---
+
+## 19. Próximos pasos: ARIA y data-hooks
+
+Para la próxima iteración del runtime visual se definieron estos pasos:
+
+* mapear estados del core a atributos ARIA (`aria-disabled`, `aria-invalid`, `aria-busy`, `aria-pressed`, etc.)
+* publicar `data-w4-component`, `data-w4-state` y `data-w4-hook` por componente
+* habilitar que la capa JS nativa use esos hooks sin depender de nombres CSS
+* agregar pruebas de integración sobre HTML final para validar ARIA y `data-*`
+
+---
+
+## 20. Futuro del sistema
 
 En versiones futuras el sistema podría incluir:
 
@@ -378,7 +402,7 @@ En versiones futuras el sistema podría incluir:
 
 ---
 
-## 19. Conclusión
+## 21. Conclusión
 
 El flujo de renderizado conecta:
 

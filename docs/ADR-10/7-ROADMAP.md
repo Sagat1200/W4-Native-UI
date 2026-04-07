@@ -50,13 +50,17 @@ El desarrollo del sistema está dividido en varias etapas.
 
 ---
 
-### v0.1 — Core UI System
+### v0.1.0 — Core UI System
 
 Primera versión funcional del sistema visual.
 
 Objetivo principal:
 
-> establecer la base del sistema UI.
+> establecer la base del sistema UI y la integración real con resolvers por componente.
+
+Estado actual:
+
+> completado y estabilizado con mapeo `state -> class -> js hook` en componentes principales.
 
 Incluye:
 
@@ -71,6 +75,7 @@ Incluye:
 
 * soporte `data-theme`
 * presets iniciales
+* resolución por componente vía `NativeTheme`
 
 #### Presets incluidos
 
@@ -82,27 +87,47 @@ native.soft
 native.night
 ```
 
-#### Componentes iniciales
+#### Componentes implementados en v0.1.0
 
-Form:
+UI:
 
 * Button
+* Divider
+* Heading
+* Icon
+* IconButton
+* Label
+* Link
+* Text
+
+Forms:
+
 * Input
 * Select
 * Textarea
 * Checkbox
 * Radio
 * Toggle
+* FieldError
+* HelperText
 
 Layout:
 
 * Card
-* Divider
+* Container
+* Stack
+* Grid
+* Section
+* Panel
 
 Feedback:
 
 * Alert
 * Badge
+* Toast
+* Progress
+* Skeleton
+* Tooltip
 
 #### Entregables
 
@@ -110,7 +135,15 @@ Feedback:
 resources/css/w4-theme.css
 resources/css/w4-components.css
 resources/css/presets/*
+dist/w4-native.css
 ```
+
+#### Próximos pasos inmediatos (v0.1.x)
+
+* normalizar atributos ARIA por componente según estado de core
+* exponer `data-w4-*` hooks para capa JS nativa
+* definir contrato estable para `state_map` y `js_hooks`
+* agregar pruebas de integración para atributos ARIA/data-hooks en render final
 
 ---
 

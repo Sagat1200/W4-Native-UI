@@ -146,27 +146,47 @@ Los presets modifican los tokens para cambiar la apariencia completa de la inter
 
 ### Componentes UI base
 
-La primera versión incluirá componentes fundamentales:
+La versión v0.1.0 incluye componentes fundamentales:
+
+#### UI Components
+
+* Button
+* Divider
+* Heading
+* Icon
+* IconButton
+* Label
+* Link
+* Text
 
 #### Form Components
 
-* Button
 * Input
 * Select
 * Textarea
 * Checkbox
 * Radio
 * Toggle
+* FieldError
+* HelperText
 
 #### Layout Components
 
 * Card
-* Divider
+* Container
+* Stack
+* Grid
+* Section
+* Panel
 
 #### Feedback Components
 
 * Alert
 * Badge
+* Toast
+* Progress
+* Skeleton
+* Tooltip
 
 Cada componente estará diseñado para integrarse con el **Theme Resolver Engine** de W4-UI-Framework.
 
@@ -224,7 +244,7 @@ W4-Native-UI sigue cuatro principios fundamentales.
 Los componentes utilizan clases semánticas:
 
 ```text
-w4-btn
+w4-button
 w4-input
 w4-card
 w4-alert

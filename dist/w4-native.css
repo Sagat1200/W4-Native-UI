@@ -64,7 +64,8 @@
   --w4-base-content: 210 40% 96%;
 }
 
-.w4-btn {
+.w4-btn,
+.w4-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -78,41 +79,49 @@
   transition: all 150ms ease;
 }
 
-.w4-btn-primary {
+.w4-btn-primary,
+.w4-button-primary {
   background: hsl(var(--w4-primary));
   color: hsl(var(--w4-primary-content));
 }
 
-.w4-btn-secondary {
+.w4-btn-secondary,
+.w4-button-secondary {
   background: hsl(var(--w4-secondary));
   color: hsl(var(--w4-secondary-content));
 }
 
-.w4-btn-lg {
+.w4-btn-lg,
+.w4-button-lg {
   padding: 0.75rem 1.25rem;
   font-size: 1rem;
 }
 
-.w4-btn-md {
+.w4-btn-md,
+.w4-button-md {
   font-size: 0.9375rem;
 }
 
-.w4-btn-sm {
+.w4-btn-sm,
+.w4-button-sm {
   padding: 0.4rem 0.8rem;
   font-size: 0.8125rem;
 }
 
-.w4-btn-disabled {
+.w4-btn-disabled,
+.w4-button-disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-.w4-btn-loading {
+.w4-btn-loading,
+.w4-button-loading {
   pointer-events: none;
   opacity: 0.8;
 }
 
-.w4-btn-active {
+.w4-btn-active,
+.w4-button-active {
   transform: translateY(1px);
 }
 

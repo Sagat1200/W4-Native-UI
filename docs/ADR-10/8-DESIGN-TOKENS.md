@@ -343,7 +343,7 @@ Ejemplo:
 Ejemplo de botón:
 
 ```css
-.w4-btn {
+.w4-button {
 
   border-radius: var(--w4-radius-button);
 

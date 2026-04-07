@@ -37,7 +37,7 @@ w4-
 Ejemplo:
 
 ```text
-w4-btn
+w4-button
 w4-input
 w4-card
 ```
@@ -55,7 +55,7 @@ w4-{component}-{size}
 Ejemplo:
 
 ```text
-w4-btn w4-btn-primary w4-btn-lg
+w4-button w4-button-primary w4-button-lg
 ```
 
 ---
@@ -71,7 +71,7 @@ Permitir acciones del usuario dentro de la interfaz.
 ### Button: clase base
 
 ```text
-w4-btn
+w4-button
 ```
 
 ---
@@ -79,12 +79,12 @@ w4-btn
 ### Button: variantes
 
 ```text
-w4-btn-primary
-w4-btn-secondary
-w4-btn-accent
-w4-btn-neutral
-w4-btn-outline
-w4-btn-ghost
+w4-button-primary
+w4-button-secondary
+w4-button-accent
+w4-button-neutral
+w4-button-outline
+w4-button-ghost
 ```
 
 ---
@@ -92,11 +92,11 @@ w4-btn-ghost
 ### Button: tamaños
 
 ```text
-w4-btn-xs
-w4-btn-sm
-w4-btn-md
-w4-btn-lg
-w4-btn-xl
+w4-button-xs
+w4-button-sm
+w4-button-md
+w4-button-lg
+w4-button-xl
 ```
 
 ---
@@ -104,7 +104,7 @@ w4-btn-xl
 ### Button: ejemplo
 
 ```html
-<button class="w4-btn w4-btn-primary">
+<button class="w4-button w4-button-primary">
 Guardar
 </button>
 ```
@@ -130,6 +130,7 @@ w4-input
 ### Input: variantes
 
 ```text
+w4-input-default
 w4-input-bordered
 w4-input-ghost
 ```
@@ -139,9 +140,11 @@ w4-input-ghost
 ### Input: tamaños
 
 ```text
+w4-input-xs
 w4-input-sm
 w4-input-md
 w4-input-lg
+w4-input-xl
 ```
 
 ---
@@ -173,6 +176,7 @@ w4-select
 ### Select: variantes
 
 ```text
+w4-select-default
 w4-select-bordered
 w4-select-ghost
 ```
@@ -182,9 +186,11 @@ w4-select-ghost
 ### Select: tamaños
 
 ```text
+w4-select-xs
 w4-select-sm
 w4-select-md
 w4-select-lg
+w4-select-xl
 ```
 
 ---
@@ -219,7 +225,9 @@ w4-textarea
 ### Textarea: variantes
 
 ```text
+w4-textarea-default
 w4-textarea-bordered
+w4-textarea-ghost
 ```
 
 ---
@@ -281,6 +289,16 @@ w4-radio
 
 ---
 
+### Radio: variantes
+
+```text
+w4-radio-default
+w4-radio-primary
+w4-radio-secondary
+```
+
+---
+
 ### Radio: ejemplo
 
 ```html
@@ -301,6 +319,16 @@ Representar un estado activado/desactivado.
 
 ```text
 w4-toggle
+```
+
+---
+
+### Toggle: variantes
+
+```text
+w4-toggle-default
+w4-toggle-primary
+w4-toggle-secondary
 ```
 
 ---
@@ -591,7 +619,7 @@ w4-dropdown-content
 
 ```html
 <div class="w4-dropdown">
-<button class="w4-btn">Menu</button>
+<button class="w4-button">Menu</button>
 
 <ul class="w4-dropdown-content">
 <li>Item</li>
@@ -649,14 +677,38 @@ w4-tooltip
 ### Tooltip: ejemplo
 
 ```html
-<button class="w4-btn w4-tooltip" data-tip="Guardar">
+<button class="w4-button w4-tooltip" data-tip="Guardar">
 Guardar
 </button>
 ```
 
 ---
 
-## 21. Conclusión
+## 21. Estado de cobertura v0.1.0
+
+Componentes con resolver dedicado y cobertura activa en v0.1.0:
+
+* UI: `button`, `divider`, `heading`, `icon`, `icon-button`, `label`, `link`, `text`
+* Forms: `input`, `select`, `textarea`, `checkbox`, `radio`, `toggle`, `field-error`, `helper-text`
+* Layout: `card`, `container`, `stack`, `grid`, `section`, `panel`
+* Feedback: `alert`, `badge`, `toast`, `progress`, `skeleton`, `tooltip`
+
+Componentes como `modal`, `dropdown`, `tabs`, `avatar` permanecen como especificación objetivo para versiones posteriores.
+
+---
+
+## 22. Próximos pasos (ARIA + data-hooks)
+
+Para habilitar la capa JS nativa sin acoplarla a clases CSS:
+
+* cada componente debe publicar atributos ARIA según estado (`disabled`, `readonly`, `invalid`, `busy`, `expanded`, etc.)
+* cada render debe exponer `data-w4-component`, `data-w4-state` y `data-w4-hook`
+* los hooks JS deben derivarse del `stateMap()` y no de selectores CSS
+* se deben incluir pruebas de integración de atributos ARIA y `data-*` sobre HTML final
+
+---
+
+## 23. Conclusión
 
 Las especificaciones de componentes definen el contrato entre:
 

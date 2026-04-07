@@ -162,7 +162,7 @@ Cada archivo define cómo traducir un componente abstracto a **clases CSS semán
 Ejemplo:
 
 ```text
-Button → w4-btn w4-btn-primary w4-btn-lg
+Button → w4-button w4-button-primary w4-button-lg
 ```
 
 ---
@@ -412,7 +412,7 @@ Para mantener consistencia se utilizan las siguientes convenciones.
 ### Clases CSS
 
 ```text
-w4-btn
+w4-button
 w4-input
 w4-card
 w4-alert
@@ -422,17 +422,17 @@ w4-badge
 ### Variantes
 
 ```text
-w4-btn-primary
-w4-btn-secondary
-w4-btn-outline
+w4-button-primary
+w4-button-secondary
+w4-button-outline
 ```
 
 ### Tamaños
 
 ```text
-w4-btn-sm
-w4-btn-md
-w4-btn-lg
+w4-button-sm
+w4-button-md
+w4-button-lg
 ```
 
 ---

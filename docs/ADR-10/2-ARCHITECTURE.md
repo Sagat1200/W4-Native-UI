@@ -143,7 +143,7 @@ Los componentes visuales se implementan mediante **clases CSS semánticas**.
 Ejemplos:
 
 ```text
-w4-btn
+w4-button
 w4-input
 w4-card
 w4-alert
@@ -155,7 +155,7 @@ Estas clases utilizan los tokens para generar estilos dinámicos.
 Ejemplo simplificado:
 
 ```css
-.w4-btn {
+.w4-button {
   border-radius: var(--w4-radius-button);
   background: hsl(var(--w4-color-primary));
 }
@@ -187,13 +187,13 @@ Cada componente visual sigue una estructura consistente.
 Ejemplo conceptual para Button:
 
 ```text
-w4-btn
-w4-btn-primary
-w4-btn-secondary
-w4-btn-outline
-w4-btn-sm
-w4-btn-md
-w4-btn-lg
+w4-button
+w4-button-primary
+w4-button-secondary
+w4-button-outline
+w4-button-sm
+w4-button-md
+w4-button-lg
 ```
 
 Las clases se combinan para formar variaciones.
@@ -201,7 +201,7 @@ Las clases se combinan para formar variaciones.
 Ejemplo:
 
 ```html
-<button class="w4-btn w4-btn-primary w4-btn-lg">
+<button class="w4-button w4-button-primary w4-button-lg">
 ```
 
 ---
@@ -285,7 +285,7 @@ Button::make('Guardar')
 Resultado:
 
 ```text
-w4-btn w4-btn-primary w4-btn-lg
+w4-button w4-button-primary w4-button-lg
 ```
 
 ---
@@ -356,7 +356,7 @@ Esto significa que los desarrolladores pueden combinar:
 Ejemplo:
 
 ```html
-<button class="w4-btn w4-btn-primary mt-4">
+<button class="w4-button w4-button-primary mt-4">
 ```
 
 ---

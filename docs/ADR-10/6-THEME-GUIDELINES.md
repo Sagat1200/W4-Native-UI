@@ -310,7 +310,7 @@ W4-Native-UI permite combinar tokens con utilidades Tailwind.
 Ejemplo:
 
 ```html
-<button class="w4-btn w4-btn-primary mt-4">
+<button class="w4-button w4-button-primary mt-4">
 ```
 
 Esto mantiene flexibilidad sin romper consistencia visual.
@@ -363,7 +363,7 @@ ButtonComponent
       ↓
 ButtonThemeResolver
       ↓
-w4-btn w4-btn-primary w4-btn-lg
+w4-button w4-button-primary w4-button-lg
       ↓
 Theme tokens
       ↓
