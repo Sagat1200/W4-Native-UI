@@ -1,19 +1,19 @@
 <?php
 
-namespace W4\NativeUi\Themes\Components\FeedBack;
+namespace W4\NativeUi\Themes\Components\Layout;
 
 use W4\NativeUi\Themes\Components\AbstractComponentTheme;
 
-class AlertTheme extends AbstractComponentTheme
+class SectionTheme extends AbstractComponentTheme
 {
     public function component(): string
     {
-        return 'alert';
+        return 'section';
     }
 
     protected function variants(): array
     {
-        return ['info', 'success', 'warning', 'error'];
+        return ['default', 'muted'];
     }
 
     protected function sizes(): array

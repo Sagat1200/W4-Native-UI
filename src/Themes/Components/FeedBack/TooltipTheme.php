@@ -4,16 +4,16 @@ namespace W4\NativeUi\Themes\Components\FeedBack;
 
 use W4\NativeUi\Themes\Components\AbstractComponentTheme;
 
-class AlertTheme extends AbstractComponentTheme
+class TooltipTheme extends AbstractComponentTheme
 {
     public function component(): string
     {
-        return 'alert';
+        return 'tooltip';
     }
 
     protected function variants(): array
     {
-        return ['info', 'success', 'warning', 'error'];
+        return ['top', 'right', 'bottom', 'left'];
     }
 
     protected function sizes(): array

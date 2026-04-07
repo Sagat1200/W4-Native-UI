@@ -47,4 +47,31 @@ class NativeTheme implements ThemeContract
 
         return ['w4-' . $component];
     }
+
+    public function resolveComponentContract(string $component, array $state = []): array
+    {
+        $classes = $this->resolveComponent($component, $state);
+        $component = strtolower(trim($component));
+
+        $stateMap = [];
+        $jsHooks = [];
+        if (array_key_exists($component, $this->components)) {
+            $resolver = $this->components[$component];
+
+            if (is_object($resolver) && method_exists($resolver, 'stateMap')) {
+                $stateMap = (array) $resolver->stateMap();
+            }
+
+            if (is_object($resolver) && method_exists($resolver, 'jsHooks')) {
+                $jsHooks = (array) $resolver->jsHooks($state);
+            }
+        }
+
+        return [
+            'component' => $component,
+            'classes' => $classes,
+            'state_map' => $stateMap,
+            'js_hooks' => $jsHooks,
+        ];
+    }
 }

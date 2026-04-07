@@ -20,4 +20,39 @@ class InputTheme extends AbstractComponentTheme
     {
         return ['sm', 'md', 'lg'];
     }
+
+    protected function states(): array
+    {
+        return ['disabled', 'loading', 'readonly', 'invalid', 'valid', 'focus'];
+    }
+
+    public function stateMap(): array
+    {
+        return [
+            'disabled' => [
+                'class' => 'w4-input-disabled',
+                'js' => 'input:disable',
+            ],
+            'loading' => [
+                'class' => 'w4-input-loading',
+                'js' => 'input:loading',
+            ],
+            'readonly' => [
+                'class' => 'w4-input-readonly',
+                'js' => 'input:readonly',
+            ],
+            'invalid' => [
+                'class' => 'w4-input-invalid',
+                'js' => 'input:invalid',
+            ],
+            'valid' => [
+                'class' => 'w4-input-valid',
+                'js' => 'input:valid',
+            ],
+            'focus' => [
+                'class' => 'w4-input-focus',
+                'js' => 'input:focus',
+            ],
+        ];
+    }
 }

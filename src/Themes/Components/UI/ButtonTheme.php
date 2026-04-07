@@ -20,4 +20,31 @@ class ButtonTheme extends AbstractComponentTheme
     {
         return ['xs', 'sm', 'md', 'lg', 'xl'];
     }
+
+    protected function states(): array
+    {
+        return ['disabled', 'loading', 'active', 'readonly'];
+    }
+
+    public function stateMap(): array
+    {
+        return [
+            'disabled' => [
+                'class' => 'w4-button-disabled',
+                'js' => 'button:disable',
+            ],
+            'loading' => [
+                'class' => 'w4-button-loading',
+                'js' => 'button:loading',
+            ],
+            'active' => [
+                'class' => 'w4-button-active',
+                'js' => 'button:active',
+            ],
+            'readonly' => [
+                'class' => 'w4-button-readonly',
+                'js' => 'button:readonly',
+            ],
+        ];
+    }
 }

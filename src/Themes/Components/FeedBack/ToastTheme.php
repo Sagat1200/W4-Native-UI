@@ -4,11 +4,11 @@ namespace W4\NativeUi\Themes\Components\FeedBack;
 
 use W4\NativeUi\Themes\Components\AbstractComponentTheme;
 
-class AlertTheme extends AbstractComponentTheme
+class ToastTheme extends AbstractComponentTheme
 {
     public function component(): string
     {
-        return 'alert';
+        return 'toast';
     }
 
     protected function variants(): array

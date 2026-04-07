@@ -4,16 +4,16 @@ namespace W4\NativeUi\Themes\Components\FeedBack;
 
 use W4\NativeUi\Themes\Components\AbstractComponentTheme;
 
-class AlertTheme extends AbstractComponentTheme
+class ProgressTheme extends AbstractComponentTheme
 {
     public function component(): string
     {
-        return 'alert';
+        return 'progress';
     }
 
     protected function variants(): array
     {
-        return ['info', 'success', 'warning', 'error'];
+        return ['primary', 'secondary', 'accent'];
     }
 
     protected function sizes(): array

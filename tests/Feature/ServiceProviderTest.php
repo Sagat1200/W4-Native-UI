@@ -120,4 +120,21 @@ class ServiceProviderTest extends TestCase
 
         $this->assertSame(['w4-unknown-component'], $classes);
     }
+
+    public function test_expone_contrato_de_estados_y_hooks_js(): void
+    {
+        $theme = $this->app->make(NativeTheme::class);
+
+        $contract = $theme->resolveComponentContract('button', [
+            'variant' => 'primary',
+            'size' => 'md',
+            'loading' => true,
+        ]);
+
+        $this->assertSame('button', $contract['component']);
+        $this->assertContains('w4-button-loading', $contract['classes']);
+        $this->assertArrayHasKey('loading', $contract['state_map']);
+        $this->assertSame('button:loading', $contract['state_map']['loading']['js']);
+        $this->assertContains('button:loading', $contract['js_hooks']);
+    }
 }
