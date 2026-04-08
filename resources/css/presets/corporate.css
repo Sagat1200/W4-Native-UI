@@ -1,9 +1,12 @@
 [data-theme="native.corporate"] {
-  --w4-primary: 214 84% 44%;
-  --w4-secondary: 243 75% 59%;
-  --w4-accent: 174 62% 38%;
+  --w4-primary: 242 100% 58%;
+  --w4-primary-content: 0 0% 100%;
+  --w4-secondary: 257 100% 55%;
+  --w4-secondary-content: 0 0% 100%;
+  --w4-accent: 185 100% 60%;
+  --w4-accent-content: 0 0% 100%;
   --w4-base-100: 0 0% 100%;
-  --w4-base-200: 210 17% 97%;
-  --w4-base-300: 214 16% 92%;
-  --w4-base-content: 222 47% 16%;
+  --w4-base-200: 0 0% 93%;
+  --w4-base-300: 0 0% 86%;
+  --w4-base-content: 278 100% 22%;
 }

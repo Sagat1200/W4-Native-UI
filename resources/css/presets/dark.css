@@ -1,9 +1,12 @@
 [data-theme="native.dark"] {
-  --w4-primary: 217 91% 60%;
-  --w4-secondary: 262 83% 68%;
-  --w4-accent: 174 72% 53%;
-  --w4-base-100: 222 47% 11%;
-  --w4-base-200: 223 39% 14%;
-  --w4-base-300: 224 31% 18%;
-  --w4-base-content: 210 40% 98%;
+  --w4-primary: 277 100% 58%;
+  --w4-primary-content: 272 100% 96%;
+  --w4-secondary: 354 100% 65%;
+  --w4-secondary-content: 342 100% 94%;
+  --w4-accent: 182 100% 77%;
+  --w4-accent-content: 188 100% 38%;
+  --w4-base-100: 252 100% 25%;
+  --w4-base-200: 253 100% 23%;
+  --w4-base-300: 254 100% 21%;
+  --w4-base-content: 257 100% 98%;
 }

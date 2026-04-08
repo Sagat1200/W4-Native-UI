@@ -13,7 +13,7 @@ class ButtonTheme extends AbstractComponentTheme
 
     protected function variants(): array
     {
-        return ['primary', 'secondary', 'accent', 'neutral', 'outline', 'ghost'];
+        return ['primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error', 'ghost', 'link', 'outline', 'dash', 'soft'];
     }
 
     protected function sizes(): array
@@ -23,7 +23,7 @@ class ButtonTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'loading', 'active', 'readonly'];
+        return ['disabled', 'loading', 'active', 'readonly', 'square', 'circle', 'wide', 'block'];
     }
 
     public function stateMap(): array
@@ -44,6 +44,18 @@ class ButtonTheme extends AbstractComponentTheme
             'readonly' => [
                 'class' => 'w4-button-readonly',
                 'js' => 'button:readonly',
+            ],
+            'square' => [
+                'class' => 'w4-button-square',
+            ],
+            'circle' => [
+                'class' => 'w4-button-circle',
+            ],
+            'wide' => [
+                'class' => 'w4-button-wide',
+            ],
+            'block' => [
+                'class' => 'w4-button-block',
             ],
         ];
     }

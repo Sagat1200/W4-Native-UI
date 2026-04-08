@@ -14,16 +14,16 @@ class NightPreset extends AbstractPreset
     protected function overrides(): array
     {
         return [
-            'primary' => '268 84% 68%',
-            'secondary' => '217 91% 60%',
-            'accent' => '197 93% 60%',
-            'base-100' => '230 35% 7%',
-            'base-200' => '230 30% 10%',
-            'base-300' => '230 24% 14%',
-            'base-content' => '210 40% 96%',
-            'radius-button' => '0.875rem',
-            'radius-input' => '0.75rem',
-            'radius-card' => '1rem',
+            'primary' => '233 100% 75%',
+            'primary-content' => '233 100% 15%',
+            'secondary' => '277 100% 68%',
+            'secondary-content' => '277 100% 14%',
+            'accent' => '350 100% 72%',
+            'accent-content' => '350 100% 14%',
+            'base-100' => '266 100% 21%',
+            'base-200' => '266 100% 19%',
+            'base-300' => '266 100% 18%',
+            'base-content' => '266 100% 84%',
         ];
     }
 }

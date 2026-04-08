@@ -14,16 +14,16 @@ class CorporatePreset extends AbstractPreset
     protected function overrides(): array
     {
         return [
-            'primary' => '214 84% 44%',
-            'secondary' => '243 75% 59%',
-            'accent' => '174 62% 38%',
+            'primary' => '242 100% 58%',
+            'primary-content' => '0 0% 100%',
+            'secondary' => '257 100% 55%',
+            'secondary-content' => '0 0% 100%',
+            'accent' => '185 100% 60%',
+            'accent-content' => '0 0% 100%',
             'base-100' => '0 0% 100%',
-            'base-200' => '210 17% 97%',
-            'base-300' => '214 16% 92%',
-            'base-content' => '222 47% 16%',
-            'radius-button' => '0.5rem',
-            'radius-input' => '0.5rem',
-            'radius-card' => '0.75rem',
+            'base-200' => '0 0% 93%',
+            'base-300' => '0 0% 86%',
+            'base-content' => '278 100% 22%',
         ];
     }
 }
