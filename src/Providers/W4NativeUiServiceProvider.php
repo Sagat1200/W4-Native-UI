@@ -2,6 +2,7 @@
 
 namespace W4\NativeUi\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use W4\NativeUi\Console\Commands\InstallNativeUiCommand;
 use W4\NativeUi\Console\Commands\BuildNativeUiAssetsCommand;
@@ -110,6 +111,14 @@ class W4NativeUiServiceProvider extends ServiceProvider
         $packageRoot = dirname(__DIR__, 2);
         $configPath = $packageRoot . '/config/w4-native-ui.php';
         $distPath = $packageRoot . '/dist';
+
+        Blade::directive('W4NativeStyles', function () {
+            return "<?php echo '<link rel=\"stylesheet\" href=\"'.asset('vendor/w4-native-ui/w4-native.css').'\">'; ?>";
+        });
+
+        Blade::directive('W4NativeScripts', function () {
+            return "<?php echo '<script src=\"'.asset('vendor/w4-native-ui/w4-native.js').'\"></script>'; ?>";
+        });
 
         if ($this->app->runningInConsole()) {
             if (is_file($configPath)) {

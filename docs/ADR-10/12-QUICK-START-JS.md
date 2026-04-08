@@ -26,6 +26,13 @@ Opcionalmente carga también CSS:
 <link rel="stylesheet" href="/vendor/w4-native-ui/w4-native.css">
 ```
 
+En Blade también puedes usar:
+
+```blade
+@W4NativeStyles
+@W4NativeScripts
+```
+
 ---
 
 ## 3. Marcar componentes
