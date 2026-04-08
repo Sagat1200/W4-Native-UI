@@ -28,8 +28,10 @@
                         <option value="native.cupcake">W4-cupcake</option>
                         <option value="native.bumblebee">W4-bumblebee</option>
                         <option value="native.emerald">W4-emerald</option>
-                        <option value="native.retro">native.retro</option>
-                        <option value="native.cyberpunk">native.cyberpunk</option>
+                        <option value="native.retro">W4-retro</option>
+                        <option value="native.cyberpunk">W4-cyberpunk</option>
+                        <option value="native.valentine">W4-valentine</option>
+                        <option value="native.halloween">W4-halloween</option>
                     </select>
                 </div>
             </div>
@@ -365,6 +367,8 @@
                 "native.emerald",
                 "native.retro",
                 "native.cyberpunk",
+                "native.valentine",
+                "native.halloween",
             ];
             var storageKey = "w4-native-ui-theme";
             var switcher = document.getElementById("themeSwitcher");

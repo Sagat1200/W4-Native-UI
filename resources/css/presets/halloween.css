@@ -1,0 +1,22 @@
+[data-theme="native.halloween"] {
+  --w4-primary: 36 152% 42%;
+  --w4-primary-content: 180 7% 8%;
+  --w4-secondary: 279 118% 35%;
+  --w4-secondary-content: 266 67% 90%;
+  --w4-accent: 89 179% 24%;
+  --w4-accent-content: 0 0% 0%;
+  --w4-neutral: 31 81% 10%;
+  --w4-neutral-content: 29 10% 80%;
+  --w4-base-100: 334 0% 13%;
+  --w4-base-200: 336 0% 11%;
+  --w4-base-300: 340 0% 10%;
+  --w4-base-content: 350 0% 81%;
+  --w4-info: 221 83% 53%;
+  --w4-info-content: 219 98% 91%;
+  --w4-success: 142 76% 36%;
+  --w4-success-content: 130 96% 2%;
+  --w4-warning: 32 95% 44%;
+  --w4-warning-content: 17 99% 3%;
+  --w4-error: 3 87% 62%;
+  --w4-error-content: 2 84% 4%;
+}

@@ -48,6 +48,8 @@ use W4\NativeUi\Themes\Presets\BumblebeePreset;
 use W4\NativeUi\Themes\Presets\EmeraldPreset;
 use W4\NativeUi\Themes\Presets\RetroPreset;
 use W4\NativeUi\Themes\Presets\CyberpunkPreset;
+use W4\NativeUi\Themes\Presets\ValentinePreset;
+use W4\NativeUi\Themes\Presets\HalloweenPreset;
 
 class W4NativeUiServiceProvider extends ServiceProvider
 {
@@ -76,6 +78,8 @@ class W4NativeUiServiceProvider extends ServiceProvider
             $registry->registerPreset(new EmeraldPreset());
             $registry->registerPreset(new RetroPreset());
             $registry->registerPreset(new CyberpunkPreset());
+            $registry->registerPreset(new ValentinePreset());
+            $registry->registerPreset(new HalloweenPreset());
 
             return $registry;
         });
@@ -128,54 +132,54 @@ class W4NativeUiServiceProvider extends ServiceProvider
 
         Blade::directive('W4NativeStyles', function () {
             return "<?php echo '<link rel=\"stylesheet\" href=\"'.asset('vendor/w4-native-ui/w4-native.css').'\">'; ?>";
-});
+        });
 
-Blade::directive('W4NativeScripts', function () {
-return "<?php echo '<script src=\"'.asset('vendor/w4-native-ui/w4-native.js').'\"></script>'; ?>";
-});
+        Blade::directive('W4NativeScripts', function () {
+            return "<?php echo '<script src=\"'.asset('vendor/w4-native-ui/w4-native.js').'\"></script>'; ?>";
+        });
 
-Blade::directive('W4NativeInit', function () {
-return
-"<?php echo '<script>document.addEventListener(\"DOMContentLoaded\", function () { window.W4NativeUI.init(document); });</script>'; ?>";
-});
+        Blade::directive('W4NativeInit', function () {
+            return
+                "<?php echo '<script>document.addEventListener(\"DOMContentLoaded\", function () { window.W4NativeUI.init(document); });</script>'; ?>";
+        });
 
-Blade::directive('W4NativeLivewire', function () {
-return
-"<?php echo '<script>document.addEventListener(\"livewire:navigated\", function () { window.W4NativeUI.init(document); });</script>'; ?>";
-});
+        Blade::directive('W4NativeLivewire', function () {
+            return
+                "<?php echo '<script>document.addEventListener(\"livewire:navigated\", function () { window.W4NativeUI.init(document); });</script>'; ?>";
+        });
 
-Route::get('/w4/theme-lab', function () {
-return view('w4-native-ui::w4-theme-lab');
-})->name('w4-native-ui.theme-lab');
+        Route::get('/w4/theme-lab', function () {
+            return view('w4-native-ui::w4-theme-lab');
+        })->name('w4-native-ui.theme-lab');
 
-if ($this->app->runningInConsole()) {
-if (is_file($configPath)) {
-$this->publishes([
-$configPath => config_path('w4-native-ui.php'),
-], 'w4-native-ui-config');
-}
+        if ($this->app->runningInConsole()) {
+            if (is_file($configPath)) {
+                $this->publishes([
+                    $configPath => config_path('w4-native-ui.php'),
+                ], 'w4-native-ui-config');
+            }
 
-if (is_dir($distPath)) {
-$this->publishes([
-$distPath => public_path('vendor/w4-native-ui'),
-], 'w4-native-ui-dist');
-}
+            if (is_dir($distPath)) {
+                $this->publishes([
+                    $distPath => public_path('vendor/w4-native-ui'),
+                ], 'w4-native-ui-dist');
+            }
 
-$publish = [];
-if (is_file($configPath)) {
-$publish[$configPath] = config_path('w4-native-ui.php');
-}
-if (is_dir($distPath)) {
-$publish[$distPath] = public_path('vendor/w4-native-ui');
-}
-if ($publish !== []) {
-$this->publishes($publish, 'w4-native-ui-assets');
-}
+            $publish = [];
+            if (is_file($configPath)) {
+                $publish[$configPath] = config_path('w4-native-ui.php');
+            }
+            if (is_dir($distPath)) {
+                $publish[$distPath] = public_path('vendor/w4-native-ui');
+            }
+            if ($publish !== []) {
+                $this->publishes($publish, 'w4-native-ui-assets');
+            }
 
-$this->commands([
-BuildNativeUiAssetsCommand::class,
-InstallNativeUiCommand::class,
-]);
-}
-}
+            $this->commands([
+                BuildNativeUiAssetsCommand::class,
+                InstallNativeUiCommand::class,
+            ]);
+        }
+    }
 }

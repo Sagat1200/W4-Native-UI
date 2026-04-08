@@ -13,6 +13,8 @@ return [
         'native.emerald',
         'native.retro',
         'native.cyberpunk',
+        'native.valentine',
+        'native.halloween',
     ],
     'assets_path' => 'vendor/w4-native-ui',
     'theme_attribute' => 'data-theme',

@@ -15,10 +15,8 @@ class BuildNativeUiAssetsCommand extends Command
         $root = dirname(__DIR__, 3);
         $cssFiles = [
             $root . '/resources/css/w4-theme.css',
-            $root . '/resources/css/presets/default.css',
             $root . '/resources/css/presets/dark.css',
             $root . '/resources/css/presets/corporate.css',
-            $root . '/resources/css/presets/soft.css',
             $root . '/resources/css/presets/night.css',
             $root . '/resources/css/presets/synthwave.css',
             $root . '/resources/css/presets/light.css',
@@ -27,6 +25,8 @@ class BuildNativeUiAssetsCommand extends Command
             $root . '/resources/css/presets/emerald.css',
             $root . '/resources/css/presets/retro.css',
             $root . '/resources/css/presets/cyberpunk.css',
+            $root . '/resources/css/presets/valentine.css',
+            $root . '/resources/css/presets/halloween.css',
             $root . '/resources/css/w4-components.css',
         ];
 

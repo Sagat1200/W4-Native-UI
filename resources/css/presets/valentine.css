@@ -1,0 +1,22 @@
+[data-theme="native.valentine"] {
+  --w4-primary: 353 74% 67%;
+  --w4-primary-content: 355 65% 5%;
+  --w4-secondary: 254 86% 77%;
+  --w4-secondary-content: 253 47% 6%;
+  --w4-accent: 182 34% 55%;
+  --w4-accent-content: 182 54% 3%;
+  --w4-neutral: 336 43% 48%;
+  --w4-neutral-content: 318 46% 89%;
+  --w4-base-100: 319 66% 94%;
+  --w4-base-200: 319 24% 86%;
+  --w4-base-300: 319 14% 77%;
+  --w4-base-content: 344 38% 28%;
+  --w4-info: 221 83% 53%;
+  --w4-info-content: 219 98% 91%;
+  --w4-success: 142 76% 36%;
+  --w4-success-content: 130 96% 2%;
+  --w4-warning: 32 95% 44%;
+  --w4-warning-content: 17 99% 3%;
+  --w4-error: 4 125% 71%;
+  --w4-error-content: 2 80% 5%;
+}
