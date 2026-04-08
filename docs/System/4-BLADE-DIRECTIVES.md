@@ -129,6 +129,7 @@ Obtienes:
 - runtime de hooks (`w4:hook`, `component:state`)
 - normalización de `data-w4-component|state|hook`
 - ARIA por estado
+- interacción nativa de presión en `button` e `icon-button` al hacer click/touch
 
 ## 6. Livewire
 

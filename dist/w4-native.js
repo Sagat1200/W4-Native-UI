@@ -91,6 +91,55 @@
     }
   }
 
+  function hasBlockingState(element) {
+    var states = splitValues(element.getAttribute("data-w4-state"));
+
+    if (states.indexOf("disabled") !== -1 || states.indexOf("loading") !== -1 || states.indexOf("readonly") !== -1) {
+      return true;
+    }
+
+    if (element.hasAttribute("disabled") || element.getAttribute("aria-disabled") === "true") {
+      return true;
+    }
+
+    return false;
+  }
+
+  function pressClass(component) {
+    if (component === "button") {
+      return "w4-button-pressing";
+    }
+
+    if (component === "icon-button") {
+      return "w4-icon-button-pressing";
+    }
+
+    return "";
+  }
+
+  function applyPressFeedback(element) {
+    var component = resolveComponent(element);
+    if (component !== "button" && component !== "icon-button") {
+      return;
+    }
+
+    if (hasBlockingState(element)) {
+      return;
+    }
+
+    var className = pressClass(component);
+    if (!className) {
+      return;
+    }
+
+    element.classList.add(className);
+  }
+
+  function clearPressFeedback(element) {
+    element.classList.remove("w4-button-pressing");
+    element.classList.remove("w4-icon-button-pressing");
+  }
+
   function inferComponent(element) {
     for (var className in COMPONENT_CLASS_MAP) {
       if (Object.prototype.hasOwnProperty.call(COMPONENT_CLASS_MAP, className) && element.classList.contains(className)) {
@@ -269,6 +318,27 @@
     element.addEventListener("focus", sync);
     element.addEventListener("blur", sync);
     element.addEventListener("click", sync);
+    element.addEventListener("mousedown", function () {
+      applyPressFeedback(element);
+    });
+    element.addEventListener("mouseup", function () {
+      clearPressFeedback(element);
+    });
+    element.addEventListener("mouseleave", function () {
+      clearPressFeedback(element);
+    });
+    element.addEventListener("touchstart", function () {
+      applyPressFeedback(element);
+    });
+    element.addEventListener("touchend", function () {
+      clearPressFeedback(element);
+    });
+    element.addEventListener("touchcancel", function () {
+      clearPressFeedback(element);
+    });
+    element.addEventListener("blur", function () {
+      clearPressFeedback(element);
+    });
     element.setAttribute("data-w4-js-bound", "true");
   }
 

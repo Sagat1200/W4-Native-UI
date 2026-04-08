@@ -38,11 +38,20 @@ class BuildAssetsCommandTest extends TestCase
         $this->assertStringContainsString('.w4-helper-text', $content);
         $this->assertStringContainsString('.w4-input-readonly', $content);
         $this->assertStringContainsString('.w4-button-xs', $content);
+        $this->assertStringContainsString('.w4-button-pressing', $content);
         $this->assertStringContainsString('.w4-card-lg', $content);
         $this->assertStringContainsString('.w4-alert-xs', $content);
         $this->assertStringContainsString('.w4-badge-lg', $content);
         $this->assertStringContainsString('.w4-section-xs', $content);
         $this->assertStringContainsString('.w4-tooltip-lg', $content);
+        $this->assertStringContainsString('.w4-button-accent', $content);
+        $this->assertStringContainsString('.w4-button-neutral', $content);
+        $this->assertStringContainsString('.w4-button-outline', $content);
+        $this->assertStringContainsString('.w4-button-ghost', $content);
+        $this->assertStringContainsString('.w4-divider-primary', $content);
+        $this->assertStringContainsString('.w4-divider-secondary', $content);
+        $this->assertStringContainsString('.w4-divider-accent', $content);
+        $this->assertStringContainsString('.w4-divider-muted', $content);
         $this->assertStringContainsString('window.W4NativeUI', $jsContent);
         $this->assertStringContainsString('data-w4-component', $jsContent);
         $this->assertStringContainsString('MutationObserver', $jsContent);
@@ -50,5 +59,7 @@ class BuildAssetsCommandTest extends TestCase
         $this->assertStringContainsString('off: function', $jsContent);
         $this->assertStringContainsString('once: function', $jsContent);
         $this->assertStringContainsString('emit: function', $jsContent);
+        $this->assertStringContainsString('applyPressFeedback', $jsContent);
+        $this->assertStringContainsString('w4-button-pressing', $jsContent);
     }
 }

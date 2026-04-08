@@ -19,6 +19,7 @@ El runtime JS de W4-Native-UI:
   - `data-w4-state`
   - `data-w4-hook`
 - aplica atributos ARIA según estado (`disabled`, `readonly`, `invalid`, `loading`, etc.)
+- aplica feedback de interacción (efecto de presión) en `button` e `icon-button`
 - emite hooks de eventos:
   - global: `w4:hook`
   - específico: `{component}:{state}`
@@ -234,6 +235,68 @@ window.W4NativeUI.on("w4:hook", function (detail) {
   console.log("[W4Hook]", detail.hook, detail.states);
 });
 ```
+
+### 9.3 Selector de temas en UI (modo prueba)
+
+```html
+<label for="themeSwitcher">Theme</label>
+<select id="themeSwitcher">
+  <option value="native.default">native.default</option>
+  <option value="native.dark">native.dark</option>
+  <option value="native.corporate">native.corporate</option>
+  <option value="native.soft">native.soft</option>
+  <option value="native.night">native.night</option>
+</select>
+```
+
+```js
+document.addEventListener("DOMContentLoaded", function () {
+  if (!window.W4NativeUI) {
+    return;
+  }
+
+  var availableThemes = [
+    "native.default",
+    "native.dark",
+    "native.corporate",
+    "native.soft",
+    "native.night",
+  ];
+
+  var storageKey = "w4-native-ui-theme";
+  var switcher = document.getElementById("themeSwitcher");
+  var initial = localStorage.getItem(storageKey) || document.documentElement.getAttribute("data-theme") || "native.default";
+  var safeInitial = availableThemes.indexOf(initial) !== -1 ? initial : "native.default";
+
+  window.W4NativeUI.setTheme(safeInitial);
+
+  if (switcher) {
+    switcher.value = safeInitial;
+
+    switcher.addEventListener("change", function (event) {
+      var theme = event.target.value;
+      if (availableThemes.indexOf(theme) === -1) {
+        return;
+      }
+
+      window.W4NativeUI.setTheme(theme);
+      localStorage.setItem(storageKey, theme);
+    });
+  }
+});
+```
+
+Este snippet es ideal para pruebas manuales mientras se implementa el `ThemeController`.
+
+### 9.4 Vista de laboratorio incluida
+
+El paquete incluye una vista de prueba para laboratorio de themes:
+
+```text
+resources/views/w4-theme-lab.blade.php
+```
+
+Puedes usarla como base para tu proyecto host y validar contraste visual de componentes entre presets.
 
 ## 10. Integración con Livewire
 

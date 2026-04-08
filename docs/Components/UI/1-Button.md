@@ -158,6 +158,155 @@ state=loading
 
 Esto es la base para integraciones JS desacopladas de CSS.
 
+### 7.6 Ejemplos de renderizado por estado
+
+#### Estado: default (sin estado explícito)
+
+```html
+<button class="w4-button w4-button-primary w4-button-md">
+  Guardar
+</button>
+```
+
+#### Estado: disabled (HTML nativo + semántica W4)
+
+```html
+<button
+  class="w4-button w4-button-primary w4-button-md"
+  data-w4-component="button"
+  data-w4-state="disabled"
+  disabled
+>
+  Guardando...
+</button>
+```
+
+#### Estado: loading (runtime JS)
+
+```html
+<button
+  class="w4-button w4-button-primary w4-button-md"
+  data-w4-component="button"
+  data-w4-state="loading"
+>
+  Guardando...
+</button>
+```
+
+#### Estado: active (visual/pressed persistente)
+
+```html
+<button
+  class="w4-button w4-button-primary w4-button-md w4-button-active"
+  data-w4-component="button"
+  data-w4-state="active"
+>
+  Activo
+</button>
+```
+
+#### Estado: readonly (semántica de bloqueo no destructivo)
+
+```html
+<button
+  class="w4-button w4-button-secondary w4-button-md"
+  data-w4-component="button"
+  data-w4-state="readonly"
+>
+  Solo lectura
+</button>
+```
+
+#### Estado combinado: loading + readonly
+
+```html
+<button
+  class="w4-button w4-button-secondary w4-button-md"
+  data-w4-component="button"
+  data-w4-state="loading readonly"
+>
+  Procesando...
+</button>
+```
+
+#### Estado dinámico con JavaScript (de normal a loading y regreso)
+
+```html
+<button id="btnGuardar" class="w4-button w4-button-primary w4-button-md">
+  Guardar
+</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  window.W4NativeUI.init(document);
+
+  var btn = document.getElementById("btnGuardar");
+  var originalText = btn.textContent;
+
+  btn.addEventListener("click", async function () {
+    btn.setAttribute("data-w4-state", "loading");
+    btn.textContent = "Guardando...";
+    window.W4NativeUI.sync(btn);
+
+    try {
+      await new Promise(function (resolve) { setTimeout(resolve, 1000); });
+    } finally {
+      btn.setAttribute("data-w4-state", "");
+      btn.textContent = originalText;
+      window.W4NativeUI.sync(btn);
+    }
+  });
+});
+</script>
+```
+
+### 7.7 Ejemplos de renderizado por variante
+
+#### Primary
+
+```html
+<button class="w4-button w4-button-primary w4-button-md">Primary</button>
+```
+
+#### Secondary
+
+```html
+<button class="w4-button w4-button-secondary w4-button-md">Secondary</button>
+```
+
+#### Accent
+
+```html
+<button class="w4-button w4-button-accent w4-button-md">Accent</button>
+```
+
+#### Neutral
+
+```html
+<button class="w4-button w4-button-neutral w4-button-md">Neutral</button>
+```
+
+#### Outline
+
+```html
+<button class="w4-button w4-button-outline w4-button-md">Outline</button>
+```
+
+#### Ghost
+
+```html
+<button class="w4-button w4-button-ghost w4-button-md">Ghost</button>
+```
+
+Resumen rápido de intención visual:
+
+- `primary`: acción principal de la vista.
+- `secondary`: acción alternativa de segundo nivel.
+- `accent`: acción destacada temática.
+- `neutral`: acción neutra con bajo énfasis.
+- `outline`: acción secundaria con borde y fondo transparente.
+- `ghost`: acción mínima, muy baja carga visual.
+
 ## 8. Integración JS recomendada
 
 ```js

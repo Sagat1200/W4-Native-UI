@@ -126,6 +126,8 @@ Los presets se activan por `data-theme`:
 <html data-theme="native.dark">
 ```
 
+Con `data-theme` activo, el paquete aplica automáticamente fondo y color base de texto sobre `html`/`body` usando tokens del preset.
+
 Presets disponibles:
 
 - `native.default`

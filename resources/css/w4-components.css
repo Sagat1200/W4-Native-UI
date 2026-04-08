@@ -25,6 +25,31 @@
   color: hsl(var(--w4-secondary-content));
 }
 
+.w4-btn-accent,
+.w4-button-accent {
+  background: hsl(var(--w4-accent));
+  color: hsl(var(--w4-accent-content));
+}
+
+.w4-btn-neutral,
+.w4-button-neutral {
+  background: hsl(var(--w4-base-200));
+  color: hsl(var(--w4-base-content));
+}
+
+.w4-btn-outline,
+.w4-button-outline {
+  background: transparent;
+  color: hsl(var(--w4-base-content));
+  border-color: hsl(var(--w4-base-300));
+}
+
+.w4-btn-ghost,
+.w4-button-ghost {
+  background: transparent;
+  color: hsl(var(--w4-base-content));
+}
+
 .w4-btn-xs,
 .w4-button-xs {
   padding: 0.3rem 0.625rem;
@@ -69,6 +94,11 @@
 .w4-btn-active,
 .w4-button-active {
   transform: translateY(1px);
+}
+
+.w4-btn-pressing,
+.w4-button-pressing {
+  transform: translateY(1px) scale(0.99);
 }
 
 .w4-icon-button {
@@ -149,6 +179,10 @@
 
 .w4-icon-button-active {
   transform: scale(0.98);
+}
+
+.w4-icon-button-pressing {
+  transform: translateY(1px) scale(0.97);
 }
 
 .w4-icon {
@@ -1277,6 +1311,26 @@
   border: 0;
   border-block-start: 1px solid hsl(var(--w4-base-300));
   margin: 1rem 0;
+}
+
+.w4-divider-neutral {
+  border-color: hsl(var(--w4-base-300));
+}
+
+.w4-divider-primary {
+  border-color: hsl(var(--w4-primary));
+}
+
+.w4-divider-secondary {
+  border-color: hsl(var(--w4-secondary));
+}
+
+.w4-divider-accent {
+  border-color: hsl(var(--w4-accent));
+}
+
+.w4-divider-muted {
+  border-color: hsl(var(--w4-base-200));
 }
 
 .w4-divider-xs {
