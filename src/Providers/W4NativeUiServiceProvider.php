@@ -44,6 +44,8 @@ use W4\NativeUi\Themes\Presets\NightPreset;
 use W4\NativeUi\Themes\Presets\SynthwavePreset;
 use W4\NativeUi\Themes\Presets\LightPreset;
 use W4\NativeUi\Themes\Presets\CupcakePreset;
+use W4\NativeUi\Themes\Presets\BumblebeePreset;
+use W4\NativeUi\Themes\Presets\EmeraldPreset;
 
 class W4NativeUiServiceProvider extends ServiceProvider
 {
@@ -68,6 +70,8 @@ class W4NativeUiServiceProvider extends ServiceProvider
             $registry->registerPreset(new SynthwavePreset());
             $registry->registerPreset(new LightPreset());
             $registry->registerPreset(new CupcakePreset());
+            $registry->registerPreset(new BumblebeePreset());
+            $registry->registerPreset(new EmeraldPreset());
 
             return $registry;
         });

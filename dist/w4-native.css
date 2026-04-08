@@ -156,6 +156,48 @@ html[data-theme] body {
   --w4-error-content: 342 95% 15%;
 }
 
+[data-theme="native.bumblebee"] {
+  --w4-primary: 50 175% 36%;
+  --w4-primary-content: 30 84% 24%;
+  --w4-secondary: 31 103% 51%;
+  --w4-secondary-content: 16 87% 26%;
+  --w4-accent: 0 0% 0%;
+  --w4-accent-content: 338 0% 100%;
+  --w4-base-100: 338 0% 100%;
+  --w4-base-200: 336 0% 96%;
+  --w4-base-300: 353 0% 90%;
+  --w4-base-content: 340 0% 9%;
+  --w4-info: 194 134% 43%;
+  --w4-info-content: 201 98% 22%;
+  --w4-success: 165 164% 31%;
+  --w4-success-content: 166 117% 14%;
+  --w4-warning: 47 163% 38%;
+  --w4-warning-content: 23 93% 25%;
+  --w4-error: 359 100% 69%;
+  --w4-error-content: 358 72% 29%;
+}
+
+[data-theme="native.emerald"] {
+  --w4-primary: 141 50% 60%;
+  --w4-primary-content: 151 28% 19%;
+  --w4-secondary: 219 96% 60%;
+  --w4-secondary-content: 338 0% 100%;
+  --w4-accent: 10 88% 68%;
+  --w4-accent-content: 0 0% 0%;
+  --w4-base-100: 338 0% 100%;
+  --w4-base-200: 334 0% 91%;
+  --w4-base-300: 334 0% 82%;
+  --w4-base-content: 219 20% 25%;
+  --w4-info: 194 201% 34%;
+  --w4-info-content: 0 0% 0%;
+  --w4-success: 161 124% 30%;
+  --w4-success-content: 0 0% 0%;
+  --w4-warning: 46 169% 39%;
+  --w4-warning-content: 0 0% 0%;
+  --w4-error: 357 126% 71%;
+  --w4-error-content: 0 0% 0%;
+}
+
 .w4-btn,
 .w4-button,
 .w4-icon-button {

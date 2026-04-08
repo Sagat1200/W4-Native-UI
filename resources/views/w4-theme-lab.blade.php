@@ -25,6 +25,8 @@
                         <option value="native.night">native.night</option>
                         <option value="native.synthwave">native.synthwave</option>
                         <option value="native.cupcake">native.cupcake</option>
+                        <option value="native.bumblebee">native.bumblebee</option>
+                        <option value="native.emerald">native.emerald</option>
                     </select>
                 </div>
             </div>
@@ -356,6 +358,8 @@
                 "native.night",
                 "native.synthwave",
                 "native.cupcake",
+                "native.bumblebee",
+                "native.emerald",
             ];
             var storageKey = "w4-native-ui-theme";
             var switcher = document.getElementById("themeSwitcher");

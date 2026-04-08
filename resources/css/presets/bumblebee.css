@@ -1,0 +1,20 @@
+[data-theme="native.bumblebee"] {
+  --w4-primary: 50 175% 36%;
+  --w4-primary-content: 30 84% 24%;
+  --w4-secondary: 31 103% 51%;
+  --w4-secondary-content: 16 87% 26%;
+  --w4-accent: 0 0% 0%;
+  --w4-accent-content: 338 0% 100%;
+  --w4-base-100: 338 0% 100%;
+  --w4-base-200: 336 0% 96%;
+  --w4-base-300: 353 0% 90%;
+  --w4-base-content: 340 0% 9%;
+  --w4-info: 194 134% 43%;
+  --w4-info-content: 201 98% 22%;
+  --w4-success: 165 164% 31%;
+  --w4-success-content: 166 117% 14%;
+  --w4-warning: 47 163% 38%;
+  --w4-warning-content: 23 93% 25%;
+  --w4-error: 359 100% 69%;
+  --w4-error-content: 358 72% 29%;
+}

@@ -23,6 +23,8 @@ class BuildNativeUiAssetsCommand extends Command
             $root . '/resources/css/presets/synthwave.css',
             $root . '/resources/css/presets/light.css',
             $root . '/resources/css/presets/cupcake.css',
+            $root . '/resources/css/presets/bumblebee.css',
+            $root . '/resources/css/presets/emerald.css',
             $root . '/resources/css/w4-components.css',
         ];
 
