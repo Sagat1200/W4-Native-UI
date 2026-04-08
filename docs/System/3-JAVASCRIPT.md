@@ -298,6 +298,12 @@ resources/views/w4-theme-lab.blade.php
 
 Puedes usarla como base para tu proyecto host y validar contraste visual de componentes entre presets.
 
+Ruta disponible:
+
+```text
+/w4/theme-lab
+```
+
 ## 10. Integración con Livewire
 
 Reinicializa tras navegación:

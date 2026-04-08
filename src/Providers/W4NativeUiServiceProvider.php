@@ -3,6 +3,7 @@
 namespace W4\NativeUi\Providers;
 
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use W4\NativeUi\Console\Commands\InstallNativeUiCommand;
 use W4\NativeUi\Console\Commands\BuildNativeUiAssetsCommand;
@@ -112,6 +113,8 @@ class W4NativeUiServiceProvider extends ServiceProvider
         $configPath = $packageRoot . '/config/w4-native-ui.php';
         $distPath = $packageRoot . '/dist';
 
+        $this->loadViewsFrom($packageRoot . '/resources/views', 'w4-native-ui');
+
         Blade::directive('W4NativeStyles', function () {
             return "<?php echo '<link rel=\"stylesheet\" href=\"'.asset('vendor/w4-native-ui/w4-native.css').'\">'; ?>";
         });
@@ -121,12 +124,18 @@ class W4NativeUiServiceProvider extends ServiceProvider
         });
 
         Blade::directive('W4NativeInit', function () {
-            return "<?php echo '<script>document.addEventListener(\"DOMContentLoaded\", function () { window.W4NativeUI.init(document); });</script>'; ?>";
+            return
+                "<?php echo '<script>document.addEventListener(\"DOMContentLoaded\", function () { window.W4NativeUI.init(document); });</script>'; ?>";
         });
 
         Blade::directive('W4NativeLivewire', function () {
-            return "<?php echo '<script>document.addEventListener(\"livewire:navigated\", function () { window.W4NativeUI.init(document); });</script>'; ?>";
+            return
+                "<?php echo '<script>document.addEventListener(\"livewire:navigated\", function () { window.W4NativeUI.init(document); });</script>'; ?>";
         });
+
+        Route::get('/w4/theme-lab', function () {
+            return view('w4-native-ui::w4-theme-lab');
+        })->name('w4-native-ui.theme-lab');
 
         if ($this->app->runningInConsole()) {
             if (is_file($configPath)) {
