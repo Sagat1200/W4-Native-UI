@@ -25,6 +25,8 @@ class BuildNativeUiAssetsCommand extends Command
             $root . '/resources/css/presets/cupcake.css',
             $root . '/resources/css/presets/bumblebee.css',
             $root . '/resources/css/presets/emerald.css',
+            $root . '/resources/css/presets/retro.css',
+            $root . '/resources/css/presets/cyberpunk.css',
             $root . '/resources/css/w4-components.css',
         ];
 

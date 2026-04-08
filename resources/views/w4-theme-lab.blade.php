@@ -18,15 +18,17 @@
                 <div
                     style="display:flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin-block-start: 1rem;">
                     <label class="w4-label w4-label-sm" for="themeSwitcher">Theme</label>
-                    <select id="themeSwitcher" class="w4-select w4-select-md" style="min-width: 150px;">
-                        <option value="native.light">native.light</option>
-                        <option value="native.dark">native.dark</option>
-                        <option value="native.corporate">native.corporate</option>
-                        <option value="native.night">native.night</option>
-                        <option value="native.synthwave">native.synthwave</option>
-                        <option value="native.cupcake">native.cupcake</option>
-                        <option value="native.bumblebee">native.bumblebee</option>
-                        <option value="native.emerald">native.emerald</option>
+                    <select id="themeSwitcher" class="w4-select w4-select-md" style="min-inline-size: 150px;">
+                        <option value="native.light">W4-light</option>
+                        <option value="native.dark">W4-dark</option>
+                        <option value="native.corporate">W4-corporate</option>
+                        <option value="native.night">W4-night</option>
+                        <option value="native.synthwave">W4-synthwave</option>
+                        <option value="native.cupcake">W4-cupcake</option>
+                        <option value="native.bumblebee">W4-bumblebee</option>
+                        <option value="native.emerald">W4-emerald</option>
+                        <option value="native.retro">native.retro</option>
+                        <option value="native.cyberpunk">native.cyberpunk</option>
                     </select>
                 </div>
             </div>
@@ -360,6 +362,8 @@
                 "native.cupcake",
                 "native.bumblebee",
                 "native.emerald",
+                "native.retro",
+                "native.cyberpunk",
             ];
             var storageKey = "w4-native-ui-theme";
             var switcher = document.getElementById("themeSwitcher");
