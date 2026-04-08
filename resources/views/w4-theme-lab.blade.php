@@ -53,6 +53,74 @@
             <hr class="w4-divider w4-divider-md w4-divider-accent">
             <hr class="w4-divider w4-divider-md w4-divider-muted">
         </section>
+
+        <section class="w4-section w4-section-lg">
+            <h2 class="w4-heading w4-heading-md">Heading</h2>
+            <div style="display:grid; gap:0.5rem; margin-block-start: 0.75rem;">
+                <h1 class="w4-heading w4-heading-h1 w4-heading-primary">Heading H1 Primary</h1>
+                <h2 class="w4-heading w4-heading-h2 w4-heading-secondary">Heading H2 Secondary</h2>
+                <h3 class="w4-heading w4-heading-h3 w4-heading-accent">Heading H3 Accent</h3>
+                <h4 class="w4-heading w4-heading-h4 w4-heading-muted">Heading H4 Muted</h4>
+                <h5 class="w4-heading w4-heading-h5 w4-heading-md w4-heading-active" data-w4-component="heading"
+                    data-w4-state="active">Heading Active</h5>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-lg">
+            <h2 class="w4-heading w4-heading-md">IconButton + Icon</h2>
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-block-start: 0.75rem;">
+                <button class="w4-icon-button w4-icon-button-primary w4-icon-button-md" aria-label="Buscar">🔍</button>
+                <button class="w4-icon-button w4-icon-button-secondary w4-icon-button-md" aria-label="Editar">✎</button>
+                <button class="w4-icon-button w4-icon-button-accent w4-icon-button-md" aria-label="Favorito">★</button>
+                <button class="w4-icon-button w4-icon-button-neutral w4-icon-button-md w4-icon-spin"
+                    aria-label="Ajustes">⚙</button>
+                <button class="w4-icon-button w4-icon-button-ghost w4-icon-button-md" aria-label="Compartir">↗</button>
+                <button class="w4-icon-button w4-icon-button-primary w4-icon-button-md" data-w4-state="loading"
+                    aria-label="Cargando">⏳</button>
+                <button class="w4-icon-button w4-icon-button-primary w4-icon-button-md" data-w4-state="disabled"
+                    disabled aria-label="Deshabilitado">⛔</button>
+            </div>
+
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap; align-items:center; margin-block-start:1rem;">
+                <span class="w4-icon w4-icon-primary w4-icon-md">★</span>
+                <span class="w4-icon w4-icon-secondary w4-icon-lg">✦</span>
+                <span class="w4-icon w4-icon-accent w4-icon-md w4-icon-spin">⟳</span>
+                <span class="w4-icon w4-icon-muted w4-icon-sm">•</span>
+                <span class="w4-icon w4-icon-md w4-icon-active" data-w4-component="icon" data-w4-state="active">⬤</span>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-lg">
+            <h2 class="w4-heading w4-heading-md">Label + Link + Text</h2>
+
+            <div style="display:grid; gap:0.5rem; margin-block-start:0.75rem;">
+                <label class="w4-label w4-label-md" for="demoName">Nombre</label>
+                <label class="w4-label w4-label-required w4-label-sm" for="demoEmail">Correo</label>
+                <label class="w4-label w4-label-primary w4-label-lg">Label Primary</label>
+                <label class="w4-label w4-label-muted w4-label-sm">Label Muted</label>
+                <input id="demoName" class="w4-input w4-input-default w4-input-md" placeholder="Escribe tu nombre">
+                <input id="demoEmail" class="w4-input w4-input-default w4-input-md" placeholder="correo@ejemplo.com">
+            </div>
+
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-block-start:1rem;">
+                <a href="#" class="w4-link w4-link-primary w4-link-md">Link Primary</a>
+                <a href="#" class="w4-link w4-link-secondary w4-link-md">Link Secondary</a>
+                <a href="#" class="w4-link w4-link-accent w4-link-md">Link Accent</a>
+                <a href="#" class="w4-link w4-link-neutral w4-link-md">Link Neutral</a>
+                <a href="#" class="w4-link w4-link-muted w4-link-md">Link Muted</a>
+                <a href="#" class="w4-link w4-link-primary w4-link-md w4-link-disabled" aria-disabled="true">Link
+                    Disabled</a>
+            </div>
+
+            <div style="display:grid; gap:0.5rem; margin-block-start:1rem;">
+                <p class="w4-text w4-text-md">Texto base del sistema.</p>
+                <p class="w4-text w4-text-lead w4-text-lg">Texto lead para introducción.</p>
+                <p class="w4-text w4-text-primary w4-text-md">Texto primary.</p>
+                <p class="w4-text w4-text-secondary w4-text-md">Texto secondary.</p>
+                <p class="w4-text w4-text-accent w4-text-md">Texto accent.</p>
+                <p class="w4-text w4-text-muted w4-text-md">Texto muted.</p>
+            </div>
+        </section>
     </main>
 
     @W4NativeScripts
