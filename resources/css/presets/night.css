@@ -1,12 +1,20 @@
 [data-theme="native.night"] {
-  --w4-primary: 233 100% 75%;
-  --w4-primary-content: 233 100% 15%;
-  --w4-secondary: 277 100% 68%;
-  --w4-secondary-content: 277 100% 14%;
-  --w4-accent: 350 100% 72%;
-  --w4-accent-content: 350 100% 14%;
-  --w4-base-100: 266 100% 21%;
-  --w4-base-200: 266 100% 19%;
-  --w4-base-300: 266 100% 18%;
-  --w4-base-content: 266 100% 84%;
+  --w4-primary: 199 93% 60%;
+  --w4-primary-content: 204 88% 4%;
+  --w4-secondary: 234 89% 74%;
+  --w4-secondary-content: 235 56% 5%;
+  --w4-accent: 329 86% 70%;
+  --w4-accent-content: 331 65% 5%;
+  --w4-base-100: 222 47% 11%;
+  --w4-base-200: 222 50% 10%;
+  --w4-base-300: 222 52% 8%;
+  --w4-base-content: 221 7% 80%;
+  --w4-info: 198 90% 48%;
+  --w4-info-content: 0 0% 0%;
+  --w4-success: 172 66% 51%;
+  --w4-success-content: 169 89% 3%;
+  --w4-warning: 41 88% 64%;
+  --w4-warning-content: 37 79% 4%;
+  --w4-error: 351 94% 71%;
+  --w4-error-content: 353 67% 5%;
 }

@@ -14,16 +14,24 @@ class DarkPreset extends AbstractPreset
     protected function overrides(): array
     {
         return [
-            'primary' => '277 100% 58%',
-            'primary-content' => '272 100% 96%',
-            'secondary' => '354 100% 65%',
-            'secondary-content' => '342 100% 94%',
-            'accent' => '182 100% 77%',
-            'accent-content' => '188 100% 38%',
-            'base-100' => '252 100% 25%',
-            'base-200' => '253 100% 23%',
-            'base-300' => '254 100% 21%',
-            'base-content' => '257 100% 98%',
+            'primary' => '241 100% 68%',
+            'primary-content' => '226 93% 96%',
+            'secondary' => '328 90% 57%',
+            'secondary-content' => '326 66% 94%',
+            'accent' => '175 177% 30%',
+            'accent-content' => '176 82% 17%',
+            'base-100' => '212 18% 14%',
+            'base-200' => '213 18% 12%',
+            'base-300' => '213 18% 10%',
+            'base-content' => '215 506% 99%',
+            'info' => '194 134% 43%',
+            'info-content' => '204 89% 15%',
+            'success' => '165 164% 31%',
+            'success-content' => '166 117% 14%',
+            'warning' => '47 163% 38%',
+            'warning-content' => '23 93% 25%',
+            'error' => '350 104% 70%',
+            'error-content' => '342 95% 15%',
         ];
     }
 }

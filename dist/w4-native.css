@@ -44,16 +44,24 @@ html[data-theme] body {
 }
 
 [data-theme="native.dark"] {
-  --w4-primary: 277 100% 58%;
-  --w4-primary-content: 272 100% 96%;
-  --w4-secondary: 354 100% 65%;
-  --w4-secondary-content: 342 100% 94%;
-  --w4-accent: 182 100% 77%;
-  --w4-accent-content: 188 100% 38%;
-  --w4-base-100: 252 100% 25%;
-  --w4-base-200: 253 100% 23%;
-  --w4-base-300: 254 100% 21%;
-  --w4-base-content: 257 100% 98%;
+  --w4-primary: 241 100% 68%;
+  --w4-primary-content: 226 93% 96%;
+  --w4-secondary: 328 90% 57%;
+  --w4-secondary-content: 326 66% 94%;
+  --w4-accent: 175 177% 30%;
+  --w4-accent-content: 176 82% 17%;
+  --w4-base-100: 212 18% 14%;
+  --w4-base-200: 213 18% 12%;
+  --w4-base-300: 213 18% 10%;
+  --w4-base-content: 215 506% 99%;
+  --w4-info: 194 134% 43%;
+  --w4-info-content: 204 89% 15%;
+  --w4-success: 165 164% 31%;
+  --w4-success-content: 166 117% 14%;
+  --w4-warning: 47 163% 38%;
+  --w4-warning-content: 23 93% 25%;
+  --w4-error: 350 104% 70%;
+  --w4-error-content: 342 95% 15%;
 }
 
 [data-theme="native.corporate"] {
@@ -83,16 +91,24 @@ html[data-theme] body {
 }
 
 [data-theme="native.night"] {
-  --w4-primary: 233 100% 75%;
-  --w4-primary-content: 233 100% 15%;
-  --w4-secondary: 277 100% 68%;
-  --w4-secondary-content: 277 100% 14%;
-  --w4-accent: 350 100% 72%;
-  --w4-accent-content: 350 100% 14%;
-  --w4-base-100: 266 100% 21%;
-  --w4-base-200: 266 100% 19%;
-  --w4-base-300: 266 100% 18%;
-  --w4-base-content: 266 100% 84%;
+  --w4-primary: 199 93% 60%;
+  --w4-primary-content: 204 88% 4%;
+  --w4-secondary: 234 89% 74%;
+  --w4-secondary-content: 235 56% 5%;
+  --w4-accent: 329 86% 70%;
+  --w4-accent-content: 331 65% 5%;
+  --w4-base-100: 222 47% 11%;
+  --w4-base-200: 222 50% 10%;
+  --w4-base-300: 222 52% 8%;
+  --w4-base-content: 221 7% 80%;
+  --w4-info: 198 90% 48%;
+  --w4-info-content: 0 0% 0%;
+  --w4-success: 172 66% 51%;
+  --w4-success-content: 169 89% 3%;
+  --w4-warning: 41 88% 64%;
+  --w4-warning-content: 37 79% 4%;
+  --w4-error: 351 94% 71%;
+  --w4-error-content: 353 67% 5%;
 }
 
 [data-theme="native.synthwave"] {
