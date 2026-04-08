@@ -1,0 +1,20 @@
+[data-theme="native.cupcake"] {
+  --w4-primary: 171 81% 59%;
+  --w4-primary-content: 177 126% 16%;
+  --w4-secondary: 326 79% 89%;
+  --w4-secondary-content: 330 114% 29%;
+  --w4-accent: 32 99% 83%;
+  --w4-accent-content: 17 101% 31%;
+  --w4-base-100: 24 32% 97%;
+  --w4-base-200: 27 20% 92%;
+  --w4-base-300: 22 13% 89%;
+  --w4-base-content: 280 46% 14%;
+  --w4-info: 196 156% 37%;
+  --w4-info-content: 204 89% 15%;
+  --w4-success: 164 187% 25%;
+  --w4-success-content: 166 104% 8%;
+  --w4-warning: 47 168% 35%;
+  --w4-warning-content: 26 91% 13%;
+  --w4-error: 345 99% 55%;
+  --w4-error-content: 342 95% 15%;
+}

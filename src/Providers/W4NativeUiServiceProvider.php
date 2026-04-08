@@ -40,10 +40,10 @@ use W4\NativeUi\Themes\Components\FeedBack\SkeletonTheme;
 use W4\NativeUi\Themes\Components\FeedBack\TooltipTheme;
 use W4\NativeUi\Themes\Presets\CorporatePreset;
 use W4\NativeUi\Themes\Presets\DarkPreset;
-use W4\NativeUi\Themes\Presets\DefaultPreset;
 use W4\NativeUi\Themes\Presets\NightPreset;
-use W4\NativeUi\Themes\Presets\SoftPreset;
 use W4\NativeUi\Themes\Presets\SynthwavePreset;
+use W4\NativeUi\Themes\Presets\LightPreset;
+use W4\NativeUi\Themes\Presets\CupcakePreset;
 
 class W4NativeUiServiceProvider extends ServiceProvider
 {
@@ -61,12 +61,13 @@ class W4NativeUiServiceProvider extends ServiceProvider
 
         $this->app->singleton(ThemeRegistry::class, function () {
             $registry = new ThemeRegistry();
-            $registry->registerPreset(new DefaultPreset());
+
             $registry->registerPreset(new DarkPreset());
             $registry->registerPreset(new CorporatePreset());
-            $registry->registerPreset(new SoftPreset());
             $registry->registerPreset(new NightPreset());
             $registry->registerPreset(new SynthwavePreset());
+            $registry->registerPreset(new LightPreset());
+            $registry->registerPreset(new CupcakePreset());
 
             return $registry;
         });

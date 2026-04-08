@@ -1,13 +1,14 @@
 <?php
 
 return [
-    'default_preset' => 'native.default',
+    'default_preset' => 'native.light',
     'available_presets' => [
-        'native.default',
+        'native.light',
         'native.dark',
         'native.corporate',
-        'native.soft',
+        'native.cupcake',
         'native.night',
+        'native.synthwave',
     ],
     'assets_path' => 'vendor/w4-native-ui',
     'theme_attribute' => 'data-theme',

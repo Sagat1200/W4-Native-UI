@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" data-theme="native.default">
+<html lang="es" data-theme="native.light">
 
 <head>
     <meta charset="utf-8">
@@ -18,13 +18,13 @@
                 <div
                     style="display:flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin-block-start: 1rem;">
                     <label class="w4-label w4-label-sm" for="themeSwitcher">Theme</label>
-                    <select id="themeSwitcher" class="w4-select w4-select-md">
-                        <option value="native.default">native.default</option>
+                    <select id="themeSwitcher" class="w4-select w4-select-md" style="min-width: 150px;">
+                        <option value="native.light">native.light</option>
                         <option value="native.dark">native.dark</option>
                         <option value="native.corporate">native.corporate</option>
-                        <option value="native.soft">native.soft</option>
                         <option value="native.night">native.night</option>
                         <option value="native.synthwave">native.synthwave</option>
+                        <option value="native.cupcake">native.cupcake</option>
                     </select>
                 </div>
             </div>
@@ -350,19 +350,19 @@
             }
 
             var availableThemes = [
-                "native.default",
+                "native.light",
                 "native.dark",
                 "native.corporate",
-                "native.soft",
                 "native.night",
                 "native.synthwave",
+                "native.cupcake",
             ];
             var storageKey = "w4-native-ui-theme";
             var switcher = document.getElementById("themeSwitcher");
             var hookLog = document.getElementById("hookLog");
             var clearHookLog = document.getElementById("clearHookLog");
-            var initial = localStorage.getItem(storageKey) || document.documentElement.getAttribute("data-theme") || "native.default";
-            var safeInitial = availableThemes.indexOf(initial) !== -1 ? initial : "native.default";
+            var initial = localStorage.getItem(storageKey) || document.documentElement.getAttribute("data-theme") || "native.light";
+            var safeInitial = availableThemes.indexOf(initial) !== -1 ? initial : "native.light";
 
             window.W4NativeUI.setTheme(safeInitial);
 
