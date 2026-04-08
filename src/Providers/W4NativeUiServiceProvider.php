@@ -43,6 +43,7 @@ use W4\NativeUi\Themes\Presets\DarkPreset;
 use W4\NativeUi\Themes\Presets\DefaultPreset;
 use W4\NativeUi\Themes\Presets\NightPreset;
 use W4\NativeUi\Themes\Presets\SoftPreset;
+use W4\NativeUi\Themes\Presets\SynthwavePreset;
 
 class W4NativeUiServiceProvider extends ServiceProvider
 {
@@ -65,6 +66,7 @@ class W4NativeUiServiceProvider extends ServiceProvider
             $registry->registerPreset(new CorporatePreset());
             $registry->registerPreset(new SoftPreset());
             $registry->registerPreset(new NightPreset());
+            $registry->registerPreset(new SynthwavePreset());
 
             return $registry;
         });

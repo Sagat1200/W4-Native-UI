@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>W4 Theme Lab</title>
     @W4NativeStyles
+    @vite('resources/js/app.js', 'resources/css/app.css')
 </head>
 
 <body>
@@ -24,23 +25,42 @@
                         <option value="native.corporate">native.corporate</option>
                         <option value="native.soft">native.soft</option>
                         <option value="native.night">native.night</option>
+                        <option value="native.synthwave">native.synthwave</option>
                     </select>
                 </div>
             </div>
         </section>
 
         <section class="w4-section w4-section-lg">
-            <h2 class="w4-heading w4-heading-md">Buttons</h2>
+            <h2 class="w4-heading w4-heading-md">Buttons (Base & Semantic)</h2>
             <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-block-start: 0.75rem;">
                 <button class="w4-button w4-button-primary w4-button-md">Primary</button>
                 <button class="w4-button w4-button-secondary w4-button-md">Secondary</button>
                 <button class="w4-button w4-button-accent w4-button-md">Accent</button>
                 <button class="w4-button w4-button-neutral w4-button-md">Neutral</button>
-                <button class="w4-button w4-button-outline w4-button-md">Outline</button>
+                <button class="w4-button w4-button-info w4-button-md">Info</button>
+                <button class="w4-button w4-button-success w4-button-md">Success</button>
+                <button class="w4-button w4-button-warning w4-button-md">Warning</button>
+                <button class="w4-button w4-button-error w4-button-md">Error</button>
+            </div>
+
+            <h2 class="w4-heading w4-heading-md" style="margin-block-start: 1.5rem;">Buttons (Styles & Modifiers)</h2>
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-block-start: 0.75rem;">
+                <button class="w4-button w4-button-primary w4-button-outline w4-button-md">Outline</button>
+                <button class="w4-button w4-button-secondary w4-button-dash w4-button-md">Dash</button>
+                <button class="w4-button w4-button-accent w4-button-soft w4-button-md">Soft</button>
                 <button class="w4-button w4-button-ghost w4-button-md">Ghost</button>
+                <button class="w4-button w4-button-link w4-button-md">Link</button>
                 <button class="w4-button w4-button-primary w4-button-md" data-w4-state="loading">Loading</button>
                 <button class="w4-button w4-button-primary w4-button-md" data-w4-state="disabled"
                     disabled>Disabled</button>
+            </div>
+
+            <h2 class="w4-heading w4-heading-md" style="margin-block-start: 1.5rem;">Buttons (Shapes)</h2>
+            <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-block-start: 0.75rem; align-items: center;">
+                <button class="w4-button w4-button-primary w4-button-square w4-button-md">Sq</button>
+                <button class="w4-button w4-button-secondary w4-button-circle w4-button-md">Ci</button>
+                <button class="w4-button w4-button-accent w4-button-wide w4-button-md">Wide Button</button>
             </div>
         </section>
 
@@ -336,6 +356,7 @@
                 "native.corporate",
                 "native.soft",
                 "native.night",
+                "native.synthwave",
             ];
             var storageKey = "w4-native-ui-theme";
             var switcher = document.getElementById("themeSwitcher");
