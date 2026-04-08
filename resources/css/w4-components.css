@@ -546,16 +546,19 @@
   background: hsl(var(--w4-base-100));
   color: hsl(var(--w4-base-content));
   padding: 0.625rem 0.75rem;
+  box-shadow: 0 0 0 1px hsl(var(--w4-primary) / 0.18);
 }
 
 .w4-input:focus {
   outline: 2px solid hsl(var(--w4-primary));
   outline-offset: 1px;
+  box-shadow: 0 0 0 2px hsl(var(--w4-primary) / 0.28);
 }
 
 .w4-input-ghost {
   border-color: transparent;
   background: transparent;
+  box-shadow: none;
 }
 
 .w4-input-xs {
@@ -580,10 +583,12 @@
 
 .w4-input-invalid {
   border-color: hsl(0 72% 51%);
+  box-shadow: 0 0 0 1px hsl(0 72% 51% / 0.22);
 }
 
 .w4-input-valid {
   border-color: hsl(142 71% 45%);
+  box-shadow: 0 0 0 1px hsl(142 71% 45% / 0.22);
 }
 
 .w4-input-disabled {
@@ -600,7 +605,7 @@
 }
 
 .w4-card {
-  background: hsl(var(--w4-base-100));
+  background: hsl(var(--w4-base-200));
   border: 1px solid hsl(var(--w4-base-300));
   border-radius: var(--w4-radius-card);
   box-shadow: var(--w4-shadow-sm);
@@ -741,22 +746,26 @@
   background: hsl(var(--w4-base-100));
   color: hsl(var(--w4-base-content));
   padding: 0.625rem 0.75rem;
+  box-shadow: 0 0 0 1px hsl(var(--w4-primary) / 0.18);
 }
 
 .w4-select:focus,
 .w4-textarea:focus {
   outline: 2px solid hsl(var(--w4-primary));
   outline-offset: 1px;
+  box-shadow: 0 0 0 2px hsl(var(--w4-primary) / 0.28);
 }
 
 .w4-select-ghost {
   border-color: transparent;
   background: transparent;
+  box-shadow: none;
 }
 
 .w4-textarea-ghost {
   border-color: transparent;
   background: transparent;
+  box-shadow: none;
 }
 
 .w4-select-xs {
@@ -802,14 +811,17 @@
 .w4-select-invalid,
 .w4-textarea-invalid {
   border-color: hsl(0 72% 51%);
+  box-shadow: 0 0 0 1px hsl(0 72% 51% / 0.22);
 }
 
 .w4-select-valid {
   border-color: hsl(142 71% 45%);
+  box-shadow: 0 0 0 1px hsl(142 71% 45% / 0.22);
 }
 
 .w4-textarea-valid {
   border-color: hsl(142 71% 45%);
+  box-shadow: 0 0 0 1px hsl(142 71% 45% / 0.22);
 }
 
 .w4-select-disabled,
@@ -1036,6 +1048,8 @@
   inline-size: min(100%, 1200px);
   margin-inline: auto;
   padding-inline: 1rem;
+  background: hsl(var(--w4-base-200));
+  color: hsl(var(--w4-base-content));
 }
 
 .w4-container-xs {
@@ -1149,7 +1163,7 @@
 .w4-panel {
   border: 1px solid hsl(var(--w4-base-300));
   border-radius: var(--w4-radius-card);
-  background: hsl(var(--w4-base-100));
+  background: hsl(var(--w4-base-200));
   padding: 1rem;
 }
 

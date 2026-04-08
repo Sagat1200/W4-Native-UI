@@ -222,6 +222,11 @@
       if ("disabled" in element) {
         element.disabled = true;
       }
+    } else if (element.hasAttribute("aria-disabled")) {
+      element.setAttribute("aria-disabled", "false");
+      if ("disabled" in element) {
+        element.disabled = false;
+      }
     }
 
     if (hasState("readonly")) {
@@ -229,20 +234,31 @@
       if ("readOnly" in element) {
         element.readOnly = true;
       }
+    } else if (element.hasAttribute("aria-readonly")) {
+      element.setAttribute("aria-readonly", "false");
+      if ("readOnly" in element) {
+        element.readOnly = false;
+      }
     }
 
     if (hasState("invalid")) {
       element.setAttribute("aria-invalid", "true");
     } else if (hasState("valid")) {
       element.setAttribute("aria-invalid", "false");
+    } else if (element.hasAttribute("aria-invalid")) {
+      element.removeAttribute("aria-invalid");
     }
 
     if (hasState("loading")) {
       element.setAttribute("aria-busy", "true");
+    } else if (element.hasAttribute("aria-busy")) {
+      element.setAttribute("aria-busy", "false");
     }
 
     if (hasState("hidden")) {
       element.setAttribute("aria-hidden", "true");
+    } else if (element.hasAttribute("aria-hidden")) {
+      element.setAttribute("aria-hidden", "false");
     }
 
     if (component === "button" || component === "icon-button" || component === "toggle") {
