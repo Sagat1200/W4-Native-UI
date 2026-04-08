@@ -94,6 +94,7 @@ También puedes usar directivas Blade del paquete:
 ```blade
 @W4NativeStyles
 @W4NativeScripts
+@W4NativeInit
 ```
 
 Inicializa runtime JS:

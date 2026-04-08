@@ -22,4 +22,20 @@ class BladeDirectivesTest extends TestCase
         $this->assertStringContainsString('vendor/w4-native-ui/w4-native.js', $html);
         $this->assertStringContainsString('<script', $html);
     }
+
+    public function test_renderiza_directiva_w4_native_init(): void
+    {
+        $html = Blade::render('@W4NativeInit');
+
+        $this->assertStringContainsString('DOMContentLoaded', $html);
+        $this->assertStringContainsString('window.W4NativeUI.init(document)', $html);
+    }
+
+    public function test_renderiza_directiva_w4_native_livewire(): void
+    {
+        $html = Blade::render('@W4NativeLivewire');
+
+        $this->assertStringContainsString('livewire:navigated', $html);
+        $this->assertStringContainsString('window.W4NativeUI.init(document)', $html);
+    }
 }

@@ -93,6 +93,8 @@ Directivas disponibles:
 
 - `@W4NativeStyles`
 - `@W4NativeScripts`
+- `@W4NativeInit`
+- `@W4NativeLivewire`
 
 Ejemplo:
 
@@ -106,11 +108,7 @@ Ejemplo:
     {{ $slot ?? '' }}
 
     @W4NativeScripts
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            window.W4NativeUI.init(document);
-        });
-    </script>
+    @W4NativeInit
 </body>
 </html>
 ```
@@ -248,6 +246,12 @@ document.addEventListener("livewire:navigated", function () {
 ```
 
 Para otros ciclos dinámicos, llama `init()` o `sync()` al finalizar render.
+
+Si usas Blade directives, puedes reemplazar el bloque manual por:
+
+```blade
+@W4NativeLivewire
+```
 
 ## 11. Reglas de operación recomendadas
 

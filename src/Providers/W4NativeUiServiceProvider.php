@@ -120,6 +120,14 @@ class W4NativeUiServiceProvider extends ServiceProvider
             return "<?php echo '<script src=\"'.asset('vendor/w4-native-ui/w4-native.js').'\"></script>'; ?>";
         });
 
+        Blade::directive('W4NativeInit', function () {
+            return "<?php echo '<script>document.addEventListener(\"DOMContentLoaded\", function () { window.W4NativeUI.init(document); });</script>'; ?>";
+        });
+
+        Blade::directive('W4NativeLivewire', function () {
+            return "<?php echo '<script>document.addEventListener(\"livewire:navigated\", function () { window.W4NativeUI.init(document); });</script>'; ?>";
+        });
+
         if ($this->app->runningInConsole()) {
             if (is_file($configPath)) {
                 $this->publishes([
