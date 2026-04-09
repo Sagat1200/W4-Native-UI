@@ -1,0 +1,57 @@
+.w4-text {
+  color: hsl(var(--w4-base-content));
+  line-height: 1.5;
+}
+
+.w4-text-primary {
+  color: hsl(var(--w4-primary));
+}
+
+.w4-text-secondary {
+  color: hsl(var(--w4-secondary));
+}
+
+.w4-text-accent {
+  color: hsl(var(--w4-accent));
+}
+
+.w4-text-muted {
+  opacity: 0.75;
+}
+
+.w4-text-lead {
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.w4-text-xs {
+  font-size: 0.75rem;
+}
+
+.w4-text-sm {
+  font-size: 0.875rem;
+}
+
+.w4-text-md {
+  font-size: 1rem;
+}
+
+.w4-text-lg {
+  font-size: 1.125rem;
+}
+
+.w4-text-xl {
+  font-size: 1.25rem;
+}
+
+.w4-text-disabled {
+  opacity: 0.55;
+}
+
+.w4-text-active {
+  font-weight: 600;
+}
+
+.w4-text-hidden {
+  display: none;
+}

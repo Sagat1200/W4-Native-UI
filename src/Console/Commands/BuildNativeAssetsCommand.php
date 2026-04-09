@@ -48,6 +48,14 @@ class BuildNativeAssetsCommand extends Command
             $root . '/resources/css/daisyui/presets/nord.css',
             $root . '/resources/css/daisyui/presets/sunset.css',
             $root . '/resources/css/daisyui/properties/w4-components.css',
+            $root . '/resources/css/daisyui/components/ui/button.css',
+            $root . '/resources/css/daisyui/components/ui/divider.css',
+            $root . '/resources/css/daisyui/components/ui/heading.css',
+            $root . '/resources/css/daisyui/components/ui/icon.css',
+            $root . '/resources/css/daisyui/components/ui/iconButton.css',
+            $root . '/resources/css/daisyui/components/ui/label.css',
+            $root . '/resources/css/daisyui/components/ui/link.css',
+            $root . '/resources/css/daisyui/components/ui/text.css',
         ];
 
         $cssContent = [];

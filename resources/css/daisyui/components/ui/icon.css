@@ -1,0 +1,61 @@
+.w4-icon {
+  display: inline-block;
+  line-height: 1;
+  color: currentColor;
+}
+
+.w4-icon-primary {
+  color: hsl(var(--w4-primary));
+}
+
+.w4-icon-secondary {
+  color: hsl(var(--w4-secondary));
+}
+
+.w4-icon-accent {
+  color: hsl(var(--w4-accent));
+}
+
+.w4-icon-muted {
+  opacity: 0.7;
+}
+
+.w4-icon-xs {
+  font-size: 0.75rem;
+}
+
+.w4-icon-sm {
+  font-size: 0.875rem;
+}
+
+.w4-icon-md {
+  font-size: 1rem;
+}
+
+.w4-icon-lg {
+  font-size: 1.25rem;
+}
+
+.w4-icon-xl {
+  font-size: 1.5rem;
+}
+
+.w4-icon-disabled {
+  opacity: 0.55;
+}
+
+.w4-icon-active {
+  filter: saturate(1.2);
+}
+
+.w4-icon-hidden {
+  display: none;
+}
+
+.w4-icon-spin {
+  animation: w4-icon-spin 1s linear infinite;
+}
+
+.w4-icon-decorative {
+  pointer-events: none;
+}

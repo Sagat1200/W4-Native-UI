@@ -1,0 +1,59 @@
+.w4-link {
+  color: hsl(var(--w4-primary));
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transition: color 150ms ease;
+}
+
+.w4-link-primary {
+  color: hsl(var(--w4-primary));
+}
+
+.w4-link-secondary {
+  color: hsl(var(--w4-secondary));
+}
+
+.w4-link-accent {
+  color: hsl(var(--w4-accent));
+}
+
+.w4-link-neutral {
+  color: hsl(var(--w4-base-content));
+}
+
+.w4-link-muted {
+  opacity: 0.75;
+}
+
+.w4-link-xs {
+  font-size: 0.75rem;
+}
+
+.w4-link-sm {
+  font-size: 0.875rem;
+}
+
+.w4-link-md {
+  font-size: 1rem;
+}
+
+.w4-link-lg {
+  font-size: 1.125rem;
+}
+
+.w4-link-xl {
+  font-size: 1.25rem;
+}
+
+.w4-link-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.w4-link-active {
+  font-weight: 600;
+}
+
+.w4-link-hidden {
+  display: none;
+}
