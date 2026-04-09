@@ -1,5 +1,9 @@
 <?php
 
+/*
+* Archivo de Configuracion de W4 Native
+*/
+
 return [
     'default_preset' => 'native.light',
     'available_presets' => [
@@ -36,6 +40,6 @@ return [
         'native.nord',
         'native.sunset',
     ],
-    'assets_path' => 'vendor/w4-native-ui',
+    'assets_path' => 'vendor/w4-native',
     'theme_attribute' => 'data-theme',
 ];

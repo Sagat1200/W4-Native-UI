@@ -1,14 +1,14 @@
-# W4-Native-UI: Contexto del proyecto
+# W4-Native: Contexto del proyecto
 
 ---
 
 ## 1. Introducción
 
-**W4-Native-UI** es la biblioteca visual oficial del ecosistema **W4**, diseñada para proporcionar un sistema de estilos y componentes UI consistente, extensible y desacoplado de frameworks externos.
+**W4-Native** es la biblioteca visual oficial del ecosistema **W4**, diseñada para proporcionar un sistema de estilos y componentes UI consistente, extensible y desacoplado de frameworks externos.
 
 El objetivo principal del paquete es ofrecer una **implementación visual nativa** para **W4-UI-Framework**, evitando depender directamente de bibliotecas externas como DaisyUI, Bootstrap o frameworks de componentes similares.
 
-Inspirado en la ergonomía y simplicidad de herramientas modernas como DaisyUI, W4-Native-UI proporciona:
+Inspirado en la ergonomía y simplicidad de herramientas modernas como DaisyUI, W4-Native proporciona:
 
 * Componentes semánticos basados en clases CSS
 * Sistema de **design tokens**
@@ -68,7 +68,7 @@ Los frameworks tradicionales no están diseñados para este nivel de flexibilida
 
 ## 3. Objetivo del proyecto
 
-El objetivo de **W4-Native-UI** es proporcionar:
+El objetivo de **W4-Native** es proporcionar:
 
 ### 1. Sistema visual nativo para W4
 
@@ -131,24 +131,30 @@ Estos tokens se traducen a **variables CSS**.
 
 ### Presets visuales
 
-El paquete incluirá presets iniciales como:
+El paquete incluye más de 30 presets integrados (inspirados en DaisyUI), entre los cuales destacan:
 
-* native.light
-* native.dark
-* native.corporate
-* native.soft
-* native.night
-* native.w4-default
+* acid
+* aqua
+* cyberpunk
+* dracula
+* corporate
+* night
+* retro
+* synthwave
+* winter
+* (y muchos más)
 
-Los presets modifican los tokens para cambiar la apariencia completa de la interfaz.
+Los presets modifican los tokens para cambiar la apariencia completa de la interfaz con solo cambiar el atributo en el HTML.
 
 ---
 
 ### Componentes UI base
 
-La versión v0.1.0 incluye componentes fundamentales:
+La arquitectura del paquete cuenta con una inyección limpia mediante su **ServiceProvider** y un conjunto de **Directivas Blade** para facilitar su integración (`@W4NativeStyles`, `@W4NativeScripts`, `@W4NativeInit`, `@W4NativeLivewire`).
 
-#### UI Components
+Los componentes están separados arquitectónicamente en sus respectivos servicios de dominio (UI, Forms, Layout, Feedback) implementando contratos robustos y utilizando un `ThemeRegistry`.
+
+### UI Components
 
 * Button
 * Divider
@@ -159,7 +165,7 @@ La versión v0.1.0 incluye componentes fundamentales:
 * Link
 * Text
 
-#### Form Components
+### Form Components
 
 * Input
 * Select
@@ -170,7 +176,7 @@ La versión v0.1.0 incluye componentes fundamentales:
 * FieldError
 * HelperText
 
-#### Layout Components
+### Layout Components
 
 * Card
 * Container
@@ -179,13 +185,16 @@ La versión v0.1.0 incluye componentes fundamentales:
 * Section
 * Panel
 
-#### Feedback Components
+### Feedback Components
 
 * Alert
 * Badge
 * Toast
 * Progress
 * Skeleton
+
+### Interactive Components
+
 * Tooltip
 
 Cada componente estará diseñado para integrarse con el **Theme Resolver Engine** de W4-UI-Framework.
@@ -194,7 +203,7 @@ Cada componente estará diseñado para integrarse con el **Theme Resolver Engine
 
 ## 5. Relación con W4-UI-Framework
 
-**W4-Native-UI no es un framework de componentes PHP.**
+**W4-Native no es un framework de componentes PHP.**
 
 La responsabilidad del paquete es **únicamente visual**.
 
@@ -210,7 +219,7 @@ Responsable de:
 * Renderer Engine
 * Integración con Blade / Livewire / Inertia
 
-### W4-Native-UI
+### W4-Native
 
 Responsable de:
 
@@ -226,7 +235,7 @@ W4 UI Component
         ↓
 Theme Resolver
         ↓
-W4-Native-UI classes
+W4-Native classes
         ↓
 CSS variables
         ↓
@@ -237,7 +246,7 @@ HTML final
 
 ## 6. Filosofía de diseño
 
-W4-Native-UI sigue cuatro principios fundamentales.
+W4-Native sigue cuatro principios fundamentales.
 
 ### 1. Semántica sobre utilidades
 
@@ -294,7 +303,7 @@ sin recompilar estilos.
 
 ## 7. Inspiración tecnológica
 
-W4-Native-UI toma inspiración de varias tecnologías modernas:
+W4-Native toma inspiración de varias tecnologías modernas:
 
 * DaisyUI (sistema de themes)
 * TailwindCSS (base utility-first)
@@ -325,31 +334,18 @@ php artisan vendor:publish
 
 ---
 
-## 9. Roadmap inicial
+## 9. Estado Actual del Proyecto
 
-### v0.1
+Actualmente, el proyecto ha logrado su arquitectura inicial (ServiceProvider, Directivas, y los servicios W4NativeUI, W4NativeFormService, W4NativeLayoutService, W4NativeFeedBackService).
 
-* Design tokens base
-* Preset `native.default`
-* Preset `native.dark`
-* Componentes:
+### Funcionalidades integradas
 
-  * Button
-  * Input
-  * Card
-  * Alert
-  * Badge
+* Compilación de Assets (CSS/JS) a través de un comando `vendor:publish` / `BuildNativeAssetsCommand`.
+* Vistas de laboratorio: Ruta `/w4/theme-lab` para visualizar los componentes en tiempo real.
+* Configuración expuesta (`w4-native.php`).
+* Registro de más de 30 presets DaisyUI.
 
-### v0.2
-
-* Select
-* Textarea
-* Checkbox
-* Radio
-* Toggle
-* Divider
-
-### v0.3
+### Próximos pasos (v0.3 / v0.4)
 
 * Dropdown
 * Tabs
@@ -362,7 +358,7 @@ php artisan vendor:publish
 
 ## 10. Beneficios para el ecosistema W4
 
-La introducción de W4-Native-UI permitirá:
+La introducción de W4-Native permitirá:
 
 * estabilidad visual del ecosistema
 * independencia de frameworks externos
@@ -382,7 +378,7 @@ Paquetes que podrán beneficiarse directamente:
 
 ## 11. Futuro del proyecto
 
-En fases futuras, W4-Native-UI podrá incluir:
+En fases futuras, W4-Native podrá incluir:
 
 * Theme Builder visual
 * generador de presets
@@ -390,13 +386,13 @@ En fases futuras, W4-Native-UI podrá incluir:
 * exportación de design tokens
 * integración con herramientas de diseño
 
-El objetivo a largo plazo es que **W4-Native-UI se convierta en el sistema visual estándar del ecosistema W4 para aplicaciones Laravel modernas.**
+El objetivo a largo plazo es que **W4-Native se convierta en el sistema visual estándar del ecosistema W4 para aplicaciones Laravel modernas.**
 
 ---
 
 ## 12. Conclusión
 
-W4-Native-UI representa la capa visual del ecosistema W4.
+W4-Native representa la capa visual del ecosistema W4.
 
 Al separar la lógica de los componentes del sistema visual, el ecosistema puede ofrecer:
 
