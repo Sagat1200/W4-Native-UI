@@ -1,0 +1,22 @@
+[data-theme="native.dracula"] {
+  --w4-primary: 326 100% 74%;
+  --w4-primary-content: 327 63% 5%;
+  --w4-secondary: 265 89% 78%;
+  --w4-secondary-content: 264 47% 6%;
+  --w4-accent: 31 100% 71%;
+  --w4-accent-content: 28 69% 5%;
+  --w4-neutral: 230 15% 30%;
+  --w4-neutral-content: 229 8% 85%;
+  --w4-base-100: 231 15% 18%;
+  --w4-base-200: 231 15% 16%;
+  --w4-base-300: 231 16% 14%;
+  --w4-base-content: 60 30% 96%;
+  --w4-info: 191 97% 77%;
+  --w4-info-content: 191 52% 6%;
+  --w4-success: 135 94% 65%;
+  --w4-success-content: 130 82% 5%;
+  --w4-warning: 65 92% 76%;
+  --w4-warning-content: 65 51% 6%;
+  --w4-error: 0 100% 67%;
+  --w4-error-content: 360 80% 5%;
+}

@@ -1,0 +1,22 @@
+[data-theme="native.fantasy"] {
+  --w4-primary: 296 100% 20%;
+  --w4-primary-content: 298 29% 85%;
+  --w4-secondary: 199 100% 28%;
+  --w4-secondary-content: 206 65% 88%;
+  --w4-accent: 35 100% 43%;
+  --w4-accent-content: 17 100% 5%;
+  --w4-neutral: 215 28% 17%;
+  --w4-neutral-content: 215 7% 82%;
+  --w4-base-100: 338 0% 100%;
+  --w4-base-200: 334 0% 91%;
+  --w4-base-300: 334 0% 82%;
+  --w4-base-content: 215 28% 17%;
+  --w4-info: 194 100% 34%;
+  --w4-info-content: 0 0% 0%;
+  --w4-success: 161 100% 30%;
+  --w4-success-content: 0 0% 0%;
+  --w4-warning: 46 100% 39%;
+  --w4-warning-content: 0 0% 0%;
+  --w4-error: 357 100% 71%;
+  --w4-error-content: 0 0% 0%;
+}

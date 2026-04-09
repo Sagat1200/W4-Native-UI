@@ -1,0 +1,22 @@
+[data-theme="native.coffee"] {
+  --w4-primary: 30 67% 58%;
+  --w4-primary-content: 22 80% 4%;
+  --w4-secondary: 182 25% 20%;
+  --w4-secondary-content: 182 6% 83%;
+  --w4-accent: 194 74% 25%;
+  --w4-accent-content: 198 22% 85%;
+  --w4-neutral: 300 20% 6%;
+  --w4-neutral-content: 301 2% 79%;
+  --w4-base-100: 306 19% 11%;
+  --w4-base-200: 306 19% 9%;
+  --w4-base-300: 306 21% 8%;
+  --w4-base-content: 37 47% 57%;
+  --w4-info: 171 37% 67%;
+  --w4-info-content: 171 36% 4%;
+  --w4-success: 92 25% 62%;
+  --w4-success-content: 95 32% 4%;
+  --w4-warning: 43 100% 69%;
+  --w4-warning-content: 41 76% 5%;
+  --w4-error: 10 95% 75%;
+  --w4-error-content: 8 58% 5%;
+}

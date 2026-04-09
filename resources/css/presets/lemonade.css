@@ -1,0 +1,22 @@
+[data-theme="native.lemonade"] {
+  --w4-primary: 86 100% 21%;
+  --w4-primary-content: 106 100% 1%;
+  --w4-secondary: 61 100% 26%;
+  --w4-secondary-content: 61 100% 2%;
+  --w4-accent: 54 100% 34%;
+  --w4-accent-content: 49 100% 4%;
+  --w4-neutral: 59 100% 9%;
+  --w4-neutral-content: 62 11% 80%;
+  --w4-base-100: 83 82% 97%;
+  --w4-base-200: 83 21% 88%;
+  --w4-base-300: 83 11% 79%;
+  --w4-base-content: 83 5% 8%;
+  --w4-info: 197 56% 80%;
+  --w4-info-content: 197 24% 6%;
+  --w4-success: 143 33% 79%;
+  --w4-success-content: 143 15% 6%;
+  --w4-warning: 54 33% 77%;
+  --w4-warning-content: 54 19% 6%;
+  --w4-error: 6 59% 85%;
+  --w4-error-content: 6 18% 7%;
+}

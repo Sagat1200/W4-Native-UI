@@ -1,0 +1,22 @@
+[data-theme="native.garden"] {
+  --w4-primary: 327 100% 41%;
+  --w4-primary-content: 338 0% 100%;
+  --w4-secondary: 334 37% 41%;
+  --w4-secondary-content: 340 31% 88%;
+  --w4-accent: 139 16% 43%;
+  --w4-accent-content: 136 33% 2%;
+  --w4-neutral: 44 100% 8%;
+  --w4-neutral-content: 0 4% 91%;
+  --w4-base-100: 0 4% 91%;
+  --w4-base-200: 0 2% 83%;
+  --w4-base-300: 0 1% 74%;
+  --w4-base-content: 0 3% 6%;
+  --w4-info: 194 100% 34%;
+  --w4-info-content: 0 0% 0%;
+  --w4-success: 161 100% 30%;
+  --w4-success-content: 0 0% 0%;
+  --w4-warning: 46 100% 39%;
+  --w4-warning-content: 0 0% 0%;
+  --w4-error: 357 100% 71%;
+  --w4-error-content: 0 0% 0%;
+}

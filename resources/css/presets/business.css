@@ -1,0 +1,22 @@
+[data-theme="native.business"] {
+  --w4-primary: 210 64% 31%;
+  --w4-primary-content: 212 30% 86%;
+  --w4-secondary: 200 13% 55%;
+  --w4-secondary-content: 202 23% 3%;
+  --w4-accent: 13 80% 60%;
+  --w4-accent-content: 7 84% 4%;
+  --w4-neutral: 213 14% 16%;
+  --w4-neutral-content: 213 3% 81%;
+  --w4-base-100: 340 0% 13%;
+  --w4-base-200: 330 0% 11%;
+  --w4-base-300: 336 0% 9%;
+  --w4-base-content: 340 0% 80%;
+  --w4-info: 199 100% 42%;
+  --w4-info-content: 213 100% 3%;
+  --w4-success: 144 31% 56%;
+  --w4-success-content: 140 50% 3%;
+  --w4-warning: 39 64% 60%;
+  --w4-warning-content: 35 73% 4%;
+  --w4-error: 6 56% 43%;
+  --w4-error-content: 9 54% 89%;
+}

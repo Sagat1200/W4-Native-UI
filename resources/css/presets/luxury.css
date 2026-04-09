@@ -1,0 +1,22 @@
+[data-theme="native.luxury"] {
+  --w4-primary: 338 0% 100%;
+  --w4-primary-content: 340 0% 9%;
+  --w4-secondary: 218 54% 18%;
+  --w4-secondary-content: 218 15% 82%;
+  --w4-accent: 319 22% 26%;
+  --w4-accent-content: 322 9% 84%;
+  --w4-neutral: 28 100% 10%;
+  --w4-neutral-content: 44 100% 82%;
+  --w4-base-100: 240 10% 4%;
+  --w4-base-200: 270 4% 9%;
+  --w4-base-300: 270 2% 18%;
+  --w4-base-content: 37 67% 58%;
+  --w4-info: 202 100% 70%;
+  --w4-info-content: 205 72% 5%;
+  --w4-success: 89 62% 52%;
+  --w4-success-content: 98 87% 3%;
+  --w4-warning: 54 69% 64%;
+  --w4-warning-content: 53 70% 4%;
+  --w4-error: 0 100% 72%;
+  --w4-error-content: 0 68% 5%;
+}

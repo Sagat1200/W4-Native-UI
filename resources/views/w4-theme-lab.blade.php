@@ -32,6 +32,26 @@
                         <option value="native.cyberpunk">W4-cyberpunk</option>
                         <option value="native.valentine">W4-valentine</option>
                         <option value="native.halloween">W4-halloween</option>
+                        <option value="native.garden">W4-garden</option>
+                        <option value="native.forest">W4-forest</option>
+                        <option value="native.aqua">native.aqua</option>
+                        <option value="native.lofi">native.lofi</option>
+                        <option value="native.pastel">native.pastel</option>
+                        <option value="native.fantasy">native.fantasy</option>
+                        <option value="native.wireframe">native.wireframe</option>
+                        <option value="native.black">native.black</option>
+                        <option value="native.luxury">native.luxury</option>
+                        <option value="native.dracula">native.dracula</option>
+                        <option value="native.cmyk">native.cmyk</option>
+                        <option value="native.autumn">native.autumn</option>
+                        <option value="native.business">native.business</option>
+                        <option value="native.acid">native.acid</option>
+                        <option value="native.lemonade">native.lemonade</option>
+                        <option value="native.coffee">native.coffee</option>
+                        <option value="native.winter">native.winter</option>
+                        <option value="native.dim">native.dim</option>
+                        <option value="native.nord">native.nord</option>
+                        <option value="native.sunset">native.sunset</option>
                     </select>
                 </div>
             </div>
@@ -369,6 +389,26 @@
                 "native.cyberpunk",
                 "native.valentine",
                 "native.halloween",
+                "native.garden",
+                "native.forest",
+                "native.aqua",
+                "native.lofi",
+                "native.pastel",
+                "native.fantasy",
+                "native.wireframe",
+                "native.black",
+                "native.luxury",
+                "native.dracula",
+                "native.cmyk",
+                "native.autumn",
+                "native.business",
+                "native.acid",
+                "native.lemonade",
+                "native.coffee",
+                "native.winter",
+                "native.dim",
+                "native.nord",
+                "native.sunset",
             ];
             var storageKey = "w4-native-ui-theme";
             var switcher = document.getElementById("themeSwitcher");

@@ -50,6 +50,26 @@ use W4\NativeUi\Themes\Presets\RetroPreset;
 use W4\NativeUi\Themes\Presets\CyberpunkPreset;
 use W4\NativeUi\Themes\Presets\ValentinePreset;
 use W4\NativeUi\Themes\Presets\HalloweenPreset;
+use W4\NativeUi\Themes\Presets\GardenPreset;
+use W4\NativeUi\Themes\Presets\ForestPreset;
+use W4\NativeUi\Themes\Presets\AquaPreset;
+use W4\NativeUi\Themes\Presets\LofiPreset;
+use W4\NativeUi\Themes\Presets\PastelPreset;
+use W4\NativeUi\Themes\Presets\FantasyPreset;
+use W4\NativeUi\Themes\Presets\WireframePreset;
+use W4\NativeUi\Themes\Presets\BlackPreset;
+use W4\NativeUi\Themes\Presets\LuxuryPreset;
+use W4\NativeUi\Themes\Presets\DraculaPreset;
+use W4\NativeUi\Themes\Presets\CmykPreset;
+use W4\NativeUi\Themes\Presets\AutumnPreset;
+use W4\NativeUi\Themes\Presets\BusinessPreset;
+use W4\NativeUi\Themes\Presets\AcidPreset;
+use W4\NativeUi\Themes\Presets\LemonadePreset;
+use W4\NativeUi\Themes\Presets\CoffeePreset;
+use W4\NativeUi\Themes\Presets\WinterPreset;
+use W4\NativeUi\Themes\Presets\DimPreset;
+use W4\NativeUi\Themes\Presets\NordPreset;
+use W4\NativeUi\Themes\Presets\SunsetPreset;
 
 class W4NativeUiServiceProvider extends ServiceProvider
 {
@@ -80,6 +100,26 @@ class W4NativeUiServiceProvider extends ServiceProvider
             $registry->registerPreset(new CyberpunkPreset());
             $registry->registerPreset(new ValentinePreset());
             $registry->registerPreset(new HalloweenPreset());
+            $registry->registerPreset(new GardenPreset());
+            $registry->registerPreset(new ForestPreset());
+            $registry->registerPreset(new AquaPreset());
+            $registry->registerPreset(new LofiPreset());
+            $registry->registerPreset(new PastelPreset());
+            $registry->registerPreset(new FantasyPreset());
+            $registry->registerPreset(new WireframePreset());
+            $registry->registerPreset(new BlackPreset());
+            $registry->registerPreset(new LuxuryPreset());
+            $registry->registerPreset(new DraculaPreset());
+            $registry->registerPreset(new CmykPreset());
+            $registry->registerPreset(new AutumnPreset());
+            $registry->registerPreset(new BusinessPreset());
+            $registry->registerPreset(new AcidPreset());
+            $registry->registerPreset(new LemonadePreset());
+            $registry->registerPreset(new CoffeePreset());
+            $registry->registerPreset(new WinterPreset());
+            $registry->registerPreset(new DimPreset());
+            $registry->registerPreset(new NordPreset());
+            $registry->registerPreset(new SunsetPreset());
 
             return $registry;
         });

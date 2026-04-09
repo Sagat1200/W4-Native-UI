@@ -1,0 +1,22 @@
+[data-theme="native.aqua"] {
+  --w4-primary: 182 93% 49%;
+  --w4-primary-content: 181 100% 17%;
+  --w4-secondary: 274 31% 57%;
+  --w4-secondary-content: 270 48% 3%;
+  --w4-accent: 47 100% 80%;
+  --w4-accent-content: 47 45% 6%;
+  --w4-neutral: 205 54% 50%;
+  --w4-neutral-content: 214 85% 3%;
+  --w4-base-100: 219 53% 43%;
+  --w4-base-200: 219 53% 39%;
+  --w4-base-300: 219 54% 35%;
+  --w4-base-content: 218 45% 88%;
+  --w4-info: 221 83% 53%;
+  --w4-info-content: 219 98% 91%;
+  --w4-success: 142 76% 36%;
+  --w4-success-content: 130 96% 2%;
+  --w4-warning: 32 95% 44%;
+  --w4-warning-content: 17 99% 3%;
+  --w4-error: 5 100% 73%;
+  --w4-error-content: 3 75% 5%;
+}

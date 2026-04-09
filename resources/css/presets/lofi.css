@@ -1,0 +1,22 @@
+[data-theme="native.lofi"] {
+  --w4-primary: 338 0% 5%;
+  --w4-primary-content: 338 0% 100%;
+  --w4-secondary: 0 2% 10%;
+  --w4-secondary-content: 338 0% 100%;
+  --w4-accent: 330 0% 15%;
+  --w4-accent-content: 338 0% 100%;
+  --w4-neutral: 0 0% 0%;
+  --w4-neutral-content: 338 0% 100%;
+  --w4-base-100: 338 0% 100%;
+  --w4-base-200: 320 0% 95%;
+  --w4-base-300: 0 2% 90%;
+  --w4-base-content: 0 0% 0%;
+  --w4-info: 186 65% 62%;
+  --w4-info-content: 187 70% 4%;
+  --w4-success: 156 99% 70%;
+  --w4-success-content: 154 71% 5%;
+  --w4-warning: 38 100% 72%;
+  --w4-warning-content: 36 72% 5%;
+  --w4-error: 7 100% 78%;
+  --w4-error-content: 6 60% 6%;
+}

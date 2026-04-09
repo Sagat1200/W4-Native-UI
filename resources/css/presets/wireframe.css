@@ -1,0 +1,22 @@
+[data-theme="native.wireframe"] {
+  --w4-primary: 342 0% 72%;
+  --w4-primary-content: 334 0% 5%;
+  --w4-secondary: 342 0% 72%;
+  --w4-secondary-content: 334 0% 5%;
+  --w4-accent: 342 0% 72%;
+  --w4-accent-content: 334 0% 5%;
+  --w4-neutral: 338 0% 92%;
+  --w4-neutral-content: 340 0% 8%;
+  --w4-base-100: 338 0% 100%;
+  --w4-base-200: 340 0% 93%;
+  --w4-base-300: 351 0% 87%;
+  --w4-base-content: 340 0% 9%;
+  --w4-info: 240 100% 50%;
+  --w4-info-content: 220 100% 90%;
+  --w4-success: 120 100% 25%;
+  --w4-success-content: 114 30% 86%;
+  --w4-warning: 60 30% 50%;
+  --w4-warning-content: 60 58% 2%;
+  --w4-error: 0 100% 50%;
+  --w4-error-content: 360 100% 4%;
+}

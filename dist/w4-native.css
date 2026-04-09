@@ -286,6 +286,466 @@ html[data-theme] body {
   --w4-error-content: 2 84% 4%;
 }
 
+[data-theme="native.garden"] {
+  --w4-primary: 327 100% 41%;
+  --w4-primary-content: 338 0% 100%;
+  --w4-secondary: 334 37% 41%;
+  --w4-secondary-content: 340 31% 88%;
+  --w4-accent: 139 16% 43%;
+  --w4-accent-content: 136 33% 2%;
+  --w4-neutral: 44 100% 8%;
+  --w4-neutral-content: 0 4% 91%;
+  --w4-base-100: 0 4% 91%;
+  --w4-base-200: 0 2% 83%;
+  --w4-base-300: 0 1% 74%;
+  --w4-base-content: 0 3% 6%;
+  --w4-info: 194 100% 34%;
+  --w4-info-content: 0 0% 0%;
+  --w4-success: 161 100% 30%;
+  --w4-success-content: 0 0% 0%;
+  --w4-warning: 46 100% 39%;
+  --w4-warning-content: 0 0% 0%;
+  --w4-error: 357 100% 71%;
+  --w4-error-content: 0 0% 0%;
+}
+
+[data-theme="native.forest"] {
+  --w4-primary: 141 72% 42%;
+  --w4-primary-content: 0 0% 0%;
+  --w4-secondary: 164 73% 42%;
+  --w4-secondary-content: 154 95% 3%;
+  --w4-accent: 175 73% 42%;
+  --w4-accent-content: 171 95% 3%;
+  --w4-neutral: 161 37% 15%;
+  --w4-neutral-content: 157 7% 82%;
+  --w4-base-100: 0 12% 8%;
+  --w4-base-200: 0 13% 7%;
+  --w4-base-300: 0 14% 6%;
+  --w4-base-content: 1 1% 79%;
+  --w4-info: 194 100% 34%;
+  --w4-info-content: 0 0% 0%;
+  --w4-success: 161 100% 30%;
+  --w4-success-content: 0 0% 0%;
+  --w4-warning: 46 100% 39%;
+  --w4-warning-content: 0 0% 0%;
+  --w4-error: 357 100% 71%;
+  --w4-error-content: 0 0% 0%;
+}
+
+[data-theme="native.aqua"] {
+  --w4-primary: 182 93% 49%;
+  --w4-primary-content: 181 100% 17%;
+  --w4-secondary: 274 31% 57%;
+  --w4-secondary-content: 270 48% 3%;
+  --w4-accent: 47 100% 80%;
+  --w4-accent-content: 47 45% 6%;
+  --w4-neutral: 205 54% 50%;
+  --w4-neutral-content: 214 85% 3%;
+  --w4-base-100: 219 53% 43%;
+  --w4-base-200: 219 53% 39%;
+  --w4-base-300: 219 54% 35%;
+  --w4-base-content: 218 45% 88%;
+  --w4-info: 221 83% 53%;
+  --w4-info-content: 219 98% 91%;
+  --w4-success: 142 76% 36%;
+  --w4-success-content: 130 96% 2%;
+  --w4-warning: 32 95% 44%;
+  --w4-warning-content: 17 99% 3%;
+  --w4-error: 5 100% 73%;
+  --w4-error-content: 3 75% 5%;
+}
+
+[data-theme="native.lofi"] {
+  --w4-primary: 338 0% 5%;
+  --w4-primary-content: 338 0% 100%;
+  --w4-secondary: 0 2% 10%;
+  --w4-secondary-content: 338 0% 100%;
+  --w4-accent: 330 0% 15%;
+  --w4-accent-content: 338 0% 100%;
+  --w4-neutral: 0 0% 0%;
+  --w4-neutral-content: 338 0% 100%;
+  --w4-base-100: 338 0% 100%;
+  --w4-base-200: 320 0% 95%;
+  --w4-base-300: 0 2% 90%;
+  --w4-base-content: 0 0% 0%;
+  --w4-info: 186 65% 62%;
+  --w4-info-content: 187 70% 4%;
+  --w4-success: 156 99% 70%;
+  --w4-success-content: 154 71% 5%;
+  --w4-warning: 38 100% 72%;
+  --w4-warning-content: 36 72% 5%;
+  --w4-error: 7 100% 78%;
+  --w4-error-content: 6 60% 6%;
+}
+
+[data-theme="native.pastel"] {
+  --w4-primary: 284 22% 80%;
+  --w4-primary-content: 284 10% 6%;
+  --w4-secondary: 352 70% 88%;
+  --w4-secondary-content: 352 16% 7%;
+  --w4-accent: 158 55% 81%;
+  --w4-accent-content: 158 23% 6%;
+  --w4-neutral: 199 44% 61%;
+  --w4-neutral-content: 201 54% 4%;
+  --w4-base-100: 338 0% 100%;
+  --w4-base-200: 210 20% 98%;
+  --w4-base-300: 216 12% 84%;
+  --w4-base-content: 340 0% 9%;
+  --w4-info: 194 100% 34%;
+  --w4-info-content: 0 0% 0%;
+  --w4-success: 161 100% 30%;
+  --w4-success-content: 0 0% 0%;
+  --w4-warning: 46 100% 39%;
+  --w4-warning-content: 0 0% 0%;
+  --w4-error: 357 100% 71%;
+  --w4-error-content: 0 0% 0%;
+}
+
+[data-theme="native.fantasy"] {
+  --w4-primary: 296 100% 20%;
+  --w4-primary-content: 298 29% 85%;
+  --w4-secondary: 199 100% 28%;
+  --w4-secondary-content: 206 65% 88%;
+  --w4-accent: 35 100% 43%;
+  --w4-accent-content: 17 100% 5%;
+  --w4-neutral: 215 28% 17%;
+  --w4-neutral-content: 215 7% 82%;
+  --w4-base-100: 338 0% 100%;
+  --w4-base-200: 334 0% 91%;
+  --w4-base-300: 334 0% 82%;
+  --w4-base-content: 215 28% 17%;
+  --w4-info: 194 100% 34%;
+  --w4-info-content: 0 0% 0%;
+  --w4-success: 161 100% 30%;
+  --w4-success-content: 0 0% 0%;
+  --w4-warning: 46 100% 39%;
+  --w4-warning-content: 0 0% 0%;
+  --w4-error: 357 100% 71%;
+  --w4-error-content: 0 0% 0%;
+}
+
+[data-theme="native.wireframe"] {
+  --w4-primary: 342 0% 72%;
+  --w4-primary-content: 334 0% 5%;
+  --w4-secondary: 342 0% 72%;
+  --w4-secondary-content: 334 0% 5%;
+  --w4-accent: 342 0% 72%;
+  --w4-accent-content: 334 0% 5%;
+  --w4-neutral: 338 0% 92%;
+  --w4-neutral-content: 340 0% 8%;
+  --w4-base-100: 338 0% 100%;
+  --w4-base-200: 340 0% 93%;
+  --w4-base-300: 351 0% 87%;
+  --w4-base-content: 340 0% 9%;
+  --w4-info: 240 100% 50%;
+  --w4-info-content: 220 100% 90%;
+  --w4-success: 120 100% 25%;
+  --w4-success-content: 114 30% 86%;
+  --w4-warning: 60 30% 50%;
+  --w4-warning-content: 60 58% 2%;
+  --w4-error: 0 100% 50%;
+  --w4-error-content: 360 100% 4%;
+}
+
+[data-theme="native.black"] {
+  --w4-primary: 330 0% 22%;
+  --w4-primary-content: 343 0% 83%;
+  --w4-secondary: 330 0% 22%;
+  --w4-secondary-content: 343 0% 83%;
+  --w4-accent: 330 0% 22%;
+  --w4-accent-content: 343 0% 83%;
+  --w4-neutral: 330 0% 22%;
+  --w4-neutral-content: 343 0% 83%;
+  --w4-base-100: 0 0% 0%;
+  --w4-base-200: 330 0% 8%;
+  --w4-base-300: 330 0% 15%;
+  --w4-base-content: 342 0% 84%;
+  --w4-info: 240 100% 50%;
+  --w4-info-content: 220 100% 90%;
+  --w4-success: 120 100% 25%;
+  --w4-success-content: 114 30% 86%;
+  --w4-warning: 60 100% 50%;
+  --w4-warning-content: 60 100% 4%;
+  --w4-error: 0 100% 50%;
+  --w4-error-content: 360 100% 4%;
+}
+
+[data-theme="native.luxury"] {
+  --w4-primary: 338 0% 100%;
+  --w4-primary-content: 340 0% 9%;
+  --w4-secondary: 218 54% 18%;
+  --w4-secondary-content: 218 15% 82%;
+  --w4-accent: 319 22% 26%;
+  --w4-accent-content: 322 9% 84%;
+  --w4-neutral: 28 100% 10%;
+  --w4-neutral-content: 44 100% 82%;
+  --w4-base-100: 240 10% 4%;
+  --w4-base-200: 270 4% 9%;
+  --w4-base-300: 270 2% 18%;
+  --w4-base-content: 37 67% 58%;
+  --w4-info: 202 100% 70%;
+  --w4-info-content: 205 72% 5%;
+  --w4-success: 89 62% 52%;
+  --w4-success-content: 98 87% 3%;
+  --w4-warning: 54 69% 64%;
+  --w4-warning-content: 53 70% 4%;
+  --w4-error: 0 100% 72%;
+  --w4-error-content: 0 68% 5%;
+}
+
+[data-theme="native.dracula"] {
+  --w4-primary: 326 100% 74%;
+  --w4-primary-content: 327 63% 5%;
+  --w4-secondary: 265 89% 78%;
+  --w4-secondary-content: 264 47% 6%;
+  --w4-accent: 31 100% 71%;
+  --w4-accent-content: 28 69% 5%;
+  --w4-neutral: 230 15% 30%;
+  --w4-neutral-content: 229 8% 85%;
+  --w4-base-100: 231 15% 18%;
+  --w4-base-200: 231 15% 16%;
+  --w4-base-300: 231 16% 14%;
+  --w4-base-content: 60 30% 96%;
+  --w4-info: 191 97% 77%;
+  --w4-info-content: 191 52% 6%;
+  --w4-success: 135 94% 65%;
+  --w4-success-content: 130 82% 5%;
+  --w4-warning: 65 92% 76%;
+  --w4-warning-content: 65 51% 6%;
+  --w4-error: 0 100% 67%;
+  --w4-error-content: 360 80% 5%;
+}
+
+[data-theme="native.cmyk"] {
+  --w4-primary: 203 83% 60%;
+  --w4-primary-content: 208 85% 4%;
+  --w4-secondary: 335 78% 60%;
+  --w4-secondary-content: 343 83% 4%;
+  --w4-accent: 56 100% 60%;
+  --w4-accent-content: 55 93% 4%;
+  --w4-neutral: 330 0% 10%;
+  --w4-neutral-content: 330 0% 80%;
+  --w4-base-100: 338 0% 100%;
+  --w4-base-200: 334 0% 91%;
+  --w4-base-300: 334 0% 82%;
+  --w4-base-content: 340 0% 9%;
+  --w4-info: 192 48% 52%;
+  --w4-info-content: 196 76% 3%;
+  --w4-success: 291 48% 38%;
+  --w4-success-content: 291 31% 88%;
+  --w4-warning: 25 85% 57%;
+  --w4-warning-content: 16 92% 4%;
+  --w4-error: 4 81% 56%;
+  --w4-error-content: 1 91% 4%;
+}
+
+[data-theme="native.autumn"] {
+  --w4-primary: 344 96% 28%;
+  --w4-primary-content: 360 44% 87%;
+  --w4-secondary: 0 63% 58%;
+  --w4-secondary-content: 0 77% 4%;
+  --w4-accent: 27 56% 63%;
+  --w4-accent-content: 23 62% 4%;
+  --w4-neutral: 22 17% 44%;
+  --w4-neutral-content: 22 14% 88%;
+  --w4-base-100: 340 0% 95%;
+  --w4-base-200: 338 0% 86%;
+  --w4-base-300: 330 0% 77%;
+  --w4-base-content: 324 0% 8%;
+  --w4-info: 187 48% 50%;
+  --w4-info-content: 190 80% 3%;
+  --w4-success: 165 34% 43%;
+  --w4-success-content: 160 63% 2%;
+  --w4-warning: 30 84% 50%;
+  --w4-warning-content: 17 98% 4%;
+  --w4-error: 346 100% 34%;
+  --w4-error-content: 5 99% 91%;
+}
+
+[data-theme="native.business"] {
+  --w4-primary: 210 64% 31%;
+  --w4-primary-content: 212 30% 86%;
+  --w4-secondary: 200 13% 55%;
+  --w4-secondary-content: 202 23% 3%;
+  --w4-accent: 13 80% 60%;
+  --w4-accent-content: 7 84% 4%;
+  --w4-neutral: 213 14% 16%;
+  --w4-neutral-content: 213 3% 81%;
+  --w4-base-100: 340 0% 13%;
+  --w4-base-200: 330 0% 11%;
+  --w4-base-300: 336 0% 9%;
+  --w4-base-content: 340 0% 80%;
+  --w4-info: 199 100% 42%;
+  --w4-info-content: 213 100% 3%;
+  --w4-success: 144 31% 56%;
+  --w4-success-content: 140 50% 3%;
+  --w4-warning: 39 64% 60%;
+  --w4-warning-content: 35 73% 4%;
+  --w4-error: 6 56% 43%;
+  --w4-error-content: 9 54% 89%;
+}
+
+[data-theme="native.acid"] {
+  --w4-primary: 302 100% 43%;
+  --w4-primary-content: 304 100% 5%;
+  --w4-secondary: 30 100% 44%;
+  --w4-secondary-content: 12 100% 5%;
+  --w4-accent: 70 100% 34%;
+  --w4-accent-content: 79 100% 4%;
+  --w4-neutral: 254 97% 16%;
+  --w4-neutral-content: 232 23% 82%;
+  --w4-base-100: 336 0% 98%;
+  --w4-base-200: 330 0% 89%;
+  --w4-base-300: 334 0% 80%;
+  --w4-base-content: 340 0% 8%;
+  --w4-info: 205 100% 40%;
+  --w4-info-content: 223 100% 4%;
+  --w4-success: 161 100% 26%;
+  --w4-success-content: 146 100% 3%;
+  --w4-warning: 54 100% 37%;
+  --w4-warning-content: 49 100% 4%;
+  --w4-error: 357 100% 44%;
+  --w4-error-content: 359 100% 5%;
+}
+
+[data-theme="native.lemonade"] {
+  --w4-primary: 86 100% 21%;
+  --w4-primary-content: 106 100% 1%;
+  --w4-secondary: 61 100% 26%;
+  --w4-secondary-content: 61 100% 2%;
+  --w4-accent: 54 100% 34%;
+  --w4-accent-content: 49 100% 4%;
+  --w4-neutral: 59 100% 9%;
+  --w4-neutral-content: 62 11% 80%;
+  --w4-base-100: 83 82% 97%;
+  --w4-base-200: 83 21% 88%;
+  --w4-base-300: 83 11% 79%;
+  --w4-base-content: 83 5% 8%;
+  --w4-info: 197 56% 80%;
+  --w4-info-content: 197 24% 6%;
+  --w4-success: 143 33% 79%;
+  --w4-success-content: 143 15% 6%;
+  --w4-warning: 54 33% 77%;
+  --w4-warning-content: 54 19% 6%;
+  --w4-error: 6 59% 85%;
+  --w4-error-content: 6 18% 7%;
+}
+
+[data-theme="native.coffee"] {
+  --w4-primary: 30 67% 58%;
+  --w4-primary-content: 22 80% 4%;
+  --w4-secondary: 182 25% 20%;
+  --w4-secondary-content: 182 6% 83%;
+  --w4-accent: 194 74% 25%;
+  --w4-accent-content: 198 22% 85%;
+  --w4-neutral: 300 20% 6%;
+  --w4-neutral-content: 301 2% 79%;
+  --w4-base-100: 306 19% 11%;
+  --w4-base-200: 306 19% 9%;
+  --w4-base-300: 306 21% 8%;
+  --w4-base-content: 37 47% 57%;
+  --w4-info: 171 37% 67%;
+  --w4-info-content: 171 36% 4%;
+  --w4-success: 92 25% 62%;
+  --w4-success-content: 95 32% 4%;
+  --w4-warning: 43 100% 69%;
+  --w4-warning-content: 41 76% 5%;
+  --w4-error: 10 95% 75%;
+  --w4-error-content: 8 58% 5%;
+}
+
+[data-theme="native.winter"] {
+  --w4-primary: 211 100% 43%;
+  --w4-primary-content: 215 100% 92%;
+  --w4-secondary: 247 47% 43%;
+  --w4-secondary-content: 236 43% 89%;
+  --w4-accent: 310 49% 52%;
+  --w4-accent-content: 314 78% 3%;
+  --w4-neutral: 217 92% 10%;
+  --w4-neutral-content: 216 13% 80%;
+  --w4-base-100: 338 0% 100%;
+  --w4-base-200: 217 100% 97%;
+  --w4-base-300: 219 44% 92%;
+  --w4-base-content: 214 30% 32%;
+  --w4-info: 192 93% 78%;
+  --w4-info-content: 192 47% 6%;
+  --w4-success: 181 47% 66%;
+  --w4-success-content: 182 46% 4%;
+  --w4-warning: 32 62% 84%;
+  --w4-warning-content: 32 21% 6%;
+  --w4-error: 0 63% 72%;
+  --w4-error-content: 0 46% 5%;
+}
+
+[data-theme="native.dim"] {
+  --w4-primary: 108 66% 73%;
+  --w4-primary-content: 109 46% 5%;
+  --w4-secondary: 12 100% 68%;
+  --w4-secondary-content: 8 77% 5%;
+  --w4-accent: 277 66% 74%;
+  --w4-accent-content: 276 43% 5%;
+  --w4-neutral: 220 21% 14%;
+  --w4-neutral-content: 197 31% 77%;
+  --w4-base-100: 220 18% 20%;
+  --w4-base-200: 220 17% 17%;
+  --w4-base-300: 219 18% 15%;
+  --w4-base-content: 197 31% 77%;
+  --w4-info: 186 100% 58%;
+  --w4-info-content: 188 95% 4%;
+  --w4-success: 159 82% 66%;
+  --w4-success-content: 156 72% 5%;
+  --w4-warning: 48 83% 64%;
+  --w4-warning-content: 46 77% 4%;
+  --w4-error: 11 100% 80%;
+  --w4-error-content: 11 44% 6%;
+}
+
+[data-theme="native.nord"] {
+  --w4-primary: 213 32% 52%;
+  --w4-primary-content: 218 57% 3%;
+  --w4-secondary: 210 34% 63%;
+  --w4-secondary-content: 213 41% 4%;
+  --w4-accent: 193 43% 67%;
+  --w4-accent-content: 194 41% 4%;
+  --w4-neutral: 220 16% 36%;
+  --w4-neutral-content: 219 28% 88%;
+  --w4-base-100: 217 27% 94%;
+  --w4-base-200: 218 27% 92%;
+  --w4-base-300: 219 28% 88%;
+  --w4-base-content: 220 16% 22%;
+  --w4-info: 311 20% 63%;
+  --w4-info-content: 312 25% 4%;
+  --w4-success: 92 28% 65%;
+  --w4-success-content: 94 31% 4%;
+  --w4-warning: 40 71% 73%;
+  --w4-warning-content: 39 48% 5%;
+  --w4-error: 354 42% 56%;
+  --w4-error-content: 356 62% 3%;
+}
+
+[data-theme="native.sunset"] {
+  --w4-primary: 16 100% 68%;
+  --w4-primary-content: 11 78% 5%;
+  --w4-secondary: 341 97% 71%;
+  --w4-secondary-content: 344 68% 5%;
+  --w4-accent: 263 92% 75%;
+  --w4-accent-content: 262 54% 5%;
+  --w4-neutral: 204 23% 14%;
+  --w4-neutral-content: 204 11% 62%;
+  --w4-base-100: 204 31% 10%;
+  --w4-base-200: 204 37% 9%;
+  --w4-base-300: 204 45% 7%;
+  --w4-base-content: 208 34% 72%;
+  --w4-info: 187 71% 73%;
+  --w4-info-content: 187 49% 5%;
+  --w4-success: 120 44% 78%;
+  --w4-success-content: 120 23% 6%;
+  --w4-warning: 34 77% 76%;
+  --w4-warning-content: 34 46% 5%;
+  --w4-error: 358 100% 87%;
+  --w4-error-content: 358 26% 7%;
+}
+
 .w4-btn,
 .w4-button,
 .w4-icon-button {
