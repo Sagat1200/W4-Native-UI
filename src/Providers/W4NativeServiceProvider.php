@@ -145,11 +145,13 @@ $distPath => public_path('vendor/w4-native'),
 
 $publish = [];
 if (is_file($configPath)) {
-$publish[$configPath] = config_path('w4-native-ui.php');
+$publish[$configPath] = config_path('w4-native.php');
 }
+
 if (is_dir($distPath)) {
 $publish[$distPath] = public_path('vendor/w4-native');
 }
+
 if ($publish !== []) {
 $this->publishes($publish, 'w4-native-assets');
 }
