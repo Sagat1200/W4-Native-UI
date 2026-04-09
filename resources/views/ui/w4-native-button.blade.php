@@ -67,15 +67,16 @@
             <h2 class="text-2xl font-semibold border-l-4 border-primary pl-3">Variantes (Variants)</h2>
             <div class="flex flex-wrap gap-4 p-6 bg-base-200 rounded-lg">
                 <button class="w4-button">Default</button>
+                <button class="w4-button w4-button-neutral">Neutral</button>
                 <button class="w4-button w4-button-primary">Primary</button>
                 <button class="w4-button w4-button-secondary">Secondary</button>
                 <button class="w4-button w4-button-accent">Accent</button>
-                <button class="w4-button w4-button-neutral">Neutral</button>
                 <button class="w4-button w4-button-info">Info</button>
                 <button class="w4-button w4-button-success">Success</button>
                 <button class="w4-button w4-button-warning">Warning</button>
                 <button class="w4-button w4-button-error">Error</button>
                 <button class="w4-button w4-button-ghost">Ghost</button>
+                <button class="w4-button w4-button-link">Link</button>
             </div>
         </section>
 
