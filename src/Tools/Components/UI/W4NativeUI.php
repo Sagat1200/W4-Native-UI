@@ -1,5 +1,32 @@
 <?php
 
-namespace W4\NativeUi\Tools\Components\UI;
+namespace W4\Native\Tools\Components\UI;
 
-class W4NativeUI {}
+use W4\Native\Themes\Components\UI\ButtonTheme;
+use W4\Native\Themes\Components\UI\DividerTheme;
+use W4\Native\Themes\Components\UI\HeadingTheme;
+use W4\Native\Themes\Components\UI\IconButtonTheme;
+use W4\Native\Themes\Components\UI\IconTheme;
+use W4\Native\Themes\Components\UI\LabelTheme;
+use W4\Native\Themes\Components\UI\LinkTheme;
+use W4\Native\Themes\Components\UI\TextTheme;
+
+class W4NativeUI
+{
+    /**
+     * @return array<string, \W4\Native\Contracts\ComponentThemeContract>
+     */
+    public static function getComponents(): array
+    {
+        return [
+            'button' => new ButtonTheme(),
+            'divider' => new DividerTheme(),
+            'heading' => new HeadingTheme(),
+            'icon-button' => new IconButtonTheme(),
+            'icon' => new IconTheme(),
+            'label' => new LabelTheme(),
+            'link' => new LinkTheme(),
+            'text' => new TextTheme(),
+        ];
+    }
+}

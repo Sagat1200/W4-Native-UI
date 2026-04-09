@@ -8,34 +8,11 @@ use W4\Native\Console\Commands\BuildNativeAssetsCommand;
 use W4\Native\Console\Commands\InstallNativeCommand;
 use W4\Native\Support\ThemeManifest;
 use W4\Native\Support\ThemeRegistry;
-use W4\Native\Themes\Components\FeedBack\AlertTheme;
-use W4\Native\Themes\Components\FeedBack\BadgeTheme;
-use W4\Native\Themes\Components\FeedBack\ProgressTheme;
-use W4\Native\Themes\Components\FeedBack\SkeletonTheme;
-use W4\Native\Themes\Components\FeedBack\ToastTheme;
-use W4\Native\Themes\Components\FeedBack\TooltipTheme;
-use W4\Native\Themes\Components\Forms\CheckboxTheme;
-use W4\Native\Themes\Components\Forms\FieldErrorTheme;
-use W4\Native\Themes\Components\Forms\HelperTextTheme;
-use W4\Native\Themes\Components\Forms\InputTheme;
-use W4\Native\Themes\Components\Forms\RadioTheme;
-use W4\Native\Themes\Components\Forms\SelectTheme;
-use W4\Native\Themes\Components\Forms\TextareaTheme;
-use W4\Native\Themes\Components\Forms\ToggleTheme;
-use W4\Native\Themes\Components\Layout\CardTheme;
-use W4\Native\Themes\Components\Layout\ContainerTheme;
-use W4\Native\Themes\Components\Layout\GridTheme;
-use W4\Native\Themes\Components\Layout\PanelTheme;
-use W4\Native\Themes\Components\Layout\SectionTheme;
-use W4\Native\Themes\Components\Layout\StackTheme;
-use W4\Native\Themes\Components\UI\ButtonTheme;
-use W4\Native\Themes\Components\UI\DividerTheme;
-use W4\Native\Themes\Components\UI\HeadingTheme;
-use W4\Native\Themes\Components\UI\IconButtonTheme;
-use W4\Native\Themes\Components\UI\IconTheme;
-use W4\Native\Themes\Components\UI\LabelTheme;
-use W4\Native\Themes\Components\UI\LinkTheme;
-use W4\Native\Themes\Components\UI\TextTheme;
+use W4\Native\Tools\Components\FeedBack\W4NativeFeedBackService;
+use W4\Native\Tools\Components\Form\W4NativeFormService;
+use W4\Native\Tools\Components\Interactive\W4NativeInteractiveService;
+use W4\Native\Tools\Components\Layout\W4NativeLayoutService;
+use W4\Native\Tools\Components\UI\W4NativeUI;
 use W4\Native\Tools\Directives\W4NativeDirectiveService;
 use W4\Native\Tools\Themes\W4NativeTheme;
 use W4\Native\Tools\Themes\W4NativeThemeService;
@@ -66,45 +43,13 @@ class W4NativeServiceProvider extends ServiceProvider
             return new W4NativeTheme(
                 $app->make(ThemeRegistry::class),
                 $app->make(ThemeManifest::class),
-                [
-                    //UI
-                    'button' => new ButtonTheme(),
-                    'divider' => new DividerTheme(),
-                    'heading' => new HeadingTheme(),
-                    'icon-button' => new IconButtonTheme(),
-                    'icon' => new IconTheme(),
-                    'label' => new LabelTheme(),
-                    'link' => new LinkTheme(),
-                    'text' => new TextTheme(),
-
-                    //Forms
-                    'input' => new InputTheme(),
-                    'field-error' => new FieldErrorTheme(),
-                    'helper-text' => new HelperTextTheme(),
-                    'select' => new SelectTheme(),
-                    'textarea' => new TextareaTheme(),
-                    'checkbox' => new CheckboxTheme(),
-                    'radio' => new RadioTheme(),
-                    'toggle' => new ToggleTheme(),
-
-                    //Layout
-                    'card' => new CardTheme(),
-                    'container' => new ContainerTheme(),
-                    'panel' => new PanelTheme(),
-                    'section' => new SectionTheme(),
-                    'stack' => new StackTheme(),
-                    'grid' => new GridTheme(),
-
-                    //FeedBack
-                    'alert' => new AlertTheme(),
-                    'badge' => new BadgeTheme(),
-                    'toast' => new ToastTheme(),
-                    'progress' => new ProgressTheme(),
-                    'skeleton' => new SkeletonTheme(),
-
-                    //Interactive
-                    'tooltip' => new TooltipTheme(),
-                ]
+                array_merge(
+                    W4NativeUI::getComponents(),
+                    W4NativeFormService::getComponents(),
+                    W4NativeLayoutService::getComponents(),
+                    W4NativeFeedBackService::getComponents(),
+                    W4NativeInteractiveService::getComponents()
+                )
             );
         });
     }

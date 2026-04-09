@@ -1,0 +1,18 @@
+<?php
+
+namespace W4\Native\Tools\Components\Interactive;
+
+use W4\Native\Themes\Components\FeedBack\TooltipTheme;
+
+class W4NativeInteractiveService
+{
+    /**
+     * @return array<string, \W4\Native\Contracts\ComponentThemeContract>
+     */
+    public static function getComponents(): array
+    {
+        return [
+            'tooltip' => new TooltipTheme(),
+        ];
+    }
+}
