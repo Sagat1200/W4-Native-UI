@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Tools\Directives;
+namespace W4\Native\Services\Provider\Directives;
 
 use Illuminate\Support\Facades\Blade;
 
@@ -17,11 +17,13 @@ class W4NativeDirectiveService
         });
 
         Blade::directive('W4NativeInit', function () {
-            return "<?php echo '<script>document.addEventListener(\"DOMContentLoaded\", function () { window.W4Native.init(document); });</script>'; ?>";
+            return
+                "<?php echo '<script>document.addEventListener(\"DOMContentLoaded\", function () { window.W4Native.init(document); });</script>'; ?>";
         });
 
         Blade::directive('W4NativeLivewire', function () {
-            return "<?php echo '<script>document.addEventListener(\"livewire:navigated\", function () { window.W4Native.init(document); });</script>'; ?>";
+            return
+                "<?php echo '<script>document.addEventListener(\"livewire:navigated\", function () { window.W4Native.init(document); });</script>'; ?>";
         });
     }
 }

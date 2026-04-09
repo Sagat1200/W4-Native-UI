@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Tools\Components\Interactive;
+namespace W4\Native\Services\Provider\Components\Interactive;
 
 use W4\Native\Themes\Components\FeedBack\TooltipTheme;
 

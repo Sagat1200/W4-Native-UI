@@ -6,16 +6,16 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use W4\Native\Console\Commands\BuildNativeAssetsCommand;
 use W4\Native\Console\Commands\InstallNativeCommand;
+use W4\Native\Services\Provider\Components\FeedBack\W4NativeFeedBackService;
+use W4\Native\Services\Provider\Components\Form\W4NativeFormService;
+use W4\Native\Services\Provider\Components\Interactive\W4NativeInteractiveService;
+use W4\Native\Services\Provider\Components\Layout\W4NativeLayoutService;
+use W4\Native\Services\Provider\Components\UI\W4NativeUI;
+use W4\Native\Services\Provider\Directives\W4NativeDirectiveService;
+use W4\Native\Services\Provider\Themes\W4NativeThemeService;
 use W4\Native\Support\ThemeManifest;
 use W4\Native\Support\ThemeRegistry;
-use W4\Native\Tools\Components\FeedBack\W4NativeFeedBackService;
-use W4\Native\Tools\Components\Form\W4NativeFormService;
-use W4\Native\Tools\Components\Interactive\W4NativeInteractiveService;
-use W4\Native\Tools\Components\Layout\W4NativeLayoutService;
-use W4\Native\Tools\Components\UI\W4NativeUI;
-use W4\Native\Tools\Directives\W4NativeDirectiveService;
 use W4\Native\Tools\Themes\W4NativeTheme;
-use W4\Native\Tools\Themes\W4NativeThemeService;
 
 class W4NativeServiceProvider extends ServiceProvider
 {

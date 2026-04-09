@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Tools\Components\Form;
+namespace W4\Native\Services\Provider\Components\Form;
 
 use W4\Native\Themes\Components\Forms\CheckboxTheme;
 use W4\Native\Themes\Components\Forms\FieldErrorTheme;

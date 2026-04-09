@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Tools\Components\Layout;
+namespace W4\Native\Services\Provider\Components\Layout;
 
 use W4\Native\Themes\Components\Layout\CardTheme;
 use W4\Native\Themes\Components\Layout\ContainerTheme;

@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Tools\Components\FeedBack;
+namespace W4\Native\Services\Provider\Components\FeedBack;
 
 use W4\Native\Themes\Components\FeedBack\AlertTheme;
 use W4\Native\Themes\Components\FeedBack\BadgeTheme;

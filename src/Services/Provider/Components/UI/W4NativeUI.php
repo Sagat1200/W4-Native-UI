@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Tools\Components\UI;
+namespace W4\Native\Services\Provider\Components\UI;
 
 use W4\Native\Themes\Components\UI\ButtonTheme;
 use W4\Native\Themes\Components\UI\DividerTheme;
