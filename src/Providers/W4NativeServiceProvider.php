@@ -2,7 +2,6 @@
 
 namespace W4\Native\Providers;
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use W4\Native\Console\Commands\BuildNativeAssetsCommand;
 use W4\Native\Console\Commands\InstallNativeCommand;
@@ -12,6 +11,7 @@ use W4\Native\Services\Provider\Components\Interactive\W4NativeInteractiveServic
 use W4\Native\Services\Provider\Components\Layout\W4NativeLayoutService;
 use W4\Native\Services\Provider\Components\UI\W4NativeUI;
 use W4\Native\Services\Provider\Directives\W4NativeDirectiveService;
+use W4\Native\Services\Provider\Route\W4NativeRouteService;
 use W4\Native\Services\Themes\W4NativeThemeService;
 use W4\Native\Support\ThemeManifest;
 use W4\Native\Support\ThemeRegistry;
@@ -64,13 +64,7 @@ class W4NativeServiceProvider extends ServiceProvider
 
         W4NativeDirectiveService::register();
 
-        Route::get('/w4/theme-lab', function () {
-            return view('w4-native::w4-theme-lab');
-        })->name('w4-native.theme-lab');
-
-        Route::get('/w4/button', function () {
-            return view('w4-native::ui.w4-native-button');
-        })->name('w4-native.button');
+        W4NativeRouteService::registerRoutes();
 
         if ($this->app->runningInConsole()) {
             if (is_file($configPath)) {
