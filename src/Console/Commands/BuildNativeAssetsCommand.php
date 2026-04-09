@@ -99,11 +99,48 @@ class BuildNativeAssetsCommand extends Command
         $distCss = $distDir . '/w4-native.css';
         file_put_contents($distCss, implode(PHP_EOL . PHP_EOL, $cssContent) . PHP_EOL);
 
-        $jsSource = $root . '/resources/js/daisyui/properties/w4-native.js';
-        if (is_file($jsSource)) {
+        $jsFiles = [
+            $root . '/resources/js/daisyui/properties/w4-native.js',
+            $root . '/resources/js/daisyui/components/feedback/alert.js',
+            $root . '/resources/js/daisyui/components/feedback/badge.js',
+            $root . '/resources/js/daisyui/components/feedback/progress.js',
+            $root . '/resources/js/daisyui/components/feedback/skeleton.js',
+            $root . '/resources/js/daisyui/components/feedback/toast.js',
+            $root . '/resources/js/daisyui/components/feedback/tooltip.js',
+            $root . '/resources/js/daisyui/components/forms/checkbox.js',
+            $root . '/resources/js/daisyui/components/forms/fieldError.js',
+            $root . '/resources/js/daisyui/components/forms/helperText.js',
+            $root . '/resources/js/daisyui/components/forms/input.js',
+            $root . '/resources/js/daisyui/components/forms/radio.js',
+            $root . '/resources/js/daisyui/components/forms/select.js',
+            $root . '/resources/js/daisyui/components/forms/textArea.js',
+            $root . '/resources/js/daisyui/components/forms/toggle.js',
+            $root . '/resources/js/daisyui/components/layout/card.js',
+            $root . '/resources/js/daisyui/components/layout/container.js',
+            $root . '/resources/js/daisyui/components/layout/divider.js',
+            $root . '/resources/js/daisyui/components/layout/grid.js',
+            $root . '/resources/js/daisyui/components/layout/panel.js',
+            $root . '/resources/js/daisyui/components/layout/section.js',
+            $root . '/resources/js/daisyui/components/layout/stack.js',
+            $root . '/resources/js/daisyui/components/ui/button.js',
+            $root . '/resources/js/daisyui/components/ui/heading.js',
+            $root . '/resources/js/daisyui/components/ui/icon.js',
+            $root . '/resources/js/daisyui/components/ui/iconButton.js',
+            $root . '/resources/js/daisyui/components/ui/label.js',
+            $root . '/resources/js/daisyui/components/ui/link.js',
+            $root . '/resources/js/daisyui/components/ui/text.js',
+        ];
+
+        $jsContent = [];
+        foreach ($jsFiles as $file) {
+            if (is_file($file)) {
+                $jsContent[] = trim((string) file_get_contents($file));
+            }
+        }
+
+        if ($jsContent !== []) {
             $distJs = $distDir . '/w4-native.js';
-            $jsContent = trim((string) file_get_contents($jsSource));
-            file_put_contents($distJs, $jsContent . PHP_EOL);
+            file_put_contents($distJs, implode(PHP_EOL . PHP_EOL, $jsContent) . PHP_EOL);
             $this->components->info('Assets CSS y JS compilados en dist/w4-native.css y dist/w4-native.js');
         } else {
             $this->components->info('Assets CSS compilados en dist/w4-native.css');
