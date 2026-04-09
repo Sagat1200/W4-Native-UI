@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\NativeUi\Themes\Presets;
+namespace W4\Native\Tools\Themes;
 
-use W4\NativeUi\Contracts\PresetContract;
+use W4\Native\Contracts\PresetContract;
 
 abstract class AbstractPreset implements PresetContract
 {

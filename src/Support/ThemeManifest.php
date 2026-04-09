@@ -1,19 +1,18 @@
 <?php
 
-namespace W4\NativeUi\Support;
+namespace W4\Native\Support;
 
 class ThemeManifest
 {
     public function __construct(
         protected string $defaultPreset,
         protected array $availablePresets = []
-    ) {
-    }
+    ) {}
 
     public static function fromConfig(array $config): self
     {
         return new self(
-            $config['default_preset'] ?? 'native.default',
+            $config['default_preset'] ?? 'native.light',
             $config['available_presets'] ?? []
         );
     }

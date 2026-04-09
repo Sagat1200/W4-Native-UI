@@ -2,7 +2,7 @@
 
 namespace W4\NativeUi\Themes\Components\Layout;
 
-use W4\NativeUi\Themes\Components\AbstractComponentTheme;
+use W4\Native\Tools\Themes\AbstractComponentTheme;
 
 class PanelTheme extends AbstractComponentTheme
 {

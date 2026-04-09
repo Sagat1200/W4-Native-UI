@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\NativeUi\Contracts;
+namespace W4\Native\Contracts;
 
 interface PresetContract
 {

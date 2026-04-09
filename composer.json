@@ -1,6 +1,6 @@
 {
-    "name": "w4/native-ui",
-    "description": "Biblioteca visual de estilos y componentes ui para laravel PHP.",
+    "name": "w4/native",
+    "description": "Biblioteca visual de estilos DaisyUI y componentes para laravel PHP.",
     "type": "library",
     "license": "MIT",
     "keywords": [
@@ -10,12 +10,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "W4\\NativeUi\\": "src/"
+            "W4\\Native\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "W4\\NativeUi\\Tests\\": "tests/"
+            "W4\\Native\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -38,7 +38,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "W4\\NativeUi\\Providers\\W4NativeUiServiceProvider" 
+                "W4\\Native\\Providers\\W4NativeServiceProvider" 
             ]
         }
     },

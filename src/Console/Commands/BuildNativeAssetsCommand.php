@@ -1,10 +1,10 @@
 <?php
 
-namespace W4\NativeUi\Console\Commands;
+namespace W4\Native\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class BuildNativeUiAssetsCommand extends Command
+class BuildNativeAssetsCommand extends Command
 {
     protected $signature = 'w4-native:build-assets';
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\NativeUi\Themes\Presets;
+namespace W4\Native\Themes\Presets;
 
-use W4\NativeUi\Themes\Presets\AbstractPreset;
+use W4\Native\Tools\Themes\AbstractPreset;
 
 class SynthwavePreset extends AbstractPreset
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\NativeUi\Themes\Components\Forms;
+namespace W4\Native\Themes\Components\Forms;
 
-use W4\NativeUi\Themes\Components\AbstractComponentTheme;
+use W4\Native\Tools\Themes\AbstractComponentTheme;
 
 class TextareaTheme extends AbstractComponentTheme
 {

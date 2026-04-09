@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\NativeUi\Themes\Components\FeedBack;
+namespace W4\Native\Themes\Components\FeedBack;
 
-use W4\NativeUi\Themes\Components\AbstractComponentTheme;
+use W4\Native\Tools\Themes\AbstractComponentTheme;
 
 class ProgressTheme extends AbstractComponentTheme
 {

@@ -3,10 +3,10 @@
 namespace W4\NativeUi\Themes;
 
 use InvalidArgumentException;
-use W4\NativeUi\Contracts\ComponentThemeContract;
-use W4\NativeUi\Contracts\ThemeContract;
-use W4\NativeUi\Support\ThemeManifest;
-use W4\NativeUi\Support\ThemeRegistry;
+use W4\Native\Contracts\ComponentThemeContract;
+use W4\Native\Contracts\ThemeContract;
+use W4\Native\Support\ThemeManifest;
+use W4\Native\Support\ThemeRegistry;
 
 class NativeTheme implements ThemeContract
 {
