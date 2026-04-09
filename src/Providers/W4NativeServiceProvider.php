@@ -5,40 +5,40 @@ namespace W4\Native\Providers;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use W4\Native\Console\Commands\InstallNativeCommand;
 use W4\Native\Console\Commands\BuildNativeAssetsCommand;
+use W4\Native\Console\Commands\InstallNativeCommand;
 use W4\Native\Support\ThemeManifest;
 use W4\Native\Support\ThemeRegistry;
-use W4\Native\Themes\NativeTheme;
-use W4\Native\Themes\Components\UI\ButtonTheme;
-use W4\Native\Themes\Components\UI\IconTheme;
-use W4\Native\Themes\Components\UI\IconButtonTheme;
-use W4\Native\Themes\Components\UI\LabelTheme;
-use W4\Native\Themes\Components\UI\LinkTheme;
-use W4\Native\Themes\Components\UI\TextTheme;
-use W4\Native\Themes\Components\Forms\InputTheme;
+use W4\Native\Themes\Components\FeedBack\AlertTheme;
+use W4\Native\Themes\Components\FeedBack\BadgeTheme;
+use W4\Native\Themes\Components\FeedBack\ProgressTheme;
+use W4\Native\Themes\Components\FeedBack\SkeletonTheme;
+use W4\Native\Themes\Components\FeedBack\ToastTheme;
+use W4\Native\Themes\Components\FeedBack\TooltipTheme;
+use W4\Native\Themes\Components\Forms\CheckboxTheme;
 use W4\Native\Themes\Components\Forms\FieldErrorTheme;
 use W4\Native\Themes\Components\Forms\HelperTextTheme;
+use W4\Native\Themes\Components\Forms\InputTheme;
+use W4\Native\Themes\Components\Forms\RadioTheme;
 use W4\Native\Themes\Components\Forms\SelectTheme;
 use W4\Native\Themes\Components\Forms\TextareaTheme;
-use W4\Native\Themes\Components\Forms\CheckboxTheme;
-use W4\Native\Themes\Components\Forms\RadioTheme;
 use W4\Native\Themes\Components\Forms\ToggleTheme;
 use W4\Native\Themes\Components\Layout\CardTheme;
 use W4\Native\Themes\Components\Layout\ContainerTheme;
-use W4\Native\Themes\Components\Layout\StackTheme;
 use W4\Native\Themes\Components\Layout\GridTheme;
-use W4\Native\Themes\Components\Layout\SectionTheme;
 use W4\Native\Themes\Components\Layout\PanelTheme;
+use W4\Native\Themes\Components\Layout\SectionTheme;
+use W4\Native\Themes\Components\Layout\StackTheme;
+use W4\Native\Themes\Components\UI\ButtonTheme;
 use W4\Native\Themes\Components\UI\DividerTheme;
 use W4\Native\Themes\Components\UI\HeadingTheme;
-use W4\Native\Themes\Components\FeedBack\AlertTheme;
-use W4\Native\Themes\Components\FeedBack\BadgeTheme;
-use W4\Native\Themes\Components\FeedBack\ToastTheme;
-use W4\Native\Themes\Components\FeedBack\ProgressTheme;
-use W4\Native\Themes\Components\FeedBack\SkeletonTheme;
-use W4\Native\Themes\Components\FeedBack\TooltipTheme;
-use W4\Native\Tools\W4NativeTheme;
+use W4\Native\Themes\Components\UI\IconButtonTheme;
+use W4\Native\Themes\Components\UI\IconTheme;
+use W4\Native\Themes\Components\UI\LabelTheme;
+use W4\Native\Themes\Components\UI\LinkTheme;
+use W4\Native\Themes\Components\UI\TextTheme;
+use W4\Native\Tools\Themes\W4NativeTheme;
+use W4\Native\Tools\Themes\W4NativeThemeService;
 
 class W4NativeServiceProvider extends ServiceProvider
 {
@@ -57,13 +57,13 @@ class W4NativeServiceProvider extends ServiceProvider
         $this->app->singleton(ThemeRegistry::class, function () {
             $registry = new ThemeRegistry();
 
-            W4NativeTheme::registerPresets($registry);
+            W4NativeThemeService::registerPresets($registry);
 
             return $registry;
         });
 
-        $this->app->singleton(NativeTheme::class, function ($app) {
-            return new NativeTheme(
+        $this->app->singleton(W4NativeTheme::class, function ($app) {
+            return new W4NativeTheme(
                 $app->make(ThemeRegistry::class),
                 $app->make(ThemeManifest::class),
                 [
