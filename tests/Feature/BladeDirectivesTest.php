@@ -3,7 +3,7 @@
 namespace W4\NativeUi\Tests\Feature;
 
 use Illuminate\Support\Facades\Blade;
-use W4\NativeUi\Tests\TestCase;
+use W4\Native\Tests\TestCase;
 
 class BladeDirectivesTest extends TestCase
 {
@@ -11,7 +11,7 @@ class BladeDirectivesTest extends TestCase
     {
         $html = Blade::render('@W4NativeStyles');
 
-        $this->assertStringContainsString('vendor/w4-native-ui/w4-native.css', $html);
+        $this->assertStringContainsString('vendor/w4-native/w4-native.css', $html);
         $this->assertStringContainsString('rel="stylesheet"', $html);
     }
 
@@ -19,7 +19,7 @@ class BladeDirectivesTest extends TestCase
     {
         $html = Blade::render('@W4NativeScripts');
 
-        $this->assertStringContainsString('vendor/w4-native-ui/w4-native.js', $html);
+        $this->assertStringContainsString('vendor/w4-native/w4-native.js', $html);
         $this->assertStringContainsString('<script', $html);
     }
 
@@ -28,7 +28,7 @@ class BladeDirectivesTest extends TestCase
         $html = Blade::render('@W4NativeInit');
 
         $this->assertStringContainsString('DOMContentLoaded', $html);
-        $this->assertStringContainsString('window.W4NativeUI.init(document)', $html);
+        $this->assertStringContainsString('window.W4Native.init(document)', $html);
     }
 
     public function test_renderiza_directiva_w4_native_livewire(): void
@@ -36,6 +36,6 @@ class BladeDirectivesTest extends TestCase
         $html = Blade::render('@W4NativeLivewire');
 
         $this->assertStringContainsString('livewire:navigated', $html);
-        $this->assertStringContainsString('window.W4NativeUI.init(document)', $html);
+        $this->assertStringContainsString('window.W4Native.init(document)', $html);
     }
 }

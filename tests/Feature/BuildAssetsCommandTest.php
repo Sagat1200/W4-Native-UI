@@ -2,7 +2,7 @@
 
 namespace W4\NativeUi\Tests\Feature;
 
-use W4\NativeUi\Tests\TestCase;
+use W4\Native\Tests\TestCase;
 
 class BuildAssetsCommandTest extends TestCase
 {
