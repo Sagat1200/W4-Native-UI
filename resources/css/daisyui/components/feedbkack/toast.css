@@ -1,0 +1,29 @@
+.w4-toast {
+  border-radius: var(--w4-radius-input);
+  background: hsl(var(--w4-base-content));
+  color: hsl(var(--w4-base-100));
+  padding: 0.625rem 0.875rem;
+}
+
+.w4-toast-xs {
+  font-size: 0.75rem;
+  padding: 0.5rem 0.625rem;
+}
+
+.w4-toast-sm {
+  font-size: 0.875rem;
+}
+
+.w4-toast-md {
+  font-size: 0.9375rem;
+}
+
+.w4-toast-lg {
+  font-size: 1.0625rem;
+  padding: 0.75rem 1rem;
+}
+
+.w4-toast-xl {
+  font-size: 1.125rem;
+  padding: 0.875rem 1.125rem;
+}

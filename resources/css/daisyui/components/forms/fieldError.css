@@ -1,0 +1,52 @@
+.w4-field-error {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: hsl(0 72% 45%);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.w4-field-error-warning {
+  color: hsl(32 95% 35%);
+}
+
+.w4-field-error-info {
+  color: hsl(215 77% 35%);
+}
+
+.w4-field-error-inline {
+  display: inline;
+}
+
+.w4-field-error-xs {
+  font-size: 0.75rem;
+}
+
+.w4-field-error-sm {
+  font-size: 0.875rem;
+}
+
+.w4-field-error-md {
+  font-size: 1rem;
+}
+
+.w4-field-error-lg {
+  font-size: 1.125rem;
+}
+
+.w4-field-error-xl {
+  font-size: 1.25rem;
+}
+
+.w4-field-error-disabled {
+  opacity: 0.55;
+}
+
+.w4-field-error-active {
+  font-weight: 600;
+}
+
+.w4-field-error-hidden {
+  display: none;
+}

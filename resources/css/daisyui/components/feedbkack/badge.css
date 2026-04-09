@@ -1,0 +1,55 @@
+.w4-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--w4-radius-badge, 1.9rem);
+  height: 1.25rem;
+  padding: 0 0.563rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.w4-badge-primary {
+  background: hsl(var(--w4-primary));
+  color: hsl(var(--w4-primary-content));
+}
+
+.w4-badge-secondary {
+  background: hsl(var(--w4-secondary));
+  color: hsl(var(--w4-secondary-content));
+}
+
+.w4-badge-accent {
+  background: hsl(var(--w4-accent));
+  color: hsl(var(--w4-accent-content));
+}
+
+.w4-badge-xs {
+  height: 0.875rem;
+  font-size: 0.625rem;
+  padding: 0 0.313rem;
+}
+
+.w4-badge-sm {
+  height: 1rem;
+  font-size: 0.75rem;
+  padding: 0 0.438rem;
+}
+
+.w4-badge-md {
+  height: 1.25rem;
+  font-size: 0.875rem;
+  padding: 0 0.563rem;
+}
+
+.w4-badge-lg {
+  height: 1.5rem;
+  font-size: 1rem;
+  padding: 0 0.688rem;
+}
+
+.w4-badge-xl {
+  height: 1.75rem;
+  font-size: 1.125rem;
+  padding: 0 0.813rem;
+}

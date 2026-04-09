@@ -1,0 +1,38 @@
+.w4-card {
+  background: hsl(var(--w4-base-200));
+  border: 1px solid hsl(var(--w4-base-300));
+  border-radius: var(--w4-radius-card);
+  box-shadow: var(--w4-shadow-sm);
+}
+
+.w4-card-body {
+  padding: 2rem;
+}
+
+.w4-card-elevated {
+  box-shadow: var(--w4-shadow-md);
+}
+
+.w4-card-bordered {
+  border-width: 2px;
+}
+
+.w4-card-xs .w4-card-body {
+  padding: 0.75rem;
+}
+
+.w4-card-sm .w4-card-body {
+  padding: 1rem;
+}
+
+.w4-card-md .w4-card-body {
+  padding: 2rem;
+}
+
+.w4-card-lg .w4-card-body {
+  padding: 2.5rem;
+}
+
+.w4-card-xl .w4-card-body {
+  padding: 3rem;
+}

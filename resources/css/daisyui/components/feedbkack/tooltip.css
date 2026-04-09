@@ -1,0 +1,23 @@
+.w4-tooltip {
+  position: relative;
+}
+
+.w4-tooltip-xs {
+  font-size: 0.75rem;
+}
+
+.w4-tooltip-sm {
+  font-size: 0.875rem;
+}
+
+.w4-tooltip-md {
+  font-size: 1rem;
+}
+
+.w4-tooltip-lg {
+  font-size: 1.125rem;
+}
+
+.w4-tooltip-xl {
+  font-size: 1.25rem;
+}

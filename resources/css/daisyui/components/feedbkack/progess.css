@@ -1,0 +1,25 @@
+.w4-progress {
+  inline-size: 100%;
+  block-size: 0.5rem;
+  border-radius: 999px;
+}
+
+.w4-progress-xs {
+  block-size: 0.25rem;
+}
+
+.w4-progress-sm {
+  block-size: 0.375rem;
+}
+
+.w4-progress-md {
+  block-size: 0.5rem;
+}
+
+.w4-progress-lg {
+  block-size: 0.75rem;
+}
+
+.w4-progress-xl {
+  block-size: 1rem;
+}

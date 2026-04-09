@@ -1,0 +1,76 @@
+.w4-input {
+  inline-size: 100%;
+  border: 1px solid hsl(var(--w4-base-300));
+  border-radius: var(--w4-radius-input);
+  background: hsl(var(--w4-base-100));
+  color: hsl(var(--w4-base-content));
+  height: 3rem;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  box-shadow: 0 0 0 1px hsl(var(--w4-primary) / 0.12);
+}
+
+.w4-input:focus {
+  outline: 2px solid hsl(var(--w4-primary));
+  outline-offset: 1px;
+  box-shadow: 0 0 0 2px hsl(var(--w4-primary) / 0.28);
+}
+
+.w4-input-ghost {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.w4-input-xs {
+  height: 1.5rem;
+  font-size: 0.75rem;
+  padding: 0 0.5rem;
+}
+
+.w4-input-sm {
+  height: 2rem;
+  font-size: 0.875rem;
+  padding: 0 0.75rem;
+}
+
+.w4-input-md {
+  height: 3rem;
+  font-size: 0.875rem;
+  padding: 0 1rem;
+}
+
+.w4-input-lg {
+  height: 4rem;
+  font-size: 1.125rem;
+  padding: 0 1.5rem;
+}
+
+.w4-input-xl {
+  height: 5rem;
+  font-size: 1.25rem;
+  padding: 0 2rem;
+}
+
+.w4-input-invalid {
+  border-color: hsl(0 72% 51%);
+  box-shadow: 0 0 0 1px hsl(0 72% 51% / 0.22);
+}
+
+.w4-input-valid {
+  border-color: hsl(142 71% 45%);
+  box-shadow: 0 0 0 1px hsl(142 71% 45% / 0.22);
+}
+
+.w4-input-disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.w4-input-readonly {
+  background: hsl(var(--w4-base-200));
+}
+
+.w4-input-loading {
+  opacity: 0.8;
+}

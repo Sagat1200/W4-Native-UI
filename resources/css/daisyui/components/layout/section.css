@@ -1,0 +1,24 @@
+.w4-section {
+  display: block;
+  padding-block: 1rem;
+}
+
+.w4-section-xs {
+  padding-block: 0.5rem;
+}
+
+.w4-section-sm {
+  padding-block: 0.75rem;
+}
+
+.w4-section-md {
+  padding-block: 1rem;
+}
+
+.w4-section-lg {
+  padding-block: 1.5rem;
+}
+
+.w4-section-xl {
+  padding-block: 2rem;
+}

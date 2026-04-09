@@ -1,0 +1,27 @@
+.w4-container {
+  inline-size: min(100%, 1200px);
+  margin-inline: auto;
+  padding-inline: 1rem;
+  background: hsl(var(--w4-base-200));
+  color: hsl(var(--w4-base-content));
+}
+
+.w4-container-xs {
+  max-inline-size: 420px;
+}
+
+.w4-container-sm {
+  max-inline-size: 640px;
+}
+
+.w4-container-md {
+  max-inline-size: 840px;
+}
+
+.w4-container-lg {
+  max-inline-size: 1080px;
+}
+
+.w4-container-xl {
+  max-inline-size: 1280px;
+}

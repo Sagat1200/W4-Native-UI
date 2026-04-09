@@ -1,0 +1,30 @@
+.w4-panel {
+  border: 1px solid hsl(var(--w4-base-300));
+  border-radius: var(--w4-radius-card);
+  background: hsl(var(--w4-base-200));
+  padding: 1rem;
+}
+
+.w4-panel-elevated {
+  box-shadow: var(--w4-shadow-md);
+}
+
+.w4-panel-xs {
+  padding: 0.5rem;
+}
+
+.w4-panel-sm {
+  padding: 0.75rem;
+}
+
+.w4-panel-md {
+  padding: 1rem;
+}
+
+.w4-panel-lg {
+  padding: 1.25rem;
+}
+
+.w4-panel-xl {
+  padding: 1.5rem;
+}

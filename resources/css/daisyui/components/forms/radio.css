@@ -1,0 +1,63 @@
+.w4-radio {
+  accent-color: hsl(var(--w4-primary));
+}
+
+.w4-radio-primary {
+  accent-color: hsl(var(--w4-primary));
+}
+
+.w4-radio-secondary {
+  accent-color: hsl(var(--w4-secondary));
+}
+
+.w4-radio-xs {
+  height: 1rem;
+  width: 1rem;
+}
+
+.w4-radio-sm {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.w4-radio-md {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.w4-radio-lg {
+  height: 2rem;
+  width: 2rem;
+}
+
+.w4-radio-xl {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.w4-radio-disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.w4-radio-readonly {
+  pointer-events: none;
+}
+
+.w4-radio-invalid {
+  outline: 2px solid hsl(0 72% 51%);
+  outline-offset: 1px;
+}
+
+.w4-radio-valid {
+  outline: 2px solid hsl(142 71% 45%);
+  outline-offset: 1px;
+}
+
+.w4-radio-loading {
+  opacity: 0.8;
+}
+
+.w4-radio-selected {
+  filter: saturate(1.2);
+}

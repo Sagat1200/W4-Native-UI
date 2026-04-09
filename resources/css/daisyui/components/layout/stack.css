@@ -1,0 +1,29 @@
+.w4-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.w4-stack-horizontal {
+  flex-direction: row;
+}
+
+.w4-stack-xs {
+  gap: 0.375rem;
+}
+
+.w4-stack-sm {
+  gap: 0.625rem;
+}
+
+.w4-stack-md {
+  gap: 1rem;
+}
+
+.w4-stack-lg {
+  gap: 1.5rem;
+}
+
+.w4-stack-xl {
+  gap: 2rem;
+}

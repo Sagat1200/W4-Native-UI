@@ -1,0 +1,40 @@
+.w4-skeleton {
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--w4-base-200)) 25%,
+    hsl(var(--w4-base-300)) 37%,
+    hsl(var(--w4-base-200)) 63%
+  );
+  background-size: 400% 100%;
+  animation: w4-skeleton-loading 1.4s ease infinite;
+}
+
+.w4-skeleton-xs {
+  min-block-size: 0.5rem;
+}
+
+.w4-skeleton-sm {
+  min-block-size: 0.75rem;
+}
+
+.w4-skeleton-md {
+  min-block-size: 1rem;
+}
+
+.w4-skeleton-lg {
+  min-block-size: 1.25rem;
+}
+
+.w4-skeleton-xl {
+  min-block-size: 1.5rem;
+}
+
+@keyframes w4-skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}

@@ -1,0 +1,76 @@
+.w4-select {
+  inline-size: 100%;
+  border: 1px solid hsl(var(--w4-base-300));
+  border-radius: var(--w4-radius-input);
+  background: hsl(var(--w4-base-100));
+  color: hsl(var(--w4-base-content));
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  box-shadow: 0 0 0 1px hsl(var(--w4-primary) / 0.12);
+  height: 3rem;
+}
+
+.w4-select:focus {
+  outline: 2px solid hsl(var(--w4-primary));
+  outline-offset: 1px;
+  box-shadow: 0 0 0 2px hsl(var(--w4-primary) / 0.28);
+}
+
+.w4-select-ghost {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.w4-select-xs {
+  height: 1.5rem;
+  font-size: 0.75rem;
+  padding: 0 0.5rem;
+}
+
+.w4-select-sm {
+  height: 2rem;
+  font-size: 0.875rem;
+  padding: 0 0.75rem;
+}
+
+.w4-select-md {
+  height: 3rem;
+  font-size: 0.875rem;
+  padding: 0 1rem;
+}
+
+.w4-select-lg {
+  height: 4rem;
+  font-size: 1.125rem;
+  padding: 0 1.5rem;
+}
+
+.w4-select-xl {
+  height: 5rem;
+  font-size: 1.25rem;
+  padding: 0 2rem;
+}
+
+.w4-select-invalid {
+  border-color: hsl(0 72% 51%);
+  box-shadow: 0 0 0 1px hsl(0 72% 51% / 0.22);
+}
+
+.w4-select-valid {
+  border-color: hsl(142 71% 45%);
+  box-shadow: 0 0 0 1px hsl(142 71% 45% / 0.22);
+}
+
+.w4-select-disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.w4-select-readonly {
+  background: hsl(var(--w4-base-200));
+}
+
+.w4-select-loading {
+  opacity: 0.8;
+}
