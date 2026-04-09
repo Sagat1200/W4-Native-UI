@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Services\Provider\Themes;
+namespace W4\Native\Services\Themes;
 
 use W4\Native\Support\ThemeRegistry;
 use W4\Native\Themes\Presets\CorporatePreset;

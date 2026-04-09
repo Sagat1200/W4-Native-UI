@@ -12,7 +12,7 @@ use W4\Native\Services\Provider\Components\Interactive\W4NativeInteractiveServic
 use W4\Native\Services\Provider\Components\Layout\W4NativeLayoutService;
 use W4\Native\Services\Provider\Components\UI\W4NativeUI;
 use W4\Native\Services\Provider\Directives\W4NativeDirectiveService;
-use W4\Native\Services\Provider\Themes\W4NativeThemeService;
+use W4\Native\Services\Themes\W4NativeThemeService;
 use W4\Native\Support\ThemeManifest;
 use W4\Native\Support\ThemeRegistry;
 use W4\Native\Tools\Themes\W4NativeTheme;
