@@ -14,40 +14,40 @@ class BuildNativeAssetsCommand extends Command
     {
         $root = dirname(__DIR__, 3);
         $cssFiles = [
-            $root . '/resources/css/w4-theme.css',
-            $root . '/resources/css/presets/dark.css',
-            $root . '/resources/css/presets/corporate.css',
-            $root . '/resources/css/presets/night.css',
-            $root . '/resources/css/presets/synthwave.css',
-            $root . '/resources/css/presets/light.css',
-            $root . '/resources/css/presets/cupcake.css',
-            $root . '/resources/css/presets/bumblebee.css',
-            $root . '/resources/css/presets/emerald.css',
-            $root . '/resources/css/presets/retro.css',
-            $root . '/resources/css/presets/cyberpunk.css',
-            $root . '/resources/css/presets/valentine.css',
-            $root . '/resources/css/presets/halloween.css',
-            $root . '/resources/css/presets/garden.css',
-            $root . '/resources/css/presets/forest.css',
-            $root . '/resources/css/presets/aqua.css',
-            $root . '/resources/css/presets/lofi.css',
-            $root . '/resources/css/presets/pastel.css',
-            $root . '/resources/css/presets/fantasy.css',
-            $root . '/resources/css/presets/wireframe.css',
-            $root . '/resources/css/presets/black.css',
-            $root . '/resources/css/presets/luxury.css',
-            $root . '/resources/css/presets/dracula.css',
-            $root . '/resources/css/presets/cmyk.css',
-            $root . '/resources/css/presets/autumn.css',
-            $root . '/resources/css/presets/business.css',
-            $root . '/resources/css/presets/acid.css',
-            $root . '/resources/css/presets/lemonade.css',
-            $root . '/resources/css/presets/coffee.css',
-            $root . '/resources/css/presets/winter.css',
-            $root . '/resources/css/presets/dim.css',
-            $root . '/resources/css/presets/nord.css',
-            $root . '/resources/css/presets/sunset.css',
-            $root . '/resources/css/w4-components.css',
+            $root . '/resources/css/daisyui/properties/w4-theme.css',
+            $root . '/resources/css/daisyui/presets/dark.css',
+            $root . '/resources/css/daisyui/presets/corporate.css',
+            $root . '/resources/css/daisyui/presets/night.css',
+            $root . '/resources/css/daisyui/presets/synthwave.css',
+            $root . '/resources/css/daisyui/presets/light.css',
+            $root . '/resources/css/daisyui/presets/cupcake.css',
+            $root . '/resources/css/daisyui/presets/bumblebee.css',
+            $root . '/resources/css/daisyui/presets/emerald.css',
+            $root . '/resources/css/daisyui/presets/retro.css',
+            $root . '/resources/css/daisyui/presets/cyberpunk.css',
+            $root . '/resources/css/daisyui/presets/valentine.css',
+            $root . '/resources/css/daisyui/presets/halloween.css',
+            $root . '/resources/css/daisyui/presets/garden.css',
+            $root . '/resources/css/daisyui/presets/forest.css',
+            $root . '/resources/css/daisyui/presets/aqua.css',
+            $root . '/resources/css/daisyui/presets/lofi.css',
+            $root . '/resources/css/daisyui/presets/pastel.css',
+            $root . '/resources/css/daisyui/presets/fantasy.css',
+            $root . '/resources/css/daisyui/presets/wireframe.css',
+            $root . '/resources/css/daisyui/presets/black.css',
+            $root . '/resources/css/daisyui/presets/luxury.css',
+            $root . '/resources/css/daisyui/presets/dracula.css',
+            $root . '/resources/css/daisyui/presets/cmyk.css',
+            $root . '/resources/css/daisyui/presets/autumn.css',
+            $root . '/resources/css/daisyui/presets/business.css',
+            $root . '/resources/css/daisyui/presets/acid.css',
+            $root . '/resources/css/daisyui/presets/lemonade.css',
+            $root . '/resources/css/daisyui/presets/coffee.css',
+            $root . '/resources/css/daisyui/presets/winter.css',
+            $root . '/resources/css/daisyui/presets/dim.css',
+            $root . '/resources/css/daisyui/presets/nord.css',
+            $root . '/resources/css/daisyui/presets/sunset.css',
+            $root . '/resources/css/daisyui/properties/w4-components.css',
         ];
 
         $cssContent = [];
@@ -71,7 +71,7 @@ class BuildNativeAssetsCommand extends Command
         $distCss = $distDir . '/w4-native.css';
         file_put_contents($distCss, implode(PHP_EOL . PHP_EOL, $cssContent) . PHP_EOL);
 
-        $jsSource = $root . '/resources/js/w4-native.js';
+        $jsSource = $root . '/resources/js/daisyui/properties/w4-native.js';
         if (is_file($jsSource)) {
             $distJs = $distDir . '/w4-native.js';
             $jsContent = trim((string) file_get_contents($jsSource));
