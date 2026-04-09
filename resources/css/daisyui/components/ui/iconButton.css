@@ -20,7 +20,11 @@
   border-color: var(--w4-btn-border, transparent);
   background-color: var(--w4-btn-bg, hsl(var(--w4-base-200)));
   color: var(--w4-btn-fg, hsl(var(--w4-base-content)));
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, filter 0.2s;
+}
+
+.w4-icon-button:hover {
+  filter: brightness(1.1) contrast(1.1);
 }
 
 .w4-icon-button-primary {
@@ -115,6 +119,7 @@
   --w4-btn-bg: hsl(var(--w4-base-content) / 0.1);
   --w4-btn-fg: hsl(var(--w4-base-content) / 0.2);
   --w4-btn-border: transparent;
+  filter: none;
 }
 
 .w4-icon-button-loading {

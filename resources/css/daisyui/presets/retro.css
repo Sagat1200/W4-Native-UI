@@ -17,4 +17,13 @@
   --w4-warning-content: 48 95% 88%;
   --w4-error: 359 100% 69%;
   --w4-error-content: 16 87% 26%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.4rem;
+  --w4-radius-badge: 0.4rem;
+  --w4-radius-card: 0.4rem;
+  --w4-radius-input: 0.4rem;
+  
+  --w4-btn-border-width: 2px;
+  --w4-shadow-sm: 4px 4px 0px 0px hsl(var(--w4-base-content));
+  --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
 }

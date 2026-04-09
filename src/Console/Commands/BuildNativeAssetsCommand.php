@@ -47,6 +47,7 @@ class BuildNativeAssetsCommand extends Command
             $root . '/resources/css/daisyui/presets/dim.css',
             $root . '/resources/css/daisyui/presets/nord.css',
             $root . '/resources/css/daisyui/presets/sunset.css',
+            $root . '/resources/css/daisyui/presets/cyberpunk.css',
             $root . '/resources/css/daisyui/properties/w4-components.css',
             $root . '/resources/css/daisyui/components/ui/button.css',
             $root . '/resources/css/daisyui/components/ui/heading.css',

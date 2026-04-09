@@ -49,6 +49,15 @@ html[data-theme] body {
   --w4-warning-content: 23 93% 25%;
   --w4-error: 350 104% 70%;
   --w4-error-content: 342 95% 15%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.25rem;
+  --w4-radius-badge: 0.25rem;
+  --w4-radius-card: 0.25rem;
+  --w4-radius-input: 0.25rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.corporate"] {
@@ -70,6 +79,15 @@ html[data-theme] body {
   --w4-warning-content: 0 0% 0%;
   --w4-error: 359 100% 69%;
   --w4-error-content: 0 0% 0%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.2rem;
+  --w4-radius-badge: 0.2rem;
+  --w4-radius-card: 0.2rem;
+  --w4-radius-input: 0.2rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.night"] {
@@ -91,6 +109,15 @@ html[data-theme] body {
   --w4-warning-content: 37 79% 4%;
   --w4-error: 351 94% 71%;
   --w4-error-content: 353 67% 5%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.5rem;
+  --w4-radius-badge: 0.5rem;
+  --w4-radius-card: 0.5rem;
+  --w4-radius-input: 0.5rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.synthwave"] {
@@ -112,6 +139,15 @@ html[data-theme] body {
   --w4-warning-content: 30 84% 24%;
   --w4-error: 10 75% 70%;
   --w4-error-content: 257 63% 17%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.25rem;
+  --w4-radius-badge: 0.25rem;
+  --w4-radius-card: 0.25rem;
+  --w4-radius-input: 0.25rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.light"] {
@@ -133,6 +169,15 @@ html[data-theme] body {
   --w4-warning-content: 23 93% 25%;
   --w4-error: 350 104% 70%;
   --w4-error-content: 342 95% 15%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.25rem;
+  --w4-radius-badge: 0.25rem;
+  --w4-radius-card: 0.25rem;
+  --w4-radius-input: 0.25rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.cupcake"] {
@@ -154,6 +199,15 @@ html[data-theme] body {
   --w4-warning-content: 26 91% 13%;
   --w4-error: 345 99% 55%;
   --w4-error-content: 342 95% 15%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 1.9rem;
+  --w4-radius-badge: 1.9rem;
+  --w4-radius-card: 1.9rem;
+  --w4-radius-input: 1.9rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.bumblebee"] {
@@ -175,6 +229,15 @@ html[data-theme] body {
   --w4-warning-content: 23 93% 25%;
   --w4-error: 359 100% 69%;
   --w4-error-content: 358 72% 29%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.25rem;
+  --w4-radius-badge: 0.25rem;
+  --w4-radius-card: 0.25rem;
+  --w4-radius-input: 0.25rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.emerald"] {
@@ -196,6 +259,15 @@ html[data-theme] body {
   --w4-warning-content: 0 0% 0%;
   --w4-error: 357 126% 71%;
   --w4-error-content: 0 0% 0%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.5rem;
+  --w4-radius-badge: 0.5rem;
+  --w4-radius-card: 0.5rem;
+  --w4-radius-input: 0.5rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.retro"] {
@@ -217,6 +289,15 @@ html[data-theme] body {
   --w4-warning-content: 48 95% 88%;
   --w4-error: 359 100% 69%;
   --w4-error-content: 16 87% 26%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.4rem;
+  --w4-radius-badge: 0.4rem;
+  --w4-radius-card: 0.4rem;
+  --w4-radius-input: 0.4rem;
+  
+  --w4-btn-border-width: 2px;
+  --w4-shadow-sm: 4px 4px 0px 0px hsl(var(--w4-base-content));
+  --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
 }
 
 [data-theme="native.cyberpunk"] {
@@ -238,6 +319,16 @@ html[data-theme] body {
   --w4-warning-content: 0 0% 0%;
   --w4-error: 357 126% 71%;
   --w4-error-content: 0 0% 0%;
+
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0px;      /* Botones cuadrados */
+  --w4-radius-badge: 0px;       /* Badges cuadrados */
+  --w4-radius-card: 0px;        /* Cards cuadradas */
+  --w4-radius-input: 0px;       /* Inputs cuadrados */
+  
+  --w4-btn-border-width: 2px;   /* Bordes más gruesos y agresivos para botones */
+  --w4-shadow-sm: 4px 4px 0px 0px hsl(var(--w4-base-content)); /* Sombra dura estilo cyberpunk */
+  --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
 }
 
 [data-theme="native.valentine"] {
@@ -261,6 +352,15 @@ html[data-theme] body {
   --w4-warning-content: 17 99% 3%;
   --w4-error: 4 125% 71%;
   --w4-error-content: 2 80% 5%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 1.9rem;
+  --w4-radius-badge: 1.9rem;
+  --w4-radius-card: 1.9rem;
+  --w4-radius-input: 1.9rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.halloween"] {
@@ -284,6 +384,15 @@ html[data-theme] body {
   --w4-warning-content: 17 99% 3%;
   --w4-error: 3 87% 62%;
   --w4-error-content: 2 84% 4%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0px;
+  --w4-radius-badge: 0px;
+  --w4-radius-card: 0px;
+  --w4-radius-input: 0px;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.garden"] {
@@ -307,6 +416,15 @@ html[data-theme] body {
   --w4-warning-content: 0 0% 0%;
   --w4-error: 357 100% 71%;
   --w4-error-content: 0 0% 0%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.5rem;
+  --w4-radius-badge: 0.5rem;
+  --w4-radius-card: 0.5rem;
+  --w4-radius-input: 0.5rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.forest"] {
@@ -330,6 +448,15 @@ html[data-theme] body {
   --w4-warning-content: 0 0% 0%;
   --w4-error: 357 100% 71%;
   --w4-error-content: 0 0% 0%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.5rem;
+  --w4-radius-badge: 0.5rem;
+  --w4-radius-card: 0.5rem;
+  --w4-radius-input: 0.5rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.aqua"] {
@@ -353,6 +480,15 @@ html[data-theme] body {
   --w4-warning-content: 17 99% 3%;
   --w4-error: 5 100% 73%;
   --w4-error-content: 3 75% 5%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 1rem;
+  --w4-radius-badge: 1rem;
+  --w4-radius-card: 1rem;
+  --w4-radius-input: 1rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.lofi"] {
@@ -376,6 +512,15 @@ html[data-theme] body {
   --w4-warning-content: 36 72% 5%;
   --w4-error: 7 100% 78%;
   --w4-error-content: 6 60% 6%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0px;
+  --w4-radius-badge: 0px;
+  --w4-radius-card: 0px;
+  --w4-radius-input: 0px;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: none;
+  --w4-shadow-md: none;
 }
 
 [data-theme="native.pastel"] {
@@ -399,6 +544,15 @@ html[data-theme] body {
   --w4-warning-content: 0 0% 0%;
   --w4-error: 357 100% 71%;
   --w4-error-content: 0 0% 0%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 1.9rem;
+  --w4-radius-badge: 1.9rem;
+  --w4-radius-card: 1.9rem;
+  --w4-radius-input: 1.9rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.fantasy"] {
@@ -422,6 +576,15 @@ html[data-theme] body {
   --w4-warning-content: 0 0% 0%;
   --w4-error: 357 100% 71%;
   --w4-error-content: 0 0% 0%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.5rem;
+  --w4-radius-badge: 0.5rem;
+  --w4-radius-card: 0.5rem;
+  --w4-radius-input: 0.5rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.wireframe"] {
@@ -445,6 +608,15 @@ html[data-theme] body {
   --w4-warning-content: 60 58% 2%;
   --w4-error: 0 100% 50%;
   --w4-error-content: 360 100% 4%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.2rem;
+  --w4-radius-badge: 0.2rem;
+  --w4-radius-card: 0.2rem;
+  --w4-radius-input: 0.2rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: none;
+  --w4-shadow-md: none;
 }
 
 [data-theme="native.black"] {
@@ -468,6 +640,15 @@ html[data-theme] body {
   --w4-warning-content: 60 100% 4%;
   --w4-error: 0 100% 50%;
   --w4-error-content: 360 100% 4%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0px;
+  --w4-radius-badge: 0px;
+  --w4-radius-card: 0px;
+  --w4-radius-input: 0px;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: none;
+  --w4-shadow-md: none;
 }
 
 [data-theme="native.luxury"] {
@@ -491,6 +672,15 @@ html[data-theme] body {
   --w4-warning-content: 53 70% 4%;
   --w4-error: 0 100% 72%;
   --w4-error-content: 0 68% 5%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.5rem;
+  --w4-radius-badge: 0.5rem;
+  --w4-radius-card: 0.5rem;
+  --w4-radius-input: 0.5rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.dracula"] {
@@ -514,6 +704,15 @@ html[data-theme] body {
   --w4-warning-content: 65 51% 6%;
   --w4-error: 0 100% 67%;
   --w4-error-content: 360 80% 5%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.25rem;
+  --w4-radius-badge: 0.25rem;
+  --w4-radius-card: 0.25rem;
+  --w4-radius-input: 0.25rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.cmyk"] {
@@ -537,6 +736,15 @@ html[data-theme] body {
   --w4-warning-content: 16 92% 4%;
   --w4-error: 4 81% 56%;
   --w4-error-content: 1 91% 4%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.5rem;
+  --w4-radius-badge: 0.5rem;
+  --w4-radius-card: 0.5rem;
+  --w4-radius-input: 0.5rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.autumn"] {
@@ -560,6 +768,15 @@ html[data-theme] body {
   --w4-warning-content: 17 98% 4%;
   --w4-error: 346 100% 34%;
   --w4-error-content: 5 99% 91%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.5rem;
+  --w4-radius-badge: 0.5rem;
+  --w4-radius-card: 0.5rem;
+  --w4-radius-input: 0.5rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.business"] {
@@ -583,6 +800,15 @@ html[data-theme] body {
   --w4-warning-content: 35 73% 4%;
   --w4-error: 6 56% 43%;
   --w4-error-content: 9 54% 89%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.25rem;
+  --w4-radius-badge: 0.25rem;
+  --w4-radius-card: 0.25rem;
+  --w4-radius-input: 0.25rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.acid"] {
@@ -606,6 +832,15 @@ html[data-theme] body {
   --w4-warning-content: 49 100% 4%;
   --w4-error: 357 100% 44%;
   --w4-error-content: 359 100% 5%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 1.25rem;
+  --w4-radius-badge: 1.25rem;
+  --w4-radius-card: 1.25rem;
+  --w4-radius-input: 1.25rem;
+  
+  --w4-btn-border-width: 2px;
+  --w4-shadow-sm: none;
+  --w4-shadow-md: none;
 }
 
 [data-theme="native.lemonade"] {
@@ -629,6 +864,15 @@ html[data-theme] body {
   --w4-warning-content: 54 19% 6%;
   --w4-error: 6 59% 85%;
   --w4-error-content: 6 18% 7%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.5rem;
+  --w4-radius-badge: 0.5rem;
+  --w4-radius-card: 0.5rem;
+  --w4-radius-input: 0.5rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.coffee"] {
@@ -652,6 +896,15 @@ html[data-theme] body {
   --w4-warning-content: 41 76% 5%;
   --w4-error: 10 95% 75%;
   --w4-error-content: 8 58% 5%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.5rem;
+  --w4-radius-badge: 0.5rem;
+  --w4-radius-card: 0.5rem;
+  --w4-radius-input: 0.5rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.winter"] {
@@ -675,6 +928,15 @@ html[data-theme] body {
   --w4-warning-content: 32 21% 6%;
   --w4-error: 0 63% 72%;
   --w4-error-content: 0 46% 5%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.5rem;
+  --w4-radius-badge: 0.5rem;
+  --w4-radius-card: 0.5rem;
+  --w4-radius-input: 0.5rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.dim"] {
@@ -698,6 +960,15 @@ html[data-theme] body {
   --w4-warning-content: 46 77% 4%;
   --w4-error: 11 100% 80%;
   --w4-error-content: 11 44% 6%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.25rem;
+  --w4-radius-badge: 0.25rem;
+  --w4-radius-card: 0.25rem;
+  --w4-radius-input: 0.25rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.nord"] {
@@ -721,6 +992,15 @@ html[data-theme] body {
   --w4-warning-content: 39 48% 5%;
   --w4-error: 354 42% 56%;
   --w4-error-content: 356 62% 3%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.25rem;
+  --w4-radius-badge: 0.25rem;
+  --w4-radius-card: 0.25rem;
+  --w4-radius-input: 0.25rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
 [data-theme="native.sunset"] {
@@ -744,6 +1024,46 @@ html[data-theme] body {
   --w4-warning-content: 34 46% 5%;
   --w4-error: 358 100% 87%;
   --w4-error-content: 358 26% 7%;
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0.5rem;
+  --w4-radius-badge: 0.5rem;
+  --w4-radius-card: 0.5rem;
+  --w4-radius-input: 0.5rem;
+  
+  --w4-btn-border-width: 1px;
+  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
+}
+
+[data-theme="native.cyberpunk"] {
+  --w4-primary: 343 128% 74%;
+  --w4-primary-content: 347 74% 5%;
+  --w4-secondary: 184 249% 29%;
+  --w4-secondary-content: 187 140% 4%;
+  --w4-accent: 277 111% 74%;
+  --w4-accent-content: 275 66% 5%;
+  --w4-base-100: 55 102% 65%;
+  --w4-base-200: 55 92% 60%;
+  --w4-base-300: 56 88% 47%;
+  --w4-base-content: 0 0% 0%;
+  --w4-info: 194 201% 34%;
+  --w4-info-content: 0 0% 0%;
+  --w4-success: 161 124% 30%;
+  --w4-success-content: 0 0% 0%;
+  --w4-warning: 46 169% 39%;
+  --w4-warning-content: 0 0% 0%;
+  --w4-error: 357 126% 71%;
+  --w4-error-content: 0 0% 0%;
+
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0px;      /* Botones cuadrados */
+  --w4-radius-badge: 0px;       /* Badges cuadrados */
+  --w4-radius-card: 0px;        /* Cards cuadradas */
+  --w4-radius-input: 0px;       /* Inputs cuadrados */
+  
+  --w4-btn-border-width: 2px;   /* Bordes más gruesos y agresivos para botones */
+  --w4-shadow-sm: 4px 4px 0px 0px hsl(var(--w4-base-content)); /* Sombra dura estilo cyberpunk */
+  --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
 }
 
 @keyframes w4-icon-spin {
@@ -777,48 +1097,61 @@ html[data-theme] body {
   border-color: var(--w4-btn-border, transparent);
   background-color: var(--w4-btn-bg, hsl(var(--w4-base-200)));
   color: var(--w4-btn-fg, hsl(var(--w4-base-content)));
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, filter 0.2s;
+}
+
+.w4-btn:hover,
+.w4-button:hover {
+  filter: brightness(1.1) contrast(1.1);
 }
 
 .w4-button-primary {
   --w4-btn-bg: hsl(var(--w4-primary));
   --w4-btn-fg: hsl(var(--w4-primary-content));
   --w4-btn-border: hsl(var(--w4-primary));
+  --w4-btn-hover-fg: hsl(var(--w4-primary-content));
 }
 .w4-button-secondary {
   --w4-btn-bg: hsl(var(--w4-secondary));
   --w4-btn-fg: hsl(var(--w4-secondary-content));
   --w4-btn-border: hsl(var(--w4-secondary));
+  --w4-btn-hover-fg: hsl(var(--w4-secondary-content));
 }
 .w4-button-accent {
   --w4-btn-bg: hsl(var(--w4-accent));
   --w4-btn-fg: hsl(var(--w4-accent-content));
   --w4-btn-border: hsl(var(--w4-accent));
+  --w4-btn-hover-fg: hsl(var(--w4-accent-content));
 }
 .w4-button-neutral {
   --w4-btn-bg: hsl(var(--w4-base-content));
   --w4-btn-fg: hsl(var(--w4-base-100));
   --w4-btn-border: hsl(var(--w4-base-content));
+  --w4-btn-hover-fg: hsl(var(--w4-base-100));
 }
 .w4-button-info {
   --w4-btn-bg: hsl(var(--w4-info));
   --w4-btn-fg: hsl(var(--w4-info-content));
   --w4-btn-border: hsl(var(--w4-info));
+  --w4-btn-hover-fg: hsl(var(--w4-info-content));
 }
 .w4-button-success {
   --w4-btn-bg: hsl(var(--w4-success));
   --w4-btn-fg: hsl(var(--w4-success-content));
   --w4-btn-border: hsl(var(--w4-success));
+  --w4-btn-hover-fg: hsl(var(--w4-success-content));
 }
 .w4-button-warning {
   --w4-btn-bg: hsl(var(--w4-warning));
   --w4-btn-fg: hsl(var(--w4-warning-content));
   --w4-btn-border: hsl(var(--w4-warning));
+  --w4-btn-hover-fg: hsl(var(--w4-warning-content));
 }
 .w4-button-error {
   --w4-btn-bg: hsl(var(--w4-error));
   --w4-btn-fg: hsl(var(--w4-error-content));
   --w4-btn-border: hsl(var(--w4-error));
+  --w4-btn-hover-fg: hsl(var(--w4-error-content));
 }
 
 .w4-button-ghost {
@@ -848,7 +1181,7 @@ html[data-theme] body {
 }
 .w4-button-outline:hover {
   --w4-btn-bg: var(--w4-btn-border, hsl(var(--w4-base-content)));
-  --w4-btn-fg: hsl(var(--w4-base-100));
+  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-base-100)));
 }
 
 .w4-button-dash {
@@ -859,7 +1192,7 @@ html[data-theme] body {
 }
 .w4-button-dash:hover {
   --w4-btn-bg: var(--w4-btn-border, hsl(var(--w4-base-content)));
-  --w4-btn-fg: hsl(var(--w4-base-100));
+  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-base-100)));
 }
 
 .w4-button-soft {
@@ -906,15 +1239,45 @@ html[data-theme] body {
 }
 
 .w4-button-soft:hover {
-  background-color: hsl(var(--w4-primary, 0 0% 50%) / 0.25);
+  background-color: hsl(var(--w4-base-content));
+  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-base-100)));
+  color: var(--w4-btn-fg);
 }
-.w4-button-soft.w4-button-primary:hover { background-color: hsl(var(--w4-primary) / 0.25); }
-.w4-button-soft.w4-button-secondary:hover { background-color: hsl(var(--w4-secondary) / 0.25); }
-.w4-button-soft.w4-button-accent:hover { background-color: hsl(var(--w4-accent) / 0.25); }
-.w4-button-soft.w4-button-info:hover { background-color: hsl(var(--w4-info) / 0.25); }
-.w4-button-soft.w4-button-success:hover { background-color: hsl(var(--w4-success) / 0.25); }
-.w4-button-soft.w4-button-warning:hover { background-color: hsl(var(--w4-warning) / 0.25); }
-.w4-button-soft.w4-button-error:hover { background-color: hsl(var(--w4-error) / 0.25); }
+.w4-button-soft.w4-button-primary:hover { 
+  background-color: hsl(var(--w4-primary)); 
+  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-primary-content)));
+  color: var(--w4-btn-fg);
+}
+.w4-button-soft.w4-button-secondary:hover { 
+  background-color: hsl(var(--w4-secondary)); 
+  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-secondary-content)));
+  color: var(--w4-btn-fg);
+}
+.w4-button-soft.w4-button-accent:hover { 
+  background-color: hsl(var(--w4-accent)); 
+  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-accent-content)));
+  color: var(--w4-btn-fg);
+}
+.w4-button-soft.w4-button-info:hover { 
+  background-color: hsl(var(--w4-info)); 
+  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-info-content)));
+  color: var(--w4-btn-fg);
+}
+.w4-button-soft.w4-button-success:hover { 
+  background-color: hsl(var(--w4-success)); 
+  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-success-content)));
+  color: var(--w4-btn-fg);
+}
+.w4-button-soft.w4-button-warning:hover { 
+  background-color: hsl(var(--w4-warning)); 
+  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-warning-content)));
+  color: var(--w4-btn-fg);
+}
+.w4-button-soft.w4-button-error:hover { 
+  background-color: hsl(var(--w4-error)); 
+  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-error-content)));
+  color: var(--w4-btn-fg);
+}
 
 .w4-button-xs {
   --w4-btn-size: 1.5rem;
@@ -964,6 +1327,7 @@ html[data-theme] body {
   --w4-btn-bg: hsl(var(--w4-base-content) / 0.1);
   --w4-btn-fg: hsl(var(--w4-base-content) / 0.2);
   --w4-btn-border: transparent;
+  filter: none;
 }
 
 .w4-button-loading {
@@ -1140,7 +1504,11 @@ html[data-theme] body {
   border-color: var(--w4-btn-border, transparent);
   background-color: var(--w4-btn-bg, hsl(var(--w4-base-200)));
   color: var(--w4-btn-fg, hsl(var(--w4-base-content)));
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, filter 0.2s;
+}
+
+.w4-icon-button:hover {
+  filter: brightness(1.1) contrast(1.1);
 }
 
 .w4-icon-button-primary {
@@ -1235,6 +1603,7 @@ html[data-theme] body {
   --w4-btn-bg: hsl(var(--w4-base-content) / 0.1);
   --w4-btn-fg: hsl(var(--w4-base-content) / 0.2);
   --w4-btn-border: transparent;
+  filter: none;
 }
 
 .w4-icon-button-loading {
