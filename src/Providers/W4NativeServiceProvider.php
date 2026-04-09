@@ -68,18 +68,22 @@ class W4NativeServiceProvider extends ServiceProvider
             return view('w4-native::w4-theme-lab');
         })->name('w4-native.theme-lab');
 
+        Route::get('/w4/button', function () {
+            return view('w4-native::ui.w4-native-button');
+        })->name('w4-native.button');
+
         if ($this->app->runningInConsole()) {
             if (is_file($configPath)) {
                 $this->publishes([
                     $configPath => config_path('w4-native.php'),
                 ], 'w4-native-config');
-            }
+            } // php artisan vendor:publish --tag=w4-native-config --path=config/w4-native.php
 
             if (is_dir($distPath)) {
                 $this->publishes([
                     $distPath => public_path('vendor/w4-native'),
                 ], 'w4-native-dist');
-            }
+            } // php artisan vendor:publish --tag=w4-native-dist --path=public/vendor/w4-native
 
             $publish = [];
             if (is_file($configPath)) {
