@@ -2,7 +2,6 @@
 
 namespace W4\Native\Providers;
 
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use W4\Native\Console\Commands\BuildNativeAssetsCommand;
@@ -37,6 +36,7 @@ use W4\Native\Themes\Components\UI\IconTheme;
 use W4\Native\Themes\Components\UI\LabelTheme;
 use W4\Native\Themes\Components\UI\LinkTheme;
 use W4\Native\Themes\Components\UI\TextTheme;
+use W4\Native\Tools\Directives\W4NativeDirectiveService;
 use W4\Native\Tools\Themes\W4NativeTheme;
 use W4\Native\Tools\Themes\W4NativeThemeService;
 
@@ -67,12 +67,17 @@ class W4NativeServiceProvider extends ServiceProvider
                 $app->make(ThemeRegistry::class),
                 $app->make(ThemeManifest::class),
                 [
+                    //UI
                     'button' => new ButtonTheme(),
-                    'icon' => new IconTheme(),
+                    'divider' => new DividerTheme(),
+                    'heading' => new HeadingTheme(),
                     'icon-button' => new IconButtonTheme(),
+                    'icon' => new IconTheme(),
                     'label' => new LabelTheme(),
                     'link' => new LinkTheme(),
                     'text' => new TextTheme(),
+
+                    //Forms
                     'input' => new InputTheme(),
                     'field-error' => new FieldErrorTheme(),
                     'helper-text' => new HelperTextTheme(),
@@ -81,19 +86,23 @@ class W4NativeServiceProvider extends ServiceProvider
                     'checkbox' => new CheckboxTheme(),
                     'radio' => new RadioTheme(),
                     'toggle' => new ToggleTheme(),
+
+                    //Layout
                     'card' => new CardTheme(),
-                    'alert' => new AlertTheme(),
-                    'badge' => new BadgeTheme(),
-                    'divider' => new DividerTheme(),
-                    'heading' => new HeadingTheme(),
                     'container' => new ContainerTheme(),
+                    'panel' => new PanelTheme(),
+                    'section' => new SectionTheme(),
                     'stack' => new StackTheme(),
                     'grid' => new GridTheme(),
-                    'section' => new SectionTheme(),
-                    'panel' => new PanelTheme(),
+
+                    //FeedBack
+                    'alert' => new AlertTheme(),
+                    'badge' => new BadgeTheme(),
                     'toast' => new ToastTheme(),
                     'progress' => new ProgressTheme(),
                     'skeleton' => new SkeletonTheme(),
+
+                    //Interactive
                     'tooltip' => new TooltipTheme(),
                 ]
             );
@@ -108,58 +117,42 @@ class W4NativeServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom($packageRoot . '/resources/views', 'w4-native');
 
-        Blade::directive('W4NativeStyles', function () {
-            return "<?php echo '<link rel=\"stylesheet\" href=\"'.asset('vendor/w4-native/w4-native.css').'\">'; ?>";
-});
+        W4NativeDirectiveService::register();
 
-Blade::directive('W4NativeScripts', function () {
-return "<?php echo '<script src=\"'.asset('vendor/w4-native/w4-native.js').'\"></script>'; ?>";
-});
+        Route::get('/w4/theme-lab', function () {
+            return view('w4-native::w4-theme-lab');
+        })->name('w4-native.theme-lab');
 
-Blade::directive('W4NativeInit', function () {
-return
-"<?php echo '<script>document.addEventListener(\"DOMContentLoaded\", function () { window.W4Native.init(document); });</script>'; ?>";
-});
+        if ($this->app->runningInConsole()) {
+            if (is_file($configPath)) {
+                $this->publishes([
+                    $configPath => config_path('w4-native.php'),
+                ], 'w4-native-config');
+            }
 
-Blade::directive('W4NativeLivewire', function () {
-return
-"<?php echo '<script>document.addEventListener(\"livewire:navigated\", function () { window.W4Native.init(document); });</script>'; ?>";
-});
+            if (is_dir($distPath)) {
+                $this->publishes([
+                    $distPath => public_path('vendor/w4-native'),
+                ], 'w4-native-dist');
+            }
 
-Route::get('/w4/theme-lab', function () {
-return view('w4-native::w4-theme-lab');
-})->name('w4-native.theme-lab');
+            $publish = [];
+            if (is_file($configPath)) {
+                $publish[$configPath] = config_path('w4-native.php');
+            }
 
-if ($this->app->runningInConsole()) {
-if (is_file($configPath)) {
-$this->publishes([
-$configPath => config_path('w4-native.php'),
-], 'w4-native-config');
-}
+            if (is_dir($distPath)) {
+                $publish[$distPath] = public_path('vendor/w4-native');
+            }
 
-if (is_dir($distPath)) {
-$this->publishes([
-$distPath => public_path('vendor/w4-native'),
-], 'w4-native-dist');
-}
+            if ($publish !== []) {
+                $this->publishes($publish, 'w4-native-assets');
+            }
 
-$publish = [];
-if (is_file($configPath)) {
-$publish[$configPath] = config_path('w4-native.php');
-}
-
-if (is_dir($distPath)) {
-$publish[$distPath] = public_path('vendor/w4-native');
-}
-
-if ($publish !== []) {
-$this->publishes($publish, 'w4-native-assets');
-}
-
-$this->commands([
-BuildNativeAssetsCommand::class,
-InstallNativeCommand::class,
-]);
-}
-}
+            $this->commands([
+                BuildNativeAssetsCommand::class,
+                InstallNativeCommand::class,
+            ]);
+        }
+    }
 }
