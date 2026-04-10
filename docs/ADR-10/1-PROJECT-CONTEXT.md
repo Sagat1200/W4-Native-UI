@@ -157,7 +157,6 @@ Los componentes están separados arquitectónicamente en sus respectivos servici
 ### UI Components
 
 * Button
-* Divider
 * Heading
 * Icon
 * IconButton
@@ -180,6 +179,7 @@ Los componentes están separados arquitectónicamente en sus respectivos servici
 
 * Card
 * Container
+* Divider
 * Stack
 * Grid
 * Section
@@ -231,11 +231,13 @@ Responsable de:
 Relación:
 
 ```text
-W4 UI Component
+W4 UI Component (PHP Enums: ENABLED, DISABLED, etc.)
         ↓
-Theme Resolver
+Theme Resolver (inyecta data-w4-state)
         ↓
-W4-Native classes
+W4-Native JS Engine (MutationObserver, inyecta ARIA)
+        ↓
+W4-Native CSS classes
         ↓
 CSS variables
         ↓

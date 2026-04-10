@@ -52,11 +52,11 @@ RuntimeRenderer
       ↓
 ThemeResolverPipeline
       ↓
-ComponentThemeResolver
+ComponentThemeResolver (inyecta data-w4-state en Blade Wrapper)
       ↓
-W4-Native-UI Classes
+W4-Native-UI JS Engine (MutationObserver mapea estado, inyecta ARIA)
       ↓
-Blade Wrapper
+W4-Native-UI CSS Classes
       ↓
 Final HTML
 ```

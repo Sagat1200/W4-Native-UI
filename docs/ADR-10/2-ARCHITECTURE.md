@@ -55,11 +55,11 @@ El flujo de renderizado dentro del ecosistema es el siguiente:
 ```text
 Application
     ↓
-W4 UI Component (PHP)
+W4 UI Component (PHP Enums)
     ↓
-Theme Resolver Pipeline
+Theme Resolver Pipeline (Atributos HTML / data-w4-state)
     ↓
-Theme Implementation
+W4-Native-UI JS Engine (Mapeo de estados y ARIA)
     ↓
 W4-Native-UI CSS classes
     ↓

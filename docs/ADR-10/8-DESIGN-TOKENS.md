@@ -321,6 +321,8 @@ Ejemplo:
 ```css
 --w4-button-padding-x
 --w4-button-padding-y
+--w4-btn-hover-fg
+--w4-btn-bg
 ```
 
 ### Input

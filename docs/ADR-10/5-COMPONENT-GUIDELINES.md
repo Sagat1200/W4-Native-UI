@@ -432,14 +432,16 @@ Drawer
 
 ---
 
-## 17. Próximos pasos (ARIA + data-hooks)
+## 17. Accesibilidad y Manejo de Estados (ARIA + data-hooks)
 
-Los próximos componentes y refactors deben incluir:
+El sistema ya implementa un motor JavaScript (`w4-native.js`) que garantiza la accesibilidad y reactividad:
 
-* atributos ARIA por estado (`aria-disabled`, `aria-invalid`, `aria-busy`, `aria-pressed`, etc.)
-* atributos `data-w4-component`, `data-w4-state` y `data-w4-hook`
-* derivación de hooks desde `stateMap()` del resolver
-* pruebas de integración sobre HTML final para validar accesibilidad y hooks JS
+* Los componentes reciben estados a través del atributo `data-w4-state` (inyectado por los Enums de W4-UI-Framework).
+* El motor JS sincroniza automáticamente atributos ARIA por estado (`aria-disabled`, `aria-invalid`, `aria-busy`, `aria-pressed`, `aria-hidden`).
+* Generación de atributos `data-w4-component` y `data-w4-hook`.
+* Emisión de eventos personalizados JS (`w4:hook`) para integraciones con frameworks frontend.
+
+Todos los nuevos componentes deben registrarse en `w4-native.js` (`COMPONENT_SELECTORS`, `COMPONENT_CLASS_MAP`, `COMPONENT_STATES`) para asegurar esta funcionalidad.
 
 ---
 

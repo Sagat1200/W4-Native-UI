@@ -30,6 +30,13 @@ Ejemplos:
 ```text
 button
 icon-button
+icon
+heading
+label
+link
+text
+field-error
+helper-text
 input
 select
 textarea

@@ -139,12 +139,12 @@ dist/w4-native.css
 dist/w4-native.js
 ```
 
-#### Próximos pasos inmediatos (v0.1.x)
+#### Funcionalidades base completadas (v0.1.x)
 
-* completar normalización de atributos ARIA por componente según estado de core
-* consolidar `data-w4-*` hooks como contrato público de la capa JS nativa
-* definir contrato estable para `state_map` y `js_hooks`
-* agregar pruebas de integración para atributos ARIA/data-hooks en render final
+* Motor de Javascript `w4-native.js` integrado.
+* Normalización de atributos ARIA por componente mediante `data-w4-state` y MutationObserver.
+* Sincronización de Enums PHP del framework con clases CSS de forma reactiva.
+* Consolidación de `data-w4-*` hooks como contrato público de la capa JS nativa.
 
 ---
 

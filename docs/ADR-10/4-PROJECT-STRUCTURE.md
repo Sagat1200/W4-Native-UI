@@ -274,18 +274,21 @@ Define sobrescrituras de tokens por preset.
 
 ---
 
-### 9.2 JavaScript (opcional)
+### 9.2 JavaScript
 
 ```text
 resources/js
 │
-└─ theme-switcher.js
+└─ daisyui/properties/w4-native.js
 ```
 
-Este archivo puede proporcionar utilidades como:
+Este archivo proporciona el motor central interactivo del sistema:
 
-* cambio de theme
-* persistencia de preferencia de usuario
+* Mapeo de selectores a componentes (`COMPONENT_CLASS_MAP`)
+* Sincronización reactiva de estados (`data-w4-state`) a clases CSS
+* Inyección automática de atributos de accesibilidad (ARIA)
+* Emisión de eventos y hooks (`data-w4-hook`)
+* Cambio de theme y utilidades dinámicas
 
 ---
 

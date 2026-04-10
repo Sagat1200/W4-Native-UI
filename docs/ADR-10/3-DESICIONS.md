@@ -22,6 +22,36 @@ Aceptado
 
 ---
 
+## ADR-012
+
+### Separación del manejo de estados y accesibilidad ARIA
+
+#### Estado
+
+Aceptado
+
+#### Contexto
+
+Los componentes interactivos requieren manejar estados como `disabled`, `loading`, `invalid`, `hidden`, etc.
+Si `W4-Native` manejara la lógica, se acoplaría al framework. Si el framework escribiera clases CSS y atributos ARIA directamente, se acoplaría a la capa visual y de accesibilidad.
+
+#### Decisión
+
+Se utiliza el atributo `data-w4-state` como puente de comunicación:
+1. `W4-UI-Framework` define los estados mediante Enums PHP (ej. `ButtonComponentState::LOADING`) y los inyecta en el atributo `data-w4-state`.
+2. `W4-Native` utiliza un motor JavaScript (`w4-native.js`) basado en `MutationObserver` que lee `data-w4-state`, aplica las clases CSS correspondientes (ej. `w4-button-loading`) y sincroniza automáticamente los atributos de accesibilidad ARIA (`aria-busy`, `aria-disabled`, `aria-hidden`, etc.).
+
+#### Consecuencias
+
+Positivas:
+* Desacoplamiento total: El backend PHP no sabe de CSS ni de ARIA.
+* Accesibilidad (a11y) garantizada de forma automática en el frontend reactivo.
+
+Costos:
+* Dependencia de un archivo JavaScript base (`w4-native.js`) para la hidratación visual y accesibilidad en el cliente.
+
+---
+
 ## ADR-011
 
 ### Escala de tamaños obligatoria por componente (`xs|sm|md|lg|xl`)

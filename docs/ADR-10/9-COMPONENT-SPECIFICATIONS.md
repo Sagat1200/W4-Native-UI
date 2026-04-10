@@ -697,14 +697,13 @@ Componentes como `modal`, `dropdown`, `tabs`, `avatar` permanecen como especific
 
 ---
 
-## 22. Próximos pasos (ARIA + data-hooks)
+## 22. Accesibilidad y Motor JavaScript (ARIA + data-hooks)
 
-Para habilitar la capa JS nativa sin acoplarla a clases CSS:
+El sistema ahora cuenta con una capa JS nativa madura y completamente integrada que no se acopla directamente a las clases CSS:
 
-* cada componente debe publicar atributos ARIA según estado (`disabled`, `readonly`, `invalid`, `busy`, `expanded`, etc.)
-* cada render debe exponer `data-w4-component`, `data-w4-state` y `data-w4-hook`
-* los hooks JS deben derivarse del `stateMap()` y no de selectores CSS
-* se deben incluir pruebas de integración de atributos ARIA y `data-*` sobre HTML final
+* cada componente publica atributos según su estado mediante el Enum del core inyectado en `data-w4-state` (`disabled`, `readonly`, `invalid`, `loading`, `hidden`, `active`, etc.)
+* el motor `w4-native.js` expone dinámicamente `data-w4-component` y `data-w4-hook` al detectar cambios.
+* los atributos ARIA (`aria-disabled`, `aria-hidden`, etc.) son inyectados y mantenidos por el Observer de JavaScript, asegurando total accesibilidad (a11y) sin ensuciar la capa PHP con lógica HTML.
 
 ---
 
