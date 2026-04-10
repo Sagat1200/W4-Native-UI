@@ -68,7 +68,7 @@
             <div class="flex flex-wrap gap-4 p-6 bg-base-200 rounded-lg">
                 <button class="w4-button">Default</button>
                 <button class="w4-button w4-button-neutral">Neutral</button>
-                <button class="w4-button w4-button-primary">Primary</button>
+                <button aria-disabled="true" class="w4-button w4-button-primary ">Primary</button>
                 <button class="w4-button w4-button-secondary">Secondary</button>
                 <button class="w4-button w4-button-accent">Accent</button>
                 <button class="w4-button w4-button-info">Info</button>

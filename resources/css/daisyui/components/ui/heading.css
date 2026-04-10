@@ -5,6 +5,10 @@
   font-weight: 700;
 }
 
+.w4-heading-neutral {
+  color: hsl(var(--w4-base-content));
+}
+
 .w4-heading-primary {
   color: hsl(var(--w4-primary));
 }
@@ -15,6 +19,22 @@
 
 .w4-heading-accent {
   color: hsl(var(--w4-accent));
+}
+
+.w4-heading-info {
+  color: hsl(var(--w4-info));
+}
+
+.w4-heading-success {
+  color: hsl(var(--w4-success));
+}
+
+.w4-heading-warning {
+  color: hsl(var(--w4-warning));
+}
+
+.w4-heading-error {
+  color: hsl(var(--w4-error));
 }
 
 .w4-heading-muted {

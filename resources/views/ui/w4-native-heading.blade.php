@@ -62,15 +62,19 @@
             </div>
         </header>
 
-                <!-- Variantes -->
+        <!-- Variantes -->
         <section class="space-y-4">
             <h2 class="text-2xl font-semibold border-l-4 border-primary pl-3">Variantes (Variants)</h2>
             <div class="flex flex-col gap-4 p-6 bg-base-200 rounded-lg">
                 <h2 class="w4-heading">Heading Default</h2>
+                <h2 class="w4-heading w4-heading-neutral">Heading Neutral</h2>
                 <h2 class="w4-heading w4-heading-primary">Heading Primary</h2>
                 <h2 class="w4-heading w4-heading-secondary">Heading Secondary</h2>
                 <h2 class="w4-heading w4-heading-accent">Heading Accent</h2>
-                <h2 class="w4-heading w4-heading-muted">Heading Muted</h2>
+                <h2 class="w4-heading w4-heading-info">Heading Info</h2>
+                <h2 class="w4-heading w4-heading-success">Heading Success</h2>
+                <h2 class="w4-heading w4-heading-warning">Heading Warning</h2>
+                <h2 class="w4-heading w4-heading-error">Heading Error</h2>
             </div>
         </section>
 

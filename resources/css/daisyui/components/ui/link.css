@@ -17,6 +17,22 @@
   color: hsl(var(--w4-accent));
 }
 
+.w4-link-info {
+  color: hsl(var(--w4-info));
+}
+
+.w4-link-success {
+  color: hsl(var(--w4-success));
+}
+
+.w4-link-warning {
+  color: hsl(var(--w4-warning));
+}
+
+.w4-link-error {
+  color: hsl(var(--w4-error));
+}
+
 .w4-link-neutral {
   color: hsl(var(--w4-base-content));
 }

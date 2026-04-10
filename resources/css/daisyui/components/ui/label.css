@@ -7,6 +7,10 @@
   line-height: 1.3;
 }
 
+.w4-label-neutral {
+  color: hsl(var(--w4-base-content));
+}
+
 .w4-label-primary {
   color: hsl(var(--w4-primary));
 }
@@ -17,6 +21,22 @@
 
 .w4-label-accent {
   color: hsl(var(--w4-accent));
+}
+
+.w4-label-info {
+  color: hsl(var(--w4-info));
+}
+
+.w4-label-success {
+  color: hsl(var(--w4-success));
+}
+
+.w4-label-warning {
+  color: hsl(var(--w4-warning));
+}
+
+.w4-label-error {
+  color: hsl(var(--w4-error));
 }
 
 .w4-label-muted {

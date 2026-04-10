@@ -13,7 +13,7 @@ class HeadingTheme extends AbstractComponentTheme
 
     protected function variants(): array
     {
-        return ['neutral', 'primary', 'secondary', 'accent', 'muted'];
+        return ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'];
     }
 
     protected function sizes(): array
