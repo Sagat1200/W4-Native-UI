@@ -13,7 +13,7 @@ class ProgressTheme extends AbstractComponentTheme
 
     protected function variants(): array
     {
-        return ['primary', 'secondary', 'accent'];
+        return ['default', 'primary', 'secondary', 'neutral', 'accent', 'info', 'success', 'warning', 'error'];
     }
 
     protected function sizes(): array

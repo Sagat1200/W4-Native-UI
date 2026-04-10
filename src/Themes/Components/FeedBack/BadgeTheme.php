@@ -13,7 +13,7 @@ class BadgeTheme extends AbstractComponentTheme
 
     protected function variants(): array
     {
-        return ['primary', 'secondary', 'accent'];
+        return ['default', 'primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error'];
     }
 
     protected function sizes(): array

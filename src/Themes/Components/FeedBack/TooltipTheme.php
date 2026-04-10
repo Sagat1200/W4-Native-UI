@@ -13,11 +13,38 @@ class TooltipTheme extends AbstractComponentTheme
 
     protected function variants(): array
     {
-        return ['top', 'right', 'bottom', 'left'];
+        return ['primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error'];
     }
 
     protected function sizes(): array
     {
         return ['xs', 'sm', 'md', 'lg', 'xl'];
+    }
+
+    protected function states(): array
+    {
+        return ['top', 'right', 'bottom', 'left', 'open'];
+    }
+
+    public function stateMap(): array
+    {
+        return [
+            'top' => [
+                'class' => 'w4-tooltip-top',
+            ],
+            'right' => [
+                'class' => 'w4-tooltip-right',
+            ],
+            'bottom' => [
+                'class' => 'w4-tooltip-bottom',
+            ],
+            'left' => [
+                'class' => 'w4-tooltip-left',
+            ],
+            'open' => [
+                'class' => 'w4-tooltip-open',
+                'js' => 'tooltip:open',
+            ],
+        ];
     }
 }

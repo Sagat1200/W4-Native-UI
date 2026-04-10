@@ -20,4 +20,33 @@ class ToastTheme extends AbstractComponentTheme
     {
         return ['xs', 'sm', 'md', 'lg', 'xl'];
     }
+
+    protected function states(): array
+    {
+        return ['top', 'bottom', 'start', 'end', 'center', 'middle'];
+    }
+
+    public function stateMap(): array
+    {
+        return [
+            'top' => [
+                'class' => 'w4-toast-top',
+            ],
+            'bottom' => [
+                'class' => 'w4-toast-bottom',
+            ],
+            'start' => [
+                'class' => 'w4-toast-start',
+            ],
+            'end' => [
+                'class' => 'w4-toast-end',
+            ],
+            'center' => [
+                'class' => 'w4-toast-center',
+            ],
+            'middle' => [
+                'class' => 'w4-toast-middle',
+            ],
+        ];
+    }
 }
