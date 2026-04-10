@@ -3,7 +3,6 @@
 namespace W4\Native\Services\Provider\Components\UI;
 
 use W4\Native\Themes\Components\UI\ButtonTheme;
-use W4\Native\Themes\Components\UI\DividerTheme;
 use W4\Native\Themes\Components\UI\HeadingTheme;
 use W4\Native\Themes\Components\UI\IconButtonTheme;
 use W4\Native\Themes\Components\UI\IconTheme;
@@ -19,8 +18,7 @@ class W4NativeUI
     public static function getComponents(): array
     {
         return [
-            'button' => new ButtonTheme(),
-            'divider' => new DividerTheme(),
+            'button' => new ButtonTheme(),,
             'heading' => new HeadingTheme(),
             'icon-button' => new IconButtonTheme(),
             'icon' => new IconTheme(),

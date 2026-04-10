@@ -11,7 +11,7 @@ use W4\Native\Services\Provider\Components\Interactive\W4NativeInteractiveServic
 use W4\Native\Services\Provider\Components\Layout\W4NativeLayoutService;
 use W4\Native\Services\Provider\Components\UI\W4NativeUI;
 use W4\Native\Services\Provider\Directives\W4NativeDirectiveService;
-use W4\Native\Services\Provider\Route\W4NativeRouteService;
+use W4\Native\Services\Provider\Route\W4NativeUIRouteService;
 use W4\Native\Services\Themes\W4NativeThemeService;
 use W4\Native\Support\ThemeManifest;
 use W4\Native\Support\ThemeRegistry;
@@ -64,7 +64,7 @@ class W4NativeServiceProvider extends ServiceProvider
 
         W4NativeDirectiveService::register();
 
-        W4NativeRouteService::registerRoutes();
+        W4NativeUIRouteService::registerRoutes();
 
         if ($this->app->runningInConsole()) {
             if (is_file($configPath)) {
