@@ -47,12 +47,35 @@ Columnas principales:
 
 ## 3. Componentes de Ui
 
-| Component  | Variants | Sizes | States | Icons | Slots | Theme | Responsive |
-| ---------- | -------- | ----- | ------ | ----- | ----- | ----- | ---------- |
+| Component | Variants | Sizes | States | Icons | Slots | Theme | Responsive |
+| --------- | -------- | ----- | ------ | ----- | ----- | ----- | ---------- |
+| Button | ✓ | ✓ | ✓ (ARIA) | ✓ | ✓ | ✓ | ◐ |
+| Divider | ✓ | ✗ | ✗ | ✗ | ✓ | ✓ | ◐ |
+| Heading | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ✓ | ◐ |
+| Icon | ✓ | ✓ | ✓ (ARIA) | ✓ | ✗ | ✓ | ◐ |
+| IconButton| ✓ | ✓ | ✓ (ARIA) | ✓ | ✗ | ✓ | ◐ |
+| Label | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ✓ | ◐ |
+| Link | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ✓ | ◐ |
+| Text | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ✓ | ◐ |
 
 ---
 
-## 4. Componentes de layout
+## 4. Componentes de forms
+
+| Component | Variants | Sizes | States | Slots | Theme | Responsive |
+| --------- | -------- | ----- | ------ | ----- | ----- | ---------- |
+| Checkbox | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ◐ |
+| FieldError| ✓ | ✓ | ✓ (ARIA) | ✓ | ✓ | ◐ |
+| HelperText| ✓ | ✓ | ✓ (ARIA) | ✓ | ✓ | ◐ |
+| Input | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ◐ |
+| Select | ✓ | ✓ | ✓ (ARIA) | ✓ | ✓ | ◐ |
+| TextArea | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ◐ |
+| Toggle | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ◐ |
+| Radio | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ◐ |
+
+---
+
+## 5. Componentes de layout
 
 | Component | Variants | Sizes | States | Slots | Theme | Responsive |
 | --------- | -------- | ----- | ------ | ----- | ----- | ---------- |

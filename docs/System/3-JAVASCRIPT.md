@@ -32,6 +32,13 @@ Selectores base del runtime:
 
 - `.w4-btn` y `.w4-button`
 - `.w4-icon-button`
+- `.w4-icon`
+- `.w4-heading`
+- `.w4-label`
+- `.w4-link`
+- `.w4-text`
+- `.w4-field-error`
+- `.w4-helper-text`
 - `.w4-input`
 - `.w4-select`
 - `.w4-textarea`

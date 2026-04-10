@@ -183,8 +183,7 @@ Checklist rápido:
 En el repositorio del paquete:
 
 ```bash
-composer test
-php vendor/bin/testbench w4-native:build-assets
+php artisan w4:build-native-assets
 ```
 
 Validación de sintaxis PHP:
