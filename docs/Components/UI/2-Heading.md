@@ -72,9 +72,9 @@ Ejemplo:
 
 ## 7. Estados soportados
 
-- `disabled` → `w4-heading-disabled` + `heading:disable`
+- `disabled` → `w4-heading-disabled` + `heading:disabled` (inyecta `aria-disabled="true"`)
 - `active` → `w4-heading-active` + `heading:active`
-- `hidden` → `w4-heading-hidden` + `heading:hide`
+- `hidden` → `w4-heading-hidden` + `heading:hidden` (inyecta `aria-hidden="true"`)
 
 ## 8. Formas de renderizado
 

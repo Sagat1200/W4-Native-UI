@@ -88,10 +88,10 @@ Estados de componente:
 
 Mapeo de estado a clase y hook JS:
 
-- `disabled` → `w4-button-disabled` + `button:disable`
-- `loading` → `w4-button-loading` + `button:loading`
-- `active` → `w4-button-active` + `button:active`
-- `readonly` → `w4-button-readonly` + `button:readonly`
+- `disabled` → `w4-button-disabled` + `button:disabled` (inyecta `aria-disabled="true"`)
+- `loading` → `w4-button-loading` + `button:loading` (inyecta `aria-busy="true"`)
+- `active` → `w4-button-active` + `button:active` (inyecta `aria-pressed="true"`)
+- `readonly` → `w4-button-readonly` + `button:readonly` (inyecta `aria-readonly="true"`)
 
 ## 7. Formas de renderizado
 

@@ -96,9 +96,9 @@ Estados:
 
 Mapeo a clase + hook:
 
-- `disabled` → `w4-divider-disabled` + `divider:disable`
+- `disabled` → `w4-divider-disabled` + `divider:disabled` (inyecta `aria-disabled="true"`)
 - `active` → `w4-divider-active` + `divider:active`
-- `hidden` → `w4-divider-hidden` + `divider:hide`
+- `hidden` → `w4-divider-hidden` + `divider:hidden` (inyecta `aria-hidden="true"`)
 
 ## 8. Formas de renderizado
 

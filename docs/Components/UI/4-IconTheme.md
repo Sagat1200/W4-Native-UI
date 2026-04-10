@@ -41,9 +41,9 @@ xs | sm | md | lg | xl
 
 ## 6. Estados soportados
 
-- `disabled` → `w4-icon-disabled` + `icon:disable`
+- `disabled` → `w4-icon-disabled` + `icon:disabled` (inyecta `aria-disabled="true"`)
 - `active` → `w4-icon-active` + `icon:active`
-- `hidden` → `w4-icon-hidden` + `icon:hide`
+- `hidden` → `w4-icon-hidden` + `icon:hidden` (inyecta `aria-hidden="true"`)
 
 ## 7. Flags adicionales del resolver
 

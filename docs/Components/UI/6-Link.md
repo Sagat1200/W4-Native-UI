@@ -38,9 +38,9 @@ xs | sm | md | lg | xl
 
 ## 6. Estados soportados
 
-- `disabled` → `w4-link-disabled` + `link:disable`
+- `disabled` → `w4-link-disabled` + `link:disabled` (inyecta `aria-disabled="true"`)
 - `active` → `w4-link-active` + `link:active`
-- `hidden` → `w4-link-hidden` + `link:hide`
+- `hidden` → `w4-link-hidden` + `link:hidden` (inyecta `aria-hidden="true"`)
 
 ## 7. Formas de renderizado
 

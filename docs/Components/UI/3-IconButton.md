@@ -52,10 +52,10 @@ xs | sm | md | lg | xl
 
 ## 6. Estados soportados
 
-- `disabled` → `w4-icon-button-disabled` + `icon-button:disable`
-- `loading` → `w4-icon-button-loading` + `icon-button:loading`
-- `readonly` → `w4-icon-button-readonly` + `icon-button:readonly`
-- `active` → `w4-icon-button-active` + `icon-button:active`
+- `disabled` → `w4-icon-button-disabled` + `icon-button:disabled` (inyecta `aria-disabled="true"`)
+- `loading` → `w4-icon-button-loading` + `icon-button:loading` (inyecta `aria-busy="true"`)
+- `readonly` → `w4-icon-button-readonly` + `icon-button:readonly` (inyecta `aria-readonly="true"`)
+- `active` → `w4-icon-button-active` + `icon-button:active` (inyecta `aria-pressed="true"`)
 
 ## 7. Formas de renderizado
 

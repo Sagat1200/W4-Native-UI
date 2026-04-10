@@ -43,9 +43,9 @@ xs | sm | md | lg | xl
 
 ## 6. Estados soportados
 
-- `disabled` → `w4-text-disabled` + `text:disable`
+- `disabled` → `w4-text-disabled` + `text:disabled` (inyecta `aria-disabled="true"`)
 - `active` → `w4-text-active` + `text:active`
-- `hidden` → `w4-text-hidden` + `text:hide`
+- `hidden` → `w4-text-hidden` + `text:hidden` (inyecta `aria-hidden="true"`)
 
 ## 7. Formas de renderizado
 
