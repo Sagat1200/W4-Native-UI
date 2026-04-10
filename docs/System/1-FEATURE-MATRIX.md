@@ -53,7 +53,7 @@ Columnas principales:
 | Divider | ✓ | ✗ | ✗ | ✗ | ✓ | ✓ | ◐ |
 | Heading | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ✓ | ◐ |
 | Icon | ✓ | ✓ | ✓ (ARIA) | ✓ | ✗ | ✓ | ◐ |
-| IconButton| ✓ | ✓ | ✓ (ARIA) | ✓ | ✗ | ✓ | ◐ |
+| IconButton | ✓ | ✓ | ✓ (ARIA) | ✓ | ✗ | ✓ | ◐ |
 | Label | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ✓ | ◐ |
 | Link | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ✓ | ◐ |
 | Text | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ✓ | ◐ |
@@ -65,8 +65,8 @@ Columnas principales:
 | Component | Variants | Sizes | States | Slots | Theme | Responsive |
 | --------- | -------- | ----- | ------ | ----- | ----- | ---------- |
 | Checkbox | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ◐ |
-| FieldError| ✓ | ✓ | ✓ (ARIA) | ✓ | ✓ | ◐ |
-| HelperText| ✓ | ✓ | ✓ (ARIA) | ✓ | ✓ | ◐ |
+| FieldError | ✓ | ✓ | ✓ (ARIA) | ✓ | ✓ | ◐ |
+| HelperText | ✓ | ✓ | ✓ (ARIA) | ✓ | ✓ | ◐ |
 | Input | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ◐ |
 | Select | ✓ | ✓ | ✓ (ARIA) | ✓ | ✓ | ◐ |
 | TextArea | ✓ | ✓ | ✓ (ARIA) | ✗ | ✓ | ◐ |
