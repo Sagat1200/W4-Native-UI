@@ -1,17 +1,17 @@
 <?php
 
-namespace W4\Native\Daisy\Services\Provider\Components\FeedBack;
+namespace W4\Native\Services\Provider\Components\FeedBack;
 
-use W4\Native\Daisy\Themes\Components\FeedBack\AlertTheme;
-use W4\Native\Daisy\Themes\Components\FeedBack\BadgeTheme;
-use W4\Native\Daisy\Themes\Components\FeedBack\ProgressTheme;
-use W4\Native\Daisy\Themes\Components\FeedBack\SkeletonTheme;
-use W4\Native\Daisy\Themes\Components\FeedBack\ToastTheme;
+use W4\Native\Themes\Components\FeedBack\AlertTheme;
+use W4\Native\Themes\Components\FeedBack\BadgeTheme;
+use W4\Native\Themes\Components\FeedBack\ProgressTheme;
+use W4\Native\Themes\Components\FeedBack\SkeletonTheme;
+use W4\Native\Themes\Components\FeedBack\ToastTheme;
 
 class NativeFeedBackService
 {
     /**
-     * @return array<string, \W4\Native\Daisy\Contracts\ComponentThemeContract>
+     * @return array<string, \W4\Native\Contracts\ComponentThemeContract>
      */
     public static function getComponents(): array
     {

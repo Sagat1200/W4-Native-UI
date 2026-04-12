@@ -1,10 +1,10 @@
 <?php
 
-namespace W4\Native\Daisy\Services\Provider\Directives;
+namespace W4\Native\Services\Provider\Directives;
 
 use Illuminate\Support\Facades\Blade;
 
-class W4NativeDaisyDirectiveService
+class W4NativeDirectiveService
 {
     public static function register(): void
     {

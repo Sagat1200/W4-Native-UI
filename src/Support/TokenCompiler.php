@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Daisy\Support;
+namespace W4\Native\Support;
 
 class TokenCompiler
 {

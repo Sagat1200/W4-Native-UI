@@ -1,15 +1,15 @@
 <?php
 
-namespace W4\Native\Daisy\Tools\Themes;
+namespace W4\Native\Tools\Themes;
 
 use TailwindMerge\TailwindMerge;
 use InvalidArgumentException;
-use W4\Native\Daisy\Contracts\ComponentThemeContract;
-use W4\Native\Daisy\Contracts\ThemeContract;
-use W4\Native\Daisy\Support\ThemeManifest;
-use W4\Native\Daisy\Support\ThemeRegistry;
+use W4\Native\Contracts\ComponentThemeContract;
+use W4\Native\Contracts\ThemeContract;
+use W4\Native\Support\ThemeManifest;
+use W4\Native\Support\ThemeRegistry;
 
-class NativeDaisyTheme implements ThemeContract
+class NativeTheme implements ThemeContract
 {
     protected array $components = [];
 
@@ -29,7 +29,7 @@ class NativeDaisyTheme implements ThemeContract
 
     public function name(): string
     {
-        return 'native-daisy';
+        return 'native';
     }
 
     public function defaultPreset(): string

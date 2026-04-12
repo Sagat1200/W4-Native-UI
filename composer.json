@@ -12,12 +12,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "W4\\Native\\Daisy\\": "src/"
+            "W4\\Native\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "W4\\Native\\Daisy\\Tests\\": "tests/"
+            "W4\\Native\\Tests\\": "tests/"
         }
     },
     "authors": [

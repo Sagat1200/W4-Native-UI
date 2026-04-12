@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\Native\Daisy\Themes\Components\UI;
+namespace W4\Native\Themes\Components\UI;
 
-use W4\Native\Daisy\Tools\Themes\AbstractComponentTheme;
+use W4\Native\Tools\Themes\AbstractComponentTheme;
 
 class HeadingTheme extends AbstractComponentTheme
 {

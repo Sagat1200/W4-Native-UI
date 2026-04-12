@@ -1,16 +1,16 @@
 <?php
 
-namespace W4\Native\Daisy\Tests;
+namespace W4\Native\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use W4\Native\Daisy\Providers\W4NativeDaisyServiceProvider;
+use W4\Native\Providers\NativeServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
     protected function getPackageProviders($app): array
     {
         return [
-            W4NativeDaisyServiceProvider::class,
+            NativeServiceProvider::class,
         ];
     }
 }

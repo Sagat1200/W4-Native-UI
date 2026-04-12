@@ -1,17 +1,17 @@
 <?php
 
-namespace W4\Native\Daisy\Tests\Feature;
+namespace W4\Native\Tests\Feature;
 
-use W4\Native\Daisy\Support\ThemeRegistry;
-use W4\Native\Daisy\Tests\TestCase;
-use W4\Native\Daisy\Tools\Themes\W4NativeDaisyTheme;
+use W4\Native\Support\ThemeRegistry;
+use W4\Native\Tests\TestCase;
+use W4\Native\Tools\Themes\NativeTheme;
 
 class ServiceProviderTest extends TestCase
 {
     public function test_resuelve_servicios_principales(): void
     {
         $registry = $this->app->make(ThemeRegistry::class);
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $this->assertTrue($registry->hasPreset('native.default'));
         $this->assertTrue($registry->hasPreset('native.dark'));
@@ -20,7 +20,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_resuelve_clases_de_componente(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('button', [
             'variant' => 'primary',
@@ -38,7 +38,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_permite_variantes_dinamicas_passthrough(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('button', [
             'variant' => 'nueva-variante-no-registrada',
@@ -54,7 +54,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_cachea_la_resolucion_de_componentes_para_evitar_overhead(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         // Primera llamada: resuelve y guarda en caché
         $state = ['variant' => 'primary', 'size' => 'lg'];
@@ -74,7 +74,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_resuelve_componentes_form_adicionales(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('select', [
             'variant' => 'bordered',
@@ -90,7 +90,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_resuelve_estados_de_componentes(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('toggle', [
             'variant' => 'primary',
@@ -110,7 +110,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_resuelve_componentes_layout_y_feedback(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $panelClasses = $theme->resolveComponent('panel', [
             'variant' => 'elevated',
@@ -135,7 +135,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_fallback_para_componente_sin_resolver(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('unknown-component');
 
@@ -144,7 +144,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_expone_contrato_de_estados_y_hooks_js(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $contract = $theme->resolveComponentContract('button', [
             'variant' => 'primary',
@@ -161,7 +161,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_divider_resuelve_estado_core_y_orientacion(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('divider', [
             'variant' => 'neutral',
@@ -187,7 +187,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_heading_resuelve_level_y_estado_core(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('heading', [
             'variant' => 'primary',
@@ -213,7 +213,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_icon_button_resuelve_estado_core(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('icon-button', [
             'variant' => 'primary',
@@ -237,7 +237,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_icon_resuelve_estado_core_y_flags_visuales(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('icon', [
             'variant' => 'primary',
@@ -265,7 +265,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_label_resuelve_estado_core(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('label', [
             'variant' => 'required',
@@ -289,7 +289,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_link_resuelve_estado_core(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('link', [
             'variant' => 'accent',
@@ -313,7 +313,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_text_resuelve_estado_core(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('text', [
             'variant' => 'lead',
@@ -337,7 +337,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_checkbox_resuelve_estado_core_y_flags(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('checkbox', [
             'variant' => 'secondary',
@@ -363,7 +363,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_radio_resuelve_estado_core_y_flags(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('radio', [
             'variant' => 'secondary',
@@ -389,7 +389,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_toggle_resuelve_estado_core_y_flags(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('toggle', [
             'variant' => 'secondary',
@@ -415,7 +415,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_select_resuelve_estado_core(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('select', [
             'variant' => 'default',
@@ -439,7 +439,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_textarea_resuelve_estado_core_y_resize(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('textarea', [
             'variant' => 'default',
@@ -465,7 +465,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_input_resuelve_estado_core(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('input', [
             'variant' => 'default',
@@ -489,7 +489,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_field_error_resuelve_estado_core(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('field-error', [
             'variant' => 'warning',
@@ -513,7 +513,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_helper_text_resuelve_estado_core(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $classes = $theme->resolveComponent('helper-text', [
             'variant' => 'info',
@@ -537,7 +537,7 @@ class ServiceProviderTest extends TestCase
 
     public function test_todos_los_componentes_registrados_soportan_xs_y_lg(): void
     {
-        $theme = $this->app->make(W4NativeDaisyTheme::class);
+        $theme = $this->app->make(NativeTheme::class);
 
         $components = [
             'button',

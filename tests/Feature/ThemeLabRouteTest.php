@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\Native\Daisy\Tests\Feature;
+namespace W4\Native\Tests\Feature;
 
-use W4\Native\Daisy\Tests\TestCase;
+use W4\Native\Tests\TestCase;
 
 class ThemeLabRouteTest extends TestCase
 {

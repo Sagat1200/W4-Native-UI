@@ -1,46 +1,46 @@
 <?php
 
-namespace W4\Native\Daisy\Providers;
+namespace W4\Native\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use W4\Native\Daisy\Console\Commands\BuildNativeDaisyAssetsCommand;
-use W4\Native\Daisy\Console\Commands\InstallNativeDaisyCommand;
-use W4\Native\Daisy\Services\Provider\Components\FeedBack\NativeFeedBackService;
-use W4\Native\Daisy\Services\Provider\Components\Form\NativeFormService;
-use W4\Native\Daisy\Services\Provider\Components\Interactive\NativeInteractiveService;
-use W4\Native\Daisy\Services\Provider\Components\Layout\NativeLayoutService;
-use W4\Native\Daisy\Services\Provider\Components\UI\NativeUI;
-use W4\Native\Daisy\Services\Provider\Directives\W4NativeDaisyDirectiveService;
-use W4\Native\Daisy\Services\Provider\Route\W4NativeDaisyUIRouteService;
-use W4\Native\Daisy\Services\Themes\W4NativeDaisyThemeService;
-use W4\Native\Daisy\Support\ThemeManifest;
-use W4\Native\Daisy\Support\ThemeRegistry;
-use W4\Native\Daisy\Tools\Themes\NativeDaisyTheme;
+use W4\Native\Console\Commands\BuildNativeAssetsCommand;
+use W4\Native\Console\Commands\InstallNativeCommand;
+use W4\Native\Services\Provider\Components\FeedBack\NativeFeedBackService;
+use W4\Native\Services\Provider\Components\Form\NativeFormService;
+use W4\Native\Services\Provider\Components\Interactive\NativeInteractiveService;
+use W4\Native\Services\Provider\Components\Layout\NativeLayoutService;
+use W4\Native\Services\Provider\Components\UI\NativeUI;
+use W4\Native\Services\Provider\Directives\W4NativeDirectiveService;
+use W4\Native\Services\Provider\Route\W4NativeUIRouteService;
+use W4\Native\Services\Themes\NativeThemeService;
+use W4\Native\Support\ThemeManifest;
+use W4\Native\Support\ThemeRegistry;
+use W4\Native\Tools\Themes\NativeTheme;
 
-class NativeDaisyServiceProvider extends ServiceProvider
+class NativeServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $configPath = __DIR__ . '/../../config/w4-native-daisy.php';
+        $configPath = __DIR__ . '/../../config/w4-native.php';
 
         if (is_file($configPath)) {
-            $this->mergeConfigFrom($configPath, 'w4-native-daisy');
+            $this->mergeConfigFrom($configPath, 'w4-native');
         }
 
         $this->app->singleton(ThemeManifest::class, function () {
-            return ThemeManifest::fromConfig(config('w4-native-daisy', []));
+            return ThemeManifest::fromConfig(config('w4-native', []));
         });
 
         $this->app->singleton(ThemeRegistry::class, function () {
             $registry = new ThemeRegistry();
 
-            W4NativeDaisyThemeService::registerPresets($registry);
+            NativeThemeService::registerPresets($registry);
 
             return $registry;
         });
 
-        $this->app->singleton(NativeDaisyTheme::class, function ($app) {
-            return new NativeDaisyTheme(
+        $this->app->singleton(NativeTheme::class, function ($app) {
+            return new NativeTheme(
                 $app->make(ThemeRegistry::class),
                 $app->make(ThemeManifest::class),
                 array_merge(
@@ -62,9 +62,9 @@ class NativeDaisyServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom($packageRoot . '/resources/views', 'w4-native');
 
-        W4NativeDaisyDirectiveService::register();
+        W4NativeDirectiveService::register();
 
-        W4NativeDaisyUIRouteService::registerRoutes();
+        W4NativeUIRouteService::registerRoutes();
 
         if ($this->app->runningInConsole()) {
             if (is_file($configPath)) {
@@ -93,8 +93,8 @@ class NativeDaisyServiceProvider extends ServiceProvider
             }
 
             $this->commands([
-                BuildNativeDaisyAssetsCommand::class,
-                InstallNativeDaisyCommand::class,
+                BuildNativeAssetsCommand::class,
+                InstallNativeCommand::class,
             ]);
         }
     }

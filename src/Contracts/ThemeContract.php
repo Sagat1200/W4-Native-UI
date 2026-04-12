@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Daisy\Contracts;
+namespace W4\Native\Contracts;
 
 interface ThemeContract
 {

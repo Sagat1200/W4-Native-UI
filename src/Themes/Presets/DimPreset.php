@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\Native\Daisy\Themes\Presets;
+namespace W4\Native\Themes\Presets;
 
-use W4\Native\Daisy\Tools\Themes\AbstractPreset;
+use W4\Native\Tools\Themes\AbstractPreset;
 
 class DimPreset extends AbstractPreset
 {
