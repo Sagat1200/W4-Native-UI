@@ -1,21 +1,23 @@
 {
-    "name": "w4/native",
-    "description": "Biblioteca visual de estilos DaisyUI y componentes para laravel PHP.",
+    "name": "w4/native-daisy",
+    "description": "Paquete de componentes con biblioteca visual de estilos inspirados en DaisyUI para Laravel PHP.",
     "type": "library",
     "license": "MIT",
     "keywords": [
         "w4-software",
         "laravel",
-        "ui-framework"
+        "daisyui",
+        "ui-framework",
+        "components"
     ],
     "autoload": {
         "psr-4": {
-            "W4\\Native\\": "src/"
+            "W4\\Native\\Daisy\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "W4\\Native\\Tests\\": "tests/"
+            "W4\\Native\\Daisy\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -38,7 +40,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "W4\\Native\\Providers\\W4NativeServiceProvider" 
+                "W4\\Native\\Daisy\\Providers\\W4NativeDaisyServiceProvider" 
             ]
         }
     },

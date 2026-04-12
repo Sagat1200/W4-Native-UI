@@ -1,14 +1,14 @@
 <?php
 
-namespace W4\Native\Console\Commands;
+namespace W4\Native\Daisy\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class BuildNativeAssetsCommand extends Command
+class BuildNativeDaisyAssetsCommand extends Command
 {
-    protected $signature = 'w4-native:build-assets';
+    protected $signature = 'w4-native-daisy:build-assets';
 
-    protected $description = 'Compila assets CSS y JS en dist/';
+    protected $description = 'Compila assets CSS y JS en archivo dist para usar en Laravel.';
 
     public function handle(): int
     {

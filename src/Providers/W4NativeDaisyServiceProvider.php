@@ -1,10 +1,10 @@
 <?php
 
-namespace W4\Native\Providers;
+namespace W4\Native\Daisy\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use W4\Native\Console\Commands\BuildNativeAssetsCommand;
-use W4\Native\Console\Commands\InstallNativeCommand;
+use W4\Native\Daisy\Console\Commands\BuildNativeDaisyAssetsCommand;
+use W4\Native\Daisy\Console\Commands\InstallNativeDaisyCommand;
 use W4\Native\Services\Provider\Components\FeedBack\W4NativeFeedBackService;
 use W4\Native\Services\Provider\Components\Form\W4NativeFormService;
 use W4\Native\Services\Provider\Components\Interactive\W4NativeInteractiveService;
@@ -17,18 +17,18 @@ use W4\Native\Support\ThemeManifest;
 use W4\Native\Support\ThemeRegistry;
 use W4\Native\Tools\Themes\W4NativeTheme;
 
-class W4NativeServiceProvider extends ServiceProvider
+class W4NativeDaisyServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $configPath = __DIR__ . '/../../config/w4-native.php';
+        $configPath = __DIR__ . '/../../config/w4-native-daisy.php';
 
         if (is_file($configPath)) {
-            $this->mergeConfigFrom($configPath, 'w4-native');
+            $this->mergeConfigFrom($configPath, 'w4-native-daisy');
         }
 
         $this->app->singleton(ThemeManifest::class, function () {
-            return ThemeManifest::fromConfig(config('w4-native', []));
+            return ThemeManifest::fromConfig(config('w4-native-daisy', []));
         });
 
         $this->app->singleton(ThemeRegistry::class, function () {
@@ -81,20 +81,20 @@ class W4NativeServiceProvider extends ServiceProvider
 
             $publish = [];
             if (is_file($configPath)) {
-                $publish[$configPath] = config_path('w4-native.php');
+                $publish[$configPath] = config_path('w4-native-daisy.php');
             }
 
             if (is_dir($distPath)) {
-                $publish[$distPath] = public_path('vendor/w4-native');
+                $publish[$distPath] = public_path('vendor/w4-native-daisy');
             }
 
             if ($publish !== []) {
-                $this->publishes($publish, 'w4-native-assets');
+                $this->publishes($publish, 'w4-native-daisy-assets');
             }
 
             $this->commands([
-                BuildNativeAssetsCommand::class,
-                InstallNativeCommand::class,
+                BuildNativeDaisyAssetsCommand::class,
+                InstallNativeDaisyCommand::class,
             ]);
         }
     }

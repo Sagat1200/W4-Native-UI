@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\Native\Themes\Components\Layout;
+namespace W4\Native\Daisy\Themes\Components\Layout;
 
-use W4\Native\Tools\Themes\AbstractComponentTheme;
+use W4\Native\Daisy\Tools\Themes\AbstractComponentTheme;
 
 class ContainerTheme extends AbstractComponentTheme
 {

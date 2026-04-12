@@ -1,9 +1,9 @@
 <?php
 
-namespace W4\Native\Support;
+namespace W4\Native\Daisy\Support;
 
 use InvalidArgumentException;
-use W4\Native\Contracts\PresetContract;
+use W4\Native\Daisy\Contracts\PresetContract;
 
 class ThemeRegistry
 {

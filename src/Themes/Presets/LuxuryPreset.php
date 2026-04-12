@@ -2,7 +2,7 @@
 
 namespace W4\Native\Themes\Presets;
 
-use W4\Native\Tools\Themes\AbstractPreset;
+use W4\Native\Daisy\Tools\Themes\AbstractPreset;
 
 class LuxuryPreset extends AbstractPreset
 {

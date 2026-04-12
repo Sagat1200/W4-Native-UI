@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\Native\Tools\Themes;
+namespace W4\Native\Daisy\Tools\Themes;
 
-use W4\Native\Tools\Themes\AbstractComponentTheme;
+use W4\Native\Daisy\Tools\Themes\AbstractComponentTheme;
 
 class ConfigurableComponentTheme extends AbstractComponentTheme
 {

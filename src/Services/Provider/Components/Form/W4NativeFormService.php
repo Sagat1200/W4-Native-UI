@@ -1,15 +1,15 @@
 <?php
 
-namespace W4\Native\Services\Provider\Components\Form;
+namespace W4\Native\Daisy\Services\Provider\Components\Form;
 
-use W4\Native\Themes\Components\Forms\CheckboxTheme;
-use W4\Native\Themes\Components\Forms\FieldErrorTheme;
-use W4\Native\Themes\Components\Forms\HelperTextTheme;
-use W4\Native\Themes\Components\Forms\InputTheme;
-use W4\Native\Themes\Components\Forms\RadioTheme;
-use W4\Native\Themes\Components\Forms\SelectTheme;
-use W4\Native\Themes\Components\Forms\TextareaTheme;
-use W4\Native\Themes\Components\Forms\ToggleTheme;
+use W4\Native\Daisy\Themes\Components\Forms\CheckboxTheme;
+use W4\Native\Daisy\Themes\Components\Forms\FieldErrorTheme;
+use W4\Native\Daisy\Themes\Components\Forms\HelperTextTheme;
+use W4\Native\Daisy\Themes\Components\Forms\InputTheme;
+use W4\Native\Daisy\Themes\Components\Forms\RadioTheme;
+use W4\Native\Daisy\Themes\Components\Forms\SelectTheme;
+use W4\Native\Daisy\Themes\Components\Forms\TextareaTheme;
+use W4\Native\Daisy\Themes\Components\Forms\ToggleTheme;
 
 class W4NativeFormService
 {

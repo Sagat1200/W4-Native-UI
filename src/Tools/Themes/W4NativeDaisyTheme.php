@@ -1,14 +1,14 @@
 <?php
 
-namespace W4\Native\Tools\Themes;
+namespace W4\Native\Daisy\Tools\Themes;
 
 use InvalidArgumentException;
-use W4\Native\Contracts\ComponentThemeContract;
-use W4\Native\Contracts\ThemeContract;
-use W4\Native\Support\ThemeManifest;
-use W4\Native\Support\ThemeRegistry;
+use W4\Native\Daisy\Contracts\ComponentThemeContract;
+use W4\Native\Daisy\Contracts\ThemeContract;
+use W4\Native\Daisy\Support\ThemeManifest;
+use W4\Native\Daisy\Support\ThemeRegistry;
 
-class W4NativeTheme implements ThemeContract
+class W4NativeDaisyTheme implements ThemeContract
 {
     public function __construct(
         protected ThemeRegistry $registry,
@@ -18,7 +18,7 @@ class W4NativeTheme implements ThemeContract
 
     public function name(): string
     {
-        return 'native';
+        return 'native-daisy';
     }
 
     public function defaultPreset(): string

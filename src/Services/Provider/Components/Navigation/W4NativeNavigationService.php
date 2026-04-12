@@ -1,5 +1,5 @@
 <?php
 
-namespace W4\Native\Services\Provider\Components\Navigation;
+namespace W4\Native\Daisy\Services\Provider\Components\Navigation;
 
 class W4NativeNavigationService {}
