@@ -1,38 +1,122 @@
+/* =========================================
+   CARD COMPONENT
+   Native W4 Visual Engine implementation
+   Layout Morphology
+   ========================================= */
+
 .w4-card {
-  background: hsl(var(--w4-base-200));
-  border: 1px solid hsl(var(--w4-base-300));
-  border-radius: var(--w4-radius-card);
-  box-shadow: var(--w4-shadow-sm);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+  /* Morphology Tokens */
+  border-radius: var(--w4-radius-card, var(--w4-radius-lg));
+  
+  /* Surface Tokens */
+  background-color: var(--w4-card-bg, hsl(var(--w4-base-200)));
+  border-width: var(--w4-card-border-width, 1px);
+  border-style: solid;
+  border-color: var(--w4-card-border-color, hsl(var(--w4-base-300)));
+  box-shadow: var(--w4-card-shadow, var(--w4-shadow-sm));
+  
+  /* Typography Tokens */
+  color: var(--w4-card-color, hsl(var(--w4-base-content)));
 }
 
 .w4-card-body {
-  padding: 2rem;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: var(--w4-card-padding, 2rem);
+  gap: 0.5rem;
+}
+
+/* ----------------------------------
+   MODIFIERS (Surface System)
+   ---------------------------------- */
+.w4-card-bordered {
+  --w4-card-border-width: 2px;
 }
 
 .w4-card-elevated {
-  box-shadow: var(--w4-shadow-md);
+  --w4-card-shadow: var(--w4-shadow-md);
 }
 
-.w4-card-bordered {
-  border-width: 2px;
+.w4-card-ghost {
+  --w4-card-bg: transparent;
+  --w4-card-border-color: transparent;
+  --w4-card-shadow: none;
 }
 
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-card-primary {
+  --w4-card-bg: hsl(var(--w4-primary));
+  --w4-card-color: hsl(var(--w4-primary-content));
+  --w4-card-border-color: hsl(var(--w4-primary));
+}
+
+.w4-card-secondary {
+  --w4-card-bg: hsl(var(--w4-secondary));
+  --w4-card-color: hsl(var(--w4-secondary-content));
+  --w4-card-border-color: hsl(var(--w4-secondary));
+}
+
+.w4-card-accent {
+  --w4-card-bg: hsl(var(--w4-accent));
+  --w4-card-color: hsl(var(--w4-accent-content));
+  --w4-card-border-color: hsl(var(--w4-accent));
+}
+
+.w4-card-info {
+  --w4-card-bg: hsl(var(--w4-info));
+  --w4-card-color: hsl(var(--w4-info-content));
+  --w4-card-border-color: hsl(var(--w4-info));
+}
+
+.w4-card-success {
+  --w4-card-bg: hsl(var(--w4-success));
+  --w4-card-color: hsl(var(--w4-success-content));
+  --w4-card-border-color: hsl(var(--w4-success));
+}
+
+.w4-card-warning {
+  --w4-card-bg: hsl(var(--w4-warning));
+  --w4-card-color: hsl(var(--w4-warning-content));
+  --w4-card-border-color: hsl(var(--w4-warning));
+}
+
+.w4-card-error {
+  --w4-card-bg: hsl(var(--w4-error));
+  --w4-card-color: hsl(var(--w4-error-content));
+  --w4-card-border-color: hsl(var(--w4-error));
+}
+
+/* Base structural colors */
+.w4-card-base-100 { --w4-card-bg: hsl(var(--w4-base-100)); }
+.w4-card-base-200 { --w4-card-bg: hsl(var(--w4-base-200)); }
+.w4-card-base-300 { --w4-card-bg: hsl(var(--w4-base-300)); }
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-card-xs .w4-card-body {
-  padding: 0.75rem;
+  --w4-card-padding: 0.75rem;
 }
 
 .w4-card-sm .w4-card-body {
-  padding: 1rem;
+  --w4-card-padding: 1rem;
 }
 
 .w4-card-md .w4-card-body {
-  padding: 2rem;
+  --w4-card-padding: 2rem;
 }
 
 .w4-card-lg .w4-card-body {
-  padding: 2.5rem;
+  --w4-card-padding: 2.5rem;
 }
 
 .w4-card-xl .w4-card-body {
-  padding: 3rem;
+  --w4-card-padding: 3rem;
 }

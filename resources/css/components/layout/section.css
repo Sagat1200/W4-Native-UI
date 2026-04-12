@@ -1,24 +1,78 @@
+/* =========================================
+   SECTION COMPONENT
+   Native W4 Visual Engine implementation
+   Layout System
+   ========================================= */
+
 .w4-section {
   display: block;
-  padding-block: 1rem;
+  position: relative;
+  
+  /* Morphology Tokens */
+  padding-block: var(--w4-section-padding-y, 1rem);
+  padding-inline: var(--w4-section-padding-x, 0);
+  
+  /* Surface Tokens */
+  background-color: var(--w4-section-bg, transparent);
+  color: var(--w4-section-color, inherit);
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-section-primary {
+  --w4-section-bg: hsl(var(--w4-primary));
+  --w4-section-color: hsl(var(--w4-primary-content));
+}
+
+.w4-section-secondary {
+  --w4-section-bg: hsl(var(--w4-secondary));
+  --w4-section-color: hsl(var(--w4-secondary-content));
+}
+
+.w4-section-accent {
+  --w4-section-bg: hsl(var(--w4-accent));
+  --w4-section-color: hsl(var(--w4-accent-content));
+}
+
+.w4-section-base-100 {
+  --w4-section-bg: hsl(var(--w4-base-100));
+  --w4-section-color: hsl(var(--w4-base-content));
+}
+
+.w4-section-base-200 {
+  --w4-section-bg: hsl(var(--w4-base-200));
+  --w4-section-color: hsl(var(--w4-base-content));
+}
+
+.w4-section-base-300 {
+  --w4-section-bg: hsl(var(--w4-base-300));
+  --w4-section-color: hsl(var(--w4-base-content));
+}
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
+.w4-section-none {
+  --w4-section-padding-y: 0px;
 }
 
 .w4-section-xs {
-  padding-block: 0.5rem;
+  --w4-section-padding-y: 0.5rem;
 }
 
 .w4-section-sm {
-  padding-block: 0.75rem;
+  --w4-section-padding-y: 0.75rem;
 }
 
 .w4-section-md {
-  padding-block: 1rem;
+  --w4-section-padding-y: 1rem;
 }
 
 .w4-section-lg {
-  padding-block: 1.5rem;
+  --w4-section-padding-y: 1.5rem;
 }
 
 .w4-section-xl {
-  padding-block: 2rem;
+  --w4-section-padding-y: 2rem;
 }

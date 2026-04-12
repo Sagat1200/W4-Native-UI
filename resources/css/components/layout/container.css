@@ -1,27 +1,47 @@
+/* =========================================
+   CONTAINER COMPONENT
+   Native W4 Visual Engine implementation
+   Layout System
+   ========================================= */
+
 .w4-container {
-  inline-size: min(100%, 1200px);
+  /* Layout constraints */
+  inline-size: min(100%, var(--w4-container-max-width, 1200px));
   margin-inline: auto;
-  padding-inline: 1rem;
-  background: hsl(var(--w4-base-200));
-  color: hsl(var(--w4-base-content));
+  padding-inline: var(--w4-container-padding-x, 1rem);
+  
+  /* Surface Tokens (Optional for containers, but supported) */
+  background-color: var(--w4-container-bg, transparent);
+  color: var(--w4-container-color, inherit);
 }
 
+/* ----------------------------------
+   MODIFIERS (Surface System)
+   ---------------------------------- */
+.w4-container-solid {
+  --w4-container-bg: hsl(var(--w4-base-200));
+  --w4-container-color: hsl(var(--w4-base-content));
+}
+
+/* ----------------------------------
+   SIZE SCALES (Layout Morphology)
+   ---------------------------------- */
 .w4-container-xs {
-  max-inline-size: 420px;
+  --w4-container-max-width: 420px;
 }
 
 .w4-container-sm {
-  max-inline-size: 640px;
+  --w4-container-max-width: 640px;
 }
 
 .w4-container-md {
-  max-inline-size: 840px;
+  --w4-container-max-width: 840px;
 }
 
 .w4-container-lg {
-  max-inline-size: 1080px;
+  --w4-container-max-width: 1080px;
 }
 
 .w4-container-xl {
-  max-inline-size: 1280px;
+  --w4-container-max-width: 1280px;
 }
