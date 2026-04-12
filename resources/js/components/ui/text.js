@@ -1,21 +1,13 @@
-(function (window, document) {
-  function initText(root) {
-    // Placeholder for text logic
-  }
+/**
+ * =========================================
+ * TEXT COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * UI System
+ * =========================================
+ */
 
-  if (window.NativeUI) {
-      var originalInit = window.NativeUI.init;
-      window.NativeUI.init = function(root) {
-          if(originalInit) originalInit(root);
-          initText(root);
-      };
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-      initText(document);
-    });
-  } else {
-    initText(document);
-  }
-})(window, document);
+export default class W4Text {
+    static init(root = document) {
+        // Placeholder for specific text logic
+    }
+}

@@ -1,21 +1,13 @@
-(function (window, document) {
-  function initIcon(root) {
-    // Placeholder for icon logic (e.g. dynamic SVG fetching)
-  }
+/**
+ * =========================================
+ * ICON COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * UI System
+ * =========================================
+ */
 
-  if (window.NativeUI) {
-      var originalInit = window.NativeUI.init;
-      window.NativeUI.init = function(root) {
-          if(originalInit) originalInit(root);
-          initIcon(root);
-      };
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-      initIcon(document);
-    });
-  } else {
-    initIcon(document);
-  }
-})(window, document);
+export default class W4Icon {
+    static init(root = document) {
+        // Placeholder for specific icon logic (e.g. dynamic SVG fetching)
+    }
+}

@@ -17,7 +17,7 @@
   font-family: var(--w4-font-sans);
   
   /* Morphology & Surface Tokens */
-  height: var(--w4-btn-height, var(--w4-control-height-md));
+  block-size: var(--w4-btn-height, var(--w4-control-height-md));
   padding-inline: var(--w4-btn-padding-x, var(--w4-button-padding-x));
   font-size: var(--w4-btn-font-size, 0.875rem);
   border-radius: var(--w4-radius-button);

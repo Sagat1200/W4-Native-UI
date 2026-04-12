@@ -1,21 +1,13 @@
-(function (window, document) {
-  function initLink(root) {
-    // Placeholder for link logic
-  }
+/**
+ * =========================================
+ * LINK COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * UI System
+ * =========================================
+ */
 
-  if (window.NativeUI) {
-      var originalInit = window.NativeUI.init;
-      window.NativeUI.init = function(root) {
-          if(originalInit) originalInit(root);
-          initLink(root);
-      };
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-      initLink(document);
-    });
-  } else {
-    initLink(document);
-  }
-})(window, document);
+export default class W4Link {
+    static init(root = document) {
+        // Placeholder for specific link logic
+    }
+}

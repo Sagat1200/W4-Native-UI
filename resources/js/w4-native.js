@@ -31,6 +31,15 @@ import W4Panel from './components/layout/panel.js';
 import W4Section from './components/layout/section.js';
 import W4Stack from './components/layout/stack.js';
 
+// Import UI components
+import W4Button from './components/ui/button.js';
+import W4IconButton from './components/ui/iconButton.js';
+import W4Heading from './components/ui/heading.js';
+import W4Icon from './components/ui/icon.js';
+import W4Label from './components/ui/label.js';
+import W4Link from './components/ui/link.js';
+import W4Text from './components/ui/text.js';
+
 // Import core logic (previous IIFE logic wrapped in a modern ES6 structure)
 import W4Core from './core.js';
 
@@ -66,7 +75,16 @@ class W4NativeUI {
         W4Section.init();
         W4Stack.init();
 
-        // 4. Initialize Core Event System (Data attributes, ARIA sync, Forms)
+        // 4. Initialize UI Components
+        W4Button.init();
+        W4IconButton.init();
+        W4Heading.init();
+        W4Icon.init();
+        W4Label.init();
+        W4Link.init();
+        W4Text.init();
+
+        // 5. Initialize Core Event System (Data attributes, ARIA sync, Forms)
         W4Core.init();
     }
 
@@ -97,6 +115,15 @@ class W4NativeUI {
     static get Panel() { return W4Panel; }
     static get Section() { return W4Section; }
     static get Stack() { return W4Stack; }
+
+    // UI APIs
+    static get Button() { return W4Button; }
+    static get IconButton() { return W4IconButton; }
+    static get Heading() { return W4Heading; }
+    static get Icon() { return W4Icon; }
+    static get Label() { return W4Label; }
+    static get Link() { return W4Link; }
+    static get Text() { return W4Text; }
 
     static get Core() { return W4Core; }
 }

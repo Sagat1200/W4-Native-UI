@@ -1,44 +1,14 @@
-(function (window, document) {
-  function initIconButton(root) {
-    var scope = root || document;
-    var buttons = scope.querySelectorAll('.w4-icon-button');
+/**
+ * =========================================
+ * ICON BUTTON COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * UI System
+ * =========================================
+ */
 
-    for (var i = 0; i < buttons.length; i++) {
-        var btn = buttons[i];
-        if (btn.getAttribute('data-w4-icon-button-bound') === 'true') continue;
-
-        // Visual feedback for clicking (active/pressing state)
-        btn.addEventListener('mousedown', function(e) {
-            if (!e.currentTarget.disabled && !e.currentTarget.classList.contains('w4-icon-button-disabled')) {
-                e.currentTarget.classList.add('w4-icon-button-pressing');
-            }
-        });
-
-        btn.addEventListener('mouseup', function(e) {
-            e.currentTarget.classList.remove('w4-icon-button-pressing');
-        });
-
-        btn.addEventListener('mouseleave', function(e) {
-            e.currentTarget.classList.remove('w4-icon-button-pressing');
-        });
-
-        btn.setAttribute('data-w4-icon-button-bound', 'true');
+export default class W4IconButton {
+    static init(root = document) {
+        // Visual press feedback is handled by core.js centrally
+        // This file serves as a placeholder for specific icon-button logic
     }
-  }
-
-  if (window.NativeUI) {
-      var originalInit = window.NativeUI.init;
-      window.NativeUI.init = function(root) {
-          if(originalInit) originalInit(root);
-          initIconButton(root);
-      };
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-      initIconButton(document);
-    });
-  } else {
-    initIconButton(document);
-  }
-})(window, document);
+}
