@@ -1,23 +1,156 @@
+/* ==========================================================================
+   Tooltip Component
+   Native W4 Visual Engine implementation
+   ========================================================================== */
+
 .w4-tooltip {
   position: relative;
+  display: inline-block;
 }
 
-.w4-tooltip-xs {
-  font-size: 0.75rem;
+/* Tooltip content pseudo-element */
+.w4-tooltip::before {
+  content: attr(data-w4-tip);
+  position: absolute;
+  z-index: 50;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+  background-color: var(--w4-neutral);
+  color: var(--w4-neutral-content);
+  border-radius: var(--w4-radius-md);
+  padding: var(--w4-spacing-1) var(--w4-spacing-2);
+  font-size: var(--w4-text-sm);
+  font-weight: var(--w4-font-medium);
+  box-shadow: var(--w4-shadow-md);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  
+  /* Default position (Top) */
+  inset-block-end: 100%;
+  inset-inline-start: 50%;
+  transform: translateX(-50%) translateY(-0.25rem);
+  margin-block-end: var(--w4-spacing-1);
 }
 
-.w4-tooltip-sm {
-  font-size: 0.875rem;
+/* Hover and Open States */
+.w4-tooltip:hover::before,
+.w4-tooltip:focus-visible::before,
+.w4-tooltip.w4-tooltip-open::before {
+  opacity: 1;
+  visibility: visible;
 }
 
-.w4-tooltip-md {
-  font-size: 1rem;
+/* Base transform resets for states */
+.w4-tooltip:hover::before,
+.w4-tooltip:focus-visible::before,
+.w4-tooltip.w4-tooltip-open::before {
+  transform: translateX(-50%) translateY(0);
 }
 
-.w4-tooltip-lg {
-  font-size: 1.125rem;
+/* ==========================================================================
+   Positions
+   ========================================================================== */
+
+/* Top (Default, explicitly mapped) */
+.w4-tooltip-top::before {
+  inset-block-end: 100%;
+  inset-inline-start: 50%;
+  inset-block-start: auto;
+  inset-inline-end: auto;
+  transform: translateX(-50%) translateY(-0.25rem);
+  margin-block-end: var(--w4-spacing-1);
+  margin-block-start: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.w4-tooltip-top:hover::before,
+.w4-tooltip-top:focus-visible::before,
+.w4-tooltip-top.w4-tooltip-open::before {
+  transform: translateX(-50%) translateY(0);
 }
 
-.w4-tooltip-xl {
-  font-size: 1.25rem;
+/* Bottom */
+.w4-tooltip-bottom::before {
+  inset-block-start: 100%;
+  inset-inline-start: 50%;
+  inset-block-end: auto;
+  inset-inline-end: auto;
+  transform: translateX(-50%) translateY(0.25rem);
+  margin-block-start: var(--w4-spacing-1);
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
+.w4-tooltip-bottom:hover::before,
+.w4-tooltip-bottom:focus-visible::before,
+.w4-tooltip-bottom.w4-tooltip-open::before {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Left */
+.w4-tooltip-left::before {
+  inset-inline-end: 100%;
+  inset-block-start: 50%;
+  inset-inline-start: auto;
+  inset-block-end: auto;
+  transform: translateY(-50%) translateX(-0.25rem);
+  margin-inline-end: var(--w4-spacing-1);
+  margin-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.w4-tooltip-left:hover::before,
+.w4-tooltip-left:focus-visible::before,
+.w4-tooltip-left.w4-tooltip-open::before {
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Right */
+.w4-tooltip-right::before {
+  inset-inline-start: 100%;
+  inset-block-start: 50%;
+  inset-inline-end: auto;
+  inset-block-end: auto;
+  transform: translateY(-50%) translateX(0.25rem);
+  margin-inline-start: var(--w4-spacing-1);
+  margin-inline-end: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.w4-tooltip-right:hover::before,
+.w4-tooltip-right:focus-visible::before,
+.w4-tooltip-right.w4-tooltip-open::before {
+  transform: translateY(-50%) translateX(0);
+}
+
+/* ==========================================================================
+   Sizes
+   ========================================================================== */
+
+.w4-tooltip.w4-size-xs::before { font-size: var(--w4-text-xs); padding: var(--w4-spacing-0-5) var(--w4-spacing-1); }
+.w4-tooltip.w4-size-sm::before { font-size: var(--w4-text-sm); padding: var(--w4-spacing-1) var(--w4-spacing-2); }
+.w4-tooltip.w4-size-md::before { font-size: var(--w4-text-base); padding: var(--w4-spacing-1-5) var(--w4-spacing-3); }
+.w4-tooltip.w4-size-lg::before { font-size: var(--w4-text-lg); padding: var(--w4-spacing-2) var(--w4-spacing-4); }
+.w4-tooltip.w4-size-xl::before { font-size: var(--w4-text-xl); padding: var(--w4-spacing-3) var(--w4-spacing-5); }
+
+/* Legacy support mappings (for backward compatibility if needed, though W4 uses .w4-size-*) */
+.w4-tooltip-xs::before { font-size: var(--w4-text-xs); padding: var(--w4-spacing-0-5) var(--w4-spacing-1); }
+.w4-tooltip-sm::before { font-size: var(--w4-text-sm); padding: var(--w4-spacing-1) var(--w4-spacing-2); }
+.w4-tooltip-md::before { font-size: var(--w4-text-base); padding: var(--w4-spacing-1-5) var(--w4-spacing-3); }
+.w4-tooltip-lg::before { font-size: var(--w4-text-lg); padding: var(--w4-spacing-2) var(--w4-spacing-4); }
+.w4-tooltip-xl::before { font-size: var(--w4-text-xl); padding: var(--w4-spacing-3) var(--w4-spacing-5); }
+
+/* ==========================================================================
+   Variants (Colors)
+   ========================================================================== */
+
+.w4-tooltip.w4-variant-primary::before { background-color: var(--w4-primary); color: var(--w4-primary-content); }
+.w4-tooltip.w4-variant-secondary::before { background-color: var(--w4-secondary); color: var(--w4-secondary-content); }
+.w4-tooltip.w4-variant-accent::before { background-color: var(--w4-accent); color: var(--w4-accent-content); }
+.w4-tooltip.w4-variant-info::before { background-color: var(--w4-info); color: var(--w4-info-content); }
+.w4-tooltip.w4-variant-success::before { background-color: var(--w4-success); color: var(--w4-success-content); }
+.w4-tooltip.w4-variant-warning::before { background-color: var(--w4-warning); color: var(--w4-warning-content); }
+.w4-tooltip.w4-variant-error::before { background-color: var(--w4-error); color: var(--w4-error-content); }
+.w4-tooltip.w4-variant-neutral::before { background-color: var(--w4-neutral); color: var(--w4-neutral-content); }

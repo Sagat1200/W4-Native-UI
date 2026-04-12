@@ -34,9 +34,9 @@
   flex-direction: column;
   
   /* Layout constraints */
-  width: 100%;
-  max-width: var(--w4-modal-max-width, 32rem);
-  max-height: calc(100vh - 2rem);
+  inline-size: 100%;
+  max-inline-size: var(--w4-modal-max-width, 32rem);
+  max-block-size: calc(100vh - 2rem);
   overflow-y: auto;
   
   /* Morphology Tokens */
@@ -97,9 +97,9 @@
   --w4-modal-align: flex-end;
 }
 .w4-modal-bottom .w4-modal-box {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  margin-bottom: -1rem; /* Negate the container padding */
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+  margin-block-end: -1rem; /* Negate the container padding */
   transform: translateY(100%);
 }
 .w4-modal-open.w4-modal-bottom .w4-modal-box {
@@ -132,6 +132,6 @@
 .w4-modal-xl .w4-modal-box { --w4-modal-max-width: 64rem; }
 .w4-modal-full .w4-modal-box { 
   --w4-modal-max-width: 100%; 
-  height: calc(100vh - 2rem); 
+  block-size: calc(100vh - 2rem); 
   border-radius: 0;
 }
