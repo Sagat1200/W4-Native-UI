@@ -12,7 +12,7 @@ class ThemeManifest
     public static function fromConfig(array $config): self
     {
         return new self(
-            $config['default_preset'] ?? 'native-ui.light',
+            $config['default_preset'] ?? 'native-ui.default',
             $config['available_presets'] ?? []
         );
     }

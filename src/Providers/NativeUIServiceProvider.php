@@ -3,7 +3,7 @@
 namespace W4\NativeUI\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use W4\Native\Console\Commands\InstallNativeUICommand;
+use W4\NativeUI\Console\Commands\InstallNativeUICommand;
 use W4\NativeUI\Console\Commands\BuildNativeUIAssetsCommand;
 use W4\NativeUI\Services\Provider\Components\FeedBack\NativeUIFeedBackService;
 use W4\NativeUI\Services\Provider\Components\Form\NativeUIFormService;

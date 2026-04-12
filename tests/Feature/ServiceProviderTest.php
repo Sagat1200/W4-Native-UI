@@ -13,7 +13,7 @@ class ServiceProviderTest extends TestCase
         $registry = $this->app->make(ThemeRegistry::class);
         $theme = $this->app->make(NativeUITheme::class);
 
-        $this->assertTrue($registry->hasPreset('native-ui.default'));
+        $this->assertTrue($registry->hasPreset('native-ui.light'));
         $this->assertTrue($registry->hasPreset('native-ui.dark'));
         $this->assertSame('native-ui.default', $theme->defaultPreset());
     }

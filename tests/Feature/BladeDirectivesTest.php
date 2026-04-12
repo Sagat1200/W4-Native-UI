@@ -9,7 +9,7 @@ class BladeDirectivesTest extends TestCase
 {
     public function test_renderiza_directiva_w4_native_styles(): void
     {
-        $html = Blade::render('@NativeUI-Styles');
+        $html = Blade::render('@NativeUIStyles');
 
         $this->assertStringContainsString('vendor/w4-native-ui/w4-native-ui.css', $html);
         $this->assertStringContainsString('rel="stylesheet"', $html);
@@ -17,7 +17,7 @@ class BladeDirectivesTest extends TestCase
 
     public function test_renderiza_directiva_w4_native_scripts(): void
     {
-        $html = Blade::render('@NativeUI-Scripts');
+        $html = Blade::render('@NativeUIScripts');
 
         $this->assertStringContainsString('vendor/w4-native-ui/w4-native-ui.js', $html);
         $this->assertStringContainsString('<script', $html);
@@ -25,7 +25,7 @@ class BladeDirectivesTest extends TestCase
 
     public function test_renderiza_directiva_w4_native_init(): void
     {
-        $html = Blade::render('@NativeUI-Init');
+        $html = Blade::render('@NativeUIInit');
 
         $this->assertStringContainsString('DOMContentLoaded', $html);
         $this->assertStringContainsString('window.NativeUI.init(document)', $html);
@@ -33,9 +33,19 @@ class BladeDirectivesTest extends TestCase
 
     public function test_renderiza_directiva_w4_native_livewire(): void
     {
-        $html = Blade::render('@NativeUI-Livewire');
+        $html = Blade::render('@NativeUILivewire');
 
         $this->assertStringContainsString('livewire:navigated', $html);
         $this->assertStringContainsString('window.NativeUI.init(document)', $html);
+    }
+
+    public function test_registra_directivas_blade(): void
+    {
+        $directives = Blade::getCustomDirectives();
+
+        $this->assertArrayHasKey('NativeUIStyles', $directives);
+        $this->assertArrayHasKey('NativeUIScripts', $directives);
+        $this->assertArrayHasKey('NativeUIInit', $directives);
+        $this->assertArrayHasKey('NativeUILivewire', $directives);
     }
 }

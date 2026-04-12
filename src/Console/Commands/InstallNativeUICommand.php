@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Console\Commands;
+namespace W4\NativeUI\Console\Commands;
 
 use Illuminate\Console\Command;
 
