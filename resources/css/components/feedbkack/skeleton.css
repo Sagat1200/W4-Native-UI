@@ -1,5 +1,16 @@
+/* =========================================
+   SKELETON COMPONENT
+   Native W4 Visual Engine implementation
+   Feedback Morphology
+   ========================================= */
+
 .w4-skeleton {
-  border-radius: 0.5rem;
+  /* Morphology Tokens */
+  border-radius: var(--w4-skeleton-radius, var(--w4-radius-skeleton, var(--w4-radius-md)));
+  width: var(--w4-skeleton-width, 100%);
+  height: var(--w4-skeleton-height, 1rem);
+  
+  /* Color & Surface Tokens */
   background: linear-gradient(
     90deg,
     hsl(var(--w4-base-200)) 25%,
@@ -10,26 +21,54 @@
   animation: w4-skeleton-loading 1.4s ease infinite;
 }
 
+/* ----------------------------------
+   SHAPE MODIFIERS (Morphology System)
+   ---------------------------------- */
+.w4-skeleton-circle {
+  --w4-skeleton-radius: var(--w4-radius-pill);
+  --w4-skeleton-width: var(--w4-skeleton-height); /* Ensure aspect ratio 1:1 */
+}
+
+.w4-skeleton-square {
+  --w4-skeleton-radius: var(--w4-radius-none);
+}
+
+.w4-skeleton-title {
+  --w4-skeleton-width: 50%;
+  --w4-skeleton-height: 1.5rem;
+}
+
+.w4-skeleton-text {
+  --w4-skeleton-width: 100%;
+  --w4-skeleton-height: 0.875rem;
+}
+
+/* ----------------------------------
+   SIZE SCALES
+   ---------------------------------- */
 .w4-skeleton-xs {
-  min-block-size: 0.5rem;
+  --w4-skeleton-height: 0.5rem;
 }
 
 .w4-skeleton-sm {
-  min-block-size: 0.75rem;
+  --w4-skeleton-height: 0.75rem;
 }
 
 .w4-skeleton-md {
-  min-block-size: 1rem;
+  --w4-skeleton-height: 1rem;
 }
 
 .w4-skeleton-lg {
-  min-block-size: 1.25rem;
+  --w4-skeleton-height: 1.25rem;
 }
 
 .w4-skeleton-xl {
-  min-block-size: 1.5rem;
+  --w4-skeleton-height: 1.5rem;
 }
 
+/* ----------------------------------
+   ANIMATION KEYFRAMES
+   ---------------------------------- */
 @keyframes w4-skeleton-loading {
   0% {
     background-position: 100% 50%;

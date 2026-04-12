@@ -1,29 +1,153 @@
+/* =========================================
+   TOAST COMPONENT
+   Native W4 Visual Engine implementation
+   Feedback Morphology
+   ========================================= */
+
 .w4-toast {
-  border-radius: var(--w4-radius-input);
-  background: hsl(var(--w4-base-content));
-  color: hsl(var(--w4-base-100));
-  padding: 0.625rem 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: var(--w4-spacing-base);
+  font-family: var(--w4-font-sans);
+  z-index: 9999;
+  
+  /* Morphology & Surface Tokens */
+  border-radius: var(--w4-radius-toast, var(--w4-radius-md));
+  padding: var(--w4-toast-padding-y, 0.75rem) var(--w4-toast-padding-x, 1rem);
+  font-size: var(--w4-toast-font-size, 0.875rem);
+  box-shadow: var(--w4-toast-shadow, var(--w4-shadow-lg));
+  
+  /* Borders */
+  border-width: var(--w4-border-width-control, 1px);
+  border-style: solid;
+  border-color: var(--w4-toast-border-color, transparent);
+
+  /* Color Tokens */
+  background-color: var(--w4-toast-bg, hsl(var(--w4-base-content)));
+  color: var(--w4-toast-text, hsl(var(--w4-base-100)));
+  
+  /* Animations */
+  transition: all var(--w4-transition-normal);
+  animation: w4-toast-pop var(--w4-transition-normal) ease-out;
 }
 
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-toast-primary {
+  --w4-toast-bg: hsl(var(--w4-primary));
+  --w4-toast-text: hsl(var(--w4-primary-content));
+  --w4-toast-border-color: hsl(var(--w4-primary));
+}
+
+.w4-toast-secondary {
+  --w4-toast-bg: hsl(var(--w4-secondary));
+  --w4-toast-text: hsl(var(--w4-secondary-content));
+  --w4-toast-border-color: hsl(var(--w4-secondary));
+}
+
+.w4-toast-accent {
+  --w4-toast-bg: hsl(var(--w4-accent));
+  --w4-toast-text: hsl(var(--w4-accent-content));
+  --w4-toast-border-color: hsl(var(--w4-accent));
+}
+
+.w4-toast-info {
+  --w4-toast-bg: hsl(var(--w4-info));
+  --w4-toast-text: hsl(var(--w4-info-content));
+  --w4-toast-border-color: hsl(var(--w4-info));
+}
+
+.w4-toast-success {
+  --w4-toast-bg: hsl(var(--w4-success));
+  --w4-toast-text: hsl(var(--w4-success-content));
+  --w4-toast-border-color: hsl(var(--w4-success));
+}
+
+.w4-toast-warning {
+  --w4-toast-bg: hsl(var(--w4-warning));
+  --w4-toast-text: hsl(var(--w4-warning-content));
+  --w4-toast-border-color: hsl(var(--w4-warning));
+}
+
+.w4-toast-error {
+  --w4-toast-bg: hsl(var(--w4-error));
+  --w4-toast-text: hsl(var(--w4-error-content));
+  --w4-toast-border-color: hsl(var(--w4-error));
+}
+
+/* ----------------------------------
+   STYLISTIC VARIANTS (Surface System)
+   ---------------------------------- */
+.w4-toast-soft {
+  --w4-toast-bg: var(--w4-base-100);
+  --w4-toast-text: var(--w4-base-content);
+  --w4-toast-border-color: hsl(var(--w4-base-300));
+}
+
+.w4-toast-outline {
+  --w4-toast-bg: transparent;
+  --w4-toast-text: var(--w4-toast-border-color, hsl(var(--w4-base-content)));
+  border-color: var(--w4-toast-border-color, hsl(var(--w4-base-content)));
+}
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-toast-xs {
-  font-size: 0.75rem;
-  padding: 0.5rem 0.625rem;
+  --w4-toast-font-size: 0.75rem;
+  --w4-toast-padding-y: 0.5rem;
+  --w4-toast-padding-x: 0.625rem;
 }
 
 .w4-toast-sm {
-  font-size: 0.875rem;
+  --w4-toast-font-size: 0.875rem;
+  --w4-toast-padding-y: 0.5rem;
+  --w4-toast-padding-x: 0.75rem;
 }
 
 .w4-toast-md {
-  font-size: 0.9375rem;
+  --w4-toast-font-size: 0.9375rem;
+  --w4-toast-padding-y: 0.625rem;
+  --w4-toast-padding-x: 0.875rem;
 }
 
 .w4-toast-lg {
-  font-size: 1.0625rem;
-  padding: 0.75rem 1rem;
+  --w4-toast-font-size: 1.0625rem;
+  --w4-toast-padding-y: 0.75rem;
+  --w4-toast-padding-x: 1rem;
 }
 
 .w4-toast-xl {
-  font-size: 1.125rem;
-  padding: 0.875rem 1.125rem;
+  --w4-toast-font-size: 1.125rem;
+  --w4-toast-padding-y: 0.875rem;
+  --w4-toast-padding-x: 1.125rem;
+}
+
+/* ----------------------------------
+   STATES & MODIFIERS
+   ---------------------------------- */
+.w4-toast-hidden,
+.w4-toast[data-w4-state~="hidden"] {
+  display: none;
+}
+
+.w4-toast-disabled,
+.w4-toast[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5);
+  pointer-events: none;
+}
+
+/* ----------------------------------
+   ANIMATIONS
+   ---------------------------------- */
+@keyframes w4-toast-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }

@@ -20,6 +20,10 @@
   --w4-radius-card: var(--w4-radius-lg);
   --w4-radius-panel: var(--w4-radius-lg);
   --w4-radius-badge: var(--w4-radius-pill);
+  --w4-radius-alert: var(--w4-radius-md); /* Feedback specific morphology */
+  --w4-radius-progress: var(--w4-radius-pill); /* Progress bar morphology */
+  --w4-radius-skeleton: var(--w4-radius-md); /* Skeleton base morphology */
+  --w4-radius-toast: var(--w4-radius-md); /* Toast notification morphology */
 
   /* Control Heights (Density) */
   --w4-control-height-xs: 1.5rem; /* 24px */

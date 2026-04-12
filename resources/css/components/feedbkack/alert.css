@@ -1,47 +1,139 @@
+/* =========================================
+   ALERT COMPONENT
+   Native W4 Visual Engine implementation
+   Feedback Morphology
+   ========================================= */
+
 .w4-alert {
-  border-radius: var(--w4-radius-input);
-  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: var(--w4-spacing-base);
+  width: 100%;
+  
+  /* Morphology Tokens */
+  border-radius: var(--w4-radius-alert, var(--w4-radius-md));
+  padding: var(--w4-alert-padding-y, 1rem) var(--w4-alert-padding-x, 1rem);
+  font-size: var(--w4-alert-font-size, 1rem);
+  font-family: var(--w4-font-sans);
+  
+  /* Surface Tokens */
+  border-width: var(--w4-border-width-control);
+  border-style: solid;
+  border-color: var(--w4-alert-border-color, transparent);
+  box-shadow: var(--w4-alert-shadow, none);
+  
+  /* Color Tokens */
+  background-color: var(--w4-alert-bg, hsl(var(--w4-base-200)));
+  color: var(--w4-alert-text, hsl(var(--w4-base-content)));
+  
+  transition: all var(--w4-transition-fast);
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-alert-info {
+  --w4-alert-bg: hsl(var(--w4-info) / 0.15);
+  --w4-alert-text: hsl(var(--w4-info));
+  --w4-alert-border-color: hsl(var(--w4-info) / 0.3);
 }
 
 .w4-alert-success {
-  background: hsl(142 70% 93%);
-  color: hsl(142 56% 22%);
-}
-
-.w4-alert-info {
-  background: hsl(213 100% 96%);
-  color: hsl(215 77% 28%);
+  --w4-alert-bg: hsl(var(--w4-success) / 0.15);
+  --w4-alert-text: hsl(var(--w4-success));
+  --w4-alert-border-color: hsl(var(--w4-success) / 0.3);
 }
 
 .w4-alert-warning {
-  background: hsl(44 100% 93%);
-  color: hsl(32 95% 32%);
+  --w4-alert-bg: hsl(var(--w4-warning) / 0.15);
+  --w4-alert-text: hsl(var(--w4-warning));
+  --w4-alert-border-color: hsl(var(--w4-warning) / 0.3);
 }
 
 .w4-alert-error {
-  background: hsl(0 100% 95%);
-  color: hsl(0 74% 35%);
+  --w4-alert-bg: hsl(var(--w4-error) / 0.15);
+  --w4-alert-text: hsl(var(--w4-error));
+  --w4-alert-border-color: hsl(var(--w4-error) / 0.3);
 }
 
+/* Base Semantic Variants */
+.w4-alert-primary {
+  --w4-alert-bg: hsl(var(--w4-primary) / 0.15);
+  --w4-alert-text: hsl(var(--w4-primary));
+  --w4-alert-border-color: hsl(var(--w4-primary) / 0.3);
+}
+
+.w4-alert-secondary {
+  --w4-alert-bg: hsl(var(--w4-secondary) / 0.15);
+  --w4-alert-text: hsl(var(--w4-secondary));
+  --w4-alert-border-color: hsl(var(--w4-secondary) / 0.3);
+}
+
+.w4-alert-accent {
+  --w4-alert-bg: hsl(var(--w4-accent) / 0.15);
+  --w4-alert-text: hsl(var(--w4-accent));
+  --w4-alert-border-color: hsl(var(--w4-accent) / 0.3);
+}
+
+/* ----------------------------------
+   STYLISTIC VARIANTS (Surface System)
+   ---------------------------------- */
+.w4-alert-solid {
+  --w4-alert-bg: var(--w4-alert-text);
+  --w4-alert-text: hsl(var(--w4-base-100));
+  --w4-alert-border-color: transparent;
+  --w4-alert-shadow: var(--w4-shadow-md);
+}
+
+.w4-alert-outline {
+  --w4-alert-bg: transparent;
+  --w4-alert-border-color: var(--w4-alert-text);
+}
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-alert-xs {
-  font-size: 0.75rem;
-  padding: 0.5rem 0.625rem;
+  --w4-alert-font-size: 0.75rem;
+  --w4-alert-padding-y: 0.5rem;
+  --w4-alert-padding-x: 0.75rem;
 }
 
 .w4-alert-sm {
-  font-size: 0.875rem;
+  --w4-alert-font-size: 0.875rem;
+  --w4-alert-padding-y: 0.75rem;
+  --w4-alert-padding-x: 1rem;
 }
 
 .w4-alert-md {
-  font-size: 1rem;
+  --w4-alert-font-size: 1rem;
+  --w4-alert-padding-y: 1rem;
+  --w4-alert-padding-x: 1rem;
 }
 
 .w4-alert-lg {
-  font-size: 1.125rem;
-  padding: 0.875rem 1.125rem;
+  --w4-alert-font-size: 1.125rem;
+  --w4-alert-padding-y: 1.25rem;
+  --w4-alert-padding-x: 1.5rem;
 }
 
 .w4-alert-xl {
-  font-size: 1.25rem;
-  padding: 1rem 1.25rem;
+  --w4-alert-font-size: 1.25rem;
+  --w4-alert-padding-y: 1.5rem;
+  --w4-alert-padding-x: 1.5rem;
+}
+
+/* ----------------------------------
+   STATES & MODIFIERS
+   ---------------------------------- */
+.w4-alert-hidden,
+.w4-alert[data-w4-state~="hidden"] {
+  display: none;
+}
+
+.w4-alert-disabled,
+.w4-alert[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5);
+  pointer-events: none;
+  filter: grayscale(1);
 }
