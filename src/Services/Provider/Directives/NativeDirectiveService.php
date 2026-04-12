@@ -4,7 +4,7 @@ namespace W4\Native\Services\Provider\Directives;
 
 use Illuminate\Support\Facades\Blade;
 
-class W4NativeDirectiveService
+class NativeDirectiveService
 {
     public static function register(): void
     {

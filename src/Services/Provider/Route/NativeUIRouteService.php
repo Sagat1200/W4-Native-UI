@@ -4,7 +4,7 @@ namespace W4\Native\Services\Provider\Route;
 
 use Illuminate\Support\Facades\Route;
 
-class W4NativeUIRouteService
+class NativeUIRouteService
 {
     public static function registerRoutes()
     {

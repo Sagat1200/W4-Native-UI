@@ -9,9 +9,9 @@ use W4\Native\Services\Provider\Components\FeedBack\NativeFeedBackService;
 use W4\Native\Services\Provider\Components\Form\NativeFormService;
 use W4\Native\Services\Provider\Components\Interactive\NativeInteractiveService;
 use W4\Native\Services\Provider\Components\Layout\NativeLayoutService;
-use W4\Native\Services\Provider\Components\UI\NativeUI;
-use W4\Native\Services\Provider\Directives\W4NativeDirectiveService;
-use W4\Native\Services\Provider\Route\W4NativeUIRouteService;
+use W4\Native\Services\Provider\Components\UI\NativeUIService;
+use W4\Native\Services\Provider\Directives\NativeDirectiveService;
+use W4\Native\Services\Provider\Route\NativeUIRouteService;
 use W4\Native\Services\Themes\NativeThemeService;
 use W4\Native\Support\ThemeManifest;
 use W4\Native\Support\ThemeRegistry;
@@ -44,7 +44,7 @@ class NativeServiceProvider extends ServiceProvider
                 $app->make(ThemeRegistry::class),
                 $app->make(ThemeManifest::class),
                 array_merge(
-                    NativeUI::getComponents(),
+                    NativeUIService::getComponents(),
                     NativeFormService::getComponents(),
                     NativeLayoutService::getComponents(),
                     NativeFeedBackService::getComponents(),
@@ -62,9 +62,9 @@ class NativeServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom($packageRoot . '/resources/views', 'w4-native');
 
-        W4NativeDirectiveService::register();
+        NativeDirectiveService::register();
 
-        W4NativeUIRouteService::registerRoutes();
+        NativeUIRouteService::registerRoutes();
 
         if ($this->app->runningInConsole()) {
             if (is_file($configPath)) {
@@ -81,15 +81,15 @@ class NativeServiceProvider extends ServiceProvider
 
             $publish = [];
             if (is_file($configPath)) {
-                $publish[$configPath] = config_path('w4-native-daisy.php');
+                $publish[$configPath] = config_path('w4-native.php');
             }
 
             if (is_dir($distPath)) {
-                $publish[$distPath] = public_path('vendor/w4-native-daisy');
+                $publish[$distPath] = public_path('vendor/w4-native');
             }
 
             if ($publish !== []) {
-                $this->publishes($publish, 'w4-native-daisy-assets');
+                $this->publishes($publish, 'w4-native-assets');
             }
 
             $this->commands([
