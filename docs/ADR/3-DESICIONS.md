@@ -1,4 +1,4 @@
-# W4-Native-UI: Decisions (ADR)
+# W4-Native-Daisy: Decisions (ADR)
 
 Este documento registra las **Architectural Decision Records (ADR)** del proyecto.
 
@@ -14,7 +14,7 @@ Esto permite mantener trazabilidad técnica del proyecto.
 
 ## ADR-010
 
-### W4-Native-UI como capa visual oficial del ecosistema W4
+### W4-Native-Daisy como capa visual oficial del ecosistema W4
 
 #### Estado
 

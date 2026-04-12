@@ -12,12 +12,12 @@ abstract class AbstractComponentTheme implements ComponentThemeContract
         $classes = ['w4-' . $component];
 
         $variant = (string) ($state['variant'] ?? '');
-        if ($variant !== '' && in_array($variant, $this->variants(), true)) {
+        if ($variant !== '') {
             $classes[] = "w4-{$component}-{$variant}";
         }
 
         $size = (string) ($state['size'] ?? '');
-        if ($size !== '' && in_array($size, $this->sizes(), true)) {
+        if ($size !== '') {
             $classes[] = "w4-{$component}-{$size}";
         }
 

@@ -36,17 +36,18 @@ class ServiceProviderTest extends TestCase
         ], $classes);
     }
 
-    public function test_ignora_variant_invalida_en_resolver(): void
+    public function test_permite_variantes_dinamicas_passthrough(): void
     {
         $theme = $this->app->make(W4NativeDaisyTheme::class);
 
         $classes = $theme->resolveComponent('button', [
-            'variant' => 'invalid',
+            'variant' => 'nueva-variante-no-registrada',
             'size' => 'md',
         ]);
 
         $this->assertSame([
             'w4-button',
+            'w4-button-nueva-variante-no-registrada',
             'w4-button-md',
         ], $classes);
     }
