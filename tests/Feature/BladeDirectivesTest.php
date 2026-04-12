@@ -1,9 +1,9 @@
 <?php
 
-namespace W4\Native\Tests\Feature;
+namespace W4\Native\Daisy\Tests\Feature;
 
 use Illuminate\Support\Facades\Blade;
-use W4\Native\Tests\TestCase;
+use W4\Native\Daisy\Tests\TestCase;
 
 class BladeDirectivesTest extends TestCase
 {
@@ -11,7 +11,7 @@ class BladeDirectivesTest extends TestCase
     {
         $html = Blade::render('@W4NativeStyles');
 
-        $this->assertStringContainsString('vendor/w4-native/w4-native.css', $html);
+        $this->assertStringContainsString('vendor/w4-native/w4-native-daisy.css', $html);
         $this->assertStringContainsString('rel="stylesheet"', $html);
     }
 
@@ -19,7 +19,7 @@ class BladeDirectivesTest extends TestCase
     {
         $html = Blade::render('@W4NativeScripts');
 
-        $this->assertStringContainsString('vendor/w4-native/w4-native.js', $html);
+        $this->assertStringContainsString('vendor/w4-native/w4-native-daisy.js', $html);
         $this->assertStringContainsString('<script', $html);
     }
 

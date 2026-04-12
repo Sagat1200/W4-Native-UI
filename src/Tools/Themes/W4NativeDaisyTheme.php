@@ -2,6 +2,7 @@
 
 namespace W4\Native\Daisy\Tools\Themes;
 
+use TailwindMerge\TailwindMerge;
 use InvalidArgumentException;
 use W4\Native\Daisy\Contracts\ComponentThemeContract;
 use W4\Native\Daisy\Contracts\ThemeContract;
@@ -73,5 +74,13 @@ class W4NativeDaisyTheme implements ThemeContract
             'state_map' => $stateMap,
             'js_hooks' => $jsHooks,
         ];
+    }
+
+    public function mergeClasses(array|string $baseClasses, array|string $userClasses): string
+    {
+        $base = is_array($baseClasses) ? implode(' ', $baseClasses) : $baseClasses;
+        $user = is_array($userClasses) ? implode(' ', $userClasses) : $userClasses;
+
+        return TailwindMerge::instance()->merge($base, $user);
     }
 }

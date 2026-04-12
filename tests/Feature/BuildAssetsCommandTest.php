@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\Native\Tests\Feature;
+namespace W4\Native\Daisy\Tests\Feature;
 
-use W4\Native\Tests\TestCase;
+use W4\Native\Daisy\Tests\TestCase;
 
 class BuildAssetsCommandTest extends TestCase
 {
@@ -11,8 +11,8 @@ class BuildAssetsCommandTest extends TestCase
         $this->artisan('w4-native:build-assets')
             ->assertSuccessful();
 
-        $distCss = dirname(__DIR__, 2) . '/dist/w4-native.css';
-        $distJs = dirname(__DIR__, 2) . '/dist/w4-native.js';
+        $distCss = dirname(__DIR__, 2) . '/dist/w4-native-daisy.css';
+        $distJs = dirname(__DIR__, 2) . '/dist/w4-native-daisy.js';
         $content = (string) file_get_contents($distCss);
         $jsContent = (string) file_get_contents($distJs);
 

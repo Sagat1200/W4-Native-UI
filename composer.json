@@ -1,6 +1,6 @@
 {
     "name": "w4/native-daisy",
-    "description": "Paquete de componentes con biblioteca visual de estilos inspirados en DaisyUI para Laravel PHP.",
+    "description": "Paquete de componentes de Interfaz de Usuario inspirado en DaisyUI para Laravel PHP.",
     "type": "library",
     "license": "MIT",
     "keywords": [
@@ -31,6 +31,7 @@
     "require": {
         "php": "^8.3",
         "composer/installers": "^2.0",
+        "gehrisandro/tailwind-merge-php": "^1.2",
         "laravel/framework": "^13.0"
     },
     "require-dev": {

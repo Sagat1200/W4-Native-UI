@@ -1,12 +1,12 @@
-# W4-Native-UI: Arquitectura
+# W4-Native-Daisy: Arquitectura
 
 ---
 
 ## 1. Introducción
 
-Este documento describe la **arquitectura técnica de W4-Native-UI**, la biblioteca visual nativa del ecosistema **W4**.
+Este documento describe la **arquitectura técnica de W4-Native-Daisy**, la biblioteca de componentes de interfaz de usuario, visual y nativa del ecosistema **W4**.
 
-W4-Native-UI proporciona la **capa visual** para los componentes definidos en **W4-UI-Framework**, permitiendo desacoplar completamente:
+W4-Native-Daisy proporciona la **capa visual** para los componentes definidos en **W4-UI-Framework**, permitiendo desacoplar completamente:
 
 * lógica de componentes
 * resolución de themes

@@ -5,17 +5,17 @@ namespace W4\Native\Daisy\Providers;
 use Illuminate\Support\ServiceProvider;
 use W4\Native\Daisy\Console\Commands\BuildNativeDaisyAssetsCommand;
 use W4\Native\Daisy\Console\Commands\InstallNativeDaisyCommand;
-use W4\Native\Services\Provider\Components\FeedBack\W4NativeFeedBackService;
-use W4\Native\Services\Provider\Components\Form\W4NativeFormService;
-use W4\Native\Services\Provider\Components\Interactive\W4NativeInteractiveService;
-use W4\Native\Services\Provider\Components\Layout\W4NativeLayoutService;
-use W4\Native\Services\Provider\Components\UI\W4NativeUI;
-use W4\Native\Services\Provider\Directives\W4NativeDirectiveService;
-use W4\Native\Services\Provider\Route\W4NativeUIRouteService;
-use W4\Native\Services\Themes\W4NativeThemeService;
-use W4\Native\Support\ThemeManifest;
-use W4\Native\Support\ThemeRegistry;
-use W4\Native\Tools\Themes\W4NativeTheme;
+use W4\Native\Daisy\Services\Provider\Components\FeedBack\W4NativeFeedBackService;
+use W4\Native\Daisy\Services\Provider\Components\Form\W4NativeFormService;
+use W4\Native\Daisy\Services\Provider\Components\Interactive\W4NativeInteractiveService;
+use W4\Native\Daisy\Services\Provider\Components\Layout\W4NativeLayoutService;
+use W4\Native\Daisy\Services\Provider\Components\UI\W4NativeUI;
+use W4\Native\Daisy\Services\Provider\Directives\W4NativeDaisyDirectiveService;
+use W4\Native\Daisy\Services\Provider\Route\W4NativeDaisyUIRouteService;
+use W4\Native\Daisy\Services\Themes\W4NativeDaisyThemeService;
+use W4\Native\Daisy\Support\ThemeManifest;
+use W4\Native\Daisy\Support\ThemeRegistry;
+use W4\Native\Daisy\Tools\Themes\W4NativeDaisyTheme;
 
 class W4NativeDaisyServiceProvider extends ServiceProvider
 {
@@ -34,13 +34,13 @@ class W4NativeDaisyServiceProvider extends ServiceProvider
         $this->app->singleton(ThemeRegistry::class, function () {
             $registry = new ThemeRegistry();
 
-            W4NativeThemeService::registerPresets($registry);
+            W4NativeDaisyThemeService::registerPresets($registry);
 
             return $registry;
         });
 
-        $this->app->singleton(W4NativeTheme::class, function ($app) {
-            return new W4NativeTheme(
+        $this->app->singleton(W4NativeDaisyTheme::class, function ($app) {
+            return new W4NativeDaisyTheme(
                 $app->make(ThemeRegistry::class),
                 $app->make(ThemeManifest::class),
                 array_merge(
@@ -62,9 +62,9 @@ class W4NativeDaisyServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom($packageRoot . '/resources/views', 'w4-native');
 
-        W4NativeDirectiveService::register();
+        W4NativeDaisyDirectiveService::register();
 
-        W4NativeUIRouteService::registerRoutes();
+        W4NativeDaisyUIRouteService::registerRoutes();
 
         if ($this->app->runningInConsole()) {
             if (is_file($configPath)) {

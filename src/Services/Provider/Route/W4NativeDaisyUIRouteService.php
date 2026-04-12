@@ -1,10 +1,10 @@
 <?php
 
-namespace W4\Native\Services\Provider\Route;
+namespace W4\Native\Daisy\Services\Provider\Route;
 
 use Illuminate\Support\Facades\Route;
 
-class W4NativeUIRouteService
+class W4NativeDaisyUIRouteService
 {
     public static function registerRoutes()
     {

@@ -1,14 +1,14 @@
-# W4-Native: Contexto del proyecto
+# W4-Native-Daisy: Contexto del proyecto
 
 ---
 
 ## 1. Introducción
 
-**W4-Native** es la biblioteca visual oficial del ecosistema **W4**, diseñada para proporcionar un sistema de estilos y componentes UI consistente, extensible y desacoplado de frameworks externos.
+**W4-Native-Daisy** es una biblioteca de componentes de interfaz de usuario oficial del ecosistema **W4**, diseñada para proporcionar un sistema de estilos y componentes UI consistente, extensible y desacoplado de frameworks externos.
 
 El objetivo principal del paquete es ofrecer una **implementación visual nativa** para **W4-UI-Framework**, evitando depender directamente de bibliotecas externas como DaisyUI, Bootstrap o frameworks de componentes similares.
 
-Inspirado en la ergonomía y simplicidad de herramientas modernas como DaisyUI, W4-Native proporciona:
+Inspirado en la ergonomía y simplicidad de herramientas modernas como DaisyUI, W4-Native-Daisy proporciona:
 
 * Componentes semánticos basados en clases CSS
 * Sistema de **design tokens**
@@ -68,7 +68,7 @@ Los frameworks tradicionales no están diseñados para este nivel de flexibilida
 
 ## 3. Objetivo del proyecto
 
-El objetivo de **W4-Native** es proporcionar:
+El objetivo de **W4-Native-Daisy** es proporcionar:
 
 ### 1. Sistema visual nativo para W4
 
@@ -203,7 +203,7 @@ Cada componente estará diseñado para integrarse con el **Theme Resolver Engine
 
 ## 5. Relación con W4-UI-Framework
 
-**W4-Native no es un framework de componentes PHP.**
+**W4-Native-Daisy no es un framework de componentes PHP.**
 
 La responsabilidad del paquete es **únicamente visual**.
 
@@ -219,7 +219,7 @@ Responsable de:
 * Renderer Engine
 * Integración con Blade / Livewire / Inertia
 
-### W4-Native
+### W4-Native-Daisy
 
 Responsable de:
 
@@ -388,13 +388,13 @@ En fases futuras, W4-Native podrá incluir:
 * exportación de design tokens
 * integración con herramientas de diseño
 
-El objetivo a largo plazo es que **W4-Native se convierta en el sistema visual estándar del ecosistema W4 para aplicaciones Laravel modernas.**
+El objetivo a largo plazo es que **W4-Native-Daisy se convierta en el sistema visual estándar del ecosistema W4 para aplicaciones Laravel modernas.**
 
 ---
 
 ## 12. Conclusión
 
-W4-Native representa la capa visual del ecosistema W4.
+W4-Native-Daisy representa la capa visual del ecosistema W4.
 
 Al separar la lógica de los componentes del sistema visual, el ecosistema puede ofrecer:
 
