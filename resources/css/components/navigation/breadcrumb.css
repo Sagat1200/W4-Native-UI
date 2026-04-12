@@ -1,0 +1,79 @@
+/* ==========================================================================
+   BreadCrumb Component
+   Native W4 Visual Engine implementation Layout Morphology
+   ========================================================================== */
+
+.w4-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--w4-base-content);
+  font-size: var(--w4-text-sm);
+  gap: var(--w4-spacing-2);
+}
+
+.w4-breadcrumb ol,
+.w4-breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: var(--w4-spacing-2);
+}
+
+.w4-breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.w4-breadcrumb li:not(:last-child)::after {
+  content: "/";
+  display: block;
+  margin-inline-start: var(--w4-spacing-2);
+  color: var(--w4-base-content);
+  opacity: 0.5;
+}
+
+.w4-breadcrumb a {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  gap: var(--w4-spacing-1);
+}
+
+.w4-breadcrumb a:hover,
+.w4-breadcrumb a:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+  outline: none;
+}
+
+.w4-breadcrumb li:last-child a,
+.w4-breadcrumb li:last-child span {
+  opacity: 1;
+  font-weight: var(--w4-font-semibold);
+}
+
+/* Sizes */
+.w4-breadcrumb.w4-size-xs { font-size: var(--w4-text-xs); }
+.w4-breadcrumb.w4-size-sm { font-size: var(--w4-text-sm); }
+.w4-breadcrumb.w4-size-md { font-size: var(--w4-text-base); }
+.w4-breadcrumb.w4-size-lg { font-size: var(--w4-text-lg); }
+.w4-breadcrumb.w4-size-xl { font-size: var(--w4-text-xl); }
+
+/* Variants */
+.w4-breadcrumb.w4-variant-primary { color: var(--w4-primary); }
+.w4-breadcrumb.w4-variant-secondary { color: var(--w4-secondary); }
+.w4-breadcrumb.w4-variant-accent { color: var(--w4-accent); }
+.w4-breadcrumb.w4-variant-neutral { color: var(--w4-neutral); }
+.w4-breadcrumb.w4-variant-base-100 { color: var(--w4-base-content); }
+.w4-breadcrumb.w4-variant-base-200 { color: var(--w4-base-content); }
+.w4-breadcrumb.w4-variant-base-300 { color: var(--w4-base-content); }

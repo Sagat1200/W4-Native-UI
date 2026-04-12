@@ -1,0 +1,94 @@
+/* ==========================================================================
+   SideBar Component
+   Native W4 Visual Engine implementation Layout Morphology
+   ========================================================================== */
+
+.w4-sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--w4-base-100);
+  color: var(--w4-base-content);
+  block-size: 100vh;
+  inline-size: 16rem; /* default md width */
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width 0.3s ease, transform 0.3s ease;
+  box-shadow: var(--w4-shadow-md);
+  flex-shrink: 0;
+  z-index: 30;
+}
+
+/* Fixed State */
+.w4-sidebar-fixed {
+  position: fixed;
+  inset-block-start: 0;
+  inset-block-end: 0;
+}
+
+/* Alignments */
+.w4-sidebar-left {
+  inset-inline-start: 0;
+  border-inline-end: 1px solid var(--w4-base-200);
+}
+
+.w4-sidebar-right {
+  inset-inline-end: 0;
+  border-inline-start: 1px solid var(--w4-base-200);
+}
+
+/* Off-canvas behavior (Open/Closed) */
+/* By default, we might want it transformed out on mobile, but here we provide the classes for JS toggling */
+.w4-sidebar:not(.w4-sidebar-open) {
+  /* Default closed state for mobile if handled via fixed off-canvas, but we use collapsed for desktop */
+}
+
+/* Collapsed State */
+.w4-sidebar-collapsed {
+  inline-size: 4rem; /* icon-only mode */
+}
+.w4-sidebar-collapsed .w4-sidebar-text,
+.w4-sidebar-collapsed .w4-menu li > a > span {
+  display: none;
+}
+
+/* Mobile Off-canvas Open State */
+.w4-sidebar-left:not(.w4-sidebar-open).w4-sidebar-fixed {
+  transform: translateX(-100%);
+}
+.w4-sidebar-left.w4-sidebar-open.w4-sidebar-fixed {
+  transform: translateX(0);
+}
+
+.w4-sidebar-right:not(.w4-sidebar-open).w4-sidebar-fixed {
+  transform: translateX(100%);
+}
+.w4-sidebar-right.w4-sidebar-open.w4-sidebar-fixed {
+  transform: translateX(0);
+}
+
+/* Sizes (Widths) */
+.w4-sidebar.w4-size-xs { inline-size: 12rem; }
+.w4-sidebar.w4-size-sm { inline-size: 14rem; }
+.w4-sidebar.w4-size-md { inline-size: 16rem; }
+.w4-sidebar.w4-size-lg { inline-size: 20rem; }
+.w4-sidebar.w4-size-xl { inline-size: 24rem; }
+.w4-sidebar.w4-size-full { inline-size: 100%; }
+
+/* Collapsed sizes */
+.w4-sidebar-collapsed.w4-size-xs { inline-size: 3rem; }
+.w4-sidebar-collapsed.w4-size-sm { inline-size: 3.5rem; }
+.w4-sidebar-collapsed.w4-size-md { inline-size: 4rem; }
+.w4-sidebar-collapsed.w4-size-lg { inline-size: 5rem; }
+.w4-sidebar-collapsed.w4-size-xl { inline-size: 6rem; }
+
+/* Variants */
+.w4-sidebar.w4-variant-primary { background-color: var(--w4-primary); color: var(--w4-primary-content); border-color: transparent; }
+.w4-sidebar.w4-variant-secondary { background-color: var(--w4-secondary); color: var(--w4-secondary-content); border-color: transparent; }
+.w4-sidebar.w4-variant-accent { background-color: var(--w4-accent); color: var(--w4-accent-content); border-color: transparent; }
+.w4-sidebar.w4-variant-info { background-color: var(--w4-info); color: var(--w4-info-content); border-color: transparent; }
+.w4-sidebar.w4-variant-success { background-color: var(--w4-success); color: var(--w4-success-content); border-color: transparent; }
+.w4-sidebar.w4-variant-warning { background-color: var(--w4-warning); color: var(--w4-warning-content); border-color: transparent; }
+.w4-sidebar.w4-variant-error { background-color: var(--w4-error); color: var(--w4-error-content); border-color: transparent; }
+.w4-sidebar.w4-variant-neutral { background-color: var(--w4-neutral); color: var(--w4-neutral-content); border-color: transparent; }
+.w4-sidebar.w4-variant-base-200 { background-color: var(--w4-base-200); }
+.w4-sidebar.w4-variant-base-300 { background-color: var(--w4-base-300); }

@@ -40,6 +40,14 @@ import W4Label from './components/ui/label.js';
 import W4Link from './components/ui/link.js';
 import W4Text from './components/ui/text.js';
 
+// Import navigation components
+import W4Breadcrumb from './components/navigation/breadcrumb.js';
+import W4Dropdown from './components/navigation/dropdown.js';
+import W4Menu from './components/navigation/menu.js';
+import W4Navbar from './components/navigation/navbar.js';
+import W4Sidebar from './components/navigation/sidebar.js';
+import W4Tab from './components/navigation/tab.js';
+
 // Import core logic (previous IIFE logic wrapped in a modern ES6 structure)
 import W4Core from './core.js';
 
@@ -84,7 +92,15 @@ class W4NativeUI {
         W4Link.init();
         W4Text.init();
 
-        // 5. Initialize Core Event System (Data attributes, ARIA sync, Forms)
+        // 5. Initialize Navigation Components
+        W4Breadcrumb.init();
+        W4Dropdown.init();
+        W4Menu.init();
+        W4Navbar.init();
+        W4Sidebar.init();
+        W4Tab.init();
+
+        // 6. Initialize Core Event System (Data attributes, ARIA sync, Forms)
         W4Core.init();
     }
 
@@ -124,6 +140,14 @@ class W4NativeUI {
     static get Label() { return W4Label; }
     static get Link() { return W4Link; }
     static get Text() { return W4Text; }
+
+    // Navigation APIs
+    static get Breadcrumb() { return W4Breadcrumb; }
+    static get Dropdown() { return W4Dropdown; }
+    static get Menu() { return W4Menu; }
+    static get Navbar() { return W4Navbar; }
+    static get Sidebar() { return W4Sidebar; }
+    static get Tab() { return W4Tab; }
 
     static get Core() { return W4Core; }
 }

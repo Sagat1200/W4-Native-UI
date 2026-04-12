@@ -1,0 +1,77 @@
+/* ==========================================================================
+   NavBar Component
+   Native W4 Visual Engine implementation Layout Morphology
+   ========================================================================== */
+
+.w4-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--w4-spacing-2) var(--w4-spacing-4);
+  background-color: var(--w4-base-100);
+  color: var(--w4-base-content);
+  inline-size: 100%;
+  min-block-size: 4rem;
+  box-sizing: border-box;
+  gap: var(--w4-spacing-4);
+}
+
+.w4-navbar-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.w4-navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.w4-navbar-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+/* States */
+.w4-navbar-sticky {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 40;
+}
+
+.w4-navbar-fixed {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  z-index: 40;
+}
+
+.w4-navbar-transparent {
+  background-color: transparent;
+}
+
+/* Sizes (affects min-height and padding) */
+.w4-navbar.w4-size-xs { min-block-size: 2.5rem; padding: var(--w4-spacing-1) var(--w4-spacing-2); }
+.w4-navbar.w4-size-sm { min-block-size: 3rem; padding: var(--w4-spacing-2) var(--w4-spacing-3); }
+.w4-navbar.w4-size-md { min-block-size: 4rem; }
+.w4-navbar.w4-size-lg { min-block-size: 5rem; padding: var(--w4-spacing-3) var(--w4-spacing-5); }
+.w4-navbar.w4-size-xl { min-block-size: 6rem; padding: var(--w4-spacing-4) var(--w4-spacing-6); }
+
+/* Variants */
+.w4-navbar.w4-variant-primary { background-color: var(--w4-primary); color: var(--w4-primary-content); }
+.w4-navbar.w4-variant-secondary { background-color: var(--w4-secondary); color: var(--w4-secondary-content); }
+.w4-navbar.w4-variant-accent { background-color: var(--w4-accent); color: var(--w4-accent-content); }
+.w4-navbar.w4-variant-info { background-color: var(--w4-info); color: var(--w4-info-content); }
+.w4-navbar.w4-variant-success { background-color: var(--w4-success); color: var(--w4-success-content); }
+.w4-navbar.w4-variant-warning { background-color: var(--w4-warning); color: var(--w4-warning-content); }
+.w4-navbar.w4-variant-error { background-color: var(--w4-error); color: var(--w4-error-content); }
+.w4-navbar.w4-variant-neutral { background-color: var(--w4-neutral); color: var(--w4-neutral-content); }
+.w4-navbar.w4-variant-base-200 { background-color: var(--w4-base-200); }
+.w4-navbar.w4-variant-base-300 { background-color: var(--w4-base-300); }
+.w4-navbar.w4-variant-ghost { background-color: transparent; }

@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Tab Component
+   Native W4 Visual Engine implementation Layout Morphology
+   ========================================================================== */
+
+.w4-tabs {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--w4-spacing-1);
+}
+
+.w4-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color: var(--w4-base-content);
+  opacity: 0.7;
+  padding: var(--w4-spacing-2) var(--w4-spacing-4);
+  font-size: var(--w4-text-sm);
+  font-weight: var(--w4-font-medium);
+  transition: opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  position: relative;
+}
+
+.w4-tab:hover,
+.w4-tab:focus-visible {
+  opacity: 1;
+  outline: none;
+}
+
+/* Active State */
+.w4-tab-active,
+.w4-tab:active {
+  opacity: 1;
+  color: var(--w4-base-content);
+}
+
+/* Disabled State */
+.w4-tab-disabled,
+.w4-tab[disabled] {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Bordered Tabs */
+.w4-tab-bordered {
+  border-block-end: 2px solid transparent;
+}
+.w4-tab-bordered.w4-tab-active {
+  border-block-end-color: var(--w4-base-content);
+}
+
+/* Lifted Tabs */
+.w4-tab-lifted {
+  border: 1px solid transparent;
+  border-block-end: none;
+  border-start-start-radius: var(--w4-radius-md);
+  border-start-end-radius: var(--w4-radius-md);
+}
+.w4-tab-lifted.w4-tab-active {
+  background-color: var(--w4-base-100);
+  border-color: var(--w4-base-200);
+  border-block-end: 1px solid var(--w4-base-100);
+  margin-block-end: -1px; /* Overlap bottom border */
+  z-index: 1;
+}
+
+/* Boxed Tabs (Pills) */
+.w4-tabs-boxed {
+  background-color: var(--w4-base-200);
+  padding: var(--w4-spacing-1);
+  border-radius: var(--w4-radius-md);
+}
+.w4-tab-boxed {
+  border-radius: var(--w4-radius-sm);
+}
+.w4-tab-boxed.w4-tab-active {
+  background-color: var(--w4-base-100);
+  box-shadow: var(--w4-shadow-sm);
+}
+
+/* Sizes */
+.w4-tab.w4-size-xs { font-size: var(--w4-text-xs); padding: var(--w4-spacing-1) var(--w4-spacing-2); }
+.w4-tab.w4-size-sm { font-size: var(--w4-text-sm); padding: var(--w4-spacing-1) var(--w4-spacing-3); }
+.w4-tab.w4-size-md { font-size: var(--w4-text-base); }
+.w4-tab.w4-size-lg { font-size: var(--w4-text-lg); padding: var(--w4-spacing-3) var(--w4-spacing-5); }
+.w4-tab.w4-size-xl { font-size: var(--w4-text-xl); padding: var(--w4-spacing-4) var(--w4-spacing-6); }
+
+/* Variants */
+.w4-tab.w4-variant-primary.w4-tab-active { color: var(--w4-primary); }
+.w4-tab-bordered.w4-variant-primary.w4-tab-active { border-block-end-color: var(--w4-primary); }
+.w4-tab-boxed.w4-variant-primary.w4-tab-active { background-color: var(--w4-primary); color: var(--w4-primary-content); }
+
+.w4-tab.w4-variant-secondary.w4-tab-active { color: var(--w4-secondary); }
+.w4-tab-bordered.w4-variant-secondary.w4-tab-active { border-block-end-color: var(--w4-secondary); }
+.w4-tab-boxed.w4-variant-secondary.w4-tab-active { background-color: var(--w4-secondary); color: var(--w4-secondary-content); }
+
+.w4-tab.w4-variant-accent.w4-tab-active { color: var(--w4-accent); }
+.w4-tab-bordered.w4-variant-accent.w4-tab-active { border-block-end-color: var(--w4-accent); }
+.w4-tab-boxed.w4-variant-accent.w4-tab-active { background-color: var(--w4-accent); color: var(--w4-accent-content); }
+
+.w4-tab.w4-variant-info.w4-tab-active { color: var(--w4-info); }
+.w4-tab-bordered.w4-variant-info.w4-tab-active { border-block-end-color: var(--w4-info); }
+.w4-tab-boxed.w4-variant-info.w4-tab-active { background-color: var(--w4-info); color: var(--w4-info-content); }
+
+.w4-tab.w4-variant-success.w4-tab-active { color: var(--w4-success); }
+.w4-tab-bordered.w4-variant-success.w4-tab-active { border-block-end-color: var(--w4-success); }
+.w4-tab-boxed.w4-variant-success.w4-tab-active { background-color: var(--w4-success); color: var(--w4-success-content); }
+
+.w4-tab.w4-variant-warning.w4-tab-active { color: var(--w4-warning); }
+.w4-tab-bordered.w4-variant-warning.w4-tab-active { border-block-end-color: var(--w4-warning); }
+.w4-tab-boxed.w4-variant-warning.w4-tab-active { background-color: var(--w4-warning); color: var(--w4-warning-content); }
+
+.w4-tab.w4-variant-error.w4-tab-active { color: var(--w4-error); }
+.w4-tab-bordered.w4-variant-error.w4-tab-active { border-block-end-color: var(--w4-error); }
+.w4-tab-boxed.w4-variant-error.w4-tab-active { background-color: var(--w4-error); color: var(--w4-error-content); }

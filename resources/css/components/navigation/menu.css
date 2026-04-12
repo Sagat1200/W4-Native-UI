@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Menu Component
+   Native W4 Visual Engine implementation Layout Morphology
+   ========================================================================== */
+
+.w4-menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: var(--w4-spacing-2);
+  margin: 0;
+  gap: var(--w4-spacing-1);
+  background-color: var(--w4-base-100);
+  border-radius: var(--w4-radius-menu, var(--w4-radius-md));
+  color: var(--w4-base-content);
+}
+
+.w4-menu-horizontal {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.w4-menu-vertical {
+  flex-direction: column;
+}
+
+.w4-menu li {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.w4-menu li > a,
+.w4-menu li > button,
+.w4-menu li > span {
+  display: flex;
+  align-items: center;
+  gap: var(--w4-spacing-2);
+  padding: var(--w4-spacing-2) var(--w4-spacing-4);
+  border-radius: var(--w4-radius-md);
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: start;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: var(--w4-text-sm);
+  user-select: none;
+}
+
+.w4-menu li > a:hover,
+.w4-menu li > button:hover,
+.w4-menu li > a:focus-visible,
+.w4-menu li > button:focus-visible {
+  background-color: var(--w4-base-200);
+  outline: none;
+}
+
+.w4-menu li > a.active,
+.w4-menu li > button.active {
+  background-color: var(--w4-neutral);
+  color: var(--w4-neutral-content);
+}
+
+.w4-menu-compact li > a,
+.w4-menu-compact li > button {
+  padding: var(--w4-spacing-1) var(--w4-spacing-2);
+  font-size: var(--w4-text-xs);
+}
+
+.w4-menu-expanded {
+  inline-size: 100%;
+}
+
+.w4-menu-expanded li > a,
+.w4-menu-expanded li > button {
+  justify-content: space-between;
+}
+
+/* Sub-menus */
+.w4-menu ul {
+  list-style: none;
+  padding-inline-start: var(--w4-spacing-4);
+  margin: var(--w4-spacing-1) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--w4-spacing-1);
+}
+
+.w4-menu-horizontal > li > ul {
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline-start: 0;
+  background-color: var(--w4-base-100);
+  padding: var(--w4-spacing-2);
+  border-radius: var(--w4-radius-md);
+  box-shadow: var(--w4-shadow-lg);
+  min-inline-size: 12rem;
+  z-index: 50;
+  display: none; /* Controlled via JS or hover */
+}
+
+/* Sizes */
+.w4-menu.w4-size-xs li > a { font-size: var(--w4-text-xs); padding: var(--w4-spacing-1) var(--w4-spacing-2); }
+.w4-menu.w4-size-sm li > a { font-size: var(--w4-text-sm); padding: var(--w4-spacing-1) var(--w4-spacing-3); }
+.w4-menu.w4-size-md li > a { font-size: var(--w4-text-base); }
+.w4-menu.w4-size-lg li > a { font-size: var(--w4-text-lg); padding: var(--w4-spacing-3) var(--w4-spacing-5); }
+.w4-menu.w4-size-xl li > a { font-size: var(--w4-text-xl); padding: var(--w4-spacing-4) var(--w4-spacing-6); }
+
+/* Variants (applies active background colors) */
+.w4-menu.w4-variant-primary li > a.active { background-color: var(--w4-primary); color: var(--w4-primary-content); }
+.w4-menu.w4-variant-secondary li > a.active { background-color: var(--w4-secondary); color: var(--w4-secondary-content); }
+.w4-menu.w4-variant-accent li > a.active { background-color: var(--w4-accent); color: var(--w4-accent-content); }
+.w4-menu.w4-variant-info li > a.active { background-color: var(--w4-info); color: var(--w4-info-content); }
+.w4-menu.w4-variant-success li > a.active { background-color: var(--w4-success); color: var(--w4-success-content); }
+.w4-menu.w4-variant-warning li > a.active { background-color: var(--w4-warning); color: var(--w4-warning-content); }
+.w4-menu.w4-variant-error li > a.active { background-color: var(--w4-error); color: var(--w4-error-content); }
