@@ -1,10 +1,10 @@
-# W4-Native-Daisy: Contexto del proyecto
+# W4-Native-UI: Contexto del proyecto
 
 ---
 
 ## 1. Introducción
 
-**W4-Native-Daisy** es una biblioteca de componentes de interfaz de usuario oficial del ecosistema **W4**, diseñada para proporcionar un sistema de estilos y componentes UI consistente, extensible y desacoplado de frameworks externos.
+**W4-Native-UI** es una biblioteca de componentes de interfaz de usuario oficial del ecosistema **W4**, diseñada para proporcionar un sistema de estilos y componentes UI consistente, extensible y desacoplado de frameworks externos.
 
 El objetivo principal del paquete es ofrecer una **implementación visual nativa** para **W4-UI-Framework**, evitando depender directamente de bibliotecas externas como DaisyUI, Bootstrap o frameworks de componentes similares.
 
@@ -68,9 +68,9 @@ Los frameworks tradicionales no están diseñados para este nivel de flexibilida
 
 ## 3. Objetivo del proyecto
 
-El objetivo de **W4-Native-Daisy** es proporcionar:
+El objetivo de **W4-Native-UI** es proporcionar:
 
-### 1. Sistema visual nativo para W4
+### 1. Sistema visual nativo para W4-UI-Framework
 
 Una biblioteca UI que funcione como la **implementación oficial visual** de **W4-UI-Framework**.
 
@@ -150,7 +150,7 @@ Los presets modifican los tokens para cambiar la apariencia completa de la inter
 
 ### Componentes UI base
 
-La arquitectura del paquete cuenta con una inyección limpia mediante su **ServiceProvider** y un conjunto de **Directivas Blade** para facilitar su integración (`@W4NativeStyles`, `@W4NativeScripts`, `@W4NativeInit`, `@W4NativeLivewire`).
+La arquitectura del paquete cuenta con una inyección limpia mediante su **ServiceProvider** y un conjunto de **Directivas Blade** para facilitar su integración (`@W4NativeUI-Styles`, `@W4NativeUI-Scripts`, `@W4NativeUI-Init`, `@W4NativeUI-Livewire`).
 
 Los componentes están separados arquitectónicamente en sus respectivos servicios de dominio (UI, Forms, Layout, Feedback) implementando contratos robustos y utilizando un `ThemeRegistry`.
 
@@ -203,7 +203,7 @@ Cada componente estará diseñado para integrarse con el **Theme Resolver Engine
 
 ## 5. Relación con W4-UI-Framework
 
-**W4-Native-Daisy no es un framework de componentes PHP.**
+**W4-Native-UI no es un framework de componentes PHP.**
 
 La responsabilidad del paquete es **únicamente visual**.
 
@@ -219,7 +219,7 @@ Responsable de:
 * Renderer Engine
 * Integración con Blade / Livewire / Inertia
 
-### W4-Native-Daisy
+### W4-Native-UI
 
 Responsable de:
 

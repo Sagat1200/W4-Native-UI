@@ -322,14 +322,14 @@ Ejemplo de configuración:
 ```php
 return [
 
-    'default_preset' => 'native.default',
+    'default_preset' => 'native-ui.default',
 
     'available_presets' => [
-        'native.default',
-        'native.dark',
-        'native.corporate',
-        'native.soft',
-        'native.night',
+        'native-ui.default',
+        'native-ui.dark',
+        'native-ui.corporate',
+        'native-ui.soft',
+        'native-ui.night',
     ],
 
 ];

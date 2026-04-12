@@ -1,12 +1,12 @@
-# W4-Native-Daisy: Arquitectura
+# W4-Native-UI: Arquitectura
 
 ---
 
 ## 1. Introducción
 
-Este documento describe la **arquitectura técnica de W4-Native-Daisy**, la biblioteca de componentes de interfaz de usuario, visual y nativa del ecosistema **W4**.
+Este documento describe la **arquitectura técnica de W4-Native-UI**, la biblioteca de componentes de interfaz de usuario, visual y nativa del ecosistema **W4**.
 
-W4-Native-Daisy proporciona la **capa visual** para los componentes definidos en **W4-UI-Framework**, permitiendo desacoplar completamente:
+W4-Native-UI proporciona la **capa visual** para los componentes definidos en **W4-UI-Framework**, permitiendo desacoplar completamente:
 
 * lógica de componentes
 * resolución de themes
@@ -131,7 +131,7 @@ Cada preset redefine los valores de los tokens.
 Ejemplo:
 
 ```html
-<html data-theme="native.dark">
+<html data-theme="native-ui.dark">
 ```
 
 ---
@@ -168,8 +168,8 @@ Ejemplo simplificado:
 El paquete distribuye assets compilados:
 
 ```text
-dist/w4-native.css
-dist/w4-native.js (opcional)
+dist/w4-native-ui.css
+dist/w4-native-ui.js (opcional)
 ```
 
 Estos assets incluyen:
@@ -240,13 +240,13 @@ data-theme
 Ejemplo:
 
 ```html
-<html data-theme="native.dark">
+<html data-theme="native-ui.dark">
 ```
 
 Internamente:
 
 ```css
-[data-theme="native.dark"] {
+[data-theme="native-ui.dark"] {
   --w4-primary: 217 91% 60%;
   --w4-base-100: 222 47% 11%;
 }
@@ -301,7 +301,7 @@ w4-native-ui
 │  ├─ NativeUiServiceProvider.php
 │  │
 │  ├─ Themes
-│  │   ├─ NativeTheme.php
+│  │   ├─ NativeUITheme.php
 │  │   ├─ Presets
 │  │   └─ Components
 │  │
@@ -379,9 +379,9 @@ Drawer
 ### Nuevos presets
 
 ```text
-native.dracula
-native.cyber
-native.minimal
+native-ui.dracula
+native-ui.cyber
+native-ui.minimal
 ```
 
 ### Tokens personalizados
@@ -397,9 +397,9 @@ El sistema soporta aplicaciones SaaS donde cada tenant puede usar un theme difer
 Ejemplo conceptual:
 
 ```text
-Tenant A → native.default
-Tenant B → native.dark
-Tenant C → native.corporate
+Tenant A → native-ui.default
+Tenant B → native-ui.dark
+Tenant C → native-ui.corporate
 ```
 
 Esto puede configurarse dinámicamente en la aplicación.

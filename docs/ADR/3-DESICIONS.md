@@ -1,4 +1,4 @@
-# W4-Native-Daisy: Decisions (ADR)
+# W4-Native-UI: Decisions (ADR)
 
 Este documento registra las **Architectural Decision Records (ADR)** del proyecto.
 
@@ -14,7 +14,7 @@ Esto permite mantener trazabilidad técnica del proyecto.
 
 ## ADR-010
 
-### W4-Native-Daisy como capa visual oficial del ecosistema W4
+### W4-Native-UI como capa visual oficial del ecosistema W4
 
 #### Estado
 
@@ -40,7 +40,7 @@ Si `W4-Native` manejara la lógica, se acoplaría al framework. Si el framework 
 Se utiliza el atributo `data-w4-state` como puente de comunicación:
 
 1. `W4-UI-Framework` define los estados mediante Enums PHP (ej. `ButtonComponentState::LOADING`) y los inyecta en el atributo `data-w4-state`.
-2. `W4-Native` utiliza un motor JavaScript (`w4-native.js`) basado en `MutationObserver` que lee `data-w4-state`, aplica las clases CSS correspondientes (ej. `w4-button-loading`) y sincroniza automáticamente los atributos de accesibilidad ARIA (`aria-busy`, `aria-disabled`, `aria-hidden`, etc.).
+2. `W4-Native-UI` utiliza un motor JavaScript (`w4-native-ui.js`) basado en `MutationObserver` que lee `data-w4-state`, aplica las clases CSS correspondientes (ej. `w4-button-loading`) y sincroniza automáticamente los atributos de accesibilidad ARIA (`aria-busy`, `aria-disabled`, `aria-hidden`, etc.).
 
 #### Consecuencias (ADR-012)
 

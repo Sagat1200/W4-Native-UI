@@ -1,6 +1,6 @@
 {
-    "name": "w4/native-daisy",
-    "description": "Paquete de componentes de Interfaz de Usuario para aplicaciones empresariales inspirados en DaisyUI para Laravel PHP.",
+    "name": "w4/native-ui",
+    "description": "Paquete de Interfaces de Usuario para aplicaciones empresariales inspirados en DaisyUI para Laravel PHP.",
     "type": "library",
     "license": "MIT",
     "keywords": [
@@ -11,12 +11,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "W4\\Native\\": "src/"
+            "W4\\NativeUI\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "W4\\Native\\Tests\\": "tests/"
+            "W4\\NativeUI\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -24,7 +24,7 @@
             "name": "Francisco J. Morales", 
             "email": "franciscomorales@w4.software",
             "role": "Developer",
-            "homepage": "https://w4.software/packages/native"
+            "homepage": "https://w4.software/packages/native-ui"
         }
     ],
     "require": {
@@ -40,7 +40,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "W4\\Native\\Providers\\NativeServiceProvider" 
+                "W4\\NativeUI\\Providers\\NativeUIServiceProvider" 
             ]
         }
     },
