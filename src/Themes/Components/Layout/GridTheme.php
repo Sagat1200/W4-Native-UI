@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\Native\Themes\Components\Layout;
+namespace W4\NativeUI\Themes\Components\Layout;
 
-use W4\Native\Tools\Themes\AbstractComponentTheme;
+use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
 class GridTheme extends AbstractComponentTheme
 {

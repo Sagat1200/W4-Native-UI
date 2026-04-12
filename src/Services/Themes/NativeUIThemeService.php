@@ -1,42 +1,42 @@
 <?php
 
-namespace W4\Native\Services\Themes;
+namespace W4\NativeUI\Services\Themes;
 
-use W4\Native\Support\ThemeRegistry;
-use W4\Native\Themes\Presets\CorporatePreset;
-use W4\Native\Themes\Presets\DarkPreset;
-use W4\Native\Themes\Presets\NightPreset;
-use W4\Native\Themes\Presets\SynthwavePreset;
-use W4\Native\Themes\Presets\LightPreset;
-use W4\Native\Themes\Presets\CupcakePreset;
-use W4\Native\Themes\Presets\BumblebeePreset;
-use W4\Native\Themes\Presets\EmeraldPreset;
-use W4\Native\Themes\Presets\RetroPreset;
-use W4\Native\Themes\Presets\CyberpunkPreset;
-use W4\Native\Themes\Presets\ValentinePreset;
-use W4\Native\Themes\Presets\HalloweenPreset;
-use W4\Native\Themes\Presets\GardenPreset;
-use W4\Native\Themes\Presets\ForestPreset;
-use W4\Native\Themes\Presets\AquaPreset;
-use W4\Native\Themes\Presets\LofiPreset;
-use W4\Native\Themes\Presets\PastelPreset;
-use W4\Native\Themes\Presets\FantasyPreset;
-use W4\Native\Themes\Presets\WireframePreset;
-use W4\Native\Themes\Presets\BlackPreset;
-use W4\Native\Themes\Presets\LuxuryPreset;
-use W4\Native\Themes\Presets\DraculaPreset;
-use W4\Native\Themes\Presets\CmykPreset;
-use W4\Native\Themes\Presets\AutumnPreset;
-use W4\Native\Themes\Presets\BusinessPreset;
-use W4\Native\Themes\Presets\AcidPreset;
-use W4\Native\Themes\Presets\LemonadePreset;
-use W4\Native\Themes\Presets\CoffeePreset;
-use W4\Native\Themes\Presets\WinterPreset;
-use W4\Native\Themes\Presets\DimPreset;
-use W4\Native\Themes\Presets\NordPreset;
-use W4\Native\Themes\Presets\SunsetPreset;
+use W4\NativeUI\Support\ThemeRegistry;
+use W4\NativeUI\Themes\Presets\CorporatePreset;
+use W4\NativeUI\Themes\Presets\DarkPreset;
+use W4\NativeUI\Themes\Presets\NightPreset;
+use W4\NativeUI\Themes\Presets\SynthwavePreset;
+use W4\NativeUI\Themes\Presets\LightPreset;
+use W4\NativeUI\Themes\Presets\CupcakePreset;
+use W4\NativeUI\Themes\Presets\BumblebeePreset;
+use W4\NativeUI\Themes\Presets\EmeraldPreset;
+use W4\NativeUI\Themes\Presets\RetroPreset;
+use W4\NativeUI\Themes\Presets\CyberpunkPreset;
+use W4\NativeUI\Themes\Presets\ValentinePreset;
+use W4\NativeUI\Themes\Presets\HalloweenPreset;
+use W4\NativeUI\Themes\Presets\GardenPreset;
+use W4\NativeUI\Themes\Presets\ForestPreset;
+use W4\NativeUI\Themes\Presets\AquaPreset;
+use W4\NativeUI\Themes\Presets\LofiPreset;
+use W4\NativeUI\Themes\Presets\PastelPreset;
+use W4\NativeUI\Themes\Presets\FantasyPreset;
+use W4\NativeUI\Themes\Presets\WireframePreset;
+use W4\NativeUI\Themes\Presets\BlackPreset;
+use W4\NativeUI\Themes\Presets\LuxuryPreset;
+use W4\NativeUI\Themes\Presets\DraculaPreset;
+use W4\NativeUI\Themes\Presets\CmykPreset;
+use W4\NativeUI\Themes\Presets\AutumnPreset;
+use W4\NativeUI\Themes\Presets\BusinessPreset;
+use W4\NativeUI\Themes\Presets\AcidPreset;
+use W4\NativeUI\Themes\Presets\LemonadePreset;
+use W4\NativeUI\Themes\Presets\CoffeePreset;
+use W4\NativeUI\Themes\Presets\WinterPreset;
+use W4\NativeUI\Themes\Presets\DimPreset;
+use W4\NativeUI\Themes\Presets\NordPreset;
+use W4\NativeUI\Themes\Presets\SunsetPreset;
 
-class NativeThemeService
+class NativeUIThemeService
 {
     public static function registerPresets(ThemeRegistry $registry): void
     {

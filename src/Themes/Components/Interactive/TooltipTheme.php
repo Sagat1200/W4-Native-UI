@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\Native\Themes\Components\Interactive;
+namespace W4\NativeUI\Themes\Components\Interactive;
 
-use W4\Native\Tools\Themes\AbstractComponentTheme;
+use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
 class TooltipTheme extends AbstractComponentTheme
 {

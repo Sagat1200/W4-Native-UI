@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Support;
+namespace W4\NativeUI\Support;
 
 class TokenCompiler
 {

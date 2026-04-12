@@ -1,12 +1,12 @@
 <?php
 
-namespace W4\Native\Console\Commands;
+namespace W4\NativeUI\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class BuildNativeAssetsCommand extends Command
+class BuildNativeUIAssetsCommand extends Command
 {
-    protected $signature = 'w4-native:build-assets';
+    protected $signature = 'w4-native-ui:build-assets';
 
     protected $description = 'Compila assets CSS y JS en archivo dist para usar en Laravel.';
 

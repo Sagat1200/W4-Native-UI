@@ -1,14 +1,14 @@
 <?php
 
-namespace W4\Native\Themes\Presets;
+namespace W4\NativeUI\Themes\Presets;
 
-use W4\Native\Tools\Themes\AbstractPreset;
+use W4\NativeUI\Tools\Themes\AbstractPreset;
 
 class SunsetPreset extends AbstractPreset
 {
     public function name(): string
     {
-        return 'native.sunset';
+        return 'native-ui.sunset';
     }
 
     protected function overrides(): array

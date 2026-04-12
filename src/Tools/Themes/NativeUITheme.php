@@ -1,15 +1,15 @@
 <?php
 
-namespace W4\Native\Tools\Themes;
+namespace W4\NativeUI\Tools\Themes;
 
 use TailwindMerge\TailwindMerge;
 use InvalidArgumentException;
-use W4\Native\Contracts\ComponentThemeContract;
-use W4\Native\Contracts\ThemeContract;
-use W4\Native\Support\ThemeManifest;
-use W4\Native\Support\ThemeRegistry;
+use W4\NativeUI\Contracts\ComponentThemeContract;
+use W4\NativeUI\Contracts\ThemeContract;
+use W4\NativeUI\Support\ThemeManifest;
+use W4\NativeUI\Support\ThemeRegistry;
 
-class NativeTheme implements ThemeContract
+class NativeUITheme implements ThemeContract
 {
     protected array $components = [];
 

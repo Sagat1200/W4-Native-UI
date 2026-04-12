@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Support;
+namespace W4\NativeUI\Support;
 
 class ThemeManifest
 {
@@ -12,7 +12,7 @@ class ThemeManifest
     public static function fromConfig(array $config): self
     {
         return new self(
-            $config['default_preset'] ?? 'native.light',
+            $config['default_preset'] ?? 'native-ui.light',
             $config['available_presets'] ?? []
         );
     }

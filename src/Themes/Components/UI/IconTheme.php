@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\Native\Themes\Components\UI;
+namespace W4\NativeUI\Themes\Components\UI;
 
-use W4\Native\Tools\Themes\AbstractComponentTheme;
+use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
 class IconTheme extends AbstractComponentTheme
 {

@@ -1,18 +1,18 @@
 <?php
 
-namespace W4\Native\Tests\Feature;
+namespace W4\NativeUI\Tests\Feature;
 
-use W4\Native\Tests\TestCase;
+use W4\NativeUI\Tests\TestCase;
 
 class BuildAssetsCommandTest extends TestCase
 {
     public function test_compila_assets_css_en_dist(): void
     {
-        $this->artisan('w4-native:build-assets')
+        $this->artisan('w4-native-ui:build-assets')
             ->assertSuccessful();
 
-        $distCss = dirname(__DIR__, 2) . '/dist/w4-native-daisy.css';
-        $distJs = dirname(__DIR__, 2) . '/dist/w4-native-daisy.js';
+        $distCss = dirname(__DIR__, 2) . '/dist/w4-native-ui.css';
+        $distJs = dirname(__DIR__, 2) . '/dist/w4-native-ui.js';
         $content = (string) file_get_contents($distCss);
         $jsContent = (string) file_get_contents($distJs);
 
@@ -52,7 +52,7 @@ class BuildAssetsCommandTest extends TestCase
         $this->assertStringContainsString('.w4-divider-secondary', $content);
         $this->assertStringContainsString('.w4-divider-accent', $content);
         $this->assertStringContainsString('.w4-divider-muted', $content);
-        $this->assertStringContainsString('window.W4NativeUI', $jsContent);
+        $this->assertStringContainsString('window.NativeUI', $jsContent);
         $this->assertStringContainsString('data-w4-component', $jsContent);
         $this->assertStringContainsString('MutationObserver', $jsContent);
         $this->assertStringContainsString('on: function', $jsContent);

@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Contracts;
+namespace W4\NativeUI\Contracts;
 
 interface ComponentThemeContract
 {

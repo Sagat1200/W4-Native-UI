@@ -1,41 +1,41 @@
 <?php
 
-namespace W4\Native\Tests\Feature;
+namespace W4\NativeUI\Tests\Feature;
 
 use Illuminate\Support\Facades\Blade;
-use W4\Native\Tests\TestCase;
+use W4\NativeUI\Tests\TestCase;
 
 class BladeDirectivesTest extends TestCase
 {
     public function test_renderiza_directiva_w4_native_styles(): void
     {
-        $html = Blade::render('@W4NativeStyles');
+        $html = Blade::render('@NativeUI-Styles');
 
-        $this->assertStringContainsString('vendor/w4-native/w4-native-daisy.css', $html);
+        $this->assertStringContainsString('vendor/w4-native-ui/w4-native-ui.css', $html);
         $this->assertStringContainsString('rel="stylesheet"', $html);
     }
 
     public function test_renderiza_directiva_w4_native_scripts(): void
     {
-        $html = Blade::render('@W4NativeScripts');
+        $html = Blade::render('@NativeUI-Scripts');
 
-        $this->assertStringContainsString('vendor/w4-native/w4-native-daisy.js', $html);
+        $this->assertStringContainsString('vendor/w4-native-ui/w4-native-ui.js', $html);
         $this->assertStringContainsString('<script', $html);
     }
 
     public function test_renderiza_directiva_w4_native_init(): void
     {
-        $html = Blade::render('@W4NativeInit');
+        $html = Blade::render('@NativeUI-Init');
 
         $this->assertStringContainsString('DOMContentLoaded', $html);
-        $this->assertStringContainsString('window.W4Native.init(document)', $html);
+        $this->assertStringContainsString('window.NativeUI.init(document)', $html);
     }
 
     public function test_renderiza_directiva_w4_native_livewire(): void
     {
-        $html = Blade::render('@W4NativeLivewire');
+        $html = Blade::render('@NativeUI-Livewire');
 
         $this->assertStringContainsString('livewire:navigated', $html);
-        $this->assertStringContainsString('window.W4Native.init(document)', $html);
+        $this->assertStringContainsString('window.NativeUI.init(document)', $html);
     }
 }

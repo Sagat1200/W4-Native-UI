@@ -1,8 +1,8 @@
 <?php
 
-namespace W4\Native\Tools\Themes;
+namespace W4\NativeUI\Tools\Themes;
 
-use W4\Native\Contracts\ComponentThemeContract;
+use W4\NativeUI\Contracts\ComponentThemeContract;
 
 abstract class AbstractComponentTheme implements ComponentThemeContract
 {
