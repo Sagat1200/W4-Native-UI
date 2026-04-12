@@ -11,11 +11,21 @@ use W4\Native\Daisy\Support\ThemeRegistry;
 
 class W4NativeDaisyTheme implements ThemeContract
 {
+    protected array $components = [];
+
+    /**
+     * Caché de clases resueltas en memoria para reducir el overhead en runtime.
+     * @var array<string, array>
+     */
+    protected array $resolvedCache = [];
+
     public function __construct(
         protected ThemeRegistry $registry,
         protected ThemeManifest $manifest,
-        protected array $components = []
-    ) {}
+        array $components = []
+    ) {
+        $this->components = $components;
+    }
 
     public function name(): string
     {
@@ -39,14 +49,40 @@ class W4NativeDaisyTheme implements ThemeContract
             throw new InvalidArgumentException('El nombre del componente no puede estar vacío.');
         }
 
+        $cacheKey = $this->generateCacheKey($component, $state);
+
+        if (array_key_exists($cacheKey, $this->resolvedCache)) {
+            return $this->resolvedCache[$cacheKey];
+        }
+
+        $classes = ['w4-' . $component];
+
         if (array_key_exists($component, $this->components)) {
             $resolver = $this->components[$component];
             if ($resolver instanceof ComponentThemeContract) {
-                return $resolver->resolve($state);
+                $classes = $resolver->resolve($state);
             }
         }
 
-        return ['w4-' . $component];
+        $this->resolvedCache[$cacheKey] = $classes;
+
+        return $classes;
+    }
+
+    /**
+     * Genera una clave única basada en el componente y su estado.
+     */
+    protected function generateCacheKey(string $component, array $state): string
+    {
+        if (empty($state)) {
+            return $component;
+        }
+
+        // Ordenamos las llaves para que ['size'=>'sm', 'variant'=>'primary'] 
+        // produzca el mismo hash que ['variant'=>'primary', 'size'=>'sm']
+        ksort($state);
+
+        return $component . ':' . md5(json_encode($state));
     }
 
     public function resolveComponentContract(string $component, array $state = []): array

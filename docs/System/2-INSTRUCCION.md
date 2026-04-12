@@ -82,6 +82,9 @@ public/vendor/w4-native-ui/w4-native.js
 
 ## 6. Uso en layout Blade
 
+**Nota sobre dependencias CSS:**
+Para utilizar este paquete en producción **NO necesitas tener instalado Node.js, TailwindCSS ni DaisyUI** en tu proyecto. El paquete incluye todos los componentes listos para usar (`dist/w4-native.css`). *Únicamente necesitarás instalar TailwindCSS si deseas utilizar sus utilidades (ej. `mt-4 text-center`) directamente en tus vistas.*
+
 Carga CSS y JS en tu layout base:
 
 ```blade

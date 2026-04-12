@@ -52,6 +52,26 @@ class ServiceProviderTest extends TestCase
         ], $classes);
     }
 
+    public function test_cachea_la_resolucion_de_componentes_para_evitar_overhead(): void
+    {
+        $theme = $this->app->make(W4NativeDaisyTheme::class);
+
+        // Primera llamada: resuelve y guarda en caché
+        $state = ['variant' => 'primary', 'size' => 'lg'];
+        $classes1 = $theme->resolveComponent('button', $state);
+
+        // Segunda llamada con el mismo estado: debe venir de caché (rápido)
+        $classes2 = $theme->resolveComponent('button', $state);
+
+        // Tercera llamada con llaves desordenadas: también debe venir de caché
+        $stateReordered = ['size' => 'lg', 'variant' => 'primary'];
+        $classes3 = $theme->resolveComponent('button', $stateReordered);
+
+        $this->assertSame($classes1, $classes2);
+        $this->assertSame($classes1, $classes3);
+        $this->assertContains('w4-button-primary', $classes1);
+    }
+
     public function test_resuelve_componentes_form_adicionales(): void
     {
         $theme = $this->app->make(W4NativeDaisyTheme::class);

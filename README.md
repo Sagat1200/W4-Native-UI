@@ -42,6 +42,10 @@ W4-Native-UI entrega un sistema completo de interfaz basado en:
 - PHP 8.3 o superior
 - Laravel 13 o superior
 
+> **Nota importante sobre Node.js y frameworks CSS:** 
+> No necesitas tener instalado Node.js, TailwindCSS ni DaisyUI en tu proyecto para utilizar este paquete. `W4-Native-UI` incluye todos sus estilos pre-compilados y listos para usar en producción.
+> *TailwindCSS solo será necesario si deseas escribir clases utilitarias personalizadas (ej. `p-10 text-center`) en tus propias vistas.*
+
 ## Instalación
 
 ```bash
