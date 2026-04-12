@@ -27,6 +27,7 @@
   --w4-radius-checkbox: var(--w4-radius-sm); /* Forms morphology */
   --w4-radius-radio: var(--w4-radius-pill); /* Forms morphology */
   --w4-radius-toggle: var(--w4-radius-pill); /* Forms morphology */
+  --w4-radius-modal: var(--w4-radius-lg); /* Interactive morphology */
 
   /* Control Heights (Density) */
   --w4-control-height-xs: 1.5rem; /* 24px */

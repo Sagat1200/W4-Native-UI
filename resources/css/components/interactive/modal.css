@@ -1,0 +1,137 @@
+/* =========================================
+   MODAL COMPONENT
+   Native W4 Visual Engine implementation
+   Interactive System
+   ========================================= */
+
+.w4-modal {
+  /* Positioning & Overlay */
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: var(--w4-modal-align, center);
+  justify-content: center;
+  padding: 1rem;
+  
+  /* Backdrop */
+  background-color: hsl(var(--w4-base-content) / var(--w4-modal-backdrop-opacity, 0.4));
+  backdrop-filter: blur(var(--w4-modal-backdrop-blur, 0px));
+  
+  /* Initial State (Hidden) */
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  
+  /* Motion */
+  transition: opacity var(--w4-transition-normal), visibility var(--w4-transition-normal);
+}
+
+/* The actual modal box inside the overlay */
+.w4-modal-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+  /* Layout constraints */
+  width: 100%;
+  max-width: var(--w4-modal-max-width, 32rem);
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  
+  /* Morphology Tokens */
+  padding: var(--w4-modal-padding, 1.5rem);
+  border-radius: var(--w4-radius-modal, var(--w4-radius-lg));
+  
+  /* Surface Tokens */
+  background-color: var(--w4-modal-bg, hsl(var(--w4-base-100)));
+  color: var(--w4-modal-color, hsl(var(--w4-base-content)));
+  border-width: var(--w4-modal-border-width, 1px);
+  border-style: solid;
+  border-color: var(--w4-modal-border-color, hsl(var(--w4-base-300)));
+  box-shadow: var(--w4-shadow-lg);
+  
+  /* Initial State (Animation starting point) */
+  transform: scale(0.95) translateY(10px);
+  transition: transform var(--w4-transition-normal) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ----------------------------------
+   OPEN/CLOSING STATES (Interaction)
+   ---------------------------------- */
+.w4-modal-open,
+.w4-modal[open], /* Native dialog support */
+.w4-modal:target { /* URL hash support */
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.w4-modal-open .w4-modal-box,
+.w4-modal[open] .w4-modal-box,
+.w4-modal:target .w4-modal-box {
+  transform: scale(1) translateY(0);
+}
+
+.w4-modal-closing {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.w4-modal-closing .w4-modal-box {
+  transform: scale(0.95) translateY(10px);
+}
+
+/* ----------------------------------
+   POSITION MODIFIERS
+   ---------------------------------- */
+.w4-modal-top {
+  --w4-modal-align: flex-start;
+}
+
+.w4-modal-middle {
+  --w4-modal-align: center;
+}
+
+.w4-modal-bottom {
+  --w4-modal-align: flex-end;
+}
+.w4-modal-bottom .w4-modal-box {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: -1rem; /* Negate the container padding */
+  transform: translateY(100%);
+}
+.w4-modal-open.w4-modal-bottom .w4-modal-box {
+  transform: translateY(0);
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-modal-primary { --w4-modal-border-color: hsl(var(--w4-primary)); }
+.w4-modal-secondary { --w4-modal-border-color: hsl(var(--w4-secondary)); }
+.w4-modal-accent { --w4-modal-border-color: hsl(var(--w4-accent)); }
+.w4-modal-info { --w4-modal-border-color: hsl(var(--w4-info)); }
+.w4-modal-success { --w4-modal-border-color: hsl(var(--w4-success)); }
+.w4-modal-warning { --w4-modal-border-color: hsl(var(--w4-warning)); }
+.w4-modal-error { --w4-modal-border-color: hsl(var(--w4-error)); }
+
+/* Base variants */
+.w4-modal-base-100 { --w4-modal-bg: hsl(var(--w4-base-100)); }
+.w4-modal-base-200 { --w4-modal-bg: hsl(var(--w4-base-200)); }
+.w4-modal-base-300 { --w4-modal-bg: hsl(var(--w4-base-300)); }
+
+/* ----------------------------------
+   SIZE SCALES
+   ---------------------------------- */
+.w4-modal-xs .w4-modal-box { --w4-modal-max-width: 20rem; }
+.w4-modal-sm .w4-modal-box { --w4-modal-max-width: 24rem; }
+.w4-modal-md .w4-modal-box { --w4-modal-max-width: 32rem; }
+.w4-modal-lg .w4-modal-box { --w4-modal-max-width: 48rem; }
+.w4-modal-xl .w4-modal-box { --w4-modal-max-width: 64rem; }
+.w4-modal-full .w4-modal-box { 
+  --w4-modal-max-width: 100%; 
+  height: calc(100vh - 2rem); 
+  border-radius: 0;
+}

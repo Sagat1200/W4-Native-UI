@@ -1,21 +1,14 @@
-(function (window, document) {
-  function initInput(root) {
-    // Placeholder for input logic (e.g. character counting, input masks)
-  }
+/**
+ * =========================================
+ * INPUT COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * Forms System
+ * =========================================
+ */
 
-  if (window.NativeUI) {
-      var originalInit = window.NativeUI.init;
-      window.NativeUI.init = function(root) {
-          if(originalInit) originalInit(root);
-          initInput(root);
-      };
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-      initInput(document);
-    });
-  } else {
-    initInput(document);
-  }
-})(window, document);
+export default class W4Input {
+    static init(root = document) {
+        // Placeholder for specific input logic 
+        // e.g. character counting, input masks, custom formatting
+    }
+}

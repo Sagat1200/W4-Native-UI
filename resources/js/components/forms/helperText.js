@@ -1,21 +1,13 @@
-(function (window, document) {
-  function initHelperText(root) {
-    // Placeholder for helper text logic
-  }
+/**
+ * =========================================
+ * HELPER TEXT COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * Forms System
+ * =========================================
+ */
 
-  if (window.NativeUI) {
-      var originalInit = window.NativeUI.init;
-      window.NativeUI.init = function(root) {
-          if(originalInit) originalInit(root);
-          initHelperText(root);
-      };
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-      initHelperText(document);
-    });
-  } else {
-    initHelperText(document);
-  }
-})(window, document);
+export default class W4HelperText {
+    static init(root = document) {
+        // Placeholder for specific helper text logic 
+    }
+}

@@ -1,47 +1,47 @@
-(function (window, document) {
-  function initAlerts(root) {
-    var scope = root || document;
-    var closeButtons = scope.querySelectorAll('.w4-alert [data-dismiss="alert"]');
+/**
+ * =========================================
+ * ALERT COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * Feedback System
+ * =========================================
+ */
 
-    for (var i = 0; i < closeButtons.length; i++) {
-      var btn = closeButtons[i];
-      if (btn.getAttribute('data-w4-alert-bound') === 'true') {
-        continue;
-      }
-
-      btn.addEventListener('click', function(e) {
-        var alert = e.target.closest('.w4-alert');
-        if (alert) {
-          alert.style.display = 'none';
-          if (window.NativeUI && window.NativeUI.emit) {
-             window.NativeUI.emit('alert:dismissed', { element: alert });
-          }
-        }
-      });
-      
-      btn.setAttribute('data-w4-alert-bound', 'true');
+export default class W4Alert {
+    static init() {
+        document.addEventListener('click', this.handleClick.bind(this));
     }
-  }
 
-  // Bind to NativeUI lifecycle if available
-  if (window.NativeUI) {
-      var originalInit = window.NativeUI.init;
-      window.NativeUI.init = function(root) {
-          if(originalInit) originalInit(root);
-          initAlerts(root);
-      };
-  }
+    static handleClick(event) {
+        const dismissBtn = event.target.closest('[data-w4-dismiss="alert"]');
+        if (!dismissBtn) return;
 
-  // Also try to bind on DOMContentLoaded in case it's loaded independently
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-      initAlerts(document);
-    });
-  } else {
-    initAlerts(document);
-  }
+        const alert = dismissBtn.closest('.w4-alert');
+        if (alert) {
+            event.preventDefault();
+            this.dismiss(alert);
+        }
+    }
 
-  // Mutation observer logic could be added here similar to w4-native.js
-  // if dynamic alerts are frequently added, but we rely on W4NativeUI.init() for now.
+    static dismiss(alert) {
+        // Opacity transition instead of abrupt display: none
+        alert.style.opacity = '0';
+        alert.style.transition = 'opacity var(--w4-transition-normal) ease';
+        
+        const finishDismiss = () => {
+            alert.style.display = 'none';
+            alert.dispatchEvent(new CustomEvent('w4.alert.dismissed', { bubbles: true }));
+            alert.removeEventListener('transitionend', handleTransitionEnd);
+        };
 
-})(window, document);
+        const handleTransitionEnd = (e) => {
+            if (e.target === alert) finishDismiss();
+        };
+
+        alert.addEventListener('transitionend', handleTransitionEnd);
+        
+        // Fallback
+        setTimeout(() => {
+            if (alert.style.opacity === '0') finishDismiss();
+        }, 350);
+    }
+}

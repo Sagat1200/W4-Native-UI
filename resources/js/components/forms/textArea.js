@@ -1,40 +1,36 @@
-(function (window, document) {
-  function initTextArea(root) {
-    // Auto-resize logic could go here
-    var scope = root || document;
-    var textareas = scope.querySelectorAll('textarea.w4-textarea[data-auto-resize="true"]');
-    
-    for (var i = 0; i < textareas.length; i++) {
-        var el = textareas[i];
-        if (el.getAttribute('data-w4-textarea-bound') === 'true') continue;
+/**
+ * =========================================
+ * TEXTAREA COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * Forms System
+ * =========================================
+ */
 
-        el.addEventListener('input', function(e) {
-            var target = e.target;
-            target.style.height = 'auto';
-            target.style.height = target.scrollHeight + 'px';
+export default class W4Textarea {
+    static init(root = document) {
+        // Auto-resize logic
+        const textareas = root.querySelectorAll('textarea.w4-textarea[data-w4-auto-resize="true"]');
+        
+        textareas.forEach(el => {
+            if (el.getAttribute('data-w4-textarea-bound') === 'true') return;
+
+            el.addEventListener('input', this.handleResize.bind(this));
+
+            // Trigger once to set initial height based on pre-filled content
+            const event = new Event('input', { bubbles: true });
+            el.dispatchEvent(event);
+
+            el.setAttribute('data-w4-textarea-bound', 'true');
         });
-
-        // Trigger once to set initial height
-        var event = new Event('input', { bubbles: true });
-        el.dispatchEvent(event);
-
-        el.setAttribute('data-w4-textarea-bound', 'true');
     }
-  }
 
-  if (window.NativeUI) {
-      var originalInit = window.NativeUI.init;
-      window.NativeUI.init = function(root) {
-          if(originalInit) originalInit(root);
-          initTextArea(root);
-      };
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-      initTextArea(document);
-    });
-  } else {
-    initTextArea(document);
-  }
-})(window, document);
+    /**
+     * Dynamically resizes the textarea based on its content scroll height
+     * @param {Event} e 
+     */
+    static handleResize(e) {
+        const target = e.target;
+        target.style.height = 'auto'; // Reset to auto to get true scrollHeight if content shrunk
+        target.style.height = target.scrollHeight + 'px';
+    }
+}
