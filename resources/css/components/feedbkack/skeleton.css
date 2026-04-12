@@ -7,8 +7,8 @@
 .w4-skeleton {
   /* Morphology Tokens */
   border-radius: var(--w4-skeleton-radius, var(--w4-radius-skeleton, var(--w4-radius-md)));
-  width: var(--w4-skeleton-width, 100%);
-  height: var(--w4-skeleton-height, 1rem);
+  inline-size: var(--w4-skeleton-width, 100%);
+  block-size: var(--w4-skeleton-height, 1rem);
   
   /* Color & Surface Tokens */
   background: linear-gradient(

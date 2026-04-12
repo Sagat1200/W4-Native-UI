@@ -15,7 +15,7 @@
   
   /* Morphology Tokens */
   border-radius: var(--w4-radius-badge, var(--w4-radius-pill));
-  height: var(--w4-badge-height, 1.25rem);
+  block-size: var(--w4-badge-height, 1.25rem);
   padding-inline: var(--w4-badge-padding-x, 0.5rem);
   font-size: var(--w4-badge-font-size, 0.75rem);
   

@@ -8,10 +8,10 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 100%;
+  inline-size: 100%;
   
   /* Morphology Tokens */
-  height: var(--w4-progress-height, 0.5rem);
+  block-size: var(--w4-progress-height, 0.5rem);
   border-radius: var(--w4-radius-progress, var(--w4-radius-pill));
   
   /* Color Tokens */

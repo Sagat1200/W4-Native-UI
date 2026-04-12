@@ -1,76 +1,158 @@
+/* =========================================
+   SELECT COMPONENT
+   Native W4 Visual Engine implementation
+   Forms Morphology
+   ========================================= */
+
 .w4-select {
+  appearance: none;
+  -webkit-appearance: none;
   inline-size: 100%;
-  border: 1px solid hsl(var(--w4-base-300));
-  border-radius: var(--w4-radius-input);
-  background: hsl(var(--w4-base-100));
+  cursor: pointer;
+  
+  /* Morphology Tokens */
+  block-size: var(--w4-select-height, var(--w4-control-height-md));
+  padding-inline-start: var(--w4-select-padding-x, var(--w4-control-padding-x-md));
+  /* Extra padding on the right for the chevron icon */
+  padding-inline-end: calc(var(--w4-select-padding-x, var(--w4-control-padding-x-md)) * 2.5);
+  border-radius: var(--w4-radius-select, var(--w4-radius-md));
+  font-size: var(--w4-select-font-size, 0.875rem);
+  
+  /* Surface Tokens */
+  border-width: var(--w4-border-width-control, 1px);
+  border-style: solid;
+  border-color: var(--w4-select-border-color, hsl(var(--w4-base-content) / 0.2));
+  background-color: var(--w4-select-bg, hsl(var(--w4-base-100)));
   color: hsl(var(--w4-base-content));
-  padding: 0 1rem;
-  font-size: 0.875rem;
-  box-shadow: 0 0 0 1px hsl(var(--w4-primary) / 0.12);
-  height: 3rem;
+  
+  /* Chevron Icon (Data URI) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--w4-select-padding-x, var(--w4-control-padding-x-md)) center;
+  background-size: 1.2em;
+  
+  /* Interaction & Motion */
+  transition: background-color var(--w4-transition-fast), border-color var(--w4-transition-fast), box-shadow var(--w4-transition-fast), outline var(--w4-transition-fast);
 }
 
-.w4-select:focus {
-  outline: 2px solid hsl(var(--w4-primary));
-  outline-offset: 1px;
-  box-shadow: 0 0 0 2px hsl(var(--w4-primary) / 0.28);
+/* ----------------------------------
+   INTERACTION STATES
+   ---------------------------------- */
+.w4-select:focus,
+.w4-select:focus-visible {
+  outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-base-content)) / var(--w4-focus-ring-opacity));
+  outline-offset: var(--w4-focus-ring-offset);
+  border-color: hsl(var(--w4-focus-ring-color, var(--w4-base-content)));
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-select-primary {
+  --w4-select-border-color: hsl(var(--w4-primary));
+  --w4-focus-ring-color: var(--w4-primary);
+}
+
+.w4-select-secondary {
+  --w4-select-border-color: hsl(var(--w4-secondary));
+  --w4-focus-ring-color: var(--w4-secondary);
+}
+
+.w4-select-accent {
+  --w4-select-border-color: hsl(var(--w4-accent));
+  --w4-focus-ring-color: var(--w4-accent);
+}
+
+.w4-select-info {
+  --w4-select-border-color: hsl(var(--w4-info));
+  --w4-focus-ring-color: var(--w4-info);
+}
+
+.w4-select-success {
+  --w4-select-border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
+}
+
+.w4-select-warning {
+  --w4-select-border-color: hsl(var(--w4-warning));
+  --w4-focus-ring-color: var(--w4-warning);
+}
+
+.w4-select-error {
+  --w4-select-border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
 }
 
 .w4-select-ghost {
-  border-color: transparent;
-  background: transparent;
-  box-shadow: none;
+  --w4-select-bg: transparent;
+  --w4-select-border-color: transparent;
+}
+.w4-select-ghost:focus,
+.w4-select-ghost:focus-visible {
+  --w4-select-bg: hsl(var(--w4-base-content) / 0.05);
 }
 
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-select-xs {
-  height: 1.5rem;
-  font-size: 0.75rem;
-  padding: 0 0.5rem;
+  --w4-select-height: var(--w4-control-height-xs);
+  --w4-select-padding-x: var(--w4-control-padding-x-xs);
+  --w4-select-font-size: 0.75rem;
 }
 
 .w4-select-sm {
-  height: 2rem;
-  font-size: 0.875rem;
-  padding: 0 0.75rem;
+  --w4-select-height: var(--w4-control-height-sm);
+  --w4-select-padding-x: var(--w4-control-padding-x-sm);
+  --w4-select-font-size: 0.875rem;
 }
 
 .w4-select-md {
-  height: 3rem;
-  font-size: 0.875rem;
-  padding: 0 1rem;
+  --w4-select-height: var(--w4-control-height-md);
+  --w4-select-padding-x: var(--w4-control-padding-x-md);
+  --w4-select-font-size: 0.875rem;
 }
 
 .w4-select-lg {
-  height: 4rem;
-  font-size: 1.125rem;
-  padding: 0 1.5rem;
+  --w4-select-height: var(--w4-control-height-lg);
+  --w4-select-padding-x: var(--w4-control-padding-x-lg);
+  --w4-select-font-size: 1.125rem;
 }
 
 .w4-select-xl {
-  height: 5rem;
-  font-size: 1.25rem;
-  padding: 0 2rem;
+  --w4-select-height: var(--w4-control-height-xl);
+  --w4-select-padding-x: var(--w4-control-padding-x-xl);
+  --w4-select-font-size: 1.25rem;
 }
 
-.w4-select-invalid {
-  border-color: hsl(0 72% 51%);
-  box-shadow: 0 0 0 1px hsl(0 72% 51% / 0.22);
-}
-
-.w4-select-valid {
-  border-color: hsl(142 71% 45%);
-  box-shadow: 0 0 0 1px hsl(142 71% 45% / 0.22);
-}
-
-.w4-select-disabled {
-  opacity: 0.65;
+/* ----------------------------------
+   STATES & MODIFIERS
+   ---------------------------------- */
+.w4-select-disabled,
+.w4-select:disabled,
+.w4-select[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5);
   cursor: not-allowed;
+  pointer-events: none;
+  background-color: hsl(var(--w4-base-200));
 }
 
-.w4-select-readonly {
-  background: hsl(var(--w4-base-200));
+.w4-select-readonly,
+.w4-select[readonly],
+.w4-select[data-w4-state~="readonly"] {
+  background-color: hsl(var(--w4-base-200));
 }
 
-.w4-select-loading {
-  opacity: 0.8;
+/* Validation States */
+.w4-select-invalid,
+.w4-select[aria-invalid="true"],
+.w4-select[data-w4-state~="invalid"] {
+  --w4-select-border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
+}
+
+.w4-select-valid,
+.w4-select[data-w4-state~="valid"] {
+  --w4-select-border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
 }

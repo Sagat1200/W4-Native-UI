@@ -24,6 +24,9 @@
   --w4-radius-progress: var(--w4-radius-pill); /* Progress bar morphology */
   --w4-radius-skeleton: var(--w4-radius-md); /* Skeleton base morphology */
   --w4-radius-toast: var(--w4-radius-md); /* Toast notification morphology */
+  --w4-radius-checkbox: var(--w4-radius-sm); /* Forms morphology */
+  --w4-radius-radio: var(--w4-radius-pill); /* Forms morphology */
+  --w4-radius-toggle: var(--w4-radius-pill); /* Forms morphology */
 
   /* Control Heights (Density) */
   --w4-control-height-xs: 1.5rem; /* 24px */

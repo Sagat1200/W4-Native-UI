@@ -1,76 +1,149 @@
+/* =========================================
+   INPUT COMPONENT
+   Native W4 Visual Engine implementation
+   Forms Morphology
+   ========================================= */
+
 .w4-input {
+  appearance: none;
+  -webkit-appearance: none;
   inline-size: 100%;
-  border: 1px solid hsl(var(--w4-base-300));
-  border-radius: var(--w4-radius-input);
-  background: hsl(var(--w4-base-100));
+  
+  /* Morphology Tokens */
+  block-size: var(--w4-input-height, var(--w4-control-height-md));
+  padding-inline: var(--w4-input-padding-x, var(--w4-control-padding-x-md));
+  border-radius: var(--w4-radius-input, var(--w4-radius-md));
+  font-size: var(--w4-input-font-size, 0.875rem);
+  
+  /* Surface Tokens */
+  border-width: var(--w4-border-width-control, 1px);
+  border-style: solid;
+  border-color: var(--w4-input-border-color, hsl(var(--w4-base-content) / 0.2));
+  background-color: var(--w4-input-bg, hsl(var(--w4-base-100)));
   color: hsl(var(--w4-base-content));
-  height: 3rem;
-  padding: 0 1rem;
-  font-size: 0.875rem;
-  box-shadow: 0 0 0 1px hsl(var(--w4-primary) / 0.12);
+  
+  /* Interaction & Motion */
+  transition: background-color var(--w4-transition-fast), border-color var(--w4-transition-fast), box-shadow var(--w4-transition-fast), outline var(--w4-transition-fast);
 }
 
-.w4-input:focus {
-  outline: 2px solid hsl(var(--w4-primary));
-  outline-offset: 1px;
-  box-shadow: 0 0 0 2px hsl(var(--w4-primary) / 0.28);
+/* ----------------------------------
+   INTERACTION STATES
+   ---------------------------------- */
+.w4-input:focus,
+.w4-input:focus-visible {
+  outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-base-content)) / var(--w4-focus-ring-opacity));
+  outline-offset: var(--w4-focus-ring-offset);
+  border-color: hsl(var(--w4-focus-ring-color, var(--w4-base-content)));
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-input-primary {
+  --w4-input-border-color: hsl(var(--w4-primary));
+  --w4-focus-ring-color: var(--w4-primary);
+}
+
+.w4-input-secondary {
+  --w4-input-border-color: hsl(var(--w4-secondary));
+  --w4-focus-ring-color: var(--w4-secondary);
+}
+
+.w4-input-accent {
+  --w4-input-border-color: hsl(var(--w4-accent));
+  --w4-focus-ring-color: var(--w4-accent);
+}
+
+.w4-input-info {
+  --w4-input-border-color: hsl(var(--w4-info));
+  --w4-focus-ring-color: var(--w4-info);
+}
+
+.w4-input-success {
+  --w4-input-border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
+}
+
+.w4-input-warning {
+  --w4-input-border-color: hsl(var(--w4-warning));
+  --w4-focus-ring-color: var(--w4-warning);
+}
+
+.w4-input-error {
+  --w4-input-border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
 }
 
 .w4-input-ghost {
-  border-color: transparent;
-  background: transparent;
-  box-shadow: none;
+  --w4-input-bg: transparent;
+  --w4-input-border-color: transparent;
+}
+.w4-input-ghost:focus,
+.w4-input-ghost:focus-visible {
+  --w4-input-bg: hsl(var(--w4-base-content) / 0.05);
 }
 
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-input-xs {
-  height: 1.5rem;
-  font-size: 0.75rem;
-  padding: 0 0.5rem;
+  --w4-input-height: var(--w4-control-height-xs);
+  --w4-input-padding-x: var(--w4-control-padding-x-xs);
+  --w4-input-font-size: 0.75rem;
 }
 
 .w4-input-sm {
-  height: 2rem;
-  font-size: 0.875rem;
-  padding: 0 0.75rem;
+  --w4-input-height: var(--w4-control-height-sm);
+  --w4-input-padding-x: var(--w4-control-padding-x-sm);
+  --w4-input-font-size: 0.875rem;
 }
 
 .w4-input-md {
-  height: 3rem;
-  font-size: 0.875rem;
-  padding: 0 1rem;
+  --w4-input-height: var(--w4-control-height-md);
+  --w4-input-padding-x: var(--w4-control-padding-x-md);
+  --w4-input-font-size: 0.875rem;
 }
 
 .w4-input-lg {
-  height: 4rem;
-  font-size: 1.125rem;
-  padding: 0 1.5rem;
+  --w4-input-height: var(--w4-control-height-lg);
+  --w4-input-padding-x: var(--w4-control-padding-x-lg);
+  --w4-input-font-size: 1.125rem;
 }
 
 .w4-input-xl {
-  height: 5rem;
-  font-size: 1.25rem;
-  padding: 0 2rem;
+  --w4-input-height: var(--w4-control-height-xl);
+  --w4-input-padding-x: var(--w4-control-padding-x-xl);
+  --w4-input-font-size: 1.25rem;
 }
 
-.w4-input-invalid {
-  border-color: hsl(0 72% 51%);
-  box-shadow: 0 0 0 1px hsl(0 72% 51% / 0.22);
-}
-
-.w4-input-valid {
-  border-color: hsl(142 71% 45%);
-  box-shadow: 0 0 0 1px hsl(142 71% 45% / 0.22);
-}
-
-.w4-input-disabled {
-  opacity: 0.65;
+/* ----------------------------------
+   STATES & MODIFIERS
+   ---------------------------------- */
+.w4-input-disabled,
+.w4-input:disabled,
+.w4-input[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5);
   cursor: not-allowed;
+  pointer-events: none;
+  background-color: hsl(var(--w4-base-200));
 }
 
-.w4-input-readonly {
-  background: hsl(var(--w4-base-200));
+.w4-input-readonly,
+.w4-input[readonly],
+.w4-input[data-w4-state~="readonly"] {
+  background-color: hsl(var(--w4-base-200));
 }
 
-.w4-input-loading {
-  opacity: 0.8;
+/* Validation States */
+.w4-input-invalid,
+.w4-input[aria-invalid="true"],
+.w4-input[data-w4-state~="invalid"] {
+  --w4-input-border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
+}
+
+.w4-input-valid,
+.w4-input[data-w4-state~="valid"] {
+  --w4-input-border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
 }

@@ -1,63 +1,155 @@
+/* =========================================
+   TOGGLE COMPONENT
+   Native W4 Visual Engine implementation
+   Forms Morphology
+   ========================================= */
+
 .w4-toggle {
-  accent-color: hsl(var(--w4-primary));
+  flex-shrink: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  
+  /* Morphology Tokens */
+  block-size: var(--w4-toggle-height, 1.5rem);
+  inline-size: var(--w4-toggle-width, 3rem);
+  border-radius: var(--w4-radius-toggle, var(--w4-radius-pill));
+  
+  /* Surface Tokens */
+  border-width: var(--w4-border-width-control, 1px);
+  border-style: solid;
+  border-color: var(--w4-toggle-border-color, hsl(var(--w4-base-content) / 0.2));
+  background-color: var(--w4-toggle-bg, hsl(var(--w4-base-content) / 0.2));
+  
+  /* Knob Rendering */
+  --w4-toggle-knob-color: hsl(var(--w4-base-100));
+  --w4-toggle-knob-size: calc(var(--w4-toggle-height) - (var(--w4-border-width-control, 1px) * 4));
+  --w4-toggle-padding: calc(var(--w4-border-width-control, 1px) * 2);
+  
+  background-image: radial-gradient(circle at center, var(--w4-toggle-knob-color) 0%, var(--w4-toggle-knob-color) 50%, transparent 52%);
+  background-size: var(--w4-toggle-knob-size) var(--w4-toggle-knob-size);
+  background-position: left var(--w4-toggle-padding) center;
+  background-repeat: no-repeat;
+  
+  /* Interaction & Motion */
+  transition: background-color var(--w4-transition-fast), border-color var(--w4-transition-fast), background-position var(--w4-transition-fast), outline var(--w4-transition-fast);
+  outline-offset: var(--w4-focus-ring-offset);
 }
 
+/* ----------------------------------
+   NATIVE PSEUDO-CLASSES (Checked)
+   ---------------------------------- */
+.w4-toggle:checked {
+  background-color: var(--w4-toggle-color, hsl(var(--w4-base-content)));
+  border-color: var(--w4-toggle-color, hsl(var(--w4-base-content)));
+  background-position: right var(--w4-toggle-padding) center;
+}
+
+/* ----------------------------------
+   INTERACTION STATES
+   ---------------------------------- */
+.w4-toggle:focus-visible {
+  outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-primary)) / var(--w4-focus-ring-opacity));
+}
+
+.w4-toggle:hover {
+  filter: brightness(var(--w4-hover-brightness, 0.95));
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-toggle-primary {
-  accent-color: hsl(var(--w4-primary));
+  --w4-toggle-color: hsl(var(--w4-primary));
+  --w4-focus-ring-color: var(--w4-primary);
 }
 
 .w4-toggle-secondary {
-  accent-color: hsl(var(--w4-secondary));
+  --w4-toggle-color: hsl(var(--w4-secondary));
+  --w4-focus-ring-color: var(--w4-secondary);
 }
 
+.w4-toggle-accent {
+  --w4-toggle-color: hsl(var(--w4-accent));
+  --w4-focus-ring-color: var(--w4-accent);
+}
+
+.w4-toggle-info {
+  --w4-toggle-color: hsl(var(--w4-info));
+  --w4-focus-ring-color: var(--w4-info);
+}
+
+.w4-toggle-success {
+  --w4-toggle-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
+}
+
+.w4-toggle-warning {
+  --w4-toggle-color: hsl(var(--w4-warning));
+  --w4-focus-ring-color: var(--w4-warning);
+}
+
+.w4-toggle-error {
+  --w4-toggle-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
+}
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-toggle-xs {
-  height: 1rem;
-  width: 1.5rem;
+  --w4-toggle-height: 1rem;
+  --w4-toggle-width: 1.5rem;
 }
 
 .w4-toggle-sm {
-  height: 1.25rem;
-  width: 2rem;
+  --w4-toggle-height: 1.25rem;
+  --w4-toggle-width: 2rem;
 }
 
 .w4-toggle-md {
-  height: 1.5rem;
-  width: 3rem;
+  --w4-toggle-height: 1.5rem;
+  --w4-toggle-width: 3rem;
 }
 
 .w4-toggle-lg {
-  height: 2rem;
-  width: 4rem;
+  --w4-toggle-height: 2rem;
+  --w4-toggle-width: 4rem;
 }
 
 .w4-toggle-xl {
-  height: 2.5rem;
-  width: 5rem;
+  --w4-toggle-height: 2.5rem;
+  --w4-toggle-width: 5rem;
 }
 
-.w4-toggle-disabled {
-  opacity: 0.65;
+/* ----------------------------------
+   STATES & MODIFIERS
+   ---------------------------------- */
+.w4-toggle-disabled,
+.w4-toggle:disabled,
+.w4-toggle[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5);
   cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(1);
 }
 
-.w4-toggle-readonly {
+.w4-toggle-readonly,
+.w4-toggle[readonly],
+.w4-toggle[data-w4-state~="readonly"] {
   pointer-events: none;
 }
 
-.w4-toggle-invalid {
-  outline: 2px solid hsl(0 72% 51%);
-  outline-offset: 1px;
+/* Validation States */
+.w4-toggle-invalid,
+.w4-toggle[aria-invalid="true"],
+.w4-toggle[data-w4-state~="invalid"] {
+  border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
 }
 
-.w4-toggle-valid {
-  outline: 2px solid hsl(142 71% 45%);
-  outline-offset: 1px;
-}
-
-.w4-toggle-loading {
-  opacity: 0.8;
-}
-
-.w4-toggle-checked {
-  filter: saturate(1.2);
+.w4-toggle-valid,
+.w4-toggle[data-w4-state~="valid"] {
+  border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
 }
