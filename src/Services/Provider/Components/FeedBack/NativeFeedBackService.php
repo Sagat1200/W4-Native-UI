@@ -8,10 +8,10 @@ use W4\Native\Daisy\Themes\Components\FeedBack\ProgressTheme;
 use W4\Native\Daisy\Themes\Components\FeedBack\SkeletonTheme;
 use W4\Native\Daisy\Themes\Components\FeedBack\ToastTheme;
 
-class W4NativeFeedBackService
+class NativeFeedBackService
 {
     /**
-     * @return array<string, \W4\Native\Contracts\ComponentThemeContract>
+     * @return array<string, \W4\Native\Daisy\Contracts\ComponentThemeContract>
      */
     public static function getComponents(): array
     {

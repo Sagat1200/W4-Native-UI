@@ -10,7 +10,7 @@ use W4\Native\Daisy\Themes\Components\Layout\PanelTheme;
 use W4\Native\Daisy\Themes\Components\Layout\SectionTheme;
 use W4\Native\Daisy\Themes\Components\Layout\StackTheme;
 
-class W4NativeLayoutService
+class NativeLayoutService
 {
     /**
      * @return array<string, \W4\Native\Daisy\Contracts\ComponentThemeContract>

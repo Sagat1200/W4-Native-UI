@@ -5,19 +5,19 @@ namespace W4\Native\Daisy\Providers;
 use Illuminate\Support\ServiceProvider;
 use W4\Native\Daisy\Console\Commands\BuildNativeDaisyAssetsCommand;
 use W4\Native\Daisy\Console\Commands\InstallNativeDaisyCommand;
-use W4\Native\Daisy\Services\Provider\Components\FeedBack\W4NativeFeedBackService;
-use W4\Native\Daisy\Services\Provider\Components\Form\W4NativeFormService;
-use W4\Native\Daisy\Services\Provider\Components\Interactive\W4NativeInteractiveService;
-use W4\Native\Daisy\Services\Provider\Components\Layout\W4NativeLayoutService;
-use W4\Native\Daisy\Services\Provider\Components\UI\W4NativeUI;
+use W4\Native\Daisy\Services\Provider\Components\FeedBack\NativeFeedBackService;
+use W4\Native\Daisy\Services\Provider\Components\Form\NativeFormService;
+use W4\Native\Daisy\Services\Provider\Components\Interactive\NativeInteractiveService;
+use W4\Native\Daisy\Services\Provider\Components\Layout\NativeLayoutService;
+use W4\Native\Daisy\Services\Provider\Components\UI\NativeUI;
 use W4\Native\Daisy\Services\Provider\Directives\W4NativeDaisyDirectiveService;
 use W4\Native\Daisy\Services\Provider\Route\W4NativeDaisyUIRouteService;
 use W4\Native\Daisy\Services\Themes\W4NativeDaisyThemeService;
 use W4\Native\Daisy\Support\ThemeManifest;
 use W4\Native\Daisy\Support\ThemeRegistry;
-use W4\Native\Daisy\Tools\Themes\W4NativeDaisyTheme;
+use W4\Native\Daisy\Tools\Themes\NativeDaisyTheme;
 
-class W4NativeDaisyServiceProvider extends ServiceProvider
+class NativeDaisyServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
@@ -39,16 +39,16 @@ class W4NativeDaisyServiceProvider extends ServiceProvider
             return $registry;
         });
 
-        $this->app->singleton(W4NativeDaisyTheme::class, function ($app) {
-            return new W4NativeDaisyTheme(
+        $this->app->singleton(NativeDaisyTheme::class, function ($app) {
+            return new NativeDaisyTheme(
                 $app->make(ThemeRegistry::class),
                 $app->make(ThemeManifest::class),
                 array_merge(
-                    W4NativeUI::getComponents(),
-                    W4NativeFormService::getComponents(),
-                    W4NativeLayoutService::getComponents(),
-                    W4NativeFeedBackService::getComponents(),
-                    W4NativeInteractiveService::getComponents()
+                    NativeUI::getComponents(),
+                    NativeFormService::getComponents(),
+                    NativeLayoutService::getComponents(),
+                    NativeFeedBackService::getComponents(),
+                    NativeInteractiveService::getComponents()
                 )
             );
         });

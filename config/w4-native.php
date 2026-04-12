@@ -1,7 +1,7 @@
 <?php
 
 /*
-* Archivo de Configuracion de W4 Native Daisy
+* Archivo de Configuracion de W4 Native
 */
 
 return [

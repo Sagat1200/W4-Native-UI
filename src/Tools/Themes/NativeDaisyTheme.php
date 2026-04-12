@@ -9,7 +9,7 @@ use W4\Native\Daisy\Contracts\ThemeContract;
 use W4\Native\Daisy\Support\ThemeManifest;
 use W4\Native\Daisy\Support\ThemeRegistry;
 
-class W4NativeDaisyTheme implements ThemeContract
+class NativeDaisyTheme implements ThemeContract
 {
     protected array $components = [];
 

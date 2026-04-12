@@ -1,6 +1,6 @@
 {
-    "name": "w4/native-daisy",
-    "description": "Paquete de componentes de Interfaz de Usuario inspirado en DaisyUI para Laravel PHP.",
+    "name": "w4/native",
+    "description": "Paquete de componentes de Interfaz de Usuario para aplicaciones empresariales inspirados en DaisyUI para Laravel PHP.",
     "type": "library",
     "license": "MIT",
     "keywords": [
@@ -41,7 +41,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "W4\\Native\\Daisy\\Providers\\W4NativeDaisyServiceProvider" 
+                "W4\\Native\\Daisy\\Providers\\NativeDaisyServiceProvider" 
             ]
         }
     },

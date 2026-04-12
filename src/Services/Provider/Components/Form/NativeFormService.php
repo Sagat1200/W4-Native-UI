@@ -11,10 +11,10 @@ use W4\Native\Daisy\Themes\Components\Forms\SelectTheme;
 use W4\Native\Daisy\Themes\Components\Forms\TextareaTheme;
 use W4\Native\Daisy\Themes\Components\Forms\ToggleTheme;
 
-class W4NativeFormService
+class NativeFormService
 {
     /**
-     * @return array<string, \W4\Native\Contracts\ComponentThemeContract>
+     * @return array<string, \W4\Native\Daisy\Contracts\ComponentThemeContract>
      */
     public static function getComponents(): array
     {

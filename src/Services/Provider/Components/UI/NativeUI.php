@@ -10,7 +10,7 @@ use W4\Native\Daisy\Themes\Components\UI\LabelTheme;
 use W4\Native\Daisy\Themes\Components\UI\LinkTheme;
 use W4\Native\Daisy\Themes\Components\UI\TextTheme;
 
-class W4NativeUI
+class NativeUI
 {
     /**
      * @return array<string, \W4\Native\Daisy\Contracts\ComponentThemeContract>

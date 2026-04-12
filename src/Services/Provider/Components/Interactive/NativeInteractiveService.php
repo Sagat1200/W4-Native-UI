@@ -2,9 +2,9 @@
 
 namespace W4\Native\Daisy\Services\Provider\Components\Interactive;
 
-use W4\Native\Daisy\Themes\Components\FeedBack\TooltipTheme;
+use W4\Native\Daisy\Themes\Components\Interactive\TooltipTheme;
 
-class W4NativeInteractiveService
+class NativeInteractiveService
 {
     /**
      * @return array<string, \W4\Native\Daisy\Contracts\ComponentThemeContract>

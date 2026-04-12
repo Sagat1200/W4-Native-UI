@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\Native\Daisy\Themes\Components\FeedBack;
+namespace W4\Native\Daisy\Themes\Components\Interactive;
 
 use W4\Native\Daisy\Tools\Themes\AbstractComponentTheme;
 
