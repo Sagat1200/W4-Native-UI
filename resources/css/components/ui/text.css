@@ -1,77 +1,99 @@
+/* =========================================
+   TEXT COMPONENT
+   Native W4 Visual Engine implementation
+   ========================================= */
+
 .w4-text {
-  color: hsl(var(--w4-base-content));
-  line-height: 1.5;
+  color: var(--w4-text-color, hsl(var(--w4-base-content)));
+  line-height: var(--w4-text-line-height, 1.5);
+  font-weight: var(--w4-text-font-weight, normal);
+  font-size: var(--w4-text-font-size, 1rem);
+  font-family: var(--w4-font-sans);
+  margin: 0;
+  transition: color var(--w4-transition-fast), opacity var(--w4-transition-fast);
 }
 
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-text-neutral {
-  color: hsl(var(--w4-base-content));
+  --w4-text-color: hsl(var(--w4-base-content));
 }
 
 .w4-text-primary {
-  color: hsl(var(--w4-primary));
+  --w4-text-color: hsl(var(--w4-primary));
 }
 
 .w4-text-secondary {
-  color: hsl(var(--w4-secondary));
+  --w4-text-color: hsl(var(--w4-secondary));
 }
 
 .w4-text-accent {
-  color: hsl(var(--w4-accent));
+  --w4-text-color: hsl(var(--w4-accent));
 }
 
 .w4-text-info {
-  color: hsl(var(--w4-info));
+  --w4-text-color: hsl(var(--w4-info));
 }
 
 .w4-text-success {
-  color: hsl(var(--w4-success));
+  --w4-text-color: hsl(var(--w4-success));
 }
 
 .w4-text-warning {
-  color: hsl(var(--w4-warning));
+  --w4-text-color: hsl(var(--w4-warning));
 }
 
 .w4-text-error {
-  color: hsl(var(--w4-error));
+  --w4-text-color: hsl(var(--w4-error));
 }
 
 .w4-text-muted {
   opacity: 0.75;
 }
 
+/* ----------------------------------
+   SIZE SCALES & STYLES
+   ---------------------------------- */
 .w4-text-lead {
-  font-weight: 500;
-  line-height: 1.6;
+  --w4-text-font-weight: 500;
+  --w4-text-line-height: 1.6;
 }
 
 .w4-text-xs {
-  font-size: 0.75rem;
+  --w4-text-font-size: 0.75rem;
 }
 
 .w4-text-sm {
-  font-size: 0.875rem;
+  --w4-text-font-size: 0.875rem;
 }
 
 .w4-text-md {
-  font-size: 1rem;
+  --w4-text-font-size: 1rem;
 }
 
 .w4-text-lg {
-  font-size: 1.125rem;
+  --w4-text-font-size: 1.125rem;
 }
 
 .w4-text-xl {
-  font-size: 1.25rem;
+  --w4-text-font-size: 1.25rem;
 }
 
-.w4-text-disabled {
-  opacity: 0.55;
+/* ----------------------------------
+   STATES & MODIFIERS
+   ---------------------------------- */
+.w4-text-disabled,
+.w4-text[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.55);
 }
 
-.w4-text-active {
-  font-weight: 600;
+.w4-text-active,
+.w4-text[data-w4-state~="active"] {
+  --w4-text-font-weight: 600;
 }
 
-.w4-text-hidden {
+.w4-text-hidden,
+.w4-text[data-w4-state~="hidden"] {
   display: none;
 }

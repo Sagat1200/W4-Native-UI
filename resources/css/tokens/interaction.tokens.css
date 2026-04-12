@@ -1,0 +1,22 @@
+:root {
+  /* =========================================
+     INTERACTION TOKENS
+     Focus rings, active states, hovers
+     ========================================= */
+
+  /* Focus Ring */
+  --w4-focus-ring-width: 2px;
+  --w4-focus-ring-offset: 2px;
+  --w4-focus-ring-color: var(--w4-primary); /* Will be HSL format via JS/Tailwind */
+  --w4-focus-ring-opacity: 1;
+
+  /* Motion & Transform */
+  --w4-hover-brightness: 0.9;
+  --w4-hover-translate-y: 0px;
+  --w4-active-scale: 0.95;
+  --w4-active-translate-y: 0px;
+
+  /* Opacity States */
+  --w4-disabled-opacity: 0.5;
+  --w4-loading-opacity: 0.7;
+}

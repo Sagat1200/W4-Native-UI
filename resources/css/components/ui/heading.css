@@ -1,93 +1,114 @@
+/* =========================================
+   HEADING COMPONENT
+   Native W4 Visual Engine implementation
+   ========================================= */
+
 .w4-heading {
   margin: 0;
-  color: hsl(var(--w4-base-content));
-  line-height: 1.2;
-  font-weight: 700;
+  color: var(--w4-heading-color, hsl(var(--w4-base-content)));
+  line-height: var(--w4-heading-line-height, 1.2);
+  font-weight: var(--w4-heading-font-weight, 700);
+  font-family: var(--w4-font-sans);
+  font-size: var(--w4-heading-font-size, 1.5rem);
 }
 
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-heading-neutral {
-  color: hsl(var(--w4-base-content));
+  --w4-heading-color: hsl(var(--w4-base-content));
 }
 
 .w4-heading-primary {
-  color: hsl(var(--w4-primary));
+  --w4-heading-color: hsl(var(--w4-primary));
 }
 
 .w4-heading-secondary {
-  color: hsl(var(--w4-secondary));
+  --w4-heading-color: hsl(var(--w4-secondary));
 }
 
 .w4-heading-accent {
-  color: hsl(var(--w4-accent));
+  --w4-heading-color: hsl(var(--w4-accent));
 }
 
 .w4-heading-info {
-  color: hsl(var(--w4-info));
+  --w4-heading-color: hsl(var(--w4-info));
 }
 
 .w4-heading-success {
-  color: hsl(var(--w4-success));
+  --w4-heading-color: hsl(var(--w4-success));
 }
 
 .w4-heading-warning {
-  color: hsl(var(--w4-warning));
+  --w4-heading-color: hsl(var(--w4-warning));
 }
 
 .w4-heading-error {
-  color: hsl(var(--w4-error));
+  --w4-heading-color: hsl(var(--w4-error));
 }
 
 .w4-heading-muted {
   opacity: 0.75;
 }
 
+/* ----------------------------------
+   SIZE SCALES
+   ---------------------------------- */
 .w4-heading-xs {
-  font-size: 0.875rem;
+  --w4-heading-font-size: 0.875rem;
 }
 
 .w4-heading-sm {
-  font-size: 1rem;
+  --w4-heading-font-size: 1rem;
 }
 
 .w4-heading-md {
-  font-size: 1.25rem;
+  --w4-heading-font-size: 1.25rem;
 }
 
 .w4-heading-lg {
-  font-size: 1.5rem;
+  --w4-heading-font-size: 1.5rem;
 }
 
 .w4-heading-xl {
-  font-size: 2rem;
+  --w4-heading-font-size: 2rem;
 }
 
+/* Header Tags Aliases */
 .w4-heading-h1 {
-  font-size: 2rem;
+  --w4-heading-font-size: 2rem;
 }
 
 .w4-heading-h2 {
-  font-size: 1.5rem;
+  --w4-heading-font-size: 1.5rem;
 }
 
 .w4-heading-h3 {
-  font-size: 1.25rem;
+  --w4-heading-font-size: 1.25rem;
 }
 
 .w4-heading-h4,
 .w4-heading-h5,
 .w4-heading-h6 {
-  font-size: 1rem;
+  --w4-heading-font-size: 1rem;
 }
 
-.w4-heading-hidden {
+/* ----------------------------------
+   STATES & MODIFIERS
+   ---------------------------------- */
+.w4-heading-hidden,
+.w4-heading[data-w4-state~="hidden"] {
   display: none;
 }
 
-.w4-heading-disabled {
-  opacity: 0.6;
+.w4-heading-disabled,
+.w4-heading[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.6);
+  pointer-events: none;
 }
 
-.w4-heading-active {
+.w4-heading-active,
+.w4-heading[data-w4-state~="active"] {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }

@@ -1,57 +1,97 @@
+/* =========================================
+   ICON COMPONENT
+   Native W4 Visual Engine implementation
+   ========================================= */
+
 .w4-icon {
   display: inline-block;
   line-height: 1;
-  color: currentColor;
+  color: var(--w4-icon-color, currentColor);
+  font-size: var(--w4-icon-size, 1rem);
+  flex-shrink: 0;
+  vertical-align: middle;
+  transition: color var(--w4-transition-fast), filter var(--w4-transition-fast), opacity var(--w4-transition-fast);
 }
 
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-icon-primary {
-  color: hsl(var(--w4-primary));
+  --w4-icon-color: hsl(var(--w4-primary));
 }
 
 .w4-icon-secondary {
-  color: hsl(var(--w4-secondary));
+  --w4-icon-color: hsl(var(--w4-secondary));
 }
 
 .w4-icon-accent {
-  color: hsl(var(--w4-accent));
+  --w4-icon-color: hsl(var(--w4-accent));
+}
+
+.w4-icon-info {
+  --w4-icon-color: hsl(var(--w4-info));
+}
+
+.w4-icon-success {
+  --w4-icon-color: hsl(var(--w4-success));
+}
+
+.w4-icon-warning {
+  --w4-icon-color: hsl(var(--w4-warning));
+}
+
+.w4-icon-error {
+  --w4-icon-color: hsl(var(--w4-error));
 }
 
 .w4-icon-muted {
   opacity: 0.7;
 }
 
+/* ----------------------------------
+   SIZE SCALES
+   ---------------------------------- */
 .w4-icon-xs {
-  font-size: 0.75rem;
+  --w4-icon-size: 0.75rem;
 }
 
 .w4-icon-sm {
-  font-size: 0.875rem;
+  --w4-icon-size: 0.875rem;
 }
 
 .w4-icon-md {
-  font-size: 1rem;
+  --w4-icon-size: 1rem;
 }
 
 .w4-icon-lg {
-  font-size: 1.25rem;
+  --w4-icon-size: 1.25rem;
 }
 
 .w4-icon-xl {
-  font-size: 1.5rem;
+  --w4-icon-size: 1.5rem;
 }
 
-.w4-icon-disabled {
-  opacity: 0.55;
+/* ----------------------------------
+   STATES & MODIFIERS
+   ---------------------------------- */
+.w4-icon-disabled,
+.w4-icon[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5);
+  pointer-events: none;
 }
 
-.w4-icon-active {
-  filter: saturate(1.2);
+.w4-icon-active,
+.w4-icon[data-w4-state~="active"] {
+  filter: saturate(1.2) brightness(var(--w4-hover-brightness, 1.1));
 }
 
-.w4-icon-hidden {
+.w4-icon-hidden,
+.w4-icon[data-w4-state~="hidden"] {
   display: none;
 }
 
+.w4-icon-loading,
+.w4-icon[data-w4-state~="loading"],
 .w4-icon-spin {
   animation: w4-icon-spin 1s linear infinite;
 }

@@ -1,0 +1,35 @@
+:root {
+  /* =========================================
+     COLOR TOKENS
+     Thematic color palettes (HSL format)
+     ========================================= */
+
+  /* Brand Colors */
+  --w4-primary: 217 91% 60%;         /* Default Blue */
+  --w4-primary-content: 210 40% 98%; /* Default White Text */
+  
+  --w4-secondary: 280 46% 14%;       /* Default Deep Purple */
+  --w4-secondary-content: 210 40% 98%;
+  
+  --w4-accent: 175 70% 41%;          /* Default Teal */
+  --w4-accent-content: 210 40% 98%;
+
+  /* Semantic State Colors */
+  --w4-success: 142 71% 45%;
+  --w4-success-content: 210 40% 98%;
+
+  --w4-warning: 38 92% 50%;
+  --w4-warning-content: 280 46% 14%;
+
+  --w4-error: 348 83% 47%;
+  --w4-error-content: 210 40% 98%;
+
+  --w4-info: 198 93% 60%;
+  --w4-info-content: 210 40% 98%;
+
+  /* Base & Surface Backgrounds */
+  --w4-base-100: 0 0% 100%;          /* Pure White Background */
+  --w4-base-200: 210 40% 96%;        /* Light Gray Background */
+  --w4-base-300: 214 32% 91%;        /* Darker Gray Background */
+  --w4-base-content: 215 28% 17%;    /* Dark Text Content */
+}

@@ -1,83 +1,106 @@
+/* =========================================
+   LABEL COMPONENT
+   Native W4 Visual Engine implementation
+   ========================================= */
+
 .w4-label {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
-  color: hsl(var(--w4-base-content));
-  font-weight: 500;
-  line-height: 1.3;
+  gap: var(--w4-spacing-base);
+  color: var(--w4-label-color, hsl(var(--w4-base-content)));
+  font-weight: var(--w4-label-font-weight, 500);
+  line-height: var(--w4-label-line-height, 1.3);
+  font-size: var(--w4-label-font-size, 1rem);
+  font-family: var(--w4-font-sans);
+  cursor: default;
+  transition: color var(--w4-transition-fast), opacity var(--w4-transition-fast);
 }
 
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-label-neutral {
-  color: hsl(var(--w4-base-content));
+  --w4-label-color: hsl(var(--w4-base-content));
 }
 
 .w4-label-primary {
-  color: hsl(var(--w4-primary));
+  --w4-label-color: hsl(var(--w4-primary));
 }
 
 .w4-label-secondary {
-  color: hsl(var(--w4-secondary));
+  --w4-label-color: hsl(var(--w4-secondary));
 }
 
 .w4-label-accent {
-  color: hsl(var(--w4-accent));
+  --w4-label-color: hsl(var(--w4-accent));
 }
 
 .w4-label-info {
-  color: hsl(var(--w4-info));
+  --w4-label-color: hsl(var(--w4-info));
 }
 
 .w4-label-success {
-  color: hsl(var(--w4-success));
+  --w4-label-color: hsl(var(--w4-success));
 }
 
 .w4-label-warning {
-  color: hsl(var(--w4-warning));
+  --w4-label-color: hsl(var(--w4-warning));
 }
 
 .w4-label-error {
-  color: hsl(var(--w4-error));
+  --w4-label-color: hsl(var(--w4-error));
 }
 
 .w4-label-muted {
   opacity: 0.75;
 }
 
-.w4-label-required::after {
-  content: "*";
-  margin-inline-start: 0.25rem;
-  color: hsl(0 75% 50%);
-}
-
+/* ----------------------------------
+   SIZE SCALES
+   ---------------------------------- */
 .w4-label-xs {
-  font-size: 0.75rem;
+  --w4-label-font-size: 0.75rem;
 }
 
 .w4-label-sm {
-  font-size: 0.875rem;
+  --w4-label-font-size: 0.875rem;
 }
 
 .w4-label-md {
-  font-size: 1rem;
+  --w4-label-font-size: 1rem;
 }
 
 .w4-label-lg {
-  font-size: 1.125rem;
+  --w4-label-font-size: 1.125rem;
 }
 
 .w4-label-xl {
-  font-size: 1.25rem;
+  --w4-label-font-size: 1.25rem;
 }
 
-.w4-label-disabled {
-  opacity: 0.55;
+/* ----------------------------------
+   STATES & MODIFIERS
+   ---------------------------------- */
+.w4-label-required::after,
+.w4-label[data-w4-state~="required"]::after {
+  content: "*";
+  margin-inline-start: 0.25rem;
+  color: var(--w4-label-required-color, hsl(var(--w4-error)));
 }
 
-.w4-label-active {
+.w4-label-disabled,
+.w4-label[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.55);
+  pointer-events: none;
+}
+
+.w4-label-active,
+.w4-label[data-w4-state~="active"] {
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
 
-.w4-label-hidden {
+.w4-label-hidden,
+.w4-label[data-w4-state~="hidden"] {
   display: none;
 }

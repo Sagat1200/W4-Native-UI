@@ -1,0 +1,27 @@
+:root {
+  /* =========================================
+     SURFACE TOKENS
+     Depth, Shadows, Elevación, Borders.
+     ========================================= */
+
+  /* Borders */
+  --w4-surface-border-width: 1px;
+  --w4-surface-border-color: 214 32% 91%; /* Match base-300 usually */
+  
+  --w4-border-width-control: 1px;
+  --w4-border-width-card: 1px;
+  --w4-border-width-panel: 1px;
+  
+  /* Shadows / Elevation */
+  --w4-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --w4-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --w4-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --w4-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --w4-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  /* Semantic Shadow Assignations */
+  --w4-shadow-control: var(--w4-shadow-sm);
+  --w4-shadow-card: var(--w4-shadow-md);
+  --w4-shadow-panel: var(--w4-shadow-lg);
+  --w4-shadow-dropdown: var(--w4-shadow-xl);
+}

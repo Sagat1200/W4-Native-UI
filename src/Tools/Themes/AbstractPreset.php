@@ -11,6 +11,15 @@ abstract class AbstractPreset implements PresetContract
         return array_merge($this->baseTokens(), $this->overrides());
     }
 
+    public function cssVariables(): array
+    {
+        $vars = [];
+        foreach ($this->overrides() as $key => $value) {
+            $vars["--w4-{$key}"] = $value;
+        }
+        return $vars;
+    }
+
     protected function baseTokens(): array
     {
         return [
