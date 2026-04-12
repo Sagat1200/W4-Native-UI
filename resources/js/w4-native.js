@@ -7,6 +7,7 @@
 
 // Import interactive components
 import W4Modal from './components/interactive/modal.js';
+import W4Tooltip from './components/interactive/tooltip.js';
 import W4Alert from './components/feedback/alert.js';
 import W4Toast from './components/feedback/toast.js';
 import W4Skeleton from './components/feedback/skeleton.js';
@@ -21,6 +22,15 @@ import W4Toggle from './components/forms/toggle.js';
 import W4FieldError from './components/forms/fieldError.js';
 import W4HelperText from './components/forms/helperText.js';
 
+// Import layout components
+import W4Card from './components/layout/card.js';
+import W4Container from './components/layout/container.js';
+import W4Divider from './components/layout/divider.js';
+import W4Grid from './components/layout/grid.js';
+import W4Panel from './components/layout/panel.js';
+import W4Section from './components/layout/section.js';
+import W4Stack from './components/layout/stack.js';
+
 // Import core logic (previous IIFE logic wrapped in a modern ES6 structure)
 import W4Core from './core.js';
 
@@ -32,6 +42,7 @@ class W4NativeUI {
     static start() {
         // 1. Initialize Interactive & Feedback Components
         W4Modal.init();
+        W4Tooltip.init();
         W4Alert.init();
         W4Toast.init();
         W4Skeleton.init();
@@ -46,7 +57,16 @@ class W4NativeUI {
         W4FieldError.init();
         W4HelperText.init();
 
-        // 3. Initialize Core Event System (Data attributes, ARIA sync, Forms)
+        // 3. Initialize Layout Components
+        W4Card.init();
+        W4Container.init();
+        W4Divider.init();
+        W4Grid.init();
+        W4Panel.init();
+        W4Section.init();
+        W4Stack.init();
+
+        // 4. Initialize Core Event System (Data attributes, ARIA sync, Forms)
         W4Core.init();
     }
 
@@ -54,6 +74,7 @@ class W4NativeUI {
      * Public API to access components programmatically
      */
     static get Modal() { return W4Modal; }
+    static get Tooltip() { return W4Tooltip; }
     static get Alert() { return W4Alert; }
     static get Toast() { return W4Toast; }
     static get Skeleton() { return W4Skeleton; }
@@ -68,6 +89,15 @@ class W4NativeUI {
     static get FieldError() { return W4FieldError; }
     static get HelperText() { return W4HelperText; }
     
+    // Layout APIs
+    static get Card() { return W4Card; }
+    static get Container() { return W4Container; }
+    static get Divider() { return W4Divider; }
+    static get Grid() { return W4Grid; }
+    static get Panel() { return W4Panel; }
+    static get Section() { return W4Section; }
+    static get Stack() { return W4Stack; }
+
     static get Core() { return W4Core; }
 }
 

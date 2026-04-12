@@ -1,58 +1,53 @@
-(function (window, document) {
-  function initTooltip(root) {
-    var scope = root || document;
-    var tooltips = scope.querySelectorAll('.w4-tooltip');
+/**
+ * =========================================
+ * TOOLTIP COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * Interactive System
+ * =========================================
+ */
 
-    for (var i = 0; i < tooltips.length; i++) {
-      var tooltip = tooltips[i];
-      if (tooltip.getAttribute('data-w4-tooltip-bound') === 'true') {
-        continue;
-      }
-
-      // If interactivity is needed beyond CSS hover (e.g. click to toggle on mobile)
-      tooltip.addEventListener('touchstart', function(e) {
-          var t = e.currentTarget;
-          var isActive = t.classList.contains('w4-tooltip-active');
-          
-          // Close others
-          var allActive = document.querySelectorAll('.w4-tooltip.w4-tooltip-active');
-          for(var j=0; j<allActive.length; j++) {
-              allActive[j].classList.remove('w4-tooltip-active');
-          }
-
-          if (!isActive) {
-              t.classList.add('w4-tooltip-active');
-          }
-      });
-      
-      tooltip.setAttribute('data-w4-tooltip-bound', 'true');
+export default class W4Tooltip {
+    static init() {
+        // We use event delegation on the document to handle touch events for mobile tooltips
+        document.addEventListener('touchstart', this.handleTouchStart.bind(this));
+        document.addEventListener('click', this.handleClickOutside.bind(this));
     }
-  }
 
-  // Close tooltips when clicking outside
-  document.addEventListener('click', function(e) {
-      if (!e.target.closest('.w4-tooltip')) {
-          var activeTooltips = document.querySelectorAll('.w4-tooltip.w4-tooltip-active');
-          for(var i=0; i<activeTooltips.length; i++) {
-              activeTooltips[i].classList.remove('w4-tooltip-active');
-          }
-      }
-  });
+    /**
+     * Handles touch events to manually toggle tooltips on mobile devices
+     * where CSS :hover doesn't exist naturally.
+     * @param {TouchEvent} e 
+     */
+    static handleTouchStart(e) {
+        const tooltip = e.target.closest('.w4-tooltip');
+        
+        if (tooltip) {
+            const isActive = tooltip.classList.contains('w4-tooltip-active');
+            
+            // Close all other active tooltips
+            this.closeAll();
 
-  if (window.NativeUI) {
-      var originalInit = window.NativeUI.init;
-      window.NativeUI.init = function(root) {
-          if(originalInit) originalInit(root);
-          initTooltip(root);
-      };
-  }
+            if (!isActive) {
+                tooltip.classList.add('w4-tooltip-active');
+            }
+        }
+    }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-      initTooltip(document);
-    });
-  } else {
-    initTooltip(document);
-  }
+    /**
+     * Closes tooltips when clicking outside of them
+     * @param {MouseEvent} e 
+     */
+    static handleClickOutside(e) {
+        if (!e.target.closest('.w4-tooltip')) {
+            this.closeAll();
+        }
+    }
 
-})(window, document);
+    /**
+     * Closes all active tooltips on the page
+     */
+    static closeAll() {
+        const activeTooltips = document.querySelectorAll('.w4-tooltip.w4-tooltip-active');
+        activeTooltips.forEach(t => t.classList.remove('w4-tooltip-active'));
+    }
+}
