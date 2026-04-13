@@ -143,7 +143,7 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (CheckBoxComponentState Enum)
    ---------------------------------- */
 .w4-checkbox-disabled,
 .w4-checkbox:disabled,
@@ -174,6 +174,16 @@
   --w4-focus-ring-color: var(--w4-success);
 }
 
+/* Loading State */
+.w4-checkbox-loading,
+.w4-checkbox[data-w4-state~="loading"] {
+  pointer-events: none;
+  opacity: 0.7;
+  /* Add a subtle spinning animation to the border or an overlay if desired, 
+     but typically loading on a checkbox just disables interaction and dims it slightly */
+  animation: w4-checkbox-pulse 1.5s infinite;
+}
+
 /* ----------------------------------
    ANIMATIONS
    ---------------------------------- */
@@ -181,4 +191,10 @@
   0% { transform: scale(0.9); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
+}
+
+@keyframes w4-checkbox-pulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.7; }
 }

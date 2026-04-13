@@ -42,7 +42,7 @@
 .w4-helper-text-xl { --w4-helper-text-font-size: 1.25rem; }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (HelperTextComponentState Enum)
    ---------------------------------- */
 .w4-helper-text-muted {
   --w4-helper-text-opacity: 0.65;
@@ -51,12 +51,15 @@
 .w4-helper-text-disabled,
 .w4-helper-text[data-w4-state~="disabled"] {
   --w4-helper-text-opacity: var(--w4-disabled-opacity, 0.45);
+  pointer-events: none;
 }
 
-.w4-helper-text-active {
+.w4-helper-text-active,
+.w4-helper-text[data-w4-state~="active"] {
   --w4-helper-text-opacity: 1;
 }
 
-.w4-helper-text-hidden {
-  display: none;
+.w4-helper-text-hidden,
+.w4-helper-text[data-w4-state~="hidden"] {
+  display: none !important;
 }

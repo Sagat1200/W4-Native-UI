@@ -42,7 +42,7 @@
 .w4-field-error-xl { --w4-field-error-font-size: 1.25rem; }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (FieldErrorComponentState Enum)
    ---------------------------------- */
 .w4-field-error-inline {
   display: inline;
@@ -53,10 +53,12 @@
   opacity: var(--w4-disabled-opacity, 0.55);
 }
 
-.w4-field-error-active {
+.w4-field-error-active,
+.w4-field-error[data-w4-state~="active"] {
   --w4-field-error-font-weight: 600;
 }
 
-.w4-field-error-hidden {
-  display: none;
+.w4-field-error-hidden,
+.w4-field-error[data-w4-state~="hidden"] {
+  display: none !important;
 }

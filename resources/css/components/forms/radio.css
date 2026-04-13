@@ -121,7 +121,7 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (RadioComponentState Enum)
    ---------------------------------- */
 .w4-radio-disabled,
 .w4-radio:disabled,
@@ -152,6 +152,15 @@
   --w4-focus-ring-color: var(--w4-success);
 }
 
+/* Loading State */
+.w4-radio-loading,
+.w4-radio[data-w4-state~="loading"] {
+  pointer-events: none;
+  opacity: 0.7;
+  /* Add a subtle pulse animation to indicate processing state */
+  animation: w4-radio-pulse 1.5s infinite;
+}
+
 /* ----------------------------------
    ANIMATIONS
    ---------------------------------- */
@@ -159,4 +168,10 @@
   0% { transform: scale(0.9); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
+}
+
+@keyframes w4-radio-pulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.7; }
 }

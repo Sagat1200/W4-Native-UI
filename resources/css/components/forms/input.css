@@ -121,7 +121,7 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (InputComponentState Enum)
    ---------------------------------- */
 .w4-input-disabled,
 .w4-input:disabled,
@@ -150,4 +150,20 @@
 .w4-input[data-w4-state~="valid"] {
   --w4-input-border-color: hsl(var(--w4-success));
   --w4-focus-ring-color: var(--w4-success);
+}
+
+/* Loading State */
+.w4-input-loading,
+.w4-input[data-w4-state~="loading"] {
+  pointer-events: none;
+  opacity: 0.8;
+  background-color: hsl(var(--w4-base-200));
+  /* A simple pulse animation on the border can indicate loading if a spinner isn't injected */
+  animation: w4-input-pulse 1.5s infinite;
+}
+
+@keyframes w4-input-pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.8; }
 }

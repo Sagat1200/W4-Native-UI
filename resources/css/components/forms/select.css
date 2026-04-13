@@ -130,7 +130,7 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (SelectComponentState Enum)
    ---------------------------------- */
 .w4-select-disabled,
 .w4-select:disabled,
@@ -145,6 +145,7 @@
 .w4-select[readonly],
 .w4-select[data-w4-state~="readonly"] {
   background-color: hsl(var(--w4-base-200));
+  pointer-events: none; /* Native select doesn't truly support readonly, so we disable interactions */
 }
 
 /* Validation States */
@@ -159,4 +160,20 @@
 .w4-select[data-w4-state~="valid"] {
   --w4-select-border-color: hsl(var(--w4-success));
   --w4-focus-ring-color: var(--w4-success);
+}
+
+/* Loading State */
+.w4-select-loading,
+.w4-select[data-w4-state~="loading"] {
+  pointer-events: none;
+  opacity: 0.8;
+  background-color: hsl(var(--w4-base-200));
+  /* Replace chevron with a subtle spinner or animate the background */
+  animation: w4-select-pulse 1.5s infinite;
+}
+
+@keyframes w4-select-pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.8; }
 }

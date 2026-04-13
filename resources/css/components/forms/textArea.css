@@ -121,7 +121,7 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (TextAreaComponentState Enum)
    ---------------------------------- */
 .w4-textarea-disabled,
 .w4-textarea:disabled,
@@ -150,6 +150,22 @@
 .w4-textarea[data-w4-state~="valid"] {
   --w4-textarea-border-color: hsl(var(--w4-success));
   --w4-focus-ring-color: var(--w4-success);
+}
+
+/* Loading State */
+.w4-textarea-loading,
+.w4-textarea[data-w4-state~="loading"] {
+  pointer-events: none;
+  opacity: 0.8;
+  background-color: hsl(var(--w4-base-200));
+  /* A simple pulse animation on the border can indicate loading if a spinner isn't injected */
+  animation: w4-textarea-pulse 1.5s infinite;
+}
+
+@keyframes w4-textarea-pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.8; }
 }
 
 /* Resize Modifiers */

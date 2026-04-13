@@ -125,7 +125,7 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (ToggleComponentState Enum)
    ---------------------------------- */
 .w4-toggle-disabled,
 .w4-toggle:disabled,
@@ -154,4 +154,19 @@
 .w4-toggle[data-w4-state~="valid"] {
   border-color: hsl(var(--w4-success));
   --w4-focus-ring-color: var(--w4-success);
+}
+
+/* Loading State */
+.w4-toggle-loading,
+.w4-toggle[data-w4-state~="loading"] {
+  pointer-events: none;
+  opacity: 0.7;
+  /* Add a subtle pulse animation to indicate processing state */
+  animation: w4-toggle-pulse 1.5s infinite;
+}
+
+@keyframes w4-toggle-pulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.7; }
 }
