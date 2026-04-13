@@ -13,31 +13,31 @@ class NativeUIUIRouteService
         })->name('w4-native.theme-lab');
 
         Route::get('/w4/button', function () {
-            return view('w4-native::ui.w4-native-button');
+            return view('w4-native::ui.w4-native-ui-button');
         })->name('w4-native.button');
 
         Route::get('/w4/heading', function () {
-            return view('w4-native::ui.w4-native-heading');
+            return view('w4-native::ui.w4-native-ui-heading');
         })->name('w4-native.heading');
 
         Route::get('/w4/iconbutton', function () {
-            return view('w4-native::ui.w4-native-iconbutton');
+            return view('w4-native::ui.w4-native-ui-iconbutton');
         })->name('w4-native.iconbutton');
 
         Route::get('/w4/icon', function () {
-            return view('w4-native::ui.w4-native-icon');
+            return view('w4-native::ui.w4-native-ui-icon');
         })->name('w4-native.icon');
 
         Route::get('/w4/label', function () {
-            return view('w4-native::ui.w4-native-label');
+            return view('w4-native::ui.w4-native-ui-label');
         })->name('w4-native.label');
 
         Route::get('/w4/link', function () {
-            return view('w4-native::ui.w4-native-link');
+            return view('w4-native::ui.w4-native-ui-link');
         })->name('w4-native.link');
 
         Route::get('/w4/text', function () {
-            return view('w4-native::ui.w4-native-text');
+            return view('w4-native::ui.w4-native-ui-text');
         })->name('w4-native.text');
     }
 }

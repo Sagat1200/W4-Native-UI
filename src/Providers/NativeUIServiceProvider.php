@@ -3,14 +3,15 @@
 namespace W4\NativeUI\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use W4\NativeUI\Console\Commands\InstallNativeUICommand;
 use W4\NativeUI\Console\Commands\BuildNativeUIAssetsCommand;
+use W4\NativeUI\Console\Commands\InstallNativeUICommand;
 use W4\NativeUI\Services\Provider\Components\FeedBack\NativeUIFeedBackService;
 use W4\NativeUI\Services\Provider\Components\Form\NativeUIFormService;
 use W4\NativeUI\Services\Provider\Components\Interactive\NativeUIInteractiveService;
 use W4\NativeUI\Services\Provider\Components\Layout\NativeUILayoutService;
 use W4\NativeUI\Services\Provider\Components\UI\NativeUIUIService;
 use W4\NativeUI\Services\Provider\Directives\NativeUIDirectiveService;
+use W4\NativeUI\Services\Provider\Route\NativeUIFeedbackRouteService;
 use W4\NativeUI\Services\Provider\Route\NativeUIUIRouteService;
 use W4\NativeUI\Services\Themes\NativeUIThemeService;
 use W4\NativeUI\Support\ThemeManifest;
@@ -65,6 +66,7 @@ class NativeUIServiceProvider extends ServiceProvider
         NativeUIDirectiveService::register();
 
         NativeUIUIRouteService::registerRoutes();
+        NativeUIFeedbackRouteService::registerRoutes();
 
         if ($this->app->runningInConsole()) {
             if (is_file($configPath)) {
