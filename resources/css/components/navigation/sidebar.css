@@ -42,27 +42,56 @@
   /* Default closed state for mobile if handled via fixed off-canvas, but we use collapsed for desktop */
 }
 
+/* ==========================================================================
+   States & Modifiers (SideBarComponentState Enum)
+   ========================================================================== */
+
+.w4-sidebar-hidden,
+.w4-sidebar[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-sidebar-disabled,
+.w4-sidebar[data-w4-state~="disabled"] {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-sidebar-active,
+.w4-sidebar[data-w4-state~="active"] {
+  /* Highlight the sidebar if it's explicitly focused or active */
+  box-shadow: var(--w4-shadow-lg);
+  z-index: 40;
+}
+
 /* Collapsed State */
-.w4-sidebar-collapsed {
+.w4-sidebar-collapsed,
+.w4-sidebar[data-w4-state~="collapsed"] {
   inline-size: 4rem; /* icon-only mode */
 }
+
 .w4-sidebar-collapsed .w4-sidebar-text,
-.w4-sidebar-collapsed .w4-menu li > a > span {
+.w4-sidebar[data-w4-state~="collapsed"] .w4-sidebar-text,
+.w4-sidebar-collapsed .w4-menu li > a > span,
+.w4-sidebar[data-w4-state~="collapsed"] .w4-menu li > a > span {
   display: none;
 }
 
 /* Mobile Off-canvas Open State */
-.w4-sidebar-left:not(.w4-sidebar-open).w4-sidebar-fixed {
+.w4-sidebar-left:not(.w4-sidebar-open):not([data-w4-state~="open"]).w4-sidebar-fixed {
   transform: translateX(-100%);
 }
-.w4-sidebar-left.w4-sidebar-open.w4-sidebar-fixed {
+.w4-sidebar-left.w4-sidebar-open.w4-sidebar-fixed,
+.w4-sidebar-left[data-w4-state~="open"].w4-sidebar-fixed {
   transform: translateX(0);
 }
 
-.w4-sidebar-right:not(.w4-sidebar-open).w4-sidebar-fixed {
+.w4-sidebar-right:not(.w4-sidebar-open):not([data-w4-state~="open"]).w4-sidebar-fixed {
   transform: translateX(100%);
 }
-.w4-sidebar-right.w4-sidebar-open.w4-sidebar-fixed {
+.w4-sidebar-right.w4-sidebar-open.w4-sidebar-fixed,
+.w4-sidebar-right[data-w4-state~="open"].w4-sidebar-fixed {
   transform: translateX(0);
 }
 
@@ -75,11 +104,11 @@
 .w4-sidebar.w4-size-full { inline-size: 100%; }
 
 /* Collapsed sizes */
-.w4-sidebar-collapsed.w4-size-xs { inline-size: 3rem; }
-.w4-sidebar-collapsed.w4-size-sm { inline-size: 3.5rem; }
-.w4-sidebar-collapsed.w4-size-md { inline-size: 4rem; }
-.w4-sidebar-collapsed.w4-size-lg { inline-size: 5rem; }
-.w4-sidebar-collapsed.w4-size-xl { inline-size: 6rem; }
+.w4-sidebar-collapsed.w4-size-xs, .w4-sidebar[data-w4-state~="collapsed"].w4-size-xs { inline-size: 3rem; }
+.w4-sidebar-collapsed.w4-size-sm, .w4-sidebar[data-w4-state~="collapsed"].w4-size-sm { inline-size: 3.5rem; }
+.w4-sidebar-collapsed.w4-size-md, .w4-sidebar[data-w4-state~="collapsed"].w4-size-md { inline-size: 4rem; }
+.w4-sidebar-collapsed.w4-size-lg, .w4-sidebar[data-w4-state~="collapsed"].w4-size-lg { inline-size: 5rem; }
+.w4-sidebar-collapsed.w4-size-xl, .w4-sidebar[data-w4-state~="collapsed"].w4-size-xl { inline-size: 6rem; }
 
 /* Variants */
 .w4-sidebar.w4-variant-primary { background-color: var(--w4-primary); color: var(--w4-primary-content); border-color: transparent; }

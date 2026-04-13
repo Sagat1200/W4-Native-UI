@@ -26,7 +26,8 @@
 /* Open State */
 .w4-dropdown.w4-dropdown-open .w4-dropdown-content,
 .w4-dropdown:focus-within .w4-dropdown-content,
-.w4-dropdown.w4-dropdown-hover:hover .w4-dropdown-content {
+.w4-dropdown.w4-dropdown-hover:hover .w4-dropdown-content,
+.w4-dropdown[data-w4-state~="open"] .w4-dropdown-content {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
@@ -89,3 +90,30 @@
 .w4-dropdown.w4-variant-warning .w4-dropdown-content { background-color: var(--w4-warning); color: var(--w4-warning-content); }
 .w4-dropdown.w4-variant-error .w4-dropdown-content { background-color: var(--w4-error); color: var(--w4-error-content); }
 .w4-dropdown.w4-variant-neutral .w4-dropdown-content { background-color: var(--w4-neutral); color: var(--w4-neutral-content); }
+
+/* ==========================================================================
+   States & Modifiers (DropDownComponentState Enum)
+   ========================================================================== */
+
+.w4-dropdown-hidden,
+.w4-dropdown[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-dropdown-disabled,
+.w4-dropdown[data-w4-state~="disabled"] {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-dropdown-disabled .w4-dropdown-content,
+.w4-dropdown[data-w4-state~="disabled"] .w4-dropdown-content {
+  display: none !important; /* Ensure menu cannot open if disabled */
+}
+
+.w4-dropdown-active,
+.w4-dropdown[data-w4-state~="active"] {
+  /* An active dropdown usually highlights its trigger element */
+  z-index: 50; /* Bring it forward slightly */
+}

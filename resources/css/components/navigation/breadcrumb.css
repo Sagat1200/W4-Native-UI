@@ -77,3 +77,47 @@
 .w4-breadcrumb.w4-variant-base-100 { color: var(--w4-base-content); }
 .w4-breadcrumb.w4-variant-base-200 { color: var(--w4-base-content); }
 .w4-breadcrumb.w4-variant-base-300 { color: var(--w4-base-content); }
+
+/* ==========================================================================
+   States & Modifiers (BreadCrumbComponentState Enum)
+   ========================================================================== */
+
+.w4-breadcrumb-hidden,
+.w4-breadcrumb[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-breadcrumb-disabled,
+.w4-breadcrumb[data-w4-state~="disabled"] {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-breadcrumb-active,
+.w4-breadcrumb[data-w4-state~="active"] {
+  /* An active breadcrumb highlights the entire path slightly */
+  background-color: hsl(var(--w4-base-200));
+  padding: var(--w4-spacing-2) var(--w4-spacing-4);
+  border-radius: var(--w4-radius-md);
+}
+
+.w4-breadcrumb-collapsed,
+.w4-breadcrumb[data-w4-state~="collapsed"] {
+  /* Hide middle items to save space (e.g. Home / ... / Current Page) */
+}
+
+.w4-breadcrumb-collapsed li:not(:first-child):not(:last-child),
+.w4-breadcrumb[data-w4-state~="collapsed"] li:not(:first-child):not(:last-child) {
+  display: none;
+}
+
+/* Add an ellipsis after the first child if collapsed and has more than 2 items */
+.w4-breadcrumb-collapsed li:first-child::after,
+.w4-breadcrumb[data-w4-state~="collapsed"] li:first-child::after {
+  content: "/ ... /";
+  display: inline-block;
+  margin-inline-start: var(--w4-spacing-2);
+  color: var(--w4-base-content);
+  opacity: 0.5;
+}

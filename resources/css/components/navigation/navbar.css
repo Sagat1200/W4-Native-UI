@@ -75,3 +75,34 @@
 .w4-navbar.w4-variant-base-200 { background-color: var(--w4-base-200); }
 .w4-navbar.w4-variant-base-300 { background-color: var(--w4-base-300); }
 .w4-navbar.w4-variant-ghost { background-color: transparent; }
+
+/* ==========================================================================
+   States & Modifiers (NavBarComponentState Enum)
+   ========================================================================== */
+
+.w4-navbar-hidden,
+.w4-navbar[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-navbar-disabled,
+.w4-navbar[data-w4-state~="disabled"] {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-navbar-active,
+.w4-navbar[data-w4-state~="active"] {
+  /* Highlight the navbar to show it's active/focused */
+  box-shadow: 0 4px 6px -1px hsl(var(--w4-base-content) / 0.1), 0 2px 4px -1px hsl(var(--w4-base-content) / 0.06);
+}
+
+.w4-navbar-collapsed,
+.w4-navbar[data-w4-state~="collapsed"] {
+  /* Visually collapse the navbar while keeping its DOM node */
+  min-block-size: 0;
+  block-size: 0;
+  padding-block: 0;
+  overflow: hidden;
+}

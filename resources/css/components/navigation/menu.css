@@ -115,5 +115,41 @@
 .w4-menu.w4-variant-accent li > a.active { background-color: var(--w4-accent); color: var(--w4-accent-content); }
 .w4-menu.w4-variant-info li > a.active { background-color: var(--w4-info); color: var(--w4-info-content); }
 .w4-menu.w4-variant-success li > a.active { background-color: var(--w4-success); color: var(--w4-success-content); }
-.w4-menu.w4-variant-warning li > a.active { background-color: var(--w4-warning); color: var(--w4-warning-content); }
-.w4-menu.w4-variant-error li > a.active { background-color: var(--w4-error); color: var(--w4-error-content); }
+.w4-menu.w4-variant-warning li > a.active, .w4-menu.w4-variant-warning li > button.active { background-color: var(--w4-warning); color: var(--w4-warning-content); }
+.w4-menu.w4-variant-error li > a.active, .w4-menu.w4-variant-error li > button.active { background-color: var(--w4-error); color: var(--w4-error-content); }
+
+/* ==========================================================================
+   States & Modifiers (MenuComponentState Enum)
+   ========================================================================== */
+
+.w4-menu-hidden,
+.w4-menu[data-w4-state~="hidden"],
+.w4-menu li[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-menu-disabled,
+.w4-menu[data-w4-state~="disabled"],
+.w4-menu li[data-w4-state~="disabled"] {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+/* Active state for individual menu items is already handled by .active class above,
+   but we add support for the data attribute for framework consistency */
+.w4-menu li[data-w4-state~="active"] > a,
+.w4-menu li[data-w4-state~="active"] > button {
+  background-color: var(--w4-neutral);
+  color: var(--w4-neutral-content);
+}
+
+.w4-menu.w4-variant-primary li[data-w4-state~="active"] > a, .w4-menu.w4-variant-primary li[data-w4-state~="active"] > button { background-color: var(--w4-primary); color: var(--w4-primary-content); }
+.w4-menu.w4-variant-secondary li[data-w4-state~="active"] > a, .w4-menu.w4-variant-secondary li[data-w4-state~="active"] > button { background-color: var(--w4-secondary); color: var(--w4-secondary-content); }
+.w4-menu.w4-variant-accent li[data-w4-state~="active"] > a, .w4-menu.w4-variant-accent li[data-w4-state~="active"] > button { background-color: var(--w4-accent); color: var(--w4-accent-content); }
+
+/* Open State (for submenus) */
+.w4-menu li.w4-menu-open > ul,
+.w4-menu li[data-w4-state~="open"] > ul {
+  display: flex; /* Override the default hidden state of horizontal submenus */
+}
