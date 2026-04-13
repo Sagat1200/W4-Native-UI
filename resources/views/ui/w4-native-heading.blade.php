@@ -269,10 +269,11 @@
                     <span class="preview-label">Heading Interactivo</span>
                     <h3 id="jsInteractiveHeading" class="w4-heading w4-heading-primary" data-w4-component="heading">
                         Dynamic JS Heading</h3>
-                    <p style="font-size: 0.875rem; color: hsl(var(--w4-base-content) / 0.7); margin-top: 0.5rem;">
+                    <p
+                        style="font-size: 0.875rem; color: hsl(var(--w4-base-content) / 0.7); margin-block-start: 0.5rem;">
                         Usa los botones para modificar el atributo <code>data-w4-state</code> en tiempo real:
                     </p>
-                    <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap;">
+                    <div style="display: flex; gap: 0.5rem; margin-block-start: 0.5rem; flex-wrap: wrap;">
                         <button class="w4-button w4-button-sm w4-button-outline"
                             onclick="document.getElementById('jsInteractiveHeading').removeAttribute('data-w4-state')">Clear
                             (Normal)</button>

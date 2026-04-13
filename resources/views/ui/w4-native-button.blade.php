@@ -232,7 +232,7 @@
             </h2>
             <div class="button-group" style="flex-direction: column; align-items: flex-start; gap: 1.5rem;">
 
-                <div style="display: flex; gap: 1rem; align-items: center; width: 100%;">
+                <div style="display: flex; gap: 1rem; align-items: center; inline-size: 100%;">
                     <button id="jsInteractiveButton" class="w4-button w4-button-primary" data-w4-component="button">
                         Dynamic JS Button
                     </button>
@@ -240,7 +240,7 @@
                     <div
                         style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-inline-start: auto; border-inline-start: 1px solid hsl(var(--w4-base-300)); padding-inline-start: 1rem;">
                         <span
-                            style="font-size: 0.875rem; color: hsl(var(--w4-base-content)/0.7); display: flex; align-items: center; margin-right: 0.5rem;">Set
+                            style="font-size: 0.875rem; color: hsl(var(--w4-base-content)/0.7); display: flex; align-items: center; margin-inline-end: 0.5rem;">Set
                             State:</span>
                         <button class="w4-button w4-button-sm w4-button-outline"
                             onclick="document.getElementById('jsInteractiveButton').removeAttribute('data-w4-state')">Clear

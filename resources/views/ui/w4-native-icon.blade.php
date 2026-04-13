@@ -1,293 +1,317 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="native.light">
+<html lang="en" data-theme="native-ui.light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Icon Lab</title>
-    @W4NativeStyles
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @NativeUIStyles
+
+    <!-- Carga de FontAwesome para el testeo visual de íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: hsl(var(--w4-base-200));
+            color: hsl(var(--w4-base-content));
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            margin: 0;
+            padding: 2rem;
+            min-block-size: 100vh;
+        }
+
+        .lab-container {
+            max-inline-size: 1200px;
+            margin: 0 auto;
+            background-color: hsl(var(--w4-base-100));
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .lab-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-block-end: 1px solid hsl(var(--w4-base-300));
+            padding-block-end: 1.5rem;
+        }
+
+        .lab-title {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .lab-subtitle {
+            margin: 0.5rem 0 0 0;
+            color: hsl(var(--w4-base-content) / 0.7);
+        }
+
+        .theme-selector-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .theme-selector {
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid hsl(var(--w4-base-300));
+            background-color: hsl(var(--w4-base-100));
+            color: hsl(var(--w4-base-content));
+            font-size: 1rem;
+            min-inline-size: 200px;
+        }
+
+        .section-title {
+            margin: 0 0 1rem 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-inline-start: 4px solid hsl(var(--w4-primary));
+            padding-inline-start: 0.75rem;
+        }
+
+        .preview-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2rem;
+            background-color: hsl(var(--w4-base-200));
+            border-radius: 0.75rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: hsl(var(--w4-base-100));
+            padding: 1.5rem;
+            border-radius: var(--w4-radius-card);
+            box-shadow: var(--w4-shadow-sm);
+            min-inline-size: 120px;
+            text-align: center;
+        }
+
+        .preview-label {
+            font-size: 0.75rem;
+            color: hsl(var(--w4-base-content) / 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+    </style>
 </head>
 
-<body class="bg-base-200 min-h-screen p-8 text-base-content">
+<body>
 
-    <div class="max-w-6xl mx-auto space-y-12 bg-base-100 p-8 rounded-xl shadow-lg">
-
-        <header class="border-b border-base-300 pb-6 flex justify-between items-start">
+    <div class="lab-container">
+        <header class="lab-header">
             <div>
-                <h1 class="text-4xl font-bold">W4 Native: Icon Lab</h1>
-                <p class="text-lg text-base-content/70 mt-2">Laboratorio de pruebas visuales para el componente <code
-                        class="bg-base-300 px-1 rounded">w4-icon</code>.</p>
+                <h1 class="lab-title">W4 Native: Icon Lab</h1>
+                <p class="lab-subtitle">Entorno de pruebas visuales para el componente w4-icon</p>
             </div>
 
-            <!-- Selector de Temas -->
-            <div class="flex flex-col gap-1">
-                <label for="theme-selector" class="text-sm font-semibold text-base-content/80">Cambiar Tema:</label>
-                <select id="theme-selector"
-                    class="select select-bordered select-sm w-48 bg-base-100 text-base-content border-base-300 rounded"
-                    onchange="document.documentElement.setAttribute('data-theme', this.value)">
-                    <option value="native.light">Light</option>
-                    <option value="native.dark">Dark</option>
-                    <option value="native.acid">Acid</option>
-                    <option value="native.aqua">Aqua</option>
-                    <option value="native.autumn">Autumn</option>
-                    <option value="native.black">Black</option>
-                    <option value="native.bumblebee">Bumblebee</option>
-                    <option value="native.business">Business</option>
-                    <option value="native.cmyk">Cmyk</option>
-                    <option value="native.coffee">Coffee</option>
-                    <option value="native.corporate">Corporate</option>
-                    <option value="native.cupcake">Cupcake</option>
-                    <option value="native.cyberpunk">Cyberpunk</option>
-                    <option value="native.dim">Dim</option>
-                    <option value="native.dracula">Dracula</option>
-                    <option value="native.emerald">Emerald</option>
-                    <option value="native.fantasy">Fantasy</option>
-                    <option value="native.forest">Forest</option>
-                    <option value="native.garden">Garden</option>
-                    <option value="native.halloween">Halloween</option>
-                    <option value="native.lemonade">Lemonade</option>
-                    <option value="native.lofi">Lofi</option>
-                    <option value="native.luxury">Luxury</option>
-                    <option value="native.night">Night</option>
-                    <option value="native.nord">Nord</option>
-                    <option value="native.pastel">Pastel</option>
-                    <option value="native.retro">Retro</option>
-                    <option value="native.sunset">Sunset</option>
-                    <option value="native.synthwave">Synthwave</option>
-                    <option value="native.valentine">Valentine</option>
-                    <option value="native.winter">Winter</option>
-                    <option value="native.wireframe">Wireframe</option>
+            <div class="theme-selector-wrapper">
+                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar Tema:</label>
+                <select id="themeSwitcher" class="theme-selector">
+                    <option value="native-ui.light">Light</option>
+                    <option value="native-ui.dark">Dark</option>
+                    <option value="native-ui.corporate">Corporate</option>
+                    <option value="native-ui.night">Night</option>
+                    <option value="native-ui.synthwave">Synthwave</option>
+                    <option value="native-ui.cupcake">Cupcake</option>
+                    <option value="native-ui.bumblebee">Bumblebee</option>
+                    <option value="native-ui.emerald">Emerald</option>
+                    <option value="native-ui.retro">Retro</option>
+                    <option value="native-ui.cyberpunk">Cyberpunk</option>
+                    <option value="native-ui.valentine">Valentine</option>
+                    <option value="native-ui.halloween">Halloween</option>
+                    <option value="native-ui.garden">Garden</option>
+                    <option value="native-ui.forest">Forest</option>
+                    <option value="native-ui.aqua">Aqua</option>
+                    <option value="native-ui.lofi">Lofi</option>
+                    <option value="native-ui.pastel">Pastel</option>
+                    <option value="native-ui.fantasy">Fantasy</option>
+                    <option value="native-ui.wireframe">Wireframe</option>
+                    <option value="native-ui.black">Black</option>
+                    <option value="native-ui.luxury">Luxury</option>
+                    <option value="native-ui.dracula">Dracula</option>
+                    <option value="native-ui.cmyk">Cmyk</option>
+                    <option value="native-ui.autumn">Autumn</option>
+                    <option value="native-ui.business">Business</option>
+                    <option value="native-ui.acid">Acid</option>
+                    <option value="native-ui.lemonade">Lemonade</option>
+                    <option value="native-ui.coffee">Coffee</option>
+                    <option value="native-ui.winter">Winter</option>
+                    <option value="native-ui.dim">Dim</option>
+                    <option value="native-ui.nord">Nord</option>
+                    <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
         </header>
 
-                <!-- Variantes -->
-        <section class="space-y-4">
-            <h2 class="text-2xl font-semibold border-l-4 border-primary pl-3">Variantes (Variants)</h2>
-            <div class="flex flex-wrap gap-4 p-6 bg-base-200 rounded-lg text-4xl">
-                <div class="w4-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-                <div class="w4-icon w4-icon-primary"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-                <div class="w4-icon w4-icon-secondary"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-                <div class="w4-icon w4-icon-accent"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-                <div class="w4-icon w4-icon-muted"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+        <section>
+            <h2 class="section-title">Variantes de Color</h2>
+            <div class="preview-group">
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-heart w4-icon-xl"></i>
+                    <span class="preview-label">Default (Inherit)</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-star w4-icon-primary w4-icon-xl"></i>
+                    <span class="preview-label">Primary</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-bolt w4-icon-secondary w4-icon-xl"></i>
+                    <span class="preview-label">Secondary</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-droplet w4-icon-accent w4-icon-xl"></i>
+                    <span class="preview-label">Accent</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-circle-info w4-icon-info w4-icon-xl"></i>
+                    <span class="preview-label">Info</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-circle-check w4-icon-success w4-icon-xl"></i>
+                    <span class="preview-label">Success</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-triangle-exclamation w4-icon-warning w4-icon-xl"></i>
+                    <span class="preview-label">Warning</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-circle-xmark w4-icon-error w4-icon-xl"></i>
+                    <span class="preview-label">Error</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-bell-slash w4-icon-muted w4-icon-xl"></i>
+                    <span class="preview-label">Muted</span>
+                </div>
             </div>
         </section>
 
-        <!-- Tamaños -->
-        <section class="space-y-4">
-            <h2 class="text-2xl font-semibold border-l-4 border-accent pl-3">Tamaños (Sizes)</h2>
-            <div class="flex flex-wrap items-end gap-4 p-6 bg-base-200 rounded-lg">
-                <div class="w4-icon w4-icon-xs"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-                <div class="w4-icon w4-icon-sm"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-                <div class="w4-icon w4-icon-md"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-                <div class="w4-icon w4-icon-lg"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-                <div class="w4-icon w4-icon-xl"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+        <section>
+            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary))">Tamaños Explícitos (XS - XL)</h2>
+            <div class="preview-group">
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-user w4-icon-primary w4-icon-xs"></i>
+                    <span class="preview-label">Extra Small (xs)</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-user w4-icon-primary w4-icon-sm"></i>
+                    <span class="preview-label">Small (sm)</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-user w4-icon-primary w4-icon-md"></i>
+                    <span class="preview-label">Medium (md)</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-user w4-icon-primary w4-icon-lg"></i>
+                    <span class="preview-label">Large (lg)</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-user w4-icon-primary w4-icon-xl"></i>
+                    <span class="preview-label">Extra Large (xl)</span>
+                </div>
             </div>
         </section>
 
-        <!-- Estados y Modificadores -->
-        <section class="space-y-4">
-            <h2 class="text-2xl font-semibold border-l-4 border-neutral pl-3">Estados y Modificadores</h2>
-            <div class="flex flex-wrap gap-4 p-6 bg-base-200 rounded-lg text-4xl">
-                <div class="w4-icon w4-icon-active"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-                <div class="w4-icon w4-icon-disabled"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
-                <div class="w4-icon w4-icon-spin"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="4.93" x2="19.07" y2="7.76"></line></svg></div>
+        <section>
+            <h2 class="section-title" style="border-color: hsl(var(--w4-error))">Estados (CSS Classes & Atributos)</h2>
+            <div class="preview-group">
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-shield w4-icon-primary w4-icon-xl"></i>
+                    <span class="preview-label">Normal</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-shield w4-icon-primary w4-icon-active w4-icon-xl"></i>
+                    <span class="preview-label">Active (w4-icon-active)</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-shield w4-icon-primary w4-icon-disabled w4-icon-xl"></i>
+                    <span class="preview-label">Disabled</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-spinner w4-icon-primary w4-icon-spin w4-icon-xl"></i>
+                    <span class="preview-label">Spin (w4-icon-spin)</span>
+                </div>
+                <div class="preview-item">
+                    <i class="w4-icon fa-solid fa-shield w4-icon-primary w4-icon-decorative w4-icon-xl"></i>
+                    <span class="preview-label">Decorative (No pointer)</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title" style="border-color: hsl(var(--w4-success))">Estados JS Soportados (data-w4-state)
+            </h2>
+            <div class="preview-group" style="flex-direction: column; align-items: flex-start; padding: 2rem;">
+
+                <div style="display: flex; gap: 2rem; align-items: center; inline-size: 100%;">
+                    <div
+                        style="background: hsl(var(--w4-base-100)); padding: 2rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-md); display: flex; justify-content: center; align-items: center; min-inline-size: 150px;">
+                        <i id="jsInteractiveIcon" class="w4-icon fa-solid fa-rocket w4-icon-primary"
+                            style="font-size: 3rem;" data-w4-component="icon"></i>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1rem; inline-size: 100%;">
+                        <p style="font-size: 0.875rem; color: hsl(var(--w4-base-content) / 0.7); margin: 0;">
+                            Modifica el atributo <code>data-w4-state</code> en tiempo real. Observa cómo cambian las
+                            propiedades visuales y las animaciones a través del motor CSS nativo:
+                        </p>
+
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <button class="w4-button w4-button-sm w4-button-outline"
+                                onclick="document.getElementById('jsInteractiveIcon').removeAttribute('data-w4-state')">Clear
+                                (Normal)</button>
+                            <button class="w4-button w4-button-sm w4-button-info"
+                                onclick="document.getElementById('jsInteractiveIcon').setAttribute('data-w4-state', 'active')">Active</button>
+                            <button class="w4-button w4-button-sm w4-button-warning"
+                                onclick="document.getElementById('jsInteractiveIcon').setAttribute('data-w4-state', 'disabled')">Disabled</button>
+                            <button class="w4-button w4-button-sm w4-button-secondary"
+                                onclick="document.getElementById('jsInteractiveIcon').setAttribute('data-w4-state', 'loading')">Loading
+                                (Spin)</button>
+                            <button class="w4-button w4-button-sm w4-button-error"
+                                onclick="document.getElementById('jsInteractiveIcon').setAttribute('data-w4-state', 'hidden')">Hidden</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </div>
 
-    @W4NativeScripts
-    @W4NativeInit
-    @W4NativeLivewire
+    @NativeUIScripts
+    @NativeUIInit
+    @NativeUILivewire
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            if (!window.W4NativeUI) {
-                return;
-            }
-
-            var availableThemes = [
-                "native.light",
-                "native.dark",
-                "native.corporate",
-                "native.night",
-                "native.synthwave",
-                "native.cupcake",
-                "native.bumblebee",
-                "native.emerald",
-                "native.retro",
-                "native.cyberpunk",
-                "native.valentine",
-                "native.halloween",
-                "native.garden",
-                "native.forest",
-                "native.aqua",
-                "native.lofi",
-                "native.pastel",
-                "native.fantasy",
-                "native.wireframe",
-                "native.black",
-                "native.luxury",
-                "native.dracula",
-                "native.cmyk",
-                "native.autumn",
-                "native.business",
-                "native.acid",
-                "native.lemonade",
-                "native.coffee",
-                "native.winter",
-                "native.dim",
-                "native.nord",
-                "native.sunset",
-            ];
             var storageKey = "w4-native-ui-theme";
             var switcher = document.getElementById("themeSwitcher");
-            var hookLog = document.getElementById("hookLog");
-            var clearHookLog = document.getElementById("clearHookLog");
-            var initial = localStorage.getItem(storageKey) || document.documentElement.getAttribute("data-theme") || "native.light";
-            var safeInitial = availableThemes.indexOf(initial) !== -1 ? initial : "native.light";
 
-            window.W4NativeUI.setTheme(safeInitial);
+            var currentTheme = localStorage.getItem(storageKey) || document.documentElement.getAttribute("data-theme") || "native-ui.light";
+            document.documentElement.setAttribute("data-theme", currentTheme);
 
             if (switcher) {
-                switcher.value = safeInitial;
+                switcher.value = currentTheme;
+
                 switcher.addEventListener("change", function (event) {
                     var theme = event.target.value;
-                    if (availableThemes.indexOf(theme) === -1) {
-                        return;
-                    }
-
-                    window.W4NativeUI.setTheme(theme);
+                    document.documentElement.setAttribute("data-theme", theme);
                     localStorage.setItem(storageKey, theme);
                 });
             }
-
-            function inferComponentForDemo(target) {
-                if (target.classList.contains("w4-button") || target.classList.contains("w4-btn")) return "button";
-                if (target.classList.contains("w4-icon-button")) return "icon-button";
-                if (target.classList.contains("w4-icon")) return "icon";
-                if (target.classList.contains("w4-heading")) return "heading";
-                if (target.classList.contains("w4-label")) return "label";
-                if (target.classList.contains("w4-link")) return "link";
-                if (target.classList.contains("w4-text")) return "text";
-                if (target.classList.contains("w4-input")) return "input";
-                if (target.classList.contains("w4-select")) return "select";
-                if (target.classList.contains("w4-textarea")) return "textarea";
-                if (target.classList.contains("w4-checkbox")) return "checkbox";
-                if (target.classList.contains("w4-radio")) return "radio";
-                if (target.classList.contains("w4-toggle")) return "toggle";
-                if (target.classList.contains("w4-divider")) return "divider";
-                if (target.classList.contains("w4-alert")) return "alert";
-                if (target.classList.contains("w4-badge")) return "badge";
-                if (target.classList.contains("w4-toast")) return "toast";
-                if (target.classList.contains("w4-progress")) return "progress";
-                if (target.classList.contains("w4-skeleton")) return "skeleton";
-                if (target.classList.contains("w4-tooltip")) return "tooltip";
-                if (target.classList.contains("w4-card")) return "card";
-                if (target.classList.contains("w4-panel")) return "panel";
-                if (target.classList.contains("w4-section")) return "section";
-                if (target.classList.contains("w4-container")) return "container";
-                if (target.classList.contains("w4-stack")) return "stack";
-                if (target.classList.contains("w4-grid")) return "grid";
-                return "";
-            }
-
-            function setDynamicState(targetId, state) {
-                var target = document.getElementById(targetId);
-                if (!target) {
-                    return;
-                }
-
-                if (!target.getAttribute("data-w4-component")) {
-                    var inferred = inferComponentForDemo(target);
-                    if (inferred) {
-                        target.setAttribute("data-w4-component", inferred);
-                    }
-                }
-                target.setAttribute("data-w4-state", state);
-
-                if (target.classList.contains("w4-button") || target.classList.contains("w4-btn") || target.classList.contains("w4-icon-button")) {
-                    if (state.indexOf("disabled") !== -1) {
-                        target.setAttribute("disabled", "disabled");
-                    } else {
-                        target.removeAttribute("disabled");
-                    }
-                }
-
-                if (target.type === "checkbox" && target.classList.contains("w4-checkbox")) {
-                    target.checked = state.indexOf("checked") !== -1;
-                    target.indeterminate = state.indexOf("indeterminate") !== -1;
-                }
-
-                if (target.type === "radio" && target.classList.contains("w4-radio")) {
-                    target.checked = state.indexOf("selected") !== -1;
-                }
-
-                if (target.classList.contains("w4-toggle")) {
-                    target.checked = state.indexOf("checked") !== -1;
-                }
-
-                window.W4NativeUI.sync(target);
-            }
-
-            function appendHookLog(detail) {
-                if (!hookLog) {
-                    return;
-                }
-
-                var row = document.createElement("div");
-                row.className = "w4-text w4-text-xs";
-                row.style.padding = "0.35rem 0.5rem";
-                row.style.border = "1px solid hsl(var(--w4-base-300))";
-                row.style.borderRadius = "0.375rem";
-
-                var time = new Date().toLocaleTimeString();
-                var states = Array.isArray(detail.states) ? detail.states.join(", ") : "";
-                row.textContent = "[" + time + "] " + detail.hook + " | component=" + detail.component + " | states=" + states;
-                hookLog.prepend(row);
-
-                while (hookLog.children.length > 60) {
-                    hookLog.removeChild(hookLog.lastChild);
-                }
-            }
-
-            window.W4NativeUI.on("w4:hook", function (detail) {
-                appendHookLog(detail);
-            });
-
-            if (clearHookLog) {
-                clearHookLog.addEventListener("click", function () {
-                    if (!hookLog) {
-                        return;
-                    }
-
-                    hookLog.innerHTML = "";
-                });
-            }
-
-            document.addEventListener("click", function (event) {
-                var control = event.target.closest("[data-demo-target]");
-                if (!control) {
-                    return;
-                }
-
-                event.preventDefault();
-                var targetValue = control.getAttribute("data-demo-target") || "";
-                var state = control.getAttribute("data-demo-state") || "";
-                var targetIds = targetValue.split(",");
-
-                for (var i = 0; i < targetIds.length; i += 1) {
-                    var targetId = targetIds[i].trim();
-                    if (!targetId) {
-                        continue;
-                    }
-
-                    setDynamicState(targetId, state);
-                }
-            });
         });
     </script>
-
 </body>
 
 </html>

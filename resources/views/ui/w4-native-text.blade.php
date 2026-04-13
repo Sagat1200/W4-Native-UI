@@ -1,293 +1,333 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="native.light">
+<html lang="en" data-theme="native-ui.light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Text Lab</title>
-    @W4NativeStyles
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @NativeUIStyles
+    <style>
+        body {
+            background-color: hsl(var(--w4-base-200));
+            color: hsl(var(--w4-base-content));
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            margin: 0;
+            padding: 2rem;
+            min-block-size: 100vh;
+        }
+
+        .lab-container {
+            max-inline-size: 1200px;
+            margin: 0 auto;
+            background-color: hsl(var(--w4-base-100));
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .lab-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-block-end: 1px solid hsl(var(--w4-base-300));
+            padding-block-end: 1.5rem;
+        }
+
+        .lab-title {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .lab-subtitle {
+            margin: 0.5rem 0 0 0;
+            color: hsl(var(--w4-base-content) / 0.7);
+        }
+
+        .theme-selector-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .theme-selector {
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid hsl(var(--w4-base-300));
+            background-color: hsl(var(--w4-base-100));
+            color: hsl(var(--w4-base-content));
+            font-size: 1rem;
+            min-inline-size: 200px;
+        }
+
+        .section-title {
+            margin: 0 0 1rem 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-inline-start: 4px solid hsl(var(--w4-primary));
+            padding-inline-start: 0.75rem;
+        }
+
+        .preview-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background-color: hsl(var(--w4-base-200));
+            border-radius: 0.75rem;
+        }
+
+        .preview-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            background-color: hsl(var(--w4-base-100));
+            padding: 1.5rem;
+            border-radius: var(--w4-radius-card);
+            box-shadow: var(--w4-shadow-sm);
+        }
+
+        .preview-label-desc {
+            font-size: 0.75rem;
+            color: hsl(var(--w4-base-content) / 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+    </style>
 </head>
 
-<body class="bg-base-200 min-h-screen p-8 text-base-content">
+<body>
 
-    <div class="max-w-6xl mx-auto space-y-12 bg-base-100 p-8 rounded-xl shadow-lg">
-
-        <header class="border-b border-base-300 pb-6 flex justify-between items-start">
+    <div class="lab-container">
+        <header class="lab-header">
             <div>
-                <h1 class="text-4xl font-bold">W4 Native: Text Lab</h1>
-                <p class="text-lg text-base-content/70 mt-2">Laboratorio de pruebas visuales para el componente <code
-                        class="bg-base-300 px-1 rounded">w4-text</code>.</p>
+                <h1 class="lab-title">W4 Native: Text Lab</h1>
+                <p class="lab-subtitle">Entorno de pruebas visuales para el componente w4-text</p>
             </div>
 
-            <!-- Selector de Temas -->
-            <div class="flex flex-col gap-1">
-                <label for="theme-selector" class="text-sm font-semibold text-base-content/80">Cambiar Tema:</label>
-                <select id="theme-selector"
-                    class="select select-bordered select-sm w-48 bg-base-100 text-base-content border-base-300 rounded"
-                    onchange="document.documentElement.setAttribute('data-theme', this.value)">
-                    <option value="native.light">Light</option>
-                    <option value="native.dark">Dark</option>
-                    <option value="native.acid">Acid</option>
-                    <option value="native.aqua">Aqua</option>
-                    <option value="native.autumn">Autumn</option>
-                    <option value="native.black">Black</option>
-                    <option value="native.bumblebee">Bumblebee</option>
-                    <option value="native.business">Business</option>
-                    <option value="native.cmyk">Cmyk</option>
-                    <option value="native.coffee">Coffee</option>
-                    <option value="native.corporate">Corporate</option>
-                    <option value="native.cupcake">Cupcake</option>
-                    <option value="native.cyberpunk">Cyberpunk</option>
-                    <option value="native.dim">Dim</option>
-                    <option value="native.dracula">Dracula</option>
-                    <option value="native.emerald">Emerald</option>
-                    <option value="native.fantasy">Fantasy</option>
-                    <option value="native.forest">Forest</option>
-                    <option value="native.garden">Garden</option>
-                    <option value="native.halloween">Halloween</option>
-                    <option value="native.lemonade">Lemonade</option>
-                    <option value="native.lofi">Lofi</option>
-                    <option value="native.luxury">Luxury</option>
-                    <option value="native.night">Night</option>
-                    <option value="native.nord">Nord</option>
-                    <option value="native.pastel">Pastel</option>
-                    <option value="native.retro">Retro</option>
-                    <option value="native.sunset">Sunset</option>
-                    <option value="native.synthwave">Synthwave</option>
-                    <option value="native.valentine">Valentine</option>
-                    <option value="native.winter">Winter</option>
-                    <option value="native.wireframe">Wireframe</option>
+            <div class="theme-selector-wrapper">
+                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar Tema:</label>
+                <select id="themeSwitcher" class="theme-selector">
+                    <option value="native-ui.light">Light</option>
+                    <option value="native-ui.dark">Dark</option>
+                    <option value="native-ui.corporate">Corporate</option>
+                    <option value="native-ui.night">Night</option>
+                    <option value="native-ui.synthwave">Synthwave</option>
+                    <option value="native-ui.cupcake">Cupcake</option>
+                    <option value="native-ui.bumblebee">Bumblebee</option>
+                    <option value="native-ui.emerald">Emerald</option>
+                    <option value="native-ui.retro">Retro</option>
+                    <option value="native-ui.cyberpunk">Cyberpunk</option>
+                    <option value="native-ui.valentine">Valentine</option>
+                    <option value="native-ui.halloween">Halloween</option>
+                    <option value="native-ui.garden">Garden</option>
+                    <option value="native-ui.forest">Forest</option>
+                    <option value="native-ui.aqua">Aqua</option>
+                    <option value="native-ui.lofi">Lofi</option>
+                    <option value="native-ui.pastel">Pastel</option>
+                    <option value="native-ui.fantasy">Fantasy</option>
+                    <option value="native-ui.wireframe">Wireframe</option>
+                    <option value="native-ui.black">Black</option>
+                    <option value="native-ui.luxury">Luxury</option>
+                    <option value="native-ui.dracula">Dracula</option>
+                    <option value="native-ui.cmyk">Cmyk</option>
+                    <option value="native-ui.autumn">Autumn</option>
+                    <option value="native-ui.business">Business</option>
+                    <option value="native-ui.acid">Acid</option>
+                    <option value="native-ui.lemonade">Lemonade</option>
+                    <option value="native-ui.coffee">Coffee</option>
+                    <option value="native-ui.winter">Winter</option>
+                    <option value="native-ui.dim">Dim</option>
+                    <option value="native-ui.nord">Nord</option>
+                    <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
         </header>
 
-                <!-- Variantes -->
-        <section class="space-y-4">
-            <h2 class="text-2xl font-semibold border-l-4 border-primary pl-3">Variantes (Variants)</h2>
-            <div class="flex flex-col gap-4 p-6 bg-base-200 rounded-lg">
-                <p class="w4-text">Text Default: Lorem ipsum dolor sit amet.</p>
-                <p class="w4-text w4-text-primary">Text Primary: Lorem ipsum dolor sit amet.</p>
-                <p class="w4-text w4-text-secondary">Text Secondary: Lorem ipsum dolor sit amet.</p>
-                <p class="w4-text w4-text-accent">Text Accent: Lorem ipsum dolor sit amet.</p>
-                <p class="w4-text w4-text-muted">Text Muted: Lorem ipsum dolor sit amet.</p>
-                <p class="w4-text w4-text-lead">Text Lead: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <section>
+            <h2 class="section-title">Variantes de Color Semánticas</h2>
+            <div class="preview-group grid-container">
+                <div class="preview-item">
+                    <span class="preview-label-desc">Neutral (Default)</span>
+                    <p class="w4-text w4-text-neutral">Este es un bloque de texto neutral estándar. Utiliza el color de
+                        contenido base del tema actual. Perfecto para la mayoría de los párrafos y descripciones largas
+                        en la interfaz.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">Primary</span>
+                    <p class="w4-text w4-text-primary">Texto destacado utilizando el color primario del tema. Ideal para
+                        resaltar información importante o métricas clave.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">Secondary</span>
+                    <p class="w4-text w4-text-secondary">Texto secundario que complementa la información primaria,
+                        usando el color secundario de la paleta actual.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">Accent</span>
+                    <p class="w4-text w4-text-accent">Texto de acento diseñado para romper la monotonía visual y atraer
+                        la mirada hacia detalles específicos.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">Info</span>
+                    <p class="w4-text w4-text-info">El servidor se ha reiniciado correctamente a las 04:00 AM. Todos los
+                        servicios están operando normalmente.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">Success</span>
+                    <p class="w4-text w4-text-success">¡Tu perfil ha sido actualizado con éxito! Los cambios ya son
+                        visibles para otros usuarios.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">Warning</span>
+                    <p class="w4-text w4-text-warning">Tu suscripción expirará en 3 días. Por favor, actualiza tu método
+                        de pago para evitar interrupciones.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">Error</span>
+                    <p class="w4-text w4-text-error">No se pudo establecer conexión con la base de datos. Revisa la
+                        configuración de red e inténtalo de nuevo.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">Muted</span>
+                    <p class="w4-text w4-text-muted">Texto atenuado con menor opacidad. Usado frecuentemente para notas
+                        al pie, marcas de tiempo, o descripciones legales que no requieren atención inmediata.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Tamaños -->
-        <section class="space-y-4">
-            <h2 class="text-2xl font-semibold border-l-4 border-accent pl-3">Tamaños (Sizes)</h2>
-            <div class="flex flex-col gap-4 p-6 bg-base-200 rounded-lg">
-                <p class="w4-text w4-text-xs">Text xs: Lorem ipsum dolor sit amet.</p>
-                <p class="w4-text w4-text-sm">Text sm: Lorem ipsum dolor sit amet.</p>
-                <p class="w4-text w4-text-md">Text md: Lorem ipsum dolor sit amet.</p>
-                <p class="w4-text w4-text-lg">Text lg: Lorem ipsum dolor sit amet.</p>
-                <p class="w4-text w4-text-xl">Text xl: Lorem ipsum dolor sit amet.</p>
+        <section>
+            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary))">Tamaños Explícitos y Modificadores
+            </h2>
+            <div class="preview-group">
+                <div class="preview-item">
+                    <span class="preview-label-desc">w4-text-xs</span>
+                    <p class="w4-text w4-text-xs">Este es un texto extra pequeño (0.75rem). Útil para meta-información o
+                        tooltips.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">w4-text-sm</span>
+                    <p class="w4-text w4-text-sm">Este es un texto pequeño (0.875rem). Común en leyendas o detalles
+                        secundarios.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">w4-text-md (Default)</span>
+                    <p class="w4-text w4-text-md">Este es un texto mediano (1rem). El tamaño de lectura estándar para
+                        párrafos de contenido.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">w4-text-lg</span>
+                    <p class="w4-text w4-text-lg">Este es un texto grande (1.125rem). Llama un poco más la atención que
+                        el cuerpo normal.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">w4-text-xl</span>
+                    <p class="w4-text w4-text-xl">Este es un texto extra grande (1.25rem). A menudo usado como subtítulo
+                        suave o cita destacada.</p>
+                </div>
+                <div class="preview-item" style="border-left: 4px solid hsl(var(--w4-primary));">
+                    <span class="preview-label-desc">w4-text-lead (Modificador de Estilo)</span>
+                    <p class="w4-text w4-text-lead w4-text-lg">El modificador "lead" aumenta el peso de la fuente y el
+                        interlineado. Está diseñado específicamente para párrafos introductorios que necesitan guiar al
+                        usuario hacia el contenido principal.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Estados -->
-        <section class="space-y-4">
-            <h2 class="text-2xl font-semibold border-l-4 border-neutral pl-3">Estados (States)</h2>
-            <div class="flex flex-col gap-4 p-6 bg-base-200 rounded-lg">
-                <p class="w4-text w4-text-active">Text Active: Lorem ipsum dolor sit amet.</p>
-                <p class="w4-text w4-text-disabled">Text Disabled: Lorem ipsum dolor sit amet.</p>
+        <section>
+            <h2 class="section-title" style="border-color: hsl(var(--w4-error))">Estados (CSS Classes & Atributos)</h2>
+            <div class="preview-group">
+                <div class="preview-item">
+                    <span class="preview-label-desc">Normal</span>
+                    <p class="w4-text">Texto en estado base sin modificaciones adicionales.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">Active (w4-text-active)</span>
+                    <p class="w4-text w4-text-active">Texto en estado activo. Aumenta el grosor de la fuente y añade un
+                        subrayado, indicando selección o estado resaltado permanente.</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label-desc">Disabled (w4-text-disabled)</span>
+                    <p class="w4-text w4-text-disabled">Texto deshabilitado. La opacidad se reduce drásticamente y no
+                        responde a eventos del puntero. Generalmente indica que una opción u bloque de información no
+                        está disponible.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title" style="border-color: hsl(var(--w4-success))">Estados JS Soportados (data-w4-state)
+            </h2>
+            <div class="preview-group">
+                <div class="preview-item" style="padding: 2rem;">
+                    <div style="margin-bottom: 1.5rem; min-height: 80px;">
+                        <p id="jsInteractiveText" class="w4-text w4-text-lg w4-text-primary" data-w4-component="text">
+                            Este es un bloque de texto interactivo. Altera su estado utilizando los controles inferiores
+                            para observar cómo el motor CSS aplica las transformaciones en tiempo real basándose en el
+                            atributo <code>data-w4-state</code>.
+                        </p>
+                    </div>
+
+                    <div style="border-top: 1px solid hsl(var(--w4-base-300)); padding-top: 1.5rem;">
+                        <p
+                            style="font-size: 0.875rem; color: hsl(var(--w4-base-content) / 0.7); margin-bottom: 0.75rem; margin-top: 0;">
+                            Panel de Control de Estados:
+                        </p>
+
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <button class="w4-button w4-button-sm w4-button-outline"
+                                onclick="document.getElementById('jsInteractiveText').removeAttribute('data-w4-state')">Clear
+                                (Normal)</button>
+                            <button class="w4-button w4-button-sm w4-button-info"
+                                onclick="document.getElementById('jsInteractiveText').setAttribute('data-w4-state', 'active')">Set
+                                Active</button>
+                            <button class="w4-button w4-button-sm w4-button-warning"
+                                onclick="document.getElementById('jsInteractiveText').setAttribute('data-w4-state', 'disabled')">Set
+                                Disabled</button>
+                            <button class="w4-button w4-button-sm w4-button-error"
+                                onclick="document.getElementById('jsInteractiveText').setAttribute('data-w4-state', 'hidden')">Set
+                                Hidden</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 
-    @W4NativeScripts
-    @W4NativeInit
-    @W4NativeLivewire
+    @NativeUIScripts
+    @NativeUIInit
+    @NativeUILivewire
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            if (!window.W4NativeUI) {
-                return;
-            }
-
-            var availableThemes = [
-                "native.light",
-                "native.dark",
-                "native.corporate",
-                "native.night",
-                "native.synthwave",
-                "native.cupcake",
-                "native.bumblebee",
-                "native.emerald",
-                "native.retro",
-                "native.cyberpunk",
-                "native.valentine",
-                "native.halloween",
-                "native.garden",
-                "native.forest",
-                "native.aqua",
-                "native.lofi",
-                "native.pastel",
-                "native.fantasy",
-                "native.wireframe",
-                "native.black",
-                "native.luxury",
-                "native.dracula",
-                "native.cmyk",
-                "native.autumn",
-                "native.business",
-                "native.acid",
-                "native.lemonade",
-                "native.coffee",
-                "native.winter",
-                "native.dim",
-                "native.nord",
-                "native.sunset",
-            ];
             var storageKey = "w4-native-ui-theme";
             var switcher = document.getElementById("themeSwitcher");
-            var hookLog = document.getElementById("hookLog");
-            var clearHookLog = document.getElementById("clearHookLog");
-            var initial = localStorage.getItem(storageKey) || document.documentElement.getAttribute("data-theme") || "native.light";
-            var safeInitial = availableThemes.indexOf(initial) !== -1 ? initial : "native.light";
 
-            window.W4NativeUI.setTheme(safeInitial);
+            var currentTheme = localStorage.getItem(storageKey) || document.documentElement.getAttribute("data-theme") || "native-ui.light";
+            document.documentElement.setAttribute("data-theme", currentTheme);
 
             if (switcher) {
-                switcher.value = safeInitial;
+                switcher.value = currentTheme;
+
                 switcher.addEventListener("change", function (event) {
                     var theme = event.target.value;
-                    if (availableThemes.indexOf(theme) === -1) {
-                        return;
-                    }
-
-                    window.W4NativeUI.setTheme(theme);
+                    document.documentElement.setAttribute("data-theme", theme);
                     localStorage.setItem(storageKey, theme);
                 });
             }
-
-            function inferComponentForDemo(target) {
-                if (target.classList.contains("w4-button") || target.classList.contains("w4-btn")) return "button";
-                if (target.classList.contains("w4-icon-button")) return "icon-button";
-                if (target.classList.contains("w4-icon")) return "icon";
-                if (target.classList.contains("w4-heading")) return "heading";
-                if (target.classList.contains("w4-label")) return "label";
-                if (target.classList.contains("w4-link")) return "link";
-                if (target.classList.contains("w4-text")) return "text";
-                if (target.classList.contains("w4-input")) return "input";
-                if (target.classList.contains("w4-select")) return "select";
-                if (target.classList.contains("w4-textarea")) return "textarea";
-                if (target.classList.contains("w4-checkbox")) return "checkbox";
-                if (target.classList.contains("w4-radio")) return "radio";
-                if (target.classList.contains("w4-toggle")) return "toggle";
-                if (target.classList.contains("w4-divider")) return "divider";
-                if (target.classList.contains("w4-alert")) return "alert";
-                if (target.classList.contains("w4-badge")) return "badge";
-                if (target.classList.contains("w4-toast")) return "toast";
-                if (target.classList.contains("w4-progress")) return "progress";
-                if (target.classList.contains("w4-skeleton")) return "skeleton";
-                if (target.classList.contains("w4-tooltip")) return "tooltip";
-                if (target.classList.contains("w4-card")) return "card";
-                if (target.classList.contains("w4-panel")) return "panel";
-                if (target.classList.contains("w4-section")) return "section";
-                if (target.classList.contains("w4-container")) return "container";
-                if (target.classList.contains("w4-stack")) return "stack";
-                if (target.classList.contains("w4-grid")) return "grid";
-                return "";
-            }
-
-            function setDynamicState(targetId, state) {
-                var target = document.getElementById(targetId);
-                if (!target) {
-                    return;
-                }
-
-                if (!target.getAttribute("data-w4-component")) {
-                    var inferred = inferComponentForDemo(target);
-                    if (inferred) {
-                        target.setAttribute("data-w4-component", inferred);
-                    }
-                }
-                target.setAttribute("data-w4-state", state);
-
-                if (target.classList.contains("w4-button") || target.classList.contains("w4-btn") || target.classList.contains("w4-icon-button")) {
-                    if (state.indexOf("disabled") !== -1) {
-                        target.setAttribute("disabled", "disabled");
-                    } else {
-                        target.removeAttribute("disabled");
-                    }
-                }
-
-                if (target.type === "checkbox" && target.classList.contains("w4-checkbox")) {
-                    target.checked = state.indexOf("checked") !== -1;
-                    target.indeterminate = state.indexOf("indeterminate") !== -1;
-                }
-
-                if (target.type === "radio" && target.classList.contains("w4-radio")) {
-                    target.checked = state.indexOf("selected") !== -1;
-                }
-
-                if (target.classList.contains("w4-toggle")) {
-                    target.checked = state.indexOf("checked") !== -1;
-                }
-
-                window.W4NativeUI.sync(target);
-            }
-
-            function appendHookLog(detail) {
-                if (!hookLog) {
-                    return;
-                }
-
-                var row = document.createElement("div");
-                row.className = "w4-text w4-text-xs";
-                row.style.padding = "0.35rem 0.5rem";
-                row.style.border = "1px solid hsl(var(--w4-base-300))";
-                row.style.borderRadius = "0.375rem";
-
-                var time = new Date().toLocaleTimeString();
-                var states = Array.isArray(detail.states) ? detail.states.join(", ") : "";
-                row.textContent = "[" + time + "] " + detail.hook + " | component=" + detail.component + " | states=" + states;
-                hookLog.prepend(row);
-
-                while (hookLog.children.length > 60) {
-                    hookLog.removeChild(hookLog.lastChild);
-                }
-            }
-
-            window.W4NativeUI.on("w4:hook", function (detail) {
-                appendHookLog(detail);
-            });
-
-            if (clearHookLog) {
-                clearHookLog.addEventListener("click", function () {
-                    if (!hookLog) {
-                        return;
-                    }
-
-                    hookLog.innerHTML = "";
-                });
-            }
-
-            document.addEventListener("click", function (event) {
-                var control = event.target.closest("[data-demo-target]");
-                if (!control) {
-                    return;
-                }
-
-                event.preventDefault();
-                var targetValue = control.getAttribute("data-demo-target") || "";
-                var state = control.getAttribute("data-demo-state") || "";
-                var targetIds = targetValue.split(",");
-
-                for (var i = 0; i < targetIds.length; i += 1) {
-                    var targetId = targetIds[i].trim();
-                    if (!targetId) {
-                        continue;
-                    }
-
-                    setDynamicState(targetId, state);
-                }
-            });
         });
     </script>
-
 </body>
 
 </html>
