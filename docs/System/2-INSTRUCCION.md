@@ -95,9 +95,9 @@ Carga CSS y JS en tu layout base:
 También puedes usar directivas Blade del paquete:
 
 ```blade
-@W4NativeStyles
-@W4NativeScripts
-@W4NativeInit
+@NativeUIStyles
+@NativeUIScripts
+@NativeUIInit
 ```
 
 Inicializa runtime JS:

@@ -57,7 +57,7 @@ class NativeUIServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $packageRoot = dirname(__DIR__, 2);
-        $configPath = $packageRoot . '/config/w4-native.php';
+        $configPath = $packageRoot . '/config/w4-native-ui.php';
         $distPath = $packageRoot . '/dist';
 
         $this->loadViewsFrom($packageRoot . '/resources/views', 'w4-native');
@@ -70,8 +70,8 @@ class NativeUIServiceProvider extends ServiceProvider
             if (is_file($configPath)) {
                 $this->publishes([
                     $configPath => config_path('w4-native-ui.php'),
-                ], 'w4-native-config');
-            } // php artisan vendor:publish --tag=w4-native-config --path=config/w4-native.php
+                ], 'w4-native-ui-config');
+            } // php artisan vendor:publish --tag=w4-native-ui-config --path=config/w4-native-ui.php
 
             if (is_dir($distPath)) {
                 $this->publishes([

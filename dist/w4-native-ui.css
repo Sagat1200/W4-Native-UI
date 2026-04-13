@@ -30,7 +30,7 @@ html[data-theme] body {
   color: hsl(var(--w4-base-content));
 }
 
-[data-theme="native.dark"] {
+[data-theme="native-ui.dark"] {
   --w4-primary: 241 100% 68%;
   --w4-primary-content: 226 93% 96%;
   --w4-secondary: 328 90% 57%;
@@ -60,7 +60,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.corporate"] {
+[data-theme="native-ui.corporate"] {
   --w4-primary: 198 152% 32%;
   --w4-primary-content: 338 0% 100%;
   --w4-secondary: 215 19% 47%;
@@ -90,7 +90,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.night"] {
+[data-theme="native-ui.night"] {
   --w4-primary: 199 93% 60%;
   --w4-primary-content: 204 88% 4%;
   --w4-secondary: 234 89% 74%;
@@ -120,7 +120,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.synthwave"] {
+[data-theme="native-ui.synthwave"] {
   --w4-primary: 327 92% 68%;
   --w4-primary-content: 335 94% 16%;
   --w4-secondary: 199 99% 72%;
@@ -150,7 +150,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.light"] {
+[data-theme="native-ui.light"] {
   --w4-primary: 248 67% 50%;
   --w4-primary-content: 226 103% 94%;
   --w4-secondary: 328 90% 57%;
@@ -180,7 +180,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.cupcake"] {
+[data-theme="native-ui.cupcake"] {
   --w4-primary: 171 81% 59%;
   --w4-primary-content: 177 126% 16%;
   --w4-secondary: 326 79% 89%;
@@ -210,7 +210,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.bumblebee"] {
+[data-theme="native-ui.bumblebee"] {
   --w4-primary: 50 175% 36%;
   --w4-primary-content: 30 84% 24%;
   --w4-secondary: 31 103% 51%;
@@ -240,7 +240,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.emerald"] {
+[data-theme="native-ui.emerald"] {
   --w4-primary: 141 50% 60%;
   --w4-primary-content: 151 28% 19%;
   --w4-secondary: 219 96% 60%;
@@ -270,7 +270,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.retro"] {
+[data-theme="native-ui.retro"] {
   --w4-primary: 360 99% 81%;
   --w4-primary-content: 358 72% 29%;
   --w4-secondary: 141 78% 84%;
@@ -300,7 +300,7 @@ html[data-theme] body {
   --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
 }
 
-[data-theme="native.cyberpunk"] {
+[data-theme="native-ui.cyberpunk"] {
   --w4-primary: 343 128% 74%;
   --w4-primary-content: 347 74% 5%;
   --w4-secondary: 184 249% 29%;
@@ -331,7 +331,7 @@ html[data-theme] body {
   --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
 }
 
-[data-theme="native.valentine"] {
+[data-theme="native-ui.valentine"] {
   --w4-primary: 353 74% 67%;
   --w4-primary-content: 355 65% 5%;
   --w4-secondary: 254 86% 77%;
@@ -363,7 +363,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.halloween"] {
+[data-theme="native-ui.halloween"] {
   --w4-primary: 36 152% 42%;
   --w4-primary-content: 180 7% 8%;
   --w4-secondary: 279 118% 35%;
@@ -395,7 +395,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.garden"] {
+[data-theme="native-ui.garden"] {
   --w4-primary: 327 100% 41%;
   --w4-primary-content: 338 0% 100%;
   --w4-secondary: 334 37% 41%;
@@ -427,7 +427,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.forest"] {
+[data-theme="native-ui.forest"] {
   --w4-primary: 141 72% 42%;
   --w4-primary-content: 0 0% 0%;
   --w4-secondary: 164 73% 42%;
@@ -459,7 +459,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.aqua"] {
+[data-theme="native-ui.aqua"] {
   --w4-primary: 182 93% 49%;
   --w4-primary-content: 181 100% 17%;
   --w4-secondary: 274 31% 57%;
@@ -491,7 +491,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.lofi"] {
+[data-theme="native-ui.lofi"] {
   --w4-primary: 338 0% 5%;
   --w4-primary-content: 338 0% 100%;
   --w4-secondary: 0 2% 10%;
@@ -523,7 +523,7 @@ html[data-theme] body {
   --w4-shadow-md: none;
 }
 
-[data-theme="native.pastel"] {
+[data-theme="native-ui.pastel"] {
   --w4-primary: 284 22% 80%;
   --w4-primary-content: 284 10% 6%;
   --w4-secondary: 352 70% 88%;
@@ -555,7 +555,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.fantasy"] {
+[data-theme="native-ui.fantasy"] {
   --w4-primary: 296 100% 20%;
   --w4-primary-content: 298 29% 85%;
   --w4-secondary: 199 100% 28%;
@@ -587,7 +587,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.wireframe"] {
+[data-theme="native-ui.wireframe"] {
   --w4-primary: 342 0% 72%;
   --w4-primary-content: 334 0% 5%;
   --w4-secondary: 342 0% 72%;
@@ -619,7 +619,7 @@ html[data-theme] body {
   --w4-shadow-md: none;
 }
 
-[data-theme="native.black"] {
+[data-theme="native-ui.black"] {
   --w4-primary: 330 0% 22%;
   --w4-primary-content: 343 0% 83%;
   --w4-secondary: 330 0% 22%;
@@ -651,7 +651,7 @@ html[data-theme] body {
   --w4-shadow-md: none;
 }
 
-[data-theme="native.luxury"] {
+[data-theme="native-ui.luxury"] {
   --w4-primary: 338 0% 100%;
   --w4-primary-content: 340 0% 9%;
   --w4-secondary: 218 54% 18%;
@@ -683,7 +683,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.dracula"] {
+[data-theme="native-ui.dracula"] {
   --w4-primary: 326 100% 74%;
   --w4-primary-content: 327 63% 5%;
   --w4-secondary: 265 89% 78%;
@@ -715,7 +715,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.cmyk"] {
+[data-theme="native-ui.cmyk"] {
   --w4-primary: 203 83% 60%;
   --w4-primary-content: 208 85% 4%;
   --w4-secondary: 335 78% 60%;
@@ -747,7 +747,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.autumn"] {
+[data-theme="native-ui.autumn"] {
   --w4-primary: 344 96% 28%;
   --w4-primary-content: 360 44% 87%;
   --w4-secondary: 0 63% 58%;
@@ -779,7 +779,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.business"] {
+[data-theme="native-ui.business"] {
   --w4-primary: 210 64% 31%;
   --w4-primary-content: 212 30% 86%;
   --w4-secondary: 200 13% 55%;
@@ -811,7 +811,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.acid"] {
+[data-theme="native-ui.acid"] {
   --w4-primary: 302 100% 43%;
   --w4-primary-content: 304 100% 5%;
   --w4-secondary: 30 100% 44%;
@@ -843,7 +843,7 @@ html[data-theme] body {
   --w4-shadow-md: none;
 }
 
-[data-theme="native.lemonade"] {
+[data-theme="native-ui.lemonade"] {
   --w4-primary: 86 100% 21%;
   --w4-primary-content: 106 100% 1%;
   --w4-secondary: 61 100% 26%;
@@ -875,7 +875,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.coffee"] {
+[data-theme="native-ui.coffee"] {
   --w4-primary: 30 67% 58%;
   --w4-primary-content: 22 80% 4%;
   --w4-secondary: 182 25% 20%;
@@ -907,7 +907,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.winter"] {
+[data-theme="native-ui.winter"] {
   --w4-primary: 211 100% 43%;
   --w4-primary-content: 215 100% 92%;
   --w4-secondary: 247 47% 43%;
@@ -939,7 +939,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.dim"] {
+[data-theme="native-ui.dim"] {
   --w4-primary: 108 66% 73%;
   --w4-primary-content: 109 46% 5%;
   --w4-secondary: 12 100% 68%;
@@ -971,7 +971,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.nord"] {
+[data-theme="native-ui.nord"] {
   --w4-primary: 213 32% 52%;
   --w4-primary-content: 218 57% 3%;
   --w4-secondary: 210 34% 63%;
@@ -1003,7 +1003,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.sunset"] {
+[data-theme="native-ui.sunset"] {
   --w4-primary: 16 100% 68%;
   --w4-primary-content: 11 78% 5%;
   --w4-secondary: 341 97% 71%;
@@ -1035,7 +1035,7 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native.cyberpunk"] {
+[data-theme="native-ui.cyberpunk"] {
   --w4-primary: 343 128% 74%;
   --w4-primary-content: 347 74% 5%;
   --w4-secondary: 184 249% 29%;
@@ -1075,7 +1075,11 @@ html[data-theme] body {
   }
 }
 
-.w4-btn,
+/* =========================================
+   BUTTON COMPONENT
+   Native W4 Visual Engine implementation
+   ========================================= */
+
 .w4-button {
   display: inline-flex;
   flex-shrink: 0;
@@ -1084,80 +1088,142 @@ html[data-theme] body {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: 0.375rem;
+  gap: var(--w4-spacing-base);
   text-align: center;
-  outline-offset: 2px;
-  height: var(--w4-btn-size, 3rem);
-  padding-inline: var(--w4-btn-p, 1rem);
-  font-size: var(--w4-btn-text, 0.875rem);
   font-weight: 600;
+  font-family: var(--w4-font-sans);
+  
+  /* Morphology & Surface Tokens */
+  block-size: var(--w4-btn-height, var(--w4-control-height-md));
+  padding-inline: var(--w4-btn-padding-x, var(--w4-button-padding-x));
+  font-size: var(--w4-btn-font-size, 0.875rem);
   border-radius: var(--w4-radius-button);
-  border-width: var(--w4-btn-border-width, 1px);
+  border-width: var(--w4-border-width-control);
   border-style: solid;
-  border-color: var(--w4-btn-border, transparent);
+  box-shadow: var(--w4-btn-shadow, var(--w4-shadow-control));
+  
+  /* Color Variables (Internal logic, mapped to Theme Colors) */
   background-color: var(--w4-btn-bg, hsl(var(--w4-base-200)));
   color: var(--w4-btn-fg, hsl(var(--w4-base-content)));
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, filter 0.2s;
+  border-color: var(--w4-btn-border, transparent);
+  
+  /* Interaction & Motion Tokens */
+  transition: all var(--w4-transition-fast);
+  outline-offset: var(--w4-focus-ring-offset);
 }
 
-.w4-btn:hover,
+/* ----------------------------------
+   INTERACTION STATES & Modifiers (ButtonComponentState Enum)
+   ---------------------------------- */
 .w4-button:hover {
-  filter: brightness(1.1) contrast(1.1);
+  filter: brightness(var(--w4-hover-brightness));
+  transform: translateY(var(--w4-hover-translate-y));
 }
 
+.w4-button:focus-visible {
+  outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color) / var(--w4-focus-ring-opacity));
+}
+
+/* Active State */
+.w4-button:active,
+.w4-button-active,
+.w4-button[data-w4-state~="active"] {
+  transform: scale(var(--w4-active-scale)) translateY(var(--w4-active-translate-y));
+}
+
+/* Disabled State */
+.w4-button-disabled,
+.w4-button[data-w4-state~="disabled"],
+.w4-button[disabled] {
+  pointer-events: none !important;
+  opacity: var(--w4-disabled-opacity) !important;
+  box-shadow: none !important;
+}
+
+/* Loading State */
+.w4-button-loading,
+.w4-button[data-w4-state~="loading"] {
+  pointer-events: none !important;
+  opacity: var(--w4-loading-opacity) !important;
+}
+
+/* Readonly State */
+.w4-button-readonly,
+.w4-button[data-w4-state~="readonly"],
+.w4-button[readonly] {
+  pointer-events: none !important;
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-button-primary {
   --w4-btn-bg: hsl(var(--w4-primary));
   --w4-btn-fg: hsl(var(--w4-primary-content));
   --w4-btn-border: hsl(var(--w4-primary));
-  --w4-btn-hover-fg: hsl(var(--w4-primary-content));
+  --w4-focus-ring-color: var(--w4-primary);
 }
+
 .w4-button-secondary {
   --w4-btn-bg: hsl(var(--w4-secondary));
   --w4-btn-fg: hsl(var(--w4-secondary-content));
   --w4-btn-border: hsl(var(--w4-secondary));
-  --w4-btn-hover-fg: hsl(var(--w4-secondary-content));
+  --w4-focus-ring-color: var(--w4-secondary);
 }
+
 .w4-button-accent {
   --w4-btn-bg: hsl(var(--w4-accent));
   --w4-btn-fg: hsl(var(--w4-accent-content));
   --w4-btn-border: hsl(var(--w4-accent));
-  --w4-btn-hover-fg: hsl(var(--w4-accent-content));
+  --w4-focus-ring-color: var(--w4-accent);
 }
-.w4-button-neutral {
-  --w4-btn-bg: hsl(var(--w4-base-content));
-  --w4-btn-fg: hsl(var(--w4-base-100));
-  --w4-btn-border: hsl(var(--w4-base-content));
-  --w4-btn-hover-fg: hsl(var(--w4-base-100));
-}
+
 .w4-button-info {
   --w4-btn-bg: hsl(var(--w4-info));
   --w4-btn-fg: hsl(var(--w4-info-content));
   --w4-btn-border: hsl(var(--w4-info));
-  --w4-btn-hover-fg: hsl(var(--w4-info-content));
+  --w4-focus-ring-color: var(--w4-info);
 }
+
 .w4-button-success {
   --w4-btn-bg: hsl(var(--w4-success));
   --w4-btn-fg: hsl(var(--w4-success-content));
   --w4-btn-border: hsl(var(--w4-success));
-  --w4-btn-hover-fg: hsl(var(--w4-success-content));
+  --w4-focus-ring-color: var(--w4-success);
 }
+
 .w4-button-warning {
   --w4-btn-bg: hsl(var(--w4-warning));
   --w4-btn-fg: hsl(var(--w4-warning-content));
   --w4-btn-border: hsl(var(--w4-warning));
-  --w4-btn-hover-fg: hsl(var(--w4-warning-content));
+  --w4-focus-ring-color: var(--w4-warning);
 }
+
 .w4-button-error {
   --w4-btn-bg: hsl(var(--w4-error));
   --w4-btn-fg: hsl(var(--w4-error-content));
   --w4-btn-border: hsl(var(--w4-error));
-  --w4-btn-hover-fg: hsl(var(--w4-error-content));
+  --w4-focus-ring-color: var(--w4-error);
+}
+
+/* ----------------------------------
+   STYLISTIC VARIANTS (Surface System)
+   ---------------------------------- */
+.w4-button-outline {
+  --w4-btn-bg: transparent;
+  --w4-btn-fg: var(--w4-btn-border, hsl(var(--w4-base-content)));
+  --w4-btn-shadow: none;
+}
+.w4-button-outline:hover {
+  --w4-btn-bg: var(--w4-btn-border, hsl(var(--w4-base-content)));
+  --w4-btn-fg: hsl(var(--w4-base-100));
 }
 
 .w4-button-ghost {
   --w4-btn-bg: transparent;
   --w4-btn-border: transparent;
   --w4-btn-fg: currentColor;
+  --w4-btn-shadow: none;
 }
 .w4-button-ghost:hover {
   --w4-btn-bg: hsl(var(--w4-base-content) / 0.1);
@@ -1167,333 +1233,275 @@ html[data-theme] body {
   --w4-btn-bg: transparent;
   --w4-btn-border: transparent;
   --w4-btn-fg: hsl(var(--w4-primary));
+  --w4-btn-shadow: none;
   text-decoration: underline;
 }
 .w4-button-link:hover {
   --w4-btn-bg: transparent;
   --w4-btn-border: transparent;
+  filter: brightness(0.8);
 }
 
-.w4-button-outline {
-  --w4-btn-bg: transparent;
-  --w4-btn-fg: var(--w4-btn-border, hsl(var(--w4-base-content)));
-  border-color: var(--w4-btn-border, hsl(var(--w4-base-content)));
-}
-.w4-button-outline:hover {
-  --w4-btn-bg: var(--w4-btn-border, hsl(var(--w4-base-content)));
-  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-base-100)));
-}
-
-.w4-button-dash {
-  --w4-btn-bg: transparent;
-  --w4-btn-fg: var(--w4-btn-border, hsl(var(--w4-base-content)));
-  border-color: var(--w4-btn-border, hsl(var(--w4-base-content)));
-  border-style: dashed;
-}
-.w4-button-dash:hover {
-  --w4-btn-bg: var(--w4-btn-border, hsl(var(--w4-base-content)));
-  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-base-100)));
-}
-
-.w4-button-soft {
-  --w4-btn-bg: transparent;
-  --w4-btn-border: transparent;
-  --w4-btn-fg: hsl(var(--w4-base-content));
-  color: var(--w4-btn-fg);
-  background-color: hsl(var(--w4-base-content) / 0.15);
-}
-.w4-button-soft.w4-button-primary { 
-  background-color: hsl(var(--w4-primary) / 0.15); 
-  --w4-btn-fg: hsl(var(--w4-primary));
-  color: hsl(var(--w4-primary));
-}
-.w4-button-soft.w4-button-secondary { 
-  background-color: hsl(var(--w4-secondary) / 0.15); 
-  --w4-btn-fg: hsl(var(--w4-secondary));
-  color: hsl(var(--w4-secondary));
-}
-.w4-button-soft.w4-button-accent { 
-  background-color: hsl(var(--w4-accent) / 0.15); 
-  --w4-btn-fg: hsl(var(--w4-accent));
-  color: hsl(var(--w4-accent));
-}
-.w4-button-soft.w4-button-info { 
-  background-color: hsl(var(--w4-info) / 0.15); 
-  --w4-btn-fg: hsl(var(--w4-info));
-  color: hsl(var(--w4-info));
-}
-.w4-button-soft.w4-button-success { 
-  background-color: hsl(var(--w4-success) / 0.15); 
-  --w4-btn-fg: hsl(var(--w4-success));
-  color: hsl(var(--w4-success));
-}
-.w4-button-soft.w4-button-warning { 
-  background-color: hsl(var(--w4-warning) / 0.15); 
-  --w4-btn-fg: hsl(var(--w4-warning));
-  color: hsl(var(--w4-warning));
-}
-.w4-button-soft.w4-button-error { 
-  background-color: hsl(var(--w4-error) / 0.15); 
-  --w4-btn-fg: hsl(var(--w4-error));
-  color: hsl(var(--w4-error));
-}
-
-.w4-button-soft:hover {
-  background-color: hsl(var(--w4-base-content));
-  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-base-100)));
-  color: var(--w4-btn-fg);
-}
-.w4-button-soft.w4-button-primary:hover { 
-  background-color: hsl(var(--w4-primary)); 
-  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-primary-content)));
-  color: var(--w4-btn-fg);
-}
-.w4-button-soft.w4-button-secondary:hover { 
-  background-color: hsl(var(--w4-secondary)); 
-  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-secondary-content)));
-  color: var(--w4-btn-fg);
-}
-.w4-button-soft.w4-button-accent:hover { 
-  background-color: hsl(var(--w4-accent)); 
-  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-accent-content)));
-  color: var(--w4-btn-fg);
-}
-.w4-button-soft.w4-button-info:hover { 
-  background-color: hsl(var(--w4-info)); 
-  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-info-content)));
-  color: var(--w4-btn-fg);
-}
-.w4-button-soft.w4-button-success:hover { 
-  background-color: hsl(var(--w4-success)); 
-  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-success-content)));
-  color: var(--w4-btn-fg);
-}
-.w4-button-soft.w4-button-warning:hover { 
-  background-color: hsl(var(--w4-warning)); 
-  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-warning-content)));
-  color: var(--w4-btn-fg);
-}
-.w4-button-soft.w4-button-error:hover { 
-  background-color: hsl(var(--w4-error)); 
-  --w4-btn-fg: var(--w4-btn-hover-fg, hsl(var(--w4-error-content)));
-  color: var(--w4-btn-fg);
-}
-
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-button-xs {
-  --w4-btn-size: 1.5rem;
-  --w4-btn-p: 0.5rem;
-  --w4-btn-text: 0.6875rem;
+  --w4-btn-height: var(--w4-control-height-xs);
+  --w4-btn-padding-x: var(--w4-control-padding-x-xs);
+  --w4-btn-font-size: 0.75rem;
 }
+
 .w4-button-sm {
-  --w4-btn-size: 2rem;
-  --w4-btn-p: 0.75rem;
-  --w4-btn-text: 0.75rem;
+  --w4-btn-height: var(--w4-control-height-sm);
+  --w4-btn-padding-x: var(--w4-control-padding-x-sm);
+  --w4-btn-font-size: 0.875rem;
 }
+
 .w4-button-md {
-  --w4-btn-size: 2.5rem;
-  --w4-btn-p: 1rem;
-  --w4-btn-text: 0.875rem;
+  --w4-btn-height: var(--w4-control-height-md);
+  --w4-btn-padding-x: var(--w4-control-padding-x-md);
+  --w4-btn-font-size: 0.875rem;
 }
+
 .w4-button-lg {
-  --w4-btn-size: 3rem;
-  --w4-btn-p: 1.25rem;
-  --w4-btn-text: 1.125rem;
+  --w4-btn-height: var(--w4-control-height-lg);
+  --w4-btn-padding-x: var(--w4-control-padding-x-lg);
+  --w4-btn-font-size: 1rem;
 }
+
 .w4-button-xl {
-  --w4-btn-size: 3.5rem;
-  --w4-btn-p: 1.5rem;
-  --w4-btn-text: 1.375rem;
+  --w4-btn-height: var(--w4-control-height-xl);
+  --w4-btn-padding-x: var(--w4-control-padding-x-xl);
+  --w4-btn-font-size: 1.125rem;
 }
 
+/* ----------------------------------
+   SHAPE MODIFIERS
+   ---------------------------------- */
 .w4-button-square {
-  padding: 0;
-  width: var(--w4-btn-size, 3rem);
+  padding-inline: 0;
+  inline-size: var(--w4-btn-height, var(--w4-control-height-md));
 }
+
 .w4-button-circle {
-  padding: 0;
-  width: var(--w4-btn-size, 3rem);
-  border-radius: 9999px;
+  padding-inline: 0;
+  inline-size: var(--w4-btn-height, var(--w4-control-height-md));
+  border-radius: var(--w4-radius-pill);
 }
-.w4-button-wide {
-  width: 16rem;
-}
+
 .w4-button-block {
-  width: 100%;
+  inline-size: 100%;
 }
 
-.w4-button-disabled,
-.w4-button:disabled {
-  pointer-events: none;
-  --w4-btn-bg: hsl(var(--w4-base-content) / 0.1);
-  --w4-btn-fg: hsl(var(--w4-base-content) / 0.2);
-  --w4-btn-border: transparent;
-  filter: none;
-}
-
-.w4-button-loading {
-  pointer-events: none;
-}
-
-.w4-button-readonly {
-  pointer-events: none;
-}
-
-.w4-button-active {
-  transform: translateY(1px);
-}
-
-.w4-button-pressing {
-  transform: translateY(1px) scale(0.99);
-}
+/* =========================================
+   HEADING COMPONENT
+   Native W4 Visual Engine implementation
+   ========================================= */
 
 .w4-heading {
   margin: 0;
-  color: hsl(var(--w4-base-content));
-  line-height: 1.2;
-  font-weight: 700;
+  color: var(--w4-heading-color, hsl(var(--w4-base-content)));
+  line-height: var(--w4-heading-line-height, 1.2);
+  font-weight: var(--w4-heading-font-weight, 700);
+  font-family: var(--w4-font-sans);
+  font-size: var(--w4-heading-font-size, 1.5rem);
 }
 
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-heading-neutral {
-  color: hsl(var(--w4-base-content));
+  --w4-heading-color: hsl(var(--w4-base-content));
 }
 
 .w4-heading-primary {
-  color: hsl(var(--w4-primary));
+  --w4-heading-color: hsl(var(--w4-primary));
 }
 
 .w4-heading-secondary {
-  color: hsl(var(--w4-secondary));
+  --w4-heading-color: hsl(var(--w4-secondary));
 }
 
 .w4-heading-accent {
-  color: hsl(var(--w4-accent));
+  --w4-heading-color: hsl(var(--w4-accent));
 }
 
 .w4-heading-info {
-  color: hsl(var(--w4-info));
+  --w4-heading-color: hsl(var(--w4-info));
 }
 
 .w4-heading-success {
-  color: hsl(var(--w4-success));
+  --w4-heading-color: hsl(var(--w4-success));
 }
 
 .w4-heading-warning {
-  color: hsl(var(--w4-warning));
+  --w4-heading-color: hsl(var(--w4-warning));
 }
 
 .w4-heading-error {
-  color: hsl(var(--w4-error));
+  --w4-heading-color: hsl(var(--w4-error));
 }
 
 .w4-heading-muted {
   opacity: 0.75;
 }
 
+/* ----------------------------------
+   SIZE SCALES
+   ---------------------------------- */
 .w4-heading-xs {
-  font-size: 0.875rem;
+  --w4-heading-font-size: 0.875rem;
 }
 
 .w4-heading-sm {
-  font-size: 1rem;
+  --w4-heading-font-size: 1rem;
 }
 
 .w4-heading-md {
-  font-size: 1.25rem;
+  --w4-heading-font-size: 1.25rem;
 }
 
 .w4-heading-lg {
-  font-size: 1.5rem;
+  --w4-heading-font-size: 1.5rem;
 }
 
 .w4-heading-xl {
-  font-size: 2rem;
+  --w4-heading-font-size: 2rem;
 }
 
+/* Header Tags Aliases */
 .w4-heading-h1 {
-  font-size: 2rem;
+  --w4-heading-font-size: 2rem;
 }
 
 .w4-heading-h2 {
-  font-size: 1.5rem;
+  --w4-heading-font-size: 1.5rem;
 }
 
 .w4-heading-h3 {
-  font-size: 1.25rem;
+  --w4-heading-font-size: 1.25rem;
 }
 
 .w4-heading-h4,
 .w4-heading-h5,
 .w4-heading-h6 {
-  font-size: 1rem;
+  --w4-heading-font-size: 1rem;
 }
 
-.w4-heading-hidden {
-  display: none;
+/* ----------------------------------
+   STATES & MODIFIERS (HeadingComponentState Enum)
+   ---------------------------------- */
+.w4-heading-hidden,
+.w4-heading[data-w4-state~="hidden"] {
+  display: none !important;
 }
 
-.w4-heading-disabled {
-  opacity: 0.6;
+.w4-heading-disabled,
+.w4-heading[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.6) !important;
+  pointer-events: none !important;
 }
 
-.w4-heading-active {
+.w4-heading-active,
+.w4-heading[data-w4-state~="active"] {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
 
+/* =========================================
+   ICON COMPONENT
+   Native W4 Visual Engine implementation
+   ========================================= */
+
 .w4-icon {
   display: inline-block;
   line-height: 1;
-  color: currentColor;
+  color: var(--w4-icon-color, currentColor);
+  font-size: var(--w4-icon-size, 1rem);
+  flex-shrink: 0;
+  vertical-align: middle;
+  transition: color var(--w4-transition-fast), filter var(--w4-transition-fast), opacity var(--w4-transition-fast);
 }
 
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-icon-primary {
-  color: hsl(var(--w4-primary));
+  --w4-icon-color: hsl(var(--w4-primary));
 }
 
 .w4-icon-secondary {
-  color: hsl(var(--w4-secondary));
+  --w4-icon-color: hsl(var(--w4-secondary));
 }
 
 .w4-icon-accent {
-  color: hsl(var(--w4-accent));
+  --w4-icon-color: hsl(var(--w4-accent));
+}
+
+.w4-icon-info {
+  --w4-icon-color: hsl(var(--w4-info));
+}
+
+.w4-icon-success {
+  --w4-icon-color: hsl(var(--w4-success));
+}
+
+.w4-icon-warning {
+  --w4-icon-color: hsl(var(--w4-warning));
+}
+
+.w4-icon-error {
+  --w4-icon-color: hsl(var(--w4-error));
 }
 
 .w4-icon-muted {
   opacity: 0.7;
 }
 
+/* ----------------------------------
+   SIZE SCALES
+   ---------------------------------- */
 .w4-icon-xs {
-  font-size: 0.75rem;
+  --w4-icon-size: 0.75rem;
 }
 
 .w4-icon-sm {
-  font-size: 0.875rem;
+  --w4-icon-size: 0.875rem;
 }
 
 .w4-icon-md {
-  font-size: 1rem;
+  --w4-icon-size: 1rem;
 }
 
 .w4-icon-lg {
-  font-size: 1.25rem;
+  --w4-icon-size: 1.25rem;
 }
 
 .w4-icon-xl {
-  font-size: 1.5rem;
+  --w4-icon-size: 1.5rem;
 }
 
-.w4-icon-disabled {
-  opacity: 0.55;
+/* ----------------------------------
+   STATES & MODIFIERS (IconComponentState Enum)
+   ---------------------------------- */
+.w4-icon-disabled,
+.w4-icon[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
 }
 
-.w4-icon-active {
-  filter: saturate(1.2);
+.w4-icon-active,
+.w4-icon[data-w4-state~="active"] {
+  filter: saturate(1.2) brightness(var(--w4-hover-brightness, 1.1));
 }
 
-.w4-icon-hidden {
-  display: none;
+.w4-icon-hidden,
+.w4-icon[data-w4-state~="hidden"] {
+  display: none !important;
 }
 
+.w4-icon-loading,
+.w4-icon[data-w4-state~="loading"],
 .w4-icon-spin {
   animation: w4-icon-spin 1s linear infinite;
 }
@@ -1501,6 +1509,11 @@ html[data-theme] body {
 .w4-icon-decorative {
   pointer-events: none;
 }
+
+/* =========================================
+   ICON BUTTON COMPONENT
+   Native W4 Visual Engine implementation
+   ========================================= */
 
 .w4-icon-button {
   display: inline-flex;
@@ -1510,760 +1523,1720 @@ html[data-theme] body {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: 0.375rem;
+  gap: var(--w4-spacing-base);
   text-align: center;
-  outline-offset: 2px;
-  height: var(--w4-btn-size, 3rem);
-  padding: 0;
-  width: var(--w4-btn-size, 3rem);
-  font-size: var(--w4-btn-text, 0.875rem);
   font-weight: 600;
-  border-radius: var(--w4-radius-button);
-  border-width: var(--w4-btn-border-width, 1px);
+  
+  /* Morphology & Surface Tokens */
+  block-size: var(--w4-btn-size, var(--w4-control-height-md));
+  inline-size: var(--w4-btn-size, var(--w4-control-height-md));
+  padding: 0; /* IconButtons are perfectly square/circular */
+  font-size: var(--w4-btn-font-size, 1rem);
+  border-radius: var(--w4-radius-button); /* Can be overridden to pill if needed */
+  border-width: var(--w4-border-width-control);
   border-style: solid;
-  border-color: var(--w4-btn-border, transparent);
+  box-shadow: var(--w4-btn-shadow, var(--w4-shadow-control));
+  
+  /* Color Variables (Internal logic, mapped to Theme Colors) */
   background-color: var(--w4-btn-bg, hsl(var(--w4-base-200)));
   color: var(--w4-btn-fg, hsl(var(--w4-base-content)));
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, filter 0.2s;
+  border-color: var(--w4-btn-border, transparent);
+  
+  /* Interaction & Motion Tokens */
+  transition: all var(--w4-transition-fast);
+  outline-offset: var(--w4-focus-ring-offset);
 }
 
+/* ----------------------------------
+   INTERACTION STATES & Modifiers (IconButtonComponentState Enum)
+   ---------------------------------- */
 .w4-icon-button:hover {
-  filter: brightness(1.1) contrast(1.1);
+  filter: brightness(var(--w4-hover-brightness));
+  transform: translateY(var(--w4-hover-translate-y));
 }
 
+.w4-icon-button:focus-visible {
+  outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color) / var(--w4-focus-ring-opacity));
+}
+
+/* Active State */
+.w4-icon-button:active,
+.w4-icon-button-active,
+.w4-icon-button[data-w4-state~="active"] {
+  transform: scale(var(--w4-active-scale)) translateY(var(--w4-active-translate-y));
+}
+
+/* Disabled State */
+.w4-icon-button-disabled,
+.w4-icon-button[data-w4-state~="disabled"],
+.w4-icon-button[disabled] {
+  pointer-events: none !important;
+  opacity: var(--w4-disabled-opacity) !important;
+  box-shadow: none !important;
+}
+
+/* Loading State */
+.w4-icon-button-loading,
+.w4-icon-button[data-w4-state~="loading"] {
+  pointer-events: none !important;
+  opacity: var(--w4-loading-opacity) !important;
+}
+
+/* Readonly State */
+.w4-icon-button-readonly,
+.w4-icon-button[data-w4-state~="readonly"],
+.w4-icon-button[readonly] {
+  pointer-events: none !important;
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-icon-button-primary {
   --w4-btn-bg: hsl(var(--w4-primary));
   --w4-btn-fg: hsl(var(--w4-primary-content));
   --w4-btn-border: hsl(var(--w4-primary));
+  --w4-focus-ring-color: var(--w4-primary);
 }
+
 .w4-icon-button-secondary {
   --w4-btn-bg: hsl(var(--w4-secondary));
   --w4-btn-fg: hsl(var(--w4-secondary-content));
   --w4-btn-border: hsl(var(--w4-secondary));
+  --w4-focus-ring-color: var(--w4-secondary);
 }
+
 .w4-icon-button-accent {
   --w4-btn-bg: hsl(var(--w4-accent));
   --w4-btn-fg: hsl(var(--w4-accent-content));
   --w4-btn-border: hsl(var(--w4-accent));
+  --w4-focus-ring-color: var(--w4-accent);
 }
-.w4-icon-button-neutral {
-  --w4-btn-bg: hsl(var(--w4-base-content));
-  --w4-btn-fg: hsl(var(--w4-base-100));
-  --w4-btn-border: hsl(var(--w4-base-content));
-}
+
 .w4-icon-button-info {
   --w4-btn-bg: hsl(var(--w4-info));
   --w4-btn-fg: hsl(var(--w4-info-content));
   --w4-btn-border: hsl(var(--w4-info));
+  --w4-focus-ring-color: var(--w4-info);
 }
+
 .w4-icon-button-success {
   --w4-btn-bg: hsl(var(--w4-success));
   --w4-btn-fg: hsl(var(--w4-success-content));
   --w4-btn-border: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
 }
+
 .w4-icon-button-warning {
   --w4-btn-bg: hsl(var(--w4-warning));
   --w4-btn-fg: hsl(var(--w4-warning-content));
   --w4-btn-border: hsl(var(--w4-warning));
+  --w4-focus-ring-color: var(--w4-warning);
 }
+
 .w4-icon-button-error {
   --w4-btn-bg: hsl(var(--w4-error));
   --w4-btn-fg: hsl(var(--w4-error-content));
   --w4-btn-border: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
 }
 
-.w4-icon-button-ghost {
-  --w4-btn-bg: transparent;
-  --w4-btn-border: transparent;
-  --w4-btn-fg: currentColor;
-}
-.w4-icon-button-ghost:hover {
-  --w4-btn-bg: hsl(var(--w4-base-content) / 0.1);
-}
-
+/* ----------------------------------
+   STYLISTIC VARIANTS (Surface System)
+   ---------------------------------- */
 .w4-icon-button-outline {
   --w4-btn-bg: transparent;
   --w4-btn-fg: var(--w4-btn-border, hsl(var(--w4-base-content)));
-  border-color: var(--w4-btn-border, hsl(var(--w4-base-content)));
+  --w4-btn-shadow: none;
 }
 .w4-icon-button-outline:hover {
   --w4-btn-bg: var(--w4-btn-border, hsl(var(--w4-base-content)));
   --w4-btn-fg: hsl(var(--w4-base-100));
 }
 
-.w4-icon-button-xs {
-  --w4-btn-size: 1.5rem;
-  --w4-btn-p: 0.5rem;
-  --w4-btn-text: 0.6875rem;
-}
-.w4-icon-button-sm {
-  --w4-btn-size: 2rem;
-  --w4-btn-p: 0.75rem;
-  --w4-btn-text: 0.75rem;
-}
-.w4-icon-button-md {
-  --w4-btn-size: 2.5rem;
-  --w4-btn-p: 1rem;
-  --w4-btn-text: 0.875rem;
-}
-.w4-icon-button-lg {
-  --w4-btn-size: 3rem;
-  --w4-btn-p: 1.25rem;
-  --w4-btn-text: 1.125rem;
-}
-.w4-icon-button-xl {
-  --w4-btn-size: 3.5rem;
-  --w4-btn-p: 1.5rem;
-  --w4-btn-text: 1.375rem;
-}
-
-.w4-icon-button-disabled,
-.w4-icon-button:disabled {
-  pointer-events: none;
-  --w4-btn-bg: hsl(var(--w4-base-content) / 0.1);
-  --w4-btn-fg: hsl(var(--w4-base-content) / 0.2);
+.w4-icon-button-ghost {
+  --w4-btn-bg: transparent;
   --w4-btn-border: transparent;
-  filter: none;
+  --w4-btn-fg: currentColor;
+  --w4-btn-shadow: none;
+}
+.w4-icon-button-ghost:hover {
+  --w4-btn-bg: hsl(var(--w4-base-content) / 0.1);
 }
 
-.w4-icon-button-loading {
-  pointer-events: none;
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
+.w4-icon-button-xs {
+  --w4-btn-size: var(--w4-control-height-xs);
+  --w4-btn-font-size: 0.875rem;
 }
 
-.w4-icon-button-readonly {
-  pointer-events: none;
+.w4-icon-button-sm {
+  --w4-btn-size: var(--w4-control-height-sm);
+  --w4-btn-font-size: 1rem;
 }
 
-.w4-icon-button-active {
-  transform: translateY(1px);
+.w4-icon-button-md {
+  --w4-btn-size: var(--w4-control-height-md);
+  --w4-btn-font-size: 1.25rem;
 }
 
-.w4-icon-button-pressing {
-  transform: translateY(1px) scale(0.99);
+.w4-icon-button-lg {
+  --w4-btn-size: var(--w4-control-height-lg);
+  --w4-btn-font-size: 1.5rem;
 }
+
+.w4-icon-button-xl {
+  --w4-btn-size: var(--w4-control-height-xl);
+  --w4-btn-font-size: 1.75rem;
+}
+
+/* =========================================
+   LABEL COMPONENT
+   Native W4 Visual Engine implementation
+   ========================================= */
 
 .w4-label {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
-  color: hsl(var(--w4-base-content));
-  font-weight: 500;
-  line-height: 1.3;
+  gap: var(--w4-spacing-base);
+  color: var(--w4-label-color, hsl(var(--w4-base-content)));
+  font-weight: var(--w4-label-font-weight, 500);
+  line-height: var(--w4-label-line-height, 1.3);
+  font-size: var(--w4-label-font-size, 1rem);
+  font-family: var(--w4-font-sans);
+  cursor: default;
+  transition: color var(--w4-transition-fast), opacity var(--w4-transition-fast);
 }
 
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-label-neutral {
-  color: hsl(var(--w4-base-content));
+  --w4-label-color: hsl(var(--w4-base-content));
 }
 
 .w4-label-primary {
-  color: hsl(var(--w4-primary));
+  --w4-label-color: hsl(var(--w4-primary));
 }
 
 .w4-label-secondary {
-  color: hsl(var(--w4-secondary));
+  --w4-label-color: hsl(var(--w4-secondary));
 }
 
 .w4-label-accent {
-  color: hsl(var(--w4-accent));
+  --w4-label-color: hsl(var(--w4-accent));
 }
 
 .w4-label-info {
-  color: hsl(var(--w4-info));
+  --w4-label-color: hsl(var(--w4-info));
 }
 
 .w4-label-success {
-  color: hsl(var(--w4-success));
+  --w4-label-color: hsl(var(--w4-success));
 }
 
 .w4-label-warning {
-  color: hsl(var(--w4-warning));
+  --w4-label-color: hsl(var(--w4-warning));
 }
 
 .w4-label-error {
-  color: hsl(var(--w4-error));
+  --w4-label-color: hsl(var(--w4-error));
 }
 
 .w4-label-muted {
   opacity: 0.75;
 }
 
-.w4-label-required::after {
-  content: "*";
-  margin-inline-start: 0.25rem;
-  color: hsl(0 75% 50%);
-}
-
+/* ----------------------------------
+   SIZE SCALES
+   ---------------------------------- */
 .w4-label-xs {
-  font-size: 0.75rem;
+  --w4-label-font-size: 0.75rem;
 }
 
 .w4-label-sm {
-  font-size: 0.875rem;
+  --w4-label-font-size: 0.875rem;
 }
 
 .w4-label-md {
-  font-size: 1rem;
+  --w4-label-font-size: 1rem;
 }
 
 .w4-label-lg {
-  font-size: 1.125rem;
+  --w4-label-font-size: 1.125rem;
 }
 
 .w4-label-xl {
-  font-size: 1.25rem;
+  --w4-label-font-size: 1.25rem;
 }
 
-.w4-label-disabled {
-  opacity: 0.55;
+/* ----------------------------------
+   STATES & MODIFIERS (LabelComponentState Enum)
+   ---------------------------------- */
+.w4-label-required::after,
+.w4-label[data-w4-state~="required"]::after {
+  content: "*";
+  margin-inline-start: 0.25rem;
+  color: var(--w4-label-required-color, hsl(var(--w4-error)));
 }
 
-.w4-label-active {
+.w4-label-disabled,
+.w4-label[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.55) !important;
+  pointer-events: none !important;
+}
+
+.w4-label-active,
+.w4-label[data-w4-state~="active"] {
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
 
-.w4-label-hidden {
-  display: none;
+.w4-label-hidden,
+.w4-label[data-w4-state~="hidden"] {
+  display: none !important;
 }
+
+/* =========================================
+   LINK COMPONENT
+   Native W4 Visual Engine implementation
+   ========================================= */
 
 .w4-link {
-  color: hsl(var(--w4-primary));
+  color: var(--w4-link-color, hsl(var(--w4-primary)));
   text-decoration: underline;
   text-underline-offset: 0.2em;
-  transition: color 150ms ease;
+  font-size: var(--w4-link-font-size, inherit);
+  transition: color var(--w4-transition-fast), filter var(--w4-transition-fast), opacity var(--w4-transition-fast);
+  cursor: pointer;
+  outline-offset: var(--w4-focus-ring-offset);
 }
 
+/* ----------------------------------
+   INTERACTION STATES
+   ---------------------------------- */
+.w4-link:hover {
+  filter: brightness(var(--w4-hover-brightness, 1.1));
+}
+
+.w4-link:focus-visible {
+  outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-primary)) / var(--w4-focus-ring-opacity));
+  border-radius: var(--w4-radius-sm);
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-link-primary {
-  color: hsl(var(--w4-primary));
+  --w4-link-color: hsl(var(--w4-primary));
+  --w4-focus-ring-color: var(--w4-primary);
 }
 
 .w4-link-secondary {
-  color: hsl(var(--w4-secondary));
+  --w4-link-color: hsl(var(--w4-secondary));
+  --w4-focus-ring-color: var(--w4-secondary);
 }
 
 .w4-link-accent {
-  color: hsl(var(--w4-accent));
+  --w4-link-color: hsl(var(--w4-accent));
+  --w4-focus-ring-color: var(--w4-accent);
 }
 
 .w4-link-info {
-  color: hsl(var(--w4-info));
+  --w4-link-color: hsl(var(--w4-info));
+  --w4-focus-ring-color: var(--w4-info);
 }
 
 .w4-link-success {
-  color: hsl(var(--w4-success));
+  --w4-link-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
 }
 
 .w4-link-warning {
-  color: hsl(var(--w4-warning));
+  --w4-link-color: hsl(var(--w4-warning));
+  --w4-focus-ring-color: var(--w4-warning);
 }
 
 .w4-link-error {
-  color: hsl(var(--w4-error));
+  --w4-link-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
 }
 
 .w4-link-neutral {
-  color: hsl(var(--w4-base-content));
+  --w4-link-color: hsl(var(--w4-base-content));
+  --w4-focus-ring-color: var(--w4-base-content);
 }
 
 .w4-link-muted {
   opacity: 0.75;
 }
 
+/* ----------------------------------
+   SIZE SCALES
+   ---------------------------------- */
 .w4-link-xs {
-  font-size: 0.75rem;
+  --w4-link-font-size: 0.75rem;
 }
 
 .w4-link-sm {
-  font-size: 0.875rem;
+  --w4-link-font-size: 0.875rem;
 }
 
 .w4-link-md {
-  font-size: 1rem;
+  --w4-link-font-size: 1rem;
 }
 
 .w4-link-lg {
-  font-size: 1.125rem;
+  --w4-link-font-size: 1.125rem;
 }
 
 .w4-link-xl {
-  font-size: 1.25rem;
+  --w4-link-font-size: 1.25rem;
 }
 
-.w4-link-disabled {
-  opacity: 0.55;
-  pointer-events: none;
+/* ----------------------------------
+   STATES & MODIFIERS (LinkComponentState Enum)
+   ---------------------------------- */
+.w4-link-disabled,
+.w4-link[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.55) !important;
+  pointer-events: none !important;
+  text-decoration: none !important;
 }
 
-.w4-link-active {
+.w4-link:active,
+.w4-link-active,
+.w4-link[data-w4-state~="active"] {
   font-weight: 600;
+  filter: brightness(var(--w4-hover-brightness, 1.1));
 }
 
-.w4-link-hidden {
-  display: none;
+.w4-link-hidden,
+.w4-link[data-w4-state~="hidden"] {
+  display: none !important;
 }
+
+/* =========================================
+   TEXT COMPONENT
+   Native W4 Visual Engine implementation
+   ========================================= */
 
 .w4-text {
-  color: hsl(var(--w4-base-content));
-  line-height: 1.5;
+  color: var(--w4-text-color, hsl(var(--w4-base-content)));
+  line-height: var(--w4-text-line-height, 1.5);
+  font-weight: var(--w4-text-font-weight, normal);
+  font-size: var(--w4-text-font-size, 1rem);
+  font-family: var(--w4-font-sans);
+  margin: 0;
+  transition: color var(--w4-transition-fast), opacity var(--w4-transition-fast);
 }
 
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-text-neutral {
-  color: hsl(var(--w4-base-content));
+  --w4-text-color: hsl(var(--w4-base-content));
 }
 
 .w4-text-primary {
-  color: hsl(var(--w4-primary));
+  --w4-text-color: hsl(var(--w4-primary));
 }
 
 .w4-text-secondary {
-  color: hsl(var(--w4-secondary));
+  --w4-text-color: hsl(var(--w4-secondary));
 }
 
 .w4-text-accent {
-  color: hsl(var(--w4-accent));
+  --w4-text-color: hsl(var(--w4-accent));
 }
 
 .w4-text-info {
-  color: hsl(var(--w4-info));
+  --w4-text-color: hsl(var(--w4-info));
 }
 
 .w4-text-success {
-  color: hsl(var(--w4-success));
+  --w4-text-color: hsl(var(--w4-success));
 }
 
 .w4-text-warning {
-  color: hsl(var(--w4-warning));
+  --w4-text-color: hsl(var(--w4-warning));
 }
 
 .w4-text-error {
-  color: hsl(var(--w4-error));
+  --w4-text-color: hsl(var(--w4-error));
 }
 
 .w4-text-muted {
   opacity: 0.75;
 }
 
+/* ----------------------------------
+   SIZE SCALES & STYLES
+   ---------------------------------- */
 .w4-text-lead {
-  font-weight: 500;
-  line-height: 1.6;
+  --w4-text-font-weight: 500;
+  --w4-text-line-height: 1.6;
 }
 
 .w4-text-xs {
-  font-size: 0.75rem;
+  --w4-text-font-size: 0.75rem;
 }
 
 .w4-text-sm {
-  font-size: 0.875rem;
+  --w4-text-font-size: 0.875rem;
 }
 
 .w4-text-md {
-  font-size: 1rem;
+  --w4-text-font-size: 1rem;
 }
 
 .w4-text-lg {
-  font-size: 1.125rem;
+  --w4-text-font-size: 1.125rem;
 }
 
 .w4-text-xl {
-  font-size: 1.25rem;
+  --w4-text-font-size: 1.25rem;
 }
 
-.w4-text-disabled {
-  opacity: 0.55;
+/* ----------------------------------
+   STATES & MODIFIERS (TextComponentState Enum)
+   ---------------------------------- */
+.w4-text-disabled,
+.w4-text[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.55) !important;
+  pointer-events: none !important;
 }
 
-.w4-text-active {
-  font-weight: 600;
+.w4-text-active,
+.w4-text[data-w4-state~="active"] {
+  --w4-text-font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
-.w4-text-hidden {
-  display: none;
+.w4-text-hidden,
+.w4-text[data-w4-state~="hidden"] {
+  display: none !important;
 }
+
+/* =========================================
+   CARD COMPONENT
+   Native W4 Visual Engine implementation
+   Layout Morphology
+   ========================================= */
 
 .w4-card {
-  background: hsl(var(--w4-base-200));
-  border: 1px solid hsl(var(--w4-base-300));
-  border-radius: var(--w4-radius-card);
-  box-shadow: var(--w4-shadow-sm);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+  /* Morphology Tokens */
+  border-radius: var(--w4-radius-card, var(--w4-radius-lg));
+  
+  /* Surface Tokens */
+  background-color: var(--w4-card-bg, hsl(var(--w4-base-200)));
+  border-width: var(--w4-card-border-width, 1px);
+  border-style: solid;
+  border-color: var(--w4-card-border-color, hsl(var(--w4-base-300)));
+  box-shadow: var(--w4-card-shadow, var(--w4-shadow-sm));
+  
+  /* Typography Tokens */
+  color: var(--w4-card-color, hsl(var(--w4-base-content)));
 }
 
 .w4-card-body {
-  padding: 2rem;
-}
-
-.w4-card-elevated {
-  box-shadow: var(--w4-shadow-md);
-}
-
-.w4-card-bordered {
-  border-width: 2px;
-}
-
-.w4-card-xs .w4-card-body {
-  padding: 0.75rem;
-}
-
-.w4-card-sm .w4-card-body {
-  padding: 1rem;
-}
-
-.w4-card-md .w4-card-body {
-  padding: 2rem;
-}
-
-.w4-card-lg .w4-card-body {
-  padding: 2.5rem;
-}
-
-.w4-card-xl .w4-card-body {
-  padding: 3rem;
-}
-
-.w4-container {
-  inline-size: min(100%, 1200px);
-  margin-inline: auto;
-  padding-inline: 1rem;
-  background: hsl(var(--w4-base-200));
-  color: hsl(var(--w4-base-content));
-}
-
-.w4-container-xs {
-  max-inline-size: 420px;
-}
-
-.w4-container-sm {
-  max-inline-size: 640px;
-}
-
-.w4-container-md {
-  max-inline-size: 840px;
-}
-
-.w4-container-lg {
-  max-inline-size: 1080px;
-}
-
-.w4-container-xl {
-  max-inline-size: 1280px;
-}
-
-.w4-divider {
-  border: 0;
-  border-block-start: 1px solid hsl(var(--w4-base-300));
-  margin: 1rem 0;
-}
-
-.w4-divider-neutral {
-  border-color: hsl(var(--w4-base-300));
-}
-
-.w4-divider-primary {
-  border-color: hsl(var(--w4-primary));
-}
-
-.w4-divider-secondary {
-  border-color: hsl(var(--w4-secondary));
-}
-
-.w4-divider-accent {
-  border-color: hsl(var(--w4-accent));
-}
-
-.w4-divider-muted {
-  border-color: hsl(var(--w4-base-200));
-}
-
-.w4-divider-xs {
-  margin: 0.375rem 0;
-}
-
-.w4-divider-sm {
-  margin: 0.625rem 0;
-}
-
-.w4-divider-md {
-  margin: 1rem 0;
-}
-
-.w4-divider-lg {
-  margin: 1.5rem 0;
-}
-
-.w4-divider-xl {
-  margin: 2rem 0;
-}
-
-.w4-divider-vertical {
-  border-block-start: 0;
-  border-inline-start: 1px solid hsl(var(--w4-base-300));
-  inline-size: 1px;
-  block-size: 100%;
-  margin: 0 1rem;
-}
-
-.w4-divider-hidden {
-  display: none;
-}
-
-.w4-divider-disabled {
-  opacity: 0.5;
-}
-
-.w4-divider-active {
-  border-color: hsl(var(--w4-primary));
-}
-
-.w4-grid {
-  display: grid;
-  gap: 1rem;
-}
-
-.w4-grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.w4-grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.w4-grid-xs {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: var(--w4-card-padding, 2rem);
   gap: 0.5rem;
 }
 
-.w4-grid-sm {
-  gap: 0.75rem;
+/* ----------------------------------
+   MODIFIERS (Surface System)
+   ---------------------------------- */
+.w4-card-bordered {
+  --w4-card-border-width: 2px;
 }
 
-.w4-grid-md {
-  gap: 1rem;
+.w4-card-elevated {
+  --w4-card-shadow: var(--w4-shadow-md);
 }
 
-.w4-grid-lg {
-  gap: 1.5rem;
+.w4-card-ghost {
+  --w4-card-bg: transparent;
+  --w4-card-border-color: transparent;
+  --w4-card-shadow: none;
 }
 
-.w4-grid-xl {
-  gap: 2rem;
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-card-primary {
+  --w4-card-bg: hsl(var(--w4-primary));
+  --w4-card-color: hsl(var(--w4-primary-content));
+  --w4-card-border-color: hsl(var(--w4-primary));
 }
+
+.w4-card-secondary {
+  --w4-card-bg: hsl(var(--w4-secondary));
+  --w4-card-color: hsl(var(--w4-secondary-content));
+  --w4-card-border-color: hsl(var(--w4-secondary));
+}
+
+.w4-card-accent {
+  --w4-card-bg: hsl(var(--w4-accent));
+  --w4-card-color: hsl(var(--w4-accent-content));
+  --w4-card-border-color: hsl(var(--w4-accent));
+}
+
+.w4-card-info {
+  --w4-card-bg: hsl(var(--w4-info));
+  --w4-card-color: hsl(var(--w4-info-content));
+  --w4-card-border-color: hsl(var(--w4-info));
+}
+
+.w4-card-success {
+  --w4-card-bg: hsl(var(--w4-success));
+  --w4-card-color: hsl(var(--w4-success-content));
+  --w4-card-border-color: hsl(var(--w4-success));
+}
+
+.w4-card-warning {
+  --w4-card-bg: hsl(var(--w4-warning));
+  --w4-card-color: hsl(var(--w4-warning-content));
+  --w4-card-border-color: hsl(var(--w4-warning));
+}
+
+.w4-card-error {
+  --w4-card-bg: hsl(var(--w4-error));
+  --w4-card-color: hsl(var(--w4-error-content));
+  --w4-card-border-color: hsl(var(--w4-error));
+}
+
+/* Base structural colors */
+.w4-card-base-100 { --w4-card-bg: hsl(var(--w4-base-100)); }
+.w4-card-base-200 { --w4-card-bg: hsl(var(--w4-base-200)); }
+.w4-card-base-300 { --w4-card-bg: hsl(var(--w4-base-300)); }
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
+.w4-card-xs .w4-card-body {
+  --w4-card-padding: 0.75rem;
+}
+
+.w4-card-sm .w4-card-body {
+  --w4-card-padding: 1rem;
+}
+
+.w4-card-md .w4-card-body {
+  --w4-card-padding: 2rem;
+}
+
+.w4-card-lg .w4-card-body {
+  --w4-card-padding: 2.5rem;
+}
+
+.w4-card-xl .w4-card-body {
+  --w4-card-padding: 3rem;
+}
+
+/* ----------------------------------
+   STATES & MODIFIERS (CardComponentState Enum)
+   ---------------------------------- */
+.w4-card-hidden,
+.w4-card[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-card-disabled,
+.w4-card[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.6) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-card-active,
+.w4-card[data-w4-state~="active"] {
+  /* Elevate and emphasize the active card */
+  --w4-card-shadow: var(--w4-shadow-lg);
+  border-color: hsl(var(--w4-primary));
+  transform: translateY(-2px);
+  transition: transform var(--w4-transition-fast), box-shadow var(--w4-transition-fast), border-color var(--w4-transition-fast);
+}
+
+.w4-card-collapsed,
+.w4-card[data-w4-state~="collapsed"] {
+  /* Hide the body but keep the card container/header visible */
+}
+
+.w4-card-collapsed .w4-card-body,
+.w4-card[data-w4-state~="collapsed"] .w4-card-body {
+  display: none !important;
+}
+
+/* =========================================
+   CONTAINER COMPONENT
+   Native W4 Visual Engine implementation
+   Layout System
+   ========================================= */
+
+.w4-container {
+  /* Layout constraints */
+  inline-size: min(100%, var(--w4-container-max-width, 1200px));
+  margin-inline: auto;
+  padding-inline: var(--w4-container-padding-x, 1rem);
+  
+  /* Surface Tokens (Optional for containers, but supported) */
+  background-color: var(--w4-container-bg, transparent);
+  color: var(--w4-container-color, inherit);
+}
+
+/* ----------------------------------
+   MODIFIERS (Surface System)
+   ---------------------------------- */
+.w4-container-solid {
+  --w4-container-bg: hsl(var(--w4-base-200));
+  --w4-container-color: hsl(var(--w4-base-content));
+}
+
+/* ----------------------------------
+   SIZE SCALES (Layout Morphology)
+   ---------------------------------- */
+.w4-container-xs {
+  --w4-container-max-width: 420px;
+}
+
+.w4-container-sm {
+  --w4-container-max-width: 640px;
+}
+
+.w4-container-md {
+  --w4-container-max-width: 840px;
+}
+
+.w4-container-lg {
+  --w4-container-max-width: 1080px;
+}
+
+.w4-container-xl {
+  --w4-container-max-width: 1280px;
+}
+
+/* ----------------------------------
+   STATES & MODIFIERS (ContainerComponentState Enum)
+   ---------------------------------- */
+.w4-container-hidden,
+.w4-container[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-container-disabled,
+.w4-container[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-container-active,
+.w4-container[data-w4-state~="active"] {
+  /* An active container might pop out slightly, mostly used for layout debugging or interactive sections */
+  box-shadow: inset 0 0 0 2px hsl(var(--w4-primary) / 0.5);
+  background-color: hsl(var(--w4-primary) / 0.05);
+}
+
+/* =========================================
+   DIVIDER COMPONENT
+   Native W4 Visual Engine implementation
+   Layout System
+   ========================================= */
+
+.w4-divider {
+  border: 0;
+  margin: var(--w4-divider-margin-y, 1rem) var(--w4-divider-margin-x, 0);
+  
+  /* Surface Tokens */
+  border-block-start-width: var(--w4-divider-width, 1px);
+  border-block-start-style: solid;
+  border-color: var(--w4-divider-color, hsl(var(--w4-base-300)));
+  
+  /* Orientation Reset (Horizontal by default) */
+  border-inline-start-width: 0;
+}
+
+/* ----------------------------------
+   ORIENTATION MODIFIER
+   ---------------------------------- */
+.w4-divider-vertical {
+  /* Reset horizontal styles */
+  border-block-start-width: 0;
+  
+  /* Apply vertical styles */
+  border-inline-start-width: var(--w4-divider-width, 1px);
+  border-inline-start-style: solid;
+  
+  /* Layout constraints */
+  inline-size: var(--w4-divider-width, 1px);
+  block-size: 100%;
+  
+  /* Margins for vertical */
+  margin: var(--w4-divider-margin-y, 0) var(--w4-divider-margin-x, 1rem);
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-divider-primary { --w4-divider-color: hsl(var(--w4-primary)); }
+.w4-divider-secondary { --w4-divider-color: hsl(var(--w4-secondary)); }
+.w4-divider-accent { --w4-divider-color: hsl(var(--w4-accent)); }
+.w4-divider-info { --w4-divider-color: hsl(var(--w4-info)); }
+.w4-divider-success { --w4-divider-color: hsl(var(--w4-success)); }
+.w4-divider-warning { --w4-divider-color: hsl(var(--w4-warning)); }
+.w4-divider-error { --w4-divider-color: hsl(var(--w4-error)); }
+
+/* Base variants */
+.w4-divider-neutral { --w4-divider-color: hsl(var(--w4-base-content) / 0.2); }
+.w4-divider-muted { --w4-divider-color: hsl(var(--w4-base-200)); }
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
+/* Note: For dividers, sizes typically affect margins */
+.w4-divider-xs {
+  --w4-divider-margin-y: 0.375rem;
+  --w4-divider-margin-x: 0.375rem;
+}
+
+.w4-divider-sm {
+  --w4-divider-margin-y: 0.625rem;
+  --w4-divider-margin-x: 0.625rem;
+}
+
+.w4-divider-md {
+  --w4-divider-margin-y: 1rem;
+  --w4-divider-margin-x: 1rem;
+}
+
+.w4-divider-lg {
+  --w4-divider-margin-y: 1.5rem;
+  --w4-divider-margin-x: 1.5rem;
+}
+
+.w4-divider-xl {
+  --w4-divider-margin-y: 2rem;
+  --w4-divider-margin-x: 2rem;
+}
+
+/* ----------------------------------
+   STATES & MODIFIERS (DividerComponentState Enum)
+   ---------------------------------- */
+.w4-divider-hidden,
+.w4-divider[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-divider-disabled,
+.w4-divider[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.3) !important;
+  pointer-events: none !important;
+}
+
+.w4-divider-active,
+.w4-divider[data-w4-state~="active"] {
+  /* An active divider uses primary color and becomes slightly thicker */
+  --w4-divider-color: hsl(var(--w4-primary));
+  --w4-divider-width: 2px;
+}
+
+/* =========================================
+   GRID COMPONENT
+   Native W4 Visual Engine implementation
+   Layout System
+   ========================================= */
+
+.w4-grid {
+  display: grid;
+  gap: var(--w4-grid-gap, 1rem);
+  grid-template-columns: var(--w4-grid-cols, repeat(1, minmax(0, 1fr)));
+}
+
+/* ----------------------------------
+   COLUMN MODIFIERS
+   ---------------------------------- */
+.w4-grid-1 { --w4-grid-cols: repeat(1, minmax(0, 1fr)); }
+.w4-grid-2 { --w4-grid-cols: repeat(2, minmax(0, 1fr)); }
+.w4-grid-3 { --w4-grid-cols: repeat(3, minmax(0, 1fr)); }
+.w4-grid-4 { --w4-grid-cols: repeat(4, minmax(0, 1fr)); }
+.w4-grid-5 { --w4-grid-cols: repeat(5, minmax(0, 1fr)); }
+.w4-grid-6 { --w4-grid-cols: repeat(6, minmax(0, 1fr)); }
+.w4-grid-12 { --w4-grid-cols: repeat(12, minmax(0, 1fr)); }
+
+/* ----------------------------------
+   SIZE SCALES (Gap Morphology)
+   ---------------------------------- */
+.w4-grid-none { --w4-grid-gap: 0px; }
+.w4-grid-xs { --w4-grid-gap: 0.5rem; }
+.w4-grid-sm { --w4-grid-gap: 0.75rem; }
+.w4-grid-md { --w4-grid-gap: 1rem; }
+.w4-grid-lg { --w4-grid-gap: 1.5rem; }
+.w4-grid-xl { --w4-grid-gap: 2rem; }
+
+/* ----------------------------------
+   STATES & MODIFIERS (GridComponentState Enum)
+   ---------------------------------- */
+.w4-grid-hidden,
+.w4-grid[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-grid-disabled,
+.w4-grid[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-grid-active,
+.w4-grid[data-w4-state~="active"] {
+  /* An active grid might show boundaries for debugging or interactive highlighting */
+  outline: 2px dashed hsl(var(--w4-primary) / 0.5);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   PANEL COMPONENT
+   Native W4 Visual Engine implementation
+   Layout Morphology
+   ========================================= */
 
 .w4-panel {
-  border: 1px solid hsl(var(--w4-base-300));
-  border-radius: var(--w4-radius-card);
-  background: hsl(var(--w4-base-200));
-  padding: 1rem;
+  position: relative;
+  display: block;
+  
+  /* Morphology Tokens */
+  border-radius: var(--w4-radius-panel, var(--w4-radius-lg));
+  padding: var(--w4-panel-padding, 1rem);
+  
+  /* Surface Tokens */
+  background-color: var(--w4-panel-bg, hsl(var(--w4-base-200)));
+  border-width: var(--w4-panel-border-width, 1px);
+  border-style: solid;
+  border-color: var(--w4-panel-border-color, hsl(var(--w4-base-300)));
+  box-shadow: var(--w4-panel-shadow, none);
+  
+  /* Typography Tokens */
+  color: var(--w4-panel-color, hsl(var(--w4-base-content)));
 }
 
+/* ----------------------------------
+   MODIFIERS (Surface System)
+   ---------------------------------- */
 .w4-panel-elevated {
-  box-shadow: var(--w4-shadow-md);
+  --w4-panel-shadow: var(--w4-shadow-md);
 }
 
+.w4-panel-ghost {
+  --w4-panel-bg: transparent;
+  --w4-panel-border-color: transparent;
+  --w4-panel-shadow: none;
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-panel-primary {
+  --w4-panel-bg: hsl(var(--w4-primary));
+  --w4-panel-color: hsl(var(--w4-primary-content));
+  --w4-panel-border-color: hsl(var(--w4-primary));
+}
+
+.w4-panel-secondary {
+  --w4-panel-bg: hsl(var(--w4-secondary));
+  --w4-panel-color: hsl(var(--w4-secondary-content));
+  --w4-panel-border-color: hsl(var(--w4-secondary));
+}
+
+.w4-panel-accent {
+  --w4-panel-bg: hsl(var(--w4-accent));
+  --w4-panel-color: hsl(var(--w4-accent-content));
+  --w4-panel-border-color: hsl(var(--w4-accent));
+}
+
+.w4-panel-info {
+  --w4-panel-bg: hsl(var(--w4-info));
+  --w4-panel-color: hsl(var(--w4-info-content));
+  --w4-panel-border-color: hsl(var(--w4-info));
+}
+
+.w4-panel-success {
+  --w4-panel-bg: hsl(var(--w4-success));
+  --w4-panel-color: hsl(var(--w4-success-content));
+  --w4-panel-border-color: hsl(var(--w4-success));
+}
+
+.w4-panel-warning {
+  --w4-panel-bg: hsl(var(--w4-warning));
+  --w4-panel-color: hsl(var(--w4-warning-content));
+  --w4-panel-border-color: hsl(var(--w4-warning));
+}
+
+.w4-panel-error {
+  --w4-panel-bg: hsl(var(--w4-error));
+  --w4-panel-color: hsl(var(--w4-error-content));
+  --w4-panel-border-color: hsl(var(--w4-error));
+}
+
+/* Base structural colors */
+.w4-panel-base-100 { --w4-panel-bg: hsl(var(--w4-base-100)); }
+.w4-panel-base-200 { --w4-panel-bg: hsl(var(--w4-base-200)); }
+.w4-panel-base-300 { --w4-panel-bg: hsl(var(--w4-base-300)); }
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-panel-xs {
-  padding: 0.5rem;
+  --w4-panel-padding: 0.5rem;
 }
 
 .w4-panel-sm {
-  padding: 0.75rem;
+  --w4-panel-padding: 0.75rem;
 }
 
 .w4-panel-md {
-  padding: 1rem;
+  --w4-panel-padding: 1rem;
 }
 
 .w4-panel-lg {
-  padding: 1.25rem;
+  --w4-panel-padding: 1.25rem;
 }
 
 .w4-panel-xl {
-  padding: 1.5rem;
+  --w4-panel-padding: 1.5rem;
 }
+
+/* ----------------------------------
+   STATES & MODIFIERS (PanelComponentState Enum)
+   ---------------------------------- */
+.w4-panel-hidden,
+.w4-panel[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-panel-disabled,
+.w4-panel[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.6) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-panel-active,
+.w4-panel[data-w4-state~="active"] {
+  /* Highlight the active panel */
+  border-color: hsl(var(--w4-primary));
+  background-color: hsl(var(--w4-primary) / 0.05);
+}
+
+.w4-panel-collapsed,
+.w4-panel[data-w4-state~="collapsed"] {
+  /* Visually collapse the panel while keeping its DOM node */
+  block-size: 0;
+  padding-block: 0;
+  overflow: hidden;
+  border-width: 0;
+}
+
+/* =========================================
+   SECTION COMPONENT
+   Native W4 Visual Engine implementation
+   Layout System
+   ========================================= */
 
 .w4-section {
   display: block;
-  padding-block: 1rem;
+  position: relative;
+  
+  /* Morphology Tokens */
+  padding-block: var(--w4-section-padding-y, 1rem);
+  padding-inline: var(--w4-section-padding-x, 0);
+  
+  /* Surface Tokens */
+  background-color: var(--w4-section-bg, transparent);
+  color: var(--w4-section-color, inherit);
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-section-primary {
+  --w4-section-bg: hsl(var(--w4-primary));
+  --w4-section-color: hsl(var(--w4-primary-content));
+}
+
+.w4-section-secondary {
+  --w4-section-bg: hsl(var(--w4-secondary));
+  --w4-section-color: hsl(var(--w4-secondary-content));
+}
+
+.w4-section-accent {
+  --w4-section-bg: hsl(var(--w4-accent));
+  --w4-section-color: hsl(var(--w4-accent-content));
+}
+
+.w4-section-base-100 {
+  --w4-section-bg: hsl(var(--w4-base-100));
+  --w4-section-color: hsl(var(--w4-base-content));
+}
+
+.w4-section-base-200 {
+  --w4-section-bg: hsl(var(--w4-base-200));
+  --w4-section-color: hsl(var(--w4-base-content));
+}
+
+.w4-section-base-300 {
+  --w4-section-bg: hsl(var(--w4-base-300));
+  --w4-section-color: hsl(var(--w4-base-content));
+}
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
+.w4-section-none {
+  --w4-section-padding-y: 0px;
 }
 
 .w4-section-xs {
-  padding-block: 0.5rem;
+  --w4-section-padding-y: 0.5rem;
 }
 
 .w4-section-sm {
-  padding-block: 0.75rem;
+  --w4-section-padding-y: 0.75rem;
 }
 
 .w4-section-md {
-  padding-block: 1rem;
+  --w4-section-padding-y: 1rem;
 }
 
 .w4-section-lg {
-  padding-block: 1.5rem;
+  --w4-section-padding-y: 1.5rem;
 }
 
 .w4-section-xl {
-  padding-block: 2rem;
+  --w4-section-padding-y: 2rem;
 }
+
+/* ----------------------------------
+   STATES & MODIFIERS (SectionComponentState Enum)
+   ---------------------------------- */
+.w4-section-hidden,
+.w4-section[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-section-disabled,
+.w4-section[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.6) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-section-active,
+.w4-section[data-w4-state~="active"] {
+  /* An active section might have a subtle background highlight or border */
+  box-shadow: inset 4px 0 0 0 hsl(var(--w4-primary));
+  background-color: hsl(var(--w4-primary) / 0.03);
+}
+
+.w4-section-collapsed,
+.w4-section[data-w4-state~="collapsed"] {
+  /* Hide the padding and collapse the section content */
+  padding-block: 0 !important;
+  block-size: 0;
+  overflow: hidden;
+}
+
+/* =========================================
+   STACK COMPONENT
+   Native W4 Visual Engine implementation
+   Layout System
+   ========================================= */
 
 .w4-stack {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: var(--w4-stack-dir, column);
+  align-items: var(--w4-stack-align, stretch);
+  justify-content: var(--w4-stack-justify, flex-start);
+  gap: var(--w4-stack-gap, 1rem);
 }
 
-.w4-stack-horizontal {
-  flex-direction: row;
+/* ----------------------------------
+   ORIENTATION MODIFIERS
+   ---------------------------------- */
+.w4-stack-horizontal { --w4-stack-dir: row; }
+.w4-stack-vertical { --w4-stack-dir: column; }
+
+/* ----------------------------------
+   ALIGNMENT MODIFIERS
+   ---------------------------------- */
+.w4-stack-center {
+  --w4-stack-align: center;
+  --w4-stack-justify: center;
 }
 
-.w4-stack-xs {
-  gap: 0.375rem;
+/* ----------------------------------
+   SIZE SCALES (Gap Morphology)
+   ---------------------------------- */
+.w4-stack-none { --w4-stack-gap: 0px; }
+.w4-stack-xs { --w4-stack-gap: 0.375rem; }
+.w4-stack-sm { --w4-stack-gap: 0.625rem; }
+.w4-stack-md { --w4-stack-gap: 1rem; }
+.w4-stack-lg { --w4-stack-gap: 1.5rem; }
+.w4-stack-xl { --w4-stack-gap: 2rem; }
+
+/* ----------------------------------
+   STATES & MODIFIERS (StackComponentState Enum)
+   ---------------------------------- */
+.w4-stack-hidden,
+.w4-stack[data-w4-state~="hidden"] {
+  display: none !important;
 }
 
-.w4-stack-sm {
-  gap: 0.625rem;
+.w4-stack-disabled,
+.w4-stack[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
 }
 
-.w4-stack-md {
-  gap: 1rem;
+.w4-stack-active,
+.w4-stack[data-w4-state~="active"] {
+  /* Active stack for debugging or highlighting a specific flow of content */
+  outline: 2px dashed hsl(var(--w4-primary) / 0.5);
+  outline-offset: 2px;
 }
 
-.w4-stack-lg {
-  gap: 1.5rem;
-}
-
-.w4-stack-xl {
-  gap: 2rem;
-}
+/* =========================================
+   ALERT COMPONENT
+   Native W4 Visual Engine implementation
+   Feedback Morphology
+   ========================================= */
 
 .w4-alert {
-  border-radius: var(--w4-radius-input);
-  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: var(--w4-spacing-base);
+  inline-size: 100%;
+  
+  /* Morphology Tokens */
+  border-radius: var(--w4-radius-alert, var(--w4-radius-md));
+  padding: var(--w4-alert-padding-y, 1rem) var(--w4-alert-padding-x, 1rem);
+  font-size: var(--w4-alert-font-size, 1rem);
+  font-family: var(--w4-font-sans);
+  
+  /* Surface Tokens */
+  border-width: var(--w4-border-width-control);
+  border-style: solid;
+  border-color: var(--w4-alert-border-color, transparent);
+  box-shadow: var(--w4-alert-shadow, none);
+  
+  /* Color Tokens */
+  background-color: var(--w4-alert-bg, hsl(var(--w4-base-200)));
+  color: var(--w4-alert-text, hsl(var(--w4-base-content)));
+  
+  transition: all var(--w4-transition-fast);
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-alert-info {
+  --w4-alert-bg: hsl(var(--w4-info) / 0.15);
+  --w4-alert-text: hsl(var(--w4-info));
+  --w4-alert-border-color: hsl(var(--w4-info) / 0.3);
 }
 
 .w4-alert-success {
-  background: hsl(142 70% 93%);
-  color: hsl(142 56% 22%);
-}
-
-.w4-alert-info {
-  background: hsl(213 100% 96%);
-  color: hsl(215 77% 28%);
+  --w4-alert-bg: hsl(var(--w4-success) / 0.15);
+  --w4-alert-text: hsl(var(--w4-success));
+  --w4-alert-border-color: hsl(var(--w4-success) / 0.3);
 }
 
 .w4-alert-warning {
-  background: hsl(44 100% 93%);
-  color: hsl(32 95% 32%);
+  --w4-alert-bg: hsl(var(--w4-warning) / 0.15);
+  --w4-alert-text: hsl(var(--w4-warning));
+  --w4-alert-border-color: hsl(var(--w4-warning) / 0.3);
 }
 
 .w4-alert-error {
-  background: hsl(0 100% 95%);
-  color: hsl(0 74% 35%);
+  --w4-alert-bg: hsl(var(--w4-error) / 0.15);
+  --w4-alert-text: hsl(var(--w4-error));
+  --w4-alert-border-color: hsl(var(--w4-error) / 0.3);
 }
 
+/* Base Semantic Variants */
+.w4-alert-primary {
+  --w4-alert-bg: hsl(var(--w4-primary) / 0.15);
+  --w4-alert-text: hsl(var(--w4-primary));
+  --w4-alert-border-color: hsl(var(--w4-primary) / 0.3);
+}
+
+.w4-alert-secondary {
+  --w4-alert-bg: hsl(var(--w4-secondary) / 0.15);
+  --w4-alert-text: hsl(var(--w4-secondary));
+  --w4-alert-border-color: hsl(var(--w4-secondary) / 0.3);
+}
+
+.w4-alert-accent {
+  --w4-alert-bg: hsl(var(--w4-accent) / 0.15);
+  --w4-alert-text: hsl(var(--w4-accent));
+  --w4-alert-border-color: hsl(var(--w4-accent) / 0.3);
+}
+
+/* ----------------------------------
+   STYLISTIC VARIANTS (Surface System)
+   ---------------------------------- */
+.w4-alert-solid {
+  --w4-alert-bg: var(--w4-alert-text);
+  --w4-alert-text: hsl(var(--w4-base-100));
+  --w4-alert-border-color: transparent;
+  --w4-alert-shadow: var(--w4-shadow-md);
+}
+
+.w4-alert-outline {
+  --w4-alert-bg: transparent;
+  --w4-alert-border-color: var(--w4-alert-text);
+}
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-alert-xs {
-  font-size: 0.75rem;
-  padding: 0.5rem 0.625rem;
+  --w4-alert-font-size: 0.75rem;
+  --w4-alert-padding-y: 0.5rem;
+  --w4-alert-padding-x: 0.75rem;
 }
 
 .w4-alert-sm {
-  font-size: 0.875rem;
+  --w4-alert-font-size: 0.875rem;
+  --w4-alert-padding-y: 0.75rem;
+  --w4-alert-padding-x: 1rem;
 }
 
 .w4-alert-md {
-  font-size: 1rem;
+  --w4-alert-font-size: 1rem;
+  --w4-alert-padding-y: 1rem;
+  --w4-alert-padding-x: 1rem;
 }
 
 .w4-alert-lg {
-  font-size: 1.125rem;
-  padding: 0.875rem 1.125rem;
+  --w4-alert-font-size: 1.125rem;
+  --w4-alert-padding-y: 1.25rem;
+  --w4-alert-padding-x: 1.5rem;
 }
 
 .w4-alert-xl {
-  font-size: 1.25rem;
-  padding: 1rem 1.25rem;
+  --w4-alert-font-size: 1.25rem;
+  --w4-alert-padding-y: 1.5rem;
+  --w4-alert-padding-x: 1.5rem;
 }
+
+/* ----------------------------------
+   STATES & MODIFIERS (AlertComponentState Enum)
+   ---------------------------------- */
+.w4-alert-hidden,
+.w4-alert[data-w4-state~="hidden"],
+.w4-alert-dismissed,
+.w4-alert[data-w4-state~="dismissed"] {
+  display: none !important;
+}
+
+.w4-alert-disabled,
+.w4-alert[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-alert-active,
+.w4-alert[data-w4-state~="active"] {
+  /* Active alerts get a slightly stronger emphasis */
+  box-shadow: var(--w4-alert-shadow, var(--w4-shadow-md));
+  transform: scale(1.01);
+  z-index: 10;
+}
+
+/* =========================================
+   BADGE COMPONENT
+   Native W4 Visual Engine implementation
+   Feedback Morphology
+   ========================================= */
 
 .w4-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--w4-radius-badge, 1.9rem);
-  height: 1.25rem;
-  padding: 0 0.563rem;
-  font-size: 0.875rem;
-  font-weight: 600;
+  white-space: nowrap;
+  font-family: var(--w4-font-sans);
+  font-weight: var(--w4-badge-font-weight, 600);
+  line-height: 1;
+  
+  /* Morphology Tokens */
+  border-radius: var(--w4-radius-badge, var(--w4-radius-pill));
+  block-size: var(--w4-badge-height, 1.25rem);
+  padding-inline: var(--w4-badge-padding-x, 0.5rem);
+  font-size: var(--w4-badge-font-size, 0.75rem);
+  
+  /* Surface Tokens */
+  border-width: var(--w4-border-width-control, 1px);
+  border-style: solid;
+  border-color: var(--w4-badge-border-color, transparent);
+  
+  /* Color Tokens */
+  background-color: var(--w4-badge-bg, hsl(var(--w4-base-200)));
+  color: var(--w4-badge-text, hsl(var(--w4-base-content)));
+  
+  transition: all var(--w4-transition-fast);
 }
 
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-badge-primary {
-  background: hsl(var(--w4-primary));
-  color: hsl(var(--w4-primary-content));
+  --w4-badge-bg: hsl(var(--w4-primary));
+  --w4-badge-text: hsl(var(--w4-primary-content));
+  --w4-badge-border-color: hsl(var(--w4-primary));
 }
 
 .w4-badge-secondary {
-  background: hsl(var(--w4-secondary));
-  color: hsl(var(--w4-secondary-content));
+  --w4-badge-bg: hsl(var(--w4-secondary));
+  --w4-badge-text: hsl(var(--w4-secondary-content));
+  --w4-badge-border-color: hsl(var(--w4-secondary));
 }
 
 .w4-badge-accent {
-  background: hsl(var(--w4-accent));
-  color: hsl(var(--w4-accent-content));
+  --w4-badge-bg: hsl(var(--w4-accent));
+  --w4-badge-text: hsl(var(--w4-accent-content));
+  --w4-badge-border-color: hsl(var(--w4-accent));
 }
 
+.w4-badge-info {
+  --w4-badge-bg: hsl(var(--w4-info));
+  --w4-badge-text: hsl(var(--w4-info-content));
+  --w4-badge-border-color: hsl(var(--w4-info));
+}
+
+.w4-badge-success {
+  --w4-badge-bg: hsl(var(--w4-success));
+  --w4-badge-text: hsl(var(--w4-success-content));
+  --w4-badge-border-color: hsl(var(--w4-success));
+}
+
+.w4-badge-warning {
+  --w4-badge-bg: hsl(var(--w4-warning));
+  --w4-badge-text: hsl(var(--w4-warning-content));
+  --w4-badge-border-color: hsl(var(--w4-warning));
+}
+
+.w4-badge-error {
+  --w4-badge-bg: hsl(var(--w4-error));
+  --w4-badge-text: hsl(var(--w4-error-content));
+  --w4-badge-border-color: hsl(var(--w4-error));
+}
+
+.w4-badge-neutral {
+  --w4-badge-bg: hsl(var(--w4-base-content));
+  --w4-badge-text: hsl(var(--w4-base-100));
+  --w4-badge-border-color: hsl(var(--w4-base-content));
+}
+
+/* ----------------------------------
+   STYLISTIC VARIANTS (Surface System)
+   ---------------------------------- */
+.w4-badge-outline {
+  --w4-badge-bg: transparent;
+  --w4-badge-text: var(--w4-badge-border-color, hsl(var(--w4-base-content)));
+  border-color: var(--w4-badge-border-color, hsl(var(--w4-base-content)));
+}
+
+.w4-badge-soft {
+  --w4-badge-bg: transparent;
+  --w4-badge-border-color: transparent;
+  --w4-badge-text: hsl(var(--w4-base-content));
+  background-color: hsl(var(--w4-base-content) / 0.15);
+}
+
+.w4-badge-soft.w4-badge-primary { 
+  background-color: hsl(var(--w4-primary) / 0.15); 
+  --w4-badge-text: hsl(var(--w4-primary));
+}
+.w4-badge-soft.w4-badge-secondary { 
+  background-color: hsl(var(--w4-secondary) / 0.15); 
+  --w4-badge-text: hsl(var(--w4-secondary));
+}
+.w4-badge-soft.w4-badge-accent { 
+  background-color: hsl(var(--w4-accent) / 0.15); 
+  --w4-badge-text: hsl(var(--w4-accent));
+}
+.w4-badge-soft.w4-badge-info { 
+  background-color: hsl(var(--w4-info) / 0.15); 
+  --w4-badge-text: hsl(var(--w4-info));
+}
+.w4-badge-soft.w4-badge-success { 
+  background-color: hsl(var(--w4-success) / 0.15); 
+  --w4-badge-text: hsl(var(--w4-success));
+}
+.w4-badge-soft.w4-badge-warning { 
+  background-color: hsl(var(--w4-warning) / 0.15); 
+  --w4-badge-text: hsl(var(--w4-warning));
+}
+.w4-badge-soft.w4-badge-error { 
+  background-color: hsl(var(--w4-error) / 0.15); 
+  --w4-badge-text: hsl(var(--w4-error));
+}
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-badge-xs {
-  height: 0.875rem;
-  font-size: 0.625rem;
-  padding: 0 0.313rem;
+  --w4-badge-height: 0.875rem;
+  --w4-badge-padding-x: 0.313rem;
+  --w4-badge-font-size: 0.625rem;
 }
 
 .w4-badge-sm {
-  height: 1rem;
-  font-size: 0.75rem;
-  padding: 0 0.438rem;
+  --w4-badge-height: 1rem;
+  --w4-badge-padding-x: 0.438rem;
+  --w4-badge-font-size: 0.7rem;
 }
 
 .w4-badge-md {
-  height: 1.25rem;
-  font-size: 0.875rem;
-  padding: 0 0.563rem;
+  --w4-badge-height: 1.25rem;
+  --w4-badge-padding-x: 0.5rem;
+  --w4-badge-font-size: 0.75rem;
 }
 
 .w4-badge-lg {
-  height: 1.5rem;
-  font-size: 1rem;
-  padding: 0 0.688rem;
+  --w4-badge-height: 1.5rem;
+  --w4-badge-padding-x: 0.688rem;
+  --w4-badge-font-size: 0.875rem;
 }
 
 .w4-badge-xl {
-  height: 1.75rem;
-  font-size: 1.125rem;
-  padding: 0 0.813rem;
+  --w4-badge-height: 1.75rem;
+  --w4-badge-padding-x: 0.813rem;
+  --w4-badge-font-size: 1rem;
 }
+
+/* ----------------------------------
+   STATES & MODIFIERS (BadgeComponentState Enum)
+   ---------------------------------- */
+.w4-badge-hidden,
+.w4-badge[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-badge-disabled,
+.w4-badge[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-badge-active,
+.w4-badge[data-w4-state~="active"] {
+  /* Give an active badge slightly bolder text and more emphasis */
+  font-weight: 700;
+  transform: scale(1.05);
+}
+
+.w4-badge-highlighted,
+.w4-badge[data-w4-state~="highlighted"] {
+  /* A highlighted badge can pulse to draw attention (e.g. unread notifications) */
+  animation: w4-badge-pulse 2s infinite;
+  box-shadow: 0 0 0 0 hsl(var(--w4-primary) / 0.7);
+}
+
+@keyframes w4-badge-pulse {
+  0% {
+    box-shadow: 0 0 0 0 hsl(var(--w4-primary) / 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px hsl(var(--w4-primary) / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 hsl(var(--w4-primary) / 0);
+  }
+}
+
+/* =========================================
+   PROGRESS COMPONENT
+   Native W4 Visual Engine implementation
+   Feedback Morphology
+   ========================================= */
 
 .w4-progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   inline-size: 100%;
-  block-size: 0.5rem;
-  border-radius: 999px;
+  
+  /* Morphology Tokens */
+  block-size: var(--w4-progress-height, 0.5rem);
+  border-radius: var(--w4-radius-progress, var(--w4-radius-pill));
+  
+  /* Color Tokens */
+  background-color: var(--w4-progress-bg, hsl(var(--w4-base-content) / 0.2));
+  color: var(--w4-progress-color, hsl(var(--w4-base-content))); /* Fallback color for some browsers */
+  
+  overflow: hidden;
 }
 
+/* ----------------------------------
+   CROSS-BROWSER PROGRESS BAR FILL
+   ---------------------------------- */
+.w4-progress::-webkit-progress-bar {
+  background-color: var(--w4-progress-bg, hsl(var(--w4-base-content) / 0.2));
+  border-radius: var(--w4-radius-progress, var(--w4-radius-pill));
+}
+
+.w4-progress::-webkit-progress-value {
+  background-color: var(--w4-progress-color, hsl(var(--w4-base-content)));
+  border-radius: var(--w4-radius-progress, var(--w4-radius-pill));
+  transition: width var(--w4-transition-normal);
+}
+
+.w4-progress::-moz-progress-bar {
+  background-color: var(--w4-progress-color, hsl(var(--w4-base-content)));
+  border-radius: var(--w4-radius-progress, var(--w4-radius-pill));
+  transition: width var(--w4-transition-normal);
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-progress-primary {
+  --w4-progress-color: hsl(var(--w4-primary));
+}
+
+.w4-progress-secondary {
+  --w4-progress-color: hsl(var(--w4-secondary));
+}
+
+.w4-progress-accent {
+  --w4-progress-color: hsl(var(--w4-accent));
+}
+
+.w4-progress-info {
+  --w4-progress-color: hsl(var(--w4-info));
+}
+
+.w4-progress-success {
+  --w4-progress-color: hsl(var(--w4-success));
+}
+
+.w4-progress-warning {
+  --w4-progress-color: hsl(var(--w4-warning));
+}
+
+.w4-progress-error {
+  --w4-progress-color: hsl(var(--w4-error));
+}
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-progress-xs {
-  block-size: 0.25rem;
+  --w4-progress-height: 0.25rem;
 }
 
 .w4-progress-sm {
-  block-size: 0.375rem;
+  --w4-progress-height: 0.375rem;
 }
 
 .w4-progress-md {
-  block-size: 0.5rem;
+  --w4-progress-height: 0.5rem;
 }
 
 .w4-progress-lg {
-  block-size: 0.75rem;
+  --w4-progress-height: 0.75rem;
 }
 
 .w4-progress-xl {
-  block-size: 1rem;
+  --w4-progress-height: 1rem;
 }
 
+/* ----------------------------------
+   STATES & MODIFIERS (ProgressComponentState Enum)
+   ---------------------------------- */
+.w4-progress-hidden,
+.w4-progress[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-progress-disabled,
+.w4-progress[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-progress-active,
+.w4-progress[data-w4-state~="active"] {
+  /* Give active progress bar a subtle glow/shadow to indicate it is the primary process */
+  box-shadow: 0 0 8px 0 var(--w4-progress-color, hsl(var(--w4-base-content) / 0.5));
+}
+
+/* Indeterminate / Loading state */
+.w4-progress:indeterminate,
+.w4-progress-indeterminate,
+.w4-progress-loading,
+.w4-progress[data-w4-state~="indeterminate"],
+.w4-progress[data-w4-state~="loading"] {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--w4-progress-color, hsl(var(--w4-base-content))) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: w4-progress-loading 1.5s infinite linear;
+}
+
+.w4-progress:indeterminate::-webkit-progress-bar,
+.w4-progress-indeterminate::-webkit-progress-bar,
+.w4-progress-loading::-webkit-progress-bar,
+.w4-progress[data-w4-state~="indeterminate"]::-webkit-progress-bar,
+.w4-progress[data-w4-state~="loading"]::-webkit-progress-bar {
+  background-color: transparent;
+}
+.w4-progress:indeterminate::-moz-progress-bar,
+.w4-progress-indeterminate::-moz-progress-bar,
+.w4-progress-loading::-moz-progress-bar,
+.w4-progress[data-w4-state~="indeterminate"]::-moz-progress-bar,
+.w4-progress[data-w4-state~="loading"]::-moz-progress-bar {
+  background-color: transparent;
+}
+
+@keyframes w4-progress-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* =========================================
+   SKELETON COMPONENT
+   Native W4 Visual Engine implementation
+   Feedback Morphology
+   ========================================= */
+
 .w4-skeleton {
-  border-radius: 0.5rem;
+  /* Morphology Tokens */
+  border-radius: var(--w4-skeleton-radius, var(--w4-radius-skeleton, var(--w4-radius-md)));
+  inline-size: var(--w4-skeleton-width, 100%);
+  block-size: var(--w4-skeleton-height, 1rem);
+  
+  /* Color & Surface Tokens */
   background: linear-gradient(
     90deg,
     hsl(var(--w4-base-200)) 25%,
@@ -2271,29 +3244,56 @@ html[data-theme] body {
     hsl(var(--w4-base-200)) 63%
   );
   background-size: 400% 100%;
-  animation: w4-skeleton-loading 1.4s ease infinite;
 }
 
+/* ----------------------------------
+   SHAPE MODIFIERS (Morphology System)
+   ---------------------------------- */
+.w4-skeleton-circle {
+  --w4-skeleton-radius: var(--w4-radius-pill);
+  --w4-skeleton-width: var(--w4-skeleton-height); /* Ensure aspect ratio 1:1 */
+}
+
+.w4-skeleton-square {
+  --w4-skeleton-radius: var(--w4-radius-none);
+}
+
+.w4-skeleton-title {
+  --w4-skeleton-width: 50%;
+  --w4-skeleton-height: 1.5rem;
+}
+
+.w4-skeleton-text {
+  --w4-skeleton-width: 100%;
+  --w4-skeleton-height: 0.875rem;
+}
+
+/* ----------------------------------
+   SIZE SCALES
+   ---------------------------------- */
 .w4-skeleton-xs {
-  min-block-size: 0.5rem;
+  --w4-skeleton-height: 0.5rem;
 }
 
 .w4-skeleton-sm {
-  min-block-size: 0.75rem;
+  --w4-skeleton-height: 0.75rem;
 }
 
 .w4-skeleton-md {
-  min-block-size: 1rem;
+  --w4-skeleton-height: 1rem;
 }
 
 .w4-skeleton-lg {
-  min-block-size: 1.25rem;
+  --w4-skeleton-height: 1.25rem;
 }
 
 .w4-skeleton-xl {
-  min-block-size: 1.5rem;
+  --w4-skeleton-height: 1.5rem;
 }
 
+/* ----------------------------------
+   ANIMATION KEYFRAMES
+   ---------------------------------- */
 @keyframes w4-skeleton-loading {
   0% {
     background-position: 100% 50%;
@@ -2303,603 +3303,1406 @@ html[data-theme] body {
   }
 }
 
-.w4-toast {
-  border-radius: var(--w4-radius-input);
-  background: hsl(var(--w4-base-content));
-  color: hsl(var(--w4-base-100));
-  padding: 0.625rem 0.875rem;
+/* ----------------------------------
+   STATES & MODIFIERS (SkeletonComponentState Enum)
+   ---------------------------------- */
+.w4-skeleton-hidden,
+.w4-skeleton[data-w4-state~="hidden"] {
+  display: none !important;
 }
 
+.w4-skeleton-disabled,
+.w4-skeleton[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  /* Pause the animation if disabled */
+  animation-play-state: paused !important;
+}
+
+.w4-skeleton-active,
+.w4-skeleton[data-w4-state~="active"] {
+  /* An active skeleton might have a stronger pulse or higher contrast */
+  filter: brightness(1.1);
+}
+
+.w4-skeleton-loading,
+.w4-skeleton[data-w4-state~="loading"] {
+  /* Trigger the loading animation */
+  animation: w4-skeleton-loading 1.4s ease infinite;
+}
+
+/* =========================================
+   TOAST COMPONENT
+   Native W4 Visual Engine implementation
+   Feedback Morphology
+   ========================================= */
+
+.w4-toast {
+  display: flex;
+  align-items: center;
+  gap: var(--w4-spacing-base);
+  font-family: var(--w4-font-sans);
+  z-index: 9999;
+  
+  /* Morphology & Surface Tokens */
+  border-radius: var(--w4-radius-toast, var(--w4-radius-md));
+  padding: var(--w4-toast-padding-y, 0.75rem) var(--w4-toast-padding-x, 1rem);
+  font-size: var(--w4-toast-font-size, 0.875rem);
+  box-shadow: var(--w4-toast-shadow, var(--w4-shadow-lg));
+  
+  /* Borders */
+  border-width: var(--w4-border-width-control, 1px);
+  border-style: solid;
+  border-color: var(--w4-toast-border-color, transparent);
+
+  /* Color Tokens */
+  background-color: var(--w4-toast-bg, hsl(var(--w4-base-content)));
+  color: var(--w4-toast-text, hsl(var(--w4-base-100)));
+  
+  /* Animations */
+  transition: all var(--w4-transition-normal);
+  animation: w4-toast-pop var(--w4-transition-normal) ease-out;
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-toast-primary {
+  --w4-toast-bg: hsl(var(--w4-primary));
+  --w4-toast-text: hsl(var(--w4-primary-content));
+  --w4-toast-border-color: hsl(var(--w4-primary));
+}
+
+.w4-toast-secondary {
+  --w4-toast-bg: hsl(var(--w4-secondary));
+  --w4-toast-text: hsl(var(--w4-secondary-content));
+  --w4-toast-border-color: hsl(var(--w4-secondary));
+}
+
+.w4-toast-accent {
+  --w4-toast-bg: hsl(var(--w4-accent));
+  --w4-toast-text: hsl(var(--w4-accent-content));
+  --w4-toast-border-color: hsl(var(--w4-accent));
+}
+
+.w4-toast-info {
+  --w4-toast-bg: hsl(var(--w4-info));
+  --w4-toast-text: hsl(var(--w4-info-content));
+  --w4-toast-border-color: hsl(var(--w4-info));
+}
+
+.w4-toast-success {
+  --w4-toast-bg: hsl(var(--w4-success));
+  --w4-toast-text: hsl(var(--w4-success-content));
+  --w4-toast-border-color: hsl(var(--w4-success));
+}
+
+.w4-toast-warning {
+  --w4-toast-bg: hsl(var(--w4-warning));
+  --w4-toast-text: hsl(var(--w4-warning-content));
+  --w4-toast-border-color: hsl(var(--w4-warning));
+}
+
+.w4-toast-error {
+  --w4-toast-bg: hsl(var(--w4-error));
+  --w4-toast-text: hsl(var(--w4-error-content));
+  --w4-toast-border-color: hsl(var(--w4-error));
+}
+
+/* ----------------------------------
+   STYLISTIC VARIANTS (Surface System)
+   ---------------------------------- */
+.w4-toast-soft {
+  --w4-toast-bg: var(--w4-base-100);
+  --w4-toast-text: var(--w4-base-content);
+  --w4-toast-border-color: hsl(var(--w4-base-300));
+}
+
+.w4-toast-outline {
+  --w4-toast-bg: transparent;
+  --w4-toast-text: var(--w4-toast-border-color, hsl(var(--w4-base-content)));
+  border-color: var(--w4-toast-border-color, hsl(var(--w4-base-content)));
+}
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-toast-xs {
-  font-size: 0.75rem;
-  padding: 0.5rem 0.625rem;
+  --w4-toast-font-size: 0.75rem;
+  --w4-toast-padding-y: 0.5rem;
+  --w4-toast-padding-x: 0.625rem;
 }
 
 .w4-toast-sm {
-  font-size: 0.875rem;
+  --w4-toast-font-size: 0.875rem;
+  --w4-toast-padding-y: 0.5rem;
+  --w4-toast-padding-x: 0.75rem;
 }
 
 .w4-toast-md {
-  font-size: 0.9375rem;
+  --w4-toast-font-size: 0.9375rem;
+  --w4-toast-padding-y: 0.625rem;
+  --w4-toast-padding-x: 0.875rem;
 }
 
 .w4-toast-lg {
-  font-size: 1.0625rem;
-  padding: 0.75rem 1rem;
+  --w4-toast-font-size: 1.0625rem;
+  --w4-toast-padding-y: 0.75rem;
+  --w4-toast-padding-x: 1rem;
 }
 
 .w4-toast-xl {
-  font-size: 1.125rem;
-  padding: 0.875rem 1.125rem;
+  --w4-toast-font-size: 1.125rem;
+  --w4-toast-padding-y: 0.875rem;
+  --w4-toast-padding-x: 1.125rem;
 }
 
-.w4-tooltip {
-  position: relative;
-}
-
-.w4-tooltip-xs {
-  font-size: 0.75rem;
-}
-
-.w4-tooltip-sm {
-  font-size: 0.875rem;
-}
-
-.w4-tooltip-md {
-  font-size: 1rem;
-}
-
-.w4-tooltip-lg {
-  font-size: 1.125rem;
-}
-
-.w4-tooltip-xl {
-  font-size: 1.25rem;
-}
-
-.w4-checkbox {
-  accent-color: hsl(var(--w4-primary));
-}
-
-.w4-checkbox-primary {
-  accent-color: hsl(var(--w4-primary));
-}
-
-.w4-checkbox-secondary {
-  accent-color: hsl(var(--w4-secondary));
-}
-
-.w4-checkbox-xs {
-  height: 1rem;
-  width: 1rem;
-}
-
-.w4-checkbox-sm {
-  height: 1.25rem;
-  width: 1.25rem;
-}
-
-.w4-checkbox-md {
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.w4-checkbox-lg {
-  height: 2rem;
-  width: 2rem;
-}
-
-.w4-checkbox-xl {
-  height: 2.5rem;
-  width: 2.5rem;
-}
-
-.w4-checkbox-disabled {
-  opacity: 0.65;
-  cursor: not-allowed;
-}
-
-.w4-checkbox-readonly {
+/* ----------------------------------
+   STATES & MODIFIERS (ToastComponentState Enum)
+   ---------------------------------- */
+.w4-toast-hidden,
+.w4-toast[data-w4-state~="hidden"],
+.w4-toast-dismissed,
+.w4-toast[data-w4-state~="dismissed"] {
+  display: none !important;
+  opacity: 0;
   pointer-events: none;
 }
 
-.w4-checkbox-invalid {
-  outline: 2px solid hsl(0 72% 51%);
-  outline-offset: 1px;
+.w4-toast-disabled,
+.w4-toast[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
 }
 
-.w4-checkbox-valid {
-  outline: 2px solid hsl(142 71% 45%);
-  outline-offset: 1px;
+.w4-toast-active,
+.w4-toast[data-w4-state~="active"] {
+  /* Give the active toast extra emphasis */
+  transform: scale(1.02);
+  box-shadow: var(--w4-shadow-xl);
+  z-index: 10000;
 }
 
-.w4-checkbox-loading {
-  opacity: 0.8;
+/* ----------------------------------
+   ANIMATIONS
+   ---------------------------------- */
+@keyframes w4-toast-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
-.w4-checkbox-checked {
-  filter: saturate(1.2);
+/* =========================================
+   CHECKBOX COMPONENT
+   Native W4 Visual Engine implementation
+   Forms Morphology
+   ========================================= */
+
+.w4-checkbox {
+  flex-shrink: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  
+  /* Morphology Tokens */
+  inline-size: var(--w4-checkbox-size, 1.5rem);
+  block-size: var(--w4-checkbox-size, 1.5rem);
+  border-radius: var(--w4-radius-checkbox, var(--w4-radius-sm));
+  
+  /* Surface Tokens */
+  border-width: var(--w4-border-width-control, 1px);
+  border-style: solid;
+  border-color: var(--w4-checkbox-border-color, hsl(var(--w4-base-content) / 0.2));
+  background-color: var(--w4-checkbox-bg, hsl(var(--w4-base-100)));
+  
+  /* Color Tokens (For SVG fill) */
+  --w4-checkbox-mark-color: hsl(var(--w4-base-100));
+  
+  /* Interaction & Motion */
+  transition: background-color var(--w4-transition-fast), border-color var(--w4-transition-fast), outline var(--w4-transition-fast);
+  outline-offset: var(--w4-focus-ring-offset);
 }
 
-.w4-checkbox-indeterminate {
-  box-shadow: 0 0 0 2px hsl(var(--w4-base-300));
+/* ----------------------------------
+   NATIVE PSEUDO-CLASSES (Checked / Indeterminate)
+   ---------------------------------- */
+.w4-checkbox:checked,
+.w4-checkbox-checked,
+.w4-checkbox[data-w4-state~="checked"],
+.w4-checkbox:indeterminate,
+.w4-checkbox-indeterminate,
+.w4-checkbox[data-w4-state~="indeterminate"] {
+  background-color: var(--w4-checkbox-color, hsl(var(--w4-base-content)));
+  border-color: var(--w4-checkbox-color, hsl(var(--w4-base-content)));
+  animation: w4-checkbox-pop var(--w4-transition-fast) ease-out;
 }
+
+/* SVG Checkmark using Data URI */
+.w4-checkbox:checked,
+.w4-checkbox-checked,
+.w4-checkbox[data-w4-state~="checked"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4 8 7 11 13 4'/%3E%3C/svg%3E");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Indeterminate Line */
+.w4-checkbox:indeterminate,
+.w4-checkbox-indeterminate,
+.w4-checkbox[data-w4-state~="indeterminate"] {
+  background-image: linear-gradient(var(--w4-checkbox-mark-color), var(--w4-checkbox-mark-color));
+  background-size: 60% 0.15em;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ----------------------------------
+   INTERACTION STATES
+   ---------------------------------- */
+.w4-checkbox:focus-visible {
+  outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-primary)) / var(--w4-focus-ring-opacity));
+}
+
+.w4-checkbox:hover {
+  filter: brightness(var(--w4-hover-brightness, 0.95));
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-checkbox-primary {
+  --w4-checkbox-color: hsl(var(--w4-primary));
+  --w4-checkbox-mark-color: hsl(var(--w4-primary-content));
+  --w4-focus-ring-color: var(--w4-primary);
+}
+
+.w4-checkbox-secondary {
+  --w4-checkbox-color: hsl(var(--w4-secondary));
+  --w4-checkbox-mark-color: hsl(var(--w4-secondary-content));
+  --w4-focus-ring-color: var(--w4-secondary);
+}
+
+.w4-checkbox-accent {
+  --w4-checkbox-color: hsl(var(--w4-accent));
+  --w4-checkbox-mark-color: hsl(var(--w4-accent-content));
+  --w4-focus-ring-color: var(--w4-accent);
+}
+
+.w4-checkbox-info {
+  --w4-checkbox-color: hsl(var(--w4-info));
+  --w4-checkbox-mark-color: hsl(var(--w4-info-content));
+  --w4-focus-ring-color: var(--w4-info);
+}
+
+.w4-checkbox-success {
+  --w4-checkbox-color: hsl(var(--w4-success));
+  --w4-checkbox-mark-color: hsl(var(--w4-success-content));
+  --w4-focus-ring-color: var(--w4-success);
+}
+
+.w4-checkbox-warning {
+  --w4-checkbox-color: hsl(var(--w4-warning));
+  --w4-checkbox-mark-color: hsl(var(--w4-warning-content));
+  --w4-focus-ring-color: var(--w4-warning);
+}
+
+.w4-checkbox-error {
+  --w4-checkbox-color: hsl(var(--w4-error));
+  --w4-checkbox-mark-color: hsl(var(--w4-error-content));
+  --w4-focus-ring-color: var(--w4-error);
+}
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
+.w4-checkbox-xs {
+  --w4-checkbox-size: 1rem;
+}
+
+.w4-checkbox-sm {
+  --w4-checkbox-size: 1.25rem;
+}
+
+.w4-checkbox-md {
+  --w4-checkbox-size: 1.5rem;
+}
+
+.w4-checkbox-lg {
+  --w4-checkbox-size: 2rem;
+}
+
+.w4-checkbox-xl {
+  --w4-checkbox-size: 2.5rem;
+}
+
+/* ----------------------------------
+   STATES & MODIFIERS (CheckBoxComponentState Enum)
+   ---------------------------------- */
+.w4-checkbox-disabled,
+.w4-checkbox:disabled,
+.w4-checkbox[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5);
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(1);
+}
+
+.w4-checkbox-readonly,
+.w4-checkbox[readonly],
+.w4-checkbox[data-w4-state~="readonly"] {
+  pointer-events: none;
+}
+
+/* Validation States */
+.w4-checkbox-invalid,
+.w4-checkbox[aria-invalid="true"],
+.w4-checkbox[data-w4-state~="invalid"] {
+  border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
+}
+
+.w4-checkbox-valid,
+.w4-checkbox[data-w4-state~="valid"] {
+  border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
+}
+
+/* Loading State */
+.w4-checkbox-loading,
+.w4-checkbox[data-w4-state~="loading"] {
+  pointer-events: none;
+  opacity: 0.7;
+  /* Add a subtle spinning animation to the border or an overlay if desired, 
+     but typically loading on a checkbox just disables interaction and dims it slightly */
+  animation: w4-checkbox-pulse 1.5s infinite;
+}
+
+/* ----------------------------------
+   ANIMATIONS
+   ---------------------------------- */
+@keyframes w4-checkbox-pop {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes w4-checkbox-pulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.7; }
+}
+
+/* =========================================
+   FIELD ERROR COMPONENT
+   Native W4 Visual Engine implementation
+   Forms Typography
+   ========================================= */
 
 .w4-field-error {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  color: hsl(0 72% 45%);
-  font-weight: 500;
+  
+  /* Typography Tokens */
+  font-size: var(--w4-field-error-font-size, 0.875rem);
+  font-weight: var(--w4-field-error-font-weight, 500);
   line-height: 1.3;
+  
+  /* Color Tokens */
+  color: var(--w4-field-error-color, hsl(var(--w4-error)));
+  
+  /* Motion */
+  transition: color var(--w4-transition-fast);
 }
 
-.w4-field-error-warning {
-  color: hsl(32 95% 35%);
-}
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-field-error-primary { --w4-field-error-color: hsl(var(--w4-primary)); }
+.w4-field-error-secondary { --w4-field-error-color: hsl(var(--w4-secondary)); }
+.w4-field-error-accent { --w4-field-error-color: hsl(var(--w4-accent)); }
+.w4-field-error-info { --w4-field-error-color: hsl(var(--w4-info)); }
+.w4-field-error-success { --w4-field-error-color: hsl(var(--w4-success)); }
+.w4-field-error-warning { --w4-field-error-color: hsl(var(--w4-warning)); }
+.w4-field-error-error { --w4-field-error-color: hsl(var(--w4-error)); }
 
-.w4-field-error-info {
-  color: hsl(215 77% 35%);
-}
+/* ----------------------------------
+   SIZE SCALES
+   ---------------------------------- */
+.w4-field-error-xs { --w4-field-error-font-size: 0.75rem; }
+.w4-field-error-sm { --w4-field-error-font-size: 0.875rem; }
+.w4-field-error-md { --w4-field-error-font-size: 1rem; }
+.w4-field-error-lg { --w4-field-error-font-size: 1.125rem; }
+.w4-field-error-xl { --w4-field-error-font-size: 1.25rem; }
 
+/* ----------------------------------
+   STATES & MODIFIERS (FieldErrorComponentState Enum)
+   ---------------------------------- */
 .w4-field-error-inline {
   display: inline;
 }
 
-.w4-field-error-xs {
-  font-size: 0.75rem;
+.w4-field-error-disabled,
+.w4-field-error[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.55);
 }
 
-.w4-field-error-sm {
-  font-size: 0.875rem;
+.w4-field-error-active,
+.w4-field-error[data-w4-state~="active"] {
+  --w4-field-error-font-weight: 600;
 }
 
-.w4-field-error-md {
-  font-size: 1rem;
+.w4-field-error-hidden,
+.w4-field-error[data-w4-state~="hidden"] {
+  display: none !important;
 }
 
-.w4-field-error-lg {
-  font-size: 1.125rem;
-}
-
-.w4-field-error-xl {
-  font-size: 1.25rem;
-}
-
-.w4-field-error-disabled {
-  opacity: 0.55;
-}
-
-.w4-field-error-active {
-  font-weight: 600;
-}
-
-.w4-field-error-hidden {
-  display: none;
-}
+/* =========================================
+   HELPER TEXT COMPONENT
+   Native W4 Visual Engine implementation
+   Forms Typography
+   ========================================= */
 
 .w4-helper-text {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  color: hsl(var(--w4-base-content));
-  opacity: 0.8;
+  
+  /* Typography Tokens */
+  font-size: var(--w4-helper-text-font-size, 0.875rem);
   line-height: 1.3;
+  
+  /* Color & Opacity Tokens */
+  color: var(--w4-helper-text-color, hsl(var(--w4-base-content)));
+  opacity: var(--w4-helper-text-opacity, 0.8);
+  
+  /* Motion */
+  transition: color var(--w4-transition-fast), opacity var(--w4-transition-fast);
 }
 
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-helper-text-primary { --w4-helper-text-color: hsl(var(--w4-primary)); }
+.w4-helper-text-secondary { --w4-helper-text-color: hsl(var(--w4-secondary)); }
+.w4-helper-text-accent { --w4-helper-text-color: hsl(var(--w4-accent)); }
+.w4-helper-text-info { --w4-helper-text-color: hsl(var(--w4-info)); }
+.w4-helper-text-success { --w4-helper-text-color: hsl(var(--w4-success)); }
+.w4-helper-text-warning { --w4-helper-text-color: hsl(var(--w4-warning)); }
+.w4-helper-text-error { --w4-helper-text-color: hsl(var(--w4-error)); }
+
+/* ----------------------------------
+   SIZE SCALES
+   ---------------------------------- */
+.w4-helper-text-xs { --w4-helper-text-font-size: 0.75rem; }
+.w4-helper-text-sm { --w4-helper-text-font-size: 0.875rem; }
+.w4-helper-text-md { --w4-helper-text-font-size: 1rem; }
+.w4-helper-text-lg { --w4-helper-text-font-size: 1.125rem; }
+.w4-helper-text-xl { --w4-helper-text-font-size: 1.25rem; }
+
+/* ----------------------------------
+   STATES & MODIFIERS (HelperTextComponentState Enum)
+   ---------------------------------- */
 .w4-helper-text-muted {
-  opacity: 0.65;
+  --w4-helper-text-opacity: 0.65;
 }
 
-.w4-helper-text-info {
-  color: hsl(215 77% 35%);
+.w4-helper-text-disabled,
+.w4-helper-text[data-w4-state~="disabled"] {
+  --w4-helper-text-opacity: var(--w4-disabled-opacity, 0.45);
+  pointer-events: none;
 }
 
-.w4-helper-text-success {
-  color: hsl(142 71% 35%);
+.w4-helper-text-active,
+.w4-helper-text[data-w4-state~="active"] {
+  --w4-helper-text-opacity: 1;
 }
 
-.w4-helper-text-warning {
-  color: hsl(32 95% 35%);
+.w4-helper-text-hidden,
+.w4-helper-text[data-w4-state~="hidden"] {
+  display: none !important;
 }
 
-.w4-helper-text-xs {
-  font-size: 0.75rem;
-}
-
-.w4-helper-text-sm {
-  font-size: 0.875rem;
-}
-
-.w4-helper-text-md {
-  font-size: 1rem;
-}
-
-.w4-helper-text-lg {
-  font-size: 1.125rem;
-}
-
-.w4-helper-text-xl {
-  font-size: 1.25rem;
-}
-
-.w4-helper-text-disabled {
-  opacity: 0.45;
-}
-
-.w4-helper-text-active {
-  opacity: 1;
-}
-
-.w4-helper-text-hidden {
-  display: none;
-}
+/* =========================================
+   INPUT COMPONENT
+   Native W4 Visual Engine implementation
+   Forms Morphology
+   ========================================= */
 
 .w4-input {
+  appearance: none;
+  -webkit-appearance: none;
   inline-size: 100%;
-  border: 1px solid hsl(var(--w4-base-300));
-  border-radius: var(--w4-radius-input);
-  background: hsl(var(--w4-base-100));
+  
+  /* Morphology Tokens */
+  block-size: var(--w4-input-height, var(--w4-control-height-md));
+  padding-inline: var(--w4-input-padding-x, var(--w4-control-padding-x-md));
+  border-radius: var(--w4-radius-input, var(--w4-radius-md));
+  font-size: var(--w4-input-font-size, 0.875rem);
+  
+  /* Surface Tokens */
+  border-width: var(--w4-border-width-control, 1px);
+  border-style: solid;
+  border-color: var(--w4-input-border-color, hsl(var(--w4-base-content) / 0.2));
+  background-color: var(--w4-input-bg, hsl(var(--w4-base-100)));
   color: hsl(var(--w4-base-content));
-  height: 3rem;
-  padding: 0 1rem;
-  font-size: 0.875rem;
-  box-shadow: 0 0 0 1px hsl(var(--w4-primary) / 0.12);
+  
+  /* Interaction & Motion */
+  transition: background-color var(--w4-transition-fast), border-color var(--w4-transition-fast), box-shadow var(--w4-transition-fast), outline var(--w4-transition-fast);
 }
 
-.w4-input:focus {
-  outline: 2px solid hsl(var(--w4-primary));
-  outline-offset: 1px;
-  box-shadow: 0 0 0 2px hsl(var(--w4-primary) / 0.28);
+/* ----------------------------------
+   INTERACTION STATES
+   ---------------------------------- */
+.w4-input:focus,
+.w4-input:focus-visible,
+.w4-input-focus,
+.w4-input[data-w4-state~="focus"] {
+  outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-base-content)) / var(--w4-focus-ring-opacity));
+  outline-offset: var(--w4-focus-ring-offset);
+  border-color: hsl(var(--w4-focus-ring-color, var(--w4-base-content)));
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-input-primary {
+  --w4-input-border-color: hsl(var(--w4-primary));
+  --w4-focus-ring-color: var(--w4-primary);
+}
+
+.w4-input-secondary {
+  --w4-input-border-color: hsl(var(--w4-secondary));
+  --w4-focus-ring-color: var(--w4-secondary);
+}
+
+.w4-input-accent {
+  --w4-input-border-color: hsl(var(--w4-accent));
+  --w4-focus-ring-color: var(--w4-accent);
+}
+
+.w4-input-info {
+  --w4-input-border-color: hsl(var(--w4-info));
+  --w4-focus-ring-color: var(--w4-info);
+}
+
+.w4-input-success {
+  --w4-input-border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
+}
+
+.w4-input-warning {
+  --w4-input-border-color: hsl(var(--w4-warning));
+  --w4-focus-ring-color: var(--w4-warning);
+}
+
+.w4-input-error {
+  --w4-input-border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
 }
 
 .w4-input-ghost {
-  border-color: transparent;
-  background: transparent;
-  box-shadow: none;
+  --w4-input-bg: transparent;
+  --w4-input-border-color: transparent;
+}
+.w4-input-ghost:focus,
+.w4-input-ghost:focus-visible,
+.w4-input-ghost.w4-input-focus,
+.w4-input-ghost[data-w4-state~="focus"] {
+  --w4-input-bg: hsl(var(--w4-base-content) / 0.05);
 }
 
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-input-xs {
-  height: 1.5rem;
-  font-size: 0.75rem;
-  padding: 0 0.5rem;
+  --w4-input-height: var(--w4-control-height-xs);
+  --w4-input-padding-x: var(--w4-control-padding-x-xs);
+  --w4-input-font-size: 0.75rem;
 }
 
 .w4-input-sm {
-  height: 2rem;
-  font-size: 0.875rem;
-  padding: 0 0.75rem;
+  --w4-input-height: var(--w4-control-height-sm);
+  --w4-input-padding-x: var(--w4-control-padding-x-sm);
+  --w4-input-font-size: 0.875rem;
 }
 
 .w4-input-md {
-  height: 3rem;
-  font-size: 0.875rem;
-  padding: 0 1rem;
+  --w4-input-height: var(--w4-control-height-md);
+  --w4-input-padding-x: var(--w4-control-padding-x-md);
+  --w4-input-font-size: 0.875rem;
 }
 
 .w4-input-lg {
-  height: 4rem;
-  font-size: 1.125rem;
-  padding: 0 1.5rem;
+  --w4-input-height: var(--w4-control-height-lg);
+  --w4-input-padding-x: var(--w4-control-padding-x-lg);
+  --w4-input-font-size: 1.125rem;
 }
 
 .w4-input-xl {
-  height: 5rem;
-  font-size: 1.25rem;
-  padding: 0 2rem;
+  --w4-input-height: var(--w4-control-height-xl);
+  --w4-input-padding-x: var(--w4-control-padding-x-xl);
+  --w4-input-font-size: 1.25rem;
 }
 
-.w4-input-invalid {
-  border-color: hsl(0 72% 51%);
-  box-shadow: 0 0 0 1px hsl(0 72% 51% / 0.22);
-}
-
-.w4-input-valid {
-  border-color: hsl(142 71% 45%);
-  box-shadow: 0 0 0 1px hsl(142 71% 45% / 0.22);
-}
-
-.w4-input-disabled {
-  opacity: 0.65;
+/* ----------------------------------
+   STATES & MODIFIERS (InputComponentState Enum)
+   ---------------------------------- */
+.w4-input-disabled,
+.w4-input:disabled,
+.w4-input[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5);
   cursor: not-allowed;
+  pointer-events: none;
+  background-color: hsl(var(--w4-base-200));
 }
 
-.w4-input-readonly {
-  background: hsl(var(--w4-base-200));
+.w4-input-readonly,
+.w4-input[readonly],
+.w4-input[data-w4-state~="readonly"] {
+  background-color: hsl(var(--w4-base-200));
 }
 
-.w4-input-loading {
+/* Validation States */
+.w4-input-invalid,
+.w4-input[aria-invalid="true"],
+.w4-input[data-w4-state~="invalid"] {
+  --w4-input-border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
+}
+
+.w4-input-valid,
+.w4-input[data-w4-state~="valid"] {
+  --w4-input-border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
+}
+
+/* Loading State */
+.w4-input-loading,
+.w4-input[data-w4-state~="loading"] {
+  pointer-events: none;
   opacity: 0.8;
+  background-color: hsl(var(--w4-base-200));
+  /* A simple pulse animation on the border can indicate loading if a spinner isn't injected */
+  animation: w4-input-pulse 1.5s infinite;
 }
+
+@keyframes w4-input-pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.8; }
+}
+
+/* =========================================
+   RADIO COMPONENT
+   Native W4 Visual Engine implementation
+   Forms Morphology
+   ========================================= */
 
 .w4-radio {
-  accent-color: hsl(var(--w4-primary));
+  flex-shrink: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  
+  /* Morphology Tokens */
+  inline-size: var(--w4-radio-size, 1.5rem);
+  block-size: var(--w4-radio-size, 1.5rem);
+  border-radius: var(--w4-radius-radio, var(--w4-radius-pill));
+  
+  /* Surface Tokens */
+  border-width: var(--w4-border-width-control, 1px);
+  border-style: solid;
+  border-color: var(--w4-radio-border-color, hsl(var(--w4-base-content) / 0.2));
+  background-color: var(--w4-radio-bg, hsl(var(--w4-base-100)));
+  
+  /* Color Tokens (For SVG fill) */
+  --w4-radio-mark-color: hsl(var(--w4-base-100));
+  
+  /* Interaction & Motion */
+  transition: background-color var(--w4-transition-fast), border-color var(--w4-transition-fast), box-shadow var(--w4-transition-fast), outline var(--w4-transition-fast);
+  outline-offset: var(--w4-focus-ring-offset);
 }
 
+/* ----------------------------------
+   NATIVE PSEUDO-CLASSES (Checked)
+   ---------------------------------- */
+.w4-radio:checked,
+.w4-radio-selected,
+.w4-radio[data-w4-state~="selected"] {
+  background-color: var(--w4-radio-color, hsl(var(--w4-base-content)));
+  border-color: var(--w4-radio-color, hsl(var(--w4-base-content)));
+  animation: w4-radio-pop var(--w4-transition-fast) ease-out;
+  box-shadow: inset 0 0 0 4px var(--w4-radio-mark-color);
+}
+
+/* ----------------------------------
+   INTERACTION STATES
+   ---------------------------------- */
+.w4-radio:focus-visible {
+  outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-primary)) / var(--w4-focus-ring-opacity));
+}
+
+.w4-radio:hover {
+  filter: brightness(var(--w4-hover-brightness, 0.95));
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-radio-primary {
-  accent-color: hsl(var(--w4-primary));
+  --w4-radio-color: hsl(var(--w4-primary));
+  --w4-radio-mark-color: hsl(var(--w4-primary-content));
+  --w4-focus-ring-color: var(--w4-primary);
 }
 
 .w4-radio-secondary {
-  accent-color: hsl(var(--w4-secondary));
+  --w4-radio-color: hsl(var(--w4-secondary));
+  --w4-radio-mark-color: hsl(var(--w4-secondary-content));
+  --w4-focus-ring-color: var(--w4-secondary);
 }
 
+.w4-radio-accent {
+  --w4-radio-color: hsl(var(--w4-accent));
+  --w4-radio-mark-color: hsl(var(--w4-accent-content));
+  --w4-focus-ring-color: var(--w4-accent);
+}
+
+.w4-radio-info {
+  --w4-radio-color: hsl(var(--w4-info));
+  --w4-radio-mark-color: hsl(var(--w4-info-content));
+  --w4-focus-ring-color: var(--w4-info);
+}
+
+.w4-radio-success {
+  --w4-radio-color: hsl(var(--w4-success));
+  --w4-radio-mark-color: hsl(var(--w4-success-content));
+  --w4-focus-ring-color: var(--w4-success);
+}
+
+.w4-radio-warning {
+  --w4-radio-color: hsl(var(--w4-warning));
+  --w4-radio-mark-color: hsl(var(--w4-warning-content));
+  --w4-focus-ring-color: var(--w4-warning);
+}
+
+.w4-radio-error {
+  --w4-radio-color: hsl(var(--w4-error));
+  --w4-radio-mark-color: hsl(var(--w4-error-content));
+  --w4-focus-ring-color: var(--w4-error);
+}
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-radio-xs {
-  height: 1rem;
-  width: 1rem;
+  --w4-radio-size: 1rem;
 }
 
 .w4-radio-sm {
-  height: 1.25rem;
-  width: 1.25rem;
+  --w4-radio-size: 1.25rem;
 }
 
 .w4-radio-md {
-  height: 1.5rem;
-  width: 1.5rem;
+  --w4-radio-size: 1.5rem;
 }
 
 .w4-radio-lg {
-  height: 2rem;
-  width: 2rem;
+  --w4-radio-size: 2rem;
 }
 
 .w4-radio-xl {
-  height: 2.5rem;
-  width: 2.5rem;
+  --w4-radio-size: 2.5rem;
 }
 
-.w4-radio-disabled {
-  opacity: 0.65;
+/* ----------------------------------
+   STATES & MODIFIERS (RadioComponentState Enum)
+   ---------------------------------- */
+.w4-radio-disabled,
+.w4-radio:disabled,
+.w4-radio[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5);
   cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(1);
 }
 
-.w4-radio-readonly {
+.w4-radio-readonly,
+.w4-radio[readonly],
+.w4-radio[data-w4-state~="readonly"] {
   pointer-events: none;
 }
 
-.w4-radio-invalid {
-  outline: 2px solid hsl(0 72% 51%);
-  outline-offset: 1px;
+/* Validation States */
+.w4-radio-invalid,
+.w4-radio[aria-invalid="true"],
+.w4-radio[data-w4-state~="invalid"] {
+  border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
 }
 
-.w4-radio-valid {
-  outline: 2px solid hsl(142 71% 45%);
-  outline-offset: 1px;
+.w4-radio-valid,
+.w4-radio[data-w4-state~="valid"] {
+  border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
 }
 
-.w4-radio-loading {
-  opacity: 0.8;
+/* Loading State */
+.w4-radio-loading,
+.w4-radio[data-w4-state~="loading"] {
+  pointer-events: none;
+  opacity: 0.7;
+  /* Add a subtle pulse animation to indicate processing state */
+  animation: w4-radio-pulse 1.5s infinite;
 }
 
-.w4-radio-selected {
-  filter: saturate(1.2);
+/* ----------------------------------
+   ANIMATIONS
+   ---------------------------------- */
+@keyframes w4-radio-pop {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
+
+@keyframes w4-radio-pulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.7; }
+}
+
+/* =========================================
+   SELECT COMPONENT
+   Native W4 Visual Engine implementation
+   Forms Morphology
+   ========================================= */
 
 .w4-select {
+  appearance: none;
+  -webkit-appearance: none;
   inline-size: 100%;
-  border: 1px solid hsl(var(--w4-base-300));
-  border-radius: var(--w4-radius-input);
-  background: hsl(var(--w4-base-100));
+  cursor: pointer;
+  
+  /* Morphology Tokens */
+  block-size: var(--w4-select-height, var(--w4-control-height-md));
+  padding-inline-start: var(--w4-select-padding-x, var(--w4-control-padding-x-md));
+  /* Extra padding on the right for the chevron icon */
+  padding-inline-end: calc(var(--w4-select-padding-x, var(--w4-control-padding-x-md)) * 2.5);
+  border-radius: var(--w4-radius-select, var(--w4-radius-md));
+  font-size: var(--w4-select-font-size, 0.875rem);
+  
+  /* Surface Tokens */
+  border-width: var(--w4-border-width-control, 1px);
+  border-style: solid;
+  border-color: var(--w4-select-border-color, hsl(var(--w4-base-content) / 0.2));
+  background-color: var(--w4-select-bg, hsl(var(--w4-base-100)));
   color: hsl(var(--w4-base-content));
-  padding: 0 1rem;
-  font-size: 0.875rem;
-  box-shadow: 0 0 0 1px hsl(var(--w4-primary) / 0.12);
-  height: 3rem;
+  
+  /* Chevron Icon (Data URI) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--w4-select-padding-x, var(--w4-control-padding-x-md)) center;
+  background-size: 1.2em;
+  
+  /* Interaction & Motion */
+  transition: background-color var(--w4-transition-fast), border-color var(--w4-transition-fast), box-shadow var(--w4-transition-fast), outline var(--w4-transition-fast);
 }
 
-.w4-select:focus {
-  outline: 2px solid hsl(var(--w4-primary));
-  outline-offset: 1px;
-  box-shadow: 0 0 0 2px hsl(var(--w4-primary) / 0.28);
+/* ----------------------------------
+   INTERACTION STATES
+   ---------------------------------- */
+.w4-select:focus,
+.w4-select:focus-visible,
+.w4-select-focus,
+.w4-select[data-w4-state~="focus"] {
+  outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-base-content)) / var(--w4-focus-ring-opacity));
+  outline-offset: var(--w4-focus-ring-offset);
+  border-color: hsl(var(--w4-focus-ring-color, var(--w4-base-content)));
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-select-primary {
+  --w4-select-border-color: hsl(var(--w4-primary));
+  --w4-focus-ring-color: var(--w4-primary);
+}
+
+.w4-select-secondary {
+  --w4-select-border-color: hsl(var(--w4-secondary));
+  --w4-focus-ring-color: var(--w4-secondary);
+}
+
+.w4-select-accent {
+  --w4-select-border-color: hsl(var(--w4-accent));
+  --w4-focus-ring-color: var(--w4-accent);
+}
+
+.w4-select-info {
+  --w4-select-border-color: hsl(var(--w4-info));
+  --w4-focus-ring-color: var(--w4-info);
+}
+
+.w4-select-success {
+  --w4-select-border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
+}
+
+.w4-select-warning {
+  --w4-select-border-color: hsl(var(--w4-warning));
+  --w4-focus-ring-color: var(--w4-warning);
+}
+
+.w4-select-error {
+  --w4-select-border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
 }
 
 .w4-select-ghost {
-  border-color: transparent;
-  background: transparent;
-  box-shadow: none;
+  --w4-select-bg: transparent;
+  --w4-select-border-color: transparent;
+}
+.w4-select-ghost:focus,
+.w4-select-ghost:focus-visible,
+.w4-select-ghost.w4-select-focus,
+.w4-select-ghost[data-w4-state~="focus"] {
+  --w4-select-bg: hsl(var(--w4-base-content) / 0.05);
 }
 
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-select-xs {
-  height: 1.5rem;
-  font-size: 0.75rem;
-  padding: 0 0.5rem;
+  --w4-select-height: var(--w4-control-height-xs);
+  --w4-select-padding-x: var(--w4-control-padding-x-xs);
+  --w4-select-font-size: 0.75rem;
 }
 
 .w4-select-sm {
-  height: 2rem;
-  font-size: 0.875rem;
-  padding: 0 0.75rem;
+  --w4-select-height: var(--w4-control-height-sm);
+  --w4-select-padding-x: var(--w4-control-padding-x-sm);
+  --w4-select-font-size: 0.875rem;
 }
 
 .w4-select-md {
-  height: 3rem;
-  font-size: 0.875rem;
-  padding: 0 1rem;
+  --w4-select-height: var(--w4-control-height-md);
+  --w4-select-padding-x: var(--w4-control-padding-x-md);
+  --w4-select-font-size: 0.875rem;
 }
 
 .w4-select-lg {
-  height: 4rem;
-  font-size: 1.125rem;
-  padding: 0 1.5rem;
+  --w4-select-height: var(--w4-control-height-lg);
+  --w4-select-padding-x: var(--w4-control-padding-x-lg);
+  --w4-select-font-size: 1.125rem;
 }
 
 .w4-select-xl {
-  height: 5rem;
-  font-size: 1.25rem;
-  padding: 0 2rem;
+  --w4-select-height: var(--w4-control-height-xl);
+  --w4-select-padding-x: var(--w4-control-padding-x-xl);
+  --w4-select-font-size: 1.25rem;
 }
 
-.w4-select-invalid {
-  border-color: hsl(0 72% 51%);
-  box-shadow: 0 0 0 1px hsl(0 72% 51% / 0.22);
-}
-
-.w4-select-valid {
-  border-color: hsl(142 71% 45%);
-  box-shadow: 0 0 0 1px hsl(142 71% 45% / 0.22);
-}
-
-.w4-select-disabled {
-  opacity: 0.65;
+/* ----------------------------------
+   STATES & MODIFIERS (SelectComponentState Enum)
+   ---------------------------------- */
+.w4-select-disabled,
+.w4-select:disabled,
+.w4-select[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5);
   cursor: not-allowed;
+  pointer-events: none;
+  background-color: hsl(var(--w4-base-200));
 }
 
-.w4-select-readonly {
-  background: hsl(var(--w4-base-200));
+.w4-select-readonly,
+.w4-select[readonly],
+.w4-select[data-w4-state~="readonly"] {
+  background-color: hsl(var(--w4-base-200));
+  pointer-events: none; /* Native select doesn't truly support readonly, so we disable interactions */
 }
 
-.w4-select-loading {
+/* Validation States */
+.w4-select-invalid,
+.w4-select[aria-invalid="true"],
+.w4-select[data-w4-state~="invalid"] {
+  --w4-select-border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
+}
+
+.w4-select-valid,
+.w4-select[data-w4-state~="valid"] {
+  --w4-select-border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
+}
+
+/* Loading State */
+.w4-select-loading,
+.w4-select[data-w4-state~="loading"] {
+  pointer-events: none;
   opacity: 0.8;
+  background-color: hsl(var(--w4-base-200));
+  /* Replace chevron with a subtle spinner or animate the background */
+  animation: w4-select-pulse 1.5s infinite;
 }
+
+@keyframes w4-select-pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.8; }
+}
+
+/* =========================================
+   TEXTAREA COMPONENT
+   Native W4 Visual Engine implementation
+   Forms Morphology
+   ========================================= */
 
 .w4-textarea {
+  appearance: none;
+  -webkit-appearance: none;
   inline-size: 100%;
-  border: 1px solid hsl(var(--w4-base-300));
-  border-radius: var(--w4-radius-input);
-  background: hsl(var(--w4-base-100));
+  
+  /* Morphology Tokens */
+  padding: var(--w4-textarea-padding-y, 0.75rem) var(--w4-textarea-padding-x, var(--w4-control-padding-x-md));
+  border-radius: var(--w4-radius-input, var(--w4-radius-md)); /* Uses input radius */
+  font-size: var(--w4-textarea-font-size, 0.875rem);
+  line-height: 1.5;
+  
+  /* Surface Tokens */
+  border-width: var(--w4-border-width-control, 1px);
+  border-style: solid;
+  border-color: var(--w4-textarea-border-color, hsl(var(--w4-base-content) / 0.2));
+  background-color: var(--w4-textarea-bg, hsl(var(--w4-base-100)));
   color: hsl(var(--w4-base-content));
-  padding: 0.75rem 1rem;
-  font-size: 0.875rem;
-  box-shadow: 0 0 0 1px hsl(var(--w4-primary) / 0.12);
+  
+  /* Interaction & Motion */
+  transition: background-color var(--w4-transition-fast), border-color var(--w4-transition-fast), box-shadow var(--w4-transition-fast), outline var(--w4-transition-fast);
 }
 
-.w4-textarea:focus {
-  outline: 2px solid hsl(var(--w4-primary));
-  outline-offset: 1px;
-  box-shadow: 0 0 0 2px hsl(var(--w4-primary) / 0.28);
+/* ----------------------------------
+   INTERACTION STATES
+   ---------------------------------- */
+.w4-textarea:focus,
+.w4-textarea:focus-visible,
+.w4-textarea-focus,
+.w4-textarea[data-w4-state~="focus"] {
+  outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-base-content)) / var(--w4-focus-ring-opacity));
+  outline-offset: var(--w4-focus-ring-offset);
+  border-color: hsl(var(--w4-focus-ring-color, var(--w4-base-content)));
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-textarea-primary {
+  --w4-textarea-border-color: hsl(var(--w4-primary));
+  --w4-focus-ring-color: var(--w4-primary);
+}
+
+.w4-textarea-secondary {
+  --w4-textarea-border-color: hsl(var(--w4-secondary));
+  --w4-focus-ring-color: var(--w4-secondary);
+}
+
+.w4-textarea-accent {
+  --w4-textarea-border-color: hsl(var(--w4-accent));
+  --w4-focus-ring-color: var(--w4-accent);
+}
+
+.w4-textarea-info {
+  --w4-textarea-border-color: hsl(var(--w4-info));
+  --w4-focus-ring-color: var(--w4-info);
+}
+
+.w4-textarea-success {
+  --w4-textarea-border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
+}
+
+.w4-textarea-warning {
+  --w4-textarea-border-color: hsl(var(--w4-warning));
+  --w4-focus-ring-color: var(--w4-warning);
+}
+
+.w4-textarea-error {
+  --w4-textarea-border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
 }
 
 .w4-textarea-ghost {
-  border-color: transparent;
-  background: transparent;
-  box-shadow: none;
+  --w4-textarea-bg: transparent;
+  --w4-textarea-border-color: transparent;
+}
+.w4-textarea-ghost:focus,
+.w4-textarea-ghost:focus-visible,
+.w4-textarea-ghost.w4-textarea-focus,
+.w4-textarea-ghost[data-w4-state~="focus"] {
+  --w4-textarea-bg: hsl(var(--w4-base-content) / 0.05);
 }
 
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-textarea-xs {
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
+  --w4-textarea-padding-y: 0.25rem;
+  --w4-textarea-padding-x: var(--w4-control-padding-x-xs);
+  --w4-textarea-font-size: 0.75rem;
 }
 
 .w4-textarea-sm {
-  font-size: 0.875rem;
-  padding: 0.5rem 0.75rem;
+  --w4-textarea-padding-y: 0.5rem;
+  --w4-textarea-padding-x: var(--w4-control-padding-x-sm);
+  --w4-textarea-font-size: 0.875rem;
 }
 
 .w4-textarea-md {
-  font-size: 0.875rem;
-  padding: 0.75rem 1rem;
+  --w4-textarea-padding-y: 0.75rem;
+  --w4-textarea-padding-x: var(--w4-control-padding-x-md);
+  --w4-textarea-font-size: 0.875rem;
 }
 
 .w4-textarea-lg {
-  font-size: 1.125rem;
-  padding: 1rem 1.5rem;
+  --w4-textarea-padding-y: 1rem;
+  --w4-textarea-padding-x: var(--w4-control-padding-x-lg);
+  --w4-textarea-font-size: 1.125rem;
 }
 
 .w4-textarea-xl {
-  font-size: 1.25rem;
-  padding: 1.25rem 2rem;
+  --w4-textarea-padding-y: 1.25rem;
+  --w4-textarea-padding-x: var(--w4-control-padding-x-xl);
+  --w4-textarea-font-size: 1.25rem;
 }
 
-.w4-textarea-invalid {
-  border-color: hsl(0 72% 51%);
-  box-shadow: 0 0 0 1px hsl(0 72% 51% / 0.22);
-}
-
-.w4-textarea-valid {
-  border-color: hsl(142 71% 45%);
-  box-shadow: 0 0 0 1px hsl(142 71% 45% / 0.22);
-}
-
-.w4-textarea-disabled {
-  opacity: 0.65;
+/* ----------------------------------
+   STATES & MODIFIERS (TextAreaComponentState Enum)
+   ---------------------------------- */
+.w4-textarea-disabled,
+.w4-textarea:disabled,
+.w4-textarea[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5);
   cursor: not-allowed;
+  pointer-events: none;
+  background-color: hsl(var(--w4-base-200));
 }
 
-.w4-textarea-readonly {
-  background: hsl(var(--w4-base-200));
+.w4-textarea-readonly,
+.w4-textarea[readonly],
+.w4-textarea[data-w4-state~="readonly"] {
+  background-color: hsl(var(--w4-base-200));
 }
 
-.w4-textarea-loading {
+/* Validation States */
+.w4-textarea-invalid,
+.w4-textarea[aria-invalid="true"],
+.w4-textarea[data-w4-state~="invalid"] {
+  --w4-textarea-border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
+}
+
+.w4-textarea-valid,
+.w4-textarea[data-w4-state~="valid"] {
+  --w4-textarea-border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
+}
+
+/* Loading State */
+.w4-textarea-loading,
+.w4-textarea[data-w4-state~="loading"] {
+  pointer-events: none;
   opacity: 0.8;
+  background-color: hsl(var(--w4-base-200));
+  /* A simple pulse animation on the border can indicate loading if a spinner isn't injected */
+  animation: w4-textarea-pulse 1.5s infinite;
 }
 
-.w4-textarea-resize-none {
-  resize: none;
+@keyframes w4-textarea-pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.8; }
 }
 
-.w4-textarea-resize-both {
-  resize: both;
-}
+/* Resize Modifiers */
+.w4-textarea-resize-none { resize: none; }
+.w4-textarea-resize-both { resize: both; }
+.w4-textarea-resize-horizontal { resize: horizontal; }
+.w4-textarea-resize-vertical { resize: vertical; }
 
-.w4-textarea-resize-horizontal {
-  resize: horizontal;
-}
-
-.w4-textarea-resize-vertical {
-  resize: vertical;
-}
+/* =========================================
+   TOGGLE COMPONENT
+   Native W4 Visual Engine implementation
+   Forms Morphology
+   ========================================= */
 
 .w4-toggle {
-  accent-color: hsl(var(--w4-primary));
+  flex-shrink: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  
+  /* Morphology Tokens */
+  block-size: var(--w4-toggle-height, 1.5rem);
+  inline-size: var(--w4-toggle-width, 3rem);
+  border-radius: var(--w4-radius-toggle, var(--w4-radius-pill));
+  
+  /* Surface Tokens */
+  border-width: var(--w4-border-width-control, 1px);
+  border-style: solid;
+  border-color: var(--w4-toggle-border-color, hsl(var(--w4-base-content) / 0.2));
+  background-color: var(--w4-toggle-bg, hsl(var(--w4-base-content) / 0.2));
+  
+  /* Knob Rendering */
+  --w4-toggle-knob-color: hsl(var(--w4-base-100));
+  --w4-toggle-knob-size: calc(var(--w4-toggle-height) - (var(--w4-border-width-control, 1px) * 4));
+  --w4-toggle-padding: calc(var(--w4-border-width-control, 1px) * 2);
+  
+  background-image: radial-gradient(circle at center, var(--w4-toggle-knob-color) 0%, var(--w4-toggle-knob-color) 50%, transparent 52%);
+  background-size: var(--w4-toggle-knob-size) var(--w4-toggle-knob-size);
+  background-position: left var(--w4-toggle-padding) center;
+  background-repeat: no-repeat;
+  
+  /* Interaction & Motion */
+  transition: background-color var(--w4-transition-fast), border-color var(--w4-transition-fast), background-position var(--w4-transition-fast), outline var(--w4-transition-fast);
+  outline-offset: var(--w4-focus-ring-offset);
 }
 
+/* ----------------------------------
+   NATIVE PSEUDO-CLASSES (Checked)
+   ---------------------------------- */
+.w4-toggle:checked,
+.w4-toggle-checked,
+.w4-toggle[data-w4-state~="checked"] {
+  background-color: var(--w4-toggle-color, hsl(var(--w4-base-content)));
+  border-color: var(--w4-toggle-color, hsl(var(--w4-base-content)));
+  background-position: right var(--w4-toggle-padding) center;
+}
+
+/* ----------------------------------
+   INTERACTION STATES
+   ---------------------------------- */
+.w4-toggle:focus-visible {
+  outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-primary)) / var(--w4-focus-ring-opacity));
+}
+
+.w4-toggle:hover {
+  filter: brightness(var(--w4-hover-brightness, 0.95));
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
 .w4-toggle-primary {
-  accent-color: hsl(var(--w4-primary));
+  --w4-toggle-color: hsl(var(--w4-primary));
+  --w4-focus-ring-color: var(--w4-primary);
 }
 
 .w4-toggle-secondary {
-  accent-color: hsl(var(--w4-secondary));
+  --w4-toggle-color: hsl(var(--w4-secondary));
+  --w4-focus-ring-color: var(--w4-secondary);
 }
 
+.w4-toggle-accent {
+  --w4-toggle-color: hsl(var(--w4-accent));
+  --w4-focus-ring-color: var(--w4-accent);
+}
+
+.w4-toggle-info {
+  --w4-toggle-color: hsl(var(--w4-info));
+  --w4-focus-ring-color: var(--w4-info);
+}
+
+.w4-toggle-success {
+  --w4-toggle-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
+}
+
+.w4-toggle-warning {
+  --w4-toggle-color: hsl(var(--w4-warning));
+  --w4-focus-ring-color: var(--w4-warning);
+}
+
+.w4-toggle-error {
+  --w4-toggle-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
+}
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
 .w4-toggle-xs {
-  height: 1rem;
-  width: 1.5rem;
+  --w4-toggle-height: 1rem;
+  --w4-toggle-width: 1.5rem;
 }
 
 .w4-toggle-sm {
-  height: 1.25rem;
-  width: 2rem;
+  --w4-toggle-height: 1.25rem;
+  --w4-toggle-width: 2rem;
 }
 
 .w4-toggle-md {
-  height: 1.5rem;
-  width: 3rem;
+  --w4-toggle-height: 1.5rem;
+  --w4-toggle-width: 3rem;
 }
 
 .w4-toggle-lg {
-  height: 2rem;
-  width: 4rem;
+  --w4-toggle-height: 2rem;
+  --w4-toggle-width: 4rem;
 }
 
 .w4-toggle-xl {
-  height: 2.5rem;
-  width: 5rem;
+  --w4-toggle-height: 2.5rem;
+  --w4-toggle-width: 5rem;
 }
 
-.w4-toggle-disabled {
-  opacity: 0.65;
+/* ----------------------------------
+   STATES & MODIFIERS (ToggleComponentState Enum)
+   ---------------------------------- */
+.w4-toggle-disabled,
+.w4-toggle:disabled,
+.w4-toggle[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5);
   cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(1);
 }
 
-.w4-toggle-readonly {
+.w4-toggle-readonly,
+.w4-toggle[readonly],
+.w4-toggle[data-w4-state~="readonly"] {
   pointer-events: none;
 }
 
-.w4-toggle-invalid {
-  outline: 2px solid hsl(0 72% 51%);
-  outline-offset: 1px;
+/* Validation States */
+.w4-toggle-invalid,
+.w4-toggle[aria-invalid="true"],
+.w4-toggle[data-w4-state~="invalid"] {
+  border-color: hsl(var(--w4-error));
+  --w4-focus-ring-color: var(--w4-error);
 }
 
-.w4-toggle-valid {
-  outline: 2px solid hsl(142 71% 45%);
-  outline-offset: 1px;
+.w4-toggle-valid,
+.w4-toggle[data-w4-state~="valid"] {
+  border-color: hsl(var(--w4-success));
+  --w4-focus-ring-color: var(--w4-success);
 }
 
-.w4-toggle-loading {
-  opacity: 0.8;
+/* Loading State */
+.w4-toggle-loading,
+.w4-toggle[data-w4-state~="loading"] {
+  pointer-events: none;
+  opacity: 0.7;
+  /* Add a subtle pulse animation to indicate processing state */
+  animation: w4-toggle-pulse 1.5s infinite;
 }
 
-.w4-toggle-checked {
-  filter: saturate(1.2);
+@keyframes w4-toggle-pulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.7; }
 }

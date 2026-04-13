@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" data-theme="native.light">
+<html lang="es" data-theme="native-ui.light">
 
 <head>
     <meta charset="utf-8">
@@ -20,38 +20,38 @@
                     style="display:flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin-block-start: 1rem;">
                     <label class="w4-label w4-label-sm" for="themeSwitcher">Theme</label>
                     <select id="themeSwitcher" class="w4-select w4-select-md" style="min-inline-size: 150px;">
-                        <option value="native.light">W4-light</option>
-                        <option value="native.dark">W4-dark</option>
-                        <option value="native.corporate">W4-corporate</option>
-                        <option value="native.night">W4-night</option>
-                        <option value="native.synthwave">W4-synthwave</option>
-                        <option value="native.cupcake">W4-cupcake</option>
-                        <option value="native.bumblebee">W4-bumblebee</option>
-                        <option value="native.emerald">W4-emerald</option>
-                        <option value="native.retro">W4-retro</option>
-                        <option value="native.cyberpunk">W4-cyberpunk</option>
-                        <option value="native.valentine">W4-valentine</option>
-                        <option value="native.halloween">W4-halloween</option>
-                        <option value="native.garden">W4-garden</option>
-                        <option value="native.forest">W4-forest</option>
-                        <option value="native.aqua">native.aqua</option>
-                        <option value="native.lofi">native.lofi</option>
-                        <option value="native.pastel">native.pastel</option>
-                        <option value="native.fantasy">native.fantasy</option>
-                        <option value="native.wireframe">native.wireframe</option>
-                        <option value="native.black">native.black</option>
-                        <option value="native.luxury">native.luxury</option>
-                        <option value="native.dracula">native.dracula</option>
-                        <option value="native.cmyk">native.cmyk</option>
-                        <option value="native.autumn">native.autumn</option>
-                        <option value="native.business">native.business</option>
-                        <option value="native.acid">native.acid</option>
-                        <option value="native.lemonade">native.lemonade</option>
-                        <option value="native.coffee">native.coffee</option>
-                        <option value="native.winter">native.winter</option>
-                        <option value="native.dim">native.dim</option>
-                        <option value="native.nord">native.nord</option>
-                        <option value="native.sunset">native.sunset</option>
+                        <option value="native-ui.light">W4-light</option>
+                        <option value="native-ui.dark">W4-dark</option>
+                        <option value="native-ui.corporate">W4-corporate</option>
+                        <option value="native-ui.night">W4-night</option>
+                        <option value="native-ui.synthwave">W4-synthwave</option>
+                        <option value="native-ui.cupcake">W4-cupcake</option>
+                        <option value="native-ui.bumblebee">W4-bumblebee</option>
+                        <option value="native-ui.emerald">W4-emerald</option>
+                        <option value="native-ui.retro">W4-retro</option>
+                        <option value="native-ui.cyberpunk">W4-cyberpunk</option>
+                        <option value="native-ui.valentine">W4-valentine</option>
+                        <option value="native-ui.halloween">W4-halloween</option>
+                        <option value="native-ui.garden">W4-garden</option>
+                        <option value="native-ui.forest">W4-forest</option>
+                        <option value="native-ui.aqua">native-ui.aqua</option>
+                        <option value="native-ui.lofi">native-ui.lofi</option>
+                        <option value="native-ui.pastel">native-ui.pastel</option>
+                        <option value="native-ui.fantasy">native-ui.fantasy</option>
+                        <option value="native-ui.wireframe">native-ui.wireframe</option>
+                        <option value="native-ui.black">native-ui.black</option>
+                        <option value="native-ui.luxury">native-ui.luxury</option>
+                        <option value="native-ui.dracula">native-ui.dracula</option>
+                        <option value="native-ui.cmyk">native-ui.cmyk</option>
+                        <option value="native-ui.autumn">native-ui.autumn</option>
+                        <option value="native-ui.business">native-ui.business</option>
+                        <option value="native-ui.acid">native-ui.acid</option>
+                        <option value="native-ui.lemonade">native-ui.lemonade</option>
+                        <option value="native-ui.coffee">native-ui.coffee</option>
+                        <option value="native-ui.winter">native-ui.winter</option>
+                        <option value="native-ui.dim">native-ui.dim</option>
+                        <option value="native-ui.nord">native-ui.nord</option>
+                        <option value="native-ui.sunset">native-ui.sunset</option>
                     </select>
                 </div>
             </div>
@@ -377,45 +377,45 @@
             }
 
             var availableThemes = [
-                "native.light",
-                "native.dark",
-                "native.corporate",
-                "native.night",
-                "native.synthwave",
-                "native.cupcake",
-                "native.bumblebee",
-                "native.emerald",
-                "native.retro",
-                "native.cyberpunk",
-                "native.valentine",
-                "native.halloween",
-                "native.garden",
-                "native.forest",
-                "native.aqua",
-                "native.lofi",
-                "native.pastel",
-                "native.fantasy",
-                "native.wireframe",
-                "native.black",
-                "native.luxury",
-                "native.dracula",
-                "native.cmyk",
-                "native.autumn",
-                "native.business",
-                "native.acid",
-                "native.lemonade",
-                "native.coffee",
-                "native.winter",
-                "native.dim",
-                "native.nord",
-                "native.sunset",
+                "native-ui.light",
+                "native-ui.dark",
+                "native-ui.corporate",
+                "native-ui.night",
+                "native-ui.synthwave",
+                "native-ui.cupcake",
+                "native-ui.bumblebee",
+                "native-ui.emerald",
+                "native-ui.retro",
+                "native-ui.cyberpunk",
+                "native-ui.valentine",
+                "native-ui.halloween",
+                "native-ui.garden",
+                "native-ui.forest",
+                "native-ui.aqua",
+                "native-ui.lofi",
+                "native-ui.pastel",
+                "native-ui.fantasy",
+                "native-ui.wireframe",
+                "native-ui.black",
+                "native-ui.luxury",
+                "native-ui.dracula",
+                "native-ui.cmyk",
+                "native-ui.autumn",
+                "native-ui.business",
+                "native-ui.acid",
+                "native-ui.lemonade",
+                "native-ui.coffee",
+                "native-ui.winter",
+                "native-ui.dim",
+                "native-ui.nord",
+                "native-ui.sunset",
             ];
             var storageKey = "w4-native-ui-theme";
             var switcher = document.getElementById("themeSwitcher");
             var hookLog = document.getElementById("hookLog");
             var clearHookLog = document.getElementById("clearHookLog");
-            var initial = localStorage.getItem(storageKey) || document.documentElement.getAttribute("data-theme") || "native.light";
-            var safeInitial = availableThemes.indexOf(initial) !== -1 ? initial : "native.light";
+            var initial = localStorage.getItem(storageKey) || document.documentElement.getAttribute("data-theme") || "native-ui.light";
+            var safeInitial = availableThemes.indexOf(initial) !== -1 ? initial : "native-ui.light";
 
             window.W4NativeUI.setTheme(safeInitial);
 
