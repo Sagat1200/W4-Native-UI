@@ -96,15 +96,16 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (LinkComponentState Enum)
    ---------------------------------- */
 .w4-link-disabled,
 .w4-link[data-w4-state~="disabled"] {
-  opacity: var(--w4-disabled-opacity, 0.55);
-  pointer-events: none;
-  text-decoration: none;
+  opacity: var(--w4-disabled-opacity, 0.55) !important;
+  pointer-events: none !important;
+  text-decoration: none !important;
 }
 
+.w4-link:active,
 .w4-link-active,
 .w4-link[data-w4-state~="active"] {
   font-weight: 600;
@@ -113,5 +114,5 @@
 
 .w4-link-hidden,
 .w4-link[data-w4-state~="hidden"] {
-  display: none;
+  display: none !important;
 }

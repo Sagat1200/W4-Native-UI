@@ -72,12 +72,12 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (IconComponentState Enum)
    ---------------------------------- */
 .w4-icon-disabled,
 .w4-icon[data-w4-state~="disabled"] {
-  opacity: var(--w4-disabled-opacity, 0.5);
-  pointer-events: none;
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
 }
 
 .w4-icon-active,
@@ -87,7 +87,7 @@
 
 .w4-icon-hidden,
 .w4-icon[data-w4-state~="hidden"] {
-  display: none;
+  display: none !important;
 }
 
 .w4-icon-loading,

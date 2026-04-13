@@ -36,32 +36,45 @@
 }
 
 /* ----------------------------------
-   INTERACTION STATES
+   INTERACTION STATES & Modifiers (ButtonComponentState Enum)
    ---------------------------------- */
 .w4-button:hover {
   filter: brightness(var(--w4-hover-brightness));
   transform: translateY(var(--w4-hover-translate-y));
 }
 
-.w4-button:active,
-.w4-button[data-w4-state~="active"] {
-  transform: scale(var(--w4-active-scale)) translateY(var(--w4-active-translate-y));
-}
-
 .w4-button:focus-visible {
   outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color) / var(--w4-focus-ring-opacity));
 }
 
-.w4-button[disabled],
-.w4-button[data-w4-state~="disabled"] {
-  pointer-events: none;
-  opacity: var(--w4-disabled-opacity);
-  box-shadow: none;
+/* Active State */
+.w4-button:active,
+.w4-button-active,
+.w4-button[data-w4-state~="active"] {
+  transform: scale(var(--w4-active-scale)) translateY(var(--w4-active-translate-y));
 }
 
+/* Disabled State */
+.w4-button-disabled,
+.w4-button[data-w4-state~="disabled"],
+.w4-button[disabled] {
+  pointer-events: none !important;
+  opacity: var(--w4-disabled-opacity) !important;
+  box-shadow: none !important;
+}
+
+/* Loading State */
+.w4-button-loading,
 .w4-button[data-w4-state~="loading"] {
-  pointer-events: none;
-  opacity: var(--w4-loading-opacity);
+  pointer-events: none !important;
+  opacity: var(--w4-loading-opacity) !important;
+}
+
+/* Readonly State */
+.w4-button-readonly,
+.w4-button[data-w4-state~="readonly"],
+.w4-button[readonly] {
+  pointer-events: none !important;
 }
 
 /* ----------------------------------
@@ -190,15 +203,15 @@
    ---------------------------------- */
 .w4-button-square {
   padding-inline: 0;
-  width: var(--w4-btn-height, var(--w4-control-height-md));
+  inline-size: var(--w4-btn-height, var(--w4-control-height-md));
 }
 
 .w4-button-circle {
   padding-inline: 0;
-  width: var(--w4-btn-height, var(--w4-control-height-md));
+  inline-size: var(--w4-btn-height, var(--w4-control-height-md));
   border-radius: var(--w4-radius-pill);
 }
 
 .w4-button-block {
-  width: 100%;
+  inline-size: 100%;
 }

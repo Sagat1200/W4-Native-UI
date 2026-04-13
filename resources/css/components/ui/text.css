@@ -81,19 +81,22 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (TextComponentState Enum)
    ---------------------------------- */
 .w4-text-disabled,
 .w4-text[data-w4-state~="disabled"] {
-  opacity: var(--w4-disabled-opacity, 0.55);
+  opacity: var(--w4-disabled-opacity, 0.55) !important;
+  pointer-events: none !important;
 }
 
 .w4-text-active,
 .w4-text[data-w4-state~="active"] {
   --w4-text-font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 .w4-text-hidden,
 .w4-text[data-w4-state~="hidden"] {
-  display: none;
+  display: none !important;
 }

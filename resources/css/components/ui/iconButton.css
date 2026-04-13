@@ -16,8 +16,8 @@
   font-weight: 600;
   
   /* Morphology & Surface Tokens */
-  height: var(--w4-btn-size, var(--w4-control-height-md));
-  width: var(--w4-btn-size, var(--w4-control-height-md));
+  block-size: var(--w4-btn-size, var(--w4-control-height-md));
+  inline-size: var(--w4-btn-size, var(--w4-control-height-md));
   padding: 0; /* IconButtons are perfectly square/circular */
   font-size: var(--w4-btn-font-size, 1rem);
   border-radius: var(--w4-radius-button); /* Can be overridden to pill if needed */
@@ -36,36 +36,45 @@
 }
 
 /* ----------------------------------
-   INTERACTION STATES
+   INTERACTION STATES & Modifiers (IconButtonComponentState Enum)
    ---------------------------------- */
 .w4-icon-button:hover {
   filter: brightness(var(--w4-hover-brightness));
   transform: translateY(var(--w4-hover-translate-y));
 }
 
-.w4-icon-button:active,
-.w4-icon-button[data-w4-state~="active"] {
-  transform: scale(var(--w4-active-scale)) translateY(var(--w4-active-translate-y));
-}
-
 .w4-icon-button:focus-visible {
   outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color) / var(--w4-focus-ring-opacity));
 }
 
-.w4-icon-button[disabled],
-.w4-icon-button[data-w4-state~="disabled"] {
-  pointer-events: none;
-  opacity: var(--w4-disabled-opacity);
-  box-shadow: none;
+/* Active State */
+.w4-icon-button:active,
+.w4-icon-button-active,
+.w4-icon-button[data-w4-state~="active"] {
+  transform: scale(var(--w4-active-scale)) translateY(var(--w4-active-translate-y));
 }
 
+/* Disabled State */
+.w4-icon-button-disabled,
+.w4-icon-button[data-w4-state~="disabled"],
+.w4-icon-button[disabled] {
+  pointer-events: none !important;
+  opacity: var(--w4-disabled-opacity) !important;
+  box-shadow: none !important;
+}
+
+/* Loading State */
+.w4-icon-button-loading,
 .w4-icon-button[data-w4-state~="loading"] {
-  pointer-events: none;
-  opacity: var(--w4-loading-opacity);
+  pointer-events: none !important;
+  opacity: var(--w4-loading-opacity) !important;
 }
 
-.w4-icon-button[data-w4-state~="readonly"] {
-  pointer-events: none;
+/* Readonly State */
+.w4-icon-button-readonly,
+.w4-icon-button[data-w4-state~="readonly"],
+.w4-icon-button[readonly] {
+  pointer-events: none !important;
 }
 
 /* ----------------------------------

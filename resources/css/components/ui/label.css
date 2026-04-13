@@ -79,7 +79,7 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (LabelComponentState Enum)
    ---------------------------------- */
 .w4-label-required::after,
 .w4-label[data-w4-state~="required"]::after {
@@ -90,8 +90,8 @@
 
 .w4-label-disabled,
 .w4-label[data-w4-state~="disabled"] {
-  opacity: var(--w4-disabled-opacity, 0.55);
-  pointer-events: none;
+  opacity: var(--w4-disabled-opacity, 0.55) !important;
+  pointer-events: none !important;
 }
 
 .w4-label-active,
@@ -102,5 +102,5 @@
 
 .w4-label-hidden,
 .w4-label[data-w4-state~="hidden"] {
-  display: none;
+  display: none !important;
 }
