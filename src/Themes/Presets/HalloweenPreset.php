@@ -14,6 +14,7 @@ class HalloweenPreset extends AbstractPreset
     protected function overrides(): array
     {
         return [
+            // Color System
             'primary' => '36 152% 42%',
             'primary-content' => '180 7% 8%',
             'secondary' => '279 118% 35%',
@@ -34,6 +35,18 @@ class HalloweenPreset extends AbstractPreset
             'warning-content' => '17 99% 3%',
             'error' => '3 87% 62%',
             'error-content' => '2 84% 4%',
+            // Morphology System (Sharp)
+            'radius-button' => '0.25rem',
+            'radius-input' => '0.25rem',
+            'radius-card' => '0.5rem',
+            // Interaction System (Hard Ring)
+            'focus-ring-width' => '2px',
+            'focus-ring-color' => 'var(--w4-primary)',
+            // Surface System
+            'border-width-control' => '1px',
+            'shadow-card' => '0 4px 6px rgba(0, 0, 0, 0.3)',
+
         ];
     }
 }
+

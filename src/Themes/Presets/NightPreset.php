@@ -14,6 +14,7 @@ class NightPreset extends AbstractPreset
     protected function overrides(): array
     {
         return [
+            // Color System
             'primary' => '199 93% 60%',
             'primary-content' => '204 88% 4%',
             'secondary' => '234 89% 74%',
@@ -32,6 +33,18 @@ class NightPreset extends AbstractPreset
             'warning-content' => '37 79% 4%',
             'error' => '351 94% 71%',
             'error-content' => '353 67% 5%',
+            // Morphology System (Sharp)
+            'radius-button' => '0.25rem',
+            'radius-input' => '0.25rem',
+            'radius-card' => '0.5rem',
+            // Interaction System (Hard Ring)
+            'focus-ring-width' => '2px',
+            'focus-ring-color' => 'var(--w4-primary)',
+            // Surface System
+            'border-width-control' => '1px',
+            'shadow-card' => '0 4px 6px rgba(0, 0, 0, 0.3)',
+
         ];
     }
 }
+

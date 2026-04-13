@@ -14,6 +14,7 @@ class ValentinePreset extends AbstractPreset
     protected function overrides(): array
     {
         return [
+            // Color System
             'primary' => '353 74% 67%',
             'primary-content' => '355 65% 5%',
             'secondary' => '254 86% 77%',
@@ -34,6 +35,18 @@ class ValentinePreset extends AbstractPreset
             'warning-content' => '17 99% 3%',
             'error' => '4 125% 71%',
             'error-content' => '2 80% 5%',
+            // Morphology System (Sharp)
+            'radius-button' => '0.25rem',
+            'radius-input' => '0.25rem',
+            'radius-card' => '0.5rem',
+            // Interaction System (Hard Ring)
+            'focus-ring-width' => '2px',
+            'focus-ring-color' => 'var(--w4-primary)',
+            // Surface System
+            'border-width-control' => '1px',
+            'shadow-card' => '0 4px 6px rgba(0, 0, 0, 0.3)',
+
         ];
     }
 }
+

@@ -14,6 +14,7 @@ class LemonadePreset extends AbstractPreset
     protected function overrides(): array
     {
         return [
+            // Color System
             'primary' => '86 100% 21%',
             'primary-content' => '106 100% 1%',
             'secondary' => '61 100% 26%',
@@ -34,6 +35,18 @@ class LemonadePreset extends AbstractPreset
             'warning-content' => '54 19% 6%',
             'error' => '6 59% 85%',
             'error-content' => '6 18% 7%',
+            // Morphology System (Sharp)
+            'radius-button' => '0.25rem',
+            'radius-input' => '0.25rem',
+            'radius-card' => '0.5rem',
+            // Interaction System (Hard Ring)
+            'focus-ring-width' => '2px',
+            'focus-ring-color' => 'var(--w4-primary)',
+            // Surface System
+            'border-width-control' => '1px',
+            'shadow-card' => '0 4px 6px rgba(0, 0, 0, 0.3)',
+
         ];
     }
 }
+

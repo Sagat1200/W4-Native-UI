@@ -14,6 +14,7 @@ class CoffeePreset extends AbstractPreset
     protected function overrides(): array
     {
         return [
+            // Color System
             'primary' => '30 67% 58%',
             'primary-content' => '22 80% 4%',
             'secondary' => '182 25% 20%',
@@ -34,6 +35,18 @@ class CoffeePreset extends AbstractPreset
             'warning-content' => '41 76% 5%',
             'error' => '10 95% 75%',
             'error-content' => '8 58% 5%',
+            // Morphology System (Sharp)
+            'radius-button' => '0.25rem',
+            'radius-input' => '0.25rem',
+            'radius-card' => '0.5rem',
+            // Interaction System (Hard Ring)
+            'focus-ring-width' => '2px',
+            'focus-ring-color' => 'var(--w4-primary)',
+            // Surface System
+            'border-width-control' => '1px',
+            'shadow-card' => '0 4px 6px rgba(0, 0, 0, 0.3)',
+
         ];
     }
 }
+

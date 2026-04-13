@@ -14,6 +14,7 @@ class CupcakePreset extends AbstractPreset
     protected function overrides(): array
     {
         return [
+            // Color System
             'primary' => '171 81% 59%',
             'primary-content' => '177 126% 16%',
             'secondary' => '326 79% 89%',
@@ -32,6 +33,18 @@ class CupcakePreset extends AbstractPreset
             'warning-content' => '26 91% 13%',
             'error' => '345 99% 55%',
             'error-content' => '342 95% 15%',
+            // Morphology System (Sharp)
+            'radius-button' => '0.25rem',
+            'radius-input' => '0.25rem',
+            'radius-card' => '0.5rem',
+            // Interaction System (Hard Ring)
+            'focus-ring-width' => '2px',
+            'focus-ring-color' => 'var(--w4-primary)',
+            // Surface System
+            'border-width-control' => '1px',
+            'shadow-card' => '0 4px 6px rgba(0, 0, 0, 0.3)',
+
         ];
     }
 }
+

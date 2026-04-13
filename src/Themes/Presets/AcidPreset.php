@@ -14,6 +14,7 @@ class AcidPreset extends AbstractPreset
     protected function overrides(): array
     {
         return [
+            // Color System (Acid)
             'primary' => '302 100% 43%',
             'primary-content' => '304 100% 5%',
             'secondary' => '30 100% 44%',
@@ -34,6 +35,16 @@ class AcidPreset extends AbstractPreset
             'warning-content' => '49 100% 4%',
             'error' => '357 100% 44%',
             'error-content' => '359 100% 5%',
+            // Morphology System (Sharp)
+            'radius-button' => '0.25rem',
+            'radius-input' => '0.25rem',
+            'radius-card' => '0.5rem',
+            // Interaction System (Hard Ring)
+            'focus-ring-width' => '2px',
+            'focus-ring-color' => 'var(--w4-primary)',
+            // Surface System
+            'border-width-control' => '1px',
+            'shadow-card' => '0 4px 6px rgba(0, 0, 0, 0.3)',
         ];
     }
 }

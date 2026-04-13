@@ -14,6 +14,7 @@ class SynthwavePreset extends AbstractPreset
     protected function overrides(): array
     {
         return [
+            // Color System
             'primary' => '327 92% 68%',
             'primary-content' => '335 94% 16%',
             'secondary' => '199 99% 72%',
@@ -32,6 +33,18 @@ class SynthwavePreset extends AbstractPreset
             'warning-content' => '30 84% 24%',
             'error' => '10 75% 70%',
             'error-content' => '257 63% 17%',
+            // Morphology System (Sharp)
+            'radius-button' => '0.25rem',
+            'radius-input' => '0.25rem',
+            'radius-card' => '0.5rem',
+            // Interaction System (Hard Ring)
+            'focus-ring-width' => '2px',
+            'focus-ring-color' => 'var(--w4-primary)',
+            // Surface System
+            'border-width-control' => '1px',
+            'shadow-card' => '0 4px 6px rgba(0, 0, 0, 0.3)',
+
         ];
     }
 }
+

@@ -14,6 +14,7 @@ class DraculaPreset extends AbstractPreset
     protected function overrides(): array
     {
         return [
+            // Color System
             'primary' => '326 100% 74%',
             'primary-content' => '327 63% 5%',
             'secondary' => '265 89% 78%',
@@ -34,6 +35,18 @@ class DraculaPreset extends AbstractPreset
             'warning-content' => '65 51% 6%',
             'error' => '0 100% 67%',
             'error-content' => '360 80% 5%',
+            // Morphology System (Sharp)
+            'radius-button' => '0.25rem',
+            'radius-input' => '0.25rem',
+            'radius-card' => '0.5rem',
+            // Interaction System (Hard Ring)
+            'focus-ring-width' => '2px',
+            'focus-ring-color' => 'var(--w4-primary)',
+            // Surface System
+            'border-width-control' => '1px',
+            'shadow-card' => '0 4px 6px rgba(0, 0, 0, 0.3)',
+
         ];
     }
 }
+

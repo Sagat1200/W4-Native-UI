@@ -14,6 +14,7 @@ class BlackPreset extends AbstractPreset
     protected function overrides(): array
     {
         return [
+            // Color System
             'primary' => '330 0% 22%',
             'primary-content' => '343 0% 83%',
             'secondary' => '330 0% 22%',
@@ -34,6 +35,18 @@ class BlackPreset extends AbstractPreset
             'warning-content' => '60 100% 4%',
             'error' => '0 100% 50%',
             'error-content' => '360 100% 4%',
+            // Morphology System (Sharp)
+            'radius-button' => '0.25rem',
+            'radius-input' => '0.25rem',
+            'radius-card' => '0.5rem',
+            // Interaction System (Hard Ring)
+            'focus-ring-width' => '2px',
+            'focus-ring-color' => 'var(--w4-primary)',
+            // Surface System
+            'border-width-control' => '1px',
+            'shadow-card' => '0 4px 6px rgba(0, 0, 0, 0.3)',
+
         ];
     }
 }
+
