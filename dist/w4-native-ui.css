@@ -2882,6 +2882,7 @@ html[data-theme] body {
    ========================================= */
 
 .w4-alert {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: var(--w4-spacing-base);
@@ -2910,24 +2911,32 @@ html[data-theme] body {
    SEMANTIC VARIANTS (Color System)
    ---------------------------------- */
 .w4-alert-info {
+  --w4-alert-raw-color: var(--w4-info);
+  --w4-alert-raw-content: var(--w4-info-content);
   --w4-alert-bg: hsl(var(--w4-info) / 0.15);
   --w4-alert-text: hsl(var(--w4-info));
   --w4-alert-border-color: hsl(var(--w4-info) / 0.3);
 }
 
 .w4-alert-success {
+  --w4-alert-raw-color: var(--w4-success);
+  --w4-alert-raw-content: var(--w4-success-content);
   --w4-alert-bg: hsl(var(--w4-success) / 0.15);
   --w4-alert-text: hsl(var(--w4-success));
   --w4-alert-border-color: hsl(var(--w4-success) / 0.3);
 }
 
 .w4-alert-warning {
+  --w4-alert-raw-color: var(--w4-warning);
+  --w4-alert-raw-content: var(--w4-warning-content);
   --w4-alert-bg: hsl(var(--w4-warning) / 0.15);
   --w4-alert-text: hsl(var(--w4-warning));
   --w4-alert-border-color: hsl(var(--w4-warning) / 0.3);
 }
 
 .w4-alert-error {
+  --w4-alert-raw-color: var(--w4-error);
+  --w4-alert-raw-content: var(--w4-error-content);
   --w4-alert-bg: hsl(var(--w4-error) / 0.15);
   --w4-alert-text: hsl(var(--w4-error));
   --w4-alert-border-color: hsl(var(--w4-error) / 0.3);
@@ -2935,18 +2944,24 @@ html[data-theme] body {
 
 /* Base Semantic Variants */
 .w4-alert-primary {
+  --w4-alert-raw-color: var(--w4-primary);
+  --w4-alert-raw-content: var(--w4-primary-content);
   --w4-alert-bg: hsl(var(--w4-primary) / 0.15);
   --w4-alert-text: hsl(var(--w4-primary));
   --w4-alert-border-color: hsl(var(--w4-primary) / 0.3);
 }
 
 .w4-alert-secondary {
+  --w4-alert-raw-color: var(--w4-secondary);
+  --w4-alert-raw-content: var(--w4-secondary-content);
   --w4-alert-bg: hsl(var(--w4-secondary) / 0.15);
   --w4-alert-text: hsl(var(--w4-secondary));
   --w4-alert-border-color: hsl(var(--w4-secondary) / 0.3);
 }
 
 .w4-alert-accent {
+  --w4-alert-raw-color: var(--w4-accent);
+  --w4-alert-raw-content: var(--w4-accent-content);
   --w4-alert-bg: hsl(var(--w4-accent) / 0.15);
   --w4-alert-text: hsl(var(--w4-accent));
   --w4-alert-border-color: hsl(var(--w4-accent) / 0.3);
@@ -2956,15 +2971,23 @@ html[data-theme] body {
    STYLISTIC VARIANTS (Surface System)
    ---------------------------------- */
 .w4-alert-solid {
-  --w4-alert-bg: var(--w4-alert-text);
-  --w4-alert-text: hsl(var(--w4-base-100));
-  --w4-alert-border-color: transparent;
-  --w4-alert-shadow: var(--w4-shadow-md);
+  background-color: hsl(var(--w4-alert-raw-color, var(--w4-base-content)));
+  color: hsl(var(--w4-alert-raw-content, var(--w4-base-100)));
+  border-color: transparent;
+  box-shadow: var(--w4-shadow-md);
+  
+  /* Reset the variables to prevent inheritance issues */
+  --w4-alert-bg: hsl(var(--w4-alert-raw-color, var(--w4-base-content)));
+  --w4-alert-text: hsl(var(--w4-alert-raw-content, var(--w4-base-100)));
 }
 
 .w4-alert-outline {
+  background-color: transparent;
+  border-color: hsl(var(--w4-alert-raw-color, var(--w4-base-content)));
+  
+  /* Reset variables */
   --w4-alert-bg: transparent;
-  --w4-alert-border-color: var(--w4-alert-text);
+  --w4-alert-border-color: hsl(var(--w4-alert-raw-color, var(--w4-base-content)));
 }
 
 /* ----------------------------------
@@ -3226,6 +3249,110 @@ html[data-theme] body {
   100% {
     box-shadow: 0 0 0 0 hsl(var(--w4-primary) / 0);
   }
+}
+
+/* =========================================
+   LOADING COMPONENT
+   Native W4 Visual Engine implementation
+   Feedback Morphology
+   ========================================= */
+
+.w4-loading {
+  pointer-events: none;
+  display: inline-block;
+  aspect-ratio: 1 / 1;
+  background-color: currentColor;
+  
+  /* Morphology Tokens */
+  inline-size: var(--w4-loading-size, 1.5rem);
+  block-size: var(--w4-loading-size, 1.5rem);
+  
+  /* Default mask (Spinner) */
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_Ypzi 1.5s ease-in-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_Ypzi%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C/style%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_Ypzi 1.5s ease-in-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_Ypzi%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C/style%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ----------------------------------
+   SHAPE VARIANTS (Spinners, Dots, etc.)
+   ---------------------------------- */
+
+/* Default is spinner (already defined in .w4-loading) */
+.w4-loading-spinner {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_Ypzi 1.5s ease-in-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_Ypzi%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C/style%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_Ypzi 1.5s ease-in-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_Ypzi%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C/style%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Dots */
+.w4-loading-dots {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_qM83%7Banimation:spinner_8HQG 1.05s infinite%7D.spinner_oXPr%7Banimation-delay:.1s%7D.spinner_ZTLf%7Banimation-delay:.2s%7D%40keyframes spinner_8HQG%7B0%25%2C57.14%25%7Banimation-timing-function:cubic-bezier(0.33,.66,.66,1);transform:translate(0)%7D28.57%25%7Banimation-timing-function:cubic-bezier(0.33,0,.66,.33);transform:translateY(-6px)%7D100%25%7Btransform:translate(0)%7D%7D%3C/style%3E%3Ccircle class='spinner_qM83' cx='4' cy='12' r='3' fill='currentColor'/%3E%3Ccircle class='spinner_qM83 spinner_oXPr' cx='12' cy='12' r='3' fill='currentColor'/%3E%3Ccircle class='spinner_qM83 spinner_ZTLf' cx='20' cy='12' r='3' fill='currentColor'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_qM83%7Banimation:spinner_8HQG 1.05s infinite%7D.spinner_oXPr%7Banimation-delay:.1s%7D.spinner_ZTLf%7Banimation-delay:.2s%7D%40keyframes spinner_8HQG%7B0%25%2C57.14%25%7Banimation-timing-function:cubic-bezier(0.33,.66,.66,1);transform:translate(0)%7D28.57%25%7Banimation-timing-function:cubic-bezier(0.33,0,.66,.33);transform:translateY(-6px)%7D100%25%7Btransform:translate(0)%7D%7D%3C/style%3E%3Ccircle class='spinner_qM83' cx='4' cy='12' r='3' fill='currentColor'/%3E%3Ccircle class='spinner_qM83 spinner_oXPr' cx='12' cy='12' r='3' fill='currentColor'/%3E%3Ccircle class='spinner_qM83 spinner_ZTLf' cx='20' cy='12' r='3' fill='currentColor'/%3E%3C/svg%3E");
+}
+
+/* Ring */
+.w4-loading-ring {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%3C/style%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3' stroke-dasharray='42 150'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%3C/style%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3' stroke-dasharray='42 150'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Bars */
+.w4-loading-bars {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_zWVm%7Banimation:spinner_5Qda 1.2s linear infinite%7D.spinner_sQ7L%7Banimation-delay:.1s%7D.spinner_jxkH%7Banimation-delay:.2s%7D.spinner_Wwyg%7Banimation-delay:.3s%7D.spinner_vllk%7Banimation-delay:.4s%7D%40keyframes spinner_5Qda%7B0%25%2C20%25%2C100%25%7Btransform:translateY(0)%7D10%25%7Btransform:translateY(-5px)%7D%7D%3C/style%3E%3Crect class='spinner_zWVm' x='1' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_sQ7L' x='5.8' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_jxkH' x='10.6' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_Wwyg' x='15.4' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_vllk' x='20.2' y='6' width='2.8' height='12' fill='currentColor'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_zWVm%7Banimation:spinner_5Qda 1.2s linear infinite%7D.spinner_sQ7L%7Banimation-delay:.1s%7D.spinner_jxkH%7Banimation-delay:.2s%7D.spinner_Wwyg%7Banimation-delay:.3s%7D.spinner_vllk%7Banimation-delay:.4s%7D%40keyframes spinner_5Qda%7B0%25%2C20%25%2C100%25%7Btransform:translateY(0)%7D10%25%7Btransform:translateY(-5px)%7D%7D%3C/style%3E%3Crect class='spinner_zWVm' x='1' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_sQ7L' x='5.8' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_jxkH' x='10.6' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_Wwyg' x='15.4' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_vllk' x='20.2' y='6' width='2.8' height='12' fill='currentColor'/%3E%3C/svg%3E");
+}
+
+/* Infinity */
+.w4-loading-infinity {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_2X0S%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_1sRk%7Banimation-direction:reverse%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%3C/style%3E%3Cpath d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z' opacity='.2' fill='currentColor'/%3E%3Cpath d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z' class='spinner_2X0S' fill='currentColor' stroke='currentColor' stroke-width='1.5' stroke-dasharray='15 150' stroke-linecap='round'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_2X0S%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_1sRk%7Banimation-direction:reverse%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%3C/style%3E%3Cpath d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z' opacity='.2' fill='currentColor'/%3E%3Cpath d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z' class='spinner_2X0S' fill='currentColor' stroke='currentColor' stroke-width='1.5' stroke-dasharray='15 150' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-loading-primary { color: hsl(var(--w4-primary)); }
+.w4-loading-secondary { color: hsl(var(--w4-secondary)); }
+.w4-loading-accent { color: hsl(var(--w4-accent)); }
+.w4-loading-neutral { color: hsl(var(--w4-neutral)); }
+.w4-loading-info { color: hsl(var(--w4-info)); }
+.w4-loading-success { color: hsl(var(--w4-success)); }
+.w4-loading-warning { color: hsl(var(--w4-warning)); }
+.w4-loading-error { color: hsl(var(--w4-error)); }
+
+/* ----------------------------------
+   SIZE SCALES (Morphology System)
+   ---------------------------------- */
+.w4-loading-xs { --w4-loading-size: 1rem; }
+.w4-loading-sm { --w4-loading-size: 1.25rem; }
+.w4-loading-md { --w4-loading-size: 1.5rem; }
+.w4-loading-lg { --w4-loading-size: 2rem; }
+.w4-loading-xl { --w4-loading-size: 2.5rem; }
+
+/* ----------------------------------
+   STATES & MODIFIERS (LoadingComponentState Enum)
+   ---------------------------------- */
+.w4-loading-hidden,
+.w4-loading[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-loading-disabled,
+.w4-loading[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  /* Disable animation if possible, but SVG mask animation is self-contained. 
+     Using opacity handles visual feedback. */
+}
+
+.w4-loading-active,
+.w4-loading[data-w4-state~="active"] {
+  /* Give an active loading spinner extra emphasis */
+  filter: brightness(1.2) drop-shadow(0 0 4px currentColor);
 }
 
 /* =========================================

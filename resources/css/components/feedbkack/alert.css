@@ -5,6 +5,7 @@
    ========================================= */
 
 .w4-alert {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: var(--w4-spacing-base);
@@ -33,24 +34,32 @@
    SEMANTIC VARIANTS (Color System)
    ---------------------------------- */
 .w4-alert-info {
+  --w4-alert-raw-color: var(--w4-info);
+  --w4-alert-raw-content: var(--w4-info-content);
   --w4-alert-bg: hsl(var(--w4-info) / 0.15);
   --w4-alert-text: hsl(var(--w4-info));
   --w4-alert-border-color: hsl(var(--w4-info) / 0.3);
 }
 
 .w4-alert-success {
+  --w4-alert-raw-color: var(--w4-success);
+  --w4-alert-raw-content: var(--w4-success-content);
   --w4-alert-bg: hsl(var(--w4-success) / 0.15);
   --w4-alert-text: hsl(var(--w4-success));
   --w4-alert-border-color: hsl(var(--w4-success) / 0.3);
 }
 
 .w4-alert-warning {
+  --w4-alert-raw-color: var(--w4-warning);
+  --w4-alert-raw-content: var(--w4-warning-content);
   --w4-alert-bg: hsl(var(--w4-warning) / 0.15);
   --w4-alert-text: hsl(var(--w4-warning));
   --w4-alert-border-color: hsl(var(--w4-warning) / 0.3);
 }
 
 .w4-alert-error {
+  --w4-alert-raw-color: var(--w4-error);
+  --w4-alert-raw-content: var(--w4-error-content);
   --w4-alert-bg: hsl(var(--w4-error) / 0.15);
   --w4-alert-text: hsl(var(--w4-error));
   --w4-alert-border-color: hsl(var(--w4-error) / 0.3);
@@ -58,18 +67,24 @@
 
 /* Base Semantic Variants */
 .w4-alert-primary {
+  --w4-alert-raw-color: var(--w4-primary);
+  --w4-alert-raw-content: var(--w4-primary-content);
   --w4-alert-bg: hsl(var(--w4-primary) / 0.15);
   --w4-alert-text: hsl(var(--w4-primary));
   --w4-alert-border-color: hsl(var(--w4-primary) / 0.3);
 }
 
 .w4-alert-secondary {
+  --w4-alert-raw-color: var(--w4-secondary);
+  --w4-alert-raw-content: var(--w4-secondary-content);
   --w4-alert-bg: hsl(var(--w4-secondary) / 0.15);
   --w4-alert-text: hsl(var(--w4-secondary));
   --w4-alert-border-color: hsl(var(--w4-secondary) / 0.3);
 }
 
 .w4-alert-accent {
+  --w4-alert-raw-color: var(--w4-accent);
+  --w4-alert-raw-content: var(--w4-accent-content);
   --w4-alert-bg: hsl(var(--w4-accent) / 0.15);
   --w4-alert-text: hsl(var(--w4-accent));
   --w4-alert-border-color: hsl(var(--w4-accent) / 0.3);
@@ -79,15 +94,23 @@
    STYLISTIC VARIANTS (Surface System)
    ---------------------------------- */
 .w4-alert-solid {
-  --w4-alert-bg: var(--w4-alert-text);
-  --w4-alert-text: hsl(var(--w4-base-100));
-  --w4-alert-border-color: transparent;
-  --w4-alert-shadow: var(--w4-shadow-md);
+  background-color: hsl(var(--w4-alert-raw-color, var(--w4-base-content)));
+  color: hsl(var(--w4-alert-raw-content, var(--w4-base-100)));
+  border-color: transparent;
+  box-shadow: var(--w4-shadow-md);
+  
+  /* Reset the variables to prevent inheritance issues */
+  --w4-alert-bg: hsl(var(--w4-alert-raw-color, var(--w4-base-content)));
+  --w4-alert-text: hsl(var(--w4-alert-raw-content, var(--w4-base-100)));
 }
 
 .w4-alert-outline {
+  background-color: transparent;
+  border-color: hsl(var(--w4-alert-raw-color, var(--w4-base-content)));
+  
+  /* Reset variables */
   --w4-alert-bg: transparent;
-  --w4-alert-border-color: var(--w4-alert-text);
+  --w4-alert-border-color: hsl(var(--w4-alert-raw-color, var(--w4-base-content)));
 }
 
 /* ----------------------------------

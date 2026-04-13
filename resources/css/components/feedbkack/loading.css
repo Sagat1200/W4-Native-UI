@@ -26,6 +26,40 @@
 }
 
 /* ----------------------------------
+   SHAPE VARIANTS (Spinners, Dots, etc.)
+   ---------------------------------- */
+
+/* Default is spinner (already defined in .w4-loading) */
+.w4-loading-spinner {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_Ypzi 1.5s ease-in-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_Ypzi%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C/style%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_Ypzi 1.5s ease-in-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_Ypzi%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C/style%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Dots */
+.w4-loading-dots {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_qM83%7Banimation:spinner_8HQG 1.05s infinite%7D.spinner_oXPr%7Banimation-delay:.1s%7D.spinner_ZTLf%7Banimation-delay:.2s%7D%40keyframes spinner_8HQG%7B0%25%2C57.14%25%7Banimation-timing-function:cubic-bezier(0.33,.66,.66,1);transform:translate(0)%7D28.57%25%7Banimation-timing-function:cubic-bezier(0.33,0,.66,.33);transform:translateY(-6px)%7D100%25%7Btransform:translate(0)%7D%7D%3C/style%3E%3Ccircle class='spinner_qM83' cx='4' cy='12' r='3' fill='currentColor'/%3E%3Ccircle class='spinner_qM83 spinner_oXPr' cx='12' cy='12' r='3' fill='currentColor'/%3E%3Ccircle class='spinner_qM83 spinner_ZTLf' cx='20' cy='12' r='3' fill='currentColor'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_qM83%7Banimation:spinner_8HQG 1.05s infinite%7D.spinner_oXPr%7Banimation-delay:.1s%7D.spinner_ZTLf%7Banimation-delay:.2s%7D%40keyframes spinner_8HQG%7B0%25%2C57.14%25%7Banimation-timing-function:cubic-bezier(0.33,.66,.66,1);transform:translate(0)%7D28.57%25%7Banimation-timing-function:cubic-bezier(0.33,0,.66,.33);transform:translateY(-6px)%7D100%25%7Btransform:translate(0)%7D%7D%3C/style%3E%3Ccircle class='spinner_qM83' cx='4' cy='12' r='3' fill='currentColor'/%3E%3Ccircle class='spinner_qM83 spinner_oXPr' cx='12' cy='12' r='3' fill='currentColor'/%3E%3Ccircle class='spinner_qM83 spinner_ZTLf' cx='20' cy='12' r='3' fill='currentColor'/%3E%3C/svg%3E");
+}
+
+/* Ring */
+.w4-loading-ring {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%3C/style%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3' stroke-dasharray='42 150'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%3C/style%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3' stroke-dasharray='42 150'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Bars */
+.w4-loading-bars {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_zWVm%7Banimation:spinner_5Qda 1.2s linear infinite%7D.spinner_sQ7L%7Banimation-delay:.1s%7D.spinner_jxkH%7Banimation-delay:.2s%7D.spinner_Wwyg%7Banimation-delay:.3s%7D.spinner_vllk%7Banimation-delay:.4s%7D%40keyframes spinner_5Qda%7B0%25%2C20%25%2C100%25%7Btransform:translateY(0)%7D10%25%7Btransform:translateY(-5px)%7D%7D%3C/style%3E%3Crect class='spinner_zWVm' x='1' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_sQ7L' x='5.8' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_jxkH' x='10.6' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_Wwyg' x='15.4' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_vllk' x='20.2' y='6' width='2.8' height='12' fill='currentColor'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_zWVm%7Banimation:spinner_5Qda 1.2s linear infinite%7D.spinner_sQ7L%7Banimation-delay:.1s%7D.spinner_jxkH%7Banimation-delay:.2s%7D.spinner_Wwyg%7Banimation-delay:.3s%7D.spinner_vllk%7Banimation-delay:.4s%7D%40keyframes spinner_5Qda%7B0%25%2C20%25%2C100%25%7Btransform:translateY(0)%7D10%25%7Btransform:translateY(-5px)%7D%7D%3C/style%3E%3Crect class='spinner_zWVm' x='1' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_sQ7L' x='5.8' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_jxkH' x='10.6' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_Wwyg' x='15.4' y='6' width='2.8' height='12' fill='currentColor'/%3E%3Crect class='spinner_zWVm spinner_vllk' x='20.2' y='6' width='2.8' height='12' fill='currentColor'/%3E%3C/svg%3E");
+}
+
+/* Infinity */
+.w4-loading-infinity {
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_2X0S%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_1sRk%7Banimation-direction:reverse%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%3C/style%3E%3Cpath d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z' opacity='.2' fill='currentColor'/%3E%3Cpath d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z' class='spinner_2X0S' fill='currentColor' stroke='currentColor' stroke-width='1.5' stroke-dasharray='15 150' stroke-linecap='round'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_2X0S%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_1sRk%7Banimation-direction:reverse%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%3C/style%3E%3Cpath d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z' opacity='.2' fill='currentColor'/%3E%3Cpath d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z' class='spinner_2X0S' fill='currentColor' stroke='currentColor' stroke-width='1.5' stroke-dasharray='15 150' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* ----------------------------------
    SEMANTIC VARIANTS (Color System)
    ---------------------------------- */
 .w4-loading-primary { color: hsl(var(--w4-primary)); }

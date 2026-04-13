@@ -70,6 +70,7 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/components/layout/stack.css',
             $root . '/resources/css/components/feedbkack/alert.css',
             $root . '/resources/css/components/feedbkack/badge.css',
+            $root . '/resources/css/components/feedbkack/loading.css',
             $root . '/resources/css/components/feedbkack/progess.css',
             $root . '/resources/css/components/feedbkack/skeleton.css',
             $root . '/resources/css/components/feedbkack/toast.css',
