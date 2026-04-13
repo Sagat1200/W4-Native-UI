@@ -76,3 +76,33 @@
 .w4-section-xl {
   --w4-section-padding-y: 2rem;
 }
+
+/* ----------------------------------
+   STATES & MODIFIERS (SectionComponentState Enum)
+   ---------------------------------- */
+.w4-section-hidden,
+.w4-section[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-section-disabled,
+.w4-section[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.6) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-section-active,
+.w4-section[data-w4-state~="active"] {
+  /* An active section might have a subtle background highlight or border */
+  box-shadow: inset 4px 0 0 0 hsl(var(--w4-primary));
+  background-color: hsl(var(--w4-primary) / 0.03);
+}
+
+.w4-section-collapsed,
+.w4-section[data-w4-state~="collapsed"] {
+  /* Hide the padding and collapse the section content */
+  padding-block: 0 !important;
+  block-size: 0;
+  overflow: hidden;
+}

@@ -108,3 +108,34 @@
 .w4-panel-xl {
   --w4-panel-padding: 1.5rem;
 }
+
+/* ----------------------------------
+   STATES & MODIFIERS (PanelComponentState Enum)
+   ---------------------------------- */
+.w4-panel-hidden,
+.w4-panel[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-panel-disabled,
+.w4-panel[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.6) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-panel-active,
+.w4-panel[data-w4-state~="active"] {
+  /* Highlight the active panel */
+  border-color: hsl(var(--w4-primary));
+  background-color: hsl(var(--w4-primary) / 0.05);
+}
+
+.w4-panel-collapsed,
+.w4-panel[data-w4-state~="collapsed"] {
+  /* Visually collapse the panel while keeping its DOM node */
+  block-size: 0;
+  padding-block: 0;
+  overflow: hidden;
+  border-width: 0;
+}

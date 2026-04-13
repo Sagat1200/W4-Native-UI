@@ -120,3 +120,37 @@
 .w4-card-xl .w4-card-body {
   --w4-card-padding: 3rem;
 }
+
+/* ----------------------------------
+   STATES & MODIFIERS (CardComponentState Enum)
+   ---------------------------------- */
+.w4-card-hidden,
+.w4-card[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-card-disabled,
+.w4-card[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.6) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-card-active,
+.w4-card[data-w4-state~="active"] {
+  /* Elevate and emphasize the active card */
+  --w4-card-shadow: var(--w4-shadow-lg);
+  border-color: hsl(var(--w4-primary));
+  transform: translateY(-2px);
+  transition: transform var(--w4-transition-fast), box-shadow var(--w4-transition-fast), border-color var(--w4-transition-fast);
+}
+
+.w4-card-collapsed,
+.w4-card[data-w4-state~="collapsed"] {
+  /* Hide the body but keep the card container/header visible */
+}
+
+.w4-card-collapsed .w4-card-body,
+.w4-card[data-w4-state~="collapsed"] .w4-card-body {
+  display: none !important;
+}

@@ -30,3 +30,25 @@
 .w4-grid-md { --w4-grid-gap: 1rem; }
 .w4-grid-lg { --w4-grid-gap: 1.5rem; }
 .w4-grid-xl { --w4-grid-gap: 2rem; }
+
+/* ----------------------------------
+   STATES & MODIFIERS (GridComponentState Enum)
+   ---------------------------------- */
+.w4-grid-hidden,
+.w4-grid[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-grid-disabled,
+.w4-grid[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-grid-active,
+.w4-grid[data-w4-state~="active"] {
+  /* An active grid might show boundaries for debugging or interactive highlighting */
+  outline: 2px dashed hsl(var(--w4-primary) / 0.5);
+  outline-offset: 4px;
+}

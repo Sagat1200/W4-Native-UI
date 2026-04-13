@@ -81,17 +81,22 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (DividerComponentState Enum)
    ---------------------------------- */
-.w4-divider-hidden {
-  display: none;
+.w4-divider-hidden,
+.w4-divider[data-w4-state~="hidden"] {
+  display: none !important;
 }
 
 .w4-divider-disabled,
 .w4-divider[data-w4-state~="disabled"] {
-  opacity: var(--w4-disabled-opacity, 0.5);
+  opacity: var(--w4-disabled-opacity, 0.3) !important;
+  pointer-events: none !important;
 }
 
-.w4-divider-active {
+.w4-divider-active,
+.w4-divider[data-w4-state~="active"] {
+  /* An active divider uses primary color and becomes slightly thicker */
   --w4-divider-color: hsl(var(--w4-primary));
+  --w4-divider-width: 2px;
 }

@@ -45,3 +45,25 @@
 .w4-container-xl {
   --w4-container-max-width: 1280px;
 }
+
+/* ----------------------------------
+   STATES & MODIFIERS (ContainerComponentState Enum)
+   ---------------------------------- */
+.w4-container-hidden,
+.w4-container[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-container-disabled,
+.w4-container[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-container-active,
+.w4-container[data-w4-state~="active"] {
+  /* An active container might pop out slightly, mostly used for layout debugging or interactive sections */
+  box-shadow: inset 0 0 0 2px hsl(var(--w4-primary) / 0.5);
+  background-color: hsl(var(--w4-primary) / 0.05);
+}

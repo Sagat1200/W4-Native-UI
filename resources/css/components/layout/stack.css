@@ -35,3 +35,25 @@
 .w4-stack-md { --w4-stack-gap: 1rem; }
 .w4-stack-lg { --w4-stack-gap: 1.5rem; }
 .w4-stack-xl { --w4-stack-gap: 2rem; }
+
+/* ----------------------------------
+   STATES & MODIFIERS (StackComponentState Enum)
+   ---------------------------------- */
+.w4-stack-hidden,
+.w4-stack[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-stack-disabled,
+.w4-stack[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-stack-active,
+.w4-stack[data-w4-state~="active"] {
+  /* Active stack for debugging or highlighting a specific flow of content */
+  outline: 2px dashed hsl(var(--w4-primary) / 0.5);
+  outline-offset: 2px;
+}
