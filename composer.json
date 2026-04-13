@@ -1,6 +1,6 @@
 {
     "name": "w4/native-ui",
-    "description": "Paquete de Interfaces de Usuario para aplicaciones empresariales inspirados en DaisyUI para Laravel PHP.",
+    "description": "Paquete de Interfaces de Usuario para aplicaciones empresariales Laravel PHP.",
     "type": "library",
     "license": "MIT",
     "keywords": [
