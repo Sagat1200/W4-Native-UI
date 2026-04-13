@@ -30,6 +30,164 @@ html[data-theme] body {
   color: hsl(var(--w4-base-content));
 }
 
+:root {
+  /* =========================================
+     CORE TOKENS (Defaults)
+     These are the fallback system defaults.
+     Themes will override these variables.
+     ========================================= */
+
+  /* Font Families */
+  --w4-font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --w4-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Global Spacing Defaults */
+  --w4-spacing-base: 0.25rem; /* 4px */
+  
+  /* Global Transition Defaults */
+  --w4-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --w4-transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --w4-transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:root {
+  /* =========================================
+     COLOR TOKENS
+     Thematic color palettes (HSL format)
+     ========================================= */
+
+  /* Brand Colors */
+  --w4-primary: 217 91% 60%;         /* Default Blue */
+  --w4-primary-content: 210 40% 98%; /* Default White Text */
+  
+  --w4-secondary: 280 46% 14%;       /* Default Deep Purple */
+  --w4-secondary-content: 210 40% 98%;
+  
+  --w4-accent: 175 70% 41%;          /* Default Teal */
+  --w4-accent-content: 210 40% 98%;
+
+  /* Semantic State Colors */
+  --w4-success: 142 71% 45%;
+  --w4-success-content: 210 40% 98%;
+
+  --w4-warning: 38 92% 50%;
+  --w4-warning-content: 280 46% 14%;
+
+  --w4-error: 348 83% 47%;
+  --w4-error-content: 210 40% 98%;
+
+  --w4-info: 198 93% 60%;
+  --w4-info-content: 210 40% 98%;
+
+  /* Base & Surface Backgrounds */
+  --w4-base-100: 0 0% 100%;          /* Pure White Background */
+  --w4-base-200: 210 40% 96%;        /* Light Gray Background */
+  --w4-base-300: 214 32% 91%;        /* Darker Gray Background */
+  --w4-base-content: 215 28% 17%;    /* Dark Text Content */
+}
+
+:root {
+  /* =========================================
+     INTERACTION TOKENS
+     Focus rings, active states, hovers
+     ========================================= */
+
+  /* Focus Ring */
+  --w4-focus-ring-width: 2px;
+  --w4-focus-ring-offset: 2px;
+  --w4-focus-ring-color: var(--w4-primary); /* Will be HSL format via JS/Tailwind */
+  --w4-focus-ring-opacity: 1;
+
+  /* Motion & Transform */
+  --w4-hover-brightness: 0.9;
+  --w4-hover-translate-y: 0px;
+  --w4-active-scale: 0.95;
+  --w4-active-translate-y: 0px;
+
+  /* Opacity States */
+  --w4-disabled-opacity: 0.5;
+  --w4-loading-opacity: 0.7;
+}
+
+:root {
+  /* =========================================
+     MORPHOLOGY TOKENS
+     The shape language of the UI
+     (radii, control heights, padding densities)
+     ========================================= */
+
+  /* Radius Base Tokens */
+  --w4-radius-none: 0px;
+  --w4-radius-sm: 0.125rem; /* 2px */
+  --w4-radius-md: 0.25rem;  /* 4px */
+  --w4-radius-lg: 0.5rem;   /* 8px */
+  --w4-radius-xl: 1rem;     /* 16px */
+  --w4-radius-pill: 9999px;
+
+  /* Component Derived Radius */
+  --w4-radius-button: var(--w4-radius-md);
+  --w4-radius-input: var(--w4-radius-md);
+  --w4-radius-select: var(--w4-radius-md);
+  --w4-radius-card: var(--w4-radius-lg);
+  --w4-radius-panel: var(--w4-radius-lg);
+  --w4-radius-badge: var(--w4-radius-pill);
+  --w4-radius-alert: var(--w4-radius-md); /* Feedback specific morphology */
+  --w4-radius-progress: var(--w4-radius-pill); /* Progress bar morphology */
+  --w4-radius-skeleton: var(--w4-radius-md); /* Skeleton base morphology */
+  --w4-radius-toast: var(--w4-radius-md); /* Toast notification morphology */
+  --w4-radius-checkbox: var(--w4-radius-sm); /* Forms morphology */
+  --w4-radius-radio: var(--w4-radius-pill); /* Forms morphology */
+  --w4-radius-toggle: var(--w4-radius-pill); /* Forms morphology */
+  --w4-radius-modal: var(--w4-radius-lg); /* Interactive morphology */
+  --w4-radius-menu: var(--w4-radius-md); /* Navigation morphology */
+  --w4-radius-dropdown: var(--w4-radius-md); /* Navigation morphology */
+
+  /* Control Heights (Density) - Matched to daisyUI */
+  --w4-control-height-xs: 1.5rem; /* 24px */
+  --w4-control-height-sm: 2rem;   /* 32px */
+  --w4-control-height-md: 3rem;   /* 48px */
+  --w4-control-height-lg: 4rem;   /* 64px */
+  --w4-control-height-xl: 5rem;   /* 80px */
+
+  /* Control Paddings - Matched to daisyUI */
+  --w4-control-padding-x-xs: 0.5rem;
+  --w4-control-padding-x-sm: 0.75rem;
+  --w4-control-padding-x-md: 1rem;
+  --w4-control-padding-x-lg: 1.5rem;
+  --w4-control-padding-x-xl: 2rem;
+  
+  --w4-button-padding-x: var(--w4-control-padding-x-md);
+  --w4-input-padding-x: var(--w4-control-padding-x-md);
+}
+
+:root {
+  /* =========================================
+     SURFACE TOKENS
+     Depth, Shadows, Elevación, Borders.
+     ========================================= */
+
+  /* Borders */
+  --w4-surface-border-width: 1px;
+  --w4-surface-border-color: 214 32% 91%; /* Match base-300 usually */
+  
+  --w4-border-width-control: 1px;
+  --w4-border-width-card: 1px;
+  --w4-border-width-panel: 1px;
+  
+  /* Shadows / Elevation */
+  --w4-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --w4-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --w4-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --w4-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --w4-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  /* Semantic Shadow Assignations */
+  --w4-shadow-control: var(--w4-shadow-sm);
+  --w4-shadow-card: var(--w4-shadow-md);
+  --w4-shadow-panel: var(--w4-shadow-lg);
+  --w4-shadow-dropdown: var(--w4-shadow-xl);
+}
+
 [data-theme="native-ui.dark"] {
   --w4-primary: 241 100% 68%;
   --w4-primary-content: 226 93% 96%;

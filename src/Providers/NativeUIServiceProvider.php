@@ -76,8 +76,8 @@ class NativeUIServiceProvider extends ServiceProvider
             if (is_dir($distPath)) {
                 $this->publishes([
                     $distPath => public_path('vendor/w4-native-ui'),
-                ], 'w4-native-dist');
-            } // php artisan vendor:publish --tag=w4-native-dist --path=public/vendor/w4-native
+                ], 'w4-native-ui-dist');
+            } // php artisan vendor:publish --tag=w4-native-ui-dist --path=public/vendor/w4-native-ui
 
             $publish = [];
             if (is_file($configPath)) {

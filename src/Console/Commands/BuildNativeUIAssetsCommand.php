@@ -15,6 +15,11 @@ class BuildNativeUIAssetsCommand extends Command
         $root = dirname(__DIR__, 3);
         $cssFiles = [
             $root . '/resources/css/properties/w4-theme.css',
+            $root . '/resources/css/tokens/core.tokens.css',
+            $root . '/resources/css/tokens/color.tokens.css',
+            $root . '/resources/css/tokens/interaction.tokens.css',
+            $root . '/resources/css/tokens/morphology.tokens.css',
+            $root . '/resources/css/tokens/surface.tokens.css',
             $root . '/resources/css/presets/dark.css',
             $root . '/resources/css/presets/corporate.css',
             $root . '/resources/css/presets/night.css',
