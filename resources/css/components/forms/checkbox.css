@@ -33,14 +33,20 @@
    NATIVE PSEUDO-CLASSES (Checked / Indeterminate)
    ---------------------------------- */
 .w4-checkbox:checked,
-.w4-checkbox:indeterminate {
+.w4-checkbox-checked,
+.w4-checkbox[data-w4-state~="checked"],
+.w4-checkbox:indeterminate,
+.w4-checkbox-indeterminate,
+.w4-checkbox[data-w4-state~="indeterminate"] {
   background-color: var(--w4-checkbox-color, hsl(var(--w4-base-content)));
   border-color: var(--w4-checkbox-color, hsl(var(--w4-base-content)));
   animation: w4-checkbox-pop var(--w4-transition-fast) ease-out;
 }
 
 /* SVG Checkmark using Data URI */
-.w4-checkbox:checked {
+.w4-checkbox:checked,
+.w4-checkbox-checked,
+.w4-checkbox[data-w4-state~="checked"] {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4 8 7 11 13 4'/%3E%3C/svg%3E");
   background-size: 70%;
   background-position: center;
@@ -48,7 +54,9 @@
 }
 
 /* Indeterminate Line */
-.w4-checkbox:indeterminate {
+.w4-checkbox:indeterminate,
+.w4-checkbox-indeterminate,
+.w4-checkbox[data-w4-state~="indeterminate"] {
   background-image: linear-gradient(var(--w4-checkbox-mark-color), var(--w4-checkbox-mark-color));
   background-size: 60% 0.15em;
   background-position: center;

@@ -39,7 +39,9 @@
 /* ----------------------------------
    NATIVE PSEUDO-CLASSES (Checked)
    ---------------------------------- */
-.w4-toggle:checked {
+.w4-toggle:checked,
+.w4-toggle-checked,
+.w4-toggle[data-w4-state~="checked"] {
   background-color: var(--w4-toggle-color, hsl(var(--w4-base-content)));
   border-color: var(--w4-toggle-color, hsl(var(--w4-base-content)));
   background-position: right var(--w4-toggle-padding) center;

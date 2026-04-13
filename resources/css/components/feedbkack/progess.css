@@ -96,22 +96,31 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (ProgressComponentState Enum)
    ---------------------------------- */
 .w4-progress-hidden,
 .w4-progress[data-w4-state~="hidden"] {
-  display: none;
+  display: none !important;
 }
 
 .w4-progress-disabled,
 .w4-progress[data-w4-state~="disabled"] {
-  opacity: var(--w4-disabled-opacity, 0.5);
-  pointer-events: none;
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
   filter: grayscale(1);
+}
+
+.w4-progress-active,
+.w4-progress[data-w4-state~="active"] {
+  /* Give active progress bar a subtle glow/shadow to indicate it is the primary process */
+  box-shadow: 0 0 8px 0 var(--w4-progress-color, hsl(var(--w4-base-content) / 0.5));
 }
 
 /* Indeterminate / Loading state */
 .w4-progress:indeterminate,
+.w4-progress-indeterminate,
+.w4-progress-loading,
+.w4-progress[data-w4-state~="indeterminate"],
 .w4-progress[data-w4-state~="loading"] {
   background-image: linear-gradient(
     90deg,
@@ -124,10 +133,16 @@
 }
 
 .w4-progress:indeterminate::-webkit-progress-bar,
+.w4-progress-indeterminate::-webkit-progress-bar,
+.w4-progress-loading::-webkit-progress-bar,
+.w4-progress[data-w4-state~="indeterminate"]::-webkit-progress-bar,
 .w4-progress[data-w4-state~="loading"]::-webkit-progress-bar {
   background-color: transparent;
 }
 .w4-progress:indeterminate::-moz-progress-bar,
+.w4-progress-indeterminate::-moz-progress-bar,
+.w4-progress-loading::-moz-progress-bar,
+.w4-progress[data-w4-state~="indeterminate"]::-moz-progress-bar,
 .w4-progress[data-w4-state~="loading"]::-moz-progress-bar {
   background-color: transparent;
 }

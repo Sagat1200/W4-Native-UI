@@ -61,7 +61,8 @@
    ---------------------------------- */
 .w4-modal-open,
 .w4-modal[open], /* Native dialog support */
-.w4-modal:target { /* URL hash support */
+.w4-modal:target, /* URL hash support */
+.w4-modal[data-w4-state~="open"] {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -69,7 +70,8 @@
 
 .w4-modal-open .w4-modal-box,
 .w4-modal[open] .w4-modal-box,
-.w4-modal:target .w4-modal-box {
+.w4-modal:target .w4-modal-box,
+.w4-modal[data-w4-state~="open"] .w4-modal-box {
   transform: scale(1) translateY(0);
 }
 
@@ -102,7 +104,10 @@
   margin-block-end: -1rem; /* Negate the container padding */
   transform: translateY(100%);
 }
-.w4-modal-open.w4-modal-bottom .w4-modal-box {
+.w4-modal-open.w4-modal-bottom .w4-modal-box,
+.w4-modal-bottom[open] .w4-modal-box,
+.w4-modal-bottom:target .w4-modal-box,
+.w4-modal-bottom[data-w4-state~="open"] .w4-modal-box {
   transform: translateY(0);
 }
 
@@ -134,4 +139,24 @@
   --w4-modal-max-width: 100%; 
   block-size: calc(100vh - 2rem); 
   border-radius: 0;
+}
+
+/* ----------------------------------
+   STATES & MODIFIERS (ModalComponentState Enum)
+   ---------------------------------- */
+.w4-modal-hidden,
+.w4-modal[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-modal-disabled,
+.w4-modal[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-modal-active,
+.w4-modal[data-w4-state~="active"] {
+  z-index: 1000; /* Ensure active modal is always on top */
 }

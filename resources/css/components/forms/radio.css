@@ -32,7 +32,9 @@
 /* ----------------------------------
    NATIVE PSEUDO-CLASSES (Checked)
    ---------------------------------- */
-.w4-radio:checked {
+.w4-radio:checked,
+.w4-radio-selected,
+.w4-radio[data-w4-state~="selected"] {
   background-color: var(--w4-radio-color, hsl(var(--w4-base-content)));
   border-color: var(--w4-radio-color, hsl(var(--w4-base-content)));
   animation: w4-radio-pop var(--w4-transition-fast) ease-out;

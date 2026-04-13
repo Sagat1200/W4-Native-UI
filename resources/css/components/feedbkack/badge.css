@@ -161,15 +161,42 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (BadgeComponentState Enum)
    ---------------------------------- */
 .w4-badge-hidden,
 .w4-badge[data-w4-state~="hidden"] {
-  display: none;
+  display: none !important;
 }
 
 .w4-badge-disabled,
 .w4-badge[data-w4-state~="disabled"] {
-  opacity: var(--w4-disabled-opacity, 0.5);
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
   filter: grayscale(1);
+}
+
+.w4-badge-active,
+.w4-badge[data-w4-state~="active"] {
+  /* Give an active badge slightly bolder text and more emphasis */
+  font-weight: 700;
+  transform: scale(1.05);
+}
+
+.w4-badge-highlighted,
+.w4-badge[data-w4-state~="highlighted"] {
+  /* A highlighted badge can pulse to draw attention (e.g. unread notifications) */
+  animation: w4-badge-pulse 2s infinite;
+  box-shadow: 0 0 0 0 hsl(var(--w4-primary) / 0.7);
+}
+
+@keyframes w4-badge-pulse {
+  0% {
+    box-shadow: 0 0 0 0 hsl(var(--w4-primary) / 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px hsl(var(--w4-primary) / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 hsl(var(--w4-primary) / 0);
+  }
 }

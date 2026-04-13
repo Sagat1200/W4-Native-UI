@@ -37,7 +37,8 @@
 /* Hover and Open States */
 .w4-tooltip:hover::before,
 .w4-tooltip:focus-visible::before,
-.w4-tooltip.w4-tooltip-open::before {
+.w4-tooltip.w4-tooltip-open::before,
+.w4-tooltip[data-w4-state~="open"]::before {
   opacity: 1;
   visibility: visible;
 }
@@ -45,7 +46,8 @@
 /* Base transform resets for states */
 .w4-tooltip:hover::before,
 .w4-tooltip:focus-visible::before,
-.w4-tooltip.w4-tooltip-open::before {
+.w4-tooltip.w4-tooltip-open::before,
+.w4-tooltip[data-w4-state~="open"]::before {
   transform: translateX(-50%) translateY(0);
 }
 
@@ -67,7 +69,8 @@
 }
 .w4-tooltip-top:hover::before,
 .w4-tooltip-top:focus-visible::before,
-.w4-tooltip-top.w4-tooltip-open::before {
+.w4-tooltip-top.w4-tooltip-open::before,
+.w4-tooltip-top[data-w4-state~="open"]::before {
   transform: translateX(-50%) translateY(0);
 }
 
@@ -85,7 +88,8 @@
 }
 .w4-tooltip-bottom:hover::before,
 .w4-tooltip-bottom:focus-visible::before,
-.w4-tooltip-bottom.w4-tooltip-open::before {
+.w4-tooltip-bottom.w4-tooltip-open::before,
+.w4-tooltip-bottom[data-w4-state~="open"]::before {
   transform: translateX(-50%) translateY(0);
 }
 
@@ -103,7 +107,8 @@
 }
 .w4-tooltip-left:hover::before,
 .w4-tooltip-left:focus-visible::before,
-.w4-tooltip-left.w4-tooltip-open::before {
+.w4-tooltip-left.w4-tooltip-open::before,
+.w4-tooltip-left[data-w4-state~="open"]::before {
   transform: translateY(-50%) translateX(0);
 }
 
@@ -121,7 +126,8 @@
 }
 .w4-tooltip-right:hover::before,
 .w4-tooltip-right:focus-visible::before,
-.w4-tooltip-right.w4-tooltip-open::before {
+.w4-tooltip-right.w4-tooltip-open::before,
+.w4-tooltip-right[data-w4-state~="open"]::before {
   transform: translateY(-50%) translateX(0);
 }
 
@@ -154,3 +160,30 @@
 .w4-tooltip.w4-variant-warning::before { background-color: var(--w4-warning); color: var(--w4-warning-content); }
 .w4-tooltip.w4-variant-error::before { background-color: var(--w4-error); color: var(--w4-error-content); }
 .w4-tooltip.w4-variant-neutral::before { background-color: var(--w4-neutral); color: var(--w4-neutral-content); }
+
+/* ==========================================================================
+   States & Modifiers (TooltipComponentState Enum)
+   ========================================================================== */
+
+.w4-tooltip-hidden,
+.w4-tooltip[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-tooltip-disabled,
+.w4-tooltip[data-w4-state~="disabled"] {
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+/* Ensure disabled tooltips don't show the bubble even if forced open */
+.w4-tooltip-disabled::before,
+.w4-tooltip[data-w4-state~="disabled"]::before {
+  display: none !important;
+}
+
+.w4-tooltip-active::before,
+.w4-tooltip[data-w4-state~="active"]::before {
+  z-index: 1000; /* Ensure active tooltip is above others */
+}

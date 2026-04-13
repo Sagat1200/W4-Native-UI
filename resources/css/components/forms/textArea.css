@@ -30,7 +30,9 @@
    INTERACTION STATES
    ---------------------------------- */
 .w4-textarea:focus,
-.w4-textarea:focus-visible {
+.w4-textarea:focus-visible,
+.w4-textarea-focus,
+.w4-textarea[data-w4-state~="focus"] {
   outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-base-content)) / var(--w4-focus-ring-opacity));
   outline-offset: var(--w4-focus-ring-offset);
   border-color: hsl(var(--w4-focus-ring-color, var(--w4-base-content)));
@@ -79,7 +81,9 @@
   --w4-textarea-border-color: transparent;
 }
 .w4-textarea-ghost:focus,
-.w4-textarea-ghost:focus-visible {
+.w4-textarea-ghost:focus-visible,
+.w4-textarea-ghost.w4-textarea-focus,
+.w4-textarea-ghost[data-w4-state~="focus"] {
   --w4-textarea-bg: hsl(var(--w4-base-content) / 0.05);
 }
 

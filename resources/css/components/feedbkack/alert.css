@@ -124,16 +124,26 @@
 }
 
 /* ----------------------------------
-   STATES & MODIFIERS
+   STATES & MODIFIERS (AlertComponentState Enum)
    ---------------------------------- */
 .w4-alert-hidden,
-.w4-alert[data-w4-state~="hidden"] {
-  display: none;
+.w4-alert[data-w4-state~="hidden"],
+.w4-alert-dismissed,
+.w4-alert[data-w4-state~="dismissed"] {
+  display: none !important;
 }
 
 .w4-alert-disabled,
 .w4-alert[data-w4-state~="disabled"] {
-  opacity: var(--w4-disabled-opacity, 0.5);
-  pointer-events: none;
+  opacity: var(--w4-disabled-opacity, 0.5) !important;
+  pointer-events: none !important;
   filter: grayscale(1);
+}
+
+.w4-alert-active,
+.w4-alert[data-w4-state~="active"] {
+  /* Active alerts get a slightly stronger emphasis */
+  box-shadow: var(--w4-alert-shadow, var(--w4-shadow-md));
+  transform: scale(1.01);
+  z-index: 10;
 }
