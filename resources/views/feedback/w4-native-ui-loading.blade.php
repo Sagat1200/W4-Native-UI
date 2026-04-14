@@ -215,6 +215,74 @@
                     <span class="preview-label-desc">Infinity</span>
                 </div>
             </div>
+
+            <!-- Variantes Empresariales (Corporate Shapes) -->
+            <h3 class="section-title"
+                style="border-color: hsl(var(--w4-primary)); font-size: 1.25rem; margin-block-start: 2rem;">Variantes
+                Empresariales</h3>
+            <div class="preview-group"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1.5rem; justify-items: center;">
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-pulse"></span>
+                    <span class="preview-label-desc">Pulse</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-eclipse"></span>
+                    <span class="preview-label-desc">Eclipse</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-radar"></span>
+                    <span class="preview-label-desc">Radar</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-square"></span>
+                    <span class="preview-label-desc">Square</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-diamond"></span>
+                    <span class="preview-label-desc">Diamond</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-wave"></span>
+                    <span class="preview-label-desc">Wave</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-clock"></span>
+                    <span class="preview-label-desc">Clock</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-hex"></span>
+                    <span class="preview-label-desc">Hexagon</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-dual-ring"></span>
+                    <span class="preview-label-desc">Dual Ring</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-orbit"></span>
+                    <span class="preview-label-desc">Orbit</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-crescent"></span>
+                    <span class="preview-label-desc">Crescent</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-steps"></span>
+                    <span class="preview-label-desc">Steps</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-scan"></span>
+                    <span class="preview-label-desc">Scan</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-cross"></span>
+                    <span class="preview-label-desc">Cross</span>
+                </div>
+                <div class="preview-item">
+                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-corner"></span>
+                    <span class="preview-label-desc">Corner</span>
+                </div>
+            </div>
         </section>
 
         <section>

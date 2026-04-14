@@ -3308,8 +3308,8 @@ html[data-theme] body {
 
 /* Infinity */
 .w4-loading-infinity {
-  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_2X0S%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_1sRk%7Banimation-direction:reverse%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%3C/style%3E%3Cpath d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z' opacity='.2' fill='currentColor'/%3E%3Cpath d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z' class='spinner_2X0S' fill='currentColor' stroke='currentColor' stroke-width='1.5' stroke-dasharray='15 150' stroke-linecap='round'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_2X0S%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_1sRk%7Banimation-direction:reverse%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%3C/style%3E%3Cpath d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z' opacity='.2' fill='currentColor'/%3E%3Cpath d='M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z' class='spinner_2X0S' fill='currentColor' stroke='currentColor' stroke-width='1.5' stroke-dasharray='15 150' stroke-linecap='round'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E%3Cpath fill='none' stroke='black' stroke-width='10' stroke-dasharray='205.271142578125 51.317785644531256' d='M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z' stroke-linecap='round' style='transform:scale(0.8);transform-origin:50px 50px'%3E%3Canimate attributeName='stroke-dashoffset' repeatCount='indefinite' dur='1s' keyTimes='0;1' values='0;256.58892822265625'/%3E%3C/path%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E%3Cpath fill='none' stroke='black' stroke-width='10' stroke-dasharray='205.271142578125 51.317785644531256' d='M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z' stroke-linecap='round' style='transform:scale(0.8);transform-origin:50px 50px'%3E%3Canimate attributeName='stroke-dashoffset' repeatCount='indefinite' dur='1s' keyTimes='0;1' values='0;256.58892822265625'/%3E%3C/path%3E%3C/svg%3E");
 }
 
 /* ----------------------------------
@@ -3353,6 +3353,99 @@ html[data-theme] body {
 .w4-loading[data-w4-state~="active"] {
   /* Give an active loading spinner extra emphasis */
   filter: brightness(1.2) drop-shadow(0 0 4px currentColor);
+}
+
+/* ----------------------------------
+   BUSINESS SHAPE VARIANTS
+   ---------------------------------- */
+/* Pulse */
+.w4-loading-pulse {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%270%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27r%27 calcMode=%27spline%27 values=%270%3B11%27 keyTimes=%270%3B1%27 dur=%271.2s%27 keySplines=%27.52%2C.6%2C.25%2C.99%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27opacity%27 calcMode=%27spline%27 values=%271%3B0%27 keyTimes=%270%3B1%27 dur=%271.2s%27 keySplines=%27.52%2C.6%2C.25%2C.99%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%270%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27r%27 calcMode=%27spline%27 values=%270%3B11%27 keyTimes=%270%3B1%27 dur=%271.2s%27 keySplines=%27.52%2C.6%2C.25%2C.99%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27opacity%27 calcMode=%27spline%27 values=%271%3B0%27 keyTimes=%270%3B1%27 dur=%271.2s%27 keySplines=%27.52%2C.6%2C.25%2C.99%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3C/svg%3E");
+}
+
+/* Eclipse */
+.w4-loading-eclipse {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2710%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-dasharray=%2740 60%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2710%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-dasharray=%2740 60%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3C/svg%3E");
+}
+
+/* Radar */
+.w4-loading-radar {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2710%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27%3E%3Canimate attributeName=%27r%27 values=%270%3B10%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27opacity%27 values=%271%3B0%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2710%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27%3E%3Canimate attributeName=%27r%27 values=%270%3B10%27 dur=%271.5s%27 begin=%270.75s%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27opacity%27 values=%271%3B0%27 dur=%271.5s%27 begin=%270.75s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2710%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27%3E%3Canimate attributeName=%27r%27 values=%270%3B10%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27opacity%27 values=%271%3B0%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2710%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27%3E%3Canimate attributeName=%27r%27 values=%270%3B10%27 dur=%271.5s%27 begin=%270.75s%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27opacity%27 values=%271%3B0%27 dur=%271.5s%27 begin=%270.75s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3C/svg%3E");
+}
+
+/* Square */
+.w4-loading-square {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Crect x=%276%27 y=%276%27 width=%2712%27 height=%2712%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%272s%27 repeatCount=%27indefinite%27/%3E%3C/rect%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Crect x=%276%27 y=%276%27 width=%2712%27 height=%2712%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%272s%27 repeatCount=%27indefinite%27/%3E%3C/rect%3E%3C/svg%3E");
+}
+
+/* Diamond */
+.w4-loading-diamond {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Crect x=%277%27 y=%277%27 width=%2710%27 height=%2710%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 transform=%27rotate%2845 12 12%29%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%2745 12 12%27 to=%27405 12 12%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/rect%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Crect x=%277%27 y=%277%27 width=%2710%27 height=%2710%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 transform=%27rotate%2845 12 12%29%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%2745 12 12%27 to=%27405 12 12%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/rect%3E%3C/svg%3E");
+}
+
+/* Wave */
+.w4-loading-wave {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Crect x=%274%27 y=%278%27 width=%273%27 height=%278%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27y%27 values=%278%3B4%3B8%27 dur=%271s%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27height%27 values=%278%3B16%3B8%27 dur=%271s%27 repeatCount=%27indefinite%27/%3E%3C/rect%3E%3Crect x=%2710.5%27 y=%278%27 width=%273%27 height=%278%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27y%27 values=%278%3B4%3B8%27 dur=%271s%27 begin=%270.2s%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27height%27 values=%278%3B16%3B8%27 dur=%271s%27 begin=%270.2s%27 repeatCount=%27indefinite%27/%3E%3C/rect%3E%3Crect x=%2717%27 y=%278%27 width=%273%27 height=%278%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27y%27 values=%278%3B4%3B8%27 dur=%271s%27 begin=%270.4s%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27height%27 values=%278%3B16%3B8%27 dur=%271s%27 begin=%270.4s%27 repeatCount=%27indefinite%27/%3E%3C/rect%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Crect x=%274%27 y=%278%27 width=%273%27 height=%278%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27y%27 values=%278%3B4%3B8%27 dur=%271s%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27height%27 values=%278%3B16%3B8%27 dur=%271s%27 repeatCount=%27indefinite%27/%3E%3C/rect%3E%3Crect x=%2710.5%27 y=%278%27 width=%273%27 height=%278%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27y%27 values=%278%3B4%3B8%27 dur=%271s%27 begin=%270.2s%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27height%27 values=%278%3B16%3B8%27 dur=%271s%27 begin=%270.2s%27 repeatCount=%27indefinite%27/%3E%3C/rect%3E%3Crect x=%2717%27 y=%278%27 width=%273%27 height=%278%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27y%27 values=%278%3B4%3B8%27 dur=%271s%27 begin=%270.4s%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27height%27 values=%278%3B16%3B8%27 dur=%271s%27 begin=%270.4s%27 repeatCount=%27indefinite%27/%3E%3C/rect%3E%3C/svg%3E");
+}
+
+/* Clock */
+.w4-loading-clock {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2710%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27/%3E%3Cline x1=%2712%27 y1=%2712%27 x2=%2712%27 y2=%276%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%272s%27 repeatCount=%27indefinite%27/%3E%3C/line%3E%3Cline x1=%2712%27 y1=%2712%27 x2=%2716%27 y2=%2712%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%2712s%27 repeatCount=%27indefinite%27/%3E%3C/line%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2710%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27/%3E%3Cline x1=%2712%27 y1=%2712%27 x2=%2712%27 y2=%276%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%272s%27 repeatCount=%27indefinite%27/%3E%3C/line%3E%3Cline x1=%2712%27 y1=%2712%27 x2=%2716%27 y2=%2712%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%2712s%27 repeatCount=%27indefinite%27/%3E%3C/line%3E%3C/svg%3E");
+}
+
+/* Hex */
+.w4-loading-hex {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpolygon points=%2712%2C2 20.66%2C7 20.66%2C17 12%2C22 3.34%2C17 3.34%2C7%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%272.5s%27 repeatCount=%27indefinite%27/%3E%3C/polygon%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpolygon points=%2712%2C2 20.66%2C7 20.66%2C17 12%2C22 3.34%2C17 3.34%2C7%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%272.5s%27 repeatCount=%27indefinite%27/%3E%3C/polygon%3E%3C/svg%3E");
+}
+
+/* Dual-ring */
+.w4-loading-dual-ring {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2710%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-dasharray=%2716 16%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%276%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-dasharray=%2710 10%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%27360 12 12%27 to=%270 12 12%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2710%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-dasharray=%2716 16%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%276%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-dasharray=%2710 10%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%27360 12 12%27 to=%270 12 12%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3C/svg%3E");
+}
+
+/* Orbit */
+.w4-loading-orbit {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%273%27 fill=%27currentColor%27/%3E%3Ccircle cx=%2712%27 cy=%272%27 r=%272%27 fill=%27currentColor%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%273%27 fill=%27currentColor%27/%3E%3Ccircle cx=%2712%27 cy=%272%27 r=%272%27 fill=%27currentColor%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3C/svg%3E");
+}
+
+/* Crescent */
+.w4-loading-crescent {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M12 2 A10 10 0 0 0 12 22 A8 8 0 0 1 12 2%27 fill=%27currentColor%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271s%27 repeatCount=%27indefinite%27/%3E%3C/path%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M12 2 A10 10 0 0 0 12 22 A8 8 0 0 1 12 2%27 fill=%27currentColor%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271s%27 repeatCount=%27indefinite%27/%3E%3C/path%3E%3C/svg%3E");
+}
+
+/* Steps */
+.w4-loading-steps {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%274%27 cy=%2712%27 r=%273%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27opacity%27 values=%270%3B1%3B0%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%273%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27opacity%27 values=%270%3B1%3B0%27 dur=%271.5s%27 begin=%270.5s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3Ccircle cx=%2720%27 cy=%2712%27 r=%273%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27opacity%27 values=%270%3B1%3B0%27 dur=%271.5s%27 begin=%271s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Ccircle cx=%274%27 cy=%2712%27 r=%273%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27opacity%27 values=%270%3B1%3B0%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%273%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27opacity%27 values=%270%3B1%3B0%27 dur=%271.5s%27 begin=%270.5s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3Ccircle cx=%2720%27 cy=%2712%27 r=%273%27 fill=%27currentColor%27%3E%3Canimate attributeName=%27opacity%27 values=%270%3B1%3B0%27 dur=%271.5s%27 begin=%271s%27 repeatCount=%27indefinite%27/%3E%3C/circle%3E%3C/svg%3E");
+}
+
+/* Scan */
+.w4-loading-scan {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Crect x=%272%27 y=%272%27 width=%2720%27 height=%2720%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27/%3E%3Cline x1=%272%27 y1=%272%27 x2=%2722%27 y2=%272%27 stroke=%27currentColor%27 stroke-width=%272%27%3E%3Canimate attributeName=%27y1%27 values=%272%3B22%3B2%27 dur=%272s%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27y2%27 values=%272%3B22%3B2%27 dur=%272s%27 repeatCount=%27indefinite%27/%3E%3C/line%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Crect x=%272%27 y=%272%27 width=%2720%27 height=%2720%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27/%3E%3Cline x1=%272%27 y1=%272%27 x2=%2722%27 y2=%272%27 stroke=%27currentColor%27 stroke-width=%272%27%3E%3Canimate attributeName=%27y1%27 values=%272%3B22%3B2%27 dur=%272s%27 repeatCount=%27indefinite%27/%3E%3Canimate attributeName=%27y2%27 values=%272%3B22%3B2%27 dur=%272s%27 repeatCount=%27indefinite%27/%3E%3C/line%3E%3C/svg%3E");
+}
+
+/* Cross */
+.w4-loading-cross {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cline x1=%274%27 y1=%2712%27 x2=%2720%27 y2=%2712%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/line%3E%3Cline x1=%2712%27 y1=%274%27 x2=%2712%27 y2=%2720%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/line%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cline x1=%274%27 y1=%2712%27 x2=%2720%27 y2=%2712%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/line%3E%3Cline x1=%2712%27 y1=%274%27 x2=%2712%27 y2=%2720%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271.5s%27 repeatCount=%27indefinite%27/%3E%3C/line%3E%3C/svg%3E");
+}
+
+/* Corner */
+.w4-loading-corner {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M4 4 L20 4 L20 20%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27square%27 stroke-linejoin=%27miter%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271.2s%27 repeatCount=%27indefinite%27/%3E%3C/path%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M4 4 L20 4 L20 20%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27square%27 stroke-linejoin=%27miter%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271.2s%27 repeatCount=%27indefinite%27/%3E%3C/path%3E%3C/svg%3E");
 }
 
 /* =========================================
