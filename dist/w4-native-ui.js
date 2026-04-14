@@ -6,7 +6,7 @@
  * =========================================
  */
 
-export default class W4Alert {
+class W4Alert {
     static init() {
         document.addEventListener('click', this.handleClick.bind(this));
     }
@@ -102,7 +102,7 @@ export default class W4Alert {
  * =========================================
  */
 
-export default class W4Skeleton {
+class W4Skeleton {
     static init() {
         // Skeletons are primarily visual, but we can provide utility
         // functions here for removing them dynamically once data loads.
@@ -152,7 +152,7 @@ export default class W4Skeleton {
  * =========================================
  */
 
-export default class W4Toast {
+class W4Toast {
     static init() {
         document.addEventListener('click', this.handleClick.bind(this));
         
@@ -257,7 +257,7 @@ export default class W4Toast {
  * =========================================
  */
 
-export default class W4Checkbox {
+class W4Checkbox {
     /**
      * Initializes checkbox specific logic.
      * Mainly handles the indeterminate state which cannot be set via pure HTML/CSS.
@@ -295,7 +295,7 @@ export default class W4Checkbox {
  * =========================================
  */
 
-export default class W4FieldError {
+class W4FieldError {
     static init(root = document) {
         // Placeholder for specific field error logic 
         // e.g. integrating with JS validation libraries
@@ -310,7 +310,7 @@ export default class W4FieldError {
  * =========================================
  */
 
-export default class W4HelperText {
+class W4HelperText {
     static init(root = document) {
         // Placeholder for specific helper text logic 
     }
@@ -324,7 +324,7 @@ export default class W4HelperText {
  * =========================================
  */
 
-export default class W4Input {
+class W4Input {
     static init(root = document) {
         // Placeholder for specific input logic 
         // e.g. character counting, input masks, custom formatting
@@ -339,7 +339,7 @@ export default class W4Input {
  * =========================================
  */
 
-export default class W4Radio {
+class W4Radio {
     static init(root = document) {
         // Placeholder for specific radio logic 
         // e.g. group state management if custom visual feedback is needed
@@ -354,7 +354,7 @@ export default class W4Radio {
  * =========================================
  */
 
-export default class W4Select {
+class W4Select {
     static init(root = document) {
         // Placeholder for specific select logic 
         // e.g. handling custom dropdown behavior for complex selects
@@ -369,7 +369,7 @@ export default class W4Select {
  * =========================================
  */
 
-export default class W4Textarea {
+class W4Textarea {
     static init(root = document) {
         // Auto-resize logic
         const textareas = root.querySelectorAll('textarea.w4-textarea[data-w4-auto-resize="true"]');
@@ -406,9 +406,210 @@ export default class W4Textarea {
  * =========================================
  */
 
-export default class W4Toggle {
+class W4Toggle {
     static init(root = document) {
         // Placeholder for specific toggle logic 
+    }
+}
+
+/**
+ * =========================================
+ * MODAL COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * Interactive System
+ * =========================================
+ */
+
+class W4Modal {
+    /**
+     * Initializes the modal functionality on the document.
+     * Sets up event listeners for toggling modals and handling accessibility.
+     */
+    static init() {
+        document.addEventListener('click', this.handleClick.bind(this));
+        document.addEventListener('keydown', this.handleKeydown.bind(this));
+    }
+
+    /**
+     * Handles global click events to open/close modals.
+     * @param {MouseEvent} event 
+     */
+    static handleClick(event) {
+        const target = event.target;
+
+        // 1. Open modal via data attribute trigger
+        const trigger = target.closest('[data-w4-toggle="modal"]');
+        if (trigger) {
+            const targetId = trigger.getAttribute('data-w4-target');
+            if (targetId) {
+                const modal = document.getElementById(targetId);
+                if (modal) {
+                    event.preventDefault();
+                    this.open(modal);
+                }
+            }
+            return;
+        }
+
+        // 2. Close modal via dismiss button inside the modal
+        const dismiss = target.closest('[data-w4-dismiss="modal"]');
+        if (dismiss) {
+            const modal = dismiss.closest('.w4-modal');
+            if (modal) {
+                event.preventDefault();
+                this.close(modal);
+            }
+            return;
+        }
+
+        // 3. Close modal by clicking on the backdrop
+        if (target.classList.contains('w4-modal') && target.classList.contains('w4-modal-open')) {
+            // Check if it's explicitly not supposed to close on backdrop click
+            if (target.getAttribute('data-w4-backdrop') !== 'static') {
+                this.close(target);
+            }
+        }
+    }
+
+    /**
+     * Handles global keydown events (e.g., Escape key).
+     * @param {KeyboardEvent} event 
+     */
+    static handleKeydown(event) {
+        if (event.key === 'Escape') {
+            const openModals = document.querySelectorAll('.w4-modal.w4-modal-open');
+            if (openModals.length > 0) {
+                // Get the top-most modal
+                const topModal = openModals[openModals.length - 1];
+                if (topModal.getAttribute('data-w4-backdrop') !== 'static') {
+                    this.close(topModal);
+                }
+            }
+        }
+    }
+
+    /**
+     * Opens a specific modal element.
+     * @param {HTMLElement} modal 
+     */
+    static open(modal) {
+        if (!modal) return;
+        
+        // Remove closing class if it was in the middle of closing
+        modal.classList.remove('w4-modal-closing');
+        
+        // Add open class
+        modal.classList.add('w4-modal-open');
+        modal.setAttribute('aria-hidden', 'false');
+        modal.setAttribute('open', ''); // For native dialog support if used
+
+        // Dispatch custom event
+        modal.dispatchEvent(new CustomEvent('w4.modal.opened', { bubbles: true }));
+
+        // Optional: lock body scroll
+        document.body.style.overflow = 'hidden';
+    }
+
+    /**
+     * Closes a specific modal element with animation.
+     * @param {HTMLElement} modal 
+     */
+    static close(modal) {
+        if (!modal || !modal.classList.contains('w4-modal-open')) return;
+
+        // Apply closing class to trigger CSS animation
+        modal.classList.add('w4-modal-closing');
+
+        // Wait for CSS animation to finish before actually hiding
+        // The transition in modal.css is defined via var(--w4-transition-normal), typically 0.2s or 0.3s.
+        // We'll listen to transitionend, but provide a fallback timeout.
+        
+        const finishClose = () => {
+            modal.classList.remove('w4-modal-open', 'w4-modal-closing');
+            modal.setAttribute('aria-hidden', 'true');
+            modal.removeAttribute('open');
+            
+            // Dispatch custom event
+            modal.dispatchEvent(new CustomEvent('w4.modal.closed', { bubbles: true }));
+
+            // Check if there are other open modals before unlocking body scroll
+            const otherOpenModals = document.querySelectorAll('.w4-modal.w4-modal-open');
+            if (otherOpenModals.length === 0) {
+                document.body.style.overflow = '';
+            }
+            
+            modal.removeEventListener('transitionend', handleTransitionEnd);
+        };
+
+        const handleTransitionEnd = (e) => {
+            // Ensure we are catching the opacity or transform transition on the modal itself
+            if (e.target === modal || e.target.classList.contains('w4-modal-box')) {
+                finishClose();
+            }
+        };
+
+        modal.addEventListener('transitionend', handleTransitionEnd);
+        
+        // Fallback in case transitionend fails to fire (e.g. if transition is 0s)
+        setTimeout(() => {
+            if (modal.classList.contains('w4-modal-closing')) {
+                finishClose();
+            }
+        }, 350); // Safe threshold slightly above standard transition time
+    }
+}
+
+/**
+ * =========================================
+ * TOOLTIP COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * Interactive System
+ * =========================================
+ */
+
+class W4Tooltip {
+    static init() {
+        // We use event delegation on the document to handle touch events for mobile tooltips
+        document.addEventListener('touchstart', this.handleTouchStart.bind(this));
+        document.addEventListener('click', this.handleClickOutside.bind(this));
+    }
+
+    /**
+     * Handles touch events to manually toggle tooltips on mobile devices
+     * where CSS :hover doesn't exist naturally.
+     * @param {TouchEvent} e 
+     */
+    static handleTouchStart(e) {
+        const tooltip = e.target.closest('.w4-tooltip');
+        
+        if (tooltip) {
+            const isActive = tooltip.classList.contains('w4-tooltip-active');
+            
+            // Close all other active tooltips
+            this.closeAll();
+
+            if (!isActive) {
+                tooltip.classList.add('w4-tooltip-active');
+            }
+        }
+    }
+
+    /**
+     * Closes tooltips when clicking outside of them
+     * @param {MouseEvent} e 
+     */
+    static handleClickOutside(e) {
+        if (!e.target.closest('.w4-tooltip')) {
+            this.closeAll();
+        }
+    }
+
+    /**
+     * Closes all active tooltips on the page
+     */
+    static closeAll() {
+        const activeTooltips = document.querySelectorAll('.w4-tooltip.w4-tooltip-active');
+        activeTooltips.forEach(t => t.classList.remove('w4-tooltip-active'));
     }
 }
 
@@ -420,7 +621,7 @@ export default class W4Toggle {
  * =========================================
  */
 
-export default class W4Card {
+class W4Card {
     static init(root = document) {
         // Placeholder for specific card logic
     }
@@ -434,7 +635,7 @@ export default class W4Card {
  * =========================================
  */
 
-export default class W4Container {
+class W4Container {
     static init(root = document) {
         // Placeholder for specific container logic
     }
@@ -448,7 +649,7 @@ export default class W4Container {
  * =========================================
  */
 
-export default class W4Divider {
+class W4Divider {
     static init(root = document) {
         // Placeholder for specific divider logic
     }
@@ -462,7 +663,7 @@ export default class W4Divider {
  * =========================================
  */
 
-export default class W4Grid {
+class W4Grid {
     static init(root = document) {
         // Placeholder for specific grid logic
     }
@@ -476,7 +677,7 @@ export default class W4Grid {
  * =========================================
  */
 
-export default class W4Panel {
+class W4Panel {
     static init(root = document) {
         // Placeholder for specific panel logic
     }
@@ -490,7 +691,7 @@ export default class W4Panel {
  * =========================================
  */
 
-export default class W4Section {
+class W4Section {
     static init(root = document) {
         // Placeholder for specific section logic
     }
@@ -504,9 +705,171 @@ export default class W4Section {
  * =========================================
  */
 
-export default class W4Stack {
+class W4Stack {
     static init(root = document) {
         // Placeholder for specific stack logic
+    }
+}
+
+class W4Breadcrumb {
+    /**
+     * Initialize Breadcrumb component logic
+     */
+    static init() {
+        // Base logic for Breadcrumb.
+        // Ready for future custom logic (e.g., collapsible breadcrumbs, scrollable overflow).
+    }
+}
+
+class W4Dropdown {
+    /**
+     * Initialize Dropdown component logic
+     */
+    static init() {
+        this.bindEvents();
+    }
+
+    static bindEvents() {
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', (e) => {
+            const isDropdownClick = e.target.closest('.w4-dropdown');
+            if (!isDropdownClick) {
+                document.querySelectorAll('.w4-dropdown-open').forEach(dropdown => {
+                    dropdown.classList.remove('w4-dropdown-open');
+                });
+            }
+        });
+
+        // Toggle dropdown on click if it has a toggle button
+        document.addEventListener('click', (e) => {
+            const toggleBtn = e.target.closest('[data-w4-toggle="dropdown"]');
+            if (toggleBtn) {
+                const dropdown = toggleBtn.closest('.w4-dropdown');
+                if (dropdown) {
+                    dropdown.classList.toggle('w4-dropdown-open');
+                    // Close others
+                    document.querySelectorAll('.w4-dropdown-open').forEach(other => {
+                        if (other !== dropdown) {
+                            other.classList.remove('w4-dropdown-open');
+                        }
+                    });
+                }
+            }
+        });
+    }
+}
+
+class W4Menu {
+    /**
+     * Initialize Menu component logic
+     */
+    static init() {
+        // Base logic for Menu.
+        // Ready for future custom logic (e.g., active state syncing with router, expandable sub-menus).
+        this.bindEvents();
+    }
+
+    static bindEvents() {
+        // Optional: handle active state switching visually for demonstration
+        document.addEventListener('click', (e) => {
+            const menuItem = e.target.closest('.w4-menu li > a, .w4-menu li > button');
+            if (menuItem && !menuItem.closest('.w4-dropdown')) { // Ignore dropdown menus
+                const menu = menuItem.closest('.w4-menu');
+                if (menu && menu.hasAttribute('data-w4-sync-active')) {
+                    menu.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+                    menuItem.classList.add('active');
+                }
+            }
+        });
+    }
+}
+
+class W4Navbar {
+    /**
+     * Initialize Navbar component logic
+     */
+    static init() {
+        // Base logic for Navbar.
+        // Ready for future custom logic (e.g., scroll transparency transitions, mobile menu toggling).
+    }
+}
+
+class W4Sidebar {
+    /**
+     * Initialize Sidebar component logic
+     */
+    static init() {
+        this.bindEvents();
+    }
+
+    static bindEvents() {
+        // Handle toggling the sidebar via data attributes
+        document.addEventListener('click', (e) => {
+            const toggleBtn = e.target.closest('[data-w4-toggle="sidebar"]');
+            if (toggleBtn) {
+                const targetId = toggleBtn.getAttribute('data-w4-target');
+                const sidebar = targetId 
+                    ? document.getElementById(targetId) 
+                    : toggleBtn.closest('.w4-sidebar') || document.querySelector('.w4-sidebar');
+                
+                if (sidebar) {
+                    sidebar.classList.toggle('w4-sidebar-open');
+                }
+            }
+            
+            // Handle closing when clicking a dismiss button inside the sidebar
+            const dismissBtn = e.target.closest('[data-w4-dismiss="sidebar"]');
+            if (dismissBtn) {
+                const sidebar = dismissBtn.closest('.w4-sidebar');
+                if (sidebar) {
+                    sidebar.classList.remove('w4-sidebar-open');
+                }
+            }
+        });
+    }
+}
+
+class W4Tab {
+    /**
+     * Initialize Tab component logic
+     */
+    static init() {
+        this.bindEvents();
+    }
+
+    static bindEvents() {
+        // Handle tab switching
+        document.addEventListener('click', (e) => {
+            const tab = e.target.closest('.w4-tab');
+            if (tab && !tab.hasAttribute('disabled')) {
+                const tabGroup = tab.closest('.w4-tabs');
+                if (tabGroup) {
+                    // Remove active from all siblings
+                    tabGroup.querySelectorAll('.w4-tab').forEach(t => t.classList.remove('w4-tab-active'));
+                    // Add active to clicked tab
+                    tab.classList.add('w4-tab-active');
+
+                    // If tabs are linked to panels via data-w4-target
+                    const targetId = tab.getAttribute('data-w4-target');
+                    if (targetId) {
+                        const targetPanel = document.getElementById(targetId);
+                        if (targetPanel) {
+                            // Find all sibling panels and hide them
+                            const panelGroup = targetPanel.parentElement;
+                            if (panelGroup) {
+                                Array.from(panelGroup.children).forEach(sibling => {
+                                    if (sibling.hasAttribute('data-w4-tab-panel')) {
+                                        sibling.style.display = 'none';
+                                    }
+                                });
+                            }
+                            // Show target panel
+                            targetPanel.style.display = '';
+                        }
+                    }
+                }
+            }
+        });
     }
 }
 
@@ -518,7 +881,7 @@ export default class W4Stack {
  * =========================================
  */
 
-export default class W4Button {
+class W4Button {
     static init(root = document) {
         // Visual press feedback is handled by core.js centrally
         // This file serves as a placeholder for any button-specific future logic
@@ -534,7 +897,7 @@ export default class W4Button {
  * =========================================
  */
 
-export default class W4Heading {
+class W4Heading {
     static init(root = document) {
         // Placeholder for specific heading logic
     }
@@ -548,7 +911,7 @@ export default class W4Heading {
  * =========================================
  */
 
-export default class W4Icon {
+class W4Icon {
     static init(root = document) {
         // Placeholder for specific icon logic (e.g. dynamic SVG fetching)
     }
@@ -562,7 +925,7 @@ export default class W4Icon {
  * =========================================
  */
 
-export default class W4IconButton {
+class W4IconButton {
     static init(root = document) {
         // Visual press feedback is handled by core.js centrally
         // This file serves as a placeholder for specific icon-button logic
@@ -577,7 +940,7 @@ export default class W4IconButton {
  * =========================================
  */
 
-export default class W4Label {
+class W4Label {
     static init(root = document) {
         // Placeholder for specific label logic
     }
@@ -591,7 +954,7 @@ export default class W4Label {
  * =========================================
  */
 
-export default class W4Link {
+class W4Link {
     static init(root = document) {
         // Placeholder for specific link logic
     }
@@ -605,7 +968,7 @@ export default class W4Link {
  * =========================================
  */
 
-export default class W4Text {
+class W4Text {
     static init(root = document) {
         // Placeholder for specific text logic
     }

@@ -54,6 +54,7 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/presets/sunset.css',
             $root . '/resources/css/presets/cyberpunk.css',
             $root . '/resources/css/properties/w4-components.css',
+            // UI
             $root . '/resources/css/components/ui/button.css',
             $root . '/resources/css/components/ui/heading.css',
             $root . '/resources/css/components/ui/icon.css',
@@ -61,6 +62,7 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/components/ui/label.css',
             $root . '/resources/css/components/ui/link.css',
             $root . '/resources/css/components/ui/text.css',
+            // Layout
             $root . '/resources/css/components/layout/card.css',
             $root . '/resources/css/components/layout/container.css',
             $root . '/resources/css/components/layout/divider.css',
@@ -68,13 +70,21 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/components/layout/panel.css',
             $root . '/resources/css/components/layout/section.css',
             $root . '/resources/css/components/layout/stack.css',
-            $root . '/resources/css/components/feedbkack/alert.css',
-            $root . '/resources/css/components/feedbkack/badge.css',
-            $root . '/resources/css/components/feedbkack/loading.css',
-            $root . '/resources/css/components/feedbkack/progess.css',
-            $root . '/resources/css/components/feedbkack/skeleton.css',
-            $root . '/resources/css/components/feedbkack/toast.css',
-            $root . '/resources/css/components/feedbkack/tooltip.css',
+            // Navigation
+            $root . '/resources/css/components/navigation/breadcrumb.css',
+            $root . '/resources/css/components/navigation/dropdown.css',
+            $root . '/resources/css/components/navigation/menu.css',
+            $root . '/resources/css/components/navigation/navbar.css',
+            $root . '/resources/css/components/navigation/tab.css',
+            // Feedback
+            $root . '/resources/css/components/feedback/alert.css',
+            $root . '/resources/css/components/feedback/badge.css',
+            $root . '/resources/css/components/feedback/loading.css',
+            $root . '/resources/css/components/feedback/progress.css',
+            $root . '/resources/css/components/feedback/skeleton.css',
+            $root . '/resources/css/components/feedback/toast.css',
+            $root . '/resources/css/components/feedback/tooltip.css',
+            // Forms
             $root . '/resources/css/components/forms/checkbox.css',
             $root . '/resources/css/components/forms/fieldError.css',
             $root . '/resources/css/components/forms/helperText.css',
@@ -83,6 +93,9 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/components/forms/select.css',
             $root . '/resources/css/components/forms/textArea.css',
             $root . '/resources/css/components/forms/toggle.css',
+            // Interactive
+            $root . '/resources/css/components/interactive/modal.css',
+            $root . '/resources/css/components/interactive/tooltip.css',
         ];
 
         $cssContent = [];
@@ -108,12 +121,14 @@ class BuildNativeUIAssetsCommand extends Command
 
         $jsFiles = [
             $root . '/resources/js/properties/w4-native.js',
+            // Feedback
             $root . '/resources/js/components/feedback/alert.js',
             $root . '/resources/js/components/feedback/badge.js',
             $root . '/resources/js/components/feedback/progress.js',
             $root . '/resources/js/components/feedback/skeleton.js',
             $root . '/resources/js/components/feedback/toast.js',
             $root . '/resources/js/components/feedback/tooltip.js',
+            // Forms
             $root . '/resources/js/components/forms/checkbox.js',
             $root . '/resources/js/components/forms/fieldError.js',
             $root . '/resources/js/components/forms/helperText.js',
@@ -122,6 +137,10 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/js/components/forms/select.js',
             $root . '/resources/js/components/forms/textArea.js',
             $root . '/resources/js/components/forms/toggle.js',
+            // Interactive
+            $root . '/resources/js/components/interactive/modal.js',
+            $root . '/resources/js/components/interactive/tooltip.js',
+            // Layout
             $root . '/resources/js/components/layout/card.js',
             $root . '/resources/js/components/layout/container.js',
             $root . '/resources/js/components/layout/divider.js',
@@ -129,6 +148,14 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/js/components/layout/panel.js',
             $root . '/resources/js/components/layout/section.js',
             $root . '/resources/js/components/layout/stack.js',
+            // Navigation
+            $root . '/resources/js/components/navigation/breadcrumb.js',
+            $root . '/resources/js/components/navigation/dropdown.js',
+            $root . '/resources/js/components/navigation/menu.js',
+            $root . '/resources/js/components/navigation/navbar.js',
+            $root . '/resources/js/components/navigation/sidebar.js',
+            $root . '/resources/js/components/navigation/tab.js',
+            // UI
             $root . '/resources/js/components/ui/button.js',
             $root . '/resources/js/components/ui/heading.js',
             $root . '/resources/js/components/ui/icon.js',
@@ -141,7 +168,14 @@ class BuildNativeUIAssetsCommand extends Command
         $jsContent = [];
         foreach ($jsFiles as $file) {
             if (is_file($file)) {
-                $jsContent[] = trim((string) file_get_contents($file));
+                $content = file_get_contents($file);
+                // Strip imports
+                $content = preg_replace('/^import\s+.*?;/m', '', $content);
+                // Replace "export default class" with "class"
+                $content = preg_replace('/^export\s+default\s+class\s+([A-Za-z0-9_]+)/m', 'class $1', $content);
+                // Replace "export default W4NativeUI;"
+                $content = preg_replace('/^export\s+default\s+[A-Za-z0-9_]+;/m', '', $content);
+                $jsContent[] = trim($content);
             }
         }
 
