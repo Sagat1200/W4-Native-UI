@@ -277,7 +277,7 @@
 
                 <!-- Label Right -->
                 <div
-                    style="display: flex; gap: 0.75rem; align-items: center; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); width: 300px;">
+                    style="display: flex; gap: 0.75rem; align-items: center; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); inline-size: 300px;">
                     <input type="checkbox" id="chk1" class="w4-checkbox w4-checkbox-primary w4-checkbox-md" />
                     <label for="chk1" class="w4-label w4-label-primary w4-label-md" style="cursor: pointer;">Aceptar
                         términos y
@@ -286,7 +286,7 @@
 
                 <!-- Label Left -->
                 <div
-                    style="display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); width: 300px;">
+                    style="display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); inline-size: 300px;">
                     <label for="chk2" class="w4-label w4-label-secondary w4-label-md" style="cursor: pointer;">Recibir
                         notificaciones</label>
                     <input type="checkbox" id="chk2" class="w4-checkbox w4-checkbox-secondary w4-checkbox-md" checked />
@@ -294,7 +294,7 @@
 
                 <!-- Label Required and Error -->
                 <div
-                    style="display: flex; gap: 0.75rem; align-items: center; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); width: 300px; border: 1px solid hsl(var(--w4-error));">
+                    style="display: flex; gap: 0.75rem; align-items: center; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); inline-size: 300px; border: 1px solid hsl(var(--w4-error));">
                     <input type="checkbox" id="chk3"
                         class="w4-checkbox w4-checkbox-error w4-checkbox-md w4-checkbox-invalid" />
                     <label for="chk3" class="w4-label w4-label-md w4-label-error w4-label-required"
