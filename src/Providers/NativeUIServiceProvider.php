@@ -12,6 +12,7 @@ use W4\NativeUI\Services\Provider\Components\Layout\NativeUILayoutService;
 use W4\NativeUI\Services\Provider\Components\UI\NativeUIUIService;
 use W4\NativeUI\Services\Provider\Directives\NativeUIDirectiveService;
 use W4\NativeUI\Services\Provider\Route\NativeUIFeedbackRouteService;
+use W4\NativeUI\Services\Provider\Route\NativeUIFormsRouteService;
 use W4\NativeUI\Services\Provider\Route\NativeUIUIRouteService;
 use W4\NativeUI\Services\Themes\NativeUIThemeService;
 use W4\NativeUI\Support\ThemeManifest;
@@ -67,6 +68,7 @@ class NativeUIServiceProvider extends ServiceProvider
 
         NativeUIUIRouteService::registerRoutes();
         NativeUIFeedbackRouteService::registerRoutes();
+        NativeUIFormsRouteService::registerRoutes();
 
         if ($this->app->runningInConsole()) {
             if (is_file($configPath)) {
