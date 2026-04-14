@@ -398,7 +398,6 @@
     </div>
 
     @NativeUIScripts
-    <script src="../../../dist/w4-native-ui.js"></script>
     @NativeUIInit
     @NativeUILivewire
 

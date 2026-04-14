@@ -26,7 +26,7 @@ class NativeUIServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $configPath = __DIR__ . '/../../config/w4-native.php';
+        $configPath = __DIR__ . '/../../config/w4-native-ui.php';
 
         if (is_file($configPath)) {
             $this->mergeConfigFrom($configPath, 'w4-native-ui');

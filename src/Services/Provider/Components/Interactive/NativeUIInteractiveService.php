@@ -2,6 +2,7 @@
 
 namespace W4\NativeUI\Services\Provider\Components\Interactive;
 
+use W4\NativeUI\Themes\Components\Interactive\ModalTheme;
 use W4\NativeUI\Themes\Components\Interactive\TooltipTheme;
 
 class NativeUIInteractiveService
@@ -13,6 +14,7 @@ class NativeUIInteractiveService
     {
         return [
             'tooltip' => new TooltipTheme(),
+            'modal' => new ModalTheme(),
         ];
     }
 }

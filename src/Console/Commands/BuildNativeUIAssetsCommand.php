@@ -76,6 +76,7 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/components/navigation/menu.css',
             $root . '/resources/css/components/navigation/navbar.css',
             $root . '/resources/css/components/navigation/tab.css',
+            $root . '/resources/css/components/navigation/sidebar.css',
             // Feedback
             $root . '/resources/css/components/feedback/alert.css',
             $root . '/resources/css/components/feedback/badge.css',
@@ -83,7 +84,6 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/components/feedback/progress.css',
             $root . '/resources/css/components/feedback/skeleton.css',
             $root . '/resources/css/components/feedback/toast.css',
-            $root . '/resources/css/components/feedback/tooltip.css',
             // Forms
             $root . '/resources/css/components/forms/checkbox.css',
             $root . '/resources/css/components/forms/fieldError.css',
