@@ -93,7 +93,7 @@
             box-shadow: var(--w4-shadow-sm);
             min-inline-size: 120px;
             text-align: center;
-            width: 100%;
+            inline-size: 100%;
         }
 
         .preview-label-desc {
@@ -264,10 +264,11 @@
         <section>
             <h2 class="section-title" style="border-color: hsl(var(--w4-info))">Integración Dinámica (JS)</h2>
             <div class="preview-group" style="flex-direction: column;">
-                <div class="preview-item" style="margin-bottom: 1rem;">
+                <div class="preview-item" style="margin-block-bottom: 1rem;">
                     <progress id="jsProgressBar" class="w4-progress w4-progress-primary w4-progress-lg" value="0"
                         max="100"></progress>
-                    <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; width: 100%;">
+                    <div
+                        style="display: flex; justify-content: space-between; margin-block-top: 0.5rem; inline-size: 100%;">
                         <span class="w4-text w4-text-sm" style="color: hsl(var(--w4-base-content) / 0.7)">Descargando
                             archivos...</span>
                         <span id="jsProgressText" class="w4-text w4-text-sm" style="font-weight: 700;">0%</span>

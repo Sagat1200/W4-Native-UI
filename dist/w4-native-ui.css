@@ -3615,11 +3615,12 @@ html[data-theme] body {
   block-size: var(--w4-skeleton-height, 1rem);
   
   /* Color & Surface Tokens */
+  /* Incrementado el contraste mezclando con base-content para hacerlo más visible/oscuro */
   background: linear-gradient(
     90deg,
-    hsl(var(--w4-base-200)) 25%,
-    hsl(var(--w4-base-300)) 37%,
-    hsl(var(--w4-base-200)) 63%
+    color-mix(in srgb, hsl(var(--w4-base-200)) 80%, hsl(var(--w4-base-content)) 20%) 25%,
+    color-mix(in srgb, hsl(var(--w4-base-300)) 70%, hsl(var(--w4-base-content)) 30%) 37%,
+    color-mix(in srgb, hsl(var(--w4-base-200)) 80%, hsl(var(--w4-base-content)) 20%) 63%
   );
   background-size: 400% 100%;
 }
