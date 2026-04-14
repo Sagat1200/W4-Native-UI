@@ -8,6 +8,7 @@
   appearance: none;
   -webkit-appearance: none;
   inline-size: 100%;
+  box-sizing: border-box;
   
   /* Morphology Tokens */
   block-size: var(--w4-input-height, var(--w4-control-height-md));

@@ -249,7 +249,7 @@
             </h2>
             <div class="preview-group">
                 <div class="preview-item" style="padding: 2rem;">
-                    <div style="margin-bottom: 1.5rem;">
+                    <div style="margin-block-end: 1.5rem;">
                         <label id="jsInteractiveLabel" class="w4-label w4-label-lg w4-label-primary"
                             data-w4-component="label">
                             Etiqueta Interactiva JS
@@ -257,7 +257,7 @@
                     </div>
 
                     <p
-                        style="font-size: 0.875rem; color: hsl(var(--w4-base-content) / 0.7); margin-bottom: 0.5rem; margin-top: 0;">
+                        style="font-size: 0.875rem; color: hsl(var(--w4-base-content) / 0.7); margin-block-end: 0.5rem; margin-block-start: 0;">
                         Modifica el atributo <code>data-w4-state</code> en tiempo real usando estos botones:
                     </p>
 

@@ -8,6 +8,7 @@
   appearance: none;
   -webkit-appearance: none;
   inline-size: 100%;
+  box-sizing: border-box;
   
   /* Morphology Tokens */
   padding: var(--w4-textarea-padding-y, 0.75rem) var(--w4-textarea-padding-x, var(--w4-control-padding-x-md));
