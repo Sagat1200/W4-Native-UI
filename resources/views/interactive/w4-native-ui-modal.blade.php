@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Modal Lab</title>
     @NativeUIStyles
-    <link rel="stylesheet" href="../../../dist/w4-native-ui.css">
     <style>
         body {
             background-color: hsl(var(--w4-base-200));

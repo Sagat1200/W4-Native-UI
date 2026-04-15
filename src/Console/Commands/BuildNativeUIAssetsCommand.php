@@ -121,6 +121,7 @@ class BuildNativeUIAssetsCommand extends Command
 
         $jsFiles = [
             $root . '/resources/js/properties/w4-native.js',
+            $root . '/resources/js/core.js',
             // Feedback
             $root . '/resources/js/components/feedback/alert.js',
             $root . '/resources/js/components/feedback/badge.js',
