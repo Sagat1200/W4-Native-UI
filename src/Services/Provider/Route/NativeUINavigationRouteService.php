@@ -9,11 +9,11 @@ class NativeUINavigationRouteService
     public static function registerRoutes()
     {
         Route::get('/w4/breadcrumb', function () {
-            return view('w4-native::navigation.w4-native-ui-breadcrumb');
+            return view('w4-native::navigation.w4-native-ui-bread-crumb');
         })->name('w4-native.breadcrumb');
 
         Route::get('/w4/dropdown', function () {
-            return view('w4-native::navigation.w4-native-ui-dropdown');
+            return view('w4-native::navigation.w4-native-ui-drop-down');
         })->name('w4-native.dropdown');
 
         Route::get('/w4/menu', function () {

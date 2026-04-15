@@ -74,6 +74,15 @@
   inset-block-end: 0;
 }
 
+.w4-dropdown-right.w4-dropdown-end .w4-dropdown-content {
+  inset-block-start: 0 !important;
+  inset-block-end: auto !important;
+  inset-inline-start: auto !important;
+  inset-inline-end: calc(100% + var(--w4-spacing-1)) !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+}
+
 /* Sizes (applies to content font size) */
 .w4-dropdown.w4-size-xs .w4-dropdown-content { font-size: var(--w4-text-xs); }
 .w4-dropdown.w4-size-sm .w4-dropdown-content { font-size: var(--w4-text-sm); }

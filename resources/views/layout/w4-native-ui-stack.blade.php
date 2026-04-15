@@ -227,7 +227,8 @@
                     <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
                         <div class="w4-label w4-label-sm w4-label-accent">Center (Horizontal)</div>
                         <div class="stack-preview-box">
-                            <div class="w4-stack w4-stack-horizontal w4-stack-center w4-stack-md" style="height: 100%;">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-center w4-stack-md"
+                                style="block-size: 100%;">
                                 <div class="stack-item stack-item-wide">Item 1</div>
                                 <div class="stack-item stack-item-wide">Item 2</div>
                             </div>
@@ -236,7 +237,8 @@
                     <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
                         <div class="w4-label w4-label-sm w4-label-accent">Center (Vertical)</div>
                         <div class="stack-preview-box">
-                            <div class="w4-stack w4-stack-vertical w4-stack-center w4-stack-md" style="height: 100%;">
+                            <div class="w4-stack w4-stack-vertical w4-stack-center w4-stack-md"
+                                style="block-size: 100%;">
                                 <div class="stack-item stack-item-wide">Item 1</div>
                                 <div class="stack-item stack-item-wide">Item 2</div>
                             </div>
@@ -246,7 +248,7 @@
             </div>
         </section>
 
-        <section class="w4-section w4-section-md w4-section-base-100">
+        <section class="w4-section w4-section-md w4-section-base-100 w4-section-primary">
             <h2 class="section-title" style="border-color: hsl(var(--w4-info));">States</h2>
             <div class="demo-zone">
                 <div class="demo-grid">

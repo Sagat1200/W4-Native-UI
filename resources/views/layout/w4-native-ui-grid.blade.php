@@ -146,24 +146,24 @@
             <h2 class="section-title">Column Modifiers</h2>
             <div class="demo-zone">
                 <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-primary">`w4-grid-1`</div>
+                    <div class="w4-label w4-label-sm">`w4-grid-1`</div>
                     <div class="w4-grid w4-grid-1 w4-grid-md">
                         <div class="grid-item">
-                            <p class="w4-text w4-text-primary">1</p>
+                            1
                         </div>
                     </div>
                 </div>
                 <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-primary">`w4-grid-2`</div>
+                    <div class="w4-label w4-label-sm">`w4-grid-2`</div>
                     <div class="w4-grid w4-grid-2 w4-grid-md">
                         <div class="grid-item">
-                            <p class="w4-text w4-text-primary">1</p>
+                            1
                         </div>
                         <div class="grid-item">2</div>
                     </div>
                 </div>
                 <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-primary">`w4-grid-3`</div>
+                    <div class="w4-label w4-label-sm">`w4-grid-3`</div>
                     <div class="w4-grid w4-grid-3 w4-grid-md">
                         <div class="grid-item">1</div>
                         <div class="grid-item">2</div>
@@ -171,7 +171,7 @@
                     </div>
                 </div>
                 <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-primary">`w4-grid-4`</div>
+                    <div class="w4-label w4-label-sm">`w4-grid-4`</div>
                     <div class="w4-grid w4-grid-4 w4-grid-md">
                         <div class="grid-item">1</div>
                         <div class="grid-item">2</div>
@@ -180,7 +180,7 @@
                     </div>
                 </div>
                 <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-primary">`w4-grid-6`</div>
+                    <div class="w4-label w4-label-sm">`w4-grid-6`</div>
                     <div class="w4-grid w4-grid-6 w4-grid-sm">
                         <div class="grid-item">1</div>
                         <div class="grid-item">2</div>
@@ -191,7 +191,7 @@
                     </div>
                 </div>
                 <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-primary">`w4-grid-12`</div>
+                    <div class="w4-label w4-label-sm">`w4-grid-12`</div>
                     <div class="w4-grid w4-grid-12 w4-grid-xs">
                         <div class="grid-item">1</div>
                         <div class="grid-item">2</div>
@@ -213,34 +213,34 @@
         <section>
             <h2 class="section-title" style="border-color: hsl(var(--w4-secondary));">Gap Sizes</h2>
             <div class="demo-zone">
-                <div class="w4-card w4-card-bordered-primary w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-secondary">none / xs / sm / md / lg / xl</div>
-                    <div class="w4-grid w4-grid-3 w4-grid-none w4-grid-bordered-primary">
+                <div class="w4-card w4-card-base-100 w4-card-sm w4-card-body">
+                    <div class="w4-label w4-label-sm">none / xs / sm / md / lg / xl</div>
+                    <div class="w4-grid w4-grid-3 w4-grid-none">
                         <div class="grid-item">none</div>
                         <div class="grid-item">none</div>
                         <div class="grid-item">none</div>
                     </div>
-                    <div class="w4-grid w4-grid-3 w4-grid-xs w4-grid-bordered-primary">
+                    <div class="w4-grid w4-grid-3 w4-grid-xs">
                         <div class="grid-item">xs</div>
                         <div class="grid-item">xs</div>
                         <div class="grid-item">xs</div>
                     </div>
-                    <div class="w4-grid w4-grid-3 w4-grid-sm w4-grid-bordered-primary">
+                    <div class="w4-grid w4-grid-3 w4-grid-sm">
                         <div class="grid-item">sm</div>
                         <div class="grid-item">sm</div>
                         <div class="grid-item">sm</div>
                     </div>
-                    <div class="w4-grid w4-grid-3 w4-grid-md w4-grid-bordered-primary">
+                    <div class="w4-grid w4-grid-3 w4-grid-md">
                         <div class="grid-item">md</div>
                         <div class="grid-item">md</div>
                         <div class="grid-item">md</div>
                     </div>
-                    <div class="w4-grid w4-grid-3 w4-grid-lg w4-grid-bordered-primary">
+                    <div class="w4-grid w4-grid-3 w4-grid-lg">
                         <div class="grid-item">lg</div>
                         <div class="grid-item">lg</div>
                         <div class="grid-item">lg</div>
                     </div>
-                    <div class="w4-grid w4-grid-3 w4-grid-xl w4-grid-bordered-primary">
+                    <div class="w4-grid w4-grid-3 w4-grid-xl">
                         <div class="grid-item">xl</div>
                         <div class="grid-item">xl</div>
                         <div class="grid-item">xl</div>
@@ -284,13 +284,13 @@
                         <div class="grid-item grid-item-plain">success</div>
                         <div class="grid-item grid-item-plain">success</div>
                     </div>
-                    <hr class="w4-divider w4-divider-xs w4-divider-primary">
+
                     <div class="w4-grid w4-grid-3 w4-grid-md w4-grid-bordered-warning">
                         <div class="grid-item grid-item-plain">warning</div>
                         <div class="grid-item grid-item-plain">warning</div>
                         <div class="grid-item grid-item-plain">warning</div>
                     </div>
-                    <hr class="w4-divider w4-divider-xs w4-divider-primary">
+
                     <div class="w4-grid w4-grid-3 w4-grid-md w4-grid-bordered-error">
                         <div class="grid-item grid-item-plain">error</div>
                         <div class="grid-item grid-item-plain">error</div>
@@ -298,7 +298,7 @@
                     </div>
                 </div>
                 <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-warning">`w4-grid-bordered-neutral / muted`</div>
+                    <div class="w4-label w4-label-sm w4-label-neutral">`w4-grid-bordered-neutral / muted`</div>
                     <div class="w4-grid w4-grid-3 w4-grid-md w4-grid-bordered-neutral">
                         <div class="grid-item grid-item-plain">neutral</div>
                         <div class="grid-item grid-item-plain">neutral</div>
