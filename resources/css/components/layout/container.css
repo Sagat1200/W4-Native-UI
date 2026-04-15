@@ -9,6 +9,8 @@
   inline-size: min(100%, var(--w4-container-max-width, 1200px));
   margin-inline: auto;
   padding-inline: var(--w4-container-padding-x, 1rem);
+  border-radius: var(--w4-container-radius, var(--w4-radius-lg));
+  overflow: clip;
   
   /* Surface Tokens (Optional for containers, but supported) */
   background-color: var(--w4-container-bg, transparent);

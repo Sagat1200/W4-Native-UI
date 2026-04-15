@@ -95,7 +95,7 @@
             color: hsl(var(--w4-base-content) / 0.5);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
+            margin-block-end: 0.5rem;
             display: block;
         }
 

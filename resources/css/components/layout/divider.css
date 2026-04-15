@@ -18,6 +18,109 @@
 }
 
 /* ----------------------------------
+   LABEL ALIGNMENT (Start / Center / End)
+   Use these classes on non-void elements
+   to render text within the divider line.
+   ---------------------------------- */
+.w4-divider-start,
+.w4-divider-center,
+.w4-divider-end {
+  display: flex;
+  align-items: center;
+  gap: var(--w4-divider-label-gap, 0.75rem);
+  border: 0;
+  white-space: nowrap;
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+}
+
+.w4-divider-start::before,
+.w4-divider-start::after,
+.w4-divider-center::before,
+.w4-divider-center::after,
+.w4-divider-end::before,
+.w4-divider-end::after {
+  content: "";
+  border-block-start-width: var(--w4-divider-width, 1px);
+  border-block-start-style: solid;
+  border-color: var(--w4-divider-color, hsl(var(--w4-base-300)));
+}
+
+.w4-divider-center::before,
+.w4-divider-center::after {
+  flex: 1 1 0;
+}
+
+.w4-divider-start::before {
+  flex: 0 0 var(--w4-divider-edge-line, 1.5rem);
+}
+
+.w4-divider-start::after {
+  flex: 1 1 0;
+}
+
+.w4-divider-end::before {
+  flex: 1 1 0;
+}
+
+.w4-divider-end::after {
+  flex: 0 0 var(--w4-divider-edge-line, 1.5rem);
+}
+
+/* Vertical + Label alignment support */
+.w4-divider-vertical.w4-divider-start,
+.w4-divider-vertical.w4-divider-center,
+.w4-divider-vertical.w4-divider-end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--w4-divider-label-gap, 0.75rem);
+  inline-size: auto;
+  min-inline-size: var(--w4-divider-label-min-inline, 3rem);
+  block-size: 100%;
+  border-block-start-width: 0;
+  border-inline-start-width: 0;
+  white-space: nowrap;
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+}
+
+.w4-divider-vertical.w4-divider-start::before,
+.w4-divider-vertical.w4-divider-start::after,
+.w4-divider-vertical.w4-divider-center::before,
+.w4-divider-vertical.w4-divider-center::after,
+.w4-divider-vertical.w4-divider-end::before,
+.w4-divider-vertical.w4-divider-end::after {
+  content: "";
+  border-inline-start-width: var(--w4-divider-width, 1px);
+  border-inline-start-style: solid;
+  border-color: var(--w4-divider-color, hsl(var(--w4-base-300)));
+  inline-size: 0;
+}
+
+.w4-divider-vertical.w4-divider-center::before,
+.w4-divider-vertical.w4-divider-center::after {
+  flex: 1 1 0;
+}
+
+.w4-divider-vertical.w4-divider-start::before {
+  flex: 0 0 var(--w4-divider-edge-line, 1.5rem);
+}
+
+.w4-divider-vertical.w4-divider-start::after {
+  flex: 1 1 0;
+}
+
+.w4-divider-vertical.w4-divider-end::before {
+  flex: 1 1 0;
+}
+
+.w4-divider-vertical.w4-divider-end::after {
+  flex: 0 0 var(--w4-divider-edge-line, 1.5rem);
+}
+
+/* ----------------------------------
    ORIENTATION MODIFIER
    ---------------------------------- */
 .w4-divider-vertical {
@@ -31,9 +134,15 @@
   /* Layout constraints */
   inline-size: var(--w4-divider-width, 1px);
   block-size: 100%;
+  align-self: stretch;
   
   /* Margins for vertical */
   margin: var(--w4-divider-margin-y, 0) var(--w4-divider-margin-x, 1rem);
+}
+
+/* Standalone vertical divider fallback (no explicit parent height) */
+body > .w4-divider-vertical {
+  min-block-size: 100vh;
 }
 
 /* ----------------------------------

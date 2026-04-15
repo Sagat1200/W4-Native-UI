@@ -38,8 +38,17 @@
   --w4-card-border-width: 2px;
 }
 
+.w4-card-bordered-primary { --w4-card-border-color: hsl(var(--w4-primary)); }
+.w4-card-bordered-secondary { --w4-card-border-color: hsl(var(--w4-secondary)); }
+.w4-card-bordered-accent { --w4-card-border-color: hsl(var(--w4-accent)); }
+.w4-card-bordered-info { --w4-card-border-color: hsl(var(--w4-info)); }
+.w4-card-bordered-success { --w4-card-border-color: hsl(var(--w4-success)); }
+.w4-card-bordered-warning { --w4-card-border-color: hsl(var(--w4-warning)); }
+.w4-card-bordered-error { --w4-card-border-color: hsl(var(--w4-error)); }
+.w4-card-bordered-neutral { --w4-card-border-color: hsl(var(--w4-neutral)); }
+
 .w4-card-elevated {
-  --w4-card-shadow: var(--w4-shadow-md);
+  --w4-card-shadow: var(--w4-shadow-lg);
 }
 
 .w4-card-ghost {
