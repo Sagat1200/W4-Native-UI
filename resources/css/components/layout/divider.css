@@ -140,9 +140,10 @@
   margin: var(--w4-divider-margin-y, 0) var(--w4-divider-margin-x, 1rem);
 }
 
-/* Standalone vertical divider fallback (no explicit parent height) */
-body > .w4-divider-vertical {
-  min-block-size: 100vh;
+/* Explicit fullscreen utility (opt-in to avoid unexpected page scroll) */
+.w4-divider-screen {
+  block-size: 100dvh;
+  max-block-size: 100dvh;
 }
 
 /* ----------------------------------

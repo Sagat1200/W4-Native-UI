@@ -2559,9 +2559,10 @@ html[data-theme] body {
   margin: var(--w4-divider-margin-y, 0) var(--w4-divider-margin-x, 1rem);
 }
 
-/* Standalone vertical divider fallback (no explicit parent height) */
-body > .w4-divider-vertical {
-  min-block-size: 100vh;
+/* Explicit fullscreen utility (opt-in to avoid unexpected page scroll) */
+.w4-divider-screen {
+  block-size: 100dvh;
+  max-block-size: 100dvh;
 }
 
 /* ----------------------------------
@@ -2651,6 +2652,69 @@ body > .w4-divider-vertical {
 .w4-grid-5 { --w4-grid-cols: repeat(5, minmax(0, 1fr)); }
 .w4-grid-6 { --w4-grid-cols: repeat(6, minmax(0, 1fr)); }
 .w4-grid-12 { --w4-grid-cols: repeat(12, minmax(0, 1fr)); }
+
+/* ----------------------------------
+   BORDERED VARIANTS
+   Applies semantic borders to direct grid children
+   ---------------------------------- */
+.w4-grid-bordered-primary > *,
+.w4-grid-bordered-secondary > *,
+.w4-grid-bordered-accent > *,
+.w4-grid-bordered-info > *,
+.w4-grid-bordered-success > *,
+.w4-grid-bordered-warning > *,
+.w4-grid-bordered-error > *,
+.w4-grid-bordered-neutral > *,
+.w4-grid-bordered-muted > * {
+  border-style: solid !important;
+  border-width: var(--w4-grid-border-width, 1px) !important;
+  border-radius: var(--w4-grid-item-radius, var(--w4-radius-md));
+}
+
+.w4-grid-bordered-primary > * {
+  border-color: hsl(var(--w4-primary)) !important;
+  box-shadow: inset 0 0 0 var(--w4-grid-border-width, 1px) hsl(var(--w4-primary));
+}
+
+.w4-grid-bordered-secondary > * {
+  border-color: hsl(var(--w4-secondary)) !important;
+  box-shadow: inset 0 0 0 var(--w4-grid-border-width, 1px) hsl(var(--w4-secondary));
+}
+
+.w4-grid-bordered-accent > * {
+  border-color: hsl(var(--w4-accent)) !important;
+  box-shadow: inset 0 0 0 var(--w4-grid-border-width, 1px) hsl(var(--w4-accent));
+}
+
+.w4-grid-bordered-info > * {
+  border-color: hsl(var(--w4-info)) !important;
+  box-shadow: inset 0 0 0 var(--w4-grid-border-width, 1px) hsl(var(--w4-info));
+}
+
+.w4-grid-bordered-success > * {
+  border-color: hsl(var(--w4-success)) !important;
+  box-shadow: inset 0 0 0 var(--w4-grid-border-width, 1px) hsl(var(--w4-success));
+}
+
+.w4-grid-bordered-warning > * {
+  border-color: hsl(var(--w4-warning)) !important;
+  box-shadow: inset 0 0 0 var(--w4-grid-border-width, 1px) hsl(var(--w4-warning));
+}
+
+.w4-grid-bordered-error > * {
+  border-color: hsl(var(--w4-error)) !important;
+  box-shadow: inset 0 0 0 var(--w4-grid-border-width, 1px) hsl(var(--w4-error));
+}
+
+.w4-grid-bordered-neutral > * {
+  border-color: hsl(var(--w4-base-content) / 0.2) !important;
+  box-shadow: inset 0 0 0 var(--w4-grid-border-width, 1px) hsl(var(--w4-base-content) / 0.2);
+}
+
+.w4-grid-bordered-muted > * {
+  border-color: hsl(var(--w4-base-300)) !important;
+  box-shadow: inset 0 0 0 var(--w4-grid-border-width, 1px) hsl(var(--w4-base-300));
+}
 
 /* ----------------------------------
    SIZE SCALES (Gap Morphology)
