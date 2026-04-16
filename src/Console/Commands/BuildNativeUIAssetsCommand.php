@@ -120,7 +120,6 @@ class BuildNativeUIAssetsCommand extends Command
         file_put_contents($distCss, implode(PHP_EOL . PHP_EOL, $cssContent) . PHP_EOL);
 
         $jsFiles = [
-            $root . '/resources/js/properties/w4-native.js',
             $root . '/resources/js/core.js',
             // Feedback
             $root . '/resources/js/components/feedback/alert.js',
@@ -164,6 +163,9 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/js/components/ui/label.js',
             $root . '/resources/js/components/ui/link.js',
             $root . '/resources/js/components/ui/text.js',
+            
+            // Core Native UI Initializer (must be last)
+            $root . '/resources/js/properties/w4-native.js',
         ];
 
         $jsContent = [];

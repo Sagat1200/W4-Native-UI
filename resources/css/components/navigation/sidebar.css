@@ -6,8 +6,8 @@
 .w4-sidebar {
   display: flex;
   flex-direction: column;
-  background-color: var(--w4-base-100);
-  color: var(--w4-base-content);
+  background-color: hsl(var(--w4-base-100));
+  color: hsl(var(--w4-base-content));
   block-size: 100vh;
   inline-size: 16rem; /* default md width */
   overflow-y: auto;
@@ -28,12 +28,44 @@
 /* Alignments */
 .w4-sidebar-left {
   inset-inline-start: 0;
-  border-inline-end: 1px solid var(--w4-base-200);
+  border-inline-end: 1px solid hsl(var(--w4-base-200));
 }
 
 .w4-sidebar-right {
   inset-inline-end: 0;
-  border-inline-start: 1px solid var(--w4-base-200);
+  border-inline-start: 1px solid hsl(var(--w4-base-200));
+}
+
+.w4-sidebar-top {
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  block-size: auto;
+  min-block-size: 16rem; /* default height for top/bottom */
+  inline-size: 100%;
+  border-block-end: 1px solid hsl(var(--w4-base-200));
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+.w4-sidebar-bottom {
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  block-size: auto;
+  min-block-size: 16rem; /* default height for top/bottom */
+  inline-size: 100%;
+  border-block-start: 1px solid hsl(var(--w4-base-200));
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+/* Fix fixed positions for top and bottom */
+.w4-sidebar-top.w4-sidebar-fixed,
+.w4-sidebar-bottom.w4-sidebar-fixed {
+  inset-block-end: auto; /* override the generic inset-block-end: 0 from .w4-sidebar-fixed */
+}
+.w4-sidebar-bottom.w4-sidebar-fixed {
+  inset-block-start: auto; /* override inset-block-start: 0 */
+  inset-block-end: 0;
 }
 
 /* Off-canvas behavior (Open/Closed) */
@@ -95,6 +127,22 @@
   transform: translateX(0);
 }
 
+.w4-sidebar-top:not(.w4-sidebar-open):not([data-w4-state~="open"]).w4-sidebar-fixed {
+  transform: translateY(-100%);
+}
+.w4-sidebar-top.w4-sidebar-open.w4-sidebar-fixed,
+.w4-sidebar-top[data-w4-state~="open"].w4-sidebar-fixed {
+  transform: translateY(0);
+}
+
+.w4-sidebar-bottom:not(.w4-sidebar-open):not([data-w4-state~="open"]).w4-sidebar-fixed {
+  transform: translateY(100%);
+}
+.w4-sidebar-bottom.w4-sidebar-open.w4-sidebar-fixed,
+.w4-sidebar-bottom[data-w4-state~="open"].w4-sidebar-fixed {
+  transform: translateY(0);
+}
+
 /* Sizes (Widths) */
 .w4-sidebar.w4-size-xs { inline-size: 12rem; }
 .w4-sidebar.w4-size-sm { inline-size: 14rem; }
@@ -102,6 +150,17 @@
 .w4-sidebar.w4-size-lg { inline-size: 20rem; }
 .w4-sidebar.w4-size-xl { inline-size: 24rem; }
 .w4-sidebar.w4-size-full { inline-size: 100%; }
+
+/* Percentages sizes */
+.w4-sidebar.w4-size-5p { inline-size: 5vw; }
+.w4-sidebar.w4-size-10p { inline-size: 10vw; }
+.w4-sidebar.w4-size-15p { inline-size: 15vw; }
+.w4-sidebar.w4-size-20p { inline-size: 20vw; }
+
+.w4-sidebar-top.w4-size-5p, .w4-sidebar-bottom.w4-size-5p { block-size: 5vh; inline-size: 100vw; min-block-size: auto; }
+.w4-sidebar-top.w4-size-10p, .w4-sidebar-bottom.w4-size-10p { block-size: 10vh; inline-size: 100vw; min-block-size: auto; }
+.w4-sidebar-top.w4-size-15p, .w4-sidebar-bottom.w4-size-15p { block-size: 15vh; inline-size: 100vw; min-block-size: auto; }
+.w4-sidebar-top.w4-size-20p, .w4-sidebar-bottom.w4-size-20p { block-size: 20vh; inline-size: 100vw; min-block-size: auto; }
 
 /* Collapsed sizes */
 .w4-sidebar-collapsed.w4-size-xs, .w4-sidebar[data-w4-state~="collapsed"].w4-size-xs { inline-size: 3rem; }
@@ -111,13 +170,13 @@
 .w4-sidebar-collapsed.w4-size-xl, .w4-sidebar[data-w4-state~="collapsed"].w4-size-xl { inline-size: 6rem; }
 
 /* Variants */
-.w4-sidebar.w4-variant-primary { background-color: var(--w4-primary); color: var(--w4-primary-content); border-color: transparent; }
-.w4-sidebar.w4-variant-secondary { background-color: var(--w4-secondary); color: var(--w4-secondary-content); border-color: transparent; }
-.w4-sidebar.w4-variant-accent { background-color: var(--w4-accent); color: var(--w4-accent-content); border-color: transparent; }
-.w4-sidebar.w4-variant-info { background-color: var(--w4-info); color: var(--w4-info-content); border-color: transparent; }
-.w4-sidebar.w4-variant-success { background-color: var(--w4-success); color: var(--w4-success-content); border-color: transparent; }
-.w4-sidebar.w4-variant-warning { background-color: var(--w4-warning); color: var(--w4-warning-content); border-color: transparent; }
-.w4-sidebar.w4-variant-error { background-color: var(--w4-error); color: var(--w4-error-content); border-color: transparent; }
-.w4-sidebar.w4-variant-neutral { background-color: var(--w4-neutral); color: var(--w4-neutral-content); border-color: transparent; }
-.w4-sidebar.w4-variant-base-200 { background-color: var(--w4-base-200); }
-.w4-sidebar.w4-variant-base-300 { background-color: var(--w4-base-300); }
+.w4-sidebar.w4-variant-primary, .w4-sidebar.w4-sidebar-primary { background-color: hsl(var(--w4-primary)); color: hsl(var(--w4-primary-content)); border-color: transparent; }
+.w4-sidebar.w4-variant-secondary, .w4-sidebar.w4-sidebar-secondary { background-color: hsl(var(--w4-secondary)); color: hsl(var(--w4-secondary-content)); border-color: transparent; }
+.w4-sidebar.w4-variant-accent, .w4-sidebar.w4-sidebar-accent { background-color: hsl(var(--w4-accent)); color: hsl(var(--w4-accent-content)); border-color: transparent; }
+.w4-sidebar.w4-variant-info, .w4-sidebar.w4-sidebar-info { background-color: hsl(var(--w4-info)); color: hsl(var(--w4-info-content)); border-color: transparent; }
+.w4-sidebar.w4-variant-success, .w4-sidebar.w4-sidebar-success { background-color: hsl(var(--w4-success)); color: hsl(var(--w4-success-content)); border-color: transparent; }
+.w4-sidebar.w4-variant-warning, .w4-sidebar.w4-sidebar-warning { background-color: hsl(var(--w4-warning)); color: hsl(var(--w4-warning-content)); border-color: transparent; }
+.w4-sidebar.w4-variant-error, .w4-sidebar.w4-sidebar-error { background-color: hsl(var(--w4-error)); color: hsl(var(--w4-error-content)); border-color: transparent; }
+.w4-sidebar.w4-variant-neutral, .w4-sidebar.w4-sidebar-neutral { background-color: hsl(var(--w4-neutral)); color: hsl(var(--w4-neutral-content)); border-color: transparent; }
+.w4-sidebar.w4-variant-base-200, .w4-sidebar.w4-sidebar-base-200 { background-color: hsl(var(--w4-base-200)); }
+.w4-sidebar.w4-variant-base-300, .w4-sidebar.w4-sidebar-base-300 { background-color: hsl(var(--w4-base-300)); }
