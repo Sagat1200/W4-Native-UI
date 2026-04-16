@@ -137,6 +137,29 @@
             </div>
         </header>
 
+        <section class="w4-section w4-section-md w4-section-base-100"
+            style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Menu</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Menu</strong> proporciona una lista estructurada y navegable de opciones o
+                enlaces. Es la base fundamental para construir sistemas de navegación como barras laterales, menús
+                desplegables y barras de navegación superiores.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Navegación principal (Sidebar):</strong> Menús verticales en paneles de administración o
+                    dashboards para acceder a diferentes módulos.</li>
+                <li><strong>Navegación horizontal:</strong> Barras de enlaces en la cabecera de sitios web corporativos
+                    o catálogos.</li>
+                <li><strong>Menús anidados:</strong> Listas jerárquicas con submenús desplegables para organizar grandes
+                    cantidades de opciones o categorías.</li>
+                <li><strong>Listas de acciones:</strong> Agrupación de acciones o enlaces dentro de otros componentes
+                    interactivos como <code>w4-dropdown</code>.</li>
+            </ul>
+        </section>
+
         <section class="w4-section w4-section-md w4-section-base-100">
             <h2 class="section-title">Orientations & Layouts</h2>
             <div class="demo-zone">

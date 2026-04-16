@@ -172,6 +172,29 @@
             </div>
         </header>
 
+        <section class="w4-section w4-section-md w4-section-base-100"
+            style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Dropdown</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Dropdown</strong> (menú desplegable) muestra una lista de acciones o enlaces
+                contextuales cuando el usuario interactúa con un elemento desencadenador (como un botón o un icono).
+                Ayuda a organizar y ocultar opciones secundarias para mantener una interfaz más limpia.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Menús de perfil de usuario:</strong> Opciones como "Mi Perfil", "Configuración" y "Cerrar
+                    Sesión" accesibles desde el avatar en la navegación superior.</li>
+                <li><strong>Acciones en tablas o listas:</strong> Agrupar acciones secundarias (ej. editar, duplicar,
+                    eliminar) en un menú de "tres puntos" para cada registro.</li>
+                <li><strong>Selectores de contexto:</strong> Elegir idioma, cambiar de tema visual (claro/oscuro), o
+                    seleccionar el proyecto activo en una aplicación SaaS.</li>
+                <li><strong>Filtros y ordenamiento:</strong> Desplegar listas de criterios o métodos de ordenamiento en
+                    vistas complejas o catálogos.</li>
+            </ul>
+        </section>
+
         <section class="w4-section w4-section-md w4-section-base-100">
             <h2 class="section-title">Open Modes</h2>
             <div class="demo-zone">

@@ -128,6 +128,29 @@
             </div>
         </header>
 
+        <section class="w4-section w4-section-md w4-section-base-100"
+            style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 NavBar</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>NavBar</strong> (barra de navegación) proporciona una cabecera para la interfaz de
+                usuario, típicamente ubicada en la parte superior de la página. Se utiliza para albergar el logotipo de
+                la marca, enlaces de navegación principal, búsqueda y perfiles de usuario.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Cabeceras de sitios web:</strong> Navegación principal en la parte superior de sitios web
+                    públicos o páginas de aterrizaje.</li>
+                <li><strong>Dashboards de aplicaciones:</strong> Barra superior que contiene acciones globales como
+                    notificaciones, perfil de usuario y control de tema visual.</li>
+                <li><strong>Navegación móvil:</strong> Barras compactas que integran menús hamburguesa para navegación
+                    en pantallas pequeñas.</li>
+                <li><strong>Barras de herramientas contextuales:</strong> Agrupar botones de acción, filtros o rutas de
+                    migas de pan (breadcrumbs) en vistas o secciones específicas.</li>
+            </ul>
+        </section>
+
         <section class="w4-section w4-section-md w4-section-base-100">
             <h2 class="section-title">Layouts</h2>
             <div class="demo-zone">

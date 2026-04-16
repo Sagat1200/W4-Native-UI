@@ -162,6 +162,29 @@
             </div>
         </header>
 
+        <section class="w4-section w4-section-md w4-section-base-100"
+            style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Sidebar</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Sidebar</strong> (barra lateral o panel off-canvas) proporciona un contenedor
+                deslizante que se superpone al contenido principal. Es ideal para mostrar opciones de navegación,
+                filtros o detalles adicionales sin cambiar de página.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Navegación principal en móviles:</strong> Menús hamburguesa que se despliegan desde el
+                    lateral izquierdo (o derecho) para acceder a las secciones del sitio.</li>
+                <li><strong>Paneles de filtros en e-commerce:</strong> Barras laterales para aplicar filtros avanzados
+                    de búsqueda de productos sin salir del catálogo.</li>
+                <li><strong>Previsualización de detalles:</strong> Mostrar la información detallada de un registro (ej.
+                    un usuario o una orden) al hacer clic en una fila de una tabla, deslizándose desde la derecha.</li>
+                <li><strong>Carrito de compras:</strong> Un "mini-carrito" off-canvas que permite al usuario revisar los
+                    productos seleccionados y proceder al pago rápidamente.</li>
+            </ul>
+        </section>
+
         <section class="w4-section w4-section-md w4-section-base-100">
             <h2 class="section-title">Off-Canvas Toggles</h2>
             <div class="demo-zone">

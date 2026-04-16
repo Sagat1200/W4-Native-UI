@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="native-ui.light">
 
 <head>
@@ -154,6 +154,30 @@
             </div>
         </header>
 
+        <section class="w4-section w4-section-md w4-section-base-100"
+            style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Breadcrumb</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Breadcrumb</strong> (migas de pan) es un elemento de navegación secundario que
+                revela la ubicación del usuario dentro de la jerarquía de un sitio web o aplicación. Permite volver
+                fácilmente a páginas de nivel superior.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>E-commerce y catálogos:</strong> Mostrar la ruta desde la página de inicio, pasando por las
+                    categorías, hasta llegar al producto actual (ej. Inicio > Ropa > Zapatos > Zapatillas Deportivas).
+                </li>
+                <li><strong>Paneles de administración:</strong> Ubicar al usuario dentro de configuraciones anidadas
+                    (ej. Dashboard > Ajustes > Perfil > Seguridad).</li>
+                <li><strong>Sistemas de archivos o documentos:</strong> Mostrar la estructura de carpetas actual (ej.
+                    Documentos > 2023 > Reportes Financieros).</li>
+                <li><strong>Portales de ayuda y documentación:</strong> Indicar la sección del manual que se está
+                    consultando.</li>
+            </ul>
+        </section>
+
         <section class="w4-section w4-section-md w4-section-base-100">
             <h2 class="section-title">Sizes</h2>
             <div class="demo-zone">
@@ -162,8 +186,8 @@
                         <div class="w4-label w4-label-sm w4-label-primary">w4-size-xs</div>
                         <nav class="w4-breadcrumb w4-size-xs">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Products</a></li>
+                                <li><a href="#" class="w4-link">Home</a></li>
+                                <li><a href="#" class="w4-link">Products</a></li>
                                 <li><span>Detail</span></li>
                             </ul>
                         </nav>
@@ -172,8 +196,8 @@
                         <div class="w4-label w4-label-sm w4-label-primary">w4-size-sm</div>
                         <nav class="w4-breadcrumb w4-size-sm">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Products</a></li>
+                                <li><a href="#" class="w4-link">Home</a></li>
+                                <li><a href="#" class="w4-link">Products</a></li>
                                 <li><span>Detail</span></li>
                             </ul>
                         </nav>
@@ -182,8 +206,8 @@
                         <div class="w4-label w4-label-sm w4-label-primary">w4-size-md</div>
                         <nav class="w4-breadcrumb w4-size-md">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Products</a></li>
+                                <li><a href="#" class="w4-link">Home</a></li>
+                                <li><a href="#" class="w4-link">Products</a></li>
                                 <li><span>Detail</span></li>
                             </ul>
                         </nav>
@@ -192,8 +216,8 @@
                         <div class="w4-label w4-label-sm w4-label-primary">w4-size-lg</div>
                         <nav class="w4-breadcrumb w4-size-lg">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Products</a></li>
+                                <li><a href="#" class="w4-link">Home</a></li>
+                                <li><a href="#" class="w4-link">Products</a></li>
                                 <li><span>Detail</span></li>
                             </ul>
                         </nav>
@@ -202,8 +226,8 @@
                         <div class="w4-label w4-label-sm w4-label-primary">w4-size-xl</div>
                         <nav class="w4-breadcrumb w4-size-xl">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Products</a></li>
+                                <li><a href="#" class="w4-link">Home</a></li>
+                                <li><a href="#" class="w4-link">Products</a></li>
                                 <li><span>Detail</span></li>
                             </ul>
                         </nav>
@@ -218,10 +242,10 @@
                 <div class="demo-grid">
                     <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body crumb-card">
                         <div class="w4-label w4-label-sm w4-label-secondary">Primary</div>
-                        <nav class="w4-breadcrumb w4-variant-primary">
+                        <nav class="w4-breadcrumb w4-breadcrumb-primary">
                             <ul>
-                                <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">Orders</a></li>
+                                <li><a href="#" class="w4-link w4-link-primary">Dashboard</a></li>
+                                <li><a href="#" class="w4-link">Orders</a></li>
                                 <li><span>#1024</span></li>
                             </ul>
                         </nav>
@@ -230,8 +254,8 @@
                         <div class="w4-label w4-label-sm w4-label-secondary">Secondary</div>
                         <nav class="w4-breadcrumb w4-variant-secondary">
                             <ul>
-                                <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">Orders</a></li>
+                                <li><a href="#" class="w4-link">Dashboard</a></li>
+                                <li><a href="#" class="w4-link">Orders</a></li>
                                 <li><span>#1024</span></li>
                             </ul>
                         </nav>
@@ -240,8 +264,8 @@
                         <div class="w4-label w4-label-sm w4-label-secondary">Accent</div>
                         <nav class="w4-breadcrumb w4-variant-accent">
                             <ul>
-                                <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">Orders</a></li>
+                                <li><a href="#" class="w4-link">Dashboard</a></li>
+                                <li><a href="#" class="w4-link">Orders</a></li>
                                 <li><span>#1024</span></li>
                             </ul>
                         </nav>
@@ -250,8 +274,8 @@
                         <div class="w4-label w4-label-sm w4-label-secondary">Neutral</div>
                         <nav class="w4-breadcrumb w4-variant-neutral">
                             <ul>
-                                <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">Orders</a></li>
+                                <li><a href="#" class="w4-link">Dashboard</a></li>
+                                <li><a href="#" class="w4-link">Orders</a></li>
                                 <li><span>#1024</span></li>
                             </ul>
                         </nav>
@@ -269,7 +293,7 @@
                         <nav class="w4-breadcrumb w4-size-md">
                             <ul>
                                 <li>
-                                    <a href="#" class="crumb-link">
+                                    <a href="#" class="w4-link crumb-link">
                                         <svg class="w4-icon w4-icon-sm w4-icon-primary" viewBox="0 0 24 24"
                                             fill="currentColor" aria-hidden="true">
                                             <path d="M12 3l9 8h-3v10h-5v-6H11v6H6V11H3l9-8z" />
@@ -278,7 +302,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="crumb-link">
+                                    <a href="#" class="w4-link crumb-link">
                                         <svg class="w4-icon w4-icon-sm w4-icon-secondary" viewBox="0 0 24 24"
                                             fill="currentColor" aria-hidden="true">
                                             <path
@@ -305,7 +329,7 @@
                         <nav class="w4-breadcrumb w4-variant-primary">
                             <ul>
                                 <li>
-                                    <a href="#" class="crumb-link">
+                                    <a href="#" class="w4-link crumb-link">
                                         <svg class="w4-icon w4-icon-sm w4-icon-active" viewBox="0 0 24 24"
                                             fill="currentColor" aria-hidden="true">
                                             <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
@@ -315,7 +339,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="crumb-link">
+                                    <a href="#" class="w4-link crumb-link">
                                         <svg class="w4-icon w4-icon-sm w4-icon-loading" viewBox="0 0 24 24" fill="none"
                                             aria-hidden="true">
                                             <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"
@@ -348,8 +372,8 @@
                         <div class="w4-label w4-label-sm w4-label-accent">Active</div>
                         <nav class="w4-breadcrumb w4-breadcrumb-active">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Admin</a></li>
+                                <li><a href="#" class="w4-link">Home</a></li>
+                                <li><a href="#" class="w4-link">Admin</a></li>
                                 <li><span>Users</span></li>
                             </ul>
                         </nav>
@@ -358,8 +382,8 @@
                         <div class="w4-label w4-label-sm w4-label-accent">Disabled</div>
                         <nav class="w4-breadcrumb w4-breadcrumb-disabled">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Admin</a></li>
+                                <li><a href="#" class="w4-link">Home</a></li>
+                                <li><a href="#" class="w4-link">Admin</a></li>
                                 <li><span>Users</span></li>
                             </ul>
                         </nav>
@@ -368,9 +392,9 @@
                         <div class="w4-label w4-label-sm w4-label-accent">Collapsed</div>
                         <nav class="w4-breadcrumb w4-breadcrumb-collapsed">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Admin</a></li>
-                                <li><a href="#">Users</a></li>
+                                <li><a href="#" class="w4-link">Home</a></li>
+                                <li><a href="#" class="w4-link">Admin</a></li>
+                                <li><a href="#" class="w4-link">Users</a></li>
                                 <li><span>Profile</span></li>
                             </ul>
                         </nav>
@@ -379,15 +403,15 @@
                         <div class="w4-label w4-label-sm w4-label-accent">Data State Active / Disabled</div>
                         <nav class="w4-breadcrumb" data-w4-state="active">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Settings</a></li>
+                                <li><a href="#" class="w4-link">Home</a></li>
+                                <li><a href="#" class="w4-link">Settings</a></li>
                                 <li><span>Security</span></li>
                             </ul>
                         </nav>
                         <nav class="w4-breadcrumb" data-w4-state="disabled">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Settings</a></li>
+                                <li><a href="#" class="w4-link">Home</a></li>
+                                <li><a href="#" class="w4-link">Settings</a></li>
                                 <li><span>Security</span></li>
                             </ul>
                         </nav>
@@ -396,8 +420,8 @@
                         <div class="w4-label w4-label-sm w4-label-accent">Hidden (no visible)</div>
                         <nav class="w4-breadcrumb w4-breadcrumb-hidden">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Settings</a></li>
+                                <li><a href="#" class="w4-link">Home</a></li>
+                                <li><a href="#" class="w4-link">Settings</a></li>
                                 <li><span>Security</span></li>
                             </ul>
                         </nav>
