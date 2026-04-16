@@ -3,6 +3,7 @@
    Native W4 Visual Engine implementation Layout Morphology
    ========================================================================== */
 
+@layer components {
 .w4-menu {
   display: flex;
   flex-direction: column;
@@ -165,4 +166,5 @@
 .w4-menu li.w4-menu-open > ul,
 .w4-menu li[data-w4-state~="open"] > ul {
   display: flex; /* Override the default hidden state of horizontal submenus */
+}
 }

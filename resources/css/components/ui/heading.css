@@ -3,6 +3,7 @@
    Native W4 Visual Engine implementation
    ========================================= */
 
+@layer components {
 .w4-heading {
   margin: 0;
   color: var(--w4-heading-color, hsl(var(--w4-base-content)));
@@ -111,4 +112,5 @@
 .w4-heading[data-w4-state~="active"] {
   text-decoration: underline;
   text-underline-offset: 0.2em;
+}
 }

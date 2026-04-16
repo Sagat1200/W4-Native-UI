@@ -4,6 +4,7 @@
    Forms Morphology
    ========================================= */
 
+@layer components {
 .w4-select {
   appearance: none;
   -webkit-appearance: none;
@@ -176,4 +177,5 @@
   0% { opacity: 0.8; }
   50% { opacity: 0.5; }
   100% { opacity: 0.8; }
+}
 }

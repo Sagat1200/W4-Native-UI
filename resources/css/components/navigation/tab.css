@@ -3,6 +3,7 @@
    Native W4 Visual Engine implementation Layout Morphology
    ========================================================================== */
 
+@layer components {
 .w4-tabs {
   display: flex;
   align-items: flex-end;
@@ -136,3 +137,4 @@
 .w4-tab.w4-variant-error:is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"]) { color: var(--w4-error); }
 .w4-tab-bordered.w4-variant-error:is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"]) { border-block-end-color: var(--w4-error); }
 .w4-tab-boxed.w4-variant-error:is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"]) { background-color: var(--w4-error); color: var(--w4-error-content); }
+}

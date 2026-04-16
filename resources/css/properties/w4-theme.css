@@ -1,3 +1,5 @@
+@layer base, components, utilities;
+
 :root {
   --w4-primary: 277 100% 47%;
   --w4-primary-content: 273 100% 93%;

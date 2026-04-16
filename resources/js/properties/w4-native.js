@@ -57,6 +57,9 @@ class W4NativeUI {
      * Call this when the DOM is ready.
      */
     static start() {
+        if (this.initialized) return;
+        this.initialized = true;
+
         // 1. Initialize Interactive & Feedback Components
         W4Modal.init();
         W4Tooltip.init();

@@ -4,6 +4,7 @@
    Feedback Morphology
    ========================================= */
 
+@layer components {
 .w4-badge {
   display: inline-flex;
   align-items: center;
@@ -199,4 +200,5 @@
   100% {
     box-shadow: 0 0 0 0 hsl(var(--w4-primary) / 0);
   }
+}
 }

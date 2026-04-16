@@ -4,6 +4,7 @@
    Feedback Morphology
    ========================================= */
 
+@layer components {
 .w4-alert {
   box-sizing: border-box;
   display: flex;
@@ -169,4 +170,5 @@
   box-shadow: var(--w4-alert-shadow, var(--w4-shadow-md));
   transform: scale(1.01);
   z-index: 10;
+}
 }

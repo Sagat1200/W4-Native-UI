@@ -4,6 +4,7 @@
    Forms Morphology
    ========================================= */
 
+@layer components {
 .w4-textarea {
   appearance: none;
   -webkit-appearance: none;
@@ -174,3 +175,4 @@
 .w4-textarea-resize-both { resize: both; }
 .w4-textarea-resize-horizontal { resize: horizontal; }
 .w4-textarea-resize-vertical { resize: vertical; }
+}

@@ -3,6 +3,7 @@
    Native W4 Visual Engine implementation
    ========================================================================== */
 
+@layer components {
 .w4-tooltip {
   position: relative;
   display: inline-block;
@@ -186,4 +187,5 @@
 .w4-tooltip-active::before,
 .w4-tooltip[data-w4-state~="active"]::before {
   z-index: 1000; /* Ensure active tooltip is above others */
+}
 }

@@ -1,3 +1,5 @@
+@layer base, components, utilities;
+
 :root {
   --w4-primary: 277 100% 47%;
   --w4-primary-content: 273 100% 93%;
@@ -1238,8 +1240,9 @@ html[data-theme] body {
    Native W4 Visual Engine implementation
    ========================================= */
 
-.w4-button {
-  display: inline-flex;
+@layer components {
+  .w4-button {
+    display: inline-flex;
   flex-shrink: 0;
   cursor: pointer;
   user-select: none;
@@ -1316,6 +1319,7 @@ html[data-theme] body {
    SEMANTIC VARIANTS (Color System)
    ---------------------------------- */
 .w4-button-primary {
+  
   --w4-btn-bg: hsl(var(--w4-primary));
   --w4-btn-fg: hsl(var(--w4-primary-content));
   --w4-btn-border: hsl(var(--w4-primary));
@@ -1450,12 +1454,14 @@ html[data-theme] body {
 .w4-button-block {
   inline-size: 100%;
 }
+}
 
 /* =========================================
    HEADING COMPONENT
    Native W4 Visual Engine implementation
    ========================================= */
 
+@layer components {
 .w4-heading {
   margin: 0;
   color: var(--w4-heading-color, hsl(var(--w4-base-content)));
@@ -1565,12 +1571,14 @@ html[data-theme] body {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
+}
 
 /* =========================================
    ICON COMPONENT
    Native W4 Visual Engine implementation
    ========================================= */
 
+@layer components {
 .w4-icon {
   display: inline-block;
   line-height: 1;
@@ -1667,12 +1675,14 @@ html[data-theme] body {
 .w4-icon-decorative {
   pointer-events: none;
 }
+}
 
 /* =========================================
    ICON BUTTON COMPONENT
    Native W4 Visual Engine implementation
    ========================================= */
 
+@layer components {
 .w4-icon-button {
   display: inline-flex;
   flex-shrink: 0;
@@ -1849,12 +1859,14 @@ html[data-theme] body {
   --w4-btn-size: var(--w4-control-height-xl);
   --w4-btn-font-size: 1.75rem;
 }
+}
 
 /* =========================================
    LABEL COMPONENT
    Native W4 Visual Engine implementation
    ========================================= */
 
+@layer components {
 .w4-label {
   display: inline-flex;
   align-items: center;
@@ -1956,12 +1968,14 @@ html[data-theme] body {
 .w4-label[data-w4-state~="hidden"] {
   display: none !important;
 }
+}
 
 /* =========================================
    LINK COMPONENT
    Native W4 Visual Engine implementation
    ========================================= */
 
+@layer components {
 .w4-link {
   color: var(--w4-link-color, hsl(var(--w4-primary)));
   text-decoration: underline;
@@ -2075,12 +2089,14 @@ html[data-theme] body {
 .w4-link[data-w4-state~="hidden"] {
   display: none !important;
 }
+}
 
 /* =========================================
    TEXT COMPONENT
    Native W4 Visual Engine implementation
    ========================================= */
 
+@layer components {
 .w4-text {
   color: var(--w4-text-color, hsl(var(--w4-base-content)));
   line-height: var(--w4-text-line-height, 1.5);
@@ -2178,6 +2194,7 @@ html[data-theme] body {
 .w4-text[data-w4-state~="hidden"] {
   display: none !important;
 }
+}
 
 /* =========================================
    CARD COMPONENT
@@ -2185,6 +2202,7 @@ html[data-theme] body {
    Layout Morphology
    ========================================= */
 
+@layer components {
 .w4-card {
   position: relative;
   display: flex;
@@ -2344,6 +2362,7 @@ html[data-theme] body {
 .w4-card[data-w4-state~="collapsed"] .w4-card-body {
   display: none !important;
 }
+}
 
 /* =========================================
    CONTAINER COMPONENT
@@ -2351,6 +2370,7 @@ html[data-theme] body {
    Layout System
    ========================================= */
 
+@layer components {
 .w4-container {
   /* Layout constraints */
   inline-size: min(100%, var(--w4-container-max-width, 1200px));
@@ -2416,6 +2436,7 @@ html[data-theme] body {
   box-shadow: inset 0 0 0 2px hsl(var(--w4-primary) / 0.5);
   background-color: hsl(var(--w4-primary) / 0.05);
 }
+}
 
 /* =========================================
    DIVIDER COMPONENT
@@ -2423,6 +2444,7 @@ html[data-theme] body {
    Layout System
    ========================================= */
 
+@layer components {
 .w4-divider {
   border: 0;
   margin: var(--w4-divider-margin-y, 1rem) var(--w4-divider-margin-x, 0);
@@ -2629,6 +2651,7 @@ html[data-theme] body {
   --w4-divider-color: hsl(var(--w4-primary));
   --w4-divider-width: 2px;
 }
+}
 
 /* =========================================
    GRID COMPONENT
@@ -2636,6 +2659,7 @@ html[data-theme] body {
    Layout System
    ========================================= */
 
+@layer components {
 .w4-grid {
   display: grid;
   gap: var(--w4-grid-gap, 1rem);
@@ -2747,6 +2771,7 @@ html[data-theme] body {
   outline: 2px dashed hsl(var(--w4-primary) / 0.5);
   outline-offset: 4px;
 }
+}
 
 /* =========================================
    PANEL COMPONENT
@@ -2754,6 +2779,7 @@ html[data-theme] body {
    Layout Morphology
    ========================================= */
 
+@layer components {
 .w4-panel {
   position: relative;
   display: block;
@@ -2889,6 +2915,7 @@ html[data-theme] body {
   overflow: hidden;
   border-width: 0;
 }
+}
 
 /* =========================================
    SECTION COMPONENT
@@ -2896,6 +2923,7 @@ html[data-theme] body {
    Layout System
    ========================================= */
 
+@layer components {
 .w4-section {
   display: block;
   position: relative;
@@ -2998,6 +3026,7 @@ html[data-theme] body {
   block-size: 0;
   overflow: hidden;
 }
+}
 
 /* =========================================
    STACK COMPONENT
@@ -3005,6 +3034,7 @@ html[data-theme] body {
    Layout System
    ========================================= */
 
+@layer components {
 .w4-stack {
   display: flex;
   flex-direction: var(--w4-stack-dir, column);
@@ -3058,12 +3088,14 @@ html[data-theme] body {
   outline: 2px dashed hsl(var(--w4-primary) / 0.5);
   outline-offset: 2px;
 }
+}
 
 /* ==========================================================================
    BreadCrumb Component
    Native W4 Visual Engine implementation Layout Morphology
    ========================================================================== */
 
+@layer components {
 .w4-breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -3182,12 +3214,14 @@ html[data-theme] body {
   color: var(--w4-base-content);
   opacity: 0.5;
 }
+}
 
 /* ==========================================================================
    DropDown Component
    Native W4 Visual Engine implementation Layout Morphology
    ========================================================================== */
 
+@layer components {
 .w4-dropdown {
   position: relative;
   display: inline-block;
@@ -3311,12 +3345,14 @@ html[data-theme] body {
   /* An active dropdown usually highlights its trigger element */
   z-index: 50; /* Bring it forward slightly */
 }
+}
 
 /* ==========================================================================
    Menu Component
    Native W4 Visual Engine implementation Layout Morphology
    ========================================================================== */
 
+@layer components {
 .w4-menu {
   display: flex;
   flex-direction: column;
@@ -3480,12 +3516,14 @@ html[data-theme] body {
 .w4-menu li[data-w4-state~="open"] > ul {
   display: flex; /* Override the default hidden state of horizontal submenus */
 }
+}
 
 /* ==========================================================================
    NavBar Component
    Native W4 Visual Engine implementation Layout Morphology
    ========================================================================== */
 
+@layer components {
 .w4-navbar {
   display: flex;
   align-items: center;
@@ -3589,12 +3627,14 @@ html[data-theme] body {
   padding-block: 0;
   overflow: hidden;
 }
+}
 
 /* ==========================================================================
    Tab Component
    Native W4 Visual Engine implementation Layout Morphology
    ========================================================================== */
 
+@layer components {
 .w4-tabs {
   display: flex;
   align-items: flex-end;
@@ -3728,12 +3768,14 @@ html[data-theme] body {
 .w4-tab.w4-variant-error:is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"]) { color: var(--w4-error); }
 .w4-tab-bordered.w4-variant-error:is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"]) { border-block-end-color: var(--w4-error); }
 .w4-tab-boxed.w4-variant-error:is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"]) { background-color: var(--w4-error); color: var(--w4-error-content); }
+}
 
 /* ==========================================================================
    SideBar Component
    Native W4 Visual Engine implementation Layout Morphology
    ========================================================================== */
 
+@layer components {
 .w4-sidebar {
   display: flex;
   flex-direction: column;
@@ -3911,6 +3953,7 @@ html[data-theme] body {
 .w4-sidebar.w4-variant-neutral, .w4-sidebar.w4-sidebar-neutral { background-color: hsl(var(--w4-neutral)); color: hsl(var(--w4-neutral-content)); border-color: transparent; }
 .w4-sidebar.w4-variant-base-200, .w4-sidebar.w4-sidebar-base-200 { background-color: hsl(var(--w4-base-200)); }
 .w4-sidebar.w4-variant-base-300, .w4-sidebar.w4-sidebar-base-300 { background-color: hsl(var(--w4-base-300)); }
+}
 
 /* =========================================
    ALERT COMPONENT
@@ -3918,6 +3961,7 @@ html[data-theme] body {
    Feedback Morphology
    ========================================= */
 
+@layer components {
 .w4-alert {
   box-sizing: border-box;
   display: flex;
@@ -4084,6 +4128,7 @@ html[data-theme] body {
   transform: scale(1.01);
   z-index: 10;
 }
+}
 
 /* =========================================
    BADGE COMPONENT
@@ -4091,6 +4136,7 @@ html[data-theme] body {
    Feedback Morphology
    ========================================= */
 
+@layer components {
 .w4-badge {
   display: inline-flex;
   align-items: center;
@@ -4287,6 +4333,7 @@ html[data-theme] body {
     box-shadow: 0 0 0 0 hsl(var(--w4-primary) / 0);
   }
 }
+}
 
 /* =========================================
    LOADING COMPONENT
@@ -4294,6 +4341,7 @@ html[data-theme] body {
    Feedback Morphology
    ========================================= */
 
+@layer components {
 .w4-loading {
   pointer-events: none;
   display: inline-block;
@@ -4484,6 +4532,7 @@ html[data-theme] body {
   mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M4 4 L20 4 L20 20%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27square%27 stroke-linejoin=%27miter%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271.2s%27 repeatCount=%27indefinite%27/%3E%3C/path%3E%3C/svg%3E");
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox=%270 0 24 24%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M4 4 L20 4 L20 20%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27square%27 stroke-linejoin=%27miter%27%3E%3CanimateTransform attributeName=%27transform%27 type=%27rotate%27 from=%270 12 12%27 to=%27360 12 12%27 dur=%271.2s%27 repeatCount=%27indefinite%27/%3E%3C/path%3E%3C/svg%3E");
 }
+}
 
 /* =========================================
    PROGRESS COMPONENT
@@ -4491,6 +4540,7 @@ html[data-theme] body {
    Feedback Morphology
    ========================================= */
 
+@layer components {
 .w4-progress {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -4638,6 +4688,7 @@ html[data-theme] body {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
+}
 
 /* =========================================
    SKELETON COMPONENT
@@ -4645,6 +4696,7 @@ html[data-theme] body {
    Feedback Morphology
    ========================================= */
 
+@layer components {
 .w4-skeleton {
   /* Morphology Tokens */
   border-radius: var(--w4-skeleton-radius, var(--w4-radius-skeleton, var(--w4-radius-md)));
@@ -4746,6 +4798,7 @@ html[data-theme] body {
   /* Trigger the loading animation */
   animation: w4-skeleton-loading 1.4s ease infinite;
 }
+}
 
 /* =========================================
    TOAST COMPONENT
@@ -4753,6 +4806,7 @@ html[data-theme] body {
    Feedback Morphology
    ========================================= */
 
+@layer components {
 .w4-toast {
   display: flex;
   align-items: center;
@@ -4913,6 +4967,7 @@ html[data-theme] body {
     transform: scale(1) translateY(0);
   }
 }
+}
 
 /* =========================================
    CHECKBOX COMPONENT
@@ -4920,6 +4975,7 @@ html[data-theme] body {
    Forms Morphology
    ========================================= */
 
+@layer components {
 .w4-checkbox {
   flex-shrink: 0;
   cursor: pointer;
@@ -5114,6 +5170,7 @@ html[data-theme] body {
   50% { opacity: 0.4; }
   100% { opacity: 0.7; }
 }
+}
 
 /* =========================================
    FIELD ERROR COMPONENT
@@ -5121,6 +5178,7 @@ html[data-theme] body {
    Forms Typography
    ========================================= */
 
+@layer components {
 .w4-field-error {
   display: inline-flex;
   align-items: center;
@@ -5179,6 +5237,7 @@ html[data-theme] body {
 .w4-field-error[data-w4-state~="hidden"] {
   display: none !important;
 }
+}
 
 /* =========================================
    HELPER TEXT COMPONENT
@@ -5186,6 +5245,7 @@ html[data-theme] body {
    Forms Typography
    ========================================= */
 
+@layer components {
 .w4-helper-text {
   display: inline-flex;
   align-items: center;
@@ -5245,6 +5305,7 @@ html[data-theme] body {
 .w4-helper-text[data-w4-state~="hidden"] {
   display: none !important;
 }
+}
 
 /* =========================================
    INPUT COMPONENT
@@ -5252,6 +5313,7 @@ html[data-theme] body {
    Forms Morphology
    ========================================= */
 
+@layer components {
 .w4-input {
   appearance: none;
   -webkit-appearance: none;
@@ -5416,6 +5478,7 @@ html[data-theme] body {
   50% { opacity: 0.5; }
   100% { opacity: 0.8; }
 }
+}
 
 /* =========================================
    RADIO COMPONENT
@@ -5423,6 +5486,7 @@ html[data-theme] body {
    Forms Morphology
    ========================================= */
 
+@layer components {
 .w4-radio {
   flex-shrink: 0;
   cursor: pointer;
@@ -5594,6 +5658,7 @@ html[data-theme] body {
   50% { opacity: 0.4; }
   100% { opacity: 0.7; }
 }
+}
 
 /* =========================================
    SELECT COMPONENT
@@ -5601,6 +5666,7 @@ html[data-theme] body {
    Forms Morphology
    ========================================= */
 
+@layer components {
 .w4-select {
   appearance: none;
   -webkit-appearance: none;
@@ -5774,6 +5840,7 @@ html[data-theme] body {
   50% { opacity: 0.5; }
   100% { opacity: 0.8; }
 }
+}
 
 /* =========================================
    TEXTAREA COMPONENT
@@ -5781,6 +5848,7 @@ html[data-theme] body {
    Forms Morphology
    ========================================= */
 
+@layer components {
 .w4-textarea {
   appearance: none;
   -webkit-appearance: none;
@@ -5951,6 +6019,7 @@ html[data-theme] body {
 .w4-textarea-resize-both { resize: both; }
 .w4-textarea-resize-horizontal { resize: horizontal; }
 .w4-textarea-resize-vertical { resize: vertical; }
+}
 
 /* =========================================
    TOGGLE COMPONENT
@@ -5958,6 +6027,7 @@ html[data-theme] body {
    Forms Morphology
    ========================================= */
 
+@layer components {
 .w4-toggle {
   flex-shrink: 0;
   cursor: pointer;
@@ -6124,6 +6194,7 @@ html[data-theme] body {
   50% { opacity: 0.4; }
   100% { opacity: 0.7; }
 }
+}
 
 /* =========================================
    MODAL COMPONENT
@@ -6131,6 +6202,7 @@ html[data-theme] body {
    Interactive System
    ========================================= */
 
+@layer components {
 .w4-modal {
   /* Positioning & Overlay */
   position: fixed;
@@ -6287,12 +6359,14 @@ html[data-theme] body {
 .w4-modal[data-w4-state~="active"] {
   z-index: 1000; /* Ensure active modal is always on top */
 }
+}
 
 /* ==========================================================================
    Tooltip Component
    Native W4 Visual Engine implementation
    ========================================================================== */
 
+@layer components {
 .w4-tooltip {
   position: relative;
   display: inline-block;
@@ -6476,4 +6550,5 @@ html[data-theme] body {
 .w4-tooltip-active::before,
 .w4-tooltip[data-w4-state~="active"]::before {
   z-index: 1000; /* Ensure active tooltip is above others */
+}
 }

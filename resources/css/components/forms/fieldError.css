@@ -4,6 +4,7 @@
    Forms Typography
    ========================================= */
 
+@layer components {
 .w4-field-error {
   display: inline-flex;
   align-items: center;
@@ -61,4 +62,5 @@
 .w4-field-error-hidden,
 .w4-field-error[data-w4-state~="hidden"] {
   display: none !important;
+}
 }

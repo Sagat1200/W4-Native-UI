@@ -3,6 +3,7 @@
    Native W4 Visual Engine implementation Layout Morphology
    ========================================================================== */
 
+@layer components {
 .w4-dropdown {
   position: relative;
   display: inline-block;
@@ -125,4 +126,5 @@
 .w4-dropdown[data-w4-state~="active"] {
   /* An active dropdown usually highlights its trigger element */
   z-index: 50; /* Bring it forward slightly */
+}
 }

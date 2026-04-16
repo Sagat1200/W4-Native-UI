@@ -3,6 +3,7 @@
    Native W4 Visual Engine implementation Layout Morphology
    ========================================================================== */
 
+@layer components {
 .w4-navbar {
   display: flex;
   align-items: center;
@@ -105,4 +106,5 @@
   block-size: 0;
   padding-block: 0;
   overflow: hidden;
+}
 }

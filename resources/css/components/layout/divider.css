@@ -4,6 +4,7 @@
    Layout System
    ========================================= */
 
+@layer components {
 .w4-divider {
   border: 0;
   margin: var(--w4-divider-margin-y, 1rem) var(--w4-divider-margin-x, 0);
@@ -209,4 +210,5 @@
   /* An active divider uses primary color and becomes slightly thicker */
   --w4-divider-color: hsl(var(--w4-primary));
   --w4-divider-width: 2px;
+}
 }

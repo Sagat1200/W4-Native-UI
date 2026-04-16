@@ -101,7 +101,7 @@
             /* Anulamos temporalmente las propiedades fijas o de pantalla completa para la demo en línea */
             position: static;
             block-size: 100%;
-            height: 100%;
+            inline-size: 100%;
         }
 
         .sidebar-content-mock {
@@ -196,7 +196,7 @@
         <!-- Off-canvas Sidebars (Fixed) -->
         <aside id="sidebar-left" class="w4-sidebar w4-sidebar-fixed w4-sidebar-left w4-size-20p w4-sidebar-primary">
             <div
-                style="padding: 1rem; display: flex; justify-content: space-between; border-bottom: 1px solid var(--w4-base-300);">
+                style="padding: 1rem; display: flex; justify-content: space-between; border-block-end: 1px solid var(--w4-base-300);">
                 <span style="font-weight: bold;">Left (20vw)</span>
                 <button class="w4-button w4-button-xs w4-button-ghost" data-w4-dismiss="sidebar">X</button>
             </div>
@@ -205,7 +205,7 @@
 
         <aside id="sidebar-right" class="w4-sidebar w4-sidebar-fixed w4-sidebar-right w4-size-15p w4-sidebar-secondary">
             <div
-                style="padding: 1rem; display: flex; justify-content: space-between; border-bottom: 1px solid var(--w4-base-300);">
+                style="padding: 1rem; display: flex; justify-content: space-between; border-block-end: 1px solid var(--w4-base-300);">
                 <span style="font-weight: bold;">Right (15vw)</span>
                 <button class="w4-button w4-button-xs w4-button-ghost" data-w4-dismiss="sidebar">X</button>
             </div>

@@ -4,6 +4,7 @@
    Forms Typography
    ========================================= */
 
+@layer components {
 .w4-helper-text {
   display: inline-flex;
   align-items: center;
@@ -62,4 +63,5 @@
 .w4-helper-text-hidden,
 .w4-helper-text[data-w4-state~="hidden"] {
   display: none !important;
+}
 }

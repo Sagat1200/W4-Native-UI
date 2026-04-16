@@ -4,6 +4,7 @@
    Layout System
    ========================================= */
 
+@layer components {
 .w4-stack {
   display: flex;
   flex-direction: var(--w4-stack-dir, column);
@@ -56,4 +57,5 @@
   /* Active stack for debugging or highlighting a specific flow of content */
   outline: 2px dashed hsl(var(--w4-primary) / 0.5);
   outline-offset: 2px;
+}
 }

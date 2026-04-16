@@ -3,6 +3,7 @@
    Native W4 Visual Engine implementation
    ========================================= */
 
+@layer components {
 .w4-link {
   color: var(--w4-link-color, hsl(var(--w4-primary)));
   text-decoration: underline;
@@ -115,4 +116,5 @@
 .w4-link-hidden,
 .w4-link[data-w4-state~="hidden"] {
   display: none !important;
+}
 }

@@ -4,6 +4,7 @@
    Forms Morphology
    ========================================= */
 
+@layer components {
 .w4-checkbox {
   flex-shrink: 0;
   cursor: pointer;
@@ -197,4 +198,5 @@
   0% { opacity: 0.7; }
   50% { opacity: 0.4; }
   100% { opacity: 0.7; }
+}
 }

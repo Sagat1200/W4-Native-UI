@@ -976,7 +976,9 @@ class W4Dropdown {
      * Initialize Dropdown component logic
      */
     static init() {
+        if (this.initialized) return;
         this.bindEvents();
+        this.initialized = true;
     }
 
     static bindEvents() {
@@ -1112,7 +1114,9 @@ class W4Sidebar {
      * Initialize Sidebar component logic
      */
     static init() {
+        if (this.initialized) return;
         this.bindEvents();
+        this.initialized = true;
     }
 
     static bindEvents() {
@@ -1346,6 +1350,9 @@ class W4NativeUI {
      * Call this when the DOM is ready.
      */
     static start() {
+        if (this.initialized) return;
+        this.initialized = true;
+
         // 1. Initialize Interactive & Feedback Components
         W4Modal.init();
         W4Tooltip.init();

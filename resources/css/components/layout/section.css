@@ -4,6 +4,7 @@
    Layout System
    ========================================= */
 
+@layer components {
 .w4-section {
   display: block;
   position: relative;
@@ -105,4 +106,5 @@
   padding-block: 0 !important;
   block-size: 0;
   overflow: hidden;
+}
 }

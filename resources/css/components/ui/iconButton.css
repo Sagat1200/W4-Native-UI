@@ -3,6 +3,7 @@
    Native W4 Visual Engine implementation
    ========================================= */
 
+@layer components {
 .w4-icon-button {
   display: inline-flex;
   flex-shrink: 0;
@@ -178,4 +179,5 @@
 .w4-icon-button-xl {
   --w4-btn-size: var(--w4-control-height-xl);
   --w4-btn-font-size: 1.75rem;
+}
 }

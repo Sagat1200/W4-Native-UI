@@ -4,6 +4,7 @@
    Feedback Morphology
    ========================================= */
 
+@layer components {
 .w4-progress {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -150,4 +151,5 @@
 @keyframes w4-progress-loading {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
+}
 }

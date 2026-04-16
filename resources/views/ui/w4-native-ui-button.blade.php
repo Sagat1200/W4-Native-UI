@@ -135,6 +135,19 @@
         </header>
 
         <section>
+            <h2 class="section-title">Mezcla con clases utilitarias de Tailwind (@w4Merge)</h2>
+            <div class="button-group">
+                <!-- Usando la directiva @w4Merge recién creada -->
+                <button class="@w4Merge('w4-button w4-button-primary', 'w-full lg:w-64 bg-purple-600 hover:bg-purple-700 text-yellow-300 shadow-xl rounded-full')">
+                    Botón Personalizado
+                </button>
+                <button class="@w4Merge('w4-button w4-button-outline w4-button-secondary', 'border-dashed border-4 p-8 text-2xl')">
+                    Botón Gigante Dashed
+                </button>
+            </div>
+        </section>
+
+        <section>
             <h2 class="section-title">Variantes de Color</h2>
             <div class="button-group">
                 <button class="w4-button">Default</button>

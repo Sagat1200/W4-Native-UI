@@ -3,8 +3,9 @@
    Native W4 Visual Engine implementation
    ========================================= */
 
-.w4-button {
-  display: inline-flex;
+@layer components {
+  .w4-button {
+    display: inline-flex;
   flex-shrink: 0;
   cursor: pointer;
   user-select: none;
@@ -81,6 +82,7 @@
    SEMANTIC VARIANTS (Color System)
    ---------------------------------- */
 .w4-button-primary {
+  
   --w4-btn-bg: hsl(var(--w4-primary));
   --w4-btn-fg: hsl(var(--w4-primary-content));
   --w4-btn-border: hsl(var(--w4-primary));
@@ -214,4 +216,5 @@
 
 .w4-button-block {
   inline-size: 100%;
+}
 }

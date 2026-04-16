@@ -3,7 +3,9 @@ export default class W4Dropdown {
      * Initialize Dropdown component logic
      */
     static init() {
+        if (this.initialized) return;
         this.bindEvents();
+        this.initialized = true;
     }
 
     static bindEvents() {

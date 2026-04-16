@@ -4,6 +4,7 @@
    Layout Morphology
    ========================================= */
 
+@layer components {
 .w4-card {
   position: relative;
   display: flex;
@@ -162,4 +163,5 @@
 .w4-card-collapsed .w4-card-body,
 .w4-card[data-w4-state~="collapsed"] .w4-card-body {
   display: none !important;
+}
 }

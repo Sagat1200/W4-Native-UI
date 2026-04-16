@@ -3,6 +3,7 @@
    Native W4 Visual Engine implementation
    ========================================= */
 
+@layer components {
 .w4-label {
   display: inline-flex;
   align-items: center;
@@ -103,4 +104,5 @@
 .w4-label-hidden,
 .w4-label[data-w4-state~="hidden"] {
   display: none !important;
+}
 }

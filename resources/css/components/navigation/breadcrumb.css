@@ -3,6 +3,7 @@
    Native W4 Visual Engine implementation Layout Morphology
    ========================================================================== */
 
+@layer components {
 .w4-breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -120,4 +121,5 @@
   margin-inline-start: var(--w4-spacing-2);
   color: var(--w4-base-content);
   opacity: 0.5;
+}
 }

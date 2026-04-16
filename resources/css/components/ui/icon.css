@@ -3,6 +3,7 @@
    Native W4 Visual Engine implementation
    ========================================= */
 
+@layer components {
 .w4-icon {
   display: inline-block;
   line-height: 1;
@@ -98,4 +99,5 @@
 
 .w4-icon-decorative {
   pointer-events: none;
+}
 }

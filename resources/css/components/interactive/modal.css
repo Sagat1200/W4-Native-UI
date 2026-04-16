@@ -4,6 +4,7 @@
    Interactive System
    ========================================= */
 
+@layer components {
 .w4-modal {
   /* Positioning & Overlay */
   position: fixed;
@@ -159,4 +160,5 @@
 .w4-modal-active,
 .w4-modal[data-w4-state~="active"] {
   z-index: 1000; /* Ensure active modal is always on top */
+}
 }

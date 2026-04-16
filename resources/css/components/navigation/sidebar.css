@@ -3,6 +3,7 @@
    Native W4 Visual Engine implementation Layout Morphology
    ========================================================================== */
 
+@layer components {
 .w4-sidebar {
   display: flex;
   flex-direction: column;
@@ -180,3 +181,4 @@
 .w4-sidebar.w4-variant-neutral, .w4-sidebar.w4-sidebar-neutral { background-color: hsl(var(--w4-neutral)); color: hsl(var(--w4-neutral-content)); border-color: transparent; }
 .w4-sidebar.w4-variant-base-200, .w4-sidebar.w4-sidebar-base-200 { background-color: hsl(var(--w4-base-200)); }
 .w4-sidebar.w4-variant-base-300, .w4-sidebar.w4-sidebar-base-300 { background-color: hsl(var(--w4-base-300)); }
+}

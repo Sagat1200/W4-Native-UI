@@ -39,6 +39,13 @@ class BladeDirectivesTest extends TestCase
         $this->assertStringContainsString('window.NativeUI.init(document)', $html);
     }
 
+    public function test_renderiza_directiva_w4_merge(): void
+    {
+        $html = Blade::render('@w4Merge("p-4 bg-red-500", "bg-blue-500 text-white")');
+
+        $this->assertEquals('p-4 text-white bg-blue-500', trim($html));
+    }
+
     public function test_registra_directivas_blade(): void
     {
         $directives = Blade::getCustomDirectives();
@@ -47,5 +54,6 @@ class BladeDirectivesTest extends TestCase
         $this->assertArrayHasKey('NativeUIScripts', $directives);
         $this->assertArrayHasKey('NativeUIInit', $directives);
         $this->assertArrayHasKey('NativeUILivewire', $directives);
+        $this->assertArrayHasKey('w4Merge', $directives);
     }
 }

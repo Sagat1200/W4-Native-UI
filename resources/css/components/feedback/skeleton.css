@@ -4,6 +4,7 @@
    Feedback Morphology
    ========================================= */
 
+@layer components {
 .w4-skeleton {
   /* Morphology Tokens */
   border-radius: var(--w4-skeleton-radius, var(--w4-radius-skeleton, var(--w4-radius-md)));
@@ -104,4 +105,5 @@
 .w4-skeleton[data-w4-state~="loading"] {
   /* Trigger the loading animation */
   animation: w4-skeleton-loading 1.4s ease infinite;
+}
 }

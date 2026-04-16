@@ -3,6 +3,7 @@
    Native W4 Visual Engine implementation
    ========================================= */
 
+@layer components {
 .w4-text {
   color: var(--w4-text-color, hsl(var(--w4-base-content)));
   line-height: var(--w4-text-line-height, 1.5);
@@ -99,4 +100,5 @@
 .w4-text-hidden,
 .w4-text[data-w4-state~="hidden"] {
   display: none !important;
+}
 }
