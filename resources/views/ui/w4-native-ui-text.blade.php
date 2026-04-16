@@ -155,6 +155,29 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Text</h1>
+            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+                El componente Text es la base fundamental para el renderizado de contenido escrito en la aplicación.
+                Garantiza una legibilidad óptima ajustando dinámicamente el interlineado, los pesos tipográficos y el
+                contraste de colores según el tema activo y las convenciones de accesibilidad (WCAG).
+            </p>
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
+                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong class="w4-text-active">Cuerpos de texto:</strong> Artículos, descripciones largas o entradas
+                    de blog utilizando la variante Default/Neutral.</li>
+                <li><strong class="w4-text-active">Introducciones (Leads):</strong> Resaltar el primer párrafo de una
+                    sección importante utilizando el modificador especial <code>w4-text-lead</code>.</li>
+                <li><strong class="w4-text-active">Feedback de sistema:</strong> Mostrar mensajes de éxito, error o
+                    advertencia dentro de alertas o notificaciones Toast.</li>
+                <li><strong class="w4-text-active">Metadatos:</strong> Mostrar fechas, autores o información auxiliar
+                    utilizando el tamaño <code>w4-text-xs</code> junto a la variante <code>w4-text-muted</code>.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Variantes de Color Semánticas</h2>
             <div class="preview-group grid-container">

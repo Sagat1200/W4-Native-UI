@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Alert Lab</title>
     @NativeUIStyles
-    <link rel="stylesheet" href="../../../dist/w4-native-ui.css">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -152,6 +151,29 @@
                 </select>
             </div>
         </header>
+
+        <section style="margin-block-end: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Alert</h1>
+            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+                El componente Alert es un elemento de retroalimentación visual diseñado para comunicar información
+                importante, cambios de estado o advertencias críticas al usuario sin interrumpir su flujo de trabajo
+                principal.
+            </p>
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
+                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong class="w4-text-active">Feedback de sistema:</strong> Notificar sobre el éxito de una
+                    operación ("Guardado exitosamente") o un error crítico.</li>
+                <li><strong class="w4-text-active">Anuncios informativos:</strong> Informar sobre nuevas
+                    características, actualizaciones del sistema o mantenimientos programados.</li>
+                <li><strong class="w4-text-active">Validación de formularios:</strong> Agrupar errores de validación en
+                    la parte superior de un formulario extenso.</li>
+                <li><strong class="w4-text-active">Banner global:</strong> Fijarlo en la parte superior del Layout
+                    principal para alertas a nivel de aplicación usando las variantes de tamaño y color sólido.</li>
+            </ul>
+        </section>
 
         <section>
             <h2 class="section-title">Variantes de Color Semánticas (Soft por Defecto)</h2>

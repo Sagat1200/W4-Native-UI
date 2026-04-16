@@ -154,6 +154,30 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Progress</h1>
+            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+                El componente Progress estiliza la etiqueta nativa <code>&lt;progress&gt;</code> de HTML5. Se utiliza
+                para visualizar el estado de avance de una operación extensa (como una descarga o un flujo de pasos
+                múltiples), ofreciendo tanto estados determinados (porcentajes) como indeterminados (animación de carga
+                continua).
+            </p>
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
+                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong class="w4-text-active">Subida/Descarga de archivos:</strong> Mostrar el porcentaje exacto de
+                    un archivo que se está procesando usando el atributo <code>value</code>.</li>
+                <li><strong class="w4-text-active">Wizards y Formularios por pasos:</strong> Indicar en qué paso se
+                    encuentra el usuario dentro de un flujo largo.</li>
+                <li><strong class="w4-text-active">Carga de aplicaciones:</strong> Usar el estado indeterminado
+                    (removiendo el atributo value) durante el enrutamiento inicial o carga de datos pesados.</li>
+                <li><strong class="w4-text-active">Cuotas y límites:</strong> Representar visualmente el uso de
+                    almacenamiento de una cuenta (cambiando a color Warning o Error al acercarse al 100%).</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Variantes de Color Semánticas</h2>
             <div class="preview-group" style="flex-direction: column;">

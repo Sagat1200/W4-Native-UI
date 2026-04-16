@@ -153,6 +153,30 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Loading</h1>
+            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+                El componente Loading (o Spinner) proporciona retroalimentación visual sobre operaciones asíncronas en
+                curso. Es ligero, renderizado completamente en CSS (sin SVGs o GIFs pesados) y se adapta a cualquier
+                contexto de tamaño o color del sistema de diseño.
+            </p>
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
+                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong class="w4-text-active">Carga de página/sección:</strong> Centrado en un contenedor vacío
+                    mientras se obtienen los datos de una API (usando <code>w4-loading-lg</code> o <code>xl</code>).
+                </li>
+                <li><strong class="w4-text-active">Acciones en botones:</strong> Reemplazar el ícono de un botón por el
+                    spinner de carga al enviar un formulario (tamaños <code>xs</code> o <code>sm</code>).</li>
+                <li><strong class="w4-text-active">Carga infinita (Infinite Scroll):</strong> Mostrar en la parte
+                    inferior de una lista mientras se cargan más resultados.</li>
+                <li><strong class="w4-text-active">Sincronización:</strong> Indicar procesos de guardado automático en
+                    segundo plano usando la variante Dots (<code>w4-loading-dots</code>).</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Variantes de Color Semánticas</h2>
             <div class="preview-group">

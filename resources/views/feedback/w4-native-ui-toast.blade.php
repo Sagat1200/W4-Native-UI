@@ -216,6 +216,21 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Toast</h1>
+            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+                El componente Toast (Notificación) proporciona retroalimentación efímera y no bloqueante sobre una operación que el usuario acaba de realizar. Está diseñado para aparecer superpuesto en las esquinas de la interfaz y desaparecer automáticamente después de unos segundos, utilizando animaciones de entrada y salida suaves integradas en el motor CSS.
+            </p>
+            
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary" style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral" style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong class="w4-text-active">Confirmaciones de acción:</strong> Mostrar "Registro guardado correctamente" (Success) en la esquina inferior derecha tras enviar un formulario.</li>
+                <li><strong class="w4-text-active">Errores no críticos:</strong> Avisar sobre fallos temporales de conexión (Warning) en la parte superior sin interrumpir la navegación.</li>
+                <li><strong class="w4-text-active">Nuevos eventos (Push):</strong> Notificar la llegada de un nuevo mensaje de chat o correo (Info/Primary) en tiempo real.</li>
+                <li><strong class="w4-text-active">Animación de salida:</strong> Utilizar el estado <code>data-w4-state="dismissed"</code> vía JavaScript para desencadenar el fade-out antes de remover el elemento del DOM.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Variantes de Color Semánticas</h2>
             <div class="preview-group" style="flex-direction: column;">

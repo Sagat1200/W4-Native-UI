@@ -152,6 +152,29 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 IconButton</h1>
+            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+                El componente IconButton es una variación especializada del botón diseñada exclusivamente para alojar
+                iconografía sin texto acompañante. Mantiene una proporción cuadrada o circular perfecta, optimizando el
+                área táctil para interfaces densas o barras de herramientas.
+            </p>
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
+                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong class="w4-text-active">Barras de herramientas:</strong> Editores de texto (Rich Text),
+                    controles de video/audio o acciones de DataGrids.</li>
+                <li><strong class="w4-text-active">Acciones contextuales:</strong> Botones de "Eliminar", "Editar" o
+                    "Ver detalles" en filas de tablas donde el espacio es limitado.</li>
+                <li><strong class="w4-text-active">Navegación compacta:</strong> Botones de menú hamburguesa, cierres de
+                    modales (X) o controles de paginación.</li>
+                <li><strong class="w4-text-active">Redes sociales:</strong> Enlaces a perfiles sociales usando la
+                    variante Ghost o Outline.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Variantes de Color</h2>
             <div class="button-group">

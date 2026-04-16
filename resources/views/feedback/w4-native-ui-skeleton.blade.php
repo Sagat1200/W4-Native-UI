@@ -154,6 +154,29 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Skeleton</h1>
+            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+                El componente Skeleton proporciona una representación visual anticipada (placeholder) de la interfaz
+                mientras los datos subyacentes se están cargando. Esto mejora drásticamente el rendimiento percibido por
+                el usuario en comparación con un spinner tradicional.
+            </p>
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
+                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong class="w4-text-active">Carga de Tarjetas (Cards):</strong> Combinar formas de círculo
+                    (avatar) y texto para imitar el perfil de un usuario antes de que la API responda.</li>
+                <li><strong class="w4-text-active">DataGrids / Tablas:</strong> Renderizar filas de Skeletons para
+                    mantener la estructura de la tabla estática mientras se realiza el fetching.</li>
+                <li><strong class="w4-text-active">Imágenes de héroe:</strong> Usar la variante de bloque sin radio
+                    (Square) para reservar el espacio de imágenes pesadas y evitar Layout Shifts (CLS).</li>
+                <li><strong class="w4-text-active">Transiciones suaves:</strong> Utilizar el estado JS para desaparecer
+                    el skeleton e intercambiarlo por el contenido real mediante opacidad.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Formas (Shape Modifiers)</h2>
             <div class="preview-group" style="flex-direction: column;">

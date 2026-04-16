@@ -100,13 +100,13 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             font-weight: 600;
-            margin-top: auto;
+            margin-block-start: auto;
         }
 
         /* Example icons */
         .icon-sm {
-            width: 16px;
-            height: 16px;
+            inline-size: 16px;
+            block-size: 16px;
         }
     </style>
 </head>
@@ -158,6 +158,26 @@
                 </select>
             </div>
         </header>
+
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Helper Text</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Helper Text</strong> proporciona contexto adicional o instrucciones breves debajo
+                de los elementos de formulario. Ayuda a guiar al usuario indicando el formato esperado, restricciones o
+                aclarando el propósito de un campo antes de que interactúen con él.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Requisitos de formato:</strong> Indicar cómo debe ingresarse un dato (ej. "Usa formato
+                    DD/MM/AAAA").</li>
+                <li><strong>Explicación de propósito:</strong> Aclarar para qué se usará la información (ej. "Tu correo
+                    no será compartido").</li>
+                <li><strong>Límites y restricciones:</strong> Informar sobre límites de caracteres o tamaños de archivo
+                    máximos.</li>
+            </ul>
+        </section>
 
         <section>
             <h2 class="section-title">Variantes de Color Semánticas</h2>
@@ -280,11 +300,12 @@
 
                 <!-- Field Group Example -->
                 <div
-                    style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
+                    style="display: flex; flex-direction: column; gap: 0.5rem; inline-size: 100%; max-inline-size: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
                     <label style="font-weight: 500; font-size: 0.875rem;">Nombre de Usuario</label>
                     <input type="text" placeholder="ej. w4_admin"
                         style="padding: 0.75rem; border-radius: var(--w4-radius-button); border: 1px solid hsl(var(--w4-base-300)); background: hsl(var(--w4-base-200)); color: hsl(var(--w4-base-content)); outline: none;" />
-                    <span class="w4-helper-text w4-helper-text-sm w4-helper-text-muted" style="margin-top: 0.25rem;">
+                    <span class="w4-helper-text w4-helper-text-sm w4-helper-text-muted"
+                        style="margin-block-start: 0.25rem;">
                         Este será el nombre visible públicamente en tu perfil. No utilices caracteres especiales.
                     </span>
                 </div>

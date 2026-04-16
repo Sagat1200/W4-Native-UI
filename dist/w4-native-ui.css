@@ -1553,6 +1553,21 @@ html[data-theme] body {
 }
 
 /* ----------------------------------
+   ALIGNMENT MODIFIERS
+   ---------------------------------- */
+.w4-heading-start {
+  text-align: start;
+}
+
+.w4-heading-center {
+  text-align: center;
+}
+
+.w4-heading-end {
+  text-align: end;
+}
+
+/* ----------------------------------
    STATES & MODIFIERS (HeadingComponentState Enum)
    ---------------------------------- */
 .w4-heading-hidden,
@@ -2172,6 +2187,21 @@ html[data-theme] body {
 
 .w4-text-xl {
   --w4-text-font-size: 1.25rem;
+}
+
+/* ----------------------------------
+   ALIGNMENT MODIFIERS
+   ---------------------------------- */
+.w4-text-start {
+  text-align: start;
+}
+
+.w4-text-center {
+  text-align: center;
+}
+
+.w4-text-end {
+  text-align: end;
 }
 
 /* ----------------------------------

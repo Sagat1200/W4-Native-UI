@@ -159,6 +159,29 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Toggle</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Toggle</strong> (interruptor) es un elemento visual que permite al usuario
+                alternar entre dos estados opuestos, generalmente "encendido" y "apagado". Proporciona retroalimentación
+                visual inmediata, similar a un interruptor de luz físico, y es ideal para ajustes de configuración que
+                aplican cambios instantáneos.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Preferencias del sistema:</strong> Activar o desactivar características globales como el
+                    "Modo oscuro" o "Notificaciones push".</li>
+                <li><strong>Configuraciones de privacidad:</strong> Controlar permisos rápidos, como "Perfil público" o
+                    "Compartir ubicación".</li>
+                <li><strong>Filtros instantáneos:</strong> Alternar vistas o estados en tablas y listas (ej. "Mostrar
+                    solo elementos activos").</li>
+                <li><strong>Funciones experimentales:</strong> Habilitar características beta en paneles de
+                    administración.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Variantes de Color Semánticas</h2>
             <div class="preview-group">
@@ -272,7 +295,7 @@
 
                 <!-- Label Right -->
                 <div
-                    style="display: flex; gap: 0.75rem; align-items: center; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); width: 300px;">
+                    style="display: flex; gap: 0.75rem; align-items: center; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); inline-size: 300px;">
                     <input type="checkbox" id="tgl1" class="w4-toggle w4-toggle-primary w4-toggle-md" />
                     <label for="tgl1" class="w4-label w4-label-primary w4-label-md" style="cursor: pointer;">Activar
                         Notificaciones</label>
@@ -280,7 +303,7 @@
 
                 <!-- Label Left -->
                 <div
-                    style="display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); width: 300px;">
+                    style="display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); inline-size: 300px;">
                     <label for="tgl2" class="w4-label w4-label-secondary w4-label-md" style="cursor: pointer;">Modo
                         Oscuro</label>
                     <input type="checkbox" id="tgl2" class="w4-toggle w4-toggle-secondary w4-toggle-md" checked />
@@ -288,7 +311,7 @@
 
                 <!-- Label Required and Error -->
                 <div
-                    style="display: flex; gap: 0.75rem; align-items: center; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); width: 300px; border: 1px solid hsl(var(--w4-error));">
+                    style="display: flex; gap: 0.75rem; align-items: center; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); inline-size: 300px; border: 1px solid hsl(var(--w4-error));">
                     <input type="checkbox" id="tgl3" class="w4-toggle w4-toggle-error w4-toggle-md w4-toggle-invalid" />
                     <label for="tgl3" class="w4-label w4-label-md w4-label-error w4-label-required"
                         style="cursor: pointer;">Acepto compartir mis datos</label>

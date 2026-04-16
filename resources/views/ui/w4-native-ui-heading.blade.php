@@ -144,6 +144,29 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Heading</h1>
+            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+                El componente Heading se utiliza para crear jerarquía tipográfica y estructura semántica en las páginas.
+                Soporta tamaños explícitos, colores temáticos y clases de alineación, asegurando que el SEO y la
+                accesibilidad se mantengan intactos.
+            </p>
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
+                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong class="w4-text-active">Títulos de página:</strong> Nivel H1 principal usando
+                    <code>w4-heading-h1</code>.</li>
+                <li><strong class="w4-text-active">Separación de secciones:</strong> Jerarquía secundaria con H2 y H3.
+                </li>
+                <li><strong class="w4-text-active">Destacar información:</strong> Uso de variantes de color como Primary
+                    o Accent para llamar la atención en Landing Pages.</li>
+                <li><strong class="w4-text-active">Tarjetas y Modales:</strong> Encabezados pequeños (H5, H6) integrados
+                    en otros componentes de UI.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Niveles Semánticos (H1 - H6)</h2>
             <div class="preview-group">

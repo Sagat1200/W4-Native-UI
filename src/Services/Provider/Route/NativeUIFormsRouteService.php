@@ -17,7 +17,7 @@ class NativeUIFormsRouteService
         })->name('w4-native.fielderror');
 
         Route::get('/w4/helpertext', function () {
-            return view('w4-native::forms.w4-native-ui-help-text');
+            return view('w4-native::forms.w4-native-ui-helper-text');
         })->name('w4-native.helpertext');
 
         Route::get('/w4/input', function () {

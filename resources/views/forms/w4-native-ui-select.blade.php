@@ -91,8 +91,8 @@
             padding: 1.5rem;
             border-radius: var(--w4-radius-card);
             box-shadow: var(--w4-shadow-sm);
-            width: 100%;
-            max-width: 320px;
+            inline-size: 100%;
+            max-inline-size: 320px;
         }
 
         .preview-label-desc {
@@ -101,7 +101,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             font-weight: 600;
-            margin-top: auto;
+            margin-block-start: auto;
         }
     </style>
 </head>
@@ -153,6 +153,27 @@
                 </select>
             </div>
         </header>
+
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Select</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Select</strong> (lista desplegable) permite a los usuarios elegir una opción de
+                una lista de valores predefinidos. Es ideal cuando el espacio es limitado y hay múltiples opciones
+                disponibles, manteniendo la interfaz limpia.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Selección de país o región:</strong> Elegir una ubicación de una lista extensa de países.
+                </li>
+                <li><strong>Filtrado y ordenamiento:</strong> Cambiar el orden de visualización de una tabla o lista
+                    (ej. "Más recientes", "Precio menor a mayor").</li>
+                <li><strong>Categorización:</strong> Asignar una categoría o estado a un elemento (ej. Estado de una
+                    tarea: "Pendiente", "En progreso", "Completada").</li>
+                <li><strong>Configuraciones:</strong> Seleccionar temas, idiomas o preferencias de visualización.</li>
+            </ul>
+        </section>
 
         <section>
             <h2 class="section-title">Variantes de Color Semánticas</h2>
@@ -335,7 +356,7 @@
 
                 <!-- Caso de Uso 1: Éxito -->
                 <div
-                    style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
+                    style="display: flex; flex-direction: column; gap: 0.5rem; inline-size: 100%; max-inline-size: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
                     <label for="country" class="w4-label w4-label-md w4-label-required">País de Residencia</label>
                     <select id="country" class="w4-select w4-select-md w4-select-valid">
                         <option disabled>Selecciona tu país</option>
@@ -357,7 +378,7 @@
 
                 <!-- Caso de Uso 2: Error -->
                 <div
-                    style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
+                    style="display: flex; flex-direction: column; gap: 0.5rem; inline-size: 100%; max-inline-size: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
                     <label for="role" class="w4-label w4-label-md w4-label-error w4-label-required">Rol de
                         Usuario</label>
                     <select id="role" class="w4-select w4-select-md w4-select-invalid">
@@ -379,7 +400,7 @@
 
                 <!-- Caso de Uso 3: Normal con helper -->
                 <div
-                    style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
+                    style="display: flex; flex-direction: column; gap: 0.5rem; inline-size: 100%; max-inline-size: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
                     <label for="secondaryThemeSwitcher" class="w4-label w4-label-md">Preferencia de Tema</label>
                     <select id="secondaryThemeSwitcher" class="w4-select w4-select-md">
                         <option disabled selected>Por defecto del sistema</option>

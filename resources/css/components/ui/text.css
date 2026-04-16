@@ -82,6 +82,21 @@
 }
 
 /* ----------------------------------
+   ALIGNMENT MODIFIERS
+   ---------------------------------- */
+.w4-text-start {
+  text-align: start;
+}
+
+.w4-text-center {
+  text-align: center;
+}
+
+.w4-text-end {
+  text-align: end;
+}
+
+/* ----------------------------------
    STATES & MODIFIERS (TextComponentState Enum)
    ---------------------------------- */
 .w4-text-disabled,

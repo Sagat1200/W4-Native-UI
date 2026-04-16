@@ -91,8 +91,8 @@
             padding: 1.5rem;
             border-radius: var(--w4-radius-card);
             box-shadow: var(--w4-shadow-sm);
-            width: 100%;
-            max-width: 320px;
+            inline-size: 100%;
+            max-inline-size: 320px;
         }
 
         .preview-label-desc {
@@ -101,7 +101,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             font-weight: 600;
-            margin-top: auto;
+            margin-block-start: auto;
         }
     </style>
 </head>
@@ -153,6 +153,28 @@
                 </select>
             </div>
         </header>
+
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Input</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Input</strong> es el elemento principal para la entrada de texto libre por parte
+                del usuario. Permite capturar datos como nombres, correos electrónicos, contraseñas o números, y es
+                fundamental para cualquier formulario interactivo.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Captura de datos personales:</strong> Para solicitar información como nombre, apellido o
+                    dirección.</li>
+                <li><strong>Credenciales de acceso:</strong> Campos de correo electrónico y contraseña en formularios de
+                    inicio de sesión o registro.</li>
+                <li><strong>Búsqueda y filtrado:</strong> Barras de búsqueda para encontrar contenido específico dentro
+                    de la aplicación.</li>
+                <li><strong>Entrada de texto general:</strong> Captura de cantidades numéricas, códigos postales o
+                    identificadores cortos.</li>
+            </ul>
+        </section>
 
         <section>
             <h2 class="section-title">Variantes de Color Semánticas</h2>
@@ -271,7 +293,7 @@
 
                 <!-- Caso de Uso 1: Éxito -->
                 <div
-                    style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
+                    style="display: flex; flex-direction: column; gap: 0.5rem; inline-size: 100%; max-inline-size: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
                     <label for="username" class="w4-label w4-label-md w4-label-required">Nombre de Usuario</label>
                     <input type="text" id="username" class="w4-input w4-input-md w4-input-valid" value="w4_admin_pro" />
                     <span class="w4-helper-text w4-helper-text-sm w4-helper-text-success">
@@ -287,7 +309,7 @@
 
                 <!-- Caso de Uso 2: Error -->
                 <div
-                    style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
+                    style="display: flex; flex-direction: column; gap: 0.5rem; inline-size: 100%; max-inline-size: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
                     <label for="email" class="w4-label w4-label-md w4-label-error w4-label-required">Correo
                         Electrónico</label>
                     <input type="email" id="email" class="w4-input w4-input-md w4-input-invalid"
@@ -305,7 +327,7 @@
 
                 <!-- Caso de Uso 3: Normal con helper -->
                 <div
-                    style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
+                    style="display: flex; flex-direction: column; gap: 0.5rem; inline-size: 100%; max-inline-size: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
                     <label for="api_key" class="w4-label w4-label-md">Clave de API</label>
                     <input type="text" id="api_key" class="w4-input w4-input-md" placeholder="sk_live_123456789..." />
                     <span class="w4-helper-text w4-helper-text-sm w4-helper-text-muted">

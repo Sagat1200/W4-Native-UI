@@ -134,18 +134,42 @@
             </div>
         </header>
 
-        <section>
+        <section style="margin-block-end: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Button</h1>
+            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+                El componente de botón es un elemento de interfaz fundamental utilizado para desencadenar acciones.
+                Soporta múltiples variantes semánticas, tamaños, formas y estados de interacción.
+            </p>
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
+                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong class="w4-text-active">Formularios:</strong> Enviar, guardar o cancelar datos (usando
+                    Primary, Secondary o Ghost).</li>
+                <li><strong class="w4-text-active">Acciones destructivas:</strong> Eliminar registros (usando variante
+                    Error).</li>
+                <li><strong class="w4-text-active">Navegación:</strong> Simular enlaces con la variante Link o
+                    integrarlos en Sidebars.</li>
+                <li><strong class="w4-text-active">Procesamiento:</strong> Mostrar retroalimentación asíncrona con el
+                    estado <code>data-w4-state="loading"</code>.</li>
+            </ul>
+        </section>
+
+        {{-- <section>
             <h2 class="section-title">Mezcla con clases utilitarias de Tailwind (@w4Merge)</h2>
             <div class="button-group">
                 <!-- Usando la directiva @w4Merge recién creada -->
-                <button class="@w4Merge('w4-button w4-button-primary', 'w-full lg:w-64 bg-purple-600 hover:bg-purple-700 text-yellow-300 shadow-xl rounded-full')">
+                <button
+                    class="@w4Merge('w4-button w4-button-primary', 'w-full lg:w-64 bg-purple-600 hover:bg-purple-700 text-yellow-300 shadow-xl rounded-full')">
                     Botón Personalizado
                 </button>
-                <button class="@w4Merge('w4-button w4-button-outline w4-button-secondary', 'border-dashed border-4 p-8 text-2xl')">
+                <button
+                    class="@w4Merge('w4-button w4-button-outline w4-button-secondary', 'border-dashed border-4 p-8 text-2xl')">
                     Botón Gigante Dashed
                 </button>
             </div>
-        </section>
+        </section> --}}
 
         <section>
             <h2 class="section-title">Variantes de Color</h2>

@@ -154,6 +154,30 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Label</h1>
+            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+                El componente Label proporciona consistencia tipográfica para describir inputs, controles de formularios
+                o agrupaciones de datos. Soporta estados visuales nativos como "obligatorio" (required) y se adapta
+                dinámicamente al sistema de diseño de W4.
+            </p>
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
+                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong class="w4-text-active">Formularios de entrada:</strong> Asociar un texto descriptivo (usando
+                    <code>for=""</code>) con un campo de texto, select o checkbox.</li>
+                <li><strong class="w4-text-active">Indicador de obligatoriedad:</strong> Añadir automáticamente un
+                    asterisco rojo (*) usando la clase <code>w4-label-required</code>.</li>
+                <li><strong class="w4-text-active">Estados de validación:</strong> Colorear la etiqueta en rojo (Error)
+                    o verde (Success) cuando el campo asociado tiene problemas.</li>
+                <li><strong class="w4-text-active">Desactivación sincronizada:</strong> Aplicar
+                    <code>w4-label-disabled</code> para atenuar visualmente la etiqueta cuando su input también está
+                    deshabilitado.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Variantes de Color</h2>
             <div class="preview-group grid-container">

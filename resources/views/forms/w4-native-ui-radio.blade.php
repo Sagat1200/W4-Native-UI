@@ -153,6 +153,28 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Radio</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Radio</strong> (botón de opción) permite a los usuarios seleccionar una única
+                opción de un conjunto mutuamente excluyente. A diferencia de los checkboxes, cuando se selecciona un
+                radio button, cualquier otro botón previamente seleccionado en el mismo grupo se deselecciona
+                automáticamente.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Selección de planes:</strong> Elegir un nivel de suscripción (Básico, Pro, Enterprise).</li>
+                <li><strong>Métodos de pago:</strong> Seleccionar una única forma de pago (Tarjeta de crédito, PayPal,
+                    Transferencia).</li>
+                <li><strong>Preferencias únicas:</strong> Configurar opciones donde solo es válida una respuesta, como
+                    el género, rango de edad o idioma principal.</li>
+                <li><strong>Encuestas o exámenes:</strong> Preguntas de opción múltiple donde solo se admite una
+                    respuesta correcta.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Variantes de Color Semánticas</h2>
             <div class="preview-group">
@@ -264,7 +286,7 @@
 
                 <!-- Radio Group Example -->
                 <div
-                    style="display: flex; flex-direction: column; gap: 1rem; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); width: 300px;">
+                    style="display: flex; flex-direction: column; gap: 1rem; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); inline-size: 300px;">
                     <span class="w4-label w4-label-md" style="font-weight: 700;">Selecciona un plan:</span>
 
                     <div style="display: flex; gap: 0.75rem; align-items: center;">

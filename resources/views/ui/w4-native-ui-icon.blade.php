@@ -156,6 +156,30 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Icon</h1>
+            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+                El componente Icon proporciona una capa de abstracción visual unificada para renderizar iconografía en
+                tu aplicación. Funciona con cualquier librería de fuentes de íconos (como FontAwesome, Heroicons o SVG
+                directos) mientras respeta el sistema de tokens de color, tamaño y animaciones de W4.
+            </p>
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
+                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong class="w4-text-active">Soporte visual:</strong> Acompañar texto en botones (ej. ícono de
+                    "Guardar" junto a la palabra).</li>
+                <li><strong class="w4-text-active">Feedback de estado:</strong> Mostrar íconos de éxito, error o
+                    advertencia coloreados semánticamente.</li>
+                <li><strong class="w4-text-active">Procesamiento en curso:</strong> Reemplazar temporalmente un ícono
+                    con una animación de carga usando <code>data-w4-state="loading"</code> o <code>w4-icon-spin</code>.
+                </li>
+                <li><strong class="w4-text-active">Navegación:</strong> Íconos decorativos en Sidebars, Dropdowns o
+                    Menús de usuario.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Variantes de Color</h2>
             <div class="preview-group">

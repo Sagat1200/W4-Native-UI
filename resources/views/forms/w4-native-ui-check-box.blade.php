@@ -159,6 +159,28 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Checkbox</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Checkbox</strong> permite a los usuarios seleccionar una o varias opciones de un
+                conjunto, o alternar entre dos estados opuestos (como encendido/apagado). Es un elemento de formulario
+                esencial para recopilar preferencias y confirmaciones.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Aceptación de términos:</strong> Para confirmar que el usuario ha leído y aceptado los
+                    términos y condiciones.</li>
+                <li><strong>Selección múltiple:</strong> En listas de filtros o configuraciones donde se pueden elegir
+                    varias opciones simultáneamente.</li>
+                <li><strong>Configuración de preferencias:</strong> Para activar o desactivar características
+                    específicas (ej. recibir notificaciones).</li>
+                <li><strong>Tareas y listas:</strong> Marcar elementos como completados en una lista de tareas
+                    pendientes.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Variantes de Color Semánticas</h2>
             <div class="preview-group">

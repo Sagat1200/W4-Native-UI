@@ -153,6 +153,30 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Link</h1>
+            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+                El componente Link se encarga de estilizar hipervínculos (etiquetas <code>&lt;a&gt;</code>) de manera
+                consistente. Soporta variantes de color para indicar la naturaleza del enlace, hereda automáticamente el
+                tamaño de la tipografía donde se encuentre insertado y cuenta con estados accesibles (focus ring)
+                integrados.
+            </p>
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
+                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong class="w4-text-active">Navegación textual:</strong> Enlaces integrados dentro de párrafos o
+                    artículos.</li>
+                <li><strong class="w4-text-active">Acciones secundarias:</strong> Textos como "Olvidé mi contraseña" en
+                    formularios de login.</li>
+                <li><strong class="w4-text-active">Breadcrumbs:</strong> Estilizar las rutas de navegación estructural
+                    del sitio.</li>
+                <li><strong class="w4-text-active">Políticas y Legales:</strong> Resaltar términos de servicio, cookies
+                    o acuerdos de privacidad con las variantes Secondary o Neutral.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Variantes de Color</h2>
             <div class="preview-group grid-container">

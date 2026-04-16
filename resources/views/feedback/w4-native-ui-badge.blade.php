@@ -166,6 +166,30 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Badge</h1>
+            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+                El componente Badge es un pequeño indicador visual utilizado para resaltar metadatos, contadores,
+                etiquetas de estado o atributos clave. Es altamente flexible y está diseñado para ser anidado dentro de
+                otros componentes más grandes como botones, tarjetas o elementos de navegación.
+            </p>
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
+                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                <li><strong class="w4-text-active">Contadores de notificaciones:</strong> Mostrar el número de mensajes
+                    sin leer (ej. "+99") anidado en un icono de campana o avatar.</li>
+                <li><strong class="w4-text-active">Etiquetas de estado:</strong> Indicar el ciclo de vida de un registro
+                    en una tabla (ej. "Pendiente" en Warning, "Completado" en Success).</li>
+                <li><strong class="w4-text-active">Categorización:</strong> Listar tags o categorías de un artículo
+                    usando la variante Outline o Soft para no sobrecargar la vista.</li>
+                <li><strong class="w4-text-active">Llamadas de atención:</strong> Usar la variante
+                    <code>w4-badge-highlighted</code> (animación de pulso) para atraer la mirada a una nueva
+                    funcionalidad (ej. etiqueta "Nuevo").</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Variantes de Color Semánticas</h2>
             <div class="preview-group">

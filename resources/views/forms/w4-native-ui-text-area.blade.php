@@ -91,8 +91,8 @@
             padding: 1.5rem;
             border-radius: var(--w4-radius-card);
             box-shadow: var(--w4-shadow-sm);
-            width: 100%;
-            max-width: 320px;
+            inline-size: 100%;
+            max-inline-size: 320px;
         }
 
         .preview-label-desc {
@@ -101,7 +101,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             font-weight: 600;
-            margin-top: auto;
+            margin-block-start: auto;
         }
     </style>
 </head>
@@ -153,6 +153,28 @@
                 </select>
             </div>
         </header>
+
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Text Area</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Text Area</strong> permite a los usuarios introducir múltiples líneas de texto. Es
+                esencial para capturar información extensa, como descripciones, comentarios o mensajes largos, donde un
+                input de una sola línea sería insuficiente.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Comentarios y retroalimentación:</strong> Formularios de contacto o reseñas donde los
+                    usuarios dejan sus opiniones detalladas.</li>
+                <li><strong>Descripciones de productos/perfiles:</strong> Áreas para que los usuarios escriban
+                    biografías largas o detalles de artículos.</li>
+                <li><strong>Mensajería:</strong> Cajas de texto para redactar correos electrónicos, mensajes directos o
+                    publicaciones en foros.</li>
+                <li><strong>Ingreso de código o datos en bruto:</strong> Captura de configuraciones JSON, fragmentos de
+                    código o direcciones largas.</li>
+            </ul>
+        </section>
 
         <section>
             <h2 class="section-title">Variantes de Color Semánticas</h2>
@@ -298,7 +320,7 @@
 
                 <!-- Caso de Uso 1: Formulario Normal -->
                 <div
-                    style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 500px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
+                    style="display: flex; flex-direction: column; gap: 0.5rem; inline-size: 100%; max-inline-size: 500px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
                     <label for="comments" class="w4-label w4-label-md w4-label-required">Comentarios Adicionales</label>
                     <textarea id="comments" class="w4-textarea w4-textarea-md"
                         placeholder="Cuéntanos más sobre tu requerimiento..." rows="4"></textarea>
@@ -309,7 +331,7 @@
 
                 <!-- Caso de Uso 2: Error -->
                 <div
-                    style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 500px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
+                    style="display: flex; flex-direction: column; gap: 0.5rem; inline-size: 100%; max-inline-size: 500px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
                     <label for="bio" class="w4-label w4-label-md w4-label-error">Biografía</label>
                     <textarea id="bio" class="w4-textarea w4-textarea-md w4-textarea-invalid"
                         rows="4">Me llamo Juan y me gusta el #spam y los links extraños http://spam.com</textarea>

@@ -100,13 +100,13 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             font-weight: 600;
-            margin-top: auto;
+            margin-block-start: auto;
         }
 
         /* Example icons for field errors */
         .icon-sm {
-            width: 16px;
-            height: 16px;
+            inline-size: 16px;
+            block-size: 16px;
         }
     </style>
 </head>
@@ -158,6 +158,26 @@
                 </select>
             </div>
         </header>
+
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Field Error</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Field Error</strong> se utiliza para mostrar mensajes de validación o
+                retroalimentación contextual asociados directamente a un campo de formulario específico. Ayuda a los
+                usuarios a identificar y corregir errores de entrada de datos de forma clara y accesible.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Validación de formularios:</strong> Mostrar errores cuando un campo requerido está vacío o
+                    tiene un formato incorrecto.</li>
+                <li><strong>Retroalimentación de éxito:</strong> Indicar visualmente que un campo (como un nombre de
+                    usuario) es válido o está disponible.</li>
+                <li><strong>Reglas y sugerencias:</strong> Mostrar advertencias o reglas de formato (ej. "La contraseña
+                    debe tener al menos 8 caracteres") debajo del input.</li>
+            </ul>
+        </section>
 
         <section>
             <h2 class="section-title">Variantes de Color Semánticas</h2>
@@ -282,11 +302,12 @@
 
                 <!-- Field Group Example -->
                 <div
-                    style="display: flex; flex-direction: column; gap: 0.5rem; width: 100%; max-width: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
+                    style="display: flex; flex-direction: column; gap: 0.5rem; inline-size: 100%; max-inline-size: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
                     <label style="font-weight: 500; font-size: 0.875rem;">Correo Electrónico</label>
                     <input type="text" value="usuario@invalido"
                         style="padding: 0.75rem; border-radius: var(--w4-radius-button); border: 1px solid hsl(var(--w4-error)); background: hsl(var(--w4-base-200)); color: hsl(var(--w4-base-content)); outline: none;" />
-                    <span class="w4-field-error w4-field-error-sm w4-field-error-error" style="margin-top: 0.25rem;">
+                    <span class="w4-field-error w4-field-error-sm w4-field-error-error"
+                        style="margin-block-start: 0.25rem;">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon-sm" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
                                 d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
