@@ -159,6 +159,28 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Divider</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Divider</strong> (separador) es un elemento visual delgado utilizado para separar
+                contenido o agrupar secciones relacionadas dentro de un diseño. Ayuda a mejorar la jerarquía visual y la
+                legibilidad de la interfaz estableciendo pausas claras.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Separación de listas:</strong> Diferenciar elementos dentro de una lista o menú desplegable.
+                </li>
+                <li><strong>Secciones de formulario:</strong> Dividir grupos de campos lógicos (ej. "Información
+                    personal" vs "Datos de facturación").</li>
+                <li><strong>Estructura de artículo:</strong> Separar el título, el autor, el cuerpo y la sección de
+                    comentarios de un post.</li>
+                <li><strong>División con texto:</strong> Usar un divisor con texto centrado (ej. "O iniciar sesión con")
+                    en páginas de autenticación.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Horizontal Divider</h2>
             <div class="demo-zone">

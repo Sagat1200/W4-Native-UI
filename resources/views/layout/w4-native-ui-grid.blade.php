@@ -142,6 +142,28 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Grid</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Grid</strong> (cuadrícula) proporciona un sistema bidimensional para crear layouts
+                estructurados. Facilita la alineación y distribución del contenido en columnas y filas, permitiendo
+                diseños responsivos que se adaptan a diferentes tamaños de pantalla.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Galerías y catálogos:</strong> Mostrar múltiples elementos (como tarjetas de productos o
+                    imágenes) en una cuadrícula uniforme.</li>
+                <li><strong>Formularios complejos:</strong> Organizar campos de entrada en múltiples columnas para
+                    aprovechar mejor el espacio horizontal.</li>
+                <li><strong>Estructura de la página:</strong> Definir el layout principal dividiendo la pantalla en
+                    secciones (ej. contenido principal y barra lateral).</li>
+                <li><strong>Paneles de estadísticas:</strong> Alinear widgets e indicadores en un dashboard de manera
+                    simétrica.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Column Modifiers</h2>
             <div class="demo-zone">

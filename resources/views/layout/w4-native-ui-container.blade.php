@@ -151,6 +151,29 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Container</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Container</strong> es el elemento estructural más básico para definir límites de
+                ancho (max-width) en el diseño. Ayuda a centrar el contenido y asegurar que el layout se adapte
+                correctamente en pantallas grandes, evitando que la información se extienda demasiado y sea difícil de
+                leer.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Envoltura de páginas (Wrappers):</strong> Centrar todo el contenido principal de una página
+                    web dentro de límites definidos.</li>
+                <li><strong>Lectura óptima:</strong> Usar contenedores estrechos (`xs` o `sm`) para artículos de blog y
+                    facilitar el seguimiento visual del texto.</li>
+                <li><strong>Alineación de secciones:</strong> Alinear diferentes bloques horizontales para que mantengan
+                    los mismos márgenes laterales.</li>
+                <li><strong>Diseño responsivo:</strong> Adaptar automáticamente el ancho máximo en diferentes
+                    breakpoints (móvil, tablet, escritorio).</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Container Sizes</h2>
             <div class="demo-zone">

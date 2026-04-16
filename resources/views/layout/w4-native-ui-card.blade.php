@@ -173,6 +173,28 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Card</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Card</strong> (tarjeta) es un contenedor versátil y flexible utilizado para
+                agrupar contenido relacionado y acciones. Es fundamental en el diseño de interfaces modernas para
+                organizar información de manera estructurada, legible y visualmente atractiva.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Listados de contenido:</strong> Mostrar productos de una tienda, artículos de un blog o
+                    perfiles de usuario en una cuadrícula.</li>
+                <li><strong>Paneles de control (Dashboards):</strong> Agrupar métricas, gráficos o resúmenes de
+                    información en widgets independientes.</li>
+                <li><strong>Formularios estructurados:</strong> Contener secciones lógicas de un formulario largo (ej.
+                    "Datos personales", "Información de pago").</li>
+                <li><strong>Elementos interactivos:</strong> Crear tarjetas clicables que actúan como enlaces grandes
+                    hacia vistas detalladas.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Modifiers</h2>
             <div class="preview-grid">

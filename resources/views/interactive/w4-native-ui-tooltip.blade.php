@@ -135,6 +135,28 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Tooltip</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Tooltip</strong> (información sobre herramientas) proporciona texto explicativo o
+                contexto adicional cuando un usuario pasa el cursor (hover) o enfoca un elemento. Ayuda a mantener la
+                interfaz limpia ocultando detalles secundarios hasta que son necesarios.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Botones con solo íconos:</strong> Explicar la acción de un botón que no tiene texto visible
+                    (ej. ícono de papelera &rarr; "Eliminar").</li>
+                <li><strong>Aclaración de términos:</strong> Proporcionar definiciones de términos técnicos o acrónimos
+                    sin saturar el texto principal.</li>
+                <li><strong>Información de estado:</strong> Mostrar el motivo por el cual un botón o campo está
+                    deshabilitado.</li>
+                <li><strong>Fechas relativas:</strong> Mostrar la fecha y hora exacta al pasar el cursor sobre una fecha
+                    relativa como "hace 2 horas".</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Posiciones</h2>
             <div class="preview-group">

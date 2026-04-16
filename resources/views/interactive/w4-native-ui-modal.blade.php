@@ -134,6 +134,29 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Modal</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Modal</strong> (cuadro de diálogo) es una ventana superpuesta que requiere la
+                atención del usuario y bloquea temporalmente la interacción con el resto de la página. Es perfecto para
+                mostrar información importante, confirmaciones o formularios sin que el usuario pierda su contexto
+                actual.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Confirmaciones críticas:</strong> Preguntar al usuario "¿Estás seguro?" antes de eliminar un
+                    registro (Modal de Advertencia/Error).</li>
+                <li><strong>Formularios contextuales:</strong> Crear o editar un registro rápidamente (ej. "Añadir nuevo
+                    usuario") sin cambiar de página.</li>
+                <li><strong>Visualización de detalles:</strong> Mostrar la información completa de un elemento de una
+                    tabla o lista al hacer clic sobre él.</li>
+                <li><strong>Mensajes y notificaciones:</strong> Mostrar términos y condiciones o actualizaciones
+                    importantes del sistema.</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Tamaños de Modal (Sizes)</h2>
             <div class="preview-group">

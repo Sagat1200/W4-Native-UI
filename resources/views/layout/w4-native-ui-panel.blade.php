@@ -139,6 +139,27 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Panel</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Panel</strong> es un contenedor estructurado similar a una tarjeta (Card), pero
+                generalmente utilizado para envolver secciones enteras de una interfaz o vistas de detalle más
+                complejas. Ayuda a destacar bloques de contenido del fondo principal de la aplicación.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Vistas de configuración:</strong> Agrupar formularios y opciones de cuenta de usuario.</li>
+                <li><strong>Paneles laterales (Asides):</strong> Contener herramientas de filtrado, navegación
+                    secundaria o información contextual en un layout complejo.</li>
+                <li><strong>Contenido destacado:</strong> Envolver un mensaje importante, un resumen de métricas o una
+                    alerta persistente.</li>
+                <li><strong>Layouts divididos:</strong> Usar múltiples paneles uno al lado del otro para dividir la
+                    información (ej. editor a la izquierda, vista previa a la derecha).</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Modifiers</h2>
             <div class="demo-zone">

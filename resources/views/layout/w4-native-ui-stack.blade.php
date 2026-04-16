@@ -157,6 +157,29 @@
             </div>
         </header>
 
+        <section class="w4-section w4-section-md w4-section-base-100"
+            style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Stack</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Stack</strong> es un contenedor flexible basado en Flexbox, diseñado para apilar
+                elementos de forma lineal (ya sea vertical u horizontalmente). Simplifica enormemente la gestión del
+                espaciado (gap) y la alineación entre componentes hermanos.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Grupos de botones:</strong> Alinear varios botones (ej. "Aceptar" y "Cancelar")
+                    horizontalmente con un espacio consistente.</li>
+                <li><strong>Listas de elementos:</strong> Apilar verticalmente tarjetas de notificaciones, mensajes o
+                    comentarios.</li>
+                <li><strong>Alineación de formularios:</strong> Distribuir pares de Label e Input verticalmente
+                    asegurando que todos tengan el mismo margen.</li>
+                <li><strong>Barras de herramientas:</strong> Crear filas de iconos o acciones (toolbars) alineadas al
+                    centro o a los extremos.</li>
+            </ul>
+        </section>
+
         <section class="w4-section w4-section-md w4-section-base-100">
             <h2 class="section-title">Orientation</h2>
             <div class="demo-zone">

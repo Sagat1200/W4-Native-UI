@@ -140,6 +140,28 @@
             </div>
         </header>
 
+        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Section</h1>
+            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+                El componente <strong>Section</strong> es el bloque de construcción principal para agrupar contenido
+                relacionado verticalmente en una página. Proporciona espaciado uniforme (padding/margin) y facilita la
+                división temática del diseño, creando ritmo y pausas visuales.
+            </p>
+            <br>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start"
+                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+                <li><strong>Landing Pages:</strong> Separar bloques de contenido como "Hero", "Características",
+                    "Testimonios" y "Precios".</li>
+                <li><strong>Estructura de artículos:</strong> Dividir artículos largos en partes lógicas con sus propios
+                    encabezados.</li>
+                <li><strong>Fondos alternados:</strong> Crear franjas horizontales con diferentes colores de fondo (ej.
+                    blanco, gris, primario) para diferenciar contenido.</li>
+                <li><strong>Agrupación semántica:</strong> Asegurar que el HTML sea accesible y semánticamente correcto
+                    (etiqueta `section`).</li>
+            </ul>
+        </section>
+
         <section>
             <h2 class="section-title">Semantic Variants</h2>
             <div class="demo-zone">
