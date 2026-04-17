@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\NativeUI\Themes\Components\UI;
+namespace W4\NativeUI\Themes\Components\UI\Link;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 

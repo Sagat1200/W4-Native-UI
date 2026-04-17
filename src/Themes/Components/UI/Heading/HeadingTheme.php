@@ -1,19 +1,19 @@
 <?php
 
-namespace W4\NativeUI\Themes\Components\UI;
+namespace W4\NativeUI\Themes\Components\UI\Heading;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
-class IconTheme extends AbstractComponentTheme
+class HeadingTheme extends AbstractComponentTheme
 {
     public function component(): string
     {
-        return 'icon';
+        return 'heading';
     }
 
     protected function variants(): array
     {
-        return ['neutral', 'primary', 'secondary', 'accent', 'muted'];
+        return ['neutral', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error'];
     }
 
     protected function sizes(): array
@@ -30,16 +30,16 @@ class IconTheme extends AbstractComponentTheme
     {
         return [
             'disabled' => [
-                'class' => 'w4-icon-disabled',
-                'js' => 'icon:disable',
+                'class' => 'w4-heading-disabled',
+                'js' => 'heading:disable',
             ],
             'active' => [
-                'class' => 'w4-icon-active',
-                'js' => 'icon:active',
+                'class' => 'w4-heading-active',
+                'js' => 'heading:active',
             ],
             'hidden' => [
-                'class' => 'w4-icon-hidden',
-                'js' => 'icon:hide',
+                'class' => 'w4-heading-hidden',
+                'js' => 'heading:hide',
             ],
         ];
     }
@@ -47,13 +47,10 @@ class IconTheme extends AbstractComponentTheme
     public function resolve(array $state = []): array
     {
         $classes = parent::resolve($state);
+        $level = strtolower((string) ($state['level'] ?? 'h2'));
 
-        if (!empty($state['spin'])) {
-            $classes[] = 'w4-icon-spin';
-        }
-
-        if (!empty($state['decorative'])) {
-            $classes[] = 'w4-icon-decorative';
+        if (in_array($level, ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'], true)) {
+            $classes[] = "w4-heading-{$level}";
         }
 
         return array_values(array_unique($classes));
