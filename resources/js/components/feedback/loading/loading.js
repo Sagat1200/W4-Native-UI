@@ -6,11 +6,53 @@
  * =========================================
  */
 
+import W4Core from '../../../core.js';
+
 export default class W4Loading {
     static init() {
         // Expose a global API for manipulating loading states dynamically
         window.W4 = window.W4 || {};
         window.W4.Loading = this;
+
+        // Register state handlers for the Loading component
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('loading:enabled', this.handleEnabled);
+        W4Core.on('loading:disabled', this.handleDisabled);
+        W4Core.on('loading:active', this.handleActive);
+        W4Core.on('loading:hidden', this.handleHidden);
+        W4Core.on('loading:loading', this.handleLoadingState);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        // May adjust visual state
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+    }
+
+    static handleLoadingState({ element }) {
+        // Custom loading behavior on the spinner itself if needed
+        element.setAttribute('aria-busy', 'true');
     }
 
     /**

@@ -23,12 +23,32 @@ class ToastTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['top', 'bottom', 'start', 'end', 'center', 'middle'];
+        return ['enabled', 'disabled', 'active', 'hidden', 'dismissed', 'top', 'bottom', 'start', 'end', 'center', 'middle'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'toast:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-toast-disabled',
+                'js' => 'toast:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-toast-active',
+                'js' => 'toast:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-toast-hidden',
+                'js' => 'toast:hidden',
+            ],
+            'dismissed' => [
+                'class' => 'w4-toast-dismissed',
+                'js' => 'toast:dismissed',
+            ],
             'top' => [
                 'class' => 'w4-toast-top',
             ],

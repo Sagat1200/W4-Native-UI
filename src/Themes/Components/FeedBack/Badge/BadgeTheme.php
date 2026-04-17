@@ -20,4 +20,35 @@ class BadgeTheme extends AbstractComponentTheme
     {
         return ['xs', 'sm', 'md', 'lg', 'xl'];
     }
+
+    protected function states(): array
+    {
+        return ['enabled', 'disabled', 'active', 'hidden', 'highlighted'];
+    }
+
+    public function stateMap(): array
+    {
+        return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'badge:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-badge-disabled',
+                'js' => 'badge:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-badge-active',
+                'js' => 'badge:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-badge-hidden',
+                'js' => 'badge:hidden',
+            ],
+            'highlighted' => [
+                'class' => 'w4-badge-highlighted',
+                'js' => 'badge:highlighted',
+            ],
+        ];
+    }
 }

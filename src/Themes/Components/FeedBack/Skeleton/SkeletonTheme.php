@@ -20,4 +20,35 @@ class SkeletonTheme extends AbstractComponentTheme
     {
         return ['xs', 'sm', 'md', 'lg', 'xl'];
     }
+
+    protected function states(): array
+    {
+        return ['enabled', 'disabled', 'active', 'hidden', 'loading'];
+    }
+
+    public function stateMap(): array
+    {
+        return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'skeleton:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-skeleton-disabled',
+                'js' => 'skeleton:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-skeleton-active',
+                'js' => 'skeleton:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-skeleton-hidden',
+                'js' => 'skeleton:hidden',
+            ],
+            'loading' => [
+                'class' => 'w4-skeleton-loading',
+                'js' => 'skeleton:loading',
+            ],
+        ];
+    }
 }

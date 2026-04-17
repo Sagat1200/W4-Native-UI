@@ -23,19 +23,31 @@ class LoadingTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'hidden'];
+        return ['enabled', 'disabled', 'active', 'hidden', 'loading'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'loading:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-loading-disabled',
-                'js' => 'loading:disable',
+                'js' => 'loading:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-loading-active',
+                'js' => 'loading:active',
             ],
             'hidden' => [
                 'class' => 'w4-loading-hidden',
-                'js' => 'loading:hide',
+                'js' => 'loading:hidden',
+            ],
+            'loading' => [
+                'class' => 'w4-loading-loading',
+                'js' => 'loading:loading',
             ],
         ];
     }

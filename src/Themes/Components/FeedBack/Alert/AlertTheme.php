@@ -23,12 +23,32 @@ class AlertTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['top', 'bottom', 'start', 'end', 'center', 'middle'];
+        return ['enabled', 'disabled', 'active', 'hidden', 'dismissed', 'top', 'bottom', 'start', 'end', 'center', 'middle'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'alert:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-alert-disabled',
+                'js' => 'alert:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-alert-active',
+                'js' => 'alert:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-alert-hidden',
+                'js' => 'alert:hidden',
+            ],
+            'dismissed' => [
+                'class' => 'w4-alert-dismissed',
+                'js' => 'alert:dismissed',
+            ],
             'top' => [
                 'class' => 'w4-alert-top',
             ],

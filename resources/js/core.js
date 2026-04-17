@@ -11,7 +11,9 @@ export default class W4Core {
         ".w4-btn", ".w4-button", ".w4-icon-button", ".w4-icon", ".w4-heading",
         ".w4-label", ".w4-link", ".w4-text", ".w4-field-error", ".w4-helper-text",
         ".w4-divider", ".w4-input", ".w4-select", ".w4-textarea", ".w4-checkbox",
-        ".w4-radio", ".w4-toggle", ".w4-tooltip", "[data-w4-component]",
+        ".w4-radio", ".w4-toggle", ".w4-tooltip", ".w4-alert", ".w4-badge", ".w4-loading",
+        ".w4-progress", ".w4-skeleton", ".w4-toast",
+        "[data-w4-component]",
         "[data-w4-state]", "[data-w4-hook]"
     ].join(", ");
 
@@ -21,7 +23,9 @@ export default class W4Core {
         "w4-link": "link", "w4-text": "text", "w4-field-error": "field-error",
         "w4-helper-text": "helper-text", "w4-divider": "divider", "w4-input": "input",
         "w4-select": "select", "w4-textarea": "textarea", "w4-checkbox": "checkbox",
-        "w4-radio": "radio", "w4-toggle": "toggle", "w4-tooltip": "tooltip"
+        "w4-radio": "radio", "w4-toggle": "toggle", "w4-tooltip": "tooltip",
+        "w4-alert": "alert", "w4-badge": "badge", "w4-loading": "loading",
+        "w4-progress": "progress", "w4-skeleton": "skeleton", "w4-toast": "toast"
     };
 
     static COMPONENT_STATES = {
@@ -41,7 +45,13 @@ export default class W4Core {
         checkbox: ["disabled", "readonly", "invalid", "valid", "loading", "checked", "indeterminate"],
         radio: ["disabled", "readonly", "invalid", "valid", "loading", "selected"],
         toggle: ["disabled", "readonly", "invalid", "valid", "loading", "checked"],
-        tooltip: ["hidden", "active"]
+        tooltip: ["hidden", "active"],
+        alert: ["enabled", "disabled", "active", "hidden", "dismissed"],
+        badge: ["enabled", "disabled", "active", "hidden", "highlighted"],
+        loading: ["enabled", "disabled", "active", "hidden", "loading"],
+        progress: ["enabled", "disabled", "active", "hidden", "loading", "indeterminate"],
+        skeleton: ["enabled", "disabled", "active", "hidden", "loading"],
+        toast: ["enabled", "disabled", "active", "hidden", "dismissed"]
     };
 
     static listeners = {};

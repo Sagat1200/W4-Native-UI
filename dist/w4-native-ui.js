@@ -11,7 +11,9 @@ class W4Core {
         ".w4-btn", ".w4-button", ".w4-icon-button", ".w4-icon", ".w4-heading",
         ".w4-label", ".w4-link", ".w4-text", ".w4-field-error", ".w4-helper-text",
         ".w4-divider", ".w4-input", ".w4-select", ".w4-textarea", ".w4-checkbox",
-        ".w4-radio", ".w4-toggle", ".w4-tooltip", "[data-w4-component]",
+        ".w4-radio", ".w4-toggle", ".w4-tooltip", ".w4-alert", ".w4-badge", ".w4-loading",
+        ".w4-progress",
+        "[data-w4-component]",
         "[data-w4-state]", "[data-w4-hook]"
     ].join(", ");
 
@@ -21,17 +23,19 @@ class W4Core {
         "w4-link": "link", "w4-text": "text", "w4-field-error": "field-error",
         "w4-helper-text": "helper-text", "w4-divider": "divider", "w4-input": "input",
         "w4-select": "select", "w4-textarea": "textarea", "w4-checkbox": "checkbox",
-        "w4-radio": "radio", "w4-toggle": "toggle", "w4-tooltip": "tooltip"
+        "w4-radio": "radio", "w4-toggle": "toggle", "w4-tooltip": "tooltip",
+        "w4-alert": "alert", "w4-badge": "badge", "w4-loading": "loading",
+        "w4-progress": "progress"
     };
 
     static COMPONENT_STATES = {
-        button: ["disabled", "loading", "active", "readonly"],
-        "icon-button": ["disabled", "loading", "readonly", "active"],
-        icon: ["disabled", "active", "hidden"],
-        heading: ["disabled", "active", "hidden"],
-        label: ["disabled", "active", "hidden"],
-        link: ["disabled", "active", "hidden"],
-        text: ["disabled", "active", "hidden"],
+        button: ["enabled", "disabled", "loading", "active", "readonly"],
+        "icon-button": ["enabled", "disabled", "loading", "readonly", "active"],
+        icon: ["enabled", "disabled", "active", "hidden"],
+        heading: ["enabled", "disabled", "active", "hidden"],
+        label: ["enabled", "disabled", "active", "hidden"],
+        link: ["enabled", "disabled", "active", "hidden"],
+        text: ["enabled", "disabled", "active", "hidden"],
         "field-error": ["disabled", "active", "hidden"],
         "helper-text": ["disabled", "active", "hidden"],
         divider: ["disabled", "active", "hidden"],
@@ -41,7 +45,11 @@ class W4Core {
         checkbox: ["disabled", "readonly", "invalid", "valid", "loading", "checked", "indeterminate"],
         radio: ["disabled", "readonly", "invalid", "valid", "loading", "selected"],
         toggle: ["disabled", "readonly", "invalid", "valid", "loading", "checked"],
-        tooltip: ["hidden", "active"]
+        tooltip: ["hidden", "active"],
+        alert: ["enabled", "disabled", "active", "hidden", "dismissed"],
+        badge: ["enabled", "disabled", "active", "hidden", "highlighted"],
+        loading: ["enabled", "disabled", "active", "hidden", "loading"],
+        progress: ["enabled", "disabled", "active", "hidden", "loading", "indeterminate"]
     };
 
     static listeners = {};
@@ -256,9 +264,50 @@ class W4Core {
  * =========================================
  */
 
+
+
 class W4Alert {
     static init() {
         document.addEventListener('click', this.handleClick.bind(this));
+        
+        // Register state handlers for the Alert component
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('alert:enabled', this.handleEnabled);
+        W4Core.on('alert:disabled', this.handleDisabled);
+        W4Core.on('alert:active', this.handleActive);
+        W4Core.on('alert:hidden', this.handleHidden);
+        W4Core.on('alert:dismissed', this.handleDismissedState);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        // Active alerts might trigger an animation or bring to front
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+    }
+
+    static handleDismissedState({ element }) {
+        W4Alert.dismiss(element);
     }
 
     static handleClick(event) {
@@ -268,17 +317,22 @@ class W4Alert {
         const alert = dismissBtn.closest('.w4-alert');
         if (alert) {
             event.preventDefault();
-            this.dismiss(alert);
+            // Trigger the state change via core or directly dismiss
+            alert.setAttribute('data-w4-state', 'dismissed');
+            W4Core.syncElement(alert);
         }
     }
 
     static dismiss(alert) {
+        if (alert.style.display === 'none') return;
+        
         // Opacity transition instead of abrupt display: none
         alert.style.opacity = '0';
         alert.style.transition = 'opacity var(--w4-transition-normal) ease';
         
         const finishDismiss = () => {
             alert.style.display = 'none';
+            alert.setAttribute('aria-hidden', 'true');
             alert.dispatchEvent(new CustomEvent('w4.alert.dismissed', { bubbles: true }));
             alert.removeEventListener('transitionend', handleTransitionEnd);
         };
@@ -296,31 +350,58 @@ class W4Alert {
     }
 }
 
-(function (window, document) {
-  // Skeleton, Progress, and Badge are primarily visual components.
-  // We can provide a basic JS structure if they need future interactivity,
-  // but for now, they don't require heavy DOM binding like buttons or alerts.
-  
-  function initBadge(root) {
-    // Placeholder for future badge logic
-  }
+/**
+ * =========================================
+ * BADGE COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * Feedback System
+ * =========================================
+ */
 
-  if (window.NativeUI) {
-      var originalInit = window.NativeUI.init;
-      window.NativeUI.init = function(root) {
-          if(originalInit) originalInit(root);
-          initBadge(root);
-      };
-  }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-      initBadge(document);
-    });
-  } else {
-    initBadge(document);
-  }
-})(window, document);
+
+class W4Badge {
+    static init(root = document) {
+        // Register state handlers for the Badge component
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('badge:enabled', this.handleEnabled);
+        W4Core.on('badge:disabled', this.handleDisabled);
+        W4Core.on('badge:active', this.handleActive);
+        W4Core.on('badge:hidden', this.handleHidden);
+        W4Core.on('badge:highlighted', this.handleHighlighted);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        // Handled via CSS or custom aria attributes if needed
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+    }
+
+    static handleHighlighted({ element }) {
+        // Handled via CSS class, or could trigger animation
+    }
+}
 
 /**
  * =========================================
@@ -330,11 +411,53 @@ class W4Alert {
  * =========================================
  */
 
+
+
 class W4Loading {
     static init() {
         // Expose a global API for manipulating loading states dynamically
         window.W4 = window.W4 || {};
         window.W4.Loading = this;
+
+        // Register state handlers for the Loading component
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('loading:enabled', this.handleEnabled);
+        W4Core.on('loading:disabled', this.handleDisabled);
+        W4Core.on('loading:active', this.handleActive);
+        W4Core.on('loading:hidden', this.handleHidden);
+        W4Core.on('loading:loading', this.handleLoadingState);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        // May adjust visual state
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+    }
+
+    static handleLoadingState({ element }) {
+        // Custom loading behavior on the spinner itself if needed
+        element.setAttribute('aria-busy', 'true');
     }
 
     /**
@@ -411,27 +534,66 @@ class W4Loading {
     }
 }
 
-(function (window, document) {
-  function initProgress(root) {
-    // Placeholder for future progress logic (e.g. updating progress values dynamically)
-  }
+/**
+ * =========================================
+ * PROGRESS COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * Feedback System
+ * =========================================
+ */
 
-  if (window.NativeUI) {
-      var originalInit = window.NativeUI.init;
-      window.NativeUI.init = function(root) {
-          if(originalInit) originalInit(root);
-          initProgress(root);
-      };
-  }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-      initProgress(document);
-    });
-  } else {
-    initProgress(document);
-  }
-})(window, document);
+
+class W4Progress {
+    static init(root = document) {
+        // Register state handlers for the Progress component
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('progress:enabled', this.handleEnabled);
+        W4Core.on('progress:disabled', this.handleDisabled);
+        W4Core.on('progress:active', this.handleActive);
+        W4Core.on('progress:hidden', this.handleHidden);
+        W4Core.on('progress:loading', this.handleLoading);
+        W4Core.on('progress:indeterminate', this.handleIndeterminate);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        // Handled via CSS or custom logic if needed
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+    }
+
+    static handleLoading({ element }) {
+        element.setAttribute('aria-busy', 'true');
+    }
+
+    static handleIndeterminate({ element }) {
+        // For standard HTML <progress> elements, indeterminate state is achieved by removing the "value" attribute.
+        if (element.tagName === 'PROGRESS') {
+            element.removeAttribute('value');
+        }
+    }
+}
 
 /**
  * =========================================
@@ -1252,11 +1414,58 @@ class W4Tab {
  * =========================================
  */
 
+
+
 class W4Button {
     static init(root = document) {
         // Visual press feedback is handled by core.js centrally
-        // This file serves as a placeholder for any button-specific future logic
-        // (e.g. handling complex loading state transitions)
+        
+        // Register state handlers for the Button component
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('button:enabled', this.handleEnabled);
+        W4Core.on('button:disabled', this.handleDisabled);
+        W4Core.on('button:loading', this.handleLoading);
+        W4Core.on('button:active', this.handleActive);
+        W4Core.on('button:readonly', this.handleReadonly);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('disabled');
+        element.removeAttribute('readonly');
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-busy');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('disabled', 'true');
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleLoading({ element }) {
+        element.setAttribute('aria-busy', 'true');
+        element.setAttribute('disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        element.setAttribute('aria-pressed', 'true');
+    }
+
+    static handleReadonly({ element }) {
+        element.setAttribute('readonly', 'true');
+        // If it's a native button, readonly doesn't exist natively, so we mimic it with disabled
+        if (element.tagName === 'BUTTON') {
+            element.setAttribute('disabled', 'true');
+        }
     }
 }
 
@@ -1268,9 +1477,44 @@ class W4Button {
  * =========================================
  */
 
+
+
 class W4Heading {
     static init(root = document) {
-        // Placeholder for specific heading logic
+        // Register state handlers for the Heading component
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('heading:enabled', this.handleEnabled);
+        W4Core.on('heading:disabled', this.handleDisabled);
+        W4Core.on('heading:active', this.handleActive);
+        W4Core.on('heading:hidden', this.handleHidden);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        // Headings don't typically have aria-pressed, but could have aria-current
+        // We leave it empty or map it to a custom state if needed.
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
     }
 }
 
@@ -1282,9 +1526,46 @@ class W4Heading {
  * =========================================
  */
 
+
+
 class W4Icon {
     static init(root = document) {
         // Placeholder for specific icon logic (e.g. dynamic SVG fetching)
+        
+        // Register state handlers for the Icon component
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('icon:enabled', this.handleEnabled);
+        W4Core.on('icon:disabled', this.handleDisabled);
+        W4Core.on('icon:active', this.handleActive);
+        W4Core.on('icon:hidden', this.handleHidden);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        // Icons generally don't need a specific aria attribute for 'active', 
+        // as interaction is usually managed by a parent (like icon-button).
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
     }
 }
 
@@ -1296,10 +1577,59 @@ class W4Icon {
  * =========================================
  */
 
+
+
 class W4IconButton {
     static init(root = document) {
         // Visual press feedback is handled by core.js centrally
         // This file serves as a placeholder for specific icon-button logic
+        
+        // Register state handlers for the IconButton component
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('icon-button:enabled', this.handleEnabled);
+        W4Core.on('icon-button:disabled', this.handleDisabled);
+        W4Core.on('icon-button:loading', this.handleLoading);
+        W4Core.on('icon-button:active', this.handleActive);
+        W4Core.on('icon-button:readonly', this.handleReadonly);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('disabled');
+        element.removeAttribute('readonly');
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-busy');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('disabled', 'true');
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleLoading({ element }) {
+        element.setAttribute('aria-busy', 'true');
+        element.setAttribute('disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        element.setAttribute('aria-pressed', 'true');
+    }
+
+    static handleReadonly({ element }) {
+        element.setAttribute('readonly', 'true');
+        // If it's a native button, readonly doesn't exist natively, so we mimic it with disabled
+        if (element.tagName === 'BUTTON') {
+            element.setAttribute('disabled', 'true');
+        }
     }
 }
 
@@ -1311,9 +1641,46 @@ class W4IconButton {
  * =========================================
  */
 
+
+
 class W4Label {
     static init(root = document) {
         // Placeholder for specific label logic
+        
+        // Register state handlers for the Label component
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('label:enabled', this.handleEnabled);
+        W4Core.on('label:disabled', this.handleDisabled);
+        W4Core.on('label:active', this.handleActive);
+        W4Core.on('label:hidden', this.handleHidden);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        // Active label might not require a specific aria attribute,
+        // but could be linked to an active input state.
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
     }
 }
 
@@ -1325,9 +1692,45 @@ class W4Label {
  * =========================================
  */
 
+
+
 class W4Text {
     static init(root = document) {
         // Placeholder for specific text logic
+        
+        // Register state handlers for the Text component
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('text:enabled', this.handleEnabled);
+        W4Core.on('text:disabled', this.handleDisabled);
+        W4Core.on('text:active', this.handleActive);
+        W4Core.on('text:hidden', this.handleHidden);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        // Active text elements might not need specific ARIA beyond generic styling
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
     }
 }
 

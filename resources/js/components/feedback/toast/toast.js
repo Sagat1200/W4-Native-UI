@@ -6,18 +6,70 @@
  * =========================================
  */
 
+import W4Core from '../../../core.js';
+
 export default class W4Toast {
-    static init() {
-        document.addEventListener('click', this.handleClick.bind(this));
+    static init(root = document) {
+        // Inicializa listeners manuales (ej: click en botones de dismiss)
+        root.addEventListener('click', this.handleClick.bind(this));
         
         // Auto-dismiss initialization for existing toasts in the DOM
-        const toasts = document.querySelectorAll('.w4-toast[data-w4-duration]');
+        const toasts = root.querySelectorAll('.w4-toast[data-w4-duration]');
         toasts.forEach(toast => {
             if (!toast.hasAttribute('data-w4-toast-bound')) {
                 this.setupAutoDismiss(toast);
                 toast.setAttribute('data-w4-toast-bound', 'true');
             }
         });
+
+        // Register state handlers for the Toast component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('toast:enabled', this.handleEnabled);
+        W4Core.on('toast:disabled', this.handleDisabled);
+        W4Core.on('toast:active', this.handleActive);
+        W4Core.on('toast:hidden', this.handleHidden);
+        W4Core.on('toast:dismissed', this.handleDismissed);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        if (element) {
+            element.style.display = '';
+            element.style.opacity = '1';
+        }
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300);
+        }
+    }
+
+    static handleDismissed({ element }) {
+        // Si W4Core detecta el estado "dismissed", lo manejamos igual que si hicieran click
+        W4Toast.dismiss(element);
     }
 
     static handleClick(event) {
