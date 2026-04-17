@@ -189,28 +189,30 @@
         <section>
             <h2 class="section-title" style="border-color: hsl(var(--w4-accent));">Variantes</h2>
             <div class="preview-group">
-                <button class="w4-button w4-button-md w4-tooltip w4-variant-primary" data-w4-tip="Primary">
+                <button class="w4-button w4-button-md w4-tooltip w4-tooltip-primary" data-w4-tip="Primary">
                     Primary
                 </button>
-                <button class="w4-button w4-button-md w4-tooltip w4-variant-secondary" data-w4-tip="Secondary">
+                <button class="w4-button w4-button-md w4-tooltip w4-tooltip-secondary" data-w4-tip="Secondary">
                     Secondary
                 </button>
-                <button class="w4-button w4-button-md w4-tooltip w4-variant-accent" data-w4-tip="Accent">
-                    Accent
-                </button>
-                <button class="w4-button w4-button-md w4-tooltip w4-variant-info" data-w4-tip="Info">
+                <div class="w4-tooltip w4-tooltip-accent" data-w4-tip="hola">
+                    <button class="w4-button w4-button-md w4-button-accent">
+                        Accent
+                    </button>
+                </div>
+                <button class="w4-button w4-button-md w4-button-info w4-tooltip w4-tooltip-info" data-w4-tip="Info">
                     Info
                 </button>
-                <button class="w4-button w4-button-md w4-tooltip w4-variant-success" data-w4-tip="Success">
+                <button class="w4-button w4-button-md w4-tooltip w4-tooltip-success" data-w4-tip="Success">
                     Success
                 </button>
-                <button class="w4-button w4-button-md w4-tooltip w4-variant-warning" data-w4-tip="Warning">
+                <button class="w4-button w4-button-md w4-tooltip w4-tooltip-warning" data-w4-tip="Warning">
                     Warning
                 </button>
-                <button class="w4-button w4-button-md w4-tooltip w4-variant-error" data-w4-tip="Error">
+                <button class="w4-button w4-button-md w4-tooltip w4-tooltip-error" data-w4-tip="Error">
                     Error
                 </button>
-                <button class="w4-button w4-button-md w4-tooltip w4-variant-neutral" data-w4-tip="Neutral">
+                <button class="w4-button w4-button-md w4-tooltip w4-tooltip-neutral" data-w4-tip="Neutral">
                     Neutral
                 </button>
             </div>

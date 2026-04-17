@@ -20,4 +20,31 @@ class GridTheme extends AbstractComponentTheme
     {
         return ['xs', 'sm', 'md', 'lg', 'xl'];
     }
+
+    protected function states(): array
+    {
+        return ['enabled', 'disabled', 'active', 'hidden'];
+    }
+
+    public function stateMap(): array
+    {
+        return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'grid:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-grid-disabled',
+                'js' => 'grid:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-grid-active',
+                'js' => 'grid:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-grid-hidden',
+                'js' => 'grid:hidden',
+            ],
+        ];
+    }
 }

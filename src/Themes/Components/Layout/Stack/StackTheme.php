@@ -20,4 +20,31 @@ class StackTheme extends AbstractComponentTheme
     {
         return ['xs', 'sm', 'md', 'lg', 'xl'];
     }
+
+    protected function states(): array
+    {
+        return ['enabled', 'disabled', 'active', 'hidden'];
+    }
+
+    public function stateMap(): array
+    {
+        return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'stack:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-stack-disabled',
+                'js' => 'stack:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-stack-active',
+                'js' => 'stack:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-stack-hidden',
+                'js' => 'stack:hidden',
+            ],
+        ];
+    }
 }

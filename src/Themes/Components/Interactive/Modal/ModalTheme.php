@@ -26,12 +26,28 @@ class ModalTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['open', 'closing', 'bottom', 'middle', 'top'];
+        return ['enabled', 'disabled', 'active', 'hidden', 'open', 'closing', 'bottom', 'middle', 'top'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'modal:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-modal-disabled',
+                'js' => 'modal:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-modal-active',
+                'js' => 'modal:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-modal-hidden',
+                'js' => 'modal:hidden',
+            ],
             'open' => [
                 'class' => 'w4-modal-open',
                 'js' => 'modal:open',

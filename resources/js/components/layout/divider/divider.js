@@ -6,8 +6,52 @@
  * =========================================
  */
 
+import W4Core from '../../../core.js';
+
 export default class W4Divider {
     static init(root = document) {
-        // Placeholder for specific divider logic
+        // Register state handlers for the Divider component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('divider:enabled', this.handleEnabled);
+        W4Core.on('divider:disabled', this.handleDisabled);
+        W4Core.on('divider:active', this.handleActive);
+        W4Core.on('divider:hidden', this.handleHidden);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.classList.add('w4-divider-active');
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300); // Wait for transition
+        }
     }
 }

@@ -13,7 +13,7 @@ class CardTheme extends AbstractComponentTheme
 
     protected function variants(): array
     {
-        return ['default', 'bordered', 'elevated'];
+        return ['primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error', 'default', 'bordered', 'elevated'];
     }
 
     protected function sizes(): array
@@ -23,6 +23,35 @@ class CardTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['hover'];
+        return ['enabled', 'disabled', 'active', 'hidden', 'collapsed', 'hover'];
+    }
+
+    public function stateMap(): array
+    {
+        return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'card:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-card-disabled',
+                'js' => 'card:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-card-active',
+                'js' => 'card:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-card-hidden',
+                'js' => 'card:hidden',
+            ],
+            'collapsed' => [
+                'class' => 'w4-card-collapsed',
+                'js' => 'card:collapsed',
+            ],
+            'hover' => [
+                'class' => 'w4-card-hover',
+            ],
+        ];
     }
 }

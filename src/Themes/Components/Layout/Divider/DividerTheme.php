@@ -23,15 +23,19 @@ class DividerTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'active', 'hidden'];
+        return ['enabled', 'disabled', 'active', 'hidden'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'divider:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-divider-disabled',
-                'js' => 'divider:disable',
+                'js' => 'divider:disabled',
             ],
             'active' => [
                 'class' => 'w4-divider-active',
@@ -39,7 +43,7 @@ class DividerTheme extends AbstractComponentTheme
             ],
             'hidden' => [
                 'class' => 'w4-divider-hidden',
-                'js' => 'divider:hide',
+                'js' => 'divider:hidden',
             ],
         ];
     }

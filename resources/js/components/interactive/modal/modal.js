@@ -6,14 +6,58 @@
  * =========================================
  */
 
+import W4Core from '../../../core.js';
+
 export default class W4Modal {
     /**
      * Initializes the modal functionality on the document.
      * Sets up event listeners for toggling modals and handling accessibility.
      */
-    static init() {
-        document.addEventListener('click', this.handleClick.bind(this));
-        document.addEventListener('keydown', this.handleKeydown.bind(this));
+    static init(root = document) {
+        root.addEventListener('click', this.handleClick.bind(this));
+        root.addEventListener('keydown', this.handleKeydown.bind(this));
+
+        // Register state handlers for the Modal component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('modal:enabled', this.handleEnabled);
+        W4Core.on('modal:disabled', this.handleDisabled);
+        W4Core.on('modal:active', this.handleActive);
+        W4Core.on('modal:hidden', this.handleHidden);
+        W4Core.on('modal:open', this.handleOpen);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.style.zIndex = '1000';
+    }
+
+    static handleHidden({ element }) {
+        W4Modal.close(element);
+    }
+
+    static handleOpen({ element }) {
+        W4Modal.open(element);
     }
 
     /**

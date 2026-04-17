@@ -12,7 +12,7 @@ export default class W4Core {
         ".w4-label", ".w4-link", ".w4-text", ".w4-field-error", ".w4-helper-text",
         ".w4-divider", ".w4-input", ".w4-select", ".w4-textarea", ".w4-checkbox",
         ".w4-radio", ".w4-toggle", ".w4-tooltip", ".w4-alert", ".w4-badge", ".w4-loading",
-        ".w4-progress", ".w4-skeleton", ".w4-toast",
+        ".w4-progress", ".w4-skeleton", ".w4-toast", ".w4-modal", ".w4-card", ".w4-container", ".w4-grid", ".w4-panel", ".w4-section", ".w4-stack",
         "[data-w4-component]",
         "[data-w4-state]", "[data-w4-hook]"
     ].join(", ");
@@ -25,7 +25,8 @@ export default class W4Core {
         "w4-select": "select", "w4-textarea": "textarea", "w4-checkbox": "checkbox",
         "w4-radio": "radio", "w4-toggle": "toggle", "w4-tooltip": "tooltip",
         "w4-alert": "alert", "w4-badge": "badge", "w4-loading": "loading",
-        "w4-progress": "progress", "w4-skeleton": "skeleton", "w4-toast": "toast"
+        "w4-progress": "progress", "w4-skeleton": "skeleton", "w4-toast": "toast", "w4-modal": "modal",
+        "w4-card": "card", "w4-container": "container", "w4-grid": "grid", "w4-panel": "panel", "w4-section": "section", "w4-stack": "stack"
     };
 
     static COMPONENT_STATES = {
@@ -38,20 +39,27 @@ export default class W4Core {
         text: ["enabled", "disabled", "active", "hidden"],
         "field-error": ["enabled", "disabled", "active", "hidden"],
         "helper-text": ["enabled", "disabled", "active", "hidden"],
-        divider: ["disabled", "active", "hidden"],
+        divider: ["enabled", "disabled", "active", "hidden"],
         input: ["enabled", "disabled", "loading", "readonly", "invalid", "valid"],
         select: ["enabled", "disabled", "readonly", "invalid", "valid", "loading"],
         textarea: ["enabled", "disabled", "loading", "readonly", "invalid", "valid"],
         checkbox: ["enabled", "disabled", "readonly", "invalid", "valid", "loading", "checked", "indeterminate"],
         radio: ["enabled", "disabled", "readonly", "invalid", "valid", "loading", "selected"],
         toggle: ["enabled", "disabled", "readonly", "invalid", "valid", "loading", "checked"],
-        tooltip: ["hidden", "active"],
+        tooltip: ["enabled", "disabled", "active", "hidden", "open"],
         alert: ["enabled", "disabled", "active", "hidden", "dismissed"],
         badge: ["enabled", "disabled", "active", "hidden", "highlighted"],
         loading: ["enabled", "disabled", "active", "hidden", "loading"],
         progress: ["enabled", "disabled", "active", "hidden", "loading", "indeterminate"],
         skeleton: ["enabled", "disabled", "active", "hidden", "loading"],
-        toast: ["enabled", "disabled", "active", "hidden", "dismissed"]
+        toast: ["enabled", "disabled", "active", "hidden", "dismissed"],
+        modal: ["enabled", "disabled", "active", "hidden", "open"],
+        card: ["enabled", "disabled", "active", "hidden", "collapsed"],
+        container: ["enabled", "disabled", "active", "hidden"],
+        grid: ["enabled", "disabled", "active", "hidden"],
+        panel: ["enabled", "disabled", "active", "hidden", "collapsed"],
+        section: ["enabled", "disabled", "active", "hidden", "collapsed"],
+        stack: ["enabled", "disabled", "active", "hidden"]
     };
 
     static listeners = {};

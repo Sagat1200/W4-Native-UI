@@ -23,12 +23,28 @@ class TooltipTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['top', 'right', 'bottom', 'left', 'open'];
+        return ['enabled', 'disabled', 'active', 'hidden', 'open', 'top', 'right', 'bottom', 'left'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'tooltip:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-tooltip-disabled',
+                'js' => 'tooltip:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-tooltip-active',
+                'js' => 'tooltip:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-tooltip-hidden',
+                'js' => 'tooltip:hidden',
+            ],
             'top' => [
                 'class' => 'w4-tooltip-top',
             ],
