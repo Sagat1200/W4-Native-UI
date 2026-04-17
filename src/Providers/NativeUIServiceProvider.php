@@ -64,6 +64,7 @@ class NativeUIServiceProvider extends ServiceProvider
         $packageRoot = dirname(__DIR__, 2);
         $configPath = $packageRoot . '/config/w4-native-ui.php';
         $distPath = $packageRoot . '/dist';
+        $inertiaPath = $packageRoot . '/resources/inertia';
 
         $this->loadViewsFrom($packageRoot . '/resources/views', 'w4-native');
 
@@ -75,6 +76,10 @@ class NativeUIServiceProvider extends ServiceProvider
         NativeUIInteractiveRouteService::registerRoutes();
         NativeUILayoutRouteService::registerRoutes();
         NativeUINavigationRouteService::registerRoutes();
+
+        if (class_exists(\Livewire\Livewire::class)) {
+            \W4\NativeUI\Integrations\Livewire\NativeUILivewire::register();
+        }
 
         if ($this->app->runningInConsole()) {
             if (is_file($configPath)) {
@@ -88,6 +93,12 @@ class NativeUIServiceProvider extends ServiceProvider
                     $distPath => public_path('vendor/w4-native-ui'),
                 ], 'w4-native-ui-dist');
             } // php artisan vendor:publish --tag=w4-native-ui-dist --path=public/vendor/w4-native-ui
+
+            if (is_dir($inertiaPath)) {
+                $this->publishes([
+                    $inertiaPath => resource_path('js/vendor/w4-native-ui'),
+                ], 'w4-native-ui-inertia');
+            }
 
             $publish = [];
             if (is_file($configPath)) {

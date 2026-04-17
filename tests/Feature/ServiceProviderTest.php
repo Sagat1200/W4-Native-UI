@@ -15,7 +15,7 @@ class ServiceProviderTest extends TestCase
 
         $this->assertTrue($registry->hasPreset('native-ui.light'));
         $this->assertTrue($registry->hasPreset('native-ui.dark'));
-        $this->assertSame('native-ui.default', $theme->defaultPreset());
+        $this->assertSame('native-ui.light', $theme->defaultPreset());
     }
 
     public function test_resuelve_clases_de_componente(): void

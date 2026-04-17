@@ -1,0 +1,5 @@
+export { default as W4Button } from './Button.vue'
+export { default as W4Card } from './Card.vue'
+export { default as W4Alert } from './Alert.vue'
+export { default as W4Badge } from './Badge.vue'
+export { default as W4Toggle } from './Toggle.vue'

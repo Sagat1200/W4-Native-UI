@@ -80,6 +80,13 @@ Incluye los estilos del paquete en tu layout principal:
 <link rel="stylesheet" href="{{ asset('vendor/w4-native-ui/w4-native.css') }}">
 ```
 
+Opcionalmente, incluye los scripts del motor (hooks de estados y componentes interactivos):
+
+```blade
+@NativeUIScripts
+@NativeUIInit
+```
+
 Usa clases semánticas W4 directamente:
 
 ```html
@@ -152,6 +159,62 @@ Feedback:
 
 - Alert
 - Badge
+
+## Render en Blade / Livewire / Inertia
+
+Este paquete incluye 5 componentes de ejemplo listos para usar en:
+
+- Blade (anonymous components)
+- Livewire (si Livewire está instalado)
+- Inertia (Vue / React, vía publicación a `resources/js/vendor/w4-native-ui`)
+
+### Blade
+
+```blade
+<x-w4-native::button variant="primary" size="md">Guardar</x-w4-native::button>
+<x-w4-native::badge variant="success" soft>Activo</x-w4-native::badge>
+<x-w4-native::alert variant="warning">Revisa los datos</x-w4-native::alert>
+<x-w4-native::card variant="base-100" bordered bordered-variant="primary">
+    Contenido del card
+</x-w4-native::card>
+<x-w4-native::toggle name="newsletter" variant="primary" :checked="true" />
+```
+
+### Livewire
+
+Registra componentes automáticamente si `livewire/livewire` está instalado.
+
+```blade
+@NativeUILivewire
+```
+
+```blade
+<livewire:w4-native-ui.button label="Guardar" variant="primary" />
+<livewire:w4-native-ui.badge label="Activo" variant="success" :soft="true" />
+<livewire:w4-native-ui.alert message="Revisa los datos" variant="warning" />
+<livewire:w4-native-ui.card title="Título" body="Contenido" bordered :bordered-variant="'primary'" />
+<livewire:w4-native-ui.toggle label="Newsletter" name="newsletter" />
+```
+
+### Inertia (Vue / React)
+
+Publica los componentes front-end:
+
+```bash
+php artisan w4-native-ui:install --inertia
+```
+
+Vue:
+
+```js
+import { W4Button, W4Badge, W4Alert, W4Card, W4Toggle } from '@/vendor/w4-native-ui/vue'
+```
+
+React:
+
+```js
+import { W4Button, W4Badge, W4Alert, W4Card, W4Toggle } from '@/vendor/w4-native-ui/react'
+```
 
 ## Integración con W4-UI-Framework
 

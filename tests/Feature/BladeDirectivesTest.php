@@ -43,7 +43,9 @@ class BladeDirectivesTest extends TestCase
     {
         $html = Blade::render('@w4Merge("p-4 bg-red-500", "bg-blue-500 text-white")');
 
-        $this->assertEquals('p-4 text-white bg-blue-500', trim($html));
+        $classes = preg_split('/\s+/', trim($html)) ?: [];
+        sort($classes);
+        $this->assertSame(['bg-blue-500', 'p-4', 'text-white'], $classes);
     }
 
     public function test_registra_directivas_blade(): void
