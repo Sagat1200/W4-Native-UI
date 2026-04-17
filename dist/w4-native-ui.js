@@ -36,15 +36,15 @@ class W4Core {
         label: ["enabled", "disabled", "active", "hidden"],
         link: ["enabled", "disabled", "active", "hidden"],
         text: ["enabled", "disabled", "active", "hidden"],
-        "field-error": ["disabled", "active", "hidden"],
-        "helper-text": ["disabled", "active", "hidden"],
+        "field-error": ["enabled", "disabled", "active", "hidden"],
+        "helper-text": ["enabled", "disabled", "active", "hidden"],
         divider: ["disabled", "active", "hidden"],
-        input: ["disabled", "loading", "readonly", "invalid", "valid"],
-        select: ["disabled", "loading", "readonly", "invalid", "valid"],
-        textarea: ["disabled", "loading", "readonly", "invalid", "valid"],
-        checkbox: ["disabled", "readonly", "invalid", "valid", "loading", "checked", "indeterminate"],
-        radio: ["disabled", "readonly", "invalid", "valid", "loading", "selected"],
-        toggle: ["disabled", "readonly", "invalid", "valid", "loading", "checked"],
+        input: ["enabled", "disabled", "loading", "readonly", "invalid", "valid"],
+        select: ["enabled", "disabled", "readonly", "invalid", "valid", "loading"],
+        textarea: ["enabled", "disabled", "loading", "readonly", "invalid", "valid"],
+        checkbox: ["enabled", "disabled", "readonly", "invalid", "valid", "loading", "checked", "indeterminate"],
+        radio: ["enabled", "disabled", "readonly", "invalid", "valid", "loading", "selected"],
+        toggle: ["enabled", "disabled", "readonly", "invalid", "valid", "loading", "checked"],
         tooltip: ["hidden", "active"],
         alert: ["enabled", "disabled", "active", "hidden", "dismissed"],
         badge: ["enabled", "disabled", "active", "hidden", "highlighted"],
@@ -859,6 +859,8 @@ class W4Toast {
  * =========================================
  */
 
+
+
 class W4Checkbox {
     /**
      * Initializes checkbox specific logic.
@@ -872,6 +874,65 @@ class W4Checkbox {
         indeterminateCheckboxes.forEach(checkbox => {
             checkbox.indeterminate = true;
         });
+
+        // Register state handlers for the Checkbox component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('checkbox:enabled', this.handleEnabled);
+        W4Core.on('checkbox:disabled', this.handleDisabled);
+        W4Core.on('checkbox:readonly', this.handleReadonly);
+        W4Core.on('checkbox:invalid', this.handleInvalid);
+        W4Core.on('checkbox:valid', this.handleValid);
+        W4Core.on('checkbox:loading', this.handleLoading);
+        W4Core.on('checkbox:check', this.handleCheck);
+        W4Core.on('checkbox:indeterminate', this.handleIndeterminateEvent);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.disabled = false;
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('readonly');
+    }
+
+    static handleDisabled({ element }) {
+        element.disabled = true;
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleReadonly({ element }) {
+        element.setAttribute('readonly', 'true');
+    }
+
+    static handleInvalid({ element }) {
+        element.setAttribute('aria-invalid', 'true');
+    }
+
+    static handleValid({ element }) {
+        element.removeAttribute('aria-invalid');
+    }
+
+    static handleLoading({ element }) {
+        // Opcional: Desactivar mientras carga
+        element.style.pointerEvents = 'none';
+        element.setAttribute('aria-busy', 'true');
+    }
+
+    static handleCheck({ element }) {
+        element.checked = true;
+        element.indeterminate = false;
+    }
+
+    static handleIndeterminateEvent({ element }) {
+        element.indeterminate = true;
     }
 
     /**
@@ -897,10 +958,53 @@ class W4Checkbox {
  * =========================================
  */
 
+
+
 class W4FieldError {
     static init(root = document) {
-        // Placeholder for specific field error logic 
-        // e.g. integrating with JS validation libraries
+        // Register state handlers for the FieldError component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('field-error:enabled', this.handleEnabled);
+        W4Core.on('field-error:disabled', this.handleDisabled);
+        W4Core.on('field-error:active', this.handleActive);
+        W4Core.on('field-error:hidden', this.handleHidden);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        if (element) {
+            element.style.display = '';
+            element.style.opacity = '1';
+            element.removeAttribute('aria-hidden');
+        }
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300); // Wait for transition
+        }
     }
 }
 
@@ -912,9 +1016,53 @@ class W4FieldError {
  * =========================================
  */
 
+
+
 class W4HelperText {
     static init(root = document) {
-        // Placeholder for specific helper text logic 
+        // Register state handlers for the HelperText component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('helper-text:enabled', this.handleEnabled);
+        W4Core.on('helper-text:disabled', this.handleDisabled);
+        W4Core.on('helper-text:active', this.handleActive);
+        W4Core.on('helper-text:hidden', this.handleHidden);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        if (element) {
+            element.style.display = '';
+            element.style.opacity = '1';
+            element.removeAttribute('aria-hidden');
+        }
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300); // Wait for transition
+        }
     }
 }
 
@@ -926,10 +1074,58 @@ class W4HelperText {
  * =========================================
  */
 
+
+
 class W4Input {
     static init(root = document) {
-        // Placeholder for specific input logic 
-        // e.g. character counting, input masks, custom formatting
+        // Register state handlers for the Input component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('input:enabled', this.handleEnabled);
+        W4Core.on('input:disabled', this.handleDisabled);
+        W4Core.on('input:loading', this.handleLoading);
+        W4Core.on('input:readonly', this.handleReadonly);
+        W4Core.on('input:invalid', this.handleInvalid);
+        W4Core.on('input:valid', this.handleValid);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.disabled = false;
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('readonly');
+        element.removeAttribute('aria-busy');
+    }
+
+    static handleDisabled({ element }) {
+        element.disabled = true;
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleLoading({ element }) {
+        element.setAttribute('aria-busy', 'true');
+        // Opcionalmente podemos hacerlo readonly mientras carga
+        // element.setAttribute('readonly', 'true');
+    }
+
+    static handleReadonly({ element }) {
+        element.setAttribute('readonly', 'true');
+    }
+
+    static handleInvalid({ element }) {
+        element.setAttribute('aria-invalid', 'true');
+    }
+
+    static handleValid({ element }) {
+        element.removeAttribute('aria-invalid');
     }
 }
 
@@ -941,10 +1137,62 @@ class W4Input {
  * =========================================
  */
 
+
+
 class W4Radio {
     static init(root = document) {
-        // Placeholder for specific radio logic 
-        // e.g. group state management if custom visual feedback is needed
+        // Register state handlers for the Radio component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('radio:enabled', this.handleEnabled);
+        W4Core.on('radio:disabled', this.handleDisabled);
+        W4Core.on('radio:readonly', this.handleReadonly);
+        W4Core.on('radio:invalid', this.handleInvalid);
+        W4Core.on('radio:valid', this.handleValid);
+        W4Core.on('radio:loading', this.handleLoading);
+        W4Core.on('radio:selected', this.handleSelected);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.disabled = false;
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('readonly');
+    }
+
+    static handleDisabled({ element }) {
+        element.disabled = true;
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleReadonly({ element }) {
+        element.setAttribute('readonly', 'true');
+    }
+
+    static handleInvalid({ element }) {
+        element.setAttribute('aria-invalid', 'true');
+    }
+
+    static handleValid({ element }) {
+        element.removeAttribute('aria-invalid');
+    }
+
+    static handleLoading({ element }) {
+        // Opcional: Desactivar visualmente o evitar clicks mientras carga
+        element.style.pointerEvents = 'none';
+        element.setAttribute('aria-busy', 'true');
+    }
+
+    static handleSelected({ element }) {
+        element.checked = true;
     }
 }
 
@@ -956,10 +1204,59 @@ class W4Radio {
  * =========================================
  */
 
+
+
 class W4Select {
     static init(root = document) {
-        // Placeholder for specific select logic 
-        // e.g. handling custom dropdown behavior for complex selects
+        // Register state handlers for the Select component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('select:enabled', this.handleEnabled);
+        W4Core.on('select:disabled', this.handleDisabled);
+        W4Core.on('select:readonly', this.handleReadonly);
+        W4Core.on('select:invalid', this.handleInvalid);
+        W4Core.on('select:valid', this.handleValid);
+        W4Core.on('select:loading', this.handleLoading);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.disabled = false;
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('readonly');
+        element.removeAttribute('aria-busy');
+    }
+
+    static handleDisabled({ element }) {
+        element.disabled = true;
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleReadonly({ element }) {
+        element.setAttribute('readonly', 'true');
+        // Para selects, a veces 'readonly' no es nativo visualmente como en inputs
+        // pero podemos mantenerlo en aria y data-attributes
+    }
+
+    static handleInvalid({ element }) {
+        element.setAttribute('aria-invalid', 'true');
+    }
+
+    static handleValid({ element }) {
+        element.removeAttribute('aria-invalid');
+    }
+
+    static handleLoading({ element }) {
+        element.setAttribute('aria-busy', 'true');
+        element.style.pointerEvents = 'none';
     }
 }
 
@@ -970,6 +1267,8 @@ class W4Select {
  * Forms System
  * =========================================
  */
+
+
 
 class W4Textarea {
     static init(root = document) {
@@ -987,6 +1286,55 @@ class W4Textarea {
 
             el.setAttribute('data-w4-textarea-bound', 'true');
         });
+
+        // Register state handlers for the Textarea component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('textarea:enabled', this.handleEnabled);
+        W4Core.on('textarea:disabled', this.handleDisabled);
+        W4Core.on('textarea:loading', this.handleLoading);
+        W4Core.on('textarea:readonly', this.handleReadonly);
+        W4Core.on('textarea:invalid', this.handleInvalid);
+        W4Core.on('textarea:valid', this.handleValid);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.disabled = false;
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('readonly');
+        element.removeAttribute('aria-busy');
+    }
+
+    static handleDisabled({ element }) {
+        element.disabled = true;
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleLoading({ element }) {
+        element.setAttribute('aria-busy', 'true');
+        // Opcionalmente podemos hacerlo readonly mientras carga
+        // element.setAttribute('readonly', 'true');
+    }
+
+    static handleReadonly({ element }) {
+        element.setAttribute('readonly', 'true');
+    }
+
+    static handleInvalid({ element }) {
+        element.setAttribute('aria-invalid', 'true');
+    }
+
+    static handleValid({ element }) {
+        element.removeAttribute('aria-invalid');
     }
 
     /**
@@ -1008,9 +1356,62 @@ class W4Textarea {
  * =========================================
  */
 
+
+
 class W4Toggle {
     static init(root = document) {
-        // Placeholder for specific toggle logic 
+        // Register state handlers for the Toggle component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('toggle:enabled', this.handleEnabled);
+        W4Core.on('toggle:disabled', this.handleDisabled);
+        W4Core.on('toggle:readonly', this.handleReadonly);
+        W4Core.on('toggle:invalid', this.handleInvalid);
+        W4Core.on('toggle:valid', this.handleValid);
+        W4Core.on('toggle:loading', this.handleLoading);
+        W4Core.on('toggle:checked', this.handleChecked);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.disabled = false;
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('readonly');
+    }
+
+    static handleDisabled({ element }) {
+        element.disabled = true;
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleReadonly({ element }) {
+        element.setAttribute('readonly', 'true');
+    }
+
+    static handleInvalid({ element }) {
+        element.setAttribute('aria-invalid', 'true');
+    }
+
+    static handleValid({ element }) {
+        element.removeAttribute('aria-invalid');
+    }
+
+    static handleLoading({ element }) {
+        // Opcional: Desactivar visualmente o evitar clicks mientras carga
+        element.style.pointerEvents = 'none';
+        element.setAttribute('aria-busy', 'true');
+    }
+
+    static handleChecked({ element }) {
+        element.checked = true;
     }
 }
 
