@@ -23,15 +23,19 @@ class FieldErrorTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'active', 'hidden'];
+        return ['enabled', 'disabled', 'active', 'hidden'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'field-error:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-field-error-disabled',
-                'js' => 'field-error:disable',
+                'js' => 'field-error:disabled',
             ],
             'active' => [
                 'class' => 'w4-field-error-active',
@@ -39,7 +43,7 @@ class FieldErrorTheme extends AbstractComponentTheme
             ],
             'hidden' => [
                 'class' => 'w4-field-error-hidden',
-                'js' => 'field-error:hide',
+                'js' => 'field-error:hidden',
             ],
         ];
     }

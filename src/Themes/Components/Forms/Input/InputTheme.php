@@ -23,15 +23,19 @@ class InputTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'loading', 'readonly', 'invalid', 'valid'];
+        return ['enabled', 'disabled', 'loading', 'readonly', 'invalid', 'valid'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'input:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-input-disabled',
-                'js' => 'input:disable',
+                'js' => 'input:disabled',
             ],
             'loading' => [
                 'class' => 'w4-input-loading',

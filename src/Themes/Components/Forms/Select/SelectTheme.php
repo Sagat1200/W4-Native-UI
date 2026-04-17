@@ -23,15 +23,19 @@ class SelectTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'loading', 'readonly', 'invalid', 'valid'];
+        return ['enabled', 'disabled', 'readonly', 'invalid', 'valid', 'loading'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'select:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-select-disabled',
-                'js' => 'select:disable',
+                'js' => 'select:disabled',
             ],
             'loading' => [
                 'class' => 'w4-select-loading',

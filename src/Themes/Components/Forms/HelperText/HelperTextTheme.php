@@ -23,15 +23,19 @@ class HelperTextTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'active', 'hidden'];
+        return ['enabled', 'disabled', 'active', 'hidden'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'helper-text:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-helper-text-disabled',
-                'js' => 'helper-text:disable',
+                'js' => 'helper-text:disabled',
             ],
             'active' => [
                 'class' => 'w4-helper-text-active',
@@ -39,7 +43,7 @@ class HelperTextTheme extends AbstractComponentTheme
             ],
             'hidden' => [
                 'class' => 'w4-helper-text-hidden',
-                'js' => 'helper-text:hide',
+                'js' => 'helper-text:hidden',
             ],
         ];
     }

@@ -13,7 +13,7 @@ class CheckboxTheme extends AbstractComponentTheme
 
     protected function variants(): array
     {
-        return ['default', 'primary', 'secondary'];
+        return ['default', 'primary', 'secondary', 'accent'];
     }
 
     protected function sizes(): array
@@ -23,15 +23,19 @@ class CheckboxTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'readonly', 'invalid', 'valid', 'loading', 'checked', 'indeterminate'];
+        return ['enabled', 'disabled', 'readonly', 'invalid', 'valid', 'loading', 'checked', 'indeterminate'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'checkbox:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-checkbox-disabled',
-                'js' => 'checkbox:disable',
+                'js' => 'checkbox:disabled',
             ],
             'readonly' => [
                 'class' => 'w4-checkbox-readonly',

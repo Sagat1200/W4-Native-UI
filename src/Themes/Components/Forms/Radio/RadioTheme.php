@@ -23,15 +23,19 @@ class RadioTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'readonly', 'invalid', 'valid', 'loading', 'selected'];
+        return ['enabled', 'disabled', 'readonly', 'invalid', 'valid', 'loading', 'selected'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'radio:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-radio-disabled',
-                'js' => 'radio:disable',
+                'js' => 'radio:disabled',
             ],
             'readonly' => [
                 'class' => 'w4-radio-readonly',
@@ -51,7 +55,7 @@ class RadioTheme extends AbstractComponentTheme
             ],
             'selected' => [
                 'class' => 'w4-radio-selected',
-                'js' => 'radio:select',
+                'js' => 'radio:selected',
             ],
         ];
     }

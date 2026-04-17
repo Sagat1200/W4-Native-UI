@@ -12,7 +12,7 @@ class W4Core {
         ".w4-label", ".w4-link", ".w4-text", ".w4-field-error", ".w4-helper-text",
         ".w4-divider", ".w4-input", ".w4-select", ".w4-textarea", ".w4-checkbox",
         ".w4-radio", ".w4-toggle", ".w4-tooltip", ".w4-alert", ".w4-badge", ".w4-loading",
-        ".w4-progress",
+        ".w4-progress", ".w4-skeleton", ".w4-toast",
         "[data-w4-component]",
         "[data-w4-state]", "[data-w4-hook]"
     ].join(", ");
@@ -25,7 +25,7 @@ class W4Core {
         "w4-select": "select", "w4-textarea": "textarea", "w4-checkbox": "checkbox",
         "w4-radio": "radio", "w4-toggle": "toggle", "w4-tooltip": "tooltip",
         "w4-alert": "alert", "w4-badge": "badge", "w4-loading": "loading",
-        "w4-progress": "progress"
+        "w4-progress": "progress", "w4-skeleton": "skeleton", "w4-toast": "toast"
     };
 
     static COMPONENT_STATES = {
@@ -49,7 +49,9 @@ class W4Core {
         alert: ["enabled", "disabled", "active", "hidden", "dismissed"],
         badge: ["enabled", "disabled", "active", "hidden", "highlighted"],
         loading: ["enabled", "disabled", "active", "hidden", "loading"],
-        progress: ["enabled", "disabled", "active", "hidden", "loading", "indeterminate"]
+        progress: ["enabled", "disabled", "active", "hidden", "loading", "indeterminate"],
+        skeleton: ["enabled", "disabled", "active", "hidden", "loading"],
+        toast: ["enabled", "disabled", "active", "hidden", "dismissed"]
     };
 
     static listeners = {};
@@ -603,10 +605,57 @@ class W4Progress {
  * =========================================
  */
 
+
+
 class W4Skeleton {
-    static init() {
-        // Skeletons are primarily visual, but we can provide utility
-        // functions here for removing them dynamically once data loads.
+    static init(root = document) {
+        // Register state handlers for the Skeleton component
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('skeleton:enabled', this.handleEnabled);
+        W4Core.on('skeleton:disabled', this.handleDisabled);
+        W4Core.on('skeleton:active', this.handleActive);
+        W4Core.on('skeleton:hidden', this.handleHidden);
+        W4Core.on('skeleton:loading', this.handleLoading);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        if (element) {
+            element.style.display = '';
+            element.style.opacity = '1';
+        }
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300);
+        }
+    }
+
+    static handleLoading({ element }) {
+        element.setAttribute('aria-busy', 'true');
     }
 
     /**
@@ -653,18 +702,70 @@ class W4Skeleton {
  * =========================================
  */
 
+
+
 class W4Toast {
-    static init() {
-        document.addEventListener('click', this.handleClick.bind(this));
+    static init(root = document) {
+        // Inicializa listeners manuales (ej: click en botones de dismiss)
+        root.addEventListener('click', this.handleClick.bind(this));
         
         // Auto-dismiss initialization for existing toasts in the DOM
-        const toasts = document.querySelectorAll('.w4-toast[data-w4-duration]');
+        const toasts = root.querySelectorAll('.w4-toast[data-w4-duration]');
         toasts.forEach(toast => {
             if (!toast.hasAttribute('data-w4-toast-bound')) {
                 this.setupAutoDismiss(toast);
                 toast.setAttribute('data-w4-toast-bound', 'true');
             }
         });
+
+        // Register state handlers for the Toast component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('toast:enabled', this.handleEnabled);
+        W4Core.on('toast:disabled', this.handleDisabled);
+        W4Core.on('toast:active', this.handleActive);
+        W4Core.on('toast:hidden', this.handleHidden);
+        W4Core.on('toast:dismissed', this.handleDismissed);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        if (element) {
+            element.style.display = '';
+            element.style.opacity = '1';
+        }
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300);
+        }
+    }
+
+    static handleDismissed({ element }) {
+        // Si W4Core detecta el estado "dismissed", lo manejamos igual que si hicieran click
+        W4Toast.dismiss(element);
     }
 
     static handleClick(event) {

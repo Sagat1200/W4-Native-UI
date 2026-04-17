@@ -23,15 +23,19 @@ class TextareaTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'loading', 'readonly', 'invalid', 'valid'];
+        return ['enabled', 'disabled', 'loading', 'readonly', 'invalid', 'valid'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'textarea:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-textarea-disabled',
-                'js' => 'textarea:disable',
+                'js' => 'textarea:disabled',
             ],
             'loading' => [
                 'class' => 'w4-textarea-loading',

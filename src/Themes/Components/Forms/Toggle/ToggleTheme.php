@@ -23,15 +23,19 @@ class ToggleTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'readonly', 'invalid', 'valid', 'loading', 'checked'];
+        return ['enabled', 'disabled', 'readonly', 'invalid', 'valid', 'loading', 'checked'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'toggle:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-toggle-disabled',
-                'js' => 'toggle:disable',
+                'js' => 'toggle:disabled',
             ],
             'readonly' => [
                 'class' => 'w4-toggle-readonly',
@@ -51,7 +55,7 @@ class ToggleTheme extends AbstractComponentTheme
             ],
             'checked' => [
                 'class' => 'w4-toggle-checked',
-                'js' => 'toggle:check',
+                'js' => 'toggle:checked',
             ],
         ];
     }
