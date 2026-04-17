@@ -95,8 +95,8 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/components/forms/textarea/textArea.css',
             $root . '/resources/css/components/forms/toggle/toggle.css',,
             // Interactive
-            $root . '/resources/css/components/interactive/modal.css',
-            $root . '/resources/css/components/interactive/tooltip.css',
+            $root . '/resources/css/components/interactive/modal/modal.css',
+            $root . '/resources/css/components/interactive/tooltip/tooltip.css',
         ];
 
         $cssContent = [];
@@ -139,8 +139,8 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/js/components/forms/textArea/textArea.js',
             $root . '/resources/js/components/forms/toggle/toggle.js',
             // Interactive
-            $root . '/resources/js/components/interactive/modal.js',
-            $root . '/resources/js/components/interactive/tooltip.js',
+            $root . '/resources/js/components/interactive/modal/modal.js',
+            $root . '/resources/js/components/interactive/tooltip/tooltip.js',
             // Layout
             $root . '/resources/js/components/layout/card.js',
             $root . '/resources/js/components/layout/container.js',

@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\NativeUI\Themes\Components\Interactive;
+namespace W4\NativeUI\Themes\Components\Interactive\Modal;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
