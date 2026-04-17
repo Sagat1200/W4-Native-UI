@@ -23,12 +23,32 @@ class NavBarTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['sticky', 'fixed', 'transparent'];
+        return ['enabled', 'disabled', 'active', 'hidden', 'collapsed', 'sticky', 'fixed', 'transparent'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'navbar:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-navbar-disabled',
+                'js' => 'navbar:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-navbar-active',
+                'js' => 'navbar:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-navbar-hidden',
+                'js' => 'navbar:hidden',
+            ],
+            'collapsed' => [
+                'class' => 'w4-navbar-collapsed',
+                'js' => 'navbar:collapsed',
+            ],
             'sticky' => [
                 'class' => 'w4-navbar-sticky',
             ],

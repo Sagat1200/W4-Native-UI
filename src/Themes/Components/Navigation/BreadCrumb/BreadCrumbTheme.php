@@ -24,12 +24,32 @@ class BreadCrumbTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        // Breadcrumbs don't usually have component-level states, the states apply to the inner links
-        return [];
+        return ['enabled', 'disabled', 'active', 'hidden', 'collapsed'];
     }
 
     public function stateMap(): array
     {
-        return [];
+        return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'breadcrumb:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-breadcrumb-disabled',
+                'js' => 'breadcrumb:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-breadcrumb-active',
+                'js' => 'breadcrumb:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-breadcrumb-hidden',
+                'js' => 'breadcrumb:hidden',
+            ],
+            'collapsed' => [
+                'class' => 'w4-breadcrumb-collapsed',
+                'js' => 'breadcrumb:collapsed',
+            ],
+        ];
     }
 }

@@ -30,11 +30,25 @@ class TabTheme extends AbstractComponentTheme
     public function stateMap(): array
     {
         return [
-            'active' => [
-                'class' => 'w4-tab-active',
+            'enabled' => [
+                'class' => '',
+                'js' => 'tab:enabled',
             ],
             'disabled' => [
                 'class' => 'w4-tab-disabled',
+                'js' => 'tab:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-tab-active',
+                'js' => 'tab:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-tab-hidden',
+                'js' => 'tab:hidden',
+            ],
+            'selected' => [
+                'class' => 'w4-tab-selected',
+                'js' => 'tab:selected',
             ],
             'bordered' => [
                 'class' => 'w4-tab-bordered',

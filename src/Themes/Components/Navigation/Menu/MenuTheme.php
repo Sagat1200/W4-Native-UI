@@ -23,12 +23,32 @@ class MenuTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['horizontal', 'vertical', 'compact', 'expanded'];
+        return ['enabled', 'disabled', 'active', 'hidden', 'open', 'horizontal', 'vertical', 'compact', 'expanded'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'menu:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-menu-disabled',
+                'js' => 'menu:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-menu-active',
+                'js' => 'menu:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-menu-hidden',
+                'js' => 'menu:hidden',
+            ],
+            'open' => [
+                'class' => 'w4-menu-open',
+                'js' => 'menu:open',
+            ],
             'horizontal' => [
                 'class' => 'w4-menu-horizontal',
             ],

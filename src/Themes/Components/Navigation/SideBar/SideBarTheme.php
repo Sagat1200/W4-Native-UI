@@ -24,18 +24,35 @@ class SideBarTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['open', 'collapsed', 'right', 'left', 'fixed'];
+        return ['enabled', 'disabled', 'active', 'hidden', 'collapsed', 'open', 'right', 'left', 'fixed'];
     }
 
     public function stateMap(): array
     {
         return [
-            'open' => [
-                'class' => 'w4-sidebar-open',
-                'js' => 'sidebar:open',
+            'enabled' => [
+                'class' => '',
+                'js' => 'sidebar:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-sidebar-disabled',
+                'js' => 'sidebar:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-sidebar-active',
+                'js' => 'sidebar:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-sidebar-hidden',
+                'js' => 'sidebar:hidden',
             ],
             'collapsed' => [
                 'class' => 'w4-sidebar-collapsed',
+                'js' => 'sidebar:collapsed',
+            ],
+            'open' => [
+                'class' => 'w4-sidebar-open',
+                'js' => 'sidebar:open',
             ],
             'right' => [
                 'class' => 'w4-sidebar-right',

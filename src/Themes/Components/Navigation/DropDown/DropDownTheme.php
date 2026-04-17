@@ -23,14 +23,31 @@ class DropDownTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['open', 'end', 'top', 'bottom', 'left', 'right', 'hover'];
+        return ['enabled', 'disabled', 'active', 'hidden', 'open', 'end', 'top', 'bottom', 'left', 'right', 'hover'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'dropdown:enabled',
+            ],
+            'disabled' => [
+                'class' => 'w4-dropdown-disabled',
+                'js' => 'dropdown:disabled',
+            ],
+            'active' => [
+                'class' => 'w4-dropdown-active',
+                'js' => 'dropdown:active',
+            ],
+            'hidden' => [
+                'class' => 'w4-dropdown-hidden',
+                'js' => 'dropdown:hidden',
+            ],
             'open' => [
                 'class' => 'w4-dropdown-open',
+                'js' => 'dropdown:open',
             ],
             'hover' => [
                 'class' => 'w4-dropdown-hover',
