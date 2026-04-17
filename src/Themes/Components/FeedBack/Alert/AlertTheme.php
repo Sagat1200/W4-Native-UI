@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\NativeUI\Themes\Components\FeedBack;
+namespace W4\NativeUI\Themes\Components\FeedBack\Alert;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 

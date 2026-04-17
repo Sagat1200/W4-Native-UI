@@ -75,15 +75,16 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/components/navigation/dropdown.css',
             $root . '/resources/css/components/navigation/menu.css',
             $root . '/resources/css/components/navigation/navbar.css',
-            $root . '/resources/css/components/navigation/tab.css',
+            $root . '/resources/css/components/navigation/tab/tab.css',
+            $root . '/resources/css/components/navigation/tab/tab-pane.css',
             $root . '/resources/css/components/navigation/sidebar.css',
             // Feedback
-            $root . '/resources/css/components/feedback/alert.css',
-            $root . '/resources/css/components/feedback/badge.css',
-            $root . '/resources/css/components/feedback/loading.css',
-            $root . '/resources/css/components/feedback/progress.css',
-            $root . '/resources/css/components/feedback/skeleton.css',
-            $root . '/resources/css/components/feedback/toast.css',
+            $root . '/resources/css/components/feedback/alert/alert.css',
+            $root . '/resources/css/components/feedback/badge/badge.css',
+            $root . '/resources/css/components/feedback/loading/loading.css',
+            $root . '/resources/css/components/feedback/progress/progress.css',
+            $root . '/resources/css/components/feedback/skeleton/skeleton.css',
+            $root . '/resources/css/components/feedback/toast/toast.css',
             // Forms
             $root . '/resources/css/components/forms/checkbox.css',
             $root . '/resources/css/components/forms/fieldError.css',
@@ -122,12 +123,12 @@ class BuildNativeUIAssetsCommand extends Command
         $jsFiles = [
             $root . '/resources/js/core.js',
             // Feedback
-            $root . '/resources/js/components/feedback/alert.js',
-            $root . '/resources/js/components/feedback/badge.js',
-            $root . '/resources/js/components/feedback/progress.js',
-            $root . '/resources/js/components/feedback/skeleton.js',
-            $root . '/resources/js/components/feedback/toast.js',
-            $root . '/resources/js/components/feedback/tooltip.js',
+            $root . '/resources/js/components/feedback/alert/alert.js',
+            $root . '/resources/js/components/feedback/badge/badge.js',
+            $root . '/resources/js/components/feedback/loading/loading.js',
+            $root . '/resources/js/components/feedback/progress/progress.js',
+            $root . '/resources/js/components/feedback/skeleton/skeleton.js',
+            $root . '/resources/js/components/feedback/toast/toast.js',
             // Forms
             $root . '/resources/js/components/forms/checkbox.js',
             $root . '/resources/js/components/forms/fieldError.js',
@@ -154,7 +155,8 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/js/components/navigation/menu.js',
             $root . '/resources/js/components/navigation/navbar.js',
             $root . '/resources/js/components/navigation/sidebar.js',
-            $root . '/resources/js/components/navigation/tab.js',
+            $root . '/resources/js/components/navigation/tab/tab.js',
+            $root . '/resources/js/components/navigation/tab/tab-pane.js',
             // UI
             $root . '/resources/js/components/ui/button.js',
             $root . '/resources/js/components/ui/heading.js',
@@ -163,7 +165,7 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/js/components/ui/label.js',
             $root . '/resources/js/components/ui/link.js',
             $root . '/resources/js/components/ui/text.js',
-            
+
             // Core Native UI Initializer (must be last)
             $root . '/resources/js/properties/w4-native.js',
         ];

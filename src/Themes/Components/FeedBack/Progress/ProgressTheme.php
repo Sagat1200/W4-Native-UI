@@ -1,19 +1,19 @@
 <?php
 
-namespace W4\NativeUI\Themes\Components\FeedBack;
+namespace W4\NativeUI\Themes\Components\FeedBack\Progress;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
-class BadgeTheme extends AbstractComponentTheme
+class ProgressTheme extends AbstractComponentTheme
 {
     public function component(): string
     {
-        return 'badge';
+        return 'progress';
     }
 
     protected function variants(): array
     {
-        return ['default', 'primary', 'secondary', 'accent', 'neutral', 'info', 'success', 'warning', 'error'];
+        return ['default', 'primary', 'secondary', 'neutral', 'accent', 'info', 'success', 'warning', 'error'];
     }
 
     protected function sizes(): array

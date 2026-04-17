@@ -179,7 +179,7 @@
         </section>
 
         <section>
-            <h2 class="section-title">Variantes de Color Semánticas</h2>
+            <h2 class="w4-heading w4-heading-h2 mb-2">Variantes de Color Semánticas</h2>
             <div class="preview-group grid-container">
                 <div class="preview-item">
                     <span class="preview-label-desc">Neutral (Default)</span>

@@ -88,10 +88,16 @@
   --w4-heading-font-size: 1.25rem;
 }
 
-.w4-heading-h4,
-.w4-heading-h5,
-.w4-heading-h6 {
+.w4-heading-h4 {
+  --w4-heading-font-size: 1.125rem;
+}
+
+.w4-heading-h5 {
   --w4-heading-font-size: 1rem;
+}
+
+.w4-heading-h6 {
+  --w4-heading-font-size: 0.875rem;
 }
 
 /* ----------------------------------
