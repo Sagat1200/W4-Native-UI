@@ -93,7 +93,7 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/components/forms/radio/radio.css',
             $root . '/resources/css/components/forms/select/select.css',
             $root . '/resources/css/components/forms/textarea/textArea.css',
-            $root . '/resources/css/components/forms/toggle/toggle.css',,
+            $root . '/resources/css/components/forms/toggle/toggle.css',
             // Interactive
             $root . '/resources/css/components/interactive/modal/modal.css',
             $root . '/resources/css/components/interactive/tooltip/tooltip.css',
