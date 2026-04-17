@@ -12,7 +12,7 @@ class W4Core {
         ".w4-label", ".w4-link", ".w4-text", ".w4-field-error", ".w4-helper-text",
         ".w4-divider", ".w4-input", ".w4-select", ".w4-textarea", ".w4-checkbox",
         ".w4-radio", ".w4-toggle", ".w4-tooltip", ".w4-alert", ".w4-badge", ".w4-loading",
-        ".w4-progress", ".w4-skeleton", ".w4-toast",
+        ".w4-progress", ".w4-skeleton", ".w4-toast", ".w4-modal", ".w4-card", ".w4-container", ".w4-grid", ".w4-panel", ".w4-section", ".w4-stack",
         "[data-w4-component]",
         "[data-w4-state]", "[data-w4-hook]"
     ].join(", ");
@@ -25,7 +25,8 @@ class W4Core {
         "w4-select": "select", "w4-textarea": "textarea", "w4-checkbox": "checkbox",
         "w4-radio": "radio", "w4-toggle": "toggle", "w4-tooltip": "tooltip",
         "w4-alert": "alert", "w4-badge": "badge", "w4-loading": "loading",
-        "w4-progress": "progress", "w4-skeleton": "skeleton", "w4-toast": "toast"
+        "w4-progress": "progress", "w4-skeleton": "skeleton", "w4-toast": "toast", "w4-modal": "modal",
+        "w4-card": "card", "w4-container": "container", "w4-grid": "grid", "w4-panel": "panel", "w4-section": "section", "w4-stack": "stack"
     };
 
     static COMPONENT_STATES = {
@@ -38,20 +39,27 @@ class W4Core {
         text: ["enabled", "disabled", "active", "hidden"],
         "field-error": ["enabled", "disabled", "active", "hidden"],
         "helper-text": ["enabled", "disabled", "active", "hidden"],
-        divider: ["disabled", "active", "hidden"],
+        divider: ["enabled", "disabled", "active", "hidden"],
         input: ["enabled", "disabled", "loading", "readonly", "invalid", "valid"],
         select: ["enabled", "disabled", "readonly", "invalid", "valid", "loading"],
         textarea: ["enabled", "disabled", "loading", "readonly", "invalid", "valid"],
         checkbox: ["enabled", "disabled", "readonly", "invalid", "valid", "loading", "checked", "indeterminate"],
         radio: ["enabled", "disabled", "readonly", "invalid", "valid", "loading", "selected"],
         toggle: ["enabled", "disabled", "readonly", "invalid", "valid", "loading", "checked"],
-        tooltip: ["hidden", "active"],
+        tooltip: ["enabled", "disabled", "active", "hidden", "open"],
         alert: ["enabled", "disabled", "active", "hidden", "dismissed"],
         badge: ["enabled", "disabled", "active", "hidden", "highlighted"],
         loading: ["enabled", "disabled", "active", "hidden", "loading"],
         progress: ["enabled", "disabled", "active", "hidden", "loading", "indeterminate"],
         skeleton: ["enabled", "disabled", "active", "hidden", "loading"],
-        toast: ["enabled", "disabled", "active", "hidden", "dismissed"]
+        toast: ["enabled", "disabled", "active", "hidden", "dismissed"],
+        modal: ["enabled", "disabled", "active", "hidden", "open"],
+        card: ["enabled", "disabled", "active", "hidden", "collapsed"],
+        container: ["enabled", "disabled", "active", "hidden"],
+        grid: ["enabled", "disabled", "active", "hidden"],
+        panel: ["enabled", "disabled", "active", "hidden", "collapsed"],
+        section: ["enabled", "disabled", "active", "hidden", "collapsed"],
+        stack: ["enabled", "disabled", "active", "hidden"]
     };
 
     static listeners = {};
@@ -1423,14 +1431,58 @@ class W4Toggle {
  * =========================================
  */
 
+
+
 class W4Modal {
     /**
      * Initializes the modal functionality on the document.
      * Sets up event listeners for toggling modals and handling accessibility.
      */
-    static init() {
-        document.addEventListener('click', this.handleClick.bind(this));
-        document.addEventListener('keydown', this.handleKeydown.bind(this));
+    static init(root = document) {
+        root.addEventListener('click', this.handleClick.bind(this));
+        root.addEventListener('keydown', this.handleKeydown.bind(this));
+
+        // Register state handlers for the Modal component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('modal:enabled', this.handleEnabled);
+        W4Core.on('modal:disabled', this.handleDisabled);
+        W4Core.on('modal:active', this.handleActive);
+        W4Core.on('modal:hidden', this.handleHidden);
+        W4Core.on('modal:open', this.handleOpen);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.style.zIndex = '1000';
+    }
+
+    static handleHidden({ element }) {
+        W4Modal.close(element);
+    }
+
+    static handleOpen({ element }) {
+        W4Modal.open(element);
     }
 
     /**
@@ -1570,11 +1622,56 @@ class W4Modal {
  * =========================================
  */
 
+
+
 class W4Tooltip {
-    static init() {
+    static init(root = document) {
         // We use event delegation on the document to handle touch events for mobile tooltips
-        document.addEventListener('touchstart', this.handleTouchStart.bind(this));
-        document.addEventListener('click', this.handleClickOutside.bind(this));
+        root.addEventListener('touchstart', this.handleTouchStart.bind(this));
+        root.addEventListener('click', this.handleClickOutside.bind(this));
+
+        // Register state handlers for the Tooltip component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('tooltip:enabled', this.handleEnabled);
+        W4Core.on('tooltip:disabled', this.handleDisabled);
+        W4Core.on('tooltip:active', this.handleActive);
+        W4Core.on('tooltip:hidden', this.handleHidden);
+        W4Core.on('tooltip:open', this.handleOpen);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.classList.add('w4-tooltip-active');
+    }
+
+    static handleHidden({ element }) {
+        element.classList.remove('w4-tooltip-active');
+        element.classList.remove('w4-tooltip-open');
+    }
+
+    static handleOpen({ element }) {
+        element.classList.add('w4-tooltip-open');
     }
 
     /**
@@ -1624,9 +1721,61 @@ class W4Tooltip {
  * =========================================
  */
 
+
+
 class W4Card {
     static init(root = document) {
-        // Placeholder for specific card logic
+        // Register state handlers for the Card component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('card:enabled', this.handleEnabled);
+        W4Core.on('card:disabled', this.handleDisabled);
+        W4Core.on('card:active', this.handleActive);
+        W4Core.on('card:hidden', this.handleHidden);
+        W4Core.on('card:collapsed', this.handleCollapsed);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.classList.remove('w4-card-collapsed');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.classList.add('w4-card-active');
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300); // Wait for transition
+        }
+    }
+
+    static handleCollapsed({ element }) {
+        element.classList.add('w4-card-collapsed');
+        // Additional DOM logic to hide card body could go here if needed,
+        // but typically handled via CSS `.w4-card-collapsed .w4-card-body { display: none; }`
     }
 }
 
@@ -1638,9 +1787,53 @@ class W4Card {
  * =========================================
  */
 
+
+
 class W4Container {
     static init(root = document) {
-        // Placeholder for specific container logic
+        // Register state handlers for the Container component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('container:enabled', this.handleEnabled);
+        W4Core.on('container:disabled', this.handleDisabled);
+        W4Core.on('container:active', this.handleActive);
+        W4Core.on('container:hidden', this.handleHidden);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.classList.add('w4-container-active');
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300); // Wait for transition
+        }
     }
 }
 
@@ -1652,9 +1845,53 @@ class W4Container {
  * =========================================
  */
 
+
+
 class W4Divider {
     static init(root = document) {
-        // Placeholder for specific divider logic
+        // Register state handlers for the Divider component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('divider:enabled', this.handleEnabled);
+        W4Core.on('divider:disabled', this.handleDisabled);
+        W4Core.on('divider:active', this.handleActive);
+        W4Core.on('divider:hidden', this.handleHidden);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.classList.add('w4-divider-active');
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300); // Wait for transition
+        }
     }
 }
 
@@ -1666,9 +1903,53 @@ class W4Divider {
  * =========================================
  */
 
+
+
 class W4Grid {
     static init(root = document) {
-        // Placeholder for specific grid logic
+        // Register state handlers for the Grid component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('grid:enabled', this.handleEnabled);
+        W4Core.on('grid:disabled', this.handleDisabled);
+        W4Core.on('grid:active', this.handleActive);
+        W4Core.on('grid:hidden', this.handleHidden);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.classList.add('w4-grid-active');
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300); // Wait for transition
+        }
     }
 }
 
@@ -1680,9 +1961,59 @@ class W4Grid {
  * =========================================
  */
 
+
+
 class W4Panel {
     static init(root = document) {
-        // Placeholder for specific panel logic
+        // Register state handlers for the Panel component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('panel:enabled', this.handleEnabled);
+        W4Core.on('panel:disabled', this.handleDisabled);
+        W4Core.on('panel:active', this.handleActive);
+        W4Core.on('panel:hidden', this.handleHidden);
+        W4Core.on('panel:collapsed', this.handleCollapsed);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.classList.remove('w4-panel-collapsed');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.classList.add('w4-panel-active');
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300); // Wait for transition
+        }
+    }
+
+    static handleCollapsed({ element }) {
+        element.classList.add('w4-panel-collapsed');
     }
 }
 
@@ -1694,9 +2025,59 @@ class W4Panel {
  * =========================================
  */
 
+
+
 class W4Section {
     static init(root = document) {
-        // Placeholder for specific section logic
+        // Register state handlers for the Section component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('section:enabled', this.handleEnabled);
+        W4Core.on('section:disabled', this.handleDisabled);
+        W4Core.on('section:active', this.handleActive);
+        W4Core.on('section:hidden', this.handleHidden);
+        W4Core.on('section:collapsed', this.handleCollapsed);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.classList.remove('w4-section-collapsed');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.classList.add('w4-section-active');
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300); // Wait for transition
+        }
+    }
+
+    static handleCollapsed({ element }) {
+        element.classList.add('w4-section-collapsed');
     }
 }
 
@@ -1708,9 +2089,53 @@ class W4Section {
  * =========================================
  */
 
+
+
 class W4Stack {
     static init(root = document) {
-        // Placeholder for specific stack logic
+        // Register state handlers for the Stack component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('stack:enabled', this.handleEnabled);
+        W4Core.on('stack:disabled', this.handleDisabled);
+        W4Core.on('stack:active', this.handleActive);
+        W4Core.on('stack:hidden', this.handleHidden);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.classList.add('w4-stack-active');
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300); // Wait for transition
+        }
     }
 }
 
