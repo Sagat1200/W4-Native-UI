@@ -87,12 +87,12 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/components/feedback/toast/toast.css',
             // Forms
             $root . '/resources/css/components/forms/checkbox/checkbox.css',
-            $root . '/resources/css/components/forms/fielderror/fieldError.css',
-            $root . '/resources/css/components/forms/helpertext/helperText.css',
+            $root . '/resources/css/components/forms/fielderror/fielderror.css',
+            $root . '/resources/css/components/forms/helpertext/helpertext.css',
             $root . '/resources/css/components/forms/input/input.css',
             $root . '/resources/css/components/forms/radio/radio.css',
             $root . '/resources/css/components/forms/select/select.css',
-            $root . '/resources/css/components/forms/textarea/textArea.css',
+            $root . '/resources/css/components/forms/textarea/textarea.css',
             $root . '/resources/css/components/forms/toggle/toggle.css',
             // Interactive
             $root . '/resources/css/components/interactive/modal/modal.css',
@@ -131,12 +131,12 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/js/components/feedback/toast/toast.js',
             // Forms
             $root . '/resources/js/components/forms/checkbox/checkbox.js',
-            $root . '/resources/js/components/forms/fielderror/fieldError.js',
-            $root . '/resources/js/components/forms/helperText/helperText.js',
+            $root . '/resources/js/components/forms/fielderror/fielderror.js',
+            $root . '/resources/js/components/forms/helpertext/helpertext.js',
             $root . '/resources/js/components/forms/input/input.js',
             $root . '/resources/js/components/forms/radio/radio.js',
             $root . '/resources/js/components/forms/select/select.js',
-            $root . '/resources/js/components/forms/textArea/textArea.js',
+            $root . '/resources/js/components/forms/textarea/textarea.js',
             $root . '/resources/js/components/forms/toggle/toggle.js',
             // Interactive
             $root . '/resources/js/components/interactive/modal/modal.js',
