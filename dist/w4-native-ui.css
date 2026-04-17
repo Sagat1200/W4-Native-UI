@@ -3253,6 +3253,137 @@ html[data-theme] body {
 }
 
 /* ==========================================================================
+   DropDown Component
+   Native W4 Visual Engine implementation Layout Morphology
+   ========================================================================== */
+
+@layer components {
+.w4-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.w4-dropdown-content {
+  position: absolute;
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.95);
+  transform-origin: top;
+  transition: visibility 0.1s, opacity 0.2s ease, transform 0.2s ease;
+  background-color: var(--w4-base-100);
+  border-radius: var(--w4-radius-dropdown, var(--w4-radius-md));
+  box-shadow: var(--w4-shadow-lg);
+  padding: var(--w4-spacing-2);
+  min-inline-size: 12rem;
+}
+
+/* Open State */
+.w4-dropdown.w4-dropdown-open .w4-dropdown-content,
+.w4-dropdown:focus-within .w4-dropdown-content,
+.w4-dropdown.w4-dropdown-hover:hover .w4-dropdown-content,
+.w4-dropdown[data-w4-state~="open"] .w4-dropdown-content {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Positions */
+.w4-dropdown-bottom .w4-dropdown-content {
+  inset-block-start: 100%;
+  inset-inline-start: 0;
+  margin-block-start: var(--w4-spacing-1);
+  transform-origin: top;
+}
+
+.w4-dropdown-top .w4-dropdown-content {
+  inset-block-end: 100%;
+  inset-inline-start: 0;
+  margin-block-end: var(--w4-spacing-1);
+  transform-origin: bottom;
+}
+
+.w4-dropdown-left .w4-dropdown-content {
+  inset-block-start: 0;
+  inset-inline-end: 100%;
+  margin-inline-end: var(--w4-spacing-1);
+  transform-origin: right;
+}
+
+.w4-dropdown-right .w4-dropdown-content {
+  inset-block-start: 0;
+  inset-inline-start: 100%;
+  margin-inline-start: var(--w4-spacing-1);
+  transform-origin: left;
+}
+
+/* End Alignment */
+.w4-dropdown-end .w4-dropdown-content {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+.w4-dropdown-left.w4-dropdown-end .w4-dropdown-content,
+.w4-dropdown-right.w4-dropdown-end .w4-dropdown-content {
+  inset-block-start: auto;
+  inset-block-end: 0;
+}
+
+.w4-dropdown-right.w4-dropdown-end .w4-dropdown-content {
+  inset-block-start: 0 !important;
+  inset-block-end: auto !important;
+  inset-inline-start: auto !important;
+  inset-inline-end: calc(100% + var(--w4-spacing-1)) !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+}
+
+/* Sizes (applies to content font size) */
+.w4-dropdown.w4-size-xs .w4-dropdown-content { font-size: var(--w4-text-xs); }
+.w4-dropdown.w4-size-sm .w4-dropdown-content { font-size: var(--w4-text-sm); }
+.w4-dropdown.w4-size-md .w4-dropdown-content { font-size: var(--w4-text-base); }
+.w4-dropdown.w4-size-lg .w4-dropdown-content { font-size: var(--w4-text-lg); }
+.w4-dropdown.w4-size-xl .w4-dropdown-content { font-size: var(--w4-text-xl); }
+
+/* Variants (applies to background/colors of the dropdown content) */
+.w4-dropdown.w4-variant-primary .w4-dropdown-content { background-color: var(--w4-primary); color: var(--w4-primary-content); }
+.w4-dropdown.w4-variant-secondary .w4-dropdown-content { background-color: var(--w4-secondary); color: var(--w4-secondary-content); }
+.w4-dropdown.w4-variant-accent .w4-dropdown-content { background-color: var(--w4-accent); color: var(--w4-accent-content); }
+.w4-dropdown.w4-variant-info .w4-dropdown-content { background-color: var(--w4-info); color: var(--w4-info-content); }
+.w4-dropdown.w4-variant-success .w4-dropdown-content { background-color: var(--w4-success); color: var(--w4-success-content); }
+.w4-dropdown.w4-variant-warning .w4-dropdown-content { background-color: var(--w4-warning); color: var(--w4-warning-content); }
+.w4-dropdown.w4-variant-error .w4-dropdown-content { background-color: var(--w4-error); color: var(--w4-error-content); }
+.w4-dropdown.w4-variant-neutral .w4-dropdown-content { background-color: var(--w4-neutral); color: var(--w4-neutral-content); }
+
+/* ==========================================================================
+   States & Modifiers (DropDownComponentState Enum)
+   ========================================================================== */
+
+.w4-dropdown-hidden,
+.w4-dropdown[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-dropdown-disabled,
+.w4-dropdown[data-w4-state~="disabled"] {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-dropdown-disabled .w4-dropdown-content,
+.w4-dropdown[data-w4-state~="disabled"] .w4-dropdown-content {
+  display: none !important; /* Ensure menu cannot open if disabled */
+}
+
+.w4-dropdown-active,
+.w4-dropdown[data-w4-state~="active"] {
+  /* An active dropdown usually highlights its trigger element */
+  z-index: 50; /* Bring it forward slightly */
+}
+}
+
+/* ==========================================================================
    Menu Component
    Native W4 Visual Engine implementation Layout Morphology
    ========================================================================== */

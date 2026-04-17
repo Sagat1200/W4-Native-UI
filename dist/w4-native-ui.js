@@ -12,7 +12,7 @@ class W4Core {
         ".w4-label", ".w4-link", ".w4-text", ".w4-field-error", ".w4-helper-text",
         ".w4-divider", ".w4-input", ".w4-select", ".w4-textarea", ".w4-checkbox",
         ".w4-radio", ".w4-toggle", ".w4-tooltip", ".w4-alert", ".w4-badge", ".w4-loading",
-        ".w4-progress", ".w4-skeleton", ".w4-toast", ".w4-modal", ".w4-card", ".w4-container", ".w4-grid", ".w4-panel", ".w4-section", ".w4-stack",
+        ".w4-progress", ".w4-skeleton", ".w4-toast", ".w4-modal", ".w4-card", ".w4-container", ".w4-grid", ".w4-panel", ".w4-section", ".w4-stack", ".w4-breadcrumb", ".w4-dropdown", ".w4-menu", ".w4-navbar", ".w4-sidebar", ".w4-tab",
         "[data-w4-component]",
         "[data-w4-state]", "[data-w4-hook]"
     ].join(", ");
@@ -26,7 +26,7 @@ class W4Core {
         "w4-radio": "radio", "w4-toggle": "toggle", "w4-tooltip": "tooltip",
         "w4-alert": "alert", "w4-badge": "badge", "w4-loading": "loading",
         "w4-progress": "progress", "w4-skeleton": "skeleton", "w4-toast": "toast", "w4-modal": "modal",
-        "w4-card": "card", "w4-container": "container", "w4-grid": "grid", "w4-panel": "panel", "w4-section": "section", "w4-stack": "stack"
+        "w4-card": "card", "w4-container": "container", "w4-grid": "grid", "w4-panel": "panel", "w4-section": "section", "w4-stack": "stack", "w4-breadcrumb": "breadcrumb", "w4-dropdown": "dropdown", "w4-menu": "menu", "w4-navbar": "navbar", "w4-sidebar": "sidebar", "w4-tab": "tab"
     };
 
     static COMPONENT_STATES = {
@@ -59,7 +59,13 @@ class W4Core {
         grid: ["enabled", "disabled", "active", "hidden"],
         panel: ["enabled", "disabled", "active", "hidden", "collapsed"],
         section: ["enabled", "disabled", "active", "hidden", "collapsed"],
-        stack: ["enabled", "disabled", "active", "hidden"]
+        stack: ["enabled", "disabled", "active", "hidden"],
+        breadcrumb: ["enabled", "disabled", "active", "hidden", "collapsed"],
+        dropdown: ["enabled", "disabled", "active", "hidden", "open"],
+        menu: ["enabled", "disabled", "active", "hidden", "open"],
+        navbar: ["enabled", "disabled", "active", "hidden", "collapsed"],
+        sidebar: ["enabled", "disabled", "active", "hidden", "collapsed", "open"],
+        tab: ["enabled", "disabled", "active", "hidden", "selected"]
     };
 
     static listeners = {};
@@ -2143,9 +2149,56 @@ class W4Breadcrumb {
     /**
      * Initialize Breadcrumb component logic
      */
-    static init() {
-        // Base logic for Breadcrumb.
-        // Ready for future custom logic (e.g., collapsible breadcrumbs, scrollable overflow).
+    static init(root = document) {
+        // Register state handlers for the Breadcrumb component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('breadcrumb:enabled', this.handleEnabled);
+        W4Core.on('breadcrumb:disabled', this.handleDisabled);
+        W4Core.on('breadcrumb:active', this.handleActive);
+        W4Core.on('breadcrumb:hidden', this.handleHidden);
+        W4Core.on('breadcrumb:collapsed', this.handleCollapsed);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.classList.remove('w4-breadcrumb-collapsed');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.classList.add('w4-breadcrumb-active');
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.opacity = '0';
+            setTimeout(() => {
+                element.style.display = 'none';
+            }, 300); // Wait for transition
+        }
+    }
+
+    static handleCollapsed({ element }) {
+        element.classList.add('w4-breadcrumb-collapsed');
     }
 }
 
@@ -2153,15 +2206,59 @@ class W4Dropdown {
     /**
      * Initialize Dropdown component logic
      */
-    static init() {
+    static init(root = document) {
         if (this.initialized) return;
-        this.bindEvents();
+        this.bindEvents(root);
+        
+        // Register state handlers for the Dropdown component via W4Core
+        this.registerStateHandlers();
+
         this.initialized = true;
     }
 
-    static bindEvents() {
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('dropdown:enabled', this.handleEnabled);
+        W4Core.on('dropdown:disabled', this.handleDisabled);
+        W4Core.on('dropdown:active', this.handleActive);
+        W4Core.on('dropdown:hidden', this.handleHidden);
+        W4Core.on('dropdown:open', this.handleOpen);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        // Puede utilizarse para resaltar el dropdown
+        element.classList.add('w4-dropdown-active');
+    }
+
+    static handleHidden({ element }) {
+        element.classList.remove('w4-dropdown-open');
+    }
+
+    static handleOpen({ element }) {
+        element.classList.add('w4-dropdown-open');
+    }
+
+    static bindEvents(root) {
         // Close dropdowns when clicking outside
-        document.addEventListener('click', (e) => {
+        root.addEventListener('click', (e) => {
             const isDropdownClick = e.target.closest('.w4-dropdown');
             if (!isDropdownClick) {
                 document.querySelectorAll('.w4-dropdown-open').forEach(dropdown => {
@@ -2171,7 +2268,7 @@ class W4Dropdown {
         });
 
         // Toggle dropdown on click if it has a toggle button
-        document.addEventListener('click', (e) => {
+        root.addEventListener('click', (e) => {
             const toggleBtn = e.target.closest('[data-w4-toggle="dropdown"]');
             if (toggleBtn) {
                 const dropdown = toggleBtn.closest('.w4-dropdown');
@@ -2193,15 +2290,57 @@ class W4Menu {
     /**
      * Initialize Menu component logic
      */
-    static init() {
+    static init(root = document) {
         // Base logic for Menu.
         // Ready for future custom logic (e.g., active state syncing with router, expandable sub-menus).
-        this.bindEvents();
+        this.bindEvents(root);
+        
+        // Register state handlers for the Menu component via W4Core
+        this.registerStateHandlers();
     }
 
-    static bindEvents() {
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('menu:enabled', this.handleEnabled);
+        W4Core.on('menu:disabled', this.handleDisabled);
+        W4Core.on('menu:active', this.handleActive);
+        W4Core.on('menu:hidden', this.handleHidden);
+        W4Core.on('menu:open', this.handleOpen);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.classList.add('w4-menu-active');
+    }
+
+    static handleHidden({ element }) {
+        element.classList.remove('w4-menu-open');
+    }
+
+    static handleOpen({ element }) {
+        element.classList.add('w4-menu-open');
+    }
+
+    static bindEvents(root) {
         // Handle clicks for active state and submenus
-        document.addEventListener('click', (e) => {
+        root.addEventListener('click', (e) => {
             const menuItem = e.target.closest('.w4-menu li > a, .w4-menu li > button, .w4-menu li > span');
             if (menuItem && !menuItem.closest('.w4-dropdown')) { // Ignore dropdown menus
                 const parentLi = menuItem.closest('li');
@@ -2241,7 +2380,7 @@ class W4Menu {
                 }
             } else if (!e.target.closest('.w4-menu')) {
                 // Clicked outside any menu: close horizontal submenus
-                document.querySelectorAll('.w4-menu-horizontal > li.w4-menu-open').forEach(li => {
+                root.querySelectorAll('.w4-menu-horizontal > li.w4-menu-open').forEach(li => {
                     li.classList.remove('w4-menu-open');
                     li.removeAttribute('data-w4-state');
                 });
@@ -2250,7 +2389,7 @@ class W4Menu {
         
         // Handle horizontal submenus on hover as fallback/enhancement
         // Using JS for this makes it more robust than pure CSS :hover which can be twitchy
-        document.querySelectorAll('.w4-menu-horizontal > li:has(> ul)').forEach(item => {
+        root.querySelectorAll('.w4-menu-horizontal > li:has(> ul)').forEach(item => {
             let timeoutId;
             
             item.addEventListener('mouseenter', () => {
@@ -2281,9 +2420,138 @@ class W4Navbar {
     /**
      * Initialize Navbar component logic
      */
-    static init() {
+    static init(root = document) {
         // Base logic for Navbar.
         // Ready for future custom logic (e.g., scroll transparency transitions, mobile menu toggling).
+
+        // Register state handlers for the Navbar component via W4Core
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('navbar:enabled', this.handleEnabled);
+        W4Core.on('navbar:disabled', this.handleDisabled);
+        W4Core.on('navbar:active', this.handleActive);
+        W4Core.on('navbar:hidden', this.handleHidden);
+        W4Core.on('navbar:collapsed', this.handleCollapsed);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+        element.classList.remove('w4-navbar-collapsed');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.classList.add('w4-navbar-active');
+    }
+
+    static handleHidden({ element }) {
+        element.classList.add('w4-navbar-hidden');
+    }
+
+    static handleCollapsed({ element }) {
+        element.classList.add('w4-navbar-collapsed');
+    }
+}
+
+class W4Sidebar {
+    /**
+     * Initialize Sidebar component logic
+     */
+    static init(root = document) {
+        if (this.initialized) return;
+        this.bindEvents(root);
+
+        // Register state handlers for the Sidebar component via W4Core
+        this.registerStateHandlers();
+
+        this.initialized = true;
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('sidebar:enabled', this.handleEnabled);
+        W4Core.on('sidebar:disabled', this.handleDisabled);
+        W4Core.on('sidebar:active', this.handleActive);
+        W4Core.on('sidebar:hidden', this.handleHidden);
+        W4Core.on('sidebar:collapsed', this.handleCollapsed);
+        W4Core.on('sidebar:open', this.handleOpen);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+        element.classList.remove('w4-sidebar-collapsed');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        element.classList.add('w4-sidebar-active');
+    }
+
+    static handleHidden({ element }) {
+        element.classList.remove('w4-sidebar-open');
+    }
+
+    static handleCollapsed({ element }) {
+        element.classList.add('w4-sidebar-collapsed');
+    }
+
+    static handleOpen({ element }) {
+        element.classList.add('w4-sidebar-open');
+    }
+
+    static bindEvents(root) {
+        // Handle toggling the sidebar via data attributes
+        root.addEventListener('click', (e) => {
+            const toggleBtn = e.target.closest('[data-w4-toggle="sidebar"]');
+            if (toggleBtn) {
+                const targetId = toggleBtn.getAttribute('data-w4-target');
+                const sidebar = targetId 
+                    ? root.getElementById(targetId) || document.getElementById(targetId)
+                    : toggleBtn.closest('.w4-sidebar') || root.querySelector('.w4-sidebar');
+                
+                if (sidebar) {
+                    sidebar.classList.toggle('w4-sidebar-open');
+                }
+            }
+            
+            // Handle closing when clicking a dismiss button inside the sidebar
+            const dismissBtn = e.target.closest('[data-w4-dismiss="sidebar"]');
+            if (dismissBtn) {
+                const sidebar = dismissBtn.closest('.w4-sidebar');
+                if (sidebar) {
+                    sidebar.classList.remove('w4-sidebar-open');
+                }
+            }
+        });
     }
 }
 
@@ -2291,13 +2559,64 @@ class W4Tab {
     /**
      * Initialize Tab component logic
      */
-    static init() {
-        this.bindEvents();
+    static init(root = document) {
+        this.bindEvents(root);
+        
+        // Register state handlers for the Tab component via W4Core
+        this.registerStateHandlers();
     }
 
-    static bindEvents() {
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('tab:enabled', this.handleEnabled);
+        W4Core.on('tab:disabled', this.handleDisabled);
+        W4Core.on('tab:active', this.handleActive);
+        W4Core.on('tab:hidden', this.handleHidden);
+        W4Core.on('tab:selected', this.handleSelected);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('disabled');
+        element.removeAttribute('aria-disabled');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('disabled', 'true');
+        element.setAttribute('aria-disabled', 'true');
+        element.style.pointerEvents = 'none';
+        element.style.opacity = '0.5';
+    }
+
+    static handleActive({ element }) {
+        // En tabs suele coincidir con selected o ser visual
+        element.classList.add('w4-tab-active');
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        if (element) {
+            element.style.display = 'none';
+        }
+    }
+
+    static handleSelected({ element }) {
+        // Forzamos el click de JS para que se propague el cambio de panel y la lógica de tabs
+        if (!element.hasAttribute('disabled')) {
+            element.click();
+        }
+    }
+
+    static bindEvents(root) {
         // Handle tab switching
-        document.addEventListener('click', (e) => {
+        root.addEventListener('click', (e) => {
             const tab = e.target.closest('.w4-tab');
             if (tab && !tab.hasAttribute('disabled')) {
                 const tabGroup = tab.closest('.w4-tabs');
@@ -2604,6 +2923,56 @@ class W4Label {
     static handleActive({ element }) {
         // Active label might not require a specific aria attribute,
         // but could be linked to an active input state.
+    }
+
+    static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+    }
+}
+
+/**
+ * =========================================
+ * LINK COMPONENT SCRIPT
+ * Native W4 Visual Engine implementation
+ * UI System
+ * =========================================
+ */
+
+
+
+class W4Link {
+    static init(root = document) {
+        // Placeholder for specific link logic
+        
+        // Register state handlers for the Link component
+        this.registerStateHandlers();
+    }
+
+    /**
+     * Listen for hook events emitted by W4Core
+     */
+    static registerStateHandlers() {
+        if (this.handlersRegistered) return;
+
+        W4Core.on('link:enabled', this.handleEnabled);
+        W4Core.on('link:disabled', this.handleDisabled);
+        W4Core.on('link:active', this.handleActive);
+        W4Core.on('link:hidden', this.handleHidden);
+
+        this.handlersRegistered = true;
+    }
+
+    static handleEnabled({ element }) {
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static handleDisabled({ element }) {
+        element.setAttribute('aria-disabled', 'true');
+    }
+
+    static handleActive({ element }) {
+        // Typically links use an active class, but might also use aria-current if applicable
     }
 
     static handleHidden({ element }) {

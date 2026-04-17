@@ -72,7 +72,7 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/components/layout/stack/stack.css',
             // Navigation
             $root . '/resources/css/components/navigation/breadcrumb/breadcrumb.css',
-            $root . '/resources/css/components/navigation/dropdown/dropdownDown.css',
+            $root . '/resources/css/components/navigation/dropdown/dropdown.css',
             $root . '/resources/css/components/navigation/menu/menu.css',
             $root . '/resources/css/components/navigation/navbar/navbar.css',
             $root . '/resources/css/components/navigation/tab/tab.css',
@@ -154,7 +154,7 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/js/components/navigation/dropdown/dropdown.js',
             $root . '/resources/js/components/navigation/menu/menu.js',
             $root . '/resources/js/components/navigation/navbar/navbar.js',
-            $root . '/resources/js/components/navigation/sidear/sidebar.js',
+            $root . '/resources/js/components/navigation/sidebar/sidebar.js',
             $root . '/resources/js/components/navigation/tab/tab.js',
             $root . '/resources/js/components/navigation/tab/tab-pane.js',
             // UI
@@ -163,7 +163,7 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/js/components/ui/icon/icon.js',
             $root . '/resources/js/components/ui/iconbutton/iconButton.js',
             $root . '/resources/js/components/ui/label/label.js',
-            $root . '/resources/js/components/ui/lik/link.js',
+            $root . '/resources/js/components/ui/link/link.js',
             $root . '/resources/js/components/ui/text/text.js',
 
             // Core Native UI Initializer (must be last)

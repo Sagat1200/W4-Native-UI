@@ -6,47 +6,47 @@
  */
 
 // Import interactive components
-import W4Modal from '../components/interactive/modal.js';
-import W4Tooltip from '../components/interactive/tooltip.js';
-import W4Alert from '../components/feedback/alert.js';
-import W4Toast from '../components/feedback/toast.js';
-import W4Skeleton from '../components/feedback/skeleton.js';
+import W4Modal from '../components/interactive/modal/modal.js';
+import W4Tooltip from '../components/interactive/tooltip/tooltip.js';
+import W4Alert from '../components/feedback/alert/alert.js';
+import W4Toast from '../components/feedback/toast/toast.js';
+import W4Skeleton from '../components/feedback/skeleton/skeleton.js';
 
 // Import forms components
-import W4Checkbox from '../components/forms/checkbox.js';
-import W4Textarea from '../components/forms/textArea.js';
-import W4Input from '../components/forms/input.js';
-import W4Radio from '../components/forms/radio.js';
-import W4Select from '../components/forms/select.js';
-import W4Toggle from '../components/forms/toggle.js';
-import W4FieldError from '../components/forms/fieldError.js';
-import W4HelperText from '../components/forms/helperText.js';
+import W4Checkbox from '../components/forms/checkbox/checkbox.js';
+import W4Textarea from '../components/forms/textarea/textarea.js';
+import W4Input from '../components/forms/input/input.js';
+import W4Radio from '../components/forms/radio/radio.js';
+import W4Select from '../components/forms/select/select.js';
+import W4Toggle from '../components/forms/toggle/toggle.js';
+import W4FieldError from '../components/forms/fielderror/fielderror.js';
+import W4HelperText from '../components/forms/helpertext/helpertext.js';
 
 // Import layout components
-import W4Card from '../components/layout/card.js';
-import W4Container from '../components/layout/container.js';
-import W4Divider from '../components/layout/divider.js';
-import W4Grid from '../components/layout/grid.js';
-import W4Panel from '../components/layout/panel.js';
-import W4Section from '../components/layout/section.js';
-import W4Stack from '../components/layout/stack.js';
+import W4Card from '../components/layout/card/card.js';
+import W4Container from '../components/layout/container/container.js';
+import W4Divider from '../components/layout/divider/divider.js';
+import W4Grid from '../components/layout/grid/grid.js';
+import W4Panel from '../components/layout/panel/panel.js';
+import W4Section from '../components/layout/section/section.js';
+import W4Stack from '../components/layout/stack/stack.js';
 
 // Import UI components
-import W4Button from '../components/ui/button.js';
-import W4IconButton from '../components/ui/iconButton.js';
-import W4Heading from '../components/ui/heading.js';
-import W4Icon from '../components/ui/icon.js';
-import W4Label from '../components/ui/label.js';
-import W4Link from '../components/ui/link.js';
-import W4Text from '../components/ui/text.js';
+import W4Button from '../components/ui/button/button.js';
+import W4IconButton from '../components/ui/iconbutton/iconButton.js';
+import W4Heading from '../components/ui/heading/heading.js';
+import W4Icon from '../components/ui/icon/icon.js';
+import W4Label from '../components/ui/label/label.js';
+import W4Link from '../components/ui/link/link.js';
+import W4Text from '../components/ui/text/text.js';
 
 // Import navigation components
-import W4Breadcrumb from '../components/navigation/breadcrumb.js';
-import W4Dropdown from '../components/navigation/dropdown.js';
-import W4Menu from '../components/navigation/menu.js';
-import W4Navbar from '../components/navigation/navbar.js';
-import W4Sidebar from '../components/navigation/sidebar.js';
-import W4Tab from '../components/navigation/tab.js';
+import W4Breadcrumb from '../components/navigation/breadcrumb/breadcrumb.js';
+import W4Dropdown from '../components/navigation/dropdown/dropdown.js';
+import W4Menu from '../components/navigation/menu/menu.js';
+import W4Navbar from '../components/navigation/navbar/navbar.js';
+import W4Sidebar from '../components/navigation/sidebar/sidebar.js';
+import W4Tab from '../components/navigation/tab/tab.js';
 
 // Import core logic (previous IIFE logic wrapped in a modern ES6 structure)
 import W4Core from '../core.js';
