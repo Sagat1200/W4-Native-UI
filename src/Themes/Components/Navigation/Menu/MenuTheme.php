@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\NativeUI\Themes\Components\Navigation;
+namespace W4\NativeUI\Themes\Components\Navigation\Menu;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
