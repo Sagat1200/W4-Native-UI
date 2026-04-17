@@ -1,19 +1,19 @@
 <?php
 
-namespace W4\NativeUI\Themes\Components\Layout;
+namespace W4\NativeUI\Themes\Components\Layout\Container;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
-class GridTheme extends AbstractComponentTheme
+class ContainerTheme extends AbstractComponentTheme
 {
     public function component(): string
     {
-        return 'grid';
+        return 'container';
     }
 
     protected function variants(): array
     {
-        return ['1', '2', '3', '4'];
+        return ['fluid', 'narrow'];
     }
 
     protected function sizes(): array

@@ -1,19 +1,19 @@
 <?php
 
-namespace W4\NativeUI\Themes\Components\Layout;
+namespace W4\NativeUI\Themes\Components\Layout\Section;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
-class ContainerTheme extends AbstractComponentTheme
+class SectionTheme extends AbstractComponentTheme
 {
     public function component(): string
     {
-        return 'container';
+        return 'section';
     }
 
     protected function variants(): array
     {
-        return ['fluid', 'narrow'];
+        return ['default', 'muted'];
     }
 
     protected function sizes(): array

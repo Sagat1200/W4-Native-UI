@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\NativeUI\Themes\Components\Layout;
+namespace W4\NativeUI\Themes\Components\Layout\Panel;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 

@@ -1,28 +1,23 @@
 <?php
 
-namespace W4\NativeUI\Themes\Components\Layout;
+namespace W4\NativeUI\Themes\Components\Layout\Grid;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
-class CardTheme extends AbstractComponentTheme
+class GridTheme extends AbstractComponentTheme
 {
     public function component(): string
     {
-        return 'card';
+        return 'grid';
     }
 
     protected function variants(): array
     {
-        return ['default', 'bordered', 'elevated'];
+        return ['1', '2', '3', '4'];
     }
 
     protected function sizes(): array
     {
         return ['xs', 'sm', 'md', 'lg', 'xl'];
-    }
-
-    protected function states(): array
-    {
-        return ['hover'];
     }
 }
