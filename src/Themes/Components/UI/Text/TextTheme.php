@@ -23,15 +23,19 @@ class TextTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'active', 'hidden'];
+        return ['enabled', 'disabled', 'active', 'hidden'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'text:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-text-disabled',
-                'js' => 'text:disable',
+                'js' => 'text:disabled',
             ],
             'active' => [
                 'class' => 'w4-text-active',
@@ -39,7 +43,7 @@ class TextTheme extends AbstractComponentTheme
             ],
             'hidden' => [
                 'class' => 'w4-text-hidden',
-                'js' => 'text:hide',
+                'js' => 'text:hidden',
             ],
         ];
     }

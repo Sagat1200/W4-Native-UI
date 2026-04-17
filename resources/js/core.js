@@ -25,13 +25,13 @@ export default class W4Core {
     };
 
     static COMPONENT_STATES = {
-        button: ["disabled", "loading", "active", "readonly"],
-        "icon-button": ["disabled", "loading", "readonly", "active"],
-        icon: ["disabled", "active", "hidden"],
-        heading: ["disabled", "active", "hidden"],
-        label: ["disabled", "active", "hidden"],
-        link: ["disabled", "active", "hidden"],
-        text: ["disabled", "active", "hidden"],
+        button: ["enabled", "disabled", "loading", "active", "readonly"],
+        "icon-button": ["enabled", "disabled", "loading", "readonly", "active"],
+        icon: ["enabled", "disabled", "active", "hidden"],
+        heading: ["enabled", "disabled", "active", "hidden"],
+        label: ["enabled", "disabled", "active", "hidden"],
+        link: ["enabled", "disabled", "active", "hidden"],
+        text: ["enabled", "disabled", "active", "hidden"],
         "field-error": ["disabled", "active", "hidden"],
         "helper-text": ["disabled", "active", "hidden"],
         divider: ["disabled", "active", "hidden"],

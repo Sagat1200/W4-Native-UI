@@ -23,15 +23,19 @@ class LabelTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'active', 'hidden'];
+        return ['enabled', 'disabled', 'active', 'hidden'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'label:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-label-disabled',
-                'js' => 'label:disable',
+                'js' => 'label:disabled',
             ],
             'active' => [
                 'class' => 'w4-label-active',
@@ -39,7 +43,7 @@ class LabelTheme extends AbstractComponentTheme
             ],
             'hidden' => [
                 'class' => 'w4-label-hidden',
-                'js' => 'label:hide',
+                'js' => 'label:hidden',
             ],
         ];
     }

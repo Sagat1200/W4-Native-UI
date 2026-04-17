@@ -23,15 +23,19 @@ class IconButtonTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'loading', 'readonly', 'active'];
+        return ['enabled', 'disabled', 'loading', 'readonly', 'active'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'icon-button:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-icon-button-disabled',
-                'js' => 'icon-button:disable',
+                'js' => 'icon-button:disabled',
             ],
             'loading' => [
                 'class' => 'w4-icon-button-loading',

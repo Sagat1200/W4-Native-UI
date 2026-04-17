@@ -23,15 +23,19 @@ class ButtonTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'loading', 'active', 'readonly', 'square', 'circle', 'wide', 'block'];
+        return ['enabled', 'disabled', 'loading', 'active', 'readonly', 'square', 'circle', 'wide', 'block'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'button:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-button-disabled',
-                'js' => 'button:disable',
+                'js' => 'button:disabled',
             ],
             'loading' => [
                 'class' => 'w4-button-loading',

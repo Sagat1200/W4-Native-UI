@@ -23,15 +23,19 @@ class IconTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'active', 'hidden'];
+        return ['enabled', 'disabled', 'active', 'hidden'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'icon:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-icon-disabled',
-                'js' => 'icon:disable',
+                'js' => 'icon:disabled',
             ],
             'active' => [
                 'class' => 'w4-icon-active',
@@ -39,7 +43,7 @@ class IconTheme extends AbstractComponentTheme
             ],
             'hidden' => [
                 'class' => 'w4-icon-hidden',
-                'js' => 'icon:hide',
+                'js' => 'icon:hidden',
             ],
         ];
     }

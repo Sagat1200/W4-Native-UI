@@ -4,16 +4,15 @@ namespace W4\NativeUI\Themes\Components\Navigation\Tab;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
-class TabTheme extends AbstractComponentTheme
+class TabPaneTheme extends AbstractComponentTheme
 {
     public function component(): string
     {
-        return 'tab';
+        return 'tab-pane';
     }
 
     protected function variants(): array
     {
-        // For tabs, variants usually affect the active state highlight
         return ['primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error', 'neutral', 'base-100', 'base-200', 'base-300'];
     }
 
@@ -24,26 +23,17 @@ class TabTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['enabled', 'disabled', 'active', 'hidden', 'selected'];
+        return ['enabled', 'active', 'hidden'];
     }
 
     public function stateMap(): array
     {
         return [
             'active' => [
-                'class' => 'w4-tab-active',
+                'class' => 'w4-tab-pane-active',
             ],
-            'disabled' => [
-                'class' => 'w4-tab-disabled',
-            ],
-            'bordered' => [
-                'class' => 'w4-tab-bordered',
-            ],
-            'lifted' => [
-                'class' => 'w4-tab-lifted',
-            ],
-            'boxed' => [
-                'class' => 'w4-tab-boxed',
+            'hidden' => [
+                'class' => 'w4-tab-pane-hidden',
             ],
         ];
     }

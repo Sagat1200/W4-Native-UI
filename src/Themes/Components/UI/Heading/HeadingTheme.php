@@ -23,15 +23,19 @@ class HeadingTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'active', 'hidden'];
+        return ['enabled', 'disabled', 'active', 'hidden'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'heading:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-heading-disabled',
-                'js' => 'heading:disable',
+                'js' => 'heading:disabled',
             ],
             'active' => [
                 'class' => 'w4-heading-active',
@@ -39,7 +43,7 @@ class HeadingTheme extends AbstractComponentTheme
             ],
             'hidden' => [
                 'class' => 'w4-heading-hidden',
-                'js' => 'heading:hide',
+                'js' => 'heading:hidden',
             ],
         ];
     }

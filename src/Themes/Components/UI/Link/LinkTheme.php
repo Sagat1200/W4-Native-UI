@@ -23,15 +23,19 @@ class LinkTheme extends AbstractComponentTheme
 
     protected function states(): array
     {
-        return ['disabled', 'active', 'hidden'];
+        return ['enabled', 'disabled', 'active', 'hidden'];
     }
 
     public function stateMap(): array
     {
         return [
+            'enabled' => [
+                'class' => '',
+                'js' => 'link:enabled',
+            ],
             'disabled' => [
                 'class' => 'w4-link-disabled',
-                'js' => 'link:disable',
+                'js' => 'link:disabled',
             ],
             'active' => [
                 'class' => 'w4-link-active',
@@ -39,7 +43,7 @@ class LinkTheme extends AbstractComponentTheme
             ],
             'hidden' => [
                 'class' => 'w4-link-hidden',
-                'js' => 'link:hide',
+                'js' => 'link:hidden',
             ],
         ];
     }
