@@ -2,12 +2,12 @@
 
 namespace W4\NativeUI\Services\Provider\Components\Navigation;
 
-use W4\NativeUI\Themes\Components\Navigation\BreadCrumbTheme;
-use W4\NativeUI\Themes\Components\Navigation\DropDownTheme;
-use W4\NativeUI\Themes\Components\Navigation\MenuTheme;
-use W4\NativeUI\Themes\Components\Navigation\NavBarTheme;
-use W4\NativeUI\Themes\Components\Navigation\SideBarTheme;
-use W4\NativeUI\Themes\Components\Navigation\TabTheme;
+use W4\NativeUI\Themes\Components\Navigation\BreadCrumb\BreadCrumbTheme;
+use W4\NativeUI\Themes\Components\Navigation\DropDown\DropDownTheme;
+use W4\NativeUI\Themes\Components\Navigation\Menu\MenuTheme;
+use W4\NativeUI\Themes\Components\Navigation\NavBar\NavBarTheme;
+use W4\NativeUI\Themes\Components\Navigation\SideBar\SideBarTheme;
+use W4\NativeUI\Themes\Components\Navigation\Tab\TabTheme;
 
 class NativeUINavigationService
 {

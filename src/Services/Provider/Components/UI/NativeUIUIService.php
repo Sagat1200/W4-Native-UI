@@ -2,13 +2,13 @@
 
 namespace W4\NativeUI\Services\Provider\Components\UI;
 
-use W4\NativeUI\Themes\Components\UI\ButtonTheme;
-use W4\NativeUI\Themes\Components\UI\HeadingTheme;
-use W4\NativeUI\Themes\Components\UI\IconButtonTheme;
-use W4\NativeUI\Themes\Components\UI\IconTheme;
-use W4\NativeUI\Themes\Components\UI\LabelTheme;
-use W4\NativeUI\Themes\Components\UI\LinkTheme;
-use W4\NativeUI\Themes\Components\UI\TextTheme;
+use W4\NativeUI\Themes\Components\UI\Button\ButtonTheme;
+use W4\NativeUI\Themes\Components\UI\Heading\HeadingTheme;
+use W4\NativeUI\Themes\Components\UI\Icon\IconTheme;
+use W4\NativeUI\Themes\Components\UI\IconButton\IconButtonTheme;
+use W4\NativeUI\Themes\Components\UI\Label\LabelTheme;
+use W4\NativeUI\Themes\Components\UI\Link\LinkTheme;
+use W4\NativeUI\Themes\Components\UI\Text\TextTheme;
 
 class NativeUIUIService
 {

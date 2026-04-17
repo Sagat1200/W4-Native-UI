@@ -2,13 +2,13 @@
 
 namespace W4\NativeUI\Services\Provider\Components\Layout;
 
-use W4\NativeUI\Themes\Components\Layout\CardTheme;
-use W4\NativeUI\Themes\Components\Layout\ContainerTheme;
-use W4\NativeUI\Themes\Components\Layout\DividerTheme;
-use W4\NativeUI\Themes\Components\Layout\GridTheme;
-use W4\NativeUI\Themes\Components\Layout\PanelTheme;
-use W4\NativeUI\Themes\Components\Layout\SectionTheme;
-use W4\NativeUI\Themes\Components\Layout\StackTheme;
+use W4\NativeUI\Themes\Components\Layout\Card\CardTheme;
+use W4\NativeUI\Themes\Components\Layout\Container\ContainerTheme;
+use W4\NativeUI\Themes\Components\Layout\Divider\DividerTheme;
+use W4\NativeUI\Themes\Components\Layout\Grid\GridTheme;
+use W4\NativeUI\Themes\Components\Layout\Panel\PanelTheme;
+use W4\NativeUI\Themes\Components\Layout\Section\SectionTheme;
+use W4\NativeUI\Themes\Components\Layout\Stack\StackTheme;
 
 class NativeUILayoutService
 {

@@ -2,8 +2,8 @@
 
 namespace W4\NativeUI\Services\Provider\Components\Interactive;
 
-use W4\NativeUI\Themes\Components\Interactive\ModalTheme;
-use W4\NativeUI\Themes\Components\Interactive\TooltipTheme;
+use W4\NativeUI\Themes\Components\Interactive\Modal\ModalTheme;
+use W4\NativeUI\Themes\Components\Interactive\Tooltip\TooltipTheme;
 
 class NativeUIInteractiveService
 {

@@ -2,14 +2,14 @@
 
 namespace W4\NativeUI\Services\Provider\Components\Form;
 
-use W4\NativeUI\Themes\Components\Forms\CheckboxTheme;
-use W4\NativeUI\Themes\Components\Forms\FieldErrorTheme;
-use W4\NativeUI\Themes\Components\Forms\HelperTextTheme;
-use W4\NativeUI\Themes\Components\Forms\InputTheme;
-use W4\NativeUI\Themes\Components\Forms\RadioTheme;
-use W4\NativeUI\Themes\Components\Forms\SelectTheme;
-use W4\NativeUI\Themes\Components\Forms\TextareaTheme;
-use W4\NativeUI\Themes\Components\Forms\ToggleTheme;
+use W4\NativeUI\Themes\Components\Forms\CheckBox\CheckboxTheme;
+use W4\NativeUI\Themes\Components\Forms\FieldError\FieldErrorTheme;
+use W4\NativeUI\Themes\Components\Forms\HelperText\HelperTextTheme;
+use W4\NativeUI\Themes\Components\Forms\Input\InputTheme;
+use W4\NativeUI\Themes\Components\Forms\Radio\RadioTheme;
+use W4\NativeUI\Themes\Components\Forms\Select\SelectTheme;
+use W4\NativeUI\Themes\Components\Forms\TextArea\TextareaTheme;
+use W4\NativeUI\Themes\Components\Forms\Toggle\ToggleTheme;
 
 class NativeUIFormService
 {
