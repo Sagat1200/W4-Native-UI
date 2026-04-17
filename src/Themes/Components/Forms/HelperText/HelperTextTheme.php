@@ -1,19 +1,19 @@
 <?php
 
-namespace W4\NativeUI\Themes\Components\Forms;
+namespace W4\NativeUI\Themes\Components\Forms\HelperText;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
-class FieldErrorTheme extends AbstractComponentTheme
+class HelperTextTheme extends AbstractComponentTheme
 {
     public function component(): string
     {
-        return 'field-error';
+        return 'helper-text';
     }
 
     protected function variants(): array
     {
-        return ['error', 'warning', 'info', 'inline'];
+        return ['neutral', 'muted', 'info', 'success', 'warning'];
     }
 
     protected function sizes(): array
@@ -30,16 +30,16 @@ class FieldErrorTheme extends AbstractComponentTheme
     {
         return [
             'disabled' => [
-                'class' => 'w4-field-error-disabled',
-                'js' => 'field-error:disable',
+                'class' => 'w4-helper-text-disabled',
+                'js' => 'helper-text:disable',
             ],
             'active' => [
-                'class' => 'w4-field-error-active',
-                'js' => 'field-error:active',
+                'class' => 'w4-helper-text-active',
+                'js' => 'helper-text:active',
             ],
             'hidden' => [
-                'class' => 'w4-field-error-hidden',
-                'js' => 'field-error:hide',
+                'class' => 'w4-helper-text-hidden',
+                'js' => 'helper-text:hide',
             ],
         ];
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\NativeUI\Themes\Components\Forms;
+namespace W4\NativeUI\Themes\Components\Forms\TextArea;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
