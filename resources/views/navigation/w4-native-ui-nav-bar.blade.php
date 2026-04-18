@@ -156,7 +156,7 @@
             <div class="demo-zone">
                 <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
                     <div class="w4-label w4-label-sm w4-label-primary">Start & End</div>
-                    <div class="w4-navbar w4-card-bordered w4-variant-primary">
+                    <div class="w4-navbar w4-card-bordered w4-navbar-primary">
                         <div class="w4-navbar-start w4-navbar-info">
                             <a class="w4-button w4-button-ghost w4-text-xl">daisyUI</a>
                         </div>

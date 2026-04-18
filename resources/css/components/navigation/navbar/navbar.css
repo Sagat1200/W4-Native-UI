@@ -17,6 +17,15 @@
   gap: var(--w4-spacing-4);
 }
 
+/* Ensure links and button-links inside navbar inherit the correct color by default */
+.w4-navbar .w4-link,
+.w4-navbar .w4-button-link,
+.w4-navbar .w4-button-ghost {
+  color: inherit;
+  --w4-btn-fg: currentColor;
+  --w4-link-color: currentColor;
+}
+
 .w4-navbar-start {
   display: flex;
   align-items: center;

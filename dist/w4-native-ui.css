@@ -1195,6 +1195,37 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
+[data-theme="native-ui.cyberpunk"] {
+  --w4-primary: 343 128% 74%;
+  --w4-primary-content: 347 74% 5%;
+  --w4-secondary: 184 249% 29%;
+  --w4-secondary-content: 187 140% 4%;
+  --w4-accent: 277 111% 74%;
+  --w4-accent-content: 275 66% 5%;
+  --w4-base-100: 55 102% 65%;
+  --w4-base-200: 55 92% 60%;
+  --w4-base-300: 56 88% 47%;
+  --w4-base-content: 0 0% 0%;
+  --w4-info: 194 201% 34%;
+  --w4-info-content: 0 0% 0%;
+  --w4-success: 161 124% 30%;
+  --w4-success-content: 0 0% 0%;
+  --w4-warning: 46 169% 39%;
+  --w4-warning-content: 0 0% 0%;
+  --w4-error: 357 126% 71%;
+  --w4-error-content: 0 0% 0%;
+
+  /* --- Variables Estructurales del Tema --- */
+  --w4-radius-button: 0px;      /* Botones cuadrados */
+  --w4-radius-badge: 0px;       /* Badges cuadrados */
+  --w4-radius-card: 0px;        /* Cards cuadradas */
+  --w4-radius-input: 0px;       /* Inputs cuadrados */
+  
+  --w4-btn-border-width: 2px;   /* Bordes más gruesos y agresivos para botones */
+  --w4-shadow-sm: 4px 4px 0px 0px hsl(var(--w4-base-content)); /* Sombra dura estilo cyberpunk */
+  --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
+}
+
 @keyframes w4-icon-spin {
   from {
     transform: rotate(0deg);
@@ -3542,6 +3573,15 @@ html[data-theme] body {
   gap: var(--w4-spacing-4);
 }
 
+/* Ensure links and button-links inside navbar inherit the correct color by default */
+.w4-navbar .w4-link,
+.w4-navbar .w4-button-link,
+.w4-navbar .w4-button-ghost {
+  color: inherit;
+  --w4-btn-fg: currentColor;
+  --w4-link-color: currentColor;
+}
+
 .w4-navbar-start {
   display: flex;
   align-items: center;
@@ -3774,6 +3814,8 @@ html[data-theme] body {
 .w4-tab-bordered.w4-variant-error:is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"]) { border-block-end-color: var(--w4-error); }
 .w4-tab-boxed.w4-variant-error:is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"]) { background-color: var(--w4-error); color: var(--w4-error-content); }
 }
+
+
 
 /* ==========================================================================
    SideBar Component
