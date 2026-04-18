@@ -215,14 +215,58 @@
                 <button class="w4-button w4-button-md w4-button-primary" data-w4-toggle="modal"
                     data-w4-target="modal-form">Modal con Formulario</button>
                 <button class="w4-button w4-button-md w4-button-error" data-w4-toggle="modal"
-                    data-w4-target="modal-confirm">Modal de
-                    Confirmación</button>
+                    data-w4-target="modal-confirm">Modal de Confirmación</button>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title" style="border-color: hsl(var(--w4-success))">Estados JS Soportados (data-w4-state)
+            </h2>
+            <div class="preview-group" style="flex-direction: column; align-items: flex-start; gap: 1.5rem;">
+                <div style="display: flex; gap: 1rem; align-items: center; inline-size: 100%;">
+                    <button class="w4-button w4-button-md w4-button-primary" data-w4-toggle="modal"
+                        data-w4-target="jsInteractiveModal">
+                        Abrir Modal Dinámico
+                    </button>
+
+                    <div
+                        style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-inline-start: auto; border-inline-start: 1px solid hsl(var(--w4-base-300)); padding-inline-start: 1rem;">
+                        <span
+                            style="font-size: 0.875rem; color: hsl(var(--w4-base-content)/0.7); display: flex; align-items: center; margin-inline-end: 0.5rem;">Set
+                            State:</span>
+                        <button class="w4-button w4-button-sm w4-button-outline"
+                            onclick="document.getElementById('jsInteractiveModal').removeAttribute('data-w4-state')">Clear
+                            (Normal)</button>
+                        <button class="w4-button w4-button-sm w4-button-info"
+                            onclick="document.getElementById('jsInteractiveModal').setAttribute('data-w4-state', 'open')">Open</button>
+                        <button class="w4-button w4-button-sm w4-button-secondary"
+                            onclick="document.getElementById('jsInteractiveModal').setAttribute('data-w4-state', 'active')">Active</button>
+                        <button class="w4-button w4-button-sm w4-button-warning"
+                            onclick="document.getElementById('jsInteractiveModal').setAttribute('data-w4-state', 'disabled')">Disabled</button>
+                        <button class="w4-button w4-button-sm w4-button-error"
+                            onclick="document.getElementById('jsInteractiveModal').setAttribute('data-w4-state', 'hidden')">Hidden</button>
+                    </div>
+                </div>
             </div>
         </section>
 
     </div>
 
     <!-- MODALS DOM -->
+
+    <!-- Dynamic JS Modal -->
+    <div id="jsInteractiveModal" class="w4-modal w4-modal-md" data-w4-component="modal">
+        <div class="w4-modal-box">
+            <h3 style="margin-block-start: 0;">Modal Dinámico JS</h3>
+            <p>Este modal responde a los cambios en su atributo <code>data-w4-state</code>.</p>
+            <div style="display: flex; justify-content: flex-end; gap: 0.5rem; margin-block-start: 1.5rem;">
+                <button class="w4-button w4-button-md w4-button-outline"
+                    onclick="document.getElementById('jsInteractiveModal').removeAttribute('data-w4-state')">Limpiar
+                    Estado</button>
+                <button class="w4-button w4-button-md w4-button-primary" data-w4-dismiss="modal">Cerrar Modal</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Sizes -->
     <div id="modal-xs" class="w4-modal w4-modal-xs">

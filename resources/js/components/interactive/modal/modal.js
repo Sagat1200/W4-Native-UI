@@ -158,6 +158,15 @@ export default class W4Modal {
             modal.classList.remove('w4-modal-open', 'w4-modal-closing');
             modal.setAttribute('aria-hidden', 'true');
             modal.removeAttribute('open');
+
+            // Remove 'open' from data-w4-state if it exists
+            let currentStates = (modal.getAttribute('data-w4-state') || '').split(' ');
+            currentStates = currentStates.filter(s => s !== 'open');
+            if (currentStates.length > 0) {
+                modal.setAttribute('data-w4-state', currentStates.join(' '));
+            } else {
+                modal.removeAttribute('data-w4-state');
+            }
             
             // Dispatch custom event
             modal.dispatchEvent(new CustomEvent('w4.modal.closed', { bubbles: true }));
