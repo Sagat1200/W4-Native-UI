@@ -6,118 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Progress Lab</title>
     @NativeUIStyles
-    <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-container {
-            max-inline-size: 1200px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.5rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.7);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            font-size: 1rem;
-            min-inline-size: 200px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .preview-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding: 2rem;
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .preview-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-            background-color: hsl(var(--w4-base-100));
-            padding: 1.5rem;
-            border-radius: var(--w4-radius-card);
-            box-shadow: var(--w4-shadow-sm);
-            min-inline-size: 120px;
-            text-align: center;
-            inline-size: 100%;
-        }
-
-        .preview-label-desc {
-            font-size: 0.75rem;
-            color: hsl(var(--w4-base-content) / 0.6);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 600;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
 
-    <div class="lab-container">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: Progress Lab</h1>
-                <p class="lab-subtitle">Entorno de pruebas visuales para el componente de estado w4-progress</p>
-            </div>
-
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar Tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+    <div id="navbar-progress" class="w4-navbar w4-navbar-primary">
+        <div class="w4-navbar-start">
+            <button class="w4-button w4-button-ghost w4-button-square mx-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="inline-block h-5 w-5 stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <button class="w4-button w4-button-ghost">Native UI</button>
+        </div>
+        <div class="w4-navbar-center">
+            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs mx-2">
+                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -152,21 +63,30 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section style="margin-block-end: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Progress</h1>
-            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
+    <main id="main-progress" class="w4-container w4-container-xl">
+
+        <div style="margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Progress</h1>
+            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente de estado
+                w4-progress</p>
+        </div>
+
+        <div id="description-progress" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Progress</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente Progress estiliza la etiqueta nativa <code>&lt;progress&gt;</code> de HTML5. Se utiliza
                 para visualizar el estado de avance de una operación extensa (como una descarga o un flujo de pasos
                 múltiples), ofreciendo tanto estados determinados (porcentajes) como indeterminados (animación de carga
                 continua).
             </p>
 
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
-                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral"
-                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-4">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs mt-2"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; list-style-type: disc;">
                 <li><strong class="w4-text-active">Subida/Descarga de archivos:</strong> Mostrar el porcentaje exacto de
                     un archivo que se está procesando usando el atributo <code>value</code>.</li>
                 <li><strong class="w4-text-active">Wizards y Formularios por pasos:</strong> Indicar en qué paso se
@@ -176,144 +96,171 @@
                 <li><strong class="w4-text-active">Cuotas y límites:</strong> Representar visualmente el uso de
                     almacenamiento de una cuenta (cambiando a color Warning o Error al acercarse al 100%).</li>
             </ul>
-        </section>
+        </div>
 
-        <section>
-            <h2 class="section-title">Variantes de Color Semánticas</h2>
-            <div class="preview-group" style="flex-direction: column;">
-                <div class="preview-item">
-                    <progress class="w4-progress" value="0" max="100"></progress>
-                    <span class="preview-label-desc">Default (0%)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-primary" value="10" max="100"></progress>
-                    <span class="preview-label-desc">Primary (10%)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-secondary" value="25" max="100"></progress>
-                    <span class="preview-label-desc">Secondary (25%)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-accent" value="40" max="100"></progress>
-                    <span class="preview-label-desc">Accent (40%)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-info" value="55" max="100"></progress>
-                    <span class="preview-label-desc">Info (55%)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-success" value="70" max="100"></progress>
-                    <span class="preview-label-desc">Success (70%)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-warning" value="85" max="100"></progress>
-                    <span class="preview-label-desc">Warning (85%)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-error" value="100" max="100"></progress>
-                    <span class="preview-label-desc">Error (100%)</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary))">Tamaños Explícitos (XS - XL)</h2>
-            <div class="preview-group" style="flex-direction: column;">
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-primary w4-progress-xs" value="40" max="100"></progress>
-                    <span class="preview-label-desc">XS (0.25rem)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-primary w4-progress-sm" value="50" max="100"></progress>
-                    <span class="preview-label-desc">SM (0.375rem)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-primary w4-progress-md" value="60" max="100"></progress>
-                    <span class="preview-label-desc">MD (0.5rem)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-primary w4-progress-lg" value="70" max="100"></progress>
-                    <span class="preview-label-desc">LG (0.75rem)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-primary w4-progress-xl" value="80" max="100"></progress>
-                    <span class="preview-label-desc">XL (1rem)</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-accent))">Indeterminate / Loading State</h2>
-            <div class="preview-group" style="flex-direction: column;">
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-primary w4-progress-indeterminate" max="100"></progress>
-                    <span class="preview-label-desc">Indeterminate Class (.w4-progress-indeterminate)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-secondary" max="100" data-w4-state="loading"></progress>
-                    <span class="preview-label-desc">Data State (data-w4-state="loading")</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-accent" max="100"></progress>
-                    <span class="preview-label-desc">HTML Attribute (No value attribute)</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-error))">Estados CSS / Data-States</h2>
-            <div class="preview-group" style="flex-direction: column;">
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-success" value="50" max="100"></progress>
-                    <span class="preview-label-desc">Normal</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-success w4-progress-active" value="50"
-                        max="100"></progress>
-                    <span class="preview-label-desc">Active (Glow effect / .w4-progress-active)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-success w4-progress-disabled" value="50"
-                        max="100"></progress>
-                    <span class="preview-label-desc">Disabled (.w4-progress-disabled)</span>
-                </div>
-                <div class="preview-item">
-                    <progress class="w4-progress w4-progress-success w4-progress-hidden" value="50"
-                        max="100"></progress>
-                    <span class="preview-label-desc">Hidden (.w4-progress-hidden)</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-info))">Integración Dinámica (JS)</h2>
-            <div class="preview-group" style="flex-direction: column;">
-                <div class="preview-item" style="margin-block-bottom: 1rem;">
-                    <progress id="jsProgressBar" class="w4-progress w4-progress-primary w4-progress-lg" value="0"
-                        max="100"></progress>
-                    <div
-                        style="display: flex; justify-content: space-between; margin-block-top: 0.5rem; inline-size: 100%;">
-                        <span class="w4-text w4-text-sm" style="color: hsl(var(--w4-base-content) / 0.7)">Descargando
-                            archivos...</span>
-                        <span id="jsProgressText" class="w4-text w4-text-sm" style="font-weight: 700;">0%</span>
+        <section id="example-progress-variant" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color Semánticas</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="flex-wrap: wrap;">
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress" value="0" max="100"></progress>
+                        <span class="w4-label w4-label-xs w4-label-neutral">Default (0%)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-primary" value="10" max="100"></progress>
+                        <span class="w4-label w4-label-xs w4-label-primary">Primary (10%)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-secondary" value="25" max="100"></progress>
+                        <span class="w4-label w4-label-xs w4-label-secondary">Secondary (25%)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-accent" value="40" max="100"></progress>
+                        <span class="w4-label w4-label-xs w4-label-accent">Accent (40%)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-info" value="55" max="100"></progress>
+                        <span class="w4-label w4-label-xs w4-label-info">Info (55%)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-success" value="70" max="100"></progress>
+                        <span class="w4-label w4-label-xs w4-label-success">Success (70%)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-warning" value="85" max="100"></progress>
+                        <span class="w4-label w4-label-xs w4-label-warning">Warning (85%)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-error" value="100" max="100"></progress>
+                        <span class="w4-label w4-label-xs w4-label-error">Error (100%)</span>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
-                    <button class="w4-button w4-button-sm w4-button-outline" onclick="simulateProgress()">Simular
-                        Descarga</button>
-                    <button class="w4-button w4-button-sm w4-button-outline w4-button-error"
-                        onclick="resetProgress()">Reset</button>
-                    <button class="w4-button w4-button-sm w4-button-outline w4-button-warning"
-                        onclick="toggleIndeterminate()">Alternar Indeterminado</button>
-                    <button class="w4-button w4-button-sm w4-button-outline w4-button-secondary"
-                        onclick="toggleDisabled()">Alternar Disabled</button>
-                    <button class="w4-button w4-button-sm w4-button-outline w4-button-neutral"
-                        onclick="toggleHidden()">Alternar Hidden</button>
+        <section id="example-progress-sizes" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Tamaños Explícitos (XS - XL)</h2>
+            <hr class="w4-divider w4-divider-secondary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="flex-wrap: wrap;">
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-primary w4-progress-xs" value="40"
+                            max="100"></progress>
+                        <span class="w4-label w4-label-xs">XS (0.25rem)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-primary w4-progress-sm" value="50"
+                            max="100"></progress>
+                        <span class="w4-label w4-label-xs">SM (0.375rem)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-primary w4-progress-md" value="60"
+                            max="100"></progress>
+                        <span class="w4-label w4-label-xs">MD (0.5rem)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-primary w4-progress-lg" value="70"
+                            max="100"></progress>
+                        <span class="w4-label w4-label-xs">LG (0.75rem)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-primary w4-progress-xl" value="80"
+                            max="100"></progress>
+                        <span class="w4-label w4-label-xs">XL (1rem)</span>
+                    </div>
                 </div>
             </div>
         </section>
-    </div>
+
+        <section id="example-progress-indeterminate" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Indeterminate / Loading State</h2>
+            <hr class="w4-divider w4-divider-accent">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="flex-wrap: wrap;">
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 250px;">
+                        <progress class="w4-progress w4-progress-primary w4-progress-indeterminate"
+                            max="100"></progress>
+                        <span class="w4-label w4-label-xs text-center">Indeterminate
+                            Class<br>(.w4-progress-indeterminate)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 250px;">
+                        <progress class="w4-progress w4-progress-secondary" max="100"
+                            data-w4-state="loading"></progress>
+                        <span class="w4-label w4-label-xs text-center">Data State<br>(data-w4-state="loading")</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 250px;">
+                        <progress class="w4-progress w4-progress-accent" max="100"></progress>
+                        <span class="w4-label w4-label-xs text-center">HTML Attribute<br>(No value attribute)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="example-progress-states" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados CSS / Data-States</h2>
+            <hr class="w4-divider w4-divider-error">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="flex-wrap: wrap;">
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-success" value="50" max="100"></progress>
+                        <span class="w4-label w4-label-xs">Normal</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-success w4-progress-active" value="50"
+                            max="100"></progress>
+                        <span class="w4-label w4-label-xs text-center">Active<br>(.w4-progress-active)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-success w4-progress-disabled" value="50"
+                            max="100"></progress>
+                        <span class="w4-label w4-label-xs text-center">Disabled<br>(.w4-progress-disabled)</span>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
+                        <progress class="w4-progress w4-progress-success w4-progress-hidden" value="50"
+                            max="100"></progress>
+                        <span class="w4-label w4-label-xs text-center">Hidden<br>(.w4-progress-hidden)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="example-progress-integration" class="w4-section w4-section-xl" style="padding-block-end: 2rem;">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Integración Dinámica (JS)</h2>
+            <hr class="w4-divider w4-divider-info">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-stack w4-stack-md" style="flex-direction: column; align-items: center;">
+                    <div class="w4-panel w4-panel-base-100 w4-panel-md"
+                        style="box-shadow: var(--w4-shadow-md); inline-size: 100%; max-inline-size: 400px; margin-block-end: 1.5rem;">
+                        <div class="w4-stack w4-stack-xs">
+                            <progress id="jsProgressBar" class="w4-progress w4-progress-primary w4-progress-lg"
+                                value="0" max="100"></progress>
+                            <div
+                                style="display: flex; justify-content: space-between; margin-block-top: 0.5rem; inline-size: 100%;">
+                                <span class="w4-text w4-text-sm"
+                                    style="color: hsl(var(--w4-base-content) / 0.7)">Descargando archivos...</span>
+                                <span id="jsProgressText" class="w4-text w4-text-sm" style="font-weight: 700;">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w4-stack w4-stack-horizontal w4-stack-xs w4-stack-center" style="flex-wrap: wrap;">
+                        <button class="w4-button w4-button-sm w4-button-outline" onclick="simulateProgress()">Simular
+                            Descarga</button>
+                        <button class="w4-button w4-button-sm w4-button-outline w4-button-error"
+                            onclick="resetProgress()">Reset</button>
+                        <button class="w4-button w4-button-sm w4-button-outline w4-button-warning"
+                            onclick="toggleIndeterminate()">Alternar Indeterminado</button>
+                        <button class="w4-button w4-button-sm w4-button-outline w4-button-secondary"
+                            onclick="toggleDisabled()">Alternar Disabled</button>
+                        <button class="w4-button w4-button-sm w4-button-outline w4-button-neutral"
+                            onclick="toggleHidden()">Alternar Hidden</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     @NativeUIScripts
     @NativeUIInit

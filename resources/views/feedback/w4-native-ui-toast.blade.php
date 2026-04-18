@@ -6,104 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Toast Lab</title>
     @NativeUIStyles
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-container {
-            max-inline-size: 1200px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.5rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.7);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            font-size: 1rem;
-            min-inline-size: 200px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .preview-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding: 2rem;
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .preview-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-            background-color: hsl(var(--w4-base-100));
-            padding: 1.5rem;
-            border-radius: var(--w4-radius-card);
-            box-shadow: var(--w4-shadow-sm);
-            min-inline-size: 120px;
-            text-align: center;
-            inline-size: 100%;
-        }
-
-        .preview-label-desc {
-            font-size: 0.75rem;
-            color: hsl(var(--w4-base-content) / 0.6);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 600;
-        }
-
         /* Mock layout for dynamic toasts */
         .toast-playground {
             position: relative;
@@ -170,16 +75,23 @@
 
 <body>
 
-    <div class="lab-container">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: Toast Lab</h1>
-                <p class="lab-subtitle">Entorno de pruebas visuales para el componente de estado w4-toast</p>
-            </div>
-
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar Tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+    <div id="navbar-toast" class="w4-navbar w4-navbar-primary">
+        <div class="w4-navbar-start">
+            <button class="w4-button w4-button-ghost w4-button-square mx-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="inline-block h-5 w-5 stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <button class="w4-button w4-button-ghost">Native UI</button>
+        </div>
+        <div class="w4-navbar-center">
+            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs mx-2">
+                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -214,135 +126,172 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section style="margin-block-end: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Toast</h1>
-            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
-                El componente Toast (Notificación) proporciona retroalimentación efímera y no bloqueante sobre una operación que el usuario acaba de realizar. Está diseñado para aparecer superpuesto en las esquinas de la interfaz y desaparecer automáticamente después de unos segundos, utilizando animaciones de entrada y salida suaves integradas en el motor CSS.
+    <main id="main-toast" class="w4-container w4-container-xl">
+
+        <div style="margin-block-start: 2rem;">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Toast</h1>
+            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente de estado
+                w4-toast</p>
+        </div>
+
+        <div id="description-toast" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Toast</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                El componente Toast (Notificación) proporciona retroalimentación efímera y no bloqueante sobre una
+                operación que el usuario acaba de realizar. Está diseñado para aparecer superpuesto en las esquinas de
+                la interfaz y desaparecer automáticamente después de unos segundos, utilizando animaciones de entrada y
+                salida suaves integradas en el motor CSS.
             </p>
-            
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary" style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral" style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                <li><strong class="w4-text-active">Confirmaciones de acción:</strong> Mostrar "Registro guardado correctamente" (Success) en la esquina inferior derecha tras enviar un formulario.</li>
-                <li><strong class="w4-text-active">Errores no críticos:</strong> Avisar sobre fallos temporales de conexión (Warning) en la parte superior sin interrumpir la navegación.</li>
-                <li><strong class="w4-text-active">Nuevos eventos (Push):</strong> Notificar la llegada de un nuevo mensaje de chat o correo (Info/Primary) en tiempo real.</li>
-                <li><strong class="w4-text-active">Animación de salida:</strong> Utilizar el estado <code>data-w4-state="dismissed"</code> vía JavaScript para desencadenar el fade-out antes de remover el elemento del DOM.</li>
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-4">Casos de uso comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs mt-2"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; list-style-type: disc;">
+                <li><strong class="w4-text-active">Confirmaciones de acción:</strong> Mostrar "Registro guardado
+                    correctamente" (Success) en la esquina inferior derecha tras enviar un formulario.</li>
+                <li><strong class="w4-text-active">Errores no críticos:</strong> Avisar sobre fallos temporales de
+                    conexión (Warning) en la parte superior sin interrumpir la navegación.</li>
+                <li><strong class="w4-text-active">Nuevos eventos (Push):</strong> Notificar la llegada de un nuevo
+                    mensaje de chat o correo (Info/Primary) en tiempo real.</li>
+                <li><strong class="w4-text-active">Animación de salida:</strong> Utilizar el estado
+                    <code>data-w4-state="dismissed"</code> vía JavaScript para desencadenar el fade-out antes de remover
+                    el elemento del DOM.
+                </li>
             </ul>
-        </section>
+        </div>
 
-        <section>
-            <h2 class="section-title">Variantes de Color Semánticas</h2>
-            <div class="preview-group" style="flex-direction: column;">
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md">Mensaje de notificación estándar</div>
-                    <span class="preview-label-desc">Default (Inherit from base content)</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-primary">Acción principal completada</div>
-                    <span class="preview-label-desc">Primary</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-secondary">Notificación secundaria</div>
-                    <span class="preview-label-desc">Secondary</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-accent">¡Nuevo logro desbloqueado!</div>
-                    <span class="preview-label-desc">Accent</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-info">Nueva actualización disponible</div>
-                    <span class="preview-label-desc">Info</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-success">Registro guardado exitosamente</div>
-                    <span class="preview-label-desc">Success</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-warning">Atención: Conexión inestable</div>
-                    <span class="preview-label-desc">Warning</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-error">Error al procesar la solicitud</div>
-                    <span class="preview-label-desc">Error</span>
+        <section id="example-toast-variant" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color Semánticas</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid w4-grid-3">
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs w4-label-neutral text-center">Default<br>(Inherit from base
+                            content)</span>
+                        <div class="w4-toast w4-toast-md">Mensaje de notificación estándar</div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs w4-label-primary">Primary</span>
+                        <div class="w4-toast w4-toast-md w4-toast-primary">Acción principal completada</div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs w4-label-secondary">Secondary</span>
+                        <div class="w4-toast w4-toast-md w4-toast-secondary">Notificación secundaria</div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs w4-label-accent">Accent</span>
+                        <div class="w4-toast w4-toast-md w4-toast-accent">¡Nuevo logro desbloqueado!</div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs w4-label-info">Info</span>
+                        <div class="w4-toast w4-toast-md w4-toast-info">Nueva actualización disponible</div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs w4-label-success">Success</span>
+                        <div class="w4-toast w4-toast-md w4-toast-success">Registro guardado exitosamente</div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs w4-label-warning">Warning</span>
+                        <div class="w4-toast w4-toast-md w4-toast-warning">Atención: Conexión inestable</div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs w4-label-error">Error</span>
+                        <div class="w4-toast w4-toast-md w4-toast-error">Error al procesar la solicitud</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary))">Variantes Estilísticas (Surface)
+        <section id="example-toast-surface" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Variantes Estilísticas (Surface)
             </h2>
-            <div class="preview-group" style="flex-direction: column;">
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-soft">Mensaje con estilo suave (Soft)</div>
-                    <span class="preview-label-desc">Soft (.w4-toast-soft)</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-primary w4-toast-outline">Notificación outline (Bordes)
+            <hr class="w4-divider w4-divider-secondary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid w4-grid-3">
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs text-center">Soft (.w4-toast-soft)</span>
+                        <div class="w4-toast w4-toast-md w4-toast-soft">Mensaje con estilo suave (Soft)</div>
                     </div>
-                    <span class="preview-label-desc">Outline (.w4-toast-outline) + Primary</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-error w4-toast-outline">Error en formato outline</div>
-                    <span class="preview-label-desc">Outline (.w4-toast-outline) + Error</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-accent))">Tamaños Explícitos (XS - XL)</h2>
-            <div class="preview-group" style="flex-direction: column;">
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-xs w4-toast-primary">Notificación pequeña (XS)</div>
-                    <span class="preview-label-desc">XS (.w4-toast-xs)</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-sm w4-toast-primary">Notificación pequeña (SM)</div>
-                    <span class="preview-label-desc">SM (.w4-toast-sm)</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-primary">Notificación normal (MD)</div>
-                    <span class="preview-label-desc">MD (.w4-toast-md / Default)</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-lg w4-toast-primary">Notificación grande (LG)</div>
-                    <span class="preview-label-desc">LG (.w4-toast-lg)</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-xl w4-toast-primary">Notificación muy grande (XL)</div>
-                    <span class="preview-label-desc">XL (.w4-toast-xl)</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-error))">Estados CSS / Data-States</h2>
-            <div class="preview-group" style="flex-direction: column;">
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-info">Estado normal</div>
-                    <span class="preview-label-desc">Normal</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-info w4-toast-active">Notificación prioritaria (Activa)
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs text-center">Outline (.w4-toast-outline) + Primary</span>
+                        <div class="w4-toast w4-toast-md w4-toast-primary w4-toast-outline">Notificación outline
+                            (Bordes)</div>
                     </div>
-                    <span class="preview-label-desc">Active (.w4-toast-active) - Escala y Sombra mayor</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-info w4-toast-disabled">Notificación deshabilitada</div>
-                    <span class="preview-label-desc">Disabled (.w4-toast-disabled)</span>
-                </div>
-                <div class="preview-item">
-                    <div class="w4-toast w4-toast-md w4-toast-info w4-toast-hidden">No visible</div>
-                    <span class="preview-label-desc">Hidden (.w4-toast-hidden o .w4-toast-dismissed)</span>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs text-center">Outline (.w4-toast-outline) + Error</span>
+                        <div class="w4-toast w4-toast-md w4-toast-error w4-toast-outline">Error en formato outline</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-info))">Integración Dinámica y Posicionamiento
+        <section id="example-toast-sizes" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Tamaños Explícitos (XS - XL)</h2>
+            <hr class="w4-divider w4-divider-accent">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid w4-grid-5">
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs">XS (.w4-toast-xs)</span>
+                        <div class="w4-toast w4-toast-xs w4-toast-primary">Notificación pequeña (XS)</div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs">SM (.w4-toast-sm)</span>
+                        <div class="w4-toast w4-toast-sm w4-toast-primary">Notificación pequeña (SM)</div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs">MD (.w4-toast-md / Default)</span>
+                        <div class="w4-toast w4-toast-md w4-toast-primary">Notificación normal (MD)</div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs">LG (.w4-toast-lg)</span>
+                        <div class="w4-toast w4-toast-lg w4-toast-primary">Notificación grande (LG)</div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs">XL (.w4-toast-xl)</span>
+                        <div class="w4-toast w4-toast-xl w4-toast-primary">Notificación muy grande (XL)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="example-toast-states" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados CSS / Data-States</h2>
+            <hr class="w4-divider w4-divider-error">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid w4-grid-4">
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs">Normal</span>
+                        <div class="w4-toast w4-toast-md w4-toast-info">Estado normal</div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs text-center">Active (.w4-toast-active)<br>Escala y Sombra
+                            mayor</span>
+                        <div class="w4-toast w4-toast-md w4-toast-info w4-toast-active">Notificación prioritaria
+                            (Activa)</div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs">Disabled (.w4-toast-disabled)</span>
+                        <div class="w4-toast w4-toast-md w4-toast-info w4-toast-disabled">Notificación deshabilitada
+                        </div>
+                    </div>
+                    <div class="w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <span class="w4-label w4-label-xs text-center">Hidden<br>(.w4-toast-hidden o
+                            .w4-toast-dismissed)</span>
+                        <div class="w4-toast w4-toast-md w4-toast-info w4-toast-hidden">No visible</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="example-toast-integration" class="w4-section w4-section-xl" style="padding-block-end: 2rem;">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Integración Dinámica y Posicionamiento
                 (JS)</h2>
+            <hr class="w4-divider w4-divider-info">
 
-            <div class="toast-playground" id="toastPlayground">
+            <div class="toast-playground" id="toastPlayground" style="margin-block-start: 1.5rem;">
                 <span class="w4-text w4-text-lg"
                     style="color: hsl(var(--w4-base-content) / 0.3); font-weight: 600;">Playground Area</span>
 
@@ -353,7 +302,8 @@
                 <div class="toast-wrapper-playground top-center" id="tc-wrapper"></div>
                 <div class="toast-wrapper-playground bottom-center" id="bc-wrapper"></div>
 
-                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; z-index: 10;">
+                <div class="w4-stack w4-stack-horizontal w4-stack-xs w4-stack-center"
+                    style="flex-wrap: wrap; z-index: 10;">
                     <button class="w4-button w4-button-sm w4-button-outline w4-button-success"
                         onclick="spawnToast('success', 'Operación exitosa', 'top-right')">Top Right</button>
                     <button class="w4-button w4-button-sm w4-button-outline w4-button-error"
@@ -370,7 +320,8 @@
                 </div>
             </div>
         </section>
-    </div>
+
+    </main>
 
     @NativeUIScripts
     @NativeUIInit

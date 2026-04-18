@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="w4-navbar w4-navbar-primary">
+    <div id="navbar-alert" class="w4-navbar w4-navbar-primary">
         <div class="w4-navbar-start">
             <button class="w4-button w4-button-ghost w4-button-square mx-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -29,7 +29,7 @@
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-sm">
+                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
