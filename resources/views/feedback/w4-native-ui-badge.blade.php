@@ -186,7 +186,8 @@
                     usando la variante Outline o Soft para no sobrecargar la vista.</li>
                 <li><strong class="w4-text-active">Llamadas de atención:</strong> Usar la variante
                     <code>w4-badge-highlighted</code> (animación de pulso) para atraer la mirada a una nueva
-                    funcionalidad (ej. etiqueta "Nuevo").</li>
+                    funcionalidad (ej. etiqueta "Nuevo").
+                </li>
             </ul>
         </section>
 

@@ -182,35 +182,35 @@
             <div class="preview-group">
                 <div class="preview-item">
                     <span class="w4-loading w4-loading-md"></span>
-                    <span class="preview-label-desc">Default (Inherit)</span>
+                    <label class="w4-label w4-label-neutral">Default (Neutral)</label>
                 </div>
                 <div class="preview-item">
                     <span class="w4-loading w4-loading-md w4-loading-primary"></span>
-                    <span class="preview-label-desc">Primary</span>
+                    <label class="w4-label w4-label-primary">Primary</label>
                 </div>
                 <div class="preview-item">
                     <span class="w4-loading w4-loading-md w4-loading-secondary"></span>
-                    <span class="preview-label-desc">Secondary</span>
+                    <label class="w4-label w4-label-secondary">Secondary</label>
                 </div>
                 <div class="preview-item">
                     <span class="w4-loading w4-loading-md w4-loading-accent"></span>
-                    <span class="preview-label-desc">Accent</span>
+                    <label class="w4-label w4-label-accent">Accent</label>
                 </div>
                 <div class="preview-item">
                     <span class="w4-loading w4-loading-md w4-loading-info"></span>
-                    <span class="preview-label-desc">Info</span>
+                    <label class="w4-label w4-label-info">Info</label>
                 </div>
                 <div class="preview-item">
                     <span class="w4-loading w4-loading-md w4-loading-success"></span>
-                    <span class="preview-label-desc">Success</span>
+                    <label class="w4-label w4-label-success">Success</label>
                 </div>
                 <div class="preview-item">
                     <span class="w4-loading w4-loading-md w4-loading-warning"></span>
-                    <span class="preview-label-desc">Warning</span>
+                    <label class="w4-label w4-label-warning">Warning</label>
                 </div>
                 <div class="preview-item">
                     <span class="w4-loading w4-loading-md w4-loading-error"></span>
-                    <span class="preview-label-desc">Error</span>
+                    <label class="w4-label w4-label-error">Error</label>
                 </div>
             </div>
         </section>

@@ -177,7 +177,7 @@
         <section>
             <h2 class="section-title">Container Sizes</h2>
             <div class="demo-zone">
-                <div class="w4-container w4-container-xs data-w4-container-primary">
+                <div class="w4-container w4-container-xs w4-container-primary">
                     <div class="demo-content">
                         <strong>XS</strong> - `w4-container-xs`
                     </div>
