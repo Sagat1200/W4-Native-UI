@@ -61,6 +61,10 @@ export default class W4Toggle {
     }
 
     static handleChecked({ element }) {
-        element.checked = true;
+        // Only force checked if it's explicitly driven by a data-w4-state or class,
+        // otherwise it intercepts natural clicks
+        if (element.classList.contains('w4-toggle-checked') || element.getAttribute('data-w4-state')?.includes('checked')) {
+            element.checked = true;
+        }
     }
 }

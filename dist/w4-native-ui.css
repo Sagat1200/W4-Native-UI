@@ -454,10 +454,17 @@ html[data-theme] body {
   --w4-radius-badge: 0.4rem;
   --w4-radius-card: 0.4rem;
   --w4-radius-input: 0.4rem;
+  --w4-radius-checkbox: 0rem;
   
   --w4-btn-border-width: 2px;
+  --w4-border-width-control: 2px;
   --w4-shadow-sm: 4px 4px 0px 0px hsl(var(--w4-base-content));
   --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
+  --w4-checkbox-shadow: 4px 4px 0px 0px hsl(var(--w4-base-content));
+  
+  /* Textarea */
+  --w4-textarea-shadow: 4px 4px 0px 0px hsl(var(--w4-base-content));
+  --w4-textarea-shadow-focus: 4px 4px 0px 0px hsl(var(--w4-base-content));
 }
 
 [data-theme="native-ui.cyberpunk"] {
@@ -485,10 +492,17 @@ html[data-theme] body {
   --w4-radius-badge: 0px;       /* Badges cuadrados */
   --w4-radius-card: 0px;        /* Cards cuadradas */
   --w4-radius-input: 0px;       /* Inputs cuadrados */
+  --w4-radius-checkbox: 0px;
   
   --w4-btn-border-width: 2px;   /* Bordes más gruesos y agresivos para botones */
+  --w4-border-width-control: 2px;
   --w4-shadow-sm: 4px 4px 0px 0px hsl(var(--w4-base-content)); /* Sombra dura estilo cyberpunk */
   --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
+  --w4-checkbox-shadow: 4px 4px 0px 0px hsl(var(--w4-primary));
+  
+  /* Textarea */
+  --w4-textarea-shadow: 4px 4px 0px 0px hsl(var(--w4-base-content));
+  --w4-textarea-shadow-focus: 4px 4px 0px 0px hsl(var(--w4-base-content));
 }
 
 [data-theme="native-ui.valentine"] {
@@ -516,6 +530,12 @@ html[data-theme] body {
   --w4-radius-button: 1.9rem;
   --w4-radius-badge: 1.9rem;
   --w4-radius-card: 1.9rem;
+  --w4-radius-input: 1.9rem;
+  
+  /* Checkbox & Radio */
+  --w4-radius-checkbox: 9999px;
+  
+  /* Textarea */
   --w4-radius-input: 1.9rem;
   
   --w4-btn-border-width: 1px;
@@ -641,10 +661,15 @@ html[data-theme] body {
   --w4-error: 5 100% 73%;
   --w4-error-content: 3 75% 5%;
   /* --- Variables Estructurales del Tema --- */
-  --w4-radius-button: 1rem;
-  --w4-radius-badge: 1rem;
-  --w4-radius-card: 1rem;
-  --w4-radius-input: 1rem;
+  --w4-radius-button: 0.25rem 1rem 0.25rem 1rem;
+  --w4-radius-badge: 0.25rem 1rem 0.25rem 1rem;
+  --w4-radius-card: 0.25rem 1rem 0.25rem 1rem;
+  --w4-radius-input: 0.25rem 1rem 0.25rem 1rem;
+  /* Checkbox & Radio */
+  --w4-radius-checkbox: 0.25rem 1rem 0.25rem 1rem;
+  
+  /* Textarea */
+  --w4-radius-input: 0.25rem 1rem 0.25rem 1rem;
   
   --w4-btn-border-width: 1px;
   --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
@@ -676,6 +701,11 @@ html[data-theme] body {
   --w4-radius-button: 0px;
   --w4-radius-badge: 0px;
   --w4-radius-card: 0px;
+  --w4-radius-input: 0px;
+  /* Checkbox & Radio */
+  --w4-radius-checkbox: 0px;
+  
+  /* Textarea */
   --w4-radius-input: 0px;
   
   --w4-btn-border-width: 1px;
@@ -709,6 +739,7 @@ html[data-theme] body {
   --w4-radius-badge: 1.9rem;
   --w4-radius-card: 1.9rem;
   --w4-radius-input: 1.9rem;
+  --w4-radius-checkbox: 9999px;
   
   --w4-btn-border-width: 1px;
   --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
@@ -773,10 +804,19 @@ html[data-theme] body {
   --w4-radius-badge: 0.2rem;
   --w4-radius-card: 0.2rem;
   --w4-radius-input: 0.2rem;
+  --w4-radius-checkbox: 0.2rem;
+  
+  /* Textarea */
+  --w4-radius-input: 0.2rem;
   
   --w4-btn-border-width: 1px;
+  --w4-border-width-control: 1px;
   --w4-shadow-sm: none;
   --w4-shadow-md: none;
+  
+  --w4-checkbox-bg: transparent;
+  --w4-checkbox-color: transparent;
+  --w4-checkbox-mark-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4 8 7 11 13 4'/%3E%3C/svg%3E");
 }
 
 [data-theme="native-ui.black"] {
@@ -1220,10 +1260,17 @@ html[data-theme] body {
   --w4-radius-badge: 0px;       /* Badges cuadrados */
   --w4-radius-card: 0px;        /* Cards cuadradas */
   --w4-radius-input: 0px;       /* Inputs cuadrados */
+  --w4-radius-checkbox: 0px;
   
   --w4-btn-border-width: 2px;   /* Bordes más gruesos y agresivos para botones */
+  --w4-border-width-control: 2px;
   --w4-shadow-sm: 4px 4px 0px 0px hsl(var(--w4-base-content)); /* Sombra dura estilo cyberpunk */
   --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
+  --w4-checkbox-shadow: 4px 4px 0px 0px hsl(var(--w4-primary));
+  
+  /* Textarea */
+  --w4-textarea-shadow: 4px 4px 0px 0px hsl(var(--w4-base-content));
+  --w4-textarea-shadow-focus: 4px 4px 0px 0px hsl(var(--w4-base-content));
 }
 
 @keyframes w4-icon-spin {
@@ -1605,6 +1652,8 @@ html[data-theme] body {
   line-height: 1;
   color: var(--w4-icon-color, currentColor);
   font-size: var(--w4-icon-size, 1rem);
+  inline-size: 1em;
+  block-size: 1em;
   flex-shrink: 0;
   vertical-align: middle;
   transition: color var(--w4-transition-fast), filter var(--w4-transition-fast), opacity var(--w4-transition-fast);
@@ -3084,6 +3133,7 @@ html[data-theme] body {
    ---------------------------------- */
 .w4-stack-horizontal { --w4-stack-dir: row; }
 .w4-stack-vertical { --w4-stack-dir: column; }
+.w4-stack-wrap { flex-wrap: wrap; }
 
 /* ----------------------------------
    ALIGNMENT MODIFIERS
@@ -5032,13 +5082,15 @@ html[data-theme] body {
   /* Morphology Tokens */
   inline-size: var(--w4-checkbox-size, 1.5rem);
   block-size: var(--w4-checkbox-size, 1.5rem);
-  border-radius: var(--w4-radius-checkbox, var(--w4-radius-sm));
+  /* Usa la misma variable de input/button para mantener consistencia, con un fallback a un radio pequeño */
+  border-radius: var(--w4-radius-checkbox, var(--w4-radius-button, 0.25rem));
   
   /* Surface Tokens */
-  border-width: var(--w4-border-width-control, 1px);
+  border-width: var(--w4-border-width-control, var(--w4-btn-border-width, 1px));
   border-style: solid;
   border-color: var(--w4-checkbox-border-color, hsl(var(--w4-base-content) / 0.2));
   background-color: var(--w4-checkbox-bg, hsl(var(--w4-base-100)));
+  box-shadow: var(--w4-checkbox-shadow, none);
   
   /* Color Tokens (For SVG fill) */
   --w4-checkbox-mark-color: hsl(var(--w4-base-100));
@@ -5066,7 +5118,7 @@ html[data-theme] body {
 .w4-checkbox:checked,
 .w4-checkbox-checked,
 .w4-checkbox[data-w4-state~="checked"] {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4 8 7 11 13 4'/%3E%3C/svg%3E");
+  background-image: var(--w4-checkbox-mark-svg, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4 8 7 11 13 4'/%3E%3C/svg%3E"));
   background-size: 70%;
   background-position: center;
   background-repeat: no-repeat;
@@ -5546,10 +5598,11 @@ html[data-theme] body {
   border-radius: var(--w4-radius-radio, var(--w4-radius-pill));
   
   /* Surface Tokens */
-  border-width: var(--w4-border-width-control, 1px);
+  border-width: var(--w4-border-width-control, var(--w4-btn-border-width, 1px));
   border-style: solid;
   border-color: var(--w4-radio-border-color, hsl(var(--w4-base-content) / 0.2));
   background-color: var(--w4-radio-bg, hsl(var(--w4-base-100)));
+  box-shadow: var(--w4-radio-shadow, 0 0 #0000);
   
   /* Color Tokens (For SVG fill) */
   --w4-radio-mark-color: hsl(var(--w4-base-100));
@@ -5568,7 +5621,7 @@ html[data-theme] body {
   background-color: var(--w4-radio-color, hsl(var(--w4-base-content)));
   border-color: var(--w4-radio-color, hsl(var(--w4-base-content)));
   animation: w4-radio-pop var(--w4-transition-fast) ease-out;
-  box-shadow: inset 0 0 0 4px var(--w4-radio-mark-color);
+  box-shadow: var(--w4-radio-shadow, 0 0 #0000), inset 0 0 0 4px var(--w4-radio-mark-color);
 }
 
 /* ----------------------------------
@@ -5909,11 +5962,12 @@ html[data-theme] body {
   line-height: 1.5;
   
   /* Surface Tokens */
-  border-width: var(--w4-border-width-control, 1px);
+  border-width: var(--w4-border-width-control, var(--w4-btn-border-width, 1px));
   border-style: solid;
   border-color: var(--w4-textarea-border-color, hsl(var(--w4-base-content) / 0.2));
   background-color: var(--w4-textarea-bg, hsl(var(--w4-base-100)));
   color: hsl(var(--w4-base-content));
+  box-shadow: var(--w4-textarea-shadow, none);
   
   /* Interaction & Motion */
   transition: background-color var(--w4-transition-fast), border-color var(--w4-transition-fast), box-shadow var(--w4-transition-fast), outline var(--w4-transition-fast);
@@ -5929,6 +5983,7 @@ html[data-theme] body {
   outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-base-content)) / var(--w4-focus-ring-opacity));
   outline-offset: var(--w4-focus-ring-offset);
   border-color: hsl(var(--w4-focus-ring-color, var(--w4-base-content)));
+  box-shadow: var(--w4-textarea-shadow-focus, var(--w4-textarea-shadow, none));
 }
 
 /* ----------------------------------
@@ -6095,11 +6150,10 @@ html[data-theme] body {
   /* Knob Rendering */
   --w4-toggle-knob-color: hsl(var(--w4-base-100));
   --w4-toggle-knob-size: calc(var(--w4-toggle-height) - (var(--w4-border-width-control, 1px) * 4));
-  --w4-toggle-padding: calc(var(--w4-border-width-control, 1px) * 2);
   
   background-image: radial-gradient(circle at center, var(--w4-toggle-knob-color) 0%, var(--w4-toggle-knob-color) 50%, transparent 52%);
   background-size: var(--w4-toggle-knob-size) var(--w4-toggle-knob-size);
-  background-position: left var(--w4-toggle-padding) center;
+  background-position: left calc(var(--w4-border-width-control, 1px) * 2) center;
   background-repeat: no-repeat;
   
   /* Interaction & Motion */
@@ -6115,7 +6169,7 @@ html[data-theme] body {
 .w4-toggle[data-w4-state~="checked"] {
   background-color: var(--w4-toggle-color, hsl(var(--w4-base-content)));
   border-color: var(--w4-toggle-color, hsl(var(--w4-base-content)));
-  background-position: right var(--w4-toggle-padding) center;
+  background-position: right calc(var(--w4-border-width-control, 1px) * 2) center;
 }
 
 /* ----------------------------------

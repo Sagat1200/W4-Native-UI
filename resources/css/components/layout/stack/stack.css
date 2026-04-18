@@ -18,6 +18,7 @@
    ---------------------------------- */
 .w4-stack-horizontal { --w4-stack-dir: row; }
 .w4-stack-vertical { --w4-stack-dir: column; }
+.w4-stack-wrap { flex-wrap: wrap; }
 
 /* ----------------------------------
    ALIGNMENT MODIFIERS

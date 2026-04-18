@@ -6,118 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Input Lab</title>
     @NativeUIStyles
-    <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-container {
-            max-inline-size: 1200px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.5rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.7);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            font-size: 1rem;
-            min-inline-size: 200px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .preview-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding: 2rem;
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-            align-items: center;
-            justify-content: flex-start;
-        }
-
-        .preview-item {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.75rem;
-            background-color: hsl(var(--w4-base-100));
-            padding: 1.5rem;
-            border-radius: var(--w4-radius-card);
-            box-shadow: var(--w4-shadow-sm);
-            inline-size: 100%;
-            max-inline-size: 320px;
-        }
-
-        .preview-label-desc {
-            font-size: 0.75rem;
-            color: hsl(var(--w4-base-content) / 0.6);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 600;
-            margin-block-start: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
 
-    <div class="lab-container">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: Input Lab</h1>
-                <p class="lab-subtitle">Entorno de pruebas visuales para el componente w4-input</p>
-            </div>
-
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar Tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+    <div class="w4-navbar w4-navbar-primary">
+        <div class="w4-navbar-start">
+            <button class="w4-button w4-button-ghost w4-button-square">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="w4-icon w4-icon-md stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <button class="w4-button w4-button-ghost">Native UI</button>
+        </div>
+        <div class="w4-navbar-center">
+            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs">
+                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -152,192 +63,229 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Input</h1>
-            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+    <main class="w4-container w4-container-xl">
+
+        <div class="w4-section w4-section-xl">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Input</h1>
+            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente w4-input
+            </p>
+        </div>
+
+        <div class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Input</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Input</strong> es el elemento principal para la entrada de texto libre por parte
                 del usuario. Permite capturar datos como nombres, correos electrónicos, contraseñas o números, y es
                 fundamental para cualquier formulario interactivo.
             </p>
-            <br>
-            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
-            <ul class="w4-text w4-text-base w4-text-start"
-                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
-                <li><strong>Captura de datos personales:</strong> Para solicitar información como nombre, apellido o
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary">Casos de Uso Comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical">
+                <li><strong class="w4-text-active">Captura de datos personales:</strong> Para solicitar información como
+                    nombre, apellido o
                     dirección.</li>
-                <li><strong>Credenciales de acceso:</strong> Campos de correo electrónico y contraseña en formularios de
+                <li><strong class="w4-text-active">Credenciales de acceso:</strong> Campos de correo electrónico y
+                    contraseña en formularios de
                     inicio de sesión o registro.</li>
-                <li><strong>Búsqueda y filtrado:</strong> Barras de búsqueda para encontrar contenido específico dentro
+                <li><strong class="w4-text-active">Búsqueda y filtrado:</strong> Barras de búsqueda para encontrar
+                    contenido específico dentro
                     de la aplicación.</li>
-                <li><strong>Entrada de texto general:</strong> Captura de cantidades numéricas, códigos postales o
+                <li><strong class="w4-text-active">Entrada de texto general:</strong> Captura de cantidades numéricas,
+                    códigos postales o
                     identificadores cortos.</li>
             </ul>
-        </section>
+        </div>
 
-        <section>
-            <h2 class="section-title">Variantes de Color Semánticas</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md" placeholder="Escribe aquí..." />
-                    <span class="preview-label-desc">Default (Base Content)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-primary"
-                        placeholder="Enfoque principal..." />
-                    <span class="preview-label-desc">Primary</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-secondary" placeholder="Secundario..." />
-                    <span class="preview-label-desc">Secondary</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-accent" placeholder="Dato resaltado..." />
-                    <span class="preview-label-desc">Accent</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-info" placeholder="Info input..." />
-                    <span class="preview-label-desc">Info</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-success" placeholder="Dato válido..." />
-                    <span class="preview-label-desc">Success</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-warning" placeholder="Precaución..." />
-                    <span class="preview-label-desc">Warning</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-error" placeholder="Error al escribir..." />
-                    <span class="preview-label-desc">Error</span>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color Semánticas</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs w4-label-neutral">Default (Base Content)</span>
+                        <input type="text" class="w4-input w4-input-md" placeholder="Escribe aquí..." />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs w4-label-primary">Primary</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-primary"
+                            placeholder="Enfoque principal..." />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs w4-label-secondary">Secondary</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-secondary"
+                            placeholder="Secundario..." />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs w4-label-accent">Accent</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-accent"
+                            placeholder="Dato resaltado..." />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs w4-label-info">Info</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-info" placeholder="Info input..." />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs w4-label-success">Success</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-success" placeholder="Dato válido..." />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs w4-label-warning">Warning</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-warning" placeholder="Precaución..." />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs w4-label-error">Error</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-error"
+                            placeholder="Error al escribir..." />
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary))">Variantes Especiales</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-ghost" placeholder="Escribe algo aquí..." />
-                    <span class="preview-label-desc">Ghost (Fondo transparente)</span>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Variantes Especiales</h2>
+            <hr class="w4-divider w4-divider-secondary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs">Ghost (Fondo transparente)</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-ghost"
+                            placeholder="Escribe algo aquí..." />
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-accent))">Tamaños Explícitos (XS - XL)</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-xs w4-input-primary" placeholder="Tamaño Extra Small" />
-                    <span class="preview-label-desc">XS (0.75rem / Height XS)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-sm w4-input-primary" placeholder="Tamaño Small" />
-                    <span class="preview-label-desc">SM (0.875rem / Height SM)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-primary" placeholder="Tamaño Medium" />
-                    <span class="preview-label-desc">MD (0.875rem / Height MD) Default</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-lg w4-input-primary" placeholder="Tamaño Large" />
-                    <span class="preview-label-desc">LG (1.125rem / Height LG)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-xl w4-input-primary" placeholder="Tamaño Extra Large" />
-                    <span class="preview-label-desc">XL (1.25rem / Height XL)</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-error))">Estados CSS / Atributos HTML</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md" placeholder="Input normal..." />
-                    <span class="preview-label-desc">Normal</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-focus" placeholder="Foco simulado..." />
-                    <span class="preview-label-desc">Focus (.w4-input-focus)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-disabled" placeholder="No puedes escribir"
-                        disabled />
-                    <span class="preview-label-desc">Disabled (Atributo o .w4-input-disabled)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-readonly" value="Solo lectura..."
-                        readonly />
-                    <span class="preview-label-desc">Readonly (Atributo o .w4-input-readonly)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-invalid" value="usuario@invalido" />
-                    <span class="preview-label-desc">Invalid (.w4-input-invalid)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-valid" value="usuario@valido.com" />
-                    <span class="preview-label-desc">Valid (.w4-input-valid)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="text" class="w4-input w4-input-md w4-input-loading" placeholder="Cargando datos..." />
-                    <span class="preview-label-desc">Loading (.w4-input-loading / Opacity Pulse)</span>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Tamaños Explícitos (XS - XL)</h2>
+            <hr class="w4-divider w4-divider-accent">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs">XS (0.75rem / Height XS)</span>
+                        <input type="text" class="w4-input w4-input-xs w4-input-primary"
+                            placeholder="Tamaño Extra Small" />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs">SM (0.875rem / Height SM)</span>
+                        <input type="text" class="w4-input w4-input-sm w4-input-primary" placeholder="Tamaño Small" />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs">MD (0.875rem / Height MD) Default</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-primary" placeholder="Tamaño Medium" />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs">LG (1.125rem / Height LG)</span>
+                        <input type="text" class="w4-input w4-input-lg w4-input-primary" placeholder="Tamaño Large" />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs">XL (1.25rem / Height XL)</span>
+                        <input type="text" class="w4-input w4-input-xl w4-input-primary"
+                            placeholder="Tamaño Extra Large" />
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-info))">Integración con Label y Helper Text</h2>
-            <div class="preview-group" style="flex-direction: column; align-items: flex-start;">
-
-                <!-- Caso de Uso 1: Éxito -->
-                <div
-                    style="display: flex; flex-direction: column; gap: 0.5rem; inline-size: 100%; max-inline-size: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
-                    <label for="username" class="w4-label w4-label-md w4-label-required">Nombre de Usuario</label>
-                    <input type="text" id="username" class="w4-input w4-input-md w4-input-valid" value="w4_admin_pro" />
-                    <span class="w4-helper-text w4-helper-text-sm w4-helper-text-success">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"
-                            fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        Nombre de usuario disponible.
-                    </span>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados CSS / Atributos HTML</h2>
+            <hr class="w4-divider w4-divider-error">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs">Normal</span>
+                        <input type="text" class="w4-input w4-input-md" placeholder="Input normal..." />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs">Focus (.w4-input-focus)</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-focus" placeholder="Foco simulado..." />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs">Disabled (Atributo o .w4-input-disabled)</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-disabled"
+                            placeholder="No puedes escribir" disabled />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs">Readonly (Atributo o .w4-input-readonly)</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-readonly" value="Solo lectura..."
+                            readonly />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs">Invalid (.w4-input-invalid)</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-invalid" value="usuario@invalido" />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs">Valid (.w4-input-valid)</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-valid" value="usuario@valido.com" />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
+                        <span class="w4-label w4-label-xs">Loading (.w4-input-loading / Opacity Pulse)</span>
+                        <input type="text" class="w4-input w4-input-md w4-input-loading"
+                            placeholder="Cargando datos..." />
+                    </div>
                 </div>
-
-                <!-- Caso de Uso 2: Error -->
-                <div
-                    style="display: flex; flex-direction: column; gap: 0.5rem; inline-size: 100%; max-inline-size: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
-                    <label for="email" class="w4-label w4-label-md w4-label-error w4-label-required">Correo
-                        Electrónico</label>
-                    <input type="email" id="email" class="w4-input w4-input-md w4-input-invalid"
-                        value="correo.invalido" />
-                    <span class="w4-field-error w4-field-error-sm w4-field-error-error">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"
-                            fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
-                                clip-rule="evenodd" />
-                        </svg>
-                        El dominio no pertenece a la empresa.
-                    </span>
-                </div>
-
-                <!-- Caso de Uso 3: Normal con helper -->
-                <div
-                    style="display: flex; flex-direction: column; gap: 0.5rem; inline-size: 100%; max-inline-size: 400px; background: hsl(var(--w4-base-100)); padding: 1.5rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm);">
-                    <label for="api_key" class="w4-label w4-label-md">Clave de API</label>
-                    <input type="text" id="api_key" class="w4-input w4-input-md" placeholder="sk_live_123456789..." />
-                    <span class="w4-helper-text w4-helper-text-sm w4-helper-text-muted">
-                        Asegúrate de no compartir tu clave de API en repositorios públicos.
-                    </span>
-                </div>
-
             </div>
         </section>
-    </div>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Integración con Label y Helper Text
+            </h2>
+            <hr class="w4-divider w4-divider-info">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+
+                    <!-- Caso de Uso 1: Éxito -->
+                    <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-xs w4-stack-vertical">
+                        <label for="username" class="w4-label w4-label-md w4-label-required">Nombre de Usuario</label>
+                        <input type="text" id="username" class="w4-input w4-input-md w4-input-valid w4-input-bordered"
+                            value="w4_admin_pro" />
+                        <span
+                            class="w4-helper-text w4-helper-text-sm w4-helper-text-success w4-stack w4-stack-horizontal w4-stack-xs">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                class="w4-icon w4-icon-sm">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Nombre de usuario disponible.
+                        </span>
+                    </div>
+
+                    <!-- Caso de Uso 2: Error -->
+                    <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-xs w4-stack-vertical">
+                        <label for="email" class="w4-label w4-label-md w4-label-error w4-label-required">Correo
+                            Electrónico</label>
+                        <input type="email" id="email" class="w4-input w4-input-md w4-input-invalid w4-input-bordered"
+                            value="correo.invalido" />
+                        <span
+                            class="w4-field-error w4-field-error-sm w4-field-error-error w4-stack w4-stack-horizontal w4-stack-xs">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                class="w4-icon w4-icon-sm">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            El dominio no pertenece a la empresa.
+                        </span>
+                    </div>
+
+                    <!-- Caso de Uso 3: Normal con helper -->
+                    <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-xs w4-stack-vertical">
+                        <label for="api_key" class="w4-label w4-label-md">Clave de API</label>
+                        <input type="text" id="api_key" class="w4-input w4-input-md w4-input-bordered"
+                            placeholder="sk_live_123456789..." />
+                        <span class="w4-helper-text w4-helper-text-sm w4-helper-text-muted">
+                            Asegúrate de no compartir tu clave de API en repositorios públicos.
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
 
     @NativeUIScripts
     @NativeUIInit

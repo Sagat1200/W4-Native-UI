@@ -18,11 +18,12 @@
   line-height: 1.5;
   
   /* Surface Tokens */
-  border-width: var(--w4-border-width-control, 1px);
+  border-width: var(--w4-border-width-control, var(--w4-btn-border-width, 1px));
   border-style: solid;
   border-color: var(--w4-textarea-border-color, hsl(var(--w4-base-content) / 0.2));
   background-color: var(--w4-textarea-bg, hsl(var(--w4-base-100)));
   color: hsl(var(--w4-base-content));
+  box-shadow: var(--w4-textarea-shadow, none);
   
   /* Interaction & Motion */
   transition: background-color var(--w4-transition-fast), border-color var(--w4-transition-fast), box-shadow var(--w4-transition-fast), outline var(--w4-transition-fast);
@@ -38,6 +39,7 @@
   outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-base-content)) / var(--w4-focus-ring-opacity));
   outline-offset: var(--w4-focus-ring-offset);
   border-color: hsl(var(--w4-focus-ring-color, var(--w4-base-content)));
+  box-shadow: var(--w4-textarea-shadow-focus, var(--w4-textarea-shadow, none));
 }
 
 /* ----------------------------------

@@ -25,11 +25,10 @@
   /* Knob Rendering */
   --w4-toggle-knob-color: hsl(var(--w4-base-100));
   --w4-toggle-knob-size: calc(var(--w4-toggle-height) - (var(--w4-border-width-control, 1px) * 4));
-  --w4-toggle-padding: calc(var(--w4-border-width-control, 1px) * 2);
   
   background-image: radial-gradient(circle at center, var(--w4-toggle-knob-color) 0%, var(--w4-toggle-knob-color) 50%, transparent 52%);
   background-size: var(--w4-toggle-knob-size) var(--w4-toggle-knob-size);
-  background-position: left var(--w4-toggle-padding) center;
+  background-position: left calc(var(--w4-border-width-control, 1px) * 2) center;
   background-repeat: no-repeat;
   
   /* Interaction & Motion */
@@ -45,7 +44,7 @@
 .w4-toggle[data-w4-state~="checked"] {
   background-color: var(--w4-toggle-color, hsl(var(--w4-base-content)));
   border-color: var(--w4-toggle-color, hsl(var(--w4-base-content)));
-  background-position: right var(--w4-toggle-padding) center;
+  background-position: right calc(var(--w4-border-width-control, 1px) * 2) center;
 }
 
 /* ----------------------------------

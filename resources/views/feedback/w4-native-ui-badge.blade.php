@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="native-ui.light">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -71,7 +71,7 @@
 
     <main id="main-badge" class="w4-container w4-container-xl">
 
-        <div>
+        <div class="w4-section w4-section-xl">
             <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Badge</h1>
             <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales</p>
         </div>
@@ -190,7 +190,7 @@
                             <span class="w4-label w4-label-sm">Indicador de Estado</span>
                             <div class="w4-stack w4-stack-horizontal w4-stack-xs w4-stack-center">
                                 <div class="w4-badge w4-badge-success w4-badge-xs"
-                                    style="padding-inline: 0; width: 0.875rem;"></div>
+                                    style="padding-inline: 0; inline-size: 0.875rem;"></div>
                                 <span class="w4-text w4-text-sm w4-text-neutral">Servidor Online</span>
                             </div>
                         </div>

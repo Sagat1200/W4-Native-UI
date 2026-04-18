@@ -137,6 +137,8 @@ class W4Core {
         element.setAttribute("data-w4-component", component);
         if (states.length > 0) {
             element.setAttribute("data-w4-state", states.join(" "));
+        } else {
+            element.removeAttribute("data-w4-state");
         }
         if (hooks.length > 0) {
             element.setAttribute("data-w4-hook", hooks.join(" "));
@@ -175,8 +177,17 @@ class W4Core {
         if (element.getAttribute("aria-busy") === "true") states.push("loading");
         
         if (element.type === "checkbox" && element.checked) states.push("checked");
+        else if (element.type === "checkbox" && !element.checked) {
+            // Remove 'checked' from states array if it exists but the element is not checked
+            states = states.filter(s => s !== "checked");
+        }
+
         if (element.type === "checkbox" && element.indeterminate) states.push("indeterminate");
+        
         if (element.type === "radio" && element.checked) states.push("selected");
+        else if (element.type === "radio" && !element.checked) {
+             states = states.filter(s => s !== "selected");
+        }
 
         return [...new Set(states)];
     }
@@ -940,9 +951,11 @@ class W4Checkbox {
         element.setAttribute('aria-busy', 'true');
     }
 
-    static handleCheck({ element }) {
-        element.checked = true;
-        element.indeterminate = false;
+    static handleChecked({ element }) {
+        if (element.classList.contains('w4-checkbox-checked') || element.getAttribute('data-w4-state')?.includes('checked')) {
+            element.checked = true;
+            element.indeterminate = false;
+        }
     }
 
     static handleIndeterminateEvent({ element }) {
@@ -1425,7 +1438,11 @@ class W4Toggle {
     }
 
     static handleChecked({ element }) {
-        element.checked = true;
+        // Only force checked if it's explicitly driven by a data-w4-state or class,
+        // otherwise it intercepts natural clicks
+        if (element.classList.contains('w4-toggle-checked') || element.getAttribute('data-w4-state')?.includes('checked')) {
+            element.checked = true;
+        }
     }
 }
 

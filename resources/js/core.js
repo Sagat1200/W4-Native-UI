@@ -137,6 +137,8 @@ export default class W4Core {
         element.setAttribute("data-w4-component", component);
         if (states.length > 0) {
             element.setAttribute("data-w4-state", states.join(" "));
+        } else {
+            element.removeAttribute("data-w4-state");
         }
         if (hooks.length > 0) {
             element.setAttribute("data-w4-hook", hooks.join(" "));
@@ -175,8 +177,17 @@ export default class W4Core {
         if (element.getAttribute("aria-busy") === "true") states.push("loading");
         
         if (element.type === "checkbox" && element.checked) states.push("checked");
+        else if (element.type === "checkbox" && !element.checked) {
+            // Remove 'checked' from states array if it exists but the element is not checked
+            states = states.filter(s => s !== "checked");
+        }
+
         if (element.type === "checkbox" && element.indeterminate) states.push("indeterminate");
+        
         if (element.type === "radio" && element.checked) states.push("selected");
+        else if (element.type === "radio" && !element.checked) {
+             states = states.filter(s => s !== "selected");
+        }
 
         return [...new Set(states)];
     }

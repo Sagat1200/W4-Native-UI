@@ -73,9 +73,11 @@ export default class W4Checkbox {
         element.setAttribute('aria-busy', 'true');
     }
 
-    static handleCheck({ element }) {
-        element.checked = true;
-        element.indeterminate = false;
+    static handleChecked({ element }) {
+        if (element.classList.contains('w4-checkbox-checked') || element.getAttribute('data-w4-state')?.includes('checked')) {
+            element.checked = true;
+            element.indeterminate = false;
+        }
     }
 
     static handleIndeterminateEvent({ element }) {

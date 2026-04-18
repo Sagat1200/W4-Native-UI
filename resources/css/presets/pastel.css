@@ -24,6 +24,7 @@
   --w4-radius-badge: 1.9rem;
   --w4-radius-card: 1.9rem;
   --w4-radius-input: 1.9rem;
+  --w4-radius-checkbox: 9999px;
   
   --w4-btn-border-width: 1px;
   --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));

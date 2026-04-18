@@ -1,128 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="native-ui.light">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Checkbox Lab</title>
     @NativeUIStyles
-    <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-container {
-            max-inline-size: 1200px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.5rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.7);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            font-size: 1rem;
-            min-inline-size: 200px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .preview-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding: 2rem;
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .preview-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-            background-color: hsl(var(--w4-base-100));
-            padding: 1.5rem;
-            border-radius: var(--w4-radius-card);
-            box-shadow: var(--w4-shadow-sm);
-            min-inline-size: 120px;
-            text-align: center;
-        }
-
-        .preview-label-desc {
-            font-size: 0.75rem;
-            color: hsl(var(--w4-base-content) / 0.6);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 600;
-        }
-
-        .label-text {
-            font-size: 0.875rem;
-            font-weight: 500;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
 
-    <div class="lab-container">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: Checkbox Lab</h1>
-                <p class="lab-subtitle">Entorno de pruebas visuales para el componente de estado w4-checkbox</p>
-            </div>
-
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar Tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+    <div id="navbar-checkbox" class="w4-navbar w4-navbar-primary">
+        <div class="w4-navbar-start">
+            <button class="w4-button w4-button-ghost w4-button-square mx-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="inline-block h-5 w-5 stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <button class="w4-button w4-button-ghost">Native UI</button>
+        </div>
+        <div class="w4-navbar-center">
+            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs mx-2">
+                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -157,175 +63,235 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Checkbox</h1>
-            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+    <main id="main-checkbox" class="w4-container w4-container-xl">
+
+        <div class="w4-section w4-section-xl">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Checkbox</h1>
+            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente de estado
+                w4-checkbox</p>
+        </div>
+
+        <div id="description-checkbox" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Checkbox</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Checkbox</strong> permite a los usuarios seleccionar una o varias opciones de un
                 conjunto, o alternar entre dos estados opuestos (como encendido/apagado). Es un elemento de formulario
                 esencial para recopilar preferencias y confirmaciones.
             </p>
-            <br>
-            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
-            <ul class="w4-text w4-text-base w4-text-start"
-                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
-                <li><strong>Aceptación de términos:</strong> Para confirmar que el usuario ha leído y aceptado los
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-4">Casos de Uso Comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs mt-2"
+                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; list-style-type: disc;">
+                <li><strong class="w4-text-active">Aceptación de términos:</strong> Para confirmar que el usuario ha
+                    leído y aceptado los
                     términos y condiciones.</li>
-                <li><strong>Selección múltiple:</strong> En listas de filtros o configuraciones donde se pueden elegir
+                <li><strong class="w4-text-active">Selección múltiple:</strong> En listas de filtros o configuraciones
+                    donde se pueden elegir
                     varias opciones simultáneamente.</li>
-                <li><strong>Configuración de preferencias:</strong> Para activar o desactivar características
+                <li><strong class="w4-text-active">Configuración de preferencias:</strong> Para activar o desactivar
+                    características
                     específicas (ej. recibir notificaciones).</li>
-                <li><strong>Tareas y listas:</strong> Marcar elementos como completados en una lista de tareas
+                <li><strong class="w4-text-active">Tareas y listas:</strong> Marcar elementos como completados en una
+                    lista de tareas
                     pendientes.</li>
             </ul>
-        </section>
+        </div>
 
-        <section>
-            <h2 class="section-title">Variantes de Color Semánticas</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-md" checked />
-                    <span class="preview-label-desc">Default</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-primary" checked />
-                    <span class="preview-label-desc">Primary</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-secondary" checked />
-                    <span class="preview-label-desc">Secondary</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-accent" checked />
-                    <span class="preview-label-desc">Accent</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-info" checked />
-                    <span class="preview-label-desc">Info</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-success" checked />
-                    <span class="preview-label-desc">Success</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-warning" checked />
-                    <span class="preview-label-desc">Warning</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-error" checked />
-                    <span class="preview-label-desc">Error</span>
+        <section id="example-checkbox-variant" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color Semánticas</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1.5rem;">
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs w4-label-neutral">Default</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-md" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs w4-label-primary">Primary</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-primary" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs w4-label-secondary">Secondary</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-secondary" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs w4-label-accent">Accent</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-accent" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs w4-label-info">Info</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-info" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs w4-label-success">Success</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-success" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs w4-label-warning">Warning</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-warning" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs w4-label-error">Error</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-md w4-checkbox-error" checked />
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary))">Tamaños Explícitos (XS - XL)</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-xs" checked />
-                    <span class="preview-label-desc">XS (1rem)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-sm" checked />
-                    <span class="preview-label-desc">SM (1.25rem)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-md" checked />
-                    <span class="preview-label-desc">MD (1.5rem)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-lg" checked />
-                    <span class="preview-label-desc">LG (2rem)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-xl" checked />
-                    <span class="preview-label-desc">XL (2.5rem)</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-accent))">Estados Pseudo-Classes</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-md" />
-                    <span class="preview-label-desc">Unchecked</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-md" checked />
-                    <span class="preview-label-desc">Checked</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-md" id="indetCheck" />
-                    <span class="preview-label-desc">Indeterminate</span>
+        <section id="example-checkbox-sizes" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Tamaños Explícitos (XS - XL)</h2>
+            <hr class="w4-divider w4-divider-secondary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1.5rem;">
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs">XS (1rem)</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-xs" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs">SM (1.25rem)</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-sm" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs">MD (1.5rem)</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-md" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs">LG (2rem)</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-lg" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs">XL (2.5rem)</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-xl" checked />
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-error))">Estados CSS / Data-States / Validation
-            </h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-md w4-checkbox-disabled"
-                        checked />
-                    <span class="preview-label-desc">Disabled (.w4-checkbox-disabled)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-md w4-checkbox-readonly"
-                        checked />
-                    <span class="preview-label-desc">Readonly (.w4-checkbox-readonly)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-md w4-checkbox-invalid" />
-                    <span class="preview-label-desc">Invalid (Border Error)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-md w4-checkbox-valid" />
-                    <span class="preview-label-desc">Valid (Border Success)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-md w4-checkbox-loading"
-                        checked />
-                    <span class="preview-label-desc">Loading (.w4-checkbox-loading)</span>
+        <section id="example-checkbox-pseudo" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Estados Pseudo-Classes</h2>
+            <hr class="w4-divider w4-divider-accent">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem;">
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs">Unchecked</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-md" />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs">Checked</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-md" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs">Indeterminate</span>
+                        <input type="checkbox" class="w4-checkbox w4-checkbox-primary w4-checkbox-md" id="indetCheck" />
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-info))">Integración con Labels</h2>
-            <div class="preview-group" style="flex-direction: column; align-items: flex-start;">
-
-                <!-- Label Right -->
-                <div
-                    style="display: flex; gap: 0.75rem; align-items: center; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); inline-size: 300px;">
-                    <input type="checkbox" id="chk1" class="w4-checkbox w4-checkbox-primary w4-checkbox-md" />
-                    <label for="chk1" class="w4-label w4-label-primary w4-label-md" style="cursor: pointer;">Aceptar
-                        términos y
-                        condiciones</label>
+        <section id="example-checkbox-states" class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados CSS / Data-States /
+                Validation</h2>
+            <hr class="w4-divider w4-divider-error">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem;">
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs">Disabled<br>(.w4-checkbox-disabled)</span>
+                        <input type="checkbox"
+                            class="w4-checkbox w4-checkbox-primary w4-checkbox-md w4-checkbox-disabled" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs">Readonly<br>(.w4-checkbox-readonly)</span>
+                        <input type="checkbox"
+                            class="w4-checkbox w4-checkbox-primary w4-checkbox-md w4-checkbox-readonly" checked />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs">Invalid<br>(Border Error)</span>
+                        <input type="checkbox"
+                            class="w4-checkbox w4-checkbox-primary w4-checkbox-md w4-checkbox-invalid" />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs">Valid<br>(Border Success)</span>
+                        <input type="checkbox"
+                            class="w4-checkbox w4-checkbox-primary w4-checkbox-md w4-checkbox-valid" />
+                    </div>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center"
+                        style="box-shadow: var(--w4-shadow-sm);">
+                        <span class="w4-label w4-label-xs">Loading<br>(.w4-checkbox-loading)</span>
+                        <input type="checkbox"
+                            class="w4-checkbox w4-checkbox-primary w4-checkbox-md w4-checkbox-loading" checked />
+                    </div>
                 </div>
-
-                <!-- Label Left -->
-                <div
-                    style="display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); inline-size: 300px;">
-                    <label for="chk2" class="w4-label w4-label-secondary w4-label-md" style="cursor: pointer;">Recibir
-                        notificaciones</label>
-                    <input type="checkbox" id="chk2" class="w4-checkbox w4-checkbox-secondary w4-checkbox-md" checked />
-                </div>
-
-                <!-- Label Required and Error -->
-                <div
-                    style="display: flex; gap: 0.75rem; align-items: center; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); inline-size: 300px; border: 1px solid hsl(var(--w4-error));">
-                    <input type="checkbox" id="chk3"
-                        class="w4-checkbox w4-checkbox-error w4-checkbox-md w4-checkbox-invalid" />
-                    <label for="chk3" class="w4-label w4-label-md w4-label-error w4-label-required"
-                        style="cursor: pointer;">Acepto la política de privacidad</label>
-                </div>
-
             </div>
         </section>
-    </div>
+
+        <section id="example-checkbox-integration" class="w4-section w4-section-xl" style="padding-block-end: 2rem;">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Integración con Labels</h2>
+            <hr class="w4-divider w4-divider-info">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+
+                    <!-- Label Right -->
+                    <div class="w4-panel w4-panel-base-100 w4-panel-md" style="box-shadow: var(--w4-shadow-sm);">
+                        <div class="w4-stack w4-stack-horizontal w4-stack-sm" style="align-items: center;">
+                            <input type="checkbox" id="chk1" class="w4-checkbox w4-checkbox-primary w4-checkbox-md" />
+                            <label for="chk1" class="w4-label w4-label-primary w4-label-md"
+                                style="cursor: pointer; margin: 0;">Aceptar
+                                términos y
+                                condiciones</label>
+                        </div>
+                    </div>
+
+                    <!-- Label Left -->
+                    <div class="w4-panel w4-panel-base-100 w4-panel-md" style="box-shadow: var(--w4-shadow-sm);">
+                        <div class="w4-stack w4-stack-horizontal w4-stack-sm"
+                            style="align-items: center; justify-content: space-between;">
+                            <label for="chk2" class="w4-label w4-label-secondary w4-label-md"
+                                style="cursor: pointer; margin: 0;">Recibir
+                                notificaciones</label>
+                            <input type="checkbox" id="chk2" class="w4-checkbox w4-checkbox-secondary w4-checkbox-md"
+                                checked />
+                        </div>
+                    </div>
+
+                    <!-- Label Required and Error -->
+                    <div class="w4-panel w4-panel-base-100 w4-panel-md"
+                        style="box-shadow: var(--w4-shadow-sm); border: 1px solid hsl(var(--w4-error));">
+                        <div class="w4-stack w4-stack-horizontal w4-stack-sm" style="align-items: center;">
+                            <input type="checkbox" id="chk3"
+                                class="w4-checkbox w4-checkbox-error w4-checkbox-md w4-checkbox-invalid" />
+                            <label for="chk3" class="w4-label w4-label-md w4-label-error w4-label-required"
+                                style="cursor: pointer; margin: 0;">Acepto la política de privacidad</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
 
     @NativeUIScripts
     @NativeUIInit

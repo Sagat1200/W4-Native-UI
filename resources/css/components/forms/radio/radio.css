@@ -17,10 +17,11 @@
   border-radius: var(--w4-radius-radio, var(--w4-radius-pill));
   
   /* Surface Tokens */
-  border-width: var(--w4-border-width-control, 1px);
+  border-width: var(--w4-border-width-control, var(--w4-btn-border-width, 1px));
   border-style: solid;
   border-color: var(--w4-radio-border-color, hsl(var(--w4-base-content) / 0.2));
   background-color: var(--w4-radio-bg, hsl(var(--w4-base-100)));
+  box-shadow: var(--w4-radio-shadow, 0 0 #0000);
   
   /* Color Tokens (For SVG fill) */
   --w4-radio-mark-color: hsl(var(--w4-base-100));
@@ -39,7 +40,7 @@
   background-color: var(--w4-radio-color, hsl(var(--w4-base-content)));
   border-color: var(--w4-radio-color, hsl(var(--w4-base-content)));
   animation: w4-radio-pop var(--w4-transition-fast) ease-out;
-  box-shadow: inset 0 0 0 4px var(--w4-radio-mark-color);
+  box-shadow: var(--w4-radio-shadow, 0 0 #0000), inset 0 0 0 4px var(--w4-radio-mark-color);
 }
 
 /* ----------------------------------

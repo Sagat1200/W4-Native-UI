@@ -9,6 +9,8 @@
   line-height: 1;
   color: var(--w4-icon-color, currentColor);
   font-size: var(--w4-icon-size, 1rem);
+  inline-size: 1em;
+  block-size: 1em;
   flex-shrink: 0;
   vertical-align: middle;
   transition: color var(--w4-transition-fast), filter var(--w4-transition-fast), opacity var(--w4-transition-fast);

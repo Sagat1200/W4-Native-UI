@@ -22,8 +22,15 @@
   --w4-radius-badge: 0.4rem;
   --w4-radius-card: 0.4rem;
   --w4-radius-input: 0.4rem;
+  --w4-radius-checkbox: 0rem;
   
   --w4-btn-border-width: 2px;
+  --w4-border-width-control: 2px;
   --w4-shadow-sm: 4px 4px 0px 0px hsl(var(--w4-base-content));
   --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
+  --w4-checkbox-shadow: 4px 4px 0px 0px hsl(var(--w4-base-content));
+  
+  /* Textarea */
+  --w4-textarea-shadow: 4px 4px 0px 0px hsl(var(--w4-base-content));
+  --w4-textarea-shadow-focus: 4px 4px 0px 0px hsl(var(--w4-base-content));
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="native-ui.light">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -131,7 +131,7 @@
 
     <main id="main-toast" class="w4-container w4-container-xl">
 
-        <div style="margin-block-start: 2rem;">
+        <div class="w4-section w4-section-xl">
             <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Toast</h1>
             <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente de estado
                 w4-toast</p>

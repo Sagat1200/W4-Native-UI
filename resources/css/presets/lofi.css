@@ -24,6 +24,11 @@
   --w4-radius-badge: 0px;
   --w4-radius-card: 0px;
   --w4-radius-input: 0px;
+  /* Checkbox & Radio */
+  --w4-radius-checkbox: 0px;
+  
+  /* Textarea */
+  --w4-radius-input: 0px;
   
   --w4-btn-border-width: 1px;
   --w4-shadow-sm: none;

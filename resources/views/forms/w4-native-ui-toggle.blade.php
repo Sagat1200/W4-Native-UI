@@ -6,123 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Toggle Lab</title>
     @NativeUIStyles
-    <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-container {
-            max-inline-size: 1200px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.5rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.7);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            font-size: 1rem;
-            min-inline-size: 200px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .preview-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding: 2rem;
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .preview-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-            background-color: hsl(var(--w4-base-100));
-            padding: 1.5rem;
-            border-radius: var(--w4-radius-card);
-            box-shadow: var(--w4-shadow-sm);
-            min-inline-size: 120px;
-            text-align: center;
-        }
-
-        .preview-label-desc {
-            font-size: 0.75rem;
-            color: hsl(var(--w4-base-content) / 0.6);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 600;
-        }
-
-        .label-text {
-            font-size: 0.875rem;
-            font-weight: 500;
-            cursor: pointer;
-        }
-    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
 
-    <div class="lab-container">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: Toggle Lab</h1>
-                <p class="lab-subtitle">Entorno de pruebas visuales para el componente de estado w4-toggle</p>
-            </div>
-
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar Tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+    <div class="w4-navbar w4-navbar-primary">
+        <div class="w4-navbar-start">
+            <button class="w4-button w4-button-ghost w4-button-square">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="w4-icon w4-icon-md stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <button class="w4-button w4-button-ghost">Native UI</button>
+        </div>
+        <div class="w4-navbar-center">
+            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs">
+                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -157,173 +62,227 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Toggle</h1>
-            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+    <main class="w4-container w4-container-xl">
+
+        <div class="w4-section w4-section-xl">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Toggle</h1>
+            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente de estado
+                w4-toggle</p>
+        </div>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Toggle</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Toggle</strong> (interruptor) es un elemento visual que permite al usuario
                 alternar entre dos estados opuestos, generalmente "encendido" y "apagado". Proporciona retroalimentación
                 visual inmediata, similar a un interruptor de luz físico, y es ideal para ajustes de configuración que
                 aplican cambios instantáneos.
             </p>
-            <br>
-            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
-            <ul class="w4-text w4-text-base w4-text-start"
-                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
-                <li><strong>Preferencias del sistema:</strong> Activar o desactivar características globales como el
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary">Casos de Uso Comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical">
+                <li><strong class="w4-text-active">Preferencias del sistema:</strong> Activar o desactivar
+                    características globales como el
                     "Modo oscuro" o "Notificaciones push".</li>
-                <li><strong>Configuraciones de privacidad:</strong> Controlar permisos rápidos, como "Perfil público" o
+                <li><strong class="w4-text-active">Configuraciones de privacidad:</strong> Controlar permisos rápidos,
+                    como "Perfil público" o
                     "Compartir ubicación".</li>
-                <li><strong>Filtros instantáneos:</strong> Alternar vistas o estados en tablas y listas (ej. "Mostrar
+                <li><strong class="w4-text-active">Filtros instantáneos:</strong> Alternar vistas o estados en tablas y
+                    listas (ej. "Mostrar
                     solo elementos activos").</li>
-                <li><strong>Funciones experimentales:</strong> Habilitar características beta en paneles de
+                <li><strong class="w4-text-active">Funciones experimentales:</strong> Habilitar características beta en
+                    paneles de
                     administración.</li>
             </ul>
         </section>
 
-        <section>
-            <h2 class="section-title">Variantes de Color Semánticas</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-md" checked />
-                    <span class="preview-label-desc">Default</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-primary" checked />
-                    <span class="preview-label-desc">Primary</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-secondary" checked />
-                    <span class="preview-label-desc">Secondary</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-accent" checked />
-                    <span class="preview-label-desc">Accent</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-info" checked />
-                    <span class="preview-label-desc">Info</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-success" checked />
-                    <span class="preview-label-desc">Success</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-warning" checked />
-                    <span class="preview-label-desc">Warning</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-error" checked />
-                    <span class="preview-label-desc">Error</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary))">Tamaños Explícitos (XS - XL)</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-xs" checked />
-                    <span class="preview-label-desc">XS</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-sm" checked />
-                    <span class="preview-label-desc">SM</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md" checked />
-                    <span class="preview-label-desc">MD</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-lg" checked />
-                    <span class="preview-label-desc">LG</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-xl" checked />
-                    <span class="preview-label-desc">XL</span>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color Semánticas</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid w4-grid-md w4-grid-6">
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-md" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">Default</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-primary" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">Primary</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-secondary" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">Secondary</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-accent" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">Accent</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-info" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">Info</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-success" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">Success</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-warning" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">Warning</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-md w4-toggle-error" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">Error</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-accent))">Estados Pseudo-Classes</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md" />
-                    <span class="preview-label-desc">Unchecked</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md" checked />
-                    <span class="preview-label-desc">Checked</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-error))">Estados CSS / Data-States / Validation
-            </h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md w4-toggle-disabled"
-                        checked />
-                    <span class="preview-label-desc">Disabled</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md w4-toggle-readonly"
-                        checked />
-                    <span class="preview-label-desc">Readonly</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md w4-toggle-invalid" />
-                    <span class="preview-label-desc">Invalid (Border Error)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md w4-toggle-valid" />
-                    <span class="preview-label-desc">Valid (Border Success)</span>
-                </div>
-                <div class="preview-item">
-                    <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md w4-toggle-loading" checked />
-                    <span class="preview-label-desc">Loading</span>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Tamaños Explícitos (XS - XL)</h2>
+            <hr class="w4-divider w4-divider-accent">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid w4-grid-md w4-grid-5">
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-xs" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">XS</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-sm" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">SM</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">MD</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-lg" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">LG</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-xl" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">XL</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-info))">Integración con Labels</h2>
-            <div class="preview-group" style="flex-direction: column; align-items: flex-start;">
-
-                <!-- Label Right -->
-                <div
-                    style="display: flex; gap: 0.75rem; align-items: center; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); inline-size: 300px;">
-                    <input type="checkbox" id="tgl1" class="w4-toggle w4-toggle-primary w4-toggle-md" />
-                    <label for="tgl1" class="w4-label w4-label-primary w4-label-md" style="cursor: pointer;">Activar
-                        Notificaciones</label>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Estados Pseudo-Classes</h2>
+            <hr class="w4-divider w4-divider-secondary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid w4-grid-md w4-grid-6">
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md" />
+                        <span class="w4-label w4-label-xs w4-text-muted">Unchecked</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md" checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">Checked</span>
+                    </div>
                 </div>
-
-                <!-- Label Left -->
-                <div
-                    style="display: flex; gap: 0.75rem; align-items: center; justify-content: space-between; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); inline-size: 300px;">
-                    <label for="tgl2" class="w4-label w4-label-secondary w4-label-md" style="cursor: pointer;">Modo
-                        Oscuro</label>
-                    <input type="checkbox" id="tgl2" class="w4-toggle w4-toggle-secondary w4-toggle-md" checked />
-                </div>
-
-                <!-- Label Required and Error -->
-                <div
-                    style="display: flex; gap: 0.75rem; align-items: center; background: hsl(var(--w4-base-100)); padding: 1rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-sm); inline-size: 300px; border: 1px solid hsl(var(--w4-error));">
-                    <input type="checkbox" id="tgl3" class="w4-toggle w4-toggle-error w4-toggle-md w4-toggle-invalid" />
-                    <label for="tgl3" class="w4-label w4-label-md w4-label-error w4-label-required"
-                        style="cursor: pointer;">Acepto compartir mis datos</label>
-                </div>
-
             </div>
         </section>
-    </div>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados CSS / Data-States /
+                Validation</h2>
+            <hr class="w4-divider w4-divider-error">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid w4-grid-md w4-grid-5">
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md w4-toggle-disabled"
+                            checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">Disabled</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md w4-toggle-readonly"
+                            checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">Readonly</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md w4-toggle-invalid" />
+                        <span class="w4-label w4-label-xs w4-text-muted">Invalid (Error)</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md w4-toggle-valid" />
+                        <span class="w4-label w4-label-xs w4-text-muted">Valid (Success)</span>
+                    </div>
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
+                        <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md w4-toggle-loading"
+                            checked />
+                        <span class="w4-label w4-label-xs w4-text-muted">Loading</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Integración con Labels</h2>
+            <hr class="w4-divider w4-divider-info">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid w4-grid-md w4-grid-3">
+
+                    <!-- Label Right -->
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-horizontal w4-stack-sm w4-stack-center w4-stack-start">
+                        <label class="w4-stack w4-stack-horizontal w4-stack-sm w4-stack-center">
+                            <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md" />
+                            <span class="w4-label w4-label-primary w4-label-md">Activar Notificaciones</span>
+                        </label>
+                    </div>
+
+                    <!-- Label Left -->
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-horizontal w4-stack-sm w4-stack-center w4-stack-between">
+                        <label class="w4-stack w4-stack-horizontal w4-stack-sm w4-stack-center w4-stack-between">
+                            <span class="w4-label w4-label-secondary w4-label-md">Modo Oscuro</span>
+                            <input type="checkbox" class="w4-toggle w4-toggle-secondary w4-toggle-md" checked />
+                        </label>
+                    </div>
+
+                    <!-- Label Required and Error -->
+                    <div
+                        class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-horizontal w4-stack-sm w4-stack-center w4-stack-start w4-panel-outline-error">
+                        <label class="w4-stack w4-stack-horizontal w4-stack-sm w4-stack-center">
+                            <input type="checkbox" class="w4-toggle w4-toggle-error w4-toggle-md w4-toggle-invalid" />
+                            <span class="w4-label w4-label-md w4-label-error w4-label-required">Acepto compartir mis
+                                datos</span>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     @NativeUIScripts
     @NativeUIInit
-    @NativeUILivewire
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
