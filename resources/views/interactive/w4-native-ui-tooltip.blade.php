@@ -103,70 +103,68 @@
 
                     <!-- Top (Default) -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">Top (.w4-tooltip-top)</span>
-                        <div class="w4-tooltip w4-tooltip-top mt-6" data-w4-tip="Tooltip en la parte superior">
+
+                        <div class="w4-tooltip w4-tooltip-top m-6" data-w4-tip="Tooltip en la parte superior">
                             <button class="w4-button w4-button-neutral w4-button-md">Hover Top</button>
                         </div>
                     </div>
 
                     <!-- Right -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">Right (.w4-tooltip-right)</span>
-                        <div class="w4-tooltip w4-tooltip-right mt-6" data-w4-tip="Tooltip a la derecha">
+
+                        <div class="w4-tooltip w4-tooltip-right m-6" data-w4-tip="Tooltip a la derecha">
                             <button class="w4-button w4-button-neutral w4-button-md">Hover Right</button>
                         </div>
                     </div>
 
                     <!-- Bottom -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">Bottom (.w4-tooltip-bottom)</span>
-                        <div class="w4-tooltip w4-tooltip-bottom mt-6" data-w4-tip="Tooltip en la parte inferior">
+
+                        <div class="w4-tooltip w4-tooltip-bottom m-6" data-w4-tip="Tooltip en la parte inferior">
                             <button class="w4-button w4-button-neutral w4-button-md">Hover Bottom</button>
                         </div>
                     </div>
 
                     <!-- Left -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">Left (.w4-tooltip-left)</span>
-                        <div class="w4-tooltip w4-tooltip-left mt-6" data-w4-tip="Tooltip a la izquierda">
+
+                        <div class="w4-tooltip w4-tooltip-left m-6" data-w4-tip="Tooltip a la izquierda">
                             <button class="w4-button w4-button-neutral w4-button-md">Hover Left</button>
                         </div>
                     </div>
 
                     <!-- Top Left -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">Top Left (.w4-tooltip-top-left)</span>
-                        <div class="w4-tooltip w4-tooltip-top-left mt-6" data-w4-tip="Native-UI">
+
+                        <div class="w4-tooltip w4-tooltip-top-left m-6" data-w4-tip="Native-UI">
                             <button class="w4-button w4-button-neutral w4-button-md">Hover Top Left</button>
                         </div>
                     </div>
 
                     <!-- Top Right -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">Top Right
-                            (.w4-tooltip-top-right)</span>
-                        <div class="w4-tooltip w4-tooltip-top-right mt-6" data-w4-tip="Native-UI">
+
+                        <div class="w4-tooltip w4-tooltip-top-right m-6" data-w4-tip="Native-UI">
                             <button class="w4-button w4-button-neutral w4-button-md">Hover Top Right</button>
                         </div>
                     </div>
 
                     <!-- Bottom Left -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">Bottom Left
-                            (.w4-tooltip-bottom-left)</span>
-                        <div class="w4-tooltip w4-tooltip-bottom-left mt-6" data-w4-tip="Native-UI">
+
+                        <div class="w4-tooltip w4-tooltip-bottom-left m-6" data-w4-tip="Native-UI">
                             <button class="w4-button w4-button-neutral w4-button-md">Hover Bottom Left</button>
                         </div>
                     </div>
 
                     <!-- Bottom Right -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">Bottom Right
-                            (.w4-tooltip-bottom-right)</span>
-                        <div class="w4-tooltip w4-tooltip-bottom-right mt-6" data-w4-tip="Native-UI">
+
+                        <div class="w4-tooltip w4-tooltip-bottom-right m-6" data-w4-tip="Native-UI">
                             <button class="w4-button w4-button-neutral w4-button-md">Hover Bottom Right</button>
                         </div>
                     </div>
+
 
                 </div>
             </div>
@@ -182,24 +180,24 @@
 
                     <!-- Neutral -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">.w4-tooltip-neutral</span>
-                        <div class="w4-tooltip w4-tooltip-neutral" data-w4-tip="Neutro por defecto">
+
+                        <div class="w4-tooltip w4-tooltip-neutral m-6" data-w4-tip="Neutro por defecto">
                             <button class="w4-button w4-button-neutral w4-button-md w4-button-outline">Neutral</button>
                         </div>
                     </div>
 
                     <!-- Primary -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">.w4-tooltip-primary</span>
-                        <div class="w4-tooltip w4-tooltip-primary w4-tooltip-right" data-w4-tip="Mensaje principal">
+
+                        <div class="w4-tooltip w4-tooltip-primary w4-tooltip-right m-6" data-w4-tip="Mensaje principal">
                             <button class="w4-button w4-button-primary w4-button-md w4-button-outline">Primary</button>
                         </div>
                     </div>
 
                     <!-- Secondary -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">.w4-tooltip-secondary</span>
-                        <div class="w4-tooltip w4-tooltip-secondary" data-w4-tip="Información secundaria">
+
+                        <div class="w4-tooltip w4-tooltip-secondary m-6" data-w4-tip="Información secundaria">
                             <button
                                 class="w4-button w4-button-secondary w4-button-md w4-button-outline">Secondary</button>
                         </div>
@@ -207,80 +205,44 @@
 
                     <!-- Accent -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">.w4-tooltip-accent</span>
-                        <div class="w4-tooltip w4-tooltip-accent w4-tooltip-bottom" data-w4-tip="Destacado / Acento">
+
+                        <div class="w4-tooltip w4-tooltip-accent w4-tooltip-bottom m-6"
+                            data-w4-tip="Destacado / Acento">
                             <button class="w4-button w4-button-accent w4-button-md w4-button-outline">Accent</button>
                         </div>
                     </div>
 
                     <!-- Info -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">.w4-tooltip-info</span>
-                        <div class="w4-tooltip w4-tooltip-info" data-w4-tip="Información general">
+
+                        <div class="w4-tooltip w4-tooltip-info m-6" data-w4-tip="Información general">
                             <button class="w4-button w4-button-info w4-button-md w4-button-outline">Info</button>
                         </div>
                     </div>
 
                     <!-- Success -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">.w4-tooltip-success</span>
-                        <div class="w4-tooltip w4-tooltip-success" data-w4-tip="¡Operación completada!">
+
+                        <div class="w4-tooltip w4-tooltip-success m-6" data-w4-tip="¡Operación completada!">
                             <button class="w4-button w4-button-success w4-button-md w4-button-outline">Success</button>
                         </div>
                     </div>
 
                     <!-- Warning -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">.w4-tooltip-warning</span>
-                        <div class="w4-tooltip w4-tooltip-warning" data-w4-tip="Advertencia: revisa esto">
+
+                        <div class="w4-tooltip w4-tooltip-warning m-6" data-w4-tip="Advertencia: revisa esto">
                             <button class="w4-button w4-button-warning w4-button-md w4-button-outline">Warning</button>
                         </div>
                     </div>
 
                     <!-- Error -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">.w4-tooltip-error</span>
-                        <div class="w4-tooltip w4-tooltip-error" data-w4-tip="Ocurrió un error crítico">
+
+                        <div class="w4-tooltip w4-tooltip-error m-6" data-w4-tip="Ocurrió un error crítico">
                             <button class="w4-button w4-button-error w4-button-md w4-button-outline">Error</button>
                         </div>
                     </div>
-
-                    <!-- Primary Top Left -->
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">Primary (Top Left)</span>
-                        <div class="w4-tooltip w4-tooltip-primary w4-tooltip-top-left" data-w4-tip="Native-UI">
-                            <button class="w4-button w4-button-primary w4-button-md w4-button-outline">Hover Top
-                                Left</button>
-                        </div>
-                    </div>
-
-                    <!-- Primary Top Right -->
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">Primary (Top Right)</span>
-                        <div class="w4-tooltip w4-tooltip-primary w4-tooltip-top-right" data-w4-tip="Native-UI">
-                            <button class="w4-button w4-button-primary w4-button-md w4-button-outline">Hover Top
-                                Right</button>
-                        </div>
-                    </div>
-
-                    <!-- Primary Bottom Left -->
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">Primary (Bottom Left)</span>
-                        <div class="w4-tooltip w4-tooltip-primary w4-tooltip-bottom-left" data-w4-tip="Native-UI">
-                            <button class="w4-button w4-button-primary w4-button-md w4-button-outline">Hover Bottom
-                                Left</button>
-                        </div>
-                    </div>
-
-                    <!-- Primary Bottom Right -->
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted w4-mb-4">Primary (Bottom Right)</span>
-                        <div class="w4-tooltip w4-tooltip-primary w4-tooltip-bottom-right" data-w4-tip="Native-UI">
-                            <button class="w4-button w4-button-primary w4-button-md w4-button-outline">Hover Bottom
-                                Right</button>
-                        </div>
-                    </div>
-
 
                 </div>
             </div>
