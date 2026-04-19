@@ -100,9 +100,7 @@
   --w4-modal-align: flex-end;
 }
 .w4-modal-bottom .w4-modal-box {
-  border-end-start-radius: 0;
-  border-end-end-radius: 0;
-  margin-block-end: -1rem; /* Negate the container padding */
+  margin-block-end: 2rem;
   transform: translateY(100%);
 }
 .w4-modal-open.w4-modal-bottom .w4-modal-box,
@@ -129,13 +127,28 @@
 .w4-modal-base-300 { --w4-modal-bg: hsl(var(--w4-base-300)); }
 
 /* ----------------------------------
-   SIZE SCALES
+   SIZE SCALES (Width)
    ---------------------------------- */
 .w4-modal-xs .w4-modal-box { --w4-modal-max-width: 20rem; }
 .w4-modal-sm .w4-modal-box { --w4-modal-max-width: 24rem; }
 .w4-modal-md .w4-modal-box { --w4-modal-max-width: 32rem; }
 .w4-modal-lg .w4-modal-box { --w4-modal-max-width: 48rem; }
 .w4-modal-xl .w4-modal-box { --w4-modal-max-width: 64rem; }
+.w4-modal-2xl .w4-modal-box { --w4-modal-max-width: 72rem; }
+.w4-modal-3xl .w4-modal-box { --w4-modal-max-width: 80rem; }
+
+
+
+/* ----------------------------------
+   SIZE SCALES (Height)
+   ---------------------------------- */
+.w4-modal-h-auto .w4-modal-box { block-size: auto; } /* Default */
+.w4-modal-h-sm .w4-modal-box { block-size: 24rem; }
+.w4-modal-h-md .w4-modal-box { block-size: 32rem; }
+.w4-modal-h-lg .w4-modal-box { block-size: 48rem; }
+.w4-modal-h-screen .w4-modal-box { block-size: calc(100vh - 2rem); }
+
+/* Full Cover (Width + Height) */
 .w4-modal-full .w4-modal-box { 
   --w4-modal-max-width: 100%; 
   block-size: calc(100vh - 2rem); 
