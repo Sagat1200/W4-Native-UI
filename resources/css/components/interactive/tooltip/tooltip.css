@@ -19,8 +19,8 @@
   visibility: hidden;
   pointer-events: none;
   white-space: nowrap;
-  background-color: var(--w4-neutral);
-  color: var(--w4-neutral-content);
+  background-color: hsl(var(--w4-neutral));
+  color: hsl(var(--w4-neutral-content));
   border-radius: var(--w4-radius-md);
   padding: var(--w4-spacing-1, 0.25rem) var(--w4-spacing-2, 0.5rem);
   font-size: var(--w4-text-sm, 0.875rem);
@@ -28,18 +28,43 @@
   box-shadow: var(--w4-shadow-md);
   transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
   
-  /* Default position (Top) */
+  /* Default position (Top) with added offset gap */
   inset-block-end: 100%;
   inset-inline-start: 50%;
   transform: translateX(-50%) translateY(-0.25rem);
-  margin-block-end: var(--w4-spacing-1);
+  margin-block-end: var(--w4-spacing-2, 0.5rem);
+}
+
+/* Tooltip caret (arrow pointer) pseudo-element */
+.w4-tooltip::after {
+  content: "";
+  position: absolute;
+  z-index: 49; /* Just below the tooltip content */
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  border-style: solid;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  
+  /* Default caret position (Top pointing down) */
+  inset-block-end: 100%;
+  inset-inline-start: 50%;
+  border-width: 5px 5px 0 5px;
+  border-color: hsl(var(--w4-neutral)) transparent transparent transparent;
+  transform: translateX(-50%) translateY(-0.25rem);
+  margin-block-end: calc(var(--w4-spacing-2, 0.5rem) - 5px); /* Align point flush to bottom of bubble */
 }
 
 /* Hover and Open States */
 .w4-tooltip:hover::before,
 .w4-tooltip:focus-visible::before,
 .w4-tooltip.w4-tooltip-open::before,
-.w4-tooltip[data-w4-state~="open"]::before {
+.w4-tooltip[data-w4-state~="open"]::before,
+.w4-tooltip:hover::after,
+.w4-tooltip:focus-visible::after,
+.w4-tooltip.w4-tooltip-open::after,
+.w4-tooltip[data-w4-state~="open"]::after {
   opacity: 1;
   visibility: visible;
 }
@@ -48,7 +73,11 @@
 .w4-tooltip:hover::before,
 .w4-tooltip:focus-visible::before,
 .w4-tooltip.w4-tooltip-open::before,
-.w4-tooltip[data-w4-state~="open"]::before {
+.w4-tooltip[data-w4-state~="open"]::before,
+.w4-tooltip:hover::after,
+.w4-tooltip:focus-visible::after,
+.w4-tooltip.w4-tooltip-open::after,
+.w4-tooltip[data-w4-state~="open"]::after {
   transform: translateX(-50%) translateY(0);
 }
 
@@ -63,7 +92,20 @@
   inset-block-start: auto;
   inset-inline-end: auto;
   transform: translateX(-50%) translateY(-0.25rem);
-  margin-block-end: var(--w4-spacing-1);
+  margin-block-end: var(--w4-spacing-2, 0.5rem);
+  margin-block-start: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.w4-tooltip-top::after {
+  inset-block-end: 100%;
+  inset-inline-start: 50%;
+  inset-block-start: auto;
+  inset-inline-end: auto;
+  border-width: 5px 5px 0 5px;
+  border-color: hsl(var(--w4-neutral)) transparent transparent transparent;
+  transform: translateX(-50%) translateY(-0.25rem);
+  margin-block-end: calc(var(--w4-spacing-2, 0.5rem) - 5px);
   margin-block-start: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
@@ -71,7 +113,11 @@
 .w4-tooltip-top:hover::before,
 .w4-tooltip-top:focus-visible::before,
 .w4-tooltip-top.w4-tooltip-open::before,
-.w4-tooltip-top[data-w4-state~="open"]::before {
+.w4-tooltip-top[data-w4-state~="open"]::before,
+.w4-tooltip-top:hover::after,
+.w4-tooltip-top:focus-visible::after,
+.w4-tooltip-top.w4-tooltip-open::after,
+.w4-tooltip-top[data-w4-state~="open"]::after {
   transform: translateX(-50%) translateY(0);
 }
 
@@ -82,7 +128,20 @@
   inset-block-end: auto;
   inset-inline-end: auto;
   transform: translateX(-50%) translateY(0.25rem);
-  margin-block-start: var(--w4-spacing-1);
+  margin-block-start: var(--w4-spacing-2, 0.5rem);
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.w4-tooltip-bottom::after {
+  inset-block-start: 100%;
+  inset-inline-start: 50%;
+  inset-block-end: auto;
+  inset-inline-end: auto;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent hsl(var(--w4-neutral)) transparent;
+  transform: translateX(-50%) translateY(0.25rem);
+  margin-block-start: calc(var(--w4-spacing-2, 0.5rem) - 5px);
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
@@ -90,7 +149,11 @@
 .w4-tooltip-bottom:hover::before,
 .w4-tooltip-bottom:focus-visible::before,
 .w4-tooltip-bottom.w4-tooltip-open::before,
-.w4-tooltip-bottom[data-w4-state~="open"]::before {
+.w4-tooltip-bottom[data-w4-state~="open"]::before,
+.w4-tooltip-bottom:hover::after,
+.w4-tooltip-bottom:focus-visible::after,
+.w4-tooltip-bottom.w4-tooltip-open::after,
+.w4-tooltip-bottom[data-w4-state~="open"]::after {
   transform: translateX(-50%) translateY(0);
 }
 
@@ -101,7 +164,20 @@
   inset-inline-start: auto;
   inset-block-end: auto;
   transform: translateY(-50%) translateX(-0.25rem);
-  margin-inline-end: var(--w4-spacing-1);
+  margin-inline-end: var(--w4-spacing-2, 0.5rem);
+  margin-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.w4-tooltip-left::after {
+  inset-inline-end: 100%;
+  inset-block-start: 50%;
+  inset-inline-start: auto;
+  inset-block-end: auto;
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent hsl(var(--w4-neutral));
+  transform: translateY(-50%) translateX(-0.25rem);
+  margin-inline-end: calc(var(--w4-spacing-2, 0.5rem) - 5px);
   margin-inline-start: 0;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -109,7 +185,11 @@
 .w4-tooltip-left:hover::before,
 .w4-tooltip-left:focus-visible::before,
 .w4-tooltip-left.w4-tooltip-open::before,
-.w4-tooltip-left[data-w4-state~="open"]::before {
+.w4-tooltip-left[data-w4-state~="open"]::before,
+.w4-tooltip-left:hover::after,
+.w4-tooltip-left:focus-visible::after,
+.w4-tooltip-left.w4-tooltip-open::after,
+.w4-tooltip-left[data-w4-state~="open"]::after {
   transform: translateY(-50%) translateX(0);
 }
 
@@ -120,7 +200,20 @@
   inset-inline-end: auto;
   inset-block-end: auto;
   transform: translateY(-50%) translateX(0.25rem);
-  margin-inline-start: var(--w4-spacing-1);
+  margin-inline-start: var(--w4-spacing-2, 0.5rem);
+  margin-inline-end: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.w4-tooltip-right::after {
+  inset-inline-start: 100%;
+  inset-block-start: 50%;
+  inset-inline-end: auto;
+  inset-block-end: auto;
+  border-width: 5px 5px 5px 0;
+  border-color: transparent hsl(var(--w4-neutral)) transparent transparent;
+  transform: translateY(-50%) translateX(0.25rem);
+  margin-inline-start: calc(var(--w4-spacing-2, 0.5rem) - 5px);
   margin-inline-end: 0;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -128,8 +221,156 @@
 .w4-tooltip-right:hover::before,
 .w4-tooltip-right:focus-visible::before,
 .w4-tooltip-right.w4-tooltip-open::before,
-.w4-tooltip-right[data-w4-state~="open"]::before {
+.w4-tooltip-right[data-w4-state~="open"]::before,
+.w4-tooltip-right:hover::after,
+.w4-tooltip-right:focus-visible::after,
+.w4-tooltip-right.w4-tooltip-open::after,
+.w4-tooltip-right[data-w4-state~="open"]::after {
   transform: translateY(-50%) translateX(0);
+}
+
+/* Top Left */
+.w4-tooltip-top-left::before {
+  inset-block-end: 100%;
+  inset-inline-end: 100%;
+  inset-block-start: auto;
+  inset-inline-start: auto;
+  transform: translateY(-0.25rem) translateX(-0.25rem);
+  margin-block-end: var(--w4-spacing-2, 0.5rem);
+  margin-block-start: 0;
+  margin-inline-end: var(--w4-spacing-2, 0.5rem);
+  margin-inline-start: 0;
+}
+.w4-tooltip-top-left::after {
+  inset-block-end: 100%;
+  inset-inline-end: 100%;
+  inset-block-start: auto;
+  inset-inline-start: auto;
+  border-width: 6px 6px 0 0;
+  border-color: hsl(var(--w4-neutral)) transparent transparent transparent;
+  transform: translateY(-0.25rem) translateX(-0.25rem);
+  margin-block-end: calc(var(--w4-spacing-2, 0.5rem) - 6px);
+  margin-block-start: 0;
+  margin-inline-end: calc(var(--w4-spacing-2, 0.5rem) - 6px);
+  margin-inline-start: 0;
+}
+.w4-tooltip-top-left:hover::before,
+.w4-tooltip-top-left:focus-visible::before,
+.w4-tooltip-top-left.w4-tooltip-open::before,
+.w4-tooltip-top-left[data-w4-state~="open"]::before,
+.w4-tooltip-top-left:hover::after,
+.w4-tooltip-top-left:focus-visible::after,
+.w4-tooltip-top-left.w4-tooltip-open::after,
+.w4-tooltip-top-left[data-w4-state~="open"]::after {
+  transform: translateY(0) translateX(0);
+}
+
+/* Top Right */
+.w4-tooltip-top-right::before {
+  inset-block-end: 100%;
+  inset-inline-start: 100%;
+  inset-block-start: auto;
+  inset-inline-end: auto;
+  transform: translateY(-0.25rem) translateX(0.25rem);
+  margin-block-end: var(--w4-spacing-2, 0.5rem);
+  margin-block-start: 0;
+  margin-inline-start: var(--w4-spacing-2, 0.5rem);
+  margin-inline-end: 0;
+}
+.w4-tooltip-top-right::after {
+  inset-block-end: 100%;
+  inset-inline-start: 100%;
+  inset-block-start: auto;
+  inset-inline-end: auto;
+  border-width: 6px 0 0 6px;
+  border-color: hsl(var(--w4-neutral)) transparent transparent transparent;
+  transform: translateY(-0.25rem) translateX(0.25rem);
+  margin-block-end: calc(var(--w4-spacing-2, 0.5rem) - 6px);
+  margin-block-start: 0;
+  margin-inline-start: calc(var(--w4-spacing-2, 0.5rem) - 6px);
+  margin-inline-end: 0;
+}
+.w4-tooltip-top-right:hover::before,
+.w4-tooltip-top-right:focus-visible::before,
+.w4-tooltip-top-right.w4-tooltip-open::before,
+.w4-tooltip-top-right[data-w4-state~="open"]::before,
+.w4-tooltip-top-right:hover::after,
+.w4-tooltip-top-right:focus-visible::after,
+.w4-tooltip-top-right.w4-tooltip-open::after,
+.w4-tooltip-top-right[data-w4-state~="open"]::after {
+  transform: translateY(0) translateX(0);
+}
+
+/* Bottom Left */
+.w4-tooltip-bottom-left::before {
+  inset-block-start: 100%;
+  inset-inline-end: 100%;
+  inset-block-end: auto;
+  inset-inline-start: auto;
+  transform: translateY(0.25rem) translateX(-0.25rem);
+  margin-block-start: var(--w4-spacing-2, 0.5rem);
+  margin-block-end: 0;
+  margin-inline-end: var(--w4-spacing-2, 0.5rem);
+  margin-inline-start: 0;
+}
+.w4-tooltip-bottom-left::after {
+  inset-block-start: 100%;
+  inset-inline-end: 100%;
+  inset-block-end: auto;
+  inset-inline-start: auto;
+  border-width: 0 6px 6px 0;
+  border-color: transparent transparent hsl(var(--w4-neutral)) transparent;
+  transform: translateY(0.25rem) translateX(-0.25rem);
+  margin-block-start: calc(var(--w4-spacing-2, 0.5rem) - 6px);
+  margin-block-end: 0;
+  margin-inline-end: calc(var(--w4-spacing-2, 0.5rem) - 6px);
+  margin-inline-start: 0;
+}
+.w4-tooltip-bottom-left:hover::before,
+.w4-tooltip-bottom-left:focus-visible::before,
+.w4-tooltip-bottom-left.w4-tooltip-open::before,
+.w4-tooltip-bottom-left[data-w4-state~="open"]::before,
+.w4-tooltip-bottom-left:hover::after,
+.w4-tooltip-bottom-left:focus-visible::after,
+.w4-tooltip-bottom-left.w4-tooltip-open::after,
+.w4-tooltip-bottom-left[data-w4-state~="open"]::after {
+  transform: translateY(0) translateX(0);
+}
+
+/* Bottom Right */
+.w4-tooltip-bottom-right::before {
+  inset-block-start: 100%;
+  inset-inline-start: 100%;
+  inset-block-end: auto;
+  inset-inline-end: auto;
+  transform: translateY(0.25rem) translateX(0.25rem);
+  margin-block-start: var(--w4-spacing-2, 0.5rem);
+  margin-block-end: 0;
+  margin-inline-start: var(--w4-spacing-2, 0.5rem);
+  margin-inline-end: 0;
+}
+.w4-tooltip-bottom-right::after {
+  inset-block-start: 100%;
+  inset-inline-start: 100%;
+  inset-block-end: auto;
+  inset-inline-end: auto;
+  border-width: 0 0 6px 6px;
+  border-color: transparent transparent hsl(var(--w4-neutral)) transparent;
+  transform: translateY(0.25rem) translateX(0.25rem);
+  margin-block-start: calc(var(--w4-spacing-2, 0.5rem) - 6px);
+  margin-block-end: 0;
+  margin-inline-start: calc(var(--w4-spacing-2, 0.5rem) - 6px);
+  margin-inline-end: 0;
+}
+.w4-tooltip-bottom-right:hover::before,
+.w4-tooltip-bottom-right:focus-visible::before,
+.w4-tooltip-bottom-right.w4-tooltip-open::before,
+.w4-tooltip-bottom-right[data-w4-state~="open"]::before,
+.w4-tooltip-bottom-right:hover::after,
+.w4-tooltip-bottom-right:focus-visible::after,
+.w4-tooltip-bottom-right.w4-tooltip-open::after,
+.w4-tooltip-bottom-right[data-w4-state~="open"]::after {
+  transform: translateY(0) translateX(0);
 }
 
 /* ==========================================================================
@@ -150,17 +391,60 @@
 .w4-tooltip-xl::before { font-size: var(--w4-text-xl, 1.25rem); padding: var(--w4-spacing-3, 0.75rem) var(--w4-spacing-5, 1.25rem); }
 
 /* ==========================================================================
-   Variants (Colors)
+   Variants (Colores Semánticos)
    ========================================================================== */
 
-.w4-tooltip.w4-variant-primary::before { background-color: var(--w4-primary); color: var(--w4-primary-content); }
-.w4-tooltip.w4-variant-secondary::before { background-color: var(--w4-secondary); color: var(--w4-secondary-content); }
-.w4-tooltip.w4-variant-accent::before { background-color: var(--w4-accent); color: var(--w4-accent-content); }
-.w4-tooltip.w4-variant-info::before { background-color: var(--w4-info); color: var(--w4-info-content); }
-.w4-tooltip.w4-variant-success::before { background-color: var(--w4-success); color: var(--w4-success-content); }
-.w4-tooltip.w4-variant-warning::before { background-color: var(--w4-warning); color: var(--w4-warning-content); }
-.w4-tooltip.w4-variant-error::before { background-color: var(--w4-error); color: var(--w4-error-content); }
-.w4-tooltip.w4-variant-neutral::before { background-color: var(--w4-neutral); color: var(--w4-neutral-content); }
+.w4-tooltip-primary::before, .w4-tooltip.w4-variant-primary::before { background-color: hsl(var(--w4-primary)); color: hsl(var(--w4-primary-content)); }
+.w4-tooltip-secondary::before, .w4-tooltip.w4-variant-secondary::before { background-color: hsl(var(--w4-secondary)); color: hsl(var(--w4-secondary-content)); }
+.w4-tooltip-accent::before, .w4-tooltip.w4-variant-accent::before { background-color: hsl(var(--w4-accent)); color: hsl(var(--w4-accent-content)); }
+.w4-tooltip-info::before, .w4-tooltip.w4-variant-info::before { background-color: hsl(var(--w4-info)); color: hsl(var(--w4-info-content)); }
+.w4-tooltip-success::before, .w4-tooltip.w4-variant-success::before { background-color: hsl(var(--w4-success)); color: hsl(var(--w4-success-content)); }
+.w4-tooltip-warning::before, .w4-tooltip.w4-variant-warning::before { background-color: hsl(var(--w4-warning)); color: hsl(var(--w4-warning-content)); }
+.w4-tooltip-error::before, .w4-tooltip.w4-variant-error::before { background-color: hsl(var(--w4-error)); color: hsl(var(--w4-error-content)); }
+.w4-tooltip-neutral::before, .w4-tooltip.w4-variant-neutral::before { background-color: hsl(var(--w4-neutral)); color: hsl(var(--w4-neutral-content)); }
+
+/* Caret Colors */
+.w4-tooltip-primary.w4-tooltip-top::after, .w4-tooltip-primary.w4-tooltip-top-left::after, .w4-tooltip-primary.w4-tooltip-top-right::after, .w4-tooltip.w4-variant-primary.w4-tooltip-top::after, .w4-tooltip.w4-variant-primary.w4-tooltip-top-left::after, .w4-tooltip.w4-variant-primary.w4-tooltip-top-right::after,
+.w4-tooltip-primary:not([class*="w4-tooltip-bottom"]):not([class*="w4-tooltip-left"]):not([class*="w4-tooltip-right"])::after { border-color: hsl(var(--w4-primary)) transparent transparent transparent; }
+.w4-tooltip-primary.w4-tooltip-bottom::after, .w4-tooltip-primary.w4-tooltip-bottom-left::after, .w4-tooltip-primary.w4-tooltip-bottom-right::after, .w4-tooltip.w4-variant-primary.w4-tooltip-bottom::after, .w4-tooltip.w4-variant-primary.w4-tooltip-bottom-left::after, .w4-tooltip.w4-variant-primary.w4-tooltip-bottom-right::after { border-color: transparent transparent hsl(var(--w4-primary)) transparent; }
+.w4-tooltip-primary.w4-tooltip-left::after, .w4-tooltip.w4-variant-primary.w4-tooltip-left::after { border-color: transparent transparent transparent hsl(var(--w4-primary)); }
+.w4-tooltip-primary.w4-tooltip-right::after, .w4-tooltip.w4-variant-primary.w4-tooltip-right::after { border-color: transparent hsl(var(--w4-primary)) transparent transparent; }
+
+.w4-tooltip-secondary.w4-tooltip-top::after, .w4-tooltip-secondary.w4-tooltip-top-left::after, .w4-tooltip-secondary.w4-tooltip-top-right::after, .w4-tooltip.w4-variant-secondary.w4-tooltip-top::after, .w4-tooltip.w4-variant-secondary.w4-tooltip-top-left::after, .w4-tooltip.w4-variant-secondary.w4-tooltip-top-right::after,
+.w4-tooltip-secondary:not([class*="w4-tooltip-bottom"]):not([class*="w4-tooltip-left"]):not([class*="w4-tooltip-right"])::after { border-color: hsl(var(--w4-secondary)) transparent transparent transparent; }
+.w4-tooltip-secondary.w4-tooltip-bottom::after, .w4-tooltip-secondary.w4-tooltip-bottom-left::after, .w4-tooltip-secondary.w4-tooltip-bottom-right::after, .w4-tooltip.w4-variant-secondary.w4-tooltip-bottom::after, .w4-tooltip.w4-variant-secondary.w4-tooltip-bottom-left::after, .w4-tooltip.w4-variant-secondary.w4-tooltip-bottom-right::after { border-color: transparent transparent hsl(var(--w4-secondary)) transparent; }
+.w4-tooltip-secondary.w4-tooltip-left::after, .w4-tooltip.w4-variant-secondary.w4-tooltip-left::after { border-color: transparent transparent transparent hsl(var(--w4-secondary)); }
+.w4-tooltip-secondary.w4-tooltip-right::after, .w4-tooltip.w4-variant-secondary.w4-tooltip-right::after { border-color: transparent hsl(var(--w4-secondary)) transparent transparent; }
+
+.w4-tooltip-accent.w4-tooltip-top::after, .w4-tooltip-accent.w4-tooltip-top-left::after, .w4-tooltip-accent.w4-tooltip-top-right::after, .w4-tooltip.w4-variant-accent.w4-tooltip-top::after, .w4-tooltip.w4-variant-accent.w4-tooltip-top-left::after, .w4-tooltip.w4-variant-accent.w4-tooltip-top-right::after,
+.w4-tooltip-accent:not([class*="w4-tooltip-bottom"]):not([class*="w4-tooltip-left"]):not([class*="w4-tooltip-right"])::after { border-color: hsl(var(--w4-accent)) transparent transparent transparent; }
+.w4-tooltip-accent.w4-tooltip-bottom::after, .w4-tooltip-accent.w4-tooltip-bottom-left::after, .w4-tooltip-accent.w4-tooltip-bottom-right::after, .w4-tooltip.w4-variant-accent.w4-tooltip-bottom::after, .w4-tooltip.w4-variant-accent.w4-tooltip-bottom-left::after, .w4-tooltip.w4-variant-accent.w4-tooltip-bottom-right::after { border-color: transparent transparent hsl(var(--w4-accent)) transparent; }
+.w4-tooltip-accent.w4-tooltip-left::after, .w4-tooltip.w4-variant-accent.w4-tooltip-left::after { border-color: transparent transparent transparent hsl(var(--w4-accent)); }
+.w4-tooltip-accent.w4-tooltip-right::after, .w4-tooltip.w4-variant-accent.w4-tooltip-right::after { border-color: transparent hsl(var(--w4-accent)) transparent transparent; }
+
+.w4-tooltip-info.w4-tooltip-top::after, .w4-tooltip-info.w4-tooltip-top-left::after, .w4-tooltip-info.w4-tooltip-top-right::after, .w4-tooltip.w4-variant-info.w4-tooltip-top::after, .w4-tooltip.w4-variant-info.w4-tooltip-top-left::after, .w4-tooltip.w4-variant-info.w4-tooltip-top-right::after,
+.w4-tooltip-info:not([class*="w4-tooltip-bottom"]):not([class*="w4-tooltip-left"]):not([class*="w4-tooltip-right"])::after { border-color: hsl(var(--w4-info)) transparent transparent transparent; }
+.w4-tooltip-info.w4-tooltip-bottom::after, .w4-tooltip-info.w4-tooltip-bottom-left::after, .w4-tooltip-info.w4-tooltip-bottom-right::after, .w4-tooltip.w4-variant-info.w4-tooltip-bottom::after, .w4-tooltip.w4-variant-info.w4-tooltip-bottom-left::after, .w4-tooltip.w4-variant-info.w4-tooltip-bottom-right::after { border-color: transparent transparent hsl(var(--w4-info)) transparent; }
+.w4-tooltip-info.w4-tooltip-left::after, .w4-tooltip.w4-variant-info.w4-tooltip-left::after { border-color: transparent transparent transparent hsl(var(--w4-info)); }
+.w4-tooltip-info.w4-tooltip-right::after, .w4-tooltip.w4-variant-info.w4-tooltip-right::after { border-color: transparent hsl(var(--w4-info)) transparent transparent; }
+
+.w4-tooltip-success.w4-tooltip-top::after, .w4-tooltip-success.w4-tooltip-top-left::after, .w4-tooltip-success.w4-tooltip-top-right::after, .w4-tooltip.w4-variant-success.w4-tooltip-top::after, .w4-tooltip.w4-variant-success.w4-tooltip-top-left::after, .w4-tooltip.w4-variant-success.w4-tooltip-top-right::after,
+.w4-tooltip-success:not([class*="w4-tooltip-bottom"]):not([class*="w4-tooltip-left"]):not([class*="w4-tooltip-right"])::after { border-color: hsl(var(--w4-success)) transparent transparent transparent; }
+.w4-tooltip-success.w4-tooltip-bottom::after, .w4-tooltip-success.w4-tooltip-bottom-left::after, .w4-tooltip-success.w4-tooltip-bottom-right::after, .w4-tooltip.w4-variant-success.w4-tooltip-bottom::after, .w4-tooltip.w4-variant-success.w4-tooltip-bottom-left::after, .w4-tooltip.w4-variant-success.w4-tooltip-bottom-right::after { border-color: transparent transparent hsl(var(--w4-success)) transparent; }
+.w4-tooltip-success.w4-tooltip-left::after, .w4-tooltip.w4-variant-success.w4-tooltip-left::after { border-color: transparent transparent transparent hsl(var(--w4-success)); }
+.w4-tooltip-success.w4-tooltip-right::after, .w4-tooltip.w4-variant-success.w4-tooltip-right::after { border-color: transparent hsl(var(--w4-success)) transparent transparent; }
+
+.w4-tooltip-warning.w4-tooltip-top::after, .w4-tooltip-warning.w4-tooltip-top-left::after, .w4-tooltip-warning.w4-tooltip-top-right::after, .w4-tooltip.w4-variant-warning.w4-tooltip-top::after, .w4-tooltip.w4-variant-warning.w4-tooltip-top-left::after, .w4-tooltip.w4-variant-warning.w4-tooltip-top-right::after,
+.w4-tooltip-warning:not([class*="w4-tooltip-bottom"]):not([class*="w4-tooltip-left"]):not([class*="w4-tooltip-right"])::after { border-color: hsl(var(--w4-warning)) transparent transparent transparent; }
+.w4-tooltip-warning.w4-tooltip-bottom::after, .w4-tooltip-warning.w4-tooltip-bottom-left::after, .w4-tooltip-warning.w4-tooltip-bottom-right::after, .w4-tooltip.w4-variant-warning.w4-tooltip-bottom::after, .w4-tooltip.w4-variant-warning.w4-tooltip-bottom-left::after, .w4-tooltip.w4-variant-warning.w4-tooltip-bottom-right::after { border-color: transparent transparent hsl(var(--w4-warning)) transparent; }
+.w4-tooltip-warning.w4-tooltip-left::after, .w4-tooltip.w4-variant-warning.w4-tooltip-left::after { border-color: transparent transparent transparent hsl(var(--w4-warning)); }
+.w4-tooltip-warning.w4-tooltip-right::after, .w4-tooltip.w4-variant-warning.w4-tooltip-right::after { border-color: transparent hsl(var(--w4-warning)) transparent transparent; }
+
+.w4-tooltip-error.w4-tooltip-top::after, .w4-tooltip-error.w4-tooltip-top-left::after, .w4-tooltip-error.w4-tooltip-top-right::after, .w4-tooltip.w4-variant-error.w4-tooltip-top::after, .w4-tooltip.w4-variant-error.w4-tooltip-top-left::after, .w4-tooltip.w4-variant-error.w4-tooltip-top-right::after,
+.w4-tooltip-error:not([class*="w4-tooltip-bottom"]):not([class*="w4-tooltip-left"]):not([class*="w4-tooltip-right"])::after { border-color: hsl(var(--w4-error)) transparent transparent transparent; }
+.w4-tooltip-error.w4-tooltip-bottom::after, .w4-tooltip-error.w4-tooltip-bottom-left::after, .w4-tooltip-error.w4-tooltip-bottom-right::after, .w4-tooltip.w4-variant-error.w4-tooltip-bottom::after, .w4-tooltip.w4-variant-error.w4-tooltip-bottom-left::after, .w4-tooltip.w4-variant-error.w4-tooltip-bottom-right::after { border-color: transparent transparent hsl(var(--w4-error)) transparent; }
+.w4-tooltip-error.w4-tooltip-left::after, .w4-tooltip.w4-variant-error.w4-tooltip-left::after { border-color: transparent transparent transparent hsl(var(--w4-error)); }
+.w4-tooltip-error.w4-tooltip-right::after, .w4-tooltip.w4-variant-error.w4-tooltip-right::after { border-color: transparent hsl(var(--w4-error)) transparent transparent; }
 
 /* ==========================================================================
    States & Modifiers (TooltipComponentState Enum)
