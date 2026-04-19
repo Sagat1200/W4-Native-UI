@@ -26,7 +26,7 @@
             <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
         </div>
         <div class="w4-navbar-end">
-            <div class="w4-stack w4-stack-xs">
+            <div class="w4-stack w4-stack-xs mx-2">
                 <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>

@@ -26,7 +26,7 @@
             <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
         </div>
         <div class="w4-navbar-end">
-            <div class="w4-stack w4-stack-xs">
+            <div class="w4-stack w4-stack-xs mx-2">
                 <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
@@ -735,7 +735,8 @@
                             <div class="w4-modal-box">
                                 <h3 class="w4-heading w4-heading-h4">Modal Hidden (.w4-modal-hidden)</h3>
                                 <p class="w4-text w4-text-sm">Al presionar el botón, se añadirá la clase
-                                    <code>.w4-modal-hidden</code> que forzará su desaparición temporal.</p>
+                                    <code>.w4-modal-hidden</code> que forzará su desaparición temporal.
+                                </p>
                                 <div class="w4-stack w4-stack-horizontal w4-stack-end w4-stack-md w4-mt-4">
                                     <button class="w4-button w4-button-warning" onclick="
                                         const m = document.getElementById('modal-css-class-hidden');
