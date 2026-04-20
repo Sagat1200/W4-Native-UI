@@ -6,115 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Container Lab</title>
     @NativeUIStyles
-    <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-shell {
-            max-inline-size: 1400px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.25rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.72);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            min-inline-size: 180px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.25rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .demo-zone {
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-            padding: 1rem;
-            display: grid;
-            gap: 1rem;
-        }
-
-        .demo-content {
-            padding: 1rem;
-            border-radius: 0.5rem;
-            border: 1px dashed hsl(var(--w4-base-300));
-            background: hsl(var(--w4-base-100));
-        }
-
-        .chip-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-block-start: 0.75rem;
-        }
-
-        .chip {
-            display: inline-flex;
-            align-items: center;
-            border-radius: 999px;
-            padding: 0.25rem 0.6rem;
-            font-size: 0.75rem;
-            background: hsl(var(--w4-base-300));
-            color: hsl(var(--w4-base-content));
-        }
-    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
-    <div class="lab-shell">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: Container Lab</h1>
-                <p class="lab-subtitle">Pruebas de max-width, modifier solid y estados del componente container.</p>
-            </div>
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+
+    <div class="w4-navbar w4-navbar-primary">
+        <div class="w4-navbar-start">
+            <button class="w4-button w4-button-ghost w4-button-square">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="w4-icon w4-icon-md stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <button class="w4-button w4-button-ghost">Native UI</button>
+        </div>
+        <div class="w4-navbar-center">
+            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs mx-2">
+                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -149,20 +62,29 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section style="margin-block-end: 2rem; margin-block-start: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Container</h1>
-            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+    <main class="w4-container w4-container-xl">
+
+        <div class="w4-section w4-section-xl">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Container</h1>
+            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente
+                w4-container</p>
+        </div>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Container</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Container</strong> es el elemento estructural más básico para definir límites de
                 ancho (max-width) en el diseño. Ayuda a centrar el contenido y asegurar que el layout se adapte
                 correctamente en pantallas grandes, evitando que la información se extienda demasiado y sea difícil de
                 leer.
             </p>
-            <br>
-            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
-            <ul class="w4-text w4-text-base w4-text-start"
-                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-primary">Casos de Uso Comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical">
                 <li><strong>Envoltura de páginas (Wrappers):</strong> Centrar todo el contenido principal de una página
                     web dentro de límites definidos.</li>
                 <li><strong>Lectura óptima:</strong> Usar contenedores estrechos (`xs` o `sm`) para artículos de blog y
@@ -174,97 +96,165 @@
             </ul>
         </section>
 
-        <section>
-            <h2 class="section-title">Container Sizes</h2>
-            <div class="demo-zone">
-                <div class="w4-container w4-container-xs w4-container-primary">
-                    <div class="demo-content">
-                        <strong>XS</strong> - `w4-container-xs`
+
+        <!-- EJEMPLOS BÁSICOS DE TAMAÑOS -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Escalas de Tamaño (Max-Width)</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-md w4-text-neutral w4-mb-6">
+                Los contenedores utilizan clases modificadoras para establecer su ancho máximo. Para propósitos de esta
+                demostración, se ha añadido la clase <code>.w4-container-solid</code> y un borde punteado para que
+                puedas visualizar sus límites.
+            </p>
+
+            <div class="w4-stack w4-stack-vertical w4-stack-md">
+
+                <!-- Extra Small -->
+                <div>
+                    <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-2">Extra Small (.w4-container-xs) - Max
+                        420px</h3>
+                    <div class="w4-container w4-container-xs w4-container-solid p-4"
+                        style="border: 2px dashed hsl(var(--w4-primary));">
+                        <p class="w4-text w4-text-center">Ideal para tarjetas de login, formularios de registro pequeños
+                            o modales estrechos.</p>
                     </div>
                 </div>
-                <div class="w4-container w4-container-sm">
-                    <div class="demo-content">
-                        <strong>SM</strong> - `w4-container-sm`
+
+                <!-- Small -->
+                <div>
+                    <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-2">Small (.w4-container-sm) - Max 640px</h3>
+                    <div class="w4-container w4-container-sm w4-container-solid p-4"
+                        style="border: 2px dashed hsl(var(--w4-secondary));">
+                        <p class="w4-text w4-text-center">Tamaño perfecto para artículos de blog y bloques de texto
+                            largo para mantener una lectura óptima.</p>
                     </div>
                 </div>
-                <div class="w4-container w4-container-md">
-                    <div class="demo-content">
-                        <strong>MD</strong> - `w4-container-md`
+
+                <!-- Medium -->
+                <div>
+                    <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-2">Medium (.w4-container-md) - Max 840px
+                    </h3>
+                    <div class="w4-container w4-container-md w4-container-solid p-4"
+                        style="border: 2px dashed hsl(var(--w4-accent));">
+                        <p class="w4-text w4-text-center">Contenedor estándar para vistas de contenido mixto, perfiles o
+                            paneles de administración básicos.</p>
                     </div>
                 </div>
-                <div class="w4-container w4-container-lg">
-                    <div class="demo-content">
-                        <strong>LG</strong> - `w4-container-lg`
+
+                <!-- Large -->
+                <div>
+                    <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-2">Large (.w4-container-lg) - Max 1080px
+                    </h3>
+                    <div class="w4-container w4-container-lg w4-container-solid p-4"
+                        style="border: 2px dashed hsl(var(--w4-info));">
+                        <p class="w4-text w4-text-center">Uso general para sitios web corporativos y landing pages.</p>
                     </div>
                 </div>
-                <div class="w4-container w4-container-xl">
-                    <div class="demo-content">
-                        <strong>XL</strong> - `w4-container-xl`
+
+                <!-- Extra Large -->
+                <div>
+                    <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-2">Extra Large (.w4-container-xl) - Max
+                        1280px</h3>
+                    <div class="w4-container w4-container-xl w4-container-solid p-4"
+                        style="border: 2px dashed hsl(var(--w4-success));">
+                        <p class="w4-text w4-text-center">Contenedor principal amplio. Este es el contenedor que está
+                            envolviendo toda esta página de demostración.</p>
                     </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ESTADOS CSS -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados CSS (Clases Estáticas)</h2>
+            <hr class="w4-divider w4-divider-error">
+            <p class="w4-text w4-text-md w4-text-neutral mb-6">
+                El contenedor también soporta el sistema de estados globales para controlar su visibilidad o
+                interacción.
+            </p>
+
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-stack w4-stack-vertical w4-stack-md">
+
+                    <!-- Active -->
+                    <div>
+                        <div class="w4-container w4-container-md w4-container-solid w4-container-active p-4">
+                            <h3 class="w4-heading w4-heading-h3 w4-heading-primary">.w4-container-active</h3>
+                            <p class="w4-text w4-text-md w4-text-neutral">El contenedor activo aplica un fondo primario
+                                translúcido y una sombra interna. Útil para depuración (debugging) o para resaltar
+                                temporalmente una sección.</p>
+                        </div>
+                    </div>
+
+                    <!-- Disabled -->
+                    <div>
+                        <div class="w4-container w4-container-md w4-container-solid w4-container-disabled w4-p-4">
+                            <h3 class="w4-heading w4-heading-h3">.w4-container-disabled</h3>
+                            <p class="w4-text w4-text-md">El contenedor deshabilitado pierde opacidad, se vuelve escala
+                                de grises y bloquea todos los clics (pointer-events: none).</p>
+                            <button class="w4-button w4-button-primary w4-button-sm w4-mt-2">No clickeable</button>
+                        </div>
+                    </div>
+
+                    <!-- Hidden -->
+                    <div>
+                        <div class="w4-container w4-container-md w4-container-solid w4-container-hidden w4-p-4">
+                            <h3 class="w4-heading w4-heading-h3">.w4-container-hidden</h3>
+                            <p class="w4-text w4-text-md">Este contenedor está oculto y no deberías poder verlo.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary));">Modifier Solid</h2>
-            <div class="demo-zone">
-                <div class="w4-container w4-container-md w4-container-solid">
-                    <div class="demo-content">
-                        <strong>Solid Container</strong>
-                        <p style="margin: 0.5rem 0 0 0;">Aplica fondo y color de texto mediante tokens del componente.
-                        </p>
+        <!-- ESTADOS DINÁMICOS JS -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-success w4-heading-start">Estados Dinámicos JS (w4-state)
+            </h2>
+            <hr class="w4-divider w4-divider-success">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+
+                <div class="w4-stack w4-stack-horizontal w4-stack-between w4-stack-start w-full mt-6">
+
+                    <!-- Container Interactivo -->
+                    <div style="flex: 1;">
+                        <div id="jsInteractiveContainer" class="w4-container w4-container-solid p-6"
+                            data-w4-component="container">
+                            <h3 class="w4-heading w4-heading-h3 w4-heading-primary">Contenedor Interactivo</h3>
+                            <p class="w4-text w4-text-md w4-text-neutral">Cambia mi estado con los botones de la
+                                derecha. Nota cómo mi comportamiento y apariencia se actualizan inmediatamente.</p>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-xs w4-mt-4">
+                                <button class="w4-button w4-button-primary w4-button-sm">Botón de prueba</button>
+                                <input type="text" class="w4-input w4-input-sm w4-input-bordered"
+                                    placeholder="Input de prueba" />
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Botonera -->
+                    <div class="w4-stack w4-stack-vertical w4-stack-sm w4-border-s w4-border-base-300 w-72">
+                        <span class="w4-text w4-text-sm w4-text-muted w4-mb-2">Set State:</span>
+                        <button class="w4-button w4-button-sm w4-button-outline w4-w-full"
+                            onclick="document.getElementById('jsInteractiveContainer').removeAttribute('data-w4-state')">Clear</button>
+                        <button class="w4-button w4-button-sm w4-button-info w4-w-full"
+                            onclick="document.getElementById('jsInteractiveContainer').setAttribute('data-w4-state', 'active')">Active</button>
+                        <button class="w4-button w4-button-sm w4-button-warning w4-w-full"
+                            onclick="document.getElementById('jsInteractiveContainer').setAttribute('data-w4-state', 'disabled')">Disabled</button>
+                        <button class="w4-button w4-button-sm w4-button-error w4-w-full"
+                            onclick="document.getElementById('jsInteractiveContainer').setAttribute('data-w4-state', 'hidden')">Hidden</button>
+                    </div>
+
                 </div>
+
             </div>
         </section>
 
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-accent));">States</h2>
-            <div class="demo-zone">
-                <div class="w4-container w4-container-md w4-container-active">
-                    <div class="demo-content">
-                        <strong>Active</strong>
-                        <div class="chip-row">
-                            <span class="chip">w4-container-active</span>
-                        </div>
-                    </div>
-                </div>
+    </main>
 
-                <div class="w4-container w4-container-md w4-container-disabled">
-                    <div class="demo-content">
-                        <strong>Disabled</strong>
-                        <div class="chip-row">
-                            <span class="chip">w4-container-disabled</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="w4-container w4-container-md" data-w4-state="active">
-                    <div class="demo-content">
-                        <strong>Data State Active</strong>
-                        <div class="chip-row">
-                            <span class="chip">data-w4-state="active"</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="w4-container w4-container-md" data-w4-state="disabled">
-                    <div class="demo-content">
-                        <strong>Data State Disabled</strong>
-                        <div class="chip-row">
-                            <span class="chip">data-w4-state="disabled"</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="w4-container w4-container-md w4-container-hidden">
-                    <div class="demo-content">
-                        <strong>Hidden</strong>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
 
     @NativeUIScripts
     @NativeUIInit

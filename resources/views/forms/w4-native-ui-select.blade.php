@@ -27,7 +27,7 @@
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
+                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-info">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -102,7 +102,7 @@
             <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color Semánticas</h2>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid w4-grid-md w4-grid-6">
+                <div class="w4-grid w4-grid-md w4-grid-4">
 
                     <div
                         class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
