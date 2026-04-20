@@ -20,6 +20,11 @@
 .w4-grid-4 { --w4-grid-cols: repeat(4, minmax(0, 1fr)); }
 .w4-grid-5 { --w4-grid-cols: repeat(5, minmax(0, 1fr)); }
 .w4-grid-6 { --w4-grid-cols: repeat(6, minmax(0, 1fr)); }
+.w4-grid-7 { --w4-grid-cols: repeat(7, minmax(0, 1fr)); }
+.w4-grid-8 { --w4-grid-cols: repeat(8, minmax(0, 1fr)); }
+.w4-grid-9 { --w4-grid-cols: repeat(9, minmax(0, 1fr)); }
+.w4-grid-10 { --w4-grid-cols: repeat(10, minmax(0, 1fr)); }
+.w4-grid-11 { --w4-grid-cols: repeat(11, minmax(0, 1fr)); }
 .w4-grid-12 { --w4-grid-cols: repeat(12, minmax(0, 1fr)); }
 
 /* ----------------------------------
