@@ -32,6 +32,30 @@
   gap: 0.5rem;
 }
 
+.w4-card-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.w4-card-figure img {
+  inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* Ensure images inside figure respect the card's border radius at the top or bottom depending on position */
+.w4-card-figure:first-child img {
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+}
+
+.w4-card-figure:last-child img {
+  border-start-start-radius: 0;
+  border-start-end-radius: 0;
+}
+
 /* ----------------------------------
    MODIFIERS (Surface System)
    ---------------------------------- */
