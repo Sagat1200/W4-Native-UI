@@ -1364,7 +1364,7 @@ html[data-theme] body {
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
 .w4-button-primary {
   
   --w4-btn-bg: hsl(var(--w4-primary));
@@ -3412,6 +3412,12 @@ html[data-theme] body {
   /* Active stack for debugging or highlighting a specific flow of content */
   outline: 2px dashed hsl(var(--w4-primary) / 0.5);
   outline-offset: 2px;
+}
+
+/* Helper class for dashed borders in examples */
+.border-dashed {
+  border-style: dashed !important;
+  border-color: hsl(var(--w4-base-content) / 0.4) !important;
 }
 }
 
@@ -6773,7 +6779,7 @@ html[data-theme] body {
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
 .w4-modal-primary { --w4-modal-border-color: hsl(var(--w4-primary)); }
 .w4-modal-secondary { --w4-modal-border-color: hsl(var(--w4-secondary)); }
 .w4-modal-accent { --w4-modal-border-color: hsl(var(--w4-accent)); }

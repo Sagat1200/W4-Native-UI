@@ -6,121 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Stack Lab</title>
     @NativeUIStyles
-    <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-shell {
-            max-inline-size: 1280px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.25rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.72);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            min-inline-size: 180px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.25rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .demo-zone {
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-            padding: 1rem;
-            display: grid;
-            gap: 1rem;
-        }
-
-        .demo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 0.875rem;
-        }
-
-        .stack-item {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.55rem 0.75rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background: hsl(var(--w4-base-100));
-            min-inline-size: 56px;
-            font-weight: 600;
-            font-size: 0.875rem;
-        }
-
-        .stack-item-wide {
-            min-inline-size: 120px;
-        }
-
-        .stack-preview-box {
-            min-block-size: 140px;
-            border: 1px dashed hsl(var(--w4-base-300));
-            border-radius: 0.5rem;
-            padding: 0.75rem;
-        }
-    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
-    <div class="lab-shell">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: Stack Lab</h1>
-                <p class="lab-subtitle">Pruebas de orientacion, alineacion, gap y estados de w4-stack.</p>
-            </div>
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+
+    <div class="w4-navbar w4-navbar-primary">
+        <div class="w4-navbar-start">
+            <button class="w4-button w4-button-ghost w4-button-square">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="w4-icon w4-icon-md stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <button class="w4-button w4-button-ghost">Native UI</button>
+        </div>
+        <div class="w4-navbar-center">
+            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs mx-2">
+                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -155,20 +62,28 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section class="w4-section w4-section-md w4-section-base-100"
-            style="margin-block-end: 2rem; margin-block-start: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Stack</h1>
-            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+    <main class="w4-container w4-container-xl">
+
+        <div class="w4-section w4-section-xl">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Stack</h1>
+            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente
+                w4-stack</p>
+        </div>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Stack</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Stack</strong> es un contenedor flexible basado en Flexbox, diseñado para apilar
                 elementos de forma lineal (ya sea vertical u horizontalmente). Simplifica enormemente la gestión del
                 espaciado (gap) y la alineación entre componentes hermanos.
             </p>
-            <br>
-            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
-            <ul class="w4-text w4-text-base w4-text-start"
-                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-primary mt-2">Casos de Uso Comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical mt-2">
                 <li><strong>Grupos de botones:</strong> Alinear varios botones (ej. "Aceptar" y "Cancelar")
                     horizontalmente con un espacio consistente.</li>
                 <li><strong>Listas de elementos:</strong> Apilar verticalmente tarjetas de notificaciones, mensajes o
@@ -180,142 +95,308 @@
             </ul>
         </section>
 
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title">Orientation</h2>
-            <div class="demo-zone">
-                <div class="demo-grid">
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                        <div class="w4-label w4-label-sm w4-label-primary">Vertical (Default)</div>
-                        <div class="w4-stack w4-stack-md">
-                            <div class="stack-item">A</div>
-                            <div class="stack-item">B</div>
-                            <div class="stack-item">C</div>
+        <!-- ORIENTACIÓN Y ENVOLTURA -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Orientación y Envoltura (Wrap)
+            </h2>
+            <hr class="w4-divider w4-divider-secondary">
+            <p class="w4-text w4-text-md w4-text-neutral mb-6">Stack permite organizar los elementos en columnas o
+                filas, y soporta flex-wrap para que los elementos salten a la siguiente línea si no hay espacio.</p>
+
+            <div class="w4-grid w4-grid-md w4-grid-2">
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h4 mb-4">Vertical (.w4-stack-vertical) Default</h3>
+                    <div class="w4-stack w4-stack-vertical w4-stack-md w4-panel w4-panel-outline border-dashed">
+                        <div class="w4-panel w4-panel-primary w4-panel-sm text-center font-bold">1</div>
+                        <div class="w4-panel w4-panel-primary w4-panel-sm text-center font-bold">2</div>
+                        <div class="w4-panel w4-panel-primary w4-panel-sm text-center font-bold">3</div>
+                    </div>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h4 mb-4">Horizontal (.w4-stack-horizontal)</h3>
+                    <div
+                        class="w4-stack w4-stack-horizontal w4-stack-center w4-stack-md w4-panel w4-panel-outline border-dashed">
+                        <div class="w4-panel w4-panel-secondary w4-panel-sm text-center font-bold">1</div>
+                        <div class="w4-panel w4-panel-secondary w4-panel-sm text-center font-bold">2</div>
+                        <div class="w4-panel w4-panel-secondary w4-panel-sm text-center font-bold">3</div>
+                    </div>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md w4-col-span-full">
+                    <h3 class="w4-heading w4-heading-h4 mb-4">Horizontal con Wrap (.w4-stack-wrap)</h3>
+                    <p class="w4-text w4-text-sm w4-text-neutral mb-4">Ajusta el tamaño de tu navegador para ver cómo
+                        los elementos bajan a la siguiente línea automáticamente.</p>
+                    <div
+                        class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-panel w4-panel-outline border-dashed">
+                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">1</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">2</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">3</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">4</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">5</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">6</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">7</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">8</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">9</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">10</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ESCALAS DE TAMAÑO (GAPS) -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Escalas de Tamaño (Gap)</h2>
+            <hr class="w4-divider w4-divider-info">
+            <p class="w4-text w4-text-md w4-text-neutral mb-6">El componente Stack maneja la separación interna usando
+                la propiedad `gap`. Esto asegura que solo haya espacio ENTRE los elementos, no a los lados.</p>
+
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-stack w4-stack-vertical w4-stack-lg">
+
+                    <div>
+                        <p class="w4-text w4-text-sm font-bold mb-2">.w4-stack-none (0px)</p>
+                        <div class="w4-stack w4-stack-horizontal w4-stack-none">
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">A</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">B</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">C</div>
                         </div>
                     </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                        <div class="w4-label w4-label-sm w4-label-primary">Horizontal</div>
+
+                    <div>
+                        <p class="w4-text w4-text-sm font-bold mb-2">.w4-stack-xs (0.375rem)</p>
+                        <div class="w4-stack w4-stack-horizontal w4-stack-xs">
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">A</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">B</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">C</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="w4-text w4-text-sm font-bold mb-2">.w4-stack-sm (0.625rem)</p>
+                        <div class="w4-stack w4-stack-horizontal w4-stack-sm">
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">A</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">B</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">C</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="w4-text w4-text-sm font-bold mb-2">.w4-stack-md (1rem / Default)</p>
                         <div class="w4-stack w4-stack-horizontal w4-stack-md">
-                            <div class="stack-item">A</div>
-                            <div class="stack-item">B</div>
-                            <div class="stack-item">C</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">A</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">B</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">C</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="w4-text w4-text-sm font-bold mb-2">.w4-stack-lg (1.5rem)</p>
+                        <div class="w4-stack w4-stack-horizontal w4-stack-lg">
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">A</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">B</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">C</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="w4-text w4-text-sm font-bold mb-2">.w4-stack-xl (2rem)</p>
+                        <div class="w4-stack w4-stack-horizontal w4-stack-xl">
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">A</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">B</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">C</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ALINEACIÓN (JUSTIFY & ALIGN) -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-success w4-heading-start">Modificadores de Alineación</h2>
+            <hr class="w4-divider w4-divider-success">
+            <p class="w4-text w4-text-md w4-text-neutral mb-6">Utilizamos clases semánticas para controlar la alineación
+                en el eje principal (justify-content) y en el eje cruzado (align-items).</p>
+
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+
+                <h3 class="w4-heading w4-heading-h4 mb-4">Eje Principal (Justify Content)</h3>
+                <div class="w4-grid w4-grid-md w4-grid-2 mb-8">
+
+                    <div>
+                        <p class="w4-text w4-text-sm mb-1 font-bold">.w4-stack-start (Default)</p>
+                        <div
+                            class="w4-stack w4-stack-horizontal w4-stack-start w4-stack-sm w4-panel w4-panel-outline border-dashed">
+                            <button class="w4-button w4-button-sm w4-button-primary">1</button>
+                            <button class="w4-button w4-button-sm w4-button-primary">2</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="w4-text w4-text-sm mb-1 font-bold">.w4-stack-center</p>
+                        <div
+                            class="w4-stack w4-stack-horizontal w4-stack-center w4-stack-sm w4-panel w4-panel-outline border-dashed">
+                            <button class="w4-button w4-button-sm w4-button-secondary">1</button>
+                            <button class="w4-button w4-button-sm w4-button-secondary">2</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="w4-text w4-text-sm mb-1 font-bold">.w4-stack-end</p>
+                        <div
+                            class="w4-stack w4-stack-horizontal w4-stack-end w4-stack-sm w4-panel w4-panel-outline border-dashed">
+                            <button class="w4-button w4-button-sm w4-button-accent">1</button>
+                            <button class="w4-button w4-button-sm w4-button-accent">2</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="w4-text w4-text-sm mb-1 font-bold">.w4-stack-between</p>
+                        <div
+                            class="w4-stack w4-stack-horizontal w4-stack-between w4-stack-sm w4-panel w4-panel-outline border-dashed">
+                            <button class="w4-button w4-button-sm w4-button-info">1</button>
+                            <button class="w4-button w4-button-sm w4-button-info">2</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="w4-text w4-text-sm mb-1 font-bold">.w4-stack-around</p>
+                        <div
+                            class="w4-stack w4-stack-horizontal w4-stack-around w4-stack-sm w4-panel w4-panel-outline border-dashed">
+                            <button class="w4-button w4-button-sm w4-button-warning">1</button>
+                            <button class="w4-button w4-button-sm w4-button-warning">2</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="w4-text w4-text-sm mb-1 font-bold">.w4-stack-evenly</p>
+                        <div
+                            class="w4-stack w4-stack-horizontal w4-stack-evenly w4-stack-sm w4-panel w4-panel-outline border-dashed">
+                            <button class="w4-button w4-button-sm w4-button-success">1</button>
+                            <button class="w4-button w4-button-sm w4-button-success">2</button>
                         </div>
                     </div>
                 </div>
+
+                <hr class="w4-divider w4-divider-base-300">
+
+                <h3 class="w4-heading w4-heading-h4 mb-4 mt-4">Eje Cruzado (Align Items)</h3>
+                <div class="w4-grid w4-grid-md w4-grid-3">
+
+                    <div>
+                        <p class="w4-text w4-text-sm mb-1 font-bold">.w4-items-start</p>
+                        <div
+                            class="w4-stack w4-stack-horizontal w4-items-start w4-stack-sm w4-panel w4-panel-outline border-dashed h-24">
+                            <div class="w4-panel w4-panel-primary w4-panel-sm">Caja 1</div>
+                            <div class="w4-panel w4-panel-primary w4-panel-sm">Caja 2</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="w4-text w4-text-sm mb-1 font-bold">.w4-items-center</p>
+                        <div
+                            class="w4-stack w4-stack-horizontal w4-items-center w4-stack-center w4-stack-sm w4-panel w4-panel-outline border-dashed h-24">
+                            <div class="w4-panel w4-panel-secondary w4-panel-sm">Caja 1</div>
+                            <div class="w4-panel w4-panel-secondary w4-panel-sm">Caja 2</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="w4-text w4-text-sm mb-1 font-bold">.w4-items-end</p>
+                        <div
+                            class="w4-stack w4-stack-horizontal w4-items-end w4-stack-end w4-stack-sm w4-panel w4-panel-outline border-dashed h-24">
+                            <div class="w4-panel w4-panel-accent w4-panel-sm">Caja 1</div>
+                            <div class="w4-panel w4-panel-accent w4-panel-sm">Caja 2</div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </section>
 
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary));">Gap Sizes</h2>
-            <div class="demo-zone">
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-secondary">none / xs / sm / md / lg / xl</div>
-                    <div class="w4-stack w4-stack-horizontal w4-stack-none">
-                        <div class="stack-item">none</div>
-                        <div class="stack-item">none</div>
-                        <div class="stack-item">none</div>
+        <!-- ESTADOS ESTÁTICOS CSS -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-warning w4-heading-start">Estados Estáticos (CSS)</h2>
+            <hr class="w4-divider w4-divider-warning">
+
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-grid w4-grid-md w4-grid-2">
+
+                    <!-- Active -->
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm">
+                        <h3 class="w4-heading w4-heading-h4 mb-2">.w4-stack-active</h3>
+                        <p class="w4-text w4-text-sm w4-text-neutral mb-4">Añade un borde punteado primario. Muy útil
+                            para depuración visual del layout.</p>
+                        <div class="w4-stack w4-stack-horizontal w4-stack-active w4-stack-md w4-p-2">
+                            <button class="w4-button w4-button-sm w4-button-primary">Botón 1</button>
+                            <button class="w4-button w4-button-sm w4-button-primary">Botón 2</button>
+                        </div>
                     </div>
-                    <div class="w4-stack w4-stack-horizontal w4-stack-xs">
-                        <div class="stack-item">xs</div>
-                        <div class="stack-item">xs</div>
-                        <div class="stack-item">xs</div>
+
+                    <!-- Disabled -->
+                    <div class="w4-panel w4-panel-base-100 w4-panel-sm">
+                        <h3 class="w4-heading w4-heading-h4 mb-2">.w4-stack-disabled</h3>
+                        <p class="w4-text w4-text-sm w4-text-neutral mb-4">Desactiva y vuelve gris todo el bloque de
+                            contenido interno.</p>
+                        <div class="w4-stack w4-stack-horizontal w4-stack-disabled w4-stack-md w4-p-2">
+                            <button class="w4-button w4-button-sm w4-button-primary">Botón 1</button>
+                            <button class="w4-button w4-button-sm w4-button-primary">Botón 2</button>
+                        </div>
                     </div>
-                    <div class="w4-stack w4-stack-horizontal w4-stack-sm">
-                        <div class="stack-item">sm</div>
-                        <div class="stack-item">sm</div>
-                        <div class="stack-item">sm</div>
-                    </div>
-                    <div class="w4-stack w4-stack-horizontal w4-stack-md">
-                        <div class="stack-item">md</div>
-                        <div class="stack-item">md</div>
-                        <div class="stack-item">md</div>
-                    </div>
-                    <div class="w4-stack w4-stack-horizontal w4-stack-lg">
-                        <div class="stack-item">lg</div>
-                        <div class="stack-item">lg</div>
-                        <div class="stack-item">lg</div>
-                    </div>
-                    <div class="w4-stack w4-stack-horizontal w4-stack-xl">
-                        <div class="stack-item">xl</div>
-                        <div class="stack-item">xl</div>
-                        <div class="stack-item">xl</div>
-                    </div>
+
                 </div>
             </div>
         </section>
 
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title" style="border-color: hsl(var(--w4-accent));">Alignment</h2>
-            <div class="demo-zone">
-                <div class="demo-grid">
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                        <div class="w4-label w4-label-sm w4-label-accent">Center (Horizontal)</div>
-                        <div class="stack-preview-box">
-                            <div class="w4-stack w4-stack-horizontal w4-stack-center w4-stack-md"
-                                style="block-size: 100%;">
-                                <div class="stack-item stack-item-wide">Item 1</div>
-                                <div class="stack-item stack-item-wide">Item 2</div>
+        <!-- ESTADOS INTERACTIVOS JS -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados Interactivos (JS)</h2>
+            <hr class="w4-divider w4-divider-error">
+
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-stack w4-stack-horizontal w4-stack-between w4-items-start">
+
+                    <div class="w-full">
+                        <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                            <h3 class="w4-heading w4-heading-h3 w4-heading-primary mb-4">Stack Dinámico</h3>
+                            <p class="w4-text w4-text-md w4-text-neutral mb-4">Aplica estados al contenedor Stack usando
+                                los botones de la derecha.</p>
+
+                            <div id="jsInteractiveStack" class="w4-stack w4-stack-horizontal w4-stack-md w4-p-4"
+                                data-w4-component="stack">
+                                <input type="text" class="w4-input w4-input-md w4-input-bordered flex-1"
+                                    placeholder="Campo 1...">
+                                <input type="text" class="w4-input w4-input-md w4-input-bordered flex-1"
+                                    placeholder="Campo 2...">
+                                <button class="w4-button w4-button-md w4-button-primary">Guardar</button>
                             </div>
                         </div>
                     </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                        <div class="w4-label w4-label-sm w4-label-accent">Center (Vertical)</div>
-                        <div class="stack-preview-box">
-                            <div class="w4-stack w4-stack-vertical w4-stack-center w4-stack-md"
-                                style="block-size: 100%;">
-                                <div class="stack-item stack-item-wide">Item 1</div>
-                                <div class="stack-item stack-item-wide">Item 2</div>
-                            </div>
-                        </div>
+
+                    <!-- Botonera -->
+                    <div class="w4-stack w4-stack-vertical w4-stack-sm w4-border-s w4-border-base-300 w4-ps-4 w-72">
+                        <span class="w4-text w4-text-sm w4-text-muted mb-2">data-w4-state:</span>
+                        <button class="w4-button w4-button-sm w4-button-outline w-full"
+                            onclick="document.getElementById('jsInteractiveStack').removeAttribute('data-w4-state')">Clear
+                            (Ninguno)</button>
+                        <button class="w4-button w4-button-sm w4-button-info w-full"
+                            onclick="document.getElementById('jsInteractiveStack').setAttribute('data-w4-state', 'active')">Active
+                            (Debug)</button>
+                        <button class="w4-button w4-button-sm w4-button-warning w-full"
+                            onclick="document.getElementById('jsInteractiveStack').setAttribute('data-w4-state', 'disabled')">Disabled</button>
+                        <button class="w4-button w4-button-sm w4-button-error w-full"
+                            onclick="document.getElementById('jsInteractiveStack').setAttribute('data-w4-state', 'hidden')">Hidden</button>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <section class="w4-section w4-section-md w4-section-base-100 w4-section-primary">
-            <h2 class="section-title" style="border-color: hsl(var(--w4-info));">States</h2>
-            <div class="demo-zone">
-                <div class="demo-grid">
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                        <div class="w4-label w4-label-sm w4-label-info">Active</div>
-                        <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-active">
-                            <div class="stack-item">A</div>
-                            <div class="stack-item">B</div>
-                            <div class="stack-item">C</div>
-                        </div>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                        <div class="w4-label w4-label-sm w4-label-info">Disabled</div>
-                        <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-disabled">
-                            <div class="stack-item">A</div>
-                            <div class="stack-item">B</div>
-                            <div class="stack-item">C</div>
-                        </div>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                        <div class="w4-label w4-label-sm w4-label-info">Data state active / disabled</div>
-                        <div class="w4-stack w4-stack-horizontal w4-stack-md" data-w4-state="active">
-                            <div class="stack-item">active</div>
-                            <div class="stack-item">active</div>
-                            <div class="stack-item">active</div>
-                        </div>
-                        <div class="w4-stack w4-stack-horizontal w4-stack-md" data-w4-state="disabled">
-                            <div class="stack-item">disabled</div>
-                            <div class="stack-item">disabled</div>
-                            <div class="stack-item">disabled</div>
-                        </div>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                        <div class="w4-label w4-label-sm w4-label-info">Hidden (no visible)</div>
-                        <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-hidden">
-                            <div class="stack-item">1</div>
-                            <div class="stack-item">2</div>
-                            <div class="stack-item">3</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+    </main>
 
     @NativeUIScripts
     @NativeUIInit

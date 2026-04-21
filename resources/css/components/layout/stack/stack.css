@@ -69,4 +69,10 @@
   outline: 2px dashed hsl(var(--w4-primary) / 0.5);
   outline-offset: 2px;
 }
+
+/* Helper class for dashed borders in examples */
+.border-dashed {
+  border-style: dashed !important;
+  border-color: hsl(var(--w4-base-content) / 0.4) !important;
+}
 }
