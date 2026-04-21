@@ -112,7 +112,7 @@
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
 .w4-modal-primary { --w4-modal-border-color: hsl(var(--w4-primary)); }
 .w4-modal-secondary { --w4-modal-border-color: hsl(var(--w4-secondary)); }
 .w4-modal-accent { --w4-modal-border-color: hsl(var(--w4-accent)); }

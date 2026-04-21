@@ -82,8 +82,8 @@
                 legibilidad de la interfaz estableciendo pausas claras.
             </p>
 
-            <h3 class="w4-heading w4-heading-h3 w4-heading-primary">Casos de Uso Comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical">
+            <h3 class="w4-heading w4-heading-h3 w4-heading-primary mt-2">Casos de Uso Comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical mt-2">
                 <li><strong>Separación de listas:</strong> Diferenciar elementos dentro de una lista o menú desplegable.
                 </li>
                 <li><strong>Secciones de formulario:</strong> Dividir grupos de campos lógicos (ej. "Información

@@ -90,7 +90,7 @@
                 usuarios a identificar y corregir errores de entrada de datos de forma clara y accesible.
             </p>
 
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-4">Casos de Uso Comunes:</h3>
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-2">Casos de Uso Comunes:</h3>
             <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs mt-2"
                 style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; list-style-type: disc;">
                 <li><strong class="w4-text-active">Validación de formularios:</strong> Mostrar errores cuando un campo

@@ -81,8 +81,8 @@
                 interfaz limpia ocultando detalles secundarios hasta que son necesarios.
             </p>
 
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary">Casos de Uso Comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical">
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-2">Casos de Uso Comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical mt-2">
                 <li><strong>Botones con solo íconos:</strong> Explicar la acción de un botón que no tiene texto visible
                     (ej. ícono de papelera &rarr; "Eliminar").</li>
                 <li><strong>Aclaración de términos:</strong> Proporcionar definiciones de términos técnicos o acrónimos

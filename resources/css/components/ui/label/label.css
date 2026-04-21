@@ -24,32 +24,64 @@
   --w4-label-color: hsl(var(--w4-base-content));
 }
 
+.w4-label-neutral-content {
+  --w4-label-color: hsl(var(--w4-base-content));
+}
+
 .w4-label-primary {
   --w4-label-color: hsl(var(--w4-primary));
+}
+
+.w4-label-primary-content {
+  --w4-label-color: hsl(var(--w4-primary-content));
 }
 
 .w4-label-secondary {
   --w4-label-color: hsl(var(--w4-secondary));
 }
 
+.w4-label-secondary-content {
+  --w4-label-color: hsl(var(--w4-secondary-content));
+}
+
 .w4-label-accent {
   --w4-label-color: hsl(var(--w4-accent));
+}
+
+.w4-label-accent-content {
+  --w4-label-color: hsl(var(--w4-accent-content));
 }
 
 .w4-label-info {
   --w4-label-color: hsl(var(--w4-info));
 }
 
+.w4-label-info-content {
+  --w4-label-color: hsl(var(--w4-info-content));
+}
+
 .w4-label-success {
   --w4-label-color: hsl(var(--w4-success));
+}
+
+.w4-label-success-content {
+  --w4-label-color: hsl(var(--w4-success-content));
 }
 
 .w4-label-warning {
   --w4-label-color: hsl(var(--w4-warning));
 }
 
+.w4-label-warning-content {
+  --w4-label-color: hsl(var(--w4-warning-content));
+}
+
 .w4-label-error {
   --w4-label-color: hsl(var(--w4-error));
+}
+
+.w4-label-error-content {
+  --w4-label-color: hsl(var(--w4-error-content));
 }
 
 .w4-label-muted {

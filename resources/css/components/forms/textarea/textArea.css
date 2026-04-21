@@ -44,7 +44,7 @@
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
 .w4-textarea-primary {
   --w4-textarea-border-color: hsl(var(--w4-primary));
   --w4-focus-ring-color: var(--w4-primary);

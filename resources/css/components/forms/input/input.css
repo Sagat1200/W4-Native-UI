@@ -42,10 +42,25 @@
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
+.w4-input-neutral { 
+  --w4-input-border-color: hsl(var(--w4-neutral));
+  --w4-focus-ring-color: var(--w4-neutral);
+}
+
+.w4-input-neutral-content {
+  --w4-input-border-color: hsl(var(--w4-neutral-content));
+  --w4-focus-ring-color: var(--w4-neutral-content);
+}
+
 .w4-input-primary {
   --w4-input-border-color: hsl(var(--w4-primary));
   --w4-focus-ring-color: var(--w4-primary);
+}
+
+.w4-input-primary-content {
+  --w4-input-border-color: hsl(var(--w4-primary-content));
+  --w4-focus-ring-color: var(--w4-primary-content);
 }
 
 .w4-input-secondary {
@@ -53,9 +68,19 @@
   --w4-focus-ring-color: var(--w4-secondary);
 }
 
+.w4-input-secondary-content {
+  --w4-input-border-color: hsl(var(--w4-secondary-content));
+  --w4-focus-ring-color: var(--w4-secondary-content);
+}
+
 .w4-input-accent {
   --w4-input-border-color: hsl(var(--w4-accent));
   --w4-focus-ring-color: var(--w4-accent);
+}
+
+.w4-input-accent-content {
+  --w4-input-border-color: hsl(var(--w4-accent-content));
+  --w4-focus-ring-color: var(--w4-accent-content);
 }
 
 .w4-input-info {
@@ -63,9 +88,19 @@
   --w4-focus-ring-color: var(--w4-info);
 }
 
+.w4-input-info-content {
+  --w4-input-border-color: hsl(var(--w4-info-content));
+  --w4-focus-ring-color: var(--w4-info-content);
+}
+
 .w4-input-success {
   --w4-input-border-color: hsl(var(--w4-success));
   --w4-focus-ring-color: var(--w4-success);
+}
+
+.w4-input-success-content {
+  --w4-input-border-color: hsl(var(--w4-success-content));
+  --w4-focus-ring-color: var(--w4-success-content);
 }
 
 .w4-input-warning {
@@ -73,9 +108,19 @@
   --w4-focus-ring-color: var(--w4-warning);
 }
 
+.w4-input-warning-content {
+  --w4-input-border-color: hsl(var(--w4-warning-content));
+  --w4-focus-ring-color: var(--w4-warning-content);
+}
+
 .w4-input-error {
   --w4-input-border-color: hsl(var(--w4-error));
   --w4-focus-ring-color: var(--w4-error);
+}
+
+.w4-input-error-content {
+  --w4-input-border-color: hsl(var(--w4-error-content));
+  --w4-focus-ring-color: var(--w4-error-content);
 }
 
 .w4-input-ghost {

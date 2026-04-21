@@ -147,7 +147,7 @@
                 salida suaves integradas en el motor CSS.
             </p>
 
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-4">Casos de uso comunes:</h3>
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-2">Casos de uso comunes:</h3>
             <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs mt-2"
                 style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; list-style-type: disc;">
                 <li><strong class="w4-text-active">Confirmaciones de acción:</strong> Mostrar "Registro guardado

@@ -18,33 +18,67 @@
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
+
+.w4-icon-neutral {
+  --w4-icon-color: hsl(var(--w4-base-content));
+}
+
+.w4-icon-neutral-content {
+  --w4-icon-color: hsl(var(--w4-base-content-content));
+}
+
 .w4-icon-primary {
   --w4-icon-color: hsl(var(--w4-primary));
+}
+
+.w4-icon-primary-content {
+  --w4-icon-color: hsl(var(--w4-primary-content));
 }
 
 .w4-icon-secondary {
   --w4-icon-color: hsl(var(--w4-secondary));
 }
+.w4-icon-secondary-content {
+  --w4-icon-color: hsl(var(--w4-secondary-content));
+}
 
 .w4-icon-accent {
   --w4-icon-color: hsl(var(--w4-accent));
 }
+.w4-icon-accent-content {
+  --w4-icon-color: hsl(var(--w4-accent-content));
+}
 
 .w4-icon-info {
   --w4-icon-color: hsl(var(--w4-info));
+}
+.w4-icon-info-content {
+  --w4-icon-color: hsl(var(--w4-info-content));
 }
 
 .w4-icon-success {
   --w4-icon-color: hsl(var(--w4-success));
 }
 
+.w4-icon-success-content {
+  --w4-icon-color: hsl(var(--w4-success-content));
+}
+
 .w4-icon-warning {
   --w4-icon-color: hsl(var(--w4-warning));
 }
 
+.w4-icon-warning-content {
+  --w4-icon-color: hsl(var(--w4-warning-content));
+}
+
 .w4-icon-error {
   --w4-icon-color: hsl(var(--w4-error));
+}
+
+.w4-icon-error-content {
+  --w4-icon-color: hsl(var(--w4-error-content));
 }
 
 .w4-icon-muted {

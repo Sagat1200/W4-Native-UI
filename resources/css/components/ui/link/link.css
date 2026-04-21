@@ -34,9 +34,19 @@
   --w4-focus-ring-color: var(--w4-primary);
 }
 
+.w4-link-primary-content {
+  --w4-link-color: hsl(var(--w4-primary-content));
+  --w4-focus-ring-color: var(--w4-primary-content);
+}
+
 .w4-link-secondary {
   --w4-link-color: hsl(var(--w4-secondary));
   --w4-focus-ring-color: var(--w4-secondary);
+}
+
+.w4-link-secondary-content {
+  --w4-link-color: hsl(var(--w4-secondary-content));
+  --w4-focus-ring-color: var(--w4-secondary-content);
 }
 
 .w4-link-accent {
@@ -44,9 +54,19 @@
   --w4-focus-ring-color: var(--w4-accent);
 }
 
+.w4-link-accent-content {
+  --w4-link-color: hsl(var(--w4-accent-content));
+  --w4-focus-ring-color: var(--w4-accent-content);
+}
+
 .w4-link-info {
   --w4-link-color: hsl(var(--w4-info));
   --w4-focus-ring-color: var(--w4-info);
+}
+
+.w4-link-info-content {
+  --w4-link-color: hsl(var(--w4-info-content));
+  --w4-focus-ring-color: var(--w4-info-content);
 }
 
 .w4-link-success {
@@ -54,9 +74,19 @@
   --w4-focus-ring-color: var(--w4-success);
 }
 
+.w4-link-success-content {
+  --w4-link-color: hsl(var(--w4-success-content));
+  --w4-focus-ring-color: var(--w4-success-content);
+}
+
 .w4-link-warning {
   --w4-link-color: hsl(var(--w4-warning));
   --w4-focus-ring-color: var(--w4-warning);
+}
+
+.w4-link-warning-content {
+  --w4-link-color: hsl(var(--w4-warning-content));
+  --w4-focus-ring-color: var(--w4-warning-content);
 }
 
 .w4-link-error {
@@ -64,7 +94,22 @@
   --w4-focus-ring-color: var(--w4-error);
 }
 
+.w4-link-error-content {
+  --w4-link-color: hsl(var(--w4-error-content));
+  --w4-focus-ring-color: var(--w4-error-content);
+}
+
 .w4-link-neutral {
+  --w4-link-color: hsl(var(--w4-base-content));
+  --w4-focus-ring-color: var(--w4-base-content);
+}
+
+.w4-link-neutral-content {
+  --w4-link-color: hsl(var(--w4-neutral-content));
+  --w4-focus-ring-color: var(--w4-neutral-content);
+}
+
+.w4-link-base-content {
   --w4-link-color: hsl(var(--w4-base-content));
   --w4-focus-ring-color: var(--w4-base-content);
 }

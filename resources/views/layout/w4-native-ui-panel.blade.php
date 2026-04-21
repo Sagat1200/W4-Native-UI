@@ -23,11 +23,11 @@
             <button class="w4-button w4-button-ghost">Native UI</button>
         </div>
         <div class="w4-navbar-center">
-            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+            <a href="#" class="w4-button w4-button-link w4-button-primary-content">DOCUMENTACION</a>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-primary-content">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -76,14 +76,14 @@
         <section class="w4-section w4-section-xl">
             <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Panel</h2>
             <hr class="w4-divider w4-divider-primary">
-            <p class="w4-text w4-text-lg w4-text-neutral">
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
                 El componente <strong>Panel</strong> es un contenedor estructurado similar a una tarjeta (Card), pero
                 generalmente utilizado para envolver secciones enteras de una interfaz o vistas de detalle más
                 complejas. Ayuda a destacar bloques de contenido del fondo principal de la aplicación.
             </p>
 
-            <h3 class="w4-heading w4-heading-h3 w4-heading-primary">Casos de Uso Comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical">
+            <h3 class="w4-heading w4-heading-h3 w4-heading-primary mt-2">Casos de Uso Comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical mt-2">
                 <li><strong>Vistas de configuración:</strong> Agrupar formularios y opciones de cuenta de usuario.</li>
                 <li><strong>Paneles laterales (Asides):</strong> Contener herramientas de filtrado, navegación
                     secundaria o información contextual en un layout complejo.</li>
@@ -160,21 +160,23 @@
                 <div class="w4-stack w4-stack-vertical w4-stack-xl w-full">
 
                     <!-- Panel Perfil -->
-                    <div class="w4-panel w4-panel-base-200 w4-panel-md w4-panel-elevated">
-                        <h3 class="w4-heading w4-heading-h3 w4-heading-primary mb-1">Perfil de Usuario</h3>
-                        <p class="w4-text w4-text-sm w4-text-neutral font-bold mb-4">Actualiza tu información personal y
+                    <div class="w4-panel w4-panel-primary w4-panel-md w4-panel-elevated">
+                        <h3 class="w4-heading w4-heading-h3 w4-heading-primary-content mb-1">Perfil de Usuario</h3>
+                        <p class="w4-text w4-text-sm w4-text-primary-content mb-4">Actualiza tu información
+                            personal y
                             datos
                             de contacto.</p>
-                        <hr class="w4-divider w4-divider-primary mb-4">
+                        <hr class="w4-divider w4-divider-primary-content mb-4">
 
                         <div class="w4-stack w4-stack-vertical w4-stack-sm mb-4">
-                            <label class="w4-text w4-text-sm font-bold">Nombre Completo</label>
-                            <input type="text" class="w4-input w4-input-md w4-input-primary" value="Juan Pérez">
+                            <label class="w4-text w4-text-sm w4-text-primary-content">Nombre Completo</label>
+                            <input type="text" class="w4-input w4-input-md w4-input-primary-content" value="Juan Pérez">
                         </div>
 
                         <div class="w4-stack w4-stack-vertical w4-stack-sm mb-4">
-                            <label class="w4-text w4-text-sm font-bold">Correo Electrónico</label>
-                            <input type="email" class="w4-input w4-input-md w4-input-primary" value="juan@example.com">
+                            <label class="w4-text w4-text-sm w4-text-primary-content">Correo Electrónico</label>
+                            <input type="email" class="w4-input w4-input-md w4-input-primary-content"
+                                value="juan@example.com">
                         </div>
 
                         <div class="w4-stack w4-stack-horizontal w4-stack-end mt-3">
@@ -183,25 +185,27 @@
                     </div>
 
                     <!-- Panel Preferencias -->
-                    <div class="w4-panel w4-panel-base-200 w4-panel-md w4-panel-elevated">
-                        <h3 class="w4-heading w4-heading-h3 w4-heading-primary mb-1">Preferencias de la Cuenta</h3>
-                        <p class="w4-text w4-text-sm w4-text-neutral font-bold mb-4">Administra el idioma y la zona
+                    <div class="w4-panel w4-panel-primary w4-panel-md w4-panel-elevated">
+                        <h3 class="w4-heading w4-heading-h3 w4-heading-primary-content mb-1">Preferencias de la Cuenta
+                        </h3>
+                        <p class="w4-text w4-text-sm w4-text-primary-content font-bold mb-4">Administra el idioma y la
+                            zona
                             horaria de
                             tu entorno.</p>
-                        <hr class="w4-divider w4-divider-primary mb-4">
+                        <hr class="w4-divider w4-divider-primary-content mb-4">
 
                         <div class="w4-grid w4-grid-md w4-grid-2">
                             <div class="w4-stack w4-stack-vertical w4-stack-sm mb-4">
-                                <label class="w4-text w4-text-sm font-bold">Idioma</label>
-                                <select class="w4-select w4-select-md w4-select-primary">
+                                <label class="w4-text w4-text-sm w4-text-primary-content">Idioma</label>
+                                <select class="w4-select w4-select-md w4-select-primary-content">
                                     <option>Español</option>
                                     <option>Inglés</option>
                                 </select>
                             </div>
 
                             <div class="w4-stack w4-stack-vertical w4-stack-sm mb-4">
-                                <label class="w4-text w4-text-sm font-bold">Zona Horaria</label>
-                                <select class="w4-select w4-select-md w4-select-primary">
+                                <label class="w4-text w4-text-sm w4-text-primary-content">Zona Horaria</label>
+                                <select class="w4-select w4-select-md w4-select-primary-content">
                                     <option>(GMT-05:00) Bogotá, Lima, Quito</option>
                                     <option>(GMT-06:00) Ciudad de México</option>
                                 </select>
@@ -210,14 +214,14 @@
                     </div>
 
                     <!-- Panel Peligroso -->
-                    <div class="w4-panel w4-panel-base-200 w4-panel-md w4-panel-elevated">
-                        <h3 class="w4-heading w4-heading-h3 w4-heading-error mb-1">Zona Peligrosa</h3>
-                        <p class="w4-text w4-text-sm w4-text-neutral mb-4">Las acciones en esta área pueden ser
+                    <div class="w4-panel w4-panel-error w4-panel-md w4-panel-elevated">
+                        <h3 class="w4-heading w4-heading-h3 w4-heading-error-content mb-1">Zona Peligrosa</h3>
+                        <p class="w4-text w4-text-sm w4-text-error-content mb-4">Las acciones en esta área pueden ser
                             irreversibles. Procede con precaución.</p>
 
 
 
-                        <p class="w4-text w4-text-xs font-bold">¿Estás seguro?</p>
+                        <p class="w4-text w4-text-xs w4-text-error-content">¿Estás seguro?</p>
                         <div class="w4-stack w4-stack-horizontal w4-stack-sm w4-stack-end w4-items-center mb-4">
                             <button class="w4-button w4-button-sm w4-button-primary">Cancelar</button>
                             <button class="w4-button w4-button-sm w4-button-error">Aceptar</button>

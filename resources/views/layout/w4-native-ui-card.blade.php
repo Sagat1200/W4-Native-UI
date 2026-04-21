@@ -80,8 +80,8 @@
                 organizar información de manera estructurada, legible y visualmente atractiva.
             </p>
 
-            <h3 class="w4-heading w4-heading-h3 w4-heading-primary">Casos de Uso Comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical">
+            <h3 class="w4-heading w4-heading-h3 w4-heading-primary mt-2">Casos de Uso Comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical mt-2">
                 <li><strong>Listados de contenido:</strong> Mostrar productos de una tienda, artículos de un blog o
                     perfiles de usuario en una cuadrícula.</li>
                 <li><strong>Paneles de control (Dashboards):</strong> Agrupar métricas, gráficos o resúmenes de

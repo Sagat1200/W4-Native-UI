@@ -24,14 +24,30 @@
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
+.w4-helper-text-neutral { --w4-helper-text-color: hsl(var(--w4-neutral)); }
+.w4-helper-text-neutral-content { --w4-helper-text-color: hsl(var(--w4-neutral-content)); }
+
 .w4-helper-text-primary { --w4-helper-text-color: hsl(var(--w4-primary)); }
+.w4-helper-text-primary-content { --w4-helper-text-color: hsl(var(--w4-primary-content)); }
+
 .w4-helper-text-secondary { --w4-helper-text-color: hsl(var(--w4-secondary)); }
+.w4-helper-text-secondary-content { --w4-helper-text-color: hsl(var(--w4-secondary-content)); }
+
 .w4-helper-text-accent { --w4-helper-text-color: hsl(var(--w4-accent)); }
+.w4-helper-text-accent-content { --w4-helper-text-color: hsl(var(--w4-accent-content)); }
+
 .w4-helper-text-info { --w4-helper-text-color: hsl(var(--w4-info)); }
+.w4-helper-text-info-content { --w4-helper-text-color: hsl(var(--w4-info-content)); }
+
 .w4-helper-text-success { --w4-helper-text-color: hsl(var(--w4-success)); }
+.w4-helper-text-success-content { --w4-helper-text-color: hsl(var(--w4-success-content)); }
+
 .w4-helper-text-warning { --w4-helper-text-color: hsl(var(--w4-warning)); }
+.w4-helper-text-warning-content { --w4-helper-text-color: hsl(var(--w4-warning-content)); }
+
 .w4-helper-text-error { --w4-helper-text-color: hsl(var(--w4-error)); }
+.w4-helper-text-error-content { --w4-helper-text-color: hsl(var(--w4-error-content)); }
 
 /* ----------------------------------
    SIZE SCALES

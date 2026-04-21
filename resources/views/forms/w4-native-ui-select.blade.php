@@ -82,8 +82,8 @@
                 disponibles, manteniendo la interfaz limpia.
             </p>
 
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary">Casos de Uso Comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical">
+            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-2">Casos de Uso Comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical mt-2">
                 <li><strong class="w4-text-active">Selección de país o región:</strong> Elegir una ubicación de una
                     lista extensa de países.
                 </li>

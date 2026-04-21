@@ -83,8 +83,8 @@
                 leer.
             </p>
 
-            <h3 class="w4-heading w4-heading-h3 w4-heading-primary">Casos de Uso Comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical">
+            <h3 class="w4-heading w4-heading-h3 w4-heading-primary mt-2">Casos de Uso Comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical mt-2">
                 <li><strong>Envoltura de páginas (Wrappers):</strong> Centrar todo el contenido principal de una página
                     web dentro de límites definidos.</li>
                 <li><strong>Lectura óptima:</strong> Usar contenedores estrechos (`xs` o `sm`) para artículos de blog y

@@ -1698,33 +1698,67 @@ html[data-theme] body {
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
+
+.w4-icon-neutral {
+  --w4-icon-color: hsl(var(--w4-base-content));
+}
+
+.w4-icon-neutral-content {
+  --w4-icon-color: hsl(var(--w4-base-content-content));
+}
+
 .w4-icon-primary {
   --w4-icon-color: hsl(var(--w4-primary));
+}
+
+.w4-icon-primary-content {
+  --w4-icon-color: hsl(var(--w4-primary-content));
 }
 
 .w4-icon-secondary {
   --w4-icon-color: hsl(var(--w4-secondary));
 }
+.w4-icon-secondary-content {
+  --w4-icon-color: hsl(var(--w4-secondary-content));
+}
 
 .w4-icon-accent {
   --w4-icon-color: hsl(var(--w4-accent));
 }
+.w4-icon-accent-content {
+  --w4-icon-color: hsl(var(--w4-accent-content));
+}
 
 .w4-icon-info {
   --w4-icon-color: hsl(var(--w4-info));
+}
+.w4-icon-info-content {
+  --w4-icon-color: hsl(var(--w4-info-content));
 }
 
 .w4-icon-success {
   --w4-icon-color: hsl(var(--w4-success));
 }
 
+.w4-icon-success-content {
+  --w4-icon-color: hsl(var(--w4-success-content));
+}
+
 .w4-icon-warning {
   --w4-icon-color: hsl(var(--w4-warning));
 }
 
+.w4-icon-warning-content {
+  --w4-icon-color: hsl(var(--w4-warning-content));
+}
+
 .w4-icon-error {
   --w4-icon-color: hsl(var(--w4-error));
+}
+
+.w4-icon-error-content {
+  --w4-icon-color: hsl(var(--w4-error-content));
 }
 
 .w4-icon-muted {
@@ -1994,32 +2028,64 @@ html[data-theme] body {
   --w4-label-color: hsl(var(--w4-base-content));
 }
 
+.w4-label-neutral-content {
+  --w4-label-color: hsl(var(--w4-base-content));
+}
+
 .w4-label-primary {
   --w4-label-color: hsl(var(--w4-primary));
+}
+
+.w4-label-primary-content {
+  --w4-label-color: hsl(var(--w4-primary-content));
 }
 
 .w4-label-secondary {
   --w4-label-color: hsl(var(--w4-secondary));
 }
 
+.w4-label-secondary-content {
+  --w4-label-color: hsl(var(--w4-secondary-content));
+}
+
 .w4-label-accent {
   --w4-label-color: hsl(var(--w4-accent));
+}
+
+.w4-label-accent-content {
+  --w4-label-color: hsl(var(--w4-accent-content));
 }
 
 .w4-label-info {
   --w4-label-color: hsl(var(--w4-info));
 }
 
+.w4-label-info-content {
+  --w4-label-color: hsl(var(--w4-info-content));
+}
+
 .w4-label-success {
   --w4-label-color: hsl(var(--w4-success));
+}
+
+.w4-label-success-content {
+  --w4-label-color: hsl(var(--w4-success-content));
 }
 
 .w4-label-warning {
   --w4-label-color: hsl(var(--w4-warning));
 }
 
+.w4-label-warning-content {
+  --w4-label-color: hsl(var(--w4-warning-content));
+}
+
 .w4-label-error {
   --w4-label-color: hsl(var(--w4-error));
+}
+
+.w4-label-error-content {
+  --w4-label-color: hsl(var(--w4-error-content));
 }
 
 .w4-label-muted {
@@ -2113,9 +2179,19 @@ html[data-theme] body {
   --w4-focus-ring-color: var(--w4-primary);
 }
 
+.w4-link-primary-content {
+  --w4-link-color: hsl(var(--w4-primary-content));
+  --w4-focus-ring-color: var(--w4-primary-content);
+}
+
 .w4-link-secondary {
   --w4-link-color: hsl(var(--w4-secondary));
   --w4-focus-ring-color: var(--w4-secondary);
+}
+
+.w4-link-secondary-content {
+  --w4-link-color: hsl(var(--w4-secondary-content));
+  --w4-focus-ring-color: var(--w4-secondary-content);
 }
 
 .w4-link-accent {
@@ -2123,9 +2199,19 @@ html[data-theme] body {
   --w4-focus-ring-color: var(--w4-accent);
 }
 
+.w4-link-accent-content {
+  --w4-link-color: hsl(var(--w4-accent-content));
+  --w4-focus-ring-color: var(--w4-accent-content);
+}
+
 .w4-link-info {
   --w4-link-color: hsl(var(--w4-info));
   --w4-focus-ring-color: var(--w4-info);
+}
+
+.w4-link-info-content {
+  --w4-link-color: hsl(var(--w4-info-content));
+  --w4-focus-ring-color: var(--w4-info-content);
 }
 
 .w4-link-success {
@@ -2133,9 +2219,19 @@ html[data-theme] body {
   --w4-focus-ring-color: var(--w4-success);
 }
 
+.w4-link-success-content {
+  --w4-link-color: hsl(var(--w4-success-content));
+  --w4-focus-ring-color: var(--w4-success-content);
+}
+
 .w4-link-warning {
   --w4-link-color: hsl(var(--w4-warning));
   --w4-focus-ring-color: var(--w4-warning);
+}
+
+.w4-link-warning-content {
+  --w4-link-color: hsl(var(--w4-warning-content));
+  --w4-focus-ring-color: var(--w4-warning-content);
 }
 
 .w4-link-error {
@@ -2143,7 +2239,22 @@ html[data-theme] body {
   --w4-focus-ring-color: var(--w4-error);
 }
 
+.w4-link-error-content {
+  --w4-link-color: hsl(var(--w4-error-content));
+  --w4-focus-ring-color: var(--w4-error-content);
+}
+
 .w4-link-neutral {
+  --w4-link-color: hsl(var(--w4-base-content));
+  --w4-focus-ring-color: var(--w4-base-content);
+}
+
+.w4-link-neutral-content {
+  --w4-link-color: hsl(var(--w4-neutral-content));
+  --w4-focus-ring-color: var(--w4-neutral-content);
+}
+
+.w4-link-base-content {
   --w4-link-color: hsl(var(--w4-base-content));
   --w4-focus-ring-color: var(--w4-base-content);
 }
@@ -2771,17 +2882,33 @@ html[data-theme] body {
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
+
 .w4-divider-primary { --w4-divider-color: hsl(var(--w4-primary)); }
+.w4-divider-primary-content { --w4-divider-color: hsl(var(--w4-primary-content)); }
+
 .w4-divider-secondary { --w4-divider-color: hsl(var(--w4-secondary)); }
+.w4-divider-secondary-content { --w4-divider-color: hsl(var(--w4-secondary-content)); }
+
 .w4-divider-accent { --w4-divider-color: hsl(var(--w4-accent)); }
+.w4-divider-accent-content { --w4-divider-color: hsl(var(--w4-accent-content)); }
+
 .w4-divider-info { --w4-divider-color: hsl(var(--w4-info)); }
+.w4-divider-info-content { --w4-divider-color: hsl(var(--w4-info-content)); }
+
 .w4-divider-success { --w4-divider-color: hsl(var(--w4-success)); }
+.w4-divider-success-content { --w4-divider-color: hsl(var(--w4-success-content)); }
+
 .w4-divider-warning { --w4-divider-color: hsl(var(--w4-warning)); }
+.w4-divider-warning-content { --w4-divider-color: hsl(var(--w4-warning-content)); }
+
 .w4-divider-error { --w4-divider-color: hsl(var(--w4-error)); }
+.w4-divider-error-content { --w4-divider-color: hsl(var(--w4-error-content)); }
 
 /* Base variants */
 .w4-divider-neutral { --w4-divider-color: hsl(var(--w4-base-content) / 0.2); }
+.w4-divider-neutral-content { --w4-divider-color: hsl(var(--w4-base-content)); }
+
 .w4-divider-muted { --w4-divider-color: hsl(var(--w4-base-200)); }
 
 /* ----------------------------------
@@ -5409,14 +5536,30 @@ html[data-theme] body {
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
+.w4-field-error-neutral { --w4-field-error-color: hsl(var(--w4-neutral)); }
+.w4-field-error-neutral-content { --w4-field-error-color: hsl(var(--w4-neutral-content)); }
+
 .w4-field-error-primary { --w4-field-error-color: hsl(var(--w4-primary)); }
+.w4-field-error-primary-content { --w4-field-error-color: hsl(var(--w4-primary-content)); }
+
 .w4-field-error-secondary { --w4-field-error-color: hsl(var(--w4-secondary)); }
+.w4-field-error-secondary-content { --w4-field-error-color: hsl(var(--w4-secondary-content)); }
+
 .w4-field-error-accent { --w4-field-error-color: hsl(var(--w4-accent)); }
+.w4-field-error-accent-content { --w4-field-error-color: hsl(var(--w4-accent-content)); }
+
 .w4-field-error-info { --w4-field-error-color: hsl(var(--w4-info)); }
+.w4-field-error-info-content { --w4-field-error-color: hsl(var(--w4-info-content)); }
+
 .w4-field-error-success { --w4-field-error-color: hsl(var(--w4-success)); }
+.w4-field-error-success-content { --w4-field-error-color: hsl(var(--w4-success-content)); }
+
 .w4-field-error-warning { --w4-field-error-color: hsl(var(--w4-warning)); }
+.w4-field-error-warning-content { --w4-field-error-color: hsl(var(--w4-warning-content)); }
+
 .w4-field-error-error { --w4-field-error-color: hsl(var(--w4-error)); }
+.w4-field-error-error-content { --w4-field-error-color: hsl(var(--w4-error-content)); }
 
 /* ----------------------------------
    SIZE SCALES
@@ -5476,14 +5619,30 @@ html[data-theme] body {
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
+.w4-helper-text-neutral { --w4-helper-text-color: hsl(var(--w4-neutral)); }
+.w4-helper-text-neutral-content { --w4-helper-text-color: hsl(var(--w4-neutral-content)); }
+
 .w4-helper-text-primary { --w4-helper-text-color: hsl(var(--w4-primary)); }
+.w4-helper-text-primary-content { --w4-helper-text-color: hsl(var(--w4-primary-content)); }
+
 .w4-helper-text-secondary { --w4-helper-text-color: hsl(var(--w4-secondary)); }
+.w4-helper-text-secondary-content { --w4-helper-text-color: hsl(var(--w4-secondary-content)); }
+
 .w4-helper-text-accent { --w4-helper-text-color: hsl(var(--w4-accent)); }
+.w4-helper-text-accent-content { --w4-helper-text-color: hsl(var(--w4-accent-content)); }
+
 .w4-helper-text-info { --w4-helper-text-color: hsl(var(--w4-info)); }
+.w4-helper-text-info-content { --w4-helper-text-color: hsl(var(--w4-info-content)); }
+
 .w4-helper-text-success { --w4-helper-text-color: hsl(var(--w4-success)); }
+.w4-helper-text-success-content { --w4-helper-text-color: hsl(var(--w4-success-content)); }
+
 .w4-helper-text-warning { --w4-helper-text-color: hsl(var(--w4-warning)); }
+.w4-helper-text-warning-content { --w4-helper-text-color: hsl(var(--w4-warning-content)); }
+
 .w4-helper-text-error { --w4-helper-text-color: hsl(var(--w4-error)); }
+.w4-helper-text-error-content { --w4-helper-text-color: hsl(var(--w4-error-content)); }
 
 /* ----------------------------------
    SIZE SCALES
@@ -5562,10 +5721,25 @@ html[data-theme] body {
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
+.w4-input-neutral { 
+  --w4-input-border-color: hsl(var(--w4-neutral));
+  --w4-focus-ring-color: var(--w4-neutral);
+}
+
+.w4-input-neutral-content {
+  --w4-input-border-color: hsl(var(--w4-neutral-content));
+  --w4-focus-ring-color: var(--w4-neutral-content);
+}
+
 .w4-input-primary {
   --w4-input-border-color: hsl(var(--w4-primary));
   --w4-focus-ring-color: var(--w4-primary);
+}
+
+.w4-input-primary-content {
+  --w4-input-border-color: hsl(var(--w4-primary-content));
+  --w4-focus-ring-color: var(--w4-primary-content);
 }
 
 .w4-input-secondary {
@@ -5573,9 +5747,19 @@ html[data-theme] body {
   --w4-focus-ring-color: var(--w4-secondary);
 }
 
+.w4-input-secondary-content {
+  --w4-input-border-color: hsl(var(--w4-secondary-content));
+  --w4-focus-ring-color: var(--w4-secondary-content);
+}
+
 .w4-input-accent {
   --w4-input-border-color: hsl(var(--w4-accent));
   --w4-focus-ring-color: var(--w4-accent);
+}
+
+.w4-input-accent-content {
+  --w4-input-border-color: hsl(var(--w4-accent-content));
+  --w4-focus-ring-color: var(--w4-accent-content);
 }
 
 .w4-input-info {
@@ -5583,9 +5767,19 @@ html[data-theme] body {
   --w4-focus-ring-color: var(--w4-info);
 }
 
+.w4-input-info-content {
+  --w4-input-border-color: hsl(var(--w4-info-content));
+  --w4-focus-ring-color: var(--w4-info-content);
+}
+
 .w4-input-success {
   --w4-input-border-color: hsl(var(--w4-success));
   --w4-focus-ring-color: var(--w4-success);
+}
+
+.w4-input-success-content {
+  --w4-input-border-color: hsl(var(--w4-success-content));
+  --w4-focus-ring-color: var(--w4-success-content);
 }
 
 .w4-input-warning {
@@ -5593,9 +5787,19 @@ html[data-theme] body {
   --w4-focus-ring-color: var(--w4-warning);
 }
 
+.w4-input-warning-content {
+  --w4-input-border-color: hsl(var(--w4-warning-content));
+  --w4-focus-ring-color: var(--w4-warning-content);
+}
+
 .w4-input-error {
   --w4-input-border-color: hsl(var(--w4-error));
   --w4-focus-ring-color: var(--w4-error);
+}
+
+.w4-input-error-content {
+  --w4-input-border-color: hsl(var(--w4-error-content));
+  --w4-focus-ring-color: var(--w4-error-content);
 }
 
 .w4-input-ghost {
@@ -5924,10 +6128,26 @@ html[data-theme] body {
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
+
+.w4-select-neutral {
+  --w4-select-border-color: hsl(var(--w4-neutral));
+  --w4-focus-ring-color: var(--w4-neutral);
+}
+
+.w4-select-neutral-content {
+  --w4-select-border-color: hsl(var(--w4-neutral-content));
+  --w4-focus-ring-color: var(--w4-neutral-content);
+}
+
 .w4-select-primary {
   --w4-select-border-color: hsl(var(--w4-primary));
   --w4-focus-ring-color: var(--w4-primary);
+}
+
+.w4-select-primary-content {
+  --w4-select-border-color: hsl(var(--w4-primary-content));
+  --w4-focus-ring-color: var(--w4-primary-content);
 }
 
 .w4-select-secondary {
@@ -5935,9 +6155,19 @@ html[data-theme] body {
   --w4-focus-ring-color: var(--w4-secondary);
 }
 
+.w4-select-secondary-content {
+  --w4-select-border-color: hsl(var(--w4-secondary-content));
+  --w4-focus-ring-color: var(--w4-secondary-content);
+}
+
 .w4-select-accent {
   --w4-select-border-color: hsl(var(--w4-accent));
   --w4-focus-ring-color: var(--w4-accent);
+}
+
+.w4-select-accent-content {
+  --w4-select-border-color: hsl(var(--w4-accent-content));
+  --w4-focus-ring-color: var(--w4-accent-content);
 }
 
 .w4-select-info {
@@ -5945,9 +6175,19 @@ html[data-theme] body {
   --w4-focus-ring-color: var(--w4-info);
 }
 
+.w4-select-info-content {
+  --w4-select-border-color: hsl(var(--w4-info-content));
+  --w4-focus-ring-color: var(--w4-info-content);
+}
+
 .w4-select-success {
   --w4-select-border-color: hsl(var(--w4-success));
   --w4-focus-ring-color: var(--w4-success);
+}
+
+.w4-select-success-content {
+  --w4-select-border-color: hsl(var(--w4-success-content));
+  --w4-focus-ring-color: var(--w4-success-content);
 }
 
 .w4-select-warning {
@@ -5955,9 +6195,19 @@ html[data-theme] body {
   --w4-focus-ring-color: var(--w4-warning);
 }
 
+.w4-select-warning-content {
+  --w4-select-border-color: hsl(var(--w4-warning-content));
+  --w4-focus-ring-color: var(--w4-warning-content);
+}
+
 .w4-select-error {
   --w4-select-border-color: hsl(var(--w4-error));
   --w4-focus-ring-color: var(--w4-error);
+}
+
+.w4-select-error-content {
+  --w4-select-border-color: hsl(var(--w4-error-content));
+  --w4-focus-ring-color: var(--w4-error-content);
 }
 
 .w4-select-ghost {
@@ -6100,7 +6350,7 @@ html[data-theme] body {
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+---------------------------------- */
 .w4-textarea-primary {
   --w4-textarea-border-color: hsl(var(--w4-primary));
   --w4-focus-ring-color: var(--w4-primary);
