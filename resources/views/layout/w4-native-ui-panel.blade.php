@@ -146,7 +146,7 @@
 
                 <!-- Menú Lateral -->
                 <div class="w4-panel w4-panel-primary w4-panel-md w4-panel-elevated w-64">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-neutral mb-4">Ajustes</h3>
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary-content mb-4">Ajustes</h3>
                     <div class="w4-stack w4-stack-vertical w4-stack-xl">
                         <button class="w4-button w4-button-sm w4-button-ghost w-full w4-text-primary">Perfil
                             de Usuario</button>
@@ -232,8 +232,8 @@
 
         <!-- ESCALAS DE TAMAÑO (PADDINGS) -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Escalas de Tamaño (Paddings)</h2>
-            <hr class="w4-divider w4-divider-secondary">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Escalas de Tamaño (Paddings)</h2>
+            <hr class="w4-divider w4-divider-primary">
 
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
                 <div class="w4-stack w4-stack-vertical w4-stack-md">
@@ -269,8 +269,8 @@
 
         <!-- VARIANTES SEMÁNTICAS (COLORES) -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Variantes Semánticas (Colores)</h2>
-            <hr class="w4-divider w4-divider-accent">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes Semánticas (Colores)</h2>
+            <hr class="w4-divider w4-divider-primary">
 
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
                 <div class="w4-grid w4-grid-md w4-grid-3">
@@ -316,8 +316,8 @@
 
         <!-- ESTADOS CSS -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Estados Estáticos (CSS)</h2>
-            <hr class="w4-divider w4-divider-info">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Estados Estáticos (CSS)</h2>
+            <hr class="w4-divider w4-divider-primary">
 
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
                 <div class="w4-grid w4-grid-md w4-grid-3">
@@ -349,8 +349,8 @@
 
         <!-- ESTADOS JS -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-warning w4-heading-start">Estados Interactivos (JS)</h2>
-            <hr class="w4-divider w4-divider-warning">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Estados Interactivos (JS)</h2>
+            <hr class="w4-divider w4-divider-primary">
 
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
                 <div class="w4-stack w4-stack-horizontal w4-stack-between w4-stack-start">
