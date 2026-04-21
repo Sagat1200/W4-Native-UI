@@ -108,9 +108,9 @@
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h4 mb-4">Vertical (.w4-stack-vertical) Default</h3>
                     <div class="w4-stack w4-stack-vertical w4-stack-md w4-panel w4-panel-outline border-dashed">
-                        <div class="w4-panel w4-panel-primary w4-panel-sm text-center font-bold">1</div>
-                        <div class="w4-panel w4-panel-primary w4-panel-sm text-center font-bold">2</div>
-                        <div class="w4-panel w4-panel-primary w4-panel-sm text-center font-bold">3</div>
+                        <div class="w4-panel w4-panel-primary w4-panel-sm w4-text-center font-bold">1</div>
+                        <div class="w4-panel w4-panel-primary w4-panel-sm w4-text-center font-bold">2</div>
+                        <div class="w4-panel w4-panel-primary w4-panel-sm w4-text-center font-bold">3</div>
                     </div>
                 </div>
 
@@ -118,28 +118,27 @@
                     <h3 class="w4-heading w4-heading-h4 mb-4">Horizontal (.w4-stack-horizontal)</h3>
                     <div
                         class="w4-stack w4-stack-horizontal w4-stack-center w4-stack-md w4-panel w4-panel-outline border-dashed">
-                        <div class="w4-panel w4-panel-secondary w4-panel-sm text-center font-bold">1</div>
-                        <div class="w4-panel w4-panel-secondary w4-panel-sm text-center font-bold">2</div>
-                        <div class="w4-panel w4-panel-secondary w4-panel-sm text-center font-bold">3</div>
+                        <div class="w4-panel w4-panel-secondary w4-panel-sm w4-text-center font-bold">1</div>
+                        <div class="w4-panel w4-panel-secondary w4-panel-sm w4-text-center font-bold">2</div>
+                        <div class="w4-panel w4-panel-secondary w4-panel-sm w4-text-center font-bold">3</div>
                     </div>
                 </div>
 
-                <div class="w4-panel w4-panel-base-200 w4-panel-md w4-col-span-full">
+                <div class="w4-panel w4-panel-base-200 w4-panel-md w4-col-span-2">
                     <h3 class="w4-heading w4-heading-h4 mb-4">Horizontal con Wrap (.w4-stack-wrap)</h3>
                     <p class="w4-text w4-text-sm w4-text-neutral mb-4">Ajusta el tamaño de tu navegador para ver cómo
                         los elementos bajan a la siguiente línea automáticamente.</p>
                     <div
-                        class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-panel w4-panel-outline border-dashed">
-                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">1</div>
-                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">2</div>
-                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">3</div>
-                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">4</div>
-                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">5</div>
-                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">6</div>
-                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">7</div>
-                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">8</div>
-                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">9</div>
-                        <div class="w4-panel w4-panel-accent w4-panel-sm text-center font-bold w-32">10</div>
+                        class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-between w4-stack-sm w4-panel w4-panel-outline border-dashed">
+                        <div class="w4-panel w4-panel-accent w4-panel-xs w4-text-center font-bold w-24">1</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-xs w4-text-center font-bold w-24">2</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-xs w4-text-center font-bold w-24">3</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-xs w4-text-center font-bold w-24">4</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-xs w4-text-center font-bold w-24">5</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-xs w4-text-center font-bold w-24">6</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-xs w4-text-center font-bold w-24">7</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-xs w4-text-center font-bold w-24">8</div>
+                        <div class="w4-panel w4-panel-accent w4-panel-xs w4-text-center font-bold w-24">9</div>
                     </div>
                 </div>
 
@@ -159,54 +158,72 @@
                     <div>
                         <p class="w4-text w4-text-sm font-bold mb-2">.w4-stack-none (0px)</p>
                         <div class="w4-stack w4-stack-horizontal w4-stack-none">
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">A</div>
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">B</div>
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">C</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">A
+                            </div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">B
+                            </div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">C
+                            </div>
                         </div>
                     </div>
 
                     <div>
                         <p class="w4-text w4-text-sm font-bold mb-2">.w4-stack-xs (0.375rem)</p>
                         <div class="w4-stack w4-stack-horizontal w4-stack-xs">
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">A</div>
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">B</div>
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">C</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">A
+                            </div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">B
+                            </div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">C
+                            </div>
                         </div>
                     </div>
 
                     <div>
                         <p class="w4-text w4-text-sm font-bold mb-2">.w4-stack-sm (0.625rem)</p>
                         <div class="w4-stack w4-stack-horizontal w4-stack-sm">
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">A</div>
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">B</div>
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">C</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">A
+                            </div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">B
+                            </div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">C
+                            </div>
                         </div>
                     </div>
 
                     <div>
                         <p class="w4-text w4-text-sm font-bold mb-2">.w4-stack-md (1rem / Default)</p>
                         <div class="w4-stack w4-stack-horizontal w4-stack-md">
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">A</div>
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">B</div>
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">C</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">A
+                            </div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">B
+                            </div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">C
+                            </div>
                         </div>
                     </div>
 
                     <div>
                         <p class="w4-text w4-text-sm font-bold mb-2">.w4-stack-lg (1.5rem)</p>
                         <div class="w4-stack w4-stack-horizontal w4-stack-lg">
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">A</div>
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">B</div>
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">C</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">A
+                            </div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">B
+                            </div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">C
+                            </div>
                         </div>
                     </div>
 
                     <div>
                         <p class="w4-text w4-text-sm font-bold mb-2">.w4-stack-xl (2rem)</p>
                         <div class="w4-stack w4-stack-horizontal w4-stack-xl">
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">A</div>
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">B</div>
-                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 text-center border">C</div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">A
+                            </div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">B
+                            </div>
+                            <div class="w4-panel w4-panel-base-100 w4-panel-sm flex-1 w4-text-center border-dashed">C
+                            </div>
                         </div>
                     </div>
 
@@ -290,8 +307,8 @@
                         <p class="w4-text w4-text-sm mb-1 font-bold">.w4-items-start</p>
                         <div
                             class="w4-stack w4-stack-horizontal w4-items-start w4-stack-sm w4-panel w4-panel-outline border-dashed h-24">
-                            <div class="w4-panel w4-panel-primary w4-panel-sm">Caja 1</div>
-                            <div class="w4-panel w4-panel-primary w4-panel-sm">Caja 2</div>
+                            <div class="w4-panel w4-panel-primary w4-panel-xs">Caja 1</div>
+                            <div class="w4-panel w4-panel-primary w4-panel-xs">Caja 2</div>
                         </div>
                     </div>
 
@@ -299,8 +316,8 @@
                         <p class="w4-text w4-text-sm mb-1 font-bold">.w4-items-center</p>
                         <div
                             class="w4-stack w4-stack-horizontal w4-items-center w4-stack-center w4-stack-sm w4-panel w4-panel-outline border-dashed h-24">
-                            <div class="w4-panel w4-panel-secondary w4-panel-sm">Caja 1</div>
-                            <div class="w4-panel w4-panel-secondary w4-panel-sm">Caja 2</div>
+                            <div class="w4-panel w4-panel-secondary w4-panel-xs">Caja 1</div>
+                            <div class="w4-panel w4-panel-secondary w4-panel-xs">Caja 2</div>
                         </div>
                     </div>
 
@@ -308,8 +325,8 @@
                         <p class="w4-text w4-text-sm mb-1 font-bold">.w4-items-end</p>
                         <div
                             class="w4-stack w4-stack-horizontal w4-items-end w4-stack-end w4-stack-sm w4-panel w4-panel-outline border-dashed h-24">
-                            <div class="w4-panel w4-panel-accent w4-panel-sm">Caja 1</div>
-                            <div class="w4-panel w4-panel-accent w4-panel-sm">Caja 2</div>
+                            <div class="w4-panel w4-panel-accent w4-panel-xs">Caja 1</div>
+                            <div class="w4-panel w4-panel-accent w4-panel-xs">Caja 2</div>
                         </div>
                     </div>
 
@@ -382,10 +399,10 @@
                         <span class="w4-text w4-text-sm w4-text-muted mb-2">data-w4-state:</span>
                         <button class="w4-button w4-button-sm w4-button-outline w-full"
                             onclick="document.getElementById('jsInteractiveStack').removeAttribute('data-w4-state')">Clear
-                            (Ninguno)</button>
+                        </button>
                         <button class="w4-button w4-button-sm w4-button-info w-full"
                             onclick="document.getElementById('jsInteractiveStack').setAttribute('data-w4-state', 'active')">Active
-                            (Debug)</button>
+                        </button>
                         <button class="w4-button w4-button-sm w4-button-warning w-full"
                             onclick="document.getElementById('jsInteractiveStack').setAttribute('data-w4-state', 'disabled')">Disabled</button>
                         <button class="w4-button w4-button-sm w4-button-error w-full"

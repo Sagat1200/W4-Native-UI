@@ -125,10 +125,10 @@
 
                     <!-- Modal Top -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted">Alineación Superior (.w4-modal-top)</span>
+                        <span class="w4-label w4-label-md w4-text-muted">Alineación Superior</span>
                         <button class="w4-button w4-button-secondary w4-button-md" data-w4-toggle="modal"
                             data-w4-target="modal-top">Abrir Modal
-                            Arriba</button>
+                            Top</button>
 
                         <div id="modal-top" class="w4-modal w4-modal-top">
                             <div class="w4-modal-box">
@@ -146,10 +146,10 @@
 
                     <!-- Modal Bottom -->
                     <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-md w4-text-muted">Alineación Inferior (.w4-modal-bottom)</span>
+                        <span class="w4-label w4-label-md w4-text-muted">Alineación Inferior</span>
                         <button class="w4-button w4-button-accent w4-button-md" data-w4-toggle="modal"
                             data-w4-target="modal-bottom">Abrir Modal
-                            Abajo</button>
+                            Bottom</button>
 
                         <div id="modal-bottom" class="w4-modal w4-modal-bottom">
                             <div class="w4-modal-box">
@@ -170,7 +170,7 @@
                         <span class="w4-label w4-label-md w4-text-muted">Cierre Estricto (Static)</span>
                         <button class="w4-button w4-button-error w4-button-md" data-w4-toggle="modal"
                             data-w4-target="modal-static">Abrir Modal
-                            Estricto</button>
+                            Static</button>
 
                         <div id="modal-static" class="w4-modal" data-w4-backdrop="static">
                             <div class="w4-modal-box">
