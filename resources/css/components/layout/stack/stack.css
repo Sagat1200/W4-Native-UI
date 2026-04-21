@@ -23,10 +23,20 @@
 /* ----------------------------------
    ALIGNMENT MODIFIERS
    ---------------------------------- */
-.w4-stack-center {
-  --w4-stack-align: center;
-  --w4-stack-justify: center;
-}
+/* Justify / Main Axis */
+.w4-stack-start { --w4-stack-justify: flex-start; }
+.w4-stack-center { --w4-stack-justify: center; --w4-stack-align: center; }
+.w4-stack-end { --w4-stack-justify: flex-end; }
+.w4-stack-between { --w4-stack-justify: space-between; }
+.w4-stack-around { --w4-stack-justify: space-around; }
+.w4-stack-evenly { --w4-stack-justify: space-evenly; }
+
+/* Align / Cross Axis (Items) */
+.w4-items-start { --w4-stack-align: flex-start; }
+.w4-items-center { --w4-stack-align: center; }
+.w4-items-end { --w4-stack-align: flex-end; }
+.w4-items-stretch { --w4-stack-align: stretch; }
+.w4-items-baseline { --w4-stack-align: baseline; }
 
 /* ----------------------------------
    SIZE SCALES (Gap Morphology)
