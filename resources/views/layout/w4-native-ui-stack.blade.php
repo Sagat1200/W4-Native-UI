@@ -417,7 +417,6 @@
 
     @NativeUIScripts
     @NativeUIInit
-    @NativeUILivewire
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

@@ -64,20 +64,34 @@
 }
 
 /* Sizes */
-.w4-breadcrumb.w4-size-xs { font-size: var(--w4-text-xs); }
-.w4-breadcrumb.w4-size-sm { font-size: var(--w4-text-sm); }
-.w4-breadcrumb.w4-size-md { font-size: var(--w4-text-base); }
-.w4-breadcrumb.w4-size-lg { font-size: var(--w4-text-lg); }
-.w4-breadcrumb.w4-size-xl { font-size: var(--w4-text-xl); }
+.w4-breadcrumb-size-xs { font-size: var(--w4-text-xs, 0.75rem); }
+.w4-breadcrumb-size-sm { font-size: var(--w4-text-sm, 0.875rem); }
+.w4-breadcrumb-size-md { font-size: var(--w4-text-base, 1rem); }
+.w4-breadcrumb-size-lg { font-size: var(--w4-text-lg, 1.125rem); }
+.w4-breadcrumb-size-xl { font-size: var(--w4-text-xl, 1.25rem); }
 
 /* Variants */
-.w4-breadcrumb.w4-variant-primary { color: var(--w4-primary); }
-.w4-breadcrumb.w4-variant-secondary { color: var(--w4-secondary); }
-.w4-breadcrumb.w4-variant-accent { color: var(--w4-accent); }
-.w4-breadcrumb.w4-variant-neutral { color: var(--w4-neutral); }
-.w4-breadcrumb.w4-variant-base-100 { color: var(--w4-base-content); }
-.w4-breadcrumb.w4-variant-base-200 { color: var(--w4-base-content); }
-.w4-breadcrumb.w4-variant-base-300 { color: var(--w4-base-content); }
+.w4-breadcrumb-primary { color: hsl(var(--w4-primary)); }
+.w4-breadcrumb-primary-content { color: hsl(var(--w4-primary-content)); }
+
+.w4-breadcrumb-secondary { color: hsl(var(--w4-secondary)); }
+.w4-breadcrumb-secondary-content { color: hsl(var(--w4-secondary-content)); }
+
+.w4-breadcrumb-accent { color: hsl(var(--w4-accent)); }
+.w4-breadcrumb-accent-content { color: hsl(var(--w4-accent-content)); }
+
+.w4-breadcrumb-neutral { color: hsl(var(--w4-neutral)); }
+.w4-breadcrumb-neutral-content { color: hsl(var(--w4-neutral-content)); }
+
+.w4-breadcrumb-base-100 { color: hsl(var(--w4-base-content)); }
+.w4-breadcrumb-base-200 { color: hsl(var(--w4-base-content)); }
+.w4-breadcrumb-base-300 { color: hsl(var(--w4-base-content)); }
+
+/* Also apply the color to the separators */
+.w4-breadcrumb-primary li:not(:last-child)::after { color: hsl(var(--w4-primary)); }
+.w4-breadcrumb-secondary li:not(:last-child)::after { color: hsl(var(--w4-secondary)); }
+.w4-breadcrumb-accent li:not(:last-child)::after { color: hsl(var(--w4-accent)); }
+.w4-breadcrumb-neutral li:not(:last-child)::after { color: hsl(var(--w4-neutral)); }
 
 /* ==========================================================================
    States & Modifiers (BreadCrumbComponentState Enum)

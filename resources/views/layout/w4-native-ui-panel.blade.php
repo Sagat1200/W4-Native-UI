@@ -145,14 +145,17 @@
             <div class="w4-stack w4-stack-horizontal w4-stack-lg">
 
                 <!-- Menú Lateral -->
-                <div class="w4-panel w4-panel-primary w4-panel-md w4-panel-elevated w-64">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary-content mb-4">Ajustes</h3>
+                <div class="w4-panel w4-panel-info w4-panel-md w4-panel-elevated w-64">
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-info-content mb-4">Ajustes</h3>
                     <div class="w4-stack w4-stack-vertical w4-stack-xl">
-                        <button class="w4-button w4-button-sm w4-button-ghost w-full w4-text-primary">Perfil
+                        <button class="w4-button w4-button-sm w4-button-ghost w-full w4-text-info-content">Perfil
                             de Usuario</button>
-                        <button class="w4-button w4-button-sm w4-button-ghost w-full">Seguridad</button>
-                        <button class="w4-button w4-button-sm w4-button-ghost w-full">Notificaciones</button>
-                        <button class="w4-button w4-button-sm w4-button-ghost ">Facturación</button>
+                        <button
+                            class="w4-button w4-button-sm w4-button-ghost w-full w4-text-info-content">Seguridad</button>
+                        <button
+                            class="w4-button w4-button-sm w4-button-ghost w-full w4-text-info-content">Notificaciones</button>
+                        <button
+                            class="w4-button w4-button-sm w4-button-ghost w-full w4-text-info-content">Facturación</button>
                     </div>
                 </div>
 
@@ -180,15 +183,15 @@
                         </div>
 
                         <div class="w4-stack w4-stack-horizontal w4-stack-end mt-3">
-                            <button class="w4-button w4-button-primary w4-button-md">Guardar Cambios</button>
+                            <button class="w4-button w4-button-neutral w4-button-md">Guardar Cambios</button>
                         </div>
                     </div>
 
                     <!-- Panel Preferencias -->
-                    <div class="w4-panel w4-panel-primary w4-panel-md w4-panel-elevated">
-                        <h3 class="w4-heading w4-heading-h3 w4-heading-primary-content mb-1">Preferencias de la Cuenta
+                    <div class="w4-panel w4-panel-secondary w4-panel-md w4-panel-elevated">
+                        <h3 class="w4-heading w4-heading-h3 w4-heading-secondary-content mb-1">Preferencias de la Cuenta
                         </h3>
-                        <p class="w4-text w4-text-sm w4-text-primary-content font-bold mb-4">Administra el idioma y la
+                        <p class="w4-text w4-text-lg w4-text-secondary-content font-bold mb-4">Administra el idioma y la
                             zona
                             horaria de
                             tu entorno.</p>
@@ -214,16 +217,16 @@
                     </div>
 
                     <!-- Panel Peligroso -->
-                    <div class="w4-panel w4-panel-error w4-panel-md w4-panel-elevated">
-                        <h3 class="w4-heading w4-heading-h3 w4-heading-error-content mb-1">Zona Peligrosa</h3>
-                        <p class="w4-text w4-text-sm w4-text-error-content mb-4">Las acciones en esta área pueden ser
+                    <div class="w4-panel w4-panel-warning w4-panel-md w4-panel-elevated">
+                        <h3 class="w4-heading w4-heading-h3 w4-heading-warning-content mb-1">ZONA PRECAVIDA</h3>
+                        <p class="w4-text w4-text-lg w4-text-warning-content mb-4">Las acciones en esta área pueden ser
                             irreversibles. Procede con precaución.</p>
 
 
 
-                        <p class="w4-text w4-text-xs w4-text-error-content">¿Estás seguro?</p>
+                        <p class="w4-text w4-text-xl w4-text-warning-content">¿Estás seguro?</p>
                         <div class="w4-stack w4-stack-horizontal w4-stack-sm w4-stack-end w4-items-center mb-4">
-                            <button class="w4-button w4-button-sm w4-button-primary">Cancelar</button>
+                            <button class="w4-button w4-button-sm w4-button-neutral">Cancelar</button>
                             <button class="w4-button w4-button-sm w4-button-error">Aceptar</button>
                         </div>
 
@@ -395,7 +398,6 @@
 
     @NativeUIScripts
     @NativeUIInit
-    @NativeUILivewire
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

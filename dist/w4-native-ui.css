@@ -3504,20 +3504,34 @@ html[data-theme] body {
 }
 
 /* Sizes */
-.w4-breadcrumb.w4-size-xs { font-size: var(--w4-text-xs); }
-.w4-breadcrumb.w4-size-sm { font-size: var(--w4-text-sm); }
-.w4-breadcrumb.w4-size-md { font-size: var(--w4-text-base); }
-.w4-breadcrumb.w4-size-lg { font-size: var(--w4-text-lg); }
-.w4-breadcrumb.w4-size-xl { font-size: var(--w4-text-xl); }
+.w4-breadcrumb-size-xs { font-size: var(--w4-text-xs, 0.75rem); }
+.w4-breadcrumb-size-sm { font-size: var(--w4-text-sm, 0.875rem); }
+.w4-breadcrumb-size-md { font-size: var(--w4-text-base, 1rem); }
+.w4-breadcrumb-size-lg { font-size: var(--w4-text-lg, 1.125rem); }
+.w4-breadcrumb-size-xl { font-size: var(--w4-text-xl, 1.25rem); }
 
 /* Variants */
-.w4-breadcrumb.w4-variant-primary { color: var(--w4-primary); }
-.w4-breadcrumb.w4-variant-secondary { color: var(--w4-secondary); }
-.w4-breadcrumb.w4-variant-accent { color: var(--w4-accent); }
-.w4-breadcrumb.w4-variant-neutral { color: var(--w4-neutral); }
-.w4-breadcrumb.w4-variant-base-100 { color: var(--w4-base-content); }
-.w4-breadcrumb.w4-variant-base-200 { color: var(--w4-base-content); }
-.w4-breadcrumb.w4-variant-base-300 { color: var(--w4-base-content); }
+.w4-breadcrumb-primary { color: hsl(var(--w4-primary)); }
+.w4-breadcrumb-primary-content { color: hsl(var(--w4-primary-content)); }
+
+.w4-breadcrumb-secondary { color: hsl(var(--w4-secondary)); }
+.w4-breadcrumb-secondary-content { color: hsl(var(--w4-secondary-content)); }
+
+.w4-breadcrumb-accent { color: hsl(var(--w4-accent)); }
+.w4-breadcrumb-accent-content { color: hsl(var(--w4-accent-content)); }
+
+.w4-breadcrumb-neutral { color: hsl(var(--w4-neutral)); }
+.w4-breadcrumb-neutral-content { color: hsl(var(--w4-neutral-content)); }
+
+.w4-breadcrumb-base-100 { color: hsl(var(--w4-base-content)); }
+.w4-breadcrumb-base-200 { color: hsl(var(--w4-base-content)); }
+.w4-breadcrumb-base-300 { color: hsl(var(--w4-base-content)); }
+
+/* Also apply the color to the separators */
+.w4-breadcrumb-primary li:not(:last-child)::after { color: hsl(var(--w4-primary)); }
+.w4-breadcrumb-secondary li:not(:last-child)::after { color: hsl(var(--w4-secondary)); }
+.w4-breadcrumb-accent li:not(:last-child)::after { color: hsl(var(--w4-accent)); }
+.w4-breadcrumb-neutral li:not(:last-child)::after { color: hsl(var(--w4-neutral)); }
 
 /* ==========================================================================
    States & Modifiers (BreadCrumbComponentState Enum)
@@ -3575,6 +3589,21 @@ html[data-theme] body {
   display: inline-block;
 }
 
+/* --------------------------------------------------------------------------
+   DropDown Body (Replaces Panel & Stack dependencies)
+   -------------------------------------------------------------------------- */
+.w4-dropdown-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--w4-spacing-1, 0.25rem);
+  background-color: var(--w4-base-100);
+  border-radius: var(--w4-radius-md);
+  padding: var(--w4-spacing-2, 0.5rem);
+  box-shadow: var(--w4-shadow-lg);
+  border: 1px solid hsl(var(--w4-base-300) / 0.5);
+}
+
+/* Dropdown Content specific overrides if any */
 .w4-dropdown-content {
   position: absolute;
   z-index: 50;
@@ -3583,10 +3612,6 @@ html[data-theme] body {
   transform: scale(0.95);
   transform-origin: top;
   transition: visibility 0.1s, opacity 0.2s ease, transform 0.2s ease;
-  background-color: var(--w4-base-100);
-  border-radius: var(--w4-radius-dropdown, var(--w4-radius-md));
-  box-shadow: var(--w4-shadow-lg);
-  padding: var(--w4-spacing-2);
   min-inline-size: 12rem;
 }
 
@@ -3629,10 +3654,36 @@ html[data-theme] body {
   transform-origin: left;
 }
 
-/* End Alignment */
+/* End Alignment (Align right edges) */
 .w4-dropdown-end .w4-dropdown-content {
   inset-inline-start: auto;
   inset-inline-end: 0;
+}
+
+/* Center Alignment (Align center of dropdown with center of trigger) */
+.w4-dropdown-center .w4-dropdown-content {
+  inset-inline-start: 50%;
+  inset-inline-end: auto;
+  transform: translateX(-50%) scale(0.95);
+}
+.w4-dropdown.w4-dropdown-open.w4-dropdown-center .w4-dropdown-content,
+.w4-dropdown.w4-dropdown-center:focus-within .w4-dropdown-content,
+.w4-dropdown.w4-dropdown-hover.w4-dropdown-center:hover .w4-dropdown-content,
+.w4-dropdown.w4-dropdown-center[data-w4-state~="open"] .w4-dropdown-content {
+  transform: translateX(-50%) scale(1);
+}
+
+/* Middle Alignment (Vertical center for left/right dropdowns) */
+.w4-dropdown-middle .w4-dropdown-content {
+  inset-block-start: 50% !important;
+  inset-block-end: auto;
+  transform: translateY(-50%) scale(0.95);
+}
+.w4-dropdown.w4-dropdown-open.w4-dropdown-middle .w4-dropdown-content,
+.w4-dropdown.w4-dropdown-middle:focus-within .w4-dropdown-content,
+.w4-dropdown.w4-dropdown-hover.w4-dropdown-middle:hover .w4-dropdown-content,
+.w4-dropdown.w4-dropdown-middle[data-w4-state~="open"] .w4-dropdown-content {
+  transform: translateY(-50%) scale(1);
 }
 
 .w4-dropdown-left.w4-dropdown-end .w4-dropdown-content,
@@ -3651,21 +3702,21 @@ html[data-theme] body {
 }
 
 /* Sizes (applies to content font size) */
-.w4-dropdown.w4-size-xs .w4-dropdown-content { font-size: var(--w4-text-xs); }
-.w4-dropdown.w4-size-sm .w4-dropdown-content { font-size: var(--w4-text-sm); }
-.w4-dropdown.w4-size-md .w4-dropdown-content { font-size: var(--w4-text-base); }
-.w4-dropdown.w4-size-lg .w4-dropdown-content { font-size: var(--w4-text-lg); }
-.w4-dropdown.w4-size-xl .w4-dropdown-content { font-size: var(--w4-text-xl); }
+.w4-dropdown.w4-dropdown-sm .w4-dropdown-content { font-size: var(--w4-text-xs, 0.75rem); }
+.w4-dropdown.w4-dropdown-md .w4-dropdown-content { font-size: var(--w4-text-sm, 0.875rem); }
+.w4-dropdown.w4-dropdown-md .w4-dropdown-content { font-size: var(--w4-text-base, 1rem); }
+.w4-dropdown.w4-dropdown-lg .w4-dropdown-content { font-size: var(--w4-text-lg, 1.125rem); }
+.w4-dropdown.w4-dropdown-xl .w4-dropdown-content { font-size: var(--w4-text-xl, 1.25rem); }
 
 /* Variants (applies to background/colors of the dropdown content) */
-.w4-dropdown.w4-variant-primary .w4-dropdown-content { background-color: var(--w4-primary); color: var(--w4-primary-content); }
-.w4-dropdown.w4-variant-secondary .w4-dropdown-content { background-color: var(--w4-secondary); color: var(--w4-secondary-content); }
-.w4-dropdown.w4-variant-accent .w4-dropdown-content { background-color: var(--w4-accent); color: var(--w4-accent-content); }
-.w4-dropdown.w4-variant-info .w4-dropdown-content { background-color: var(--w4-info); color: var(--w4-info-content); }
-.w4-dropdown.w4-variant-success .w4-dropdown-content { background-color: var(--w4-success); color: var(--w4-success-content); }
-.w4-dropdown.w4-variant-warning .w4-dropdown-content { background-color: var(--w4-warning); color: var(--w4-warning-content); }
-.w4-dropdown.w4-variant-error .w4-dropdown-content { background-color: var(--w4-error); color: var(--w4-error-content); }
-.w4-dropdown.w4-variant-neutral .w4-dropdown-content { background-color: var(--w4-neutral); color: var(--w4-neutral-content); }
+.w4-dropdown.w4-dropdown-primary .w4-dropdown-content { background-color: hsl(var(--w4-primary)); color: hsl(var(--w4-primary-content)); }
+.w4-dropdown.w4-dropdown-secondary .w4-dropdown-content { background-color: hsl(var(--w4-secondary)); color: hsl(var(--w4-secondary-content)); }
+.w4-dropdown.w4-dropdown-accent .w4-dropdown-content { background-color: hsl(var(--w4-accent)); color: hsl(var(--w4-accent-content)); }
+.w4-dropdown.w4-dropdown-info .w4-dropdown-content { background-color: hsl(var(--w4-info)); color: hsl(var(--w4-info-content)); }
+.w4-dropdown.w4-dropdown-success .w4-dropdown-content { background-color: hsl(var(--w4-success)); color: hsl(var(--w4-success-content)); }
+.w4-dropdown.w4-dropdown-warning .w4-dropdown-content { background-color: hsl(var(--w4-warning)); color: hsl(var(--w4-warning-content)); }
+.w4-dropdown.w4-dropdown-error .w4-dropdown-content { background-color: hsl(var(--w4-error)); color: hsl(var(--w4-error-content)); }
+.w4-dropdown.w4-dropdown-neutral .w4-dropdown-content { background-color: hsl(var(--w4-neutral)); color: hsl(var(--w4-neutral-content)); }
 
 /* ==========================================================================
    States & Modifiers (DropDownComponentState Enum)
