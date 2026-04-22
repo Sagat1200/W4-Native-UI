@@ -9,6 +9,7 @@ use W4\NativeUI\Services\Provider\Components\FeedBack\NativeUIFeedBackService;
 use W4\NativeUI\Services\Provider\Components\Form\NativeUIFormService;
 use W4\NativeUI\Services\Provider\Components\Interactive\NativeUIInteractiveService;
 use W4\NativeUI\Services\Provider\Components\Layout\NativeUILayoutService;
+use W4\NativeUI\Services\Provider\Components\Navigation\NativeUINavigationService;
 use W4\NativeUI\Services\Provider\Components\UI\NativeUIUIService;
 use W4\NativeUI\Services\Provider\Directives\NativeUIDirectiveService;
 use W4\NativeUI\Services\Provider\Route\NativeUIFeedbackRouteService;
@@ -53,7 +54,8 @@ class NativeUIServiceProvider extends ServiceProvider
                     NativeUIFormService::getComponents(),
                     NativeUILayoutService::getComponents(),
                     NativeUIFeedBackService::getComponents(),
-                    NativeUIInteractiveService::getComponents()
+                    NativeUIInteractiveService::getComponents(),
+                    NativeUINavigationService::getComponents()
                 )
             );
         });
