@@ -6,101 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Menu Lab</title>
     @NativeUIStyles
-    <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-shell {
-            max-inline-size: 1280px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.25rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.72);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            min-inline-size: 180px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.25rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .demo-zone {
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-            padding: 1rem;
-            display: grid;
-            gap: 1rem;
-        }
-
-        .demo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 0.875rem;
-        }
-
-        .demo-card {
-            overflow: visible;
-        }
-    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
-    <div class="lab-shell">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: Menu Lab</h1>
-                <p class="lab-subtitle">Pruebas de orientaciones, variantes, tamaños y estados de `w4-menu`.</p>
-            </div>
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+
+    <div class="w4-navbar w4-navbar-primary">
+        <div class="w4-navbar-start">
+            <button class="w4-button w4-button-ghost w4-button-square">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="w4-icon w4-icon-md stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <button class="w4-button w4-button-ghost">Native UI</button>
+        </div>
+        <div class="w4-navbar-center">
+            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs mx-2">
+                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -135,20 +62,28 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section class="w4-section w4-section-md w4-section-base-100"
-            style="margin-block-end: 2rem; margin-block-start: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Menu</h1>
-            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+    <main class="w4-container w4-container-xl">
+
+        <div class="w4-section w4-section-xl">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Menu</h1>
+            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente
+                w4-menu</p>
+        </div>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Menu</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Menu</strong> proporciona una lista estructurada y navegable de opciones o
                 enlaces. Es la base fundamental para construir sistemas de navegación como barras laterales, menús
                 desplegables y barras de navegación superiores.
             </p>
-            <br>
-            <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
-            <ul class="w4-text w4-text-base w4-text-start"
-                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+
+            <h3 class="w4-heading w4-heading-h3 w4-heading-primary">Casos de Uso Comunes:</h3>
+            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical">
                 <li><strong>Navegación principal (Sidebar):</strong> Menús verticales en paneles de administración o
                     dashboards para acceder a diferentes módulos.</li>
                 <li><strong>Navegación horizontal:</strong> Barras de enlaces en la cabecera de sitios web corporativos
@@ -160,165 +95,392 @@
             </ul>
         </section>
 
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title">Orientations & Layouts</h2>
-            <div class="demo-zone">
-                <div class="demo-grid">
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-primary">Vertical (Default)</div>
-                        <ul class="w4-menu">
-                            <li><a href="#" class="active">Dashboard</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Settings</a></li>
-                        </ul>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card"
-                        style="grid-column: 1 / -1; overflow: visible;">
-                        <div class="w4-label w4-label-sm w4-label-primary">Horizontal with Submenu</div>
-                        <ul class="w4-menu w4-menu-horizontal">
-                            <li><a href="#" class="active">Overview</a></li>
-                            <li>
-                                <span>Activity ▼</span>
-                                <ul>
-                                    <li><a href="#">Recent</a></li>
-                                    <li><a href="#">Archived</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Team</a></li>
-                        </ul>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-primary">Compact Modifier</div>
-                        <ul class="w4-menu w4-menu-compact">
-                            <li><a href="#" class="active">Dashboard</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Settings</a></li>
-                        </ul>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-primary">Submenu (Vertical)</div>
-                        <ul class="w4-menu">
-                            <li><a href="#" class="active">Dashboard</a></li>
-                            <li>
-                                <span>Projects</span>
-                                <ul>
-                                    <li><a href="#">Active</a></li>
-                                    <li><a href="#">Archived</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+        <!-- VARIANTES DE COLOR -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-success w4-heading-start">Variantes de Color</h2>
+            <hr class="w4-divider w4-divider-success">
+            <p class="w4-text w4-text-md w4-text-neutral">
+                Aplica una variante al contenedor <code>ul</code> con clases <code>.w4-menu-*</code>. El elemento
+                activo usa <code>.active</code> para mostrar el estado seleccionado.
+            </p>
+
+            <div class="w4-grid w4-grid-3">
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Neutral</h3>
+                    <ul class="w4-menu w4-menu-neutral w4-menu-vertical">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-primary">Primary</h3>
+                    <ul class="w4-menu w4-menu-primary w4-menu-sm">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-secondary">Secondary</h3>
+                    <ul class="w4-menu w4-menu-secondary w4-menu-sm">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-accent">Accent</h3>
+                    <ul class="w4-menu w4-menu-accent w4-menu-sm">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-info">Info</h3>
+                    <ul class="w4-menu w4-menu-info w4-menu-sm">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-success">Success</h3>
+                    <ul class="w4-menu w4-menu-success w4-menu-sm">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-warning">Warning</h3>
+                    <ul class="w4-menu w4-menu-warning w4-menu-sm">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-error">Error</h3>
+                    <ul class="w4-menu w4-menu-error w4-menu-sm">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Base-100</h3>
+                    <ul class="w4-menu w4-menu-base-100 w4-menu-sm">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Base-200</h3>
+                    <ul class="w4-menu w4-menu-base-200 w4-menu-sm">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-300 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Base-300</h3>
+                    <ul class="w4-menu w4-menu-base-300 w4-menu-sm">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary));">Variants (Active State Color)</h2>
-            <div class="demo-zone">
-                <div class="demo-grid">
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-secondary">Primary</div>
-                        <ul class="w4-menu w4-variant-primary">
-                            <li><a href="#" class="active">Selected Item</a></li>
-                            <li><a href="#">Normal Item</a></li>
-                        </ul>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-secondary">Secondary</div>
-                        <ul class="w4-menu w4-variant-secondary">
-                            <li><a href="#" class="active">Selected Item</a></li>
-                            <li><a href="#">Normal Item</a></li>
-                        </ul>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-secondary">Accent</div>
-                        <ul class="w4-menu w4-variant-accent">
-                            <li><a href="#" class="active">Selected Item</a></li>
-                            <li><a href="#">Normal Item</a></li>
-                        </ul>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-secondary">Success</div>
-                        <ul class="w4-menu w4-variant-success">
-                            <li><a href="#" class="active">Selected Item</a></li>
-                            <li><a href="#">Normal Item</a></li>
-                        </ul>
-                    </div>
+        <!-- MENÚS HORIZONTALES -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Menús Horizontales</h2>
+            <hr class="w4-divider w4-divider-accent">
+            <p class="w4-text w4-text-md w4-text-neutral">
+                Ejemplos de <code>.w4-menu-horizontal</code> sin submenús con todas las variantes de color disponibles.
+            </p>
+
+            <div class="w4-grid w4-grid-2">
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Neutral</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-neutral w4-menu-sm">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="" class="active">Explorar</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-primary">Primary</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-primary w4-menu-sm">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="" class="active">Explorar</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-secondary">Secondary</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-secondary w4-menu-sm">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="" class="active">Explorar</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-accent">Accent</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-accent w4-menu-sm">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="" class="active">Explorar</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-info">Info</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-info w4-menu-sm">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="" class="active">Explorar</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-success">Success</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-success w4-menu-sm">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="" class="active">Explorar</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-warning">Warning</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-warning w4-menu-sm">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="" class="active">Explorar</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-error">Error</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-error w4-menu-sm">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="" class="active">Explorar</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Base-100</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-base-100 w4-menu-sm">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="" class="active">Explorar</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Base-200</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-base-200 w4-menu-sm">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="" class="active">Explorar</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-300 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Base-300</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-sm">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="" class="active">Explorar</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title" style="border-color: hsl(var(--w4-info));">Sizes</h2>
-            <div class="demo-zone">
-                <div class="demo-grid">
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-info">Size XS</div>
-                        <ul class="w4-menu w4-size-xs w4-variant-primary">
-                            <li><a href="#" class="active">Item 1</a></li>
-                            <li><a href="#">Item 2</a></li>
-                        </ul>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-info">Size SM</div>
-                        <ul class="w4-menu w4-size-sm w4-variant-primary">
-                            <li><a href="#" class="active">Item 1</a></li>
-                            <li><a href="#">Item 2</a></li>
-                        </ul>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-info">Size MD</div>
-                        <ul class="w4-menu w4-size-md w4-variant-primary">
-                            <li><a href="#" class="active">Item 1</a></li>
-                            <li><a href="#">Item 2</a></li>
-                        </ul>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-info">Size LG</div>
-                        <ul class="w4-menu w4-size-lg w4-variant-primary">
-                            <li><a href="#" class="active">Item 1</a></li>
-                            <li><a href="#">Item 2</a></li>
-                        </ul>
-                    </div>
+        <!-- TAMAÑOS -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Tamaños del Menú</h2>
+            <hr class="w4-divider w4-divider-info">
+            <p class="w4-text w4-text-md w4-text-neutral">
+                Las clases <code>.w4-menu-xs</code> a <code>.w4-menu-xl</code> ajustan padding, tipografía, separación
+                y ancho mínimo de submenú para que el componente escale de forma consistente.
+            </p>
+
+            <div class="w4-grid w4-grid-3">
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">XS</h3>
+                    <ul class="w4-menu w4-menu-primary w4-menu-xs">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">SM</h3>
+                    <ul class="w4-menu w4-menu-primary w4-menu-sm">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">MD</h3>
+                    <ul class="w4-menu w4-menu-primary w4-menu-md">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">LG</h3>
+                    <ul class="w4-menu w4-menu-primary w4-menu-lg">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">XL</h3>
+                    <ul class="w4-menu w4-menu-primary w4-menu-xl">
+                        <li><a href="">Inbox</a></li>
+                        <li><a href="" class="active">Sent</a></li>
+                        <li><a href="">Drafts</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title" style="border-color: hsl(var(--w4-accent));">States</h2>
-            <div class="demo-zone">
-                <div class="demo-grid">
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-accent">Item Disabled</div>
-                        <ul class="w4-menu">
-                            <li><a href="#">Normal</a></li>
-                            <li class="w4-menu-disabled"><a href="#">Disabled Item</a></li>
-                            <li data-w4-state="disabled"><a href="#">Data Disabled</a></li>
-                        </ul>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-accent">Data Active</div>
-                        <ul class="w4-menu w4-variant-accent">
-                            <li data-w4-state="active"><a href="#">Active via Data</a></li>
-                            <li><a href="#">Normal Item</a></li>
-                        </ul>
-                    </div>
-                    <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body demo-card">
-                        <div class="w4-label w4-label-sm w4-label-accent">Menu Hidden</div>
-                        <ul class="w4-menu w4-menu-hidden">
-                            <li><a href="#">Item 1</a></li>
-                            <li><a href="#">Item 2</a></li>
-                        </ul>
-                        <div class="w4-text w4-text-sm w4-text-muted">(Menu invisible por w4-menu-hidden)</div>
-                    </div>
+        <!-- MENÚS CON ICONOS -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Menús con Iconos</h2>
+            <hr class="w4-divider w4-divider-secondary">
+            <p class="w4-text w4-text-md w4-text-neutral">
+                Ejemplos usando <code>.w4-menu-item-icon</code>, <code>.w4-menu-item-label</code> y
+                <code>.w4-menu-item-meta</code> para enriquecer navegación y acciones rápidas.
+            </p>
+
+            <div class="w4-grid w4-grid-2">
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Sidebar con Iconos</h3>
+                    <ul class="w4-menu w4-menu-base-100 w4-menu-md">
+                        <li>
+                            <a href="#" class="active">
+                                <span class="w4-menu-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w4-icon w4-icon-sm"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 13h8V3H3zM13 21h8v-6h-8zM13 11h8V3h-8zM3 21h8v-6H3z" />
+                                    </svg>
+                                </span>
+                                <span class="w4-menu-item-label">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="w4-menu-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w4-icon w4-icon-sm"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 4h18M3 12h18M3 20h18" />
+                                    </svg>
+                                </span>
+                                <span class="w4-menu-item-label">Proyectos</span>
+                                <span class="w4-menu-item-meta">12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="w4-menu-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w4-icon w4-icon-sm"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                    </svg>
+                                </span>
+                                <span class="w4-menu-item-label">Mensajes</span>
+                                <span class="w4-menu-item-meta">3</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Horizontal con Iconos</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-primary w4-menu-sm w4-menu-center">
+                        <li>
+                            <a href="#" class="active">
+                                <span class="w4-menu-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w4-icon w4-icon-sm"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg>
+                                </span>
+                                <span class="w4-menu-item-label">Nuevo</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="w4-menu-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w4-icon w4-icon-sm"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 6h16M4 12h16M4 18h16" />
+                                    </svg>
+                                </span>
+                                <span class="w4-menu-item-label">Listado</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="w4-menu-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w4-icon w4-icon-sm"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 20l9-5-9-5-9 5 9 5zM12 12V4" />
+                                    </svg>
+                                </span>
+                                <span class="w4-menu-item-label">Exportar</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
-    </div>
+
+
+    </main>
 
     @NativeUIScripts
     @NativeUIInit
-    @NativeUILivewire
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

@@ -500,6 +500,15 @@ html[data-theme] body {
   --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
   --w4-checkbox-shadow: 4px 4px 0px 0px hsl(var(--w4-primary));
   
+  /* Menu morphology */
+  --w4-menu-padding-x: var(--w4-spacing-4, 1rem);
+  --w4-menu-padding-y: var(--w4-spacing-2_5, 0.625rem);
+  --w4-menu-gap: var(--w4-spacing-1, 0.25rem);
+  --w4-menu-radius: 0px;
+  --w4-menu-border-color: hsl(var(--w4-base-content));
+  --w4-menu-shadow: var(--w4-shadow-md);
+  --w4-menu-submenu-min-width: 14rem;
+  
   /* Textarea */
   --w4-textarea-shadow: 4px 4px 0px 0px hsl(var(--w4-base-content));
   --w4-textarea-shadow-focus: 4px 4px 0px 0px hsl(var(--w4-base-content));
@@ -814,6 +823,15 @@ html[data-theme] body {
   --w4-shadow-sm: none;
   --w4-shadow-md: none;
   
+  /* Menu morphology */
+  --w4-menu-padding-x: var(--w4-spacing-2, 0.5rem);
+  --w4-menu-padding-y: var(--w4-spacing-1, 0.25rem);
+  --w4-menu-gap: 0.125rem;
+  --w4-menu-radius: 0px;
+  --w4-menu-border-color: hsl(var(--w4-base-content));
+  --w4-menu-shadow: none;
+  --w4-menu-submenu-min-width: 11rem;
+  
   --w4-checkbox-bg: transparent;
   --w4-checkbox-color: transparent;
   --w4-checkbox-mark-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4 8 7 11 13 4'/%3E%3C/svg%3E");
@@ -881,6 +899,15 @@ html[data-theme] body {
   --w4-btn-border-width: 1px;
   --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
+  
+  /* Menu morphology */
+  --w4-menu-padding-x: var(--w4-spacing-4, 1rem);
+  --w4-menu-padding-y: var(--w4-spacing-2, 0.5rem);
+  --w4-menu-gap: var(--w4-spacing-1_5, 0.375rem);
+  --w4-menu-radius: 0.75rem;
+  --w4-menu-border-color: hsl(var(--w4-base-300));
+  --w4-menu-shadow: 0 12px 28px -12px rgb(0 0 0 / 0.55);
+  --w4-menu-submenu-min-width: 16rem;
 }
 
 [data-theme="native-ui.dracula"] {
@@ -1267,6 +1294,15 @@ html[data-theme] body {
   --w4-shadow-sm: 4px 4px 0px 0px hsl(var(--w4-base-content)); /* Sombra dura estilo cyberpunk */
   --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
   --w4-checkbox-shadow: 4px 4px 0px 0px hsl(var(--w4-primary));
+  
+  /* Menu morphology */
+  --w4-menu-padding-x: var(--w4-spacing-4, 1rem);
+  --w4-menu-padding-y: var(--w4-spacing-2_5, 0.625rem);
+  --w4-menu-gap: var(--w4-spacing-1, 0.25rem);
+  --w4-menu-radius: 0px;
+  --w4-menu-border-color: hsl(var(--w4-base-content));
+  --w4-menu-shadow: var(--w4-shadow-md);
+  --w4-menu-submenu-min-width: 14rem;
   
   /* Textarea */
   --w4-textarea-shadow: 4px 4px 0px 0px hsl(var(--w4-base-content));
@@ -3746,175 +3782,658 @@ html[data-theme] body {
 }
 }
 
-/* ==========================================================================
-   Menu Component
-   Native W4 Visual Engine implementation Layout Morphology
-   ========================================================================== */
+/* =========================================
+   MENU COMPONENT
+   Native W4 Visual Engine implementation
+   Navigation System
+   ========================================= */
 
 @layer components {
-.w4-menu {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: var(--w4-spacing-2);
-  margin: 0;
-  gap: var(--w4-spacing-1);
-  background-color: var(--w4-base-100);
-  border-radius: var(--w4-radius-menu, var(--w4-radius-md));
-  color: var(--w4-base-content);
-}
+  .w4-menu {
+    --w4-menu-gap: var(--w4-spacing-1, 0.25rem);
+    --w4-menu-padding-x: var(--w4-spacing-3, 0.75rem);
+    --w4-menu-padding-y: var(--w4-spacing-2, 0.5rem);
+    --w4-menu-font-size: var(--w4-text-sm, 0.875rem);
+    --w4-menu-radius: var(--w4-radius-md, 0.5rem);
+    --w4-menu-bg: transparent;
+    --w4-menu-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-menu-hover-bg: hsl(var(--w4-base-200, 210 40% 96.1%));
+    --w4-menu-hover-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-menu-active-bg: hsl(var(--w4-primary, 221 83% 53%));
+    --w4-menu-active-color: hsl(var(--w4-primary-content, 210 40% 98%));
+    --w4-menu-border-color: hsl(var(--w4-base-300, 214 32% 91%));
+    --w4-menu-shadow: var(--w4-shadow-md, 0 4px 12px rgba(0, 0, 0, 0.08));
+    --w4-menu-submenu-min-width: 12rem;
+    --w4-menu-z-index: 50;
 
-.w4-menu-horizontal {
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-}
+    display: flex;
+    flex-direction: column;
+    gap: var(--w4-menu-gap);
+    inline-size: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: var(--w4-menu-bg);
+    color: var(--w4-menu-color);
+  }
 
-.w4-menu-vertical {
-  flex-direction: column;
-}
+  /* ----------------------------------
+     Root list
+     ---------------------------------- */
+  .w4-menu>li {
+    position: relative;
+    list-style: none;
+  }
 
-.w4-menu li {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
+  /* ----------------------------------
+     Menu items
+     ---------------------------------- */
+  .w4-menu li>a,
+  .w4-menu li>button,
+  .w4-menu li>.w4-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--w4-spacing-2, 0.5rem);
 
-.w4-menu li > a,
-.w4-menu li > button,
-.w4-menu li > span {
-  display: flex;
-  align-items: center;
-  gap: var(--w4-spacing-2);
-  padding: var(--w4-spacing-2) var(--w4-spacing-4);
-  border-radius: var(--w4-radius-md);
-  text-decoration: none;
-  color: inherit;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  text-align: start;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  font-size: var(--w4-text-sm);
-  user-select: none;
-}
+    inline-size: 100%;
+    width: 100%;
 
-.w4-menu li > a:hover,
-.w4-menu li > button:hover,
-.w4-menu li > a:focus-visible,
-.w4-menu li > button:focus-visible {
-  background-color: var(--w4-base-200);
-  outline: none;
-}
+    padding: var(--w4-menu-padding-y) var(--w4-menu-padding-x);
+    border: 0;
+    border-radius: var(--w4-menu-radius);
+    background: transparent;
+    color: inherit;
+    text-decoration: none;
+    text-align: start;
+    font-size: var(--w4-menu-font-size);
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
 
-.w4-menu li > a.active,
-.w4-menu li > button.active {
-  background-color: var(--w4-neutral);
-  color: var(--w4-neutral-content);
-}
+  .w4-menu li>a:hover,
+  .w4-menu li>button:hover,
+  .w4-menu li>.w4-menu-item:hover {
+    background: var(--w4-menu-hover-bg);
+    color: var(--w4-menu-hover-color);
+  }
 
-.w4-menu-compact li > a,
-.w4-menu-compact li > button {
-  padding: var(--w4-spacing-1) var(--w4-spacing-2);
-  font-size: var(--w4-text-xs);
-}
+  .w4-menu li>a:focus-visible,
+  .w4-menu li>button:focus-visible,
+  .w4-menu li>.w4-menu-item:focus-visible {
+    outline: 2px solid hsl(var(--w4-primary, 221 83% 53%));
+    outline-offset: 2px;
+  }
 
-.w4-menu-expanded {
-  inline-size: 100%;
-}
+  /* ----------------------------------
+     Active state
+     ---------------------------------- */
+  .w4-menu li>a.active,
+  .w4-menu li>button.active,
+  .w4-menu li[data-w4-state~="active"]>a,
+  .w4-menu li[data-w4-state~="active"]>button,
+  .w4-menu li[data-w4-state~="active"]>.w4-menu-item {
+    background: var(--w4-menu-active-bg);
+    color: var(--w4-menu-active-color);
+  }
 
-.w4-menu-expanded li > a,
-.w4-menu-expanded li > button {
-  justify-content: space-between;
-}
+  /* ----------------------------------
+     Semantic variants
+     ---------------------------------- */
+  .w4-menu-neutral {
+    --w4-menu-bg: hsl(var(--w4-neutral, 220 13% 18%));
+    --w4-menu-color: hsl(var(--w4-neutral-content, 210 40% 98%));
+    --w4-menu-hover-bg: hsl(var(--w4-neutral-content, 210 40% 98%) / 0.12);
+    --w4-menu-hover-color: hsl(var(--w4-neutral-content, 210 40% 98%));
+    --w4-menu-active-bg: hsl(var(--w4-neutral-content, 210 40% 98%));
+    --w4-menu-active-color: hsl(var(--w4-neutral, 220 13% 18%));
+  }
 
-/* Sub-menus */
-.w4-menu ul {
-  list-style: none;
-  padding-inline-start: var(--w4-spacing-4);
-  margin: var(--w4-spacing-1) 0 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--w4-spacing-1);
-  display: none; /* Submenus are hidden by default */
-}
+  .w4-menu-primary {
+    --w4-menu-bg: hsl(var(--w4-primary, 221 83% 53%));
+    --w4-menu-color: hsl(var(--w4-primary-content, 210 40% 98%));
+    --w4-menu-hover-bg: hsl(var(--w4-primary-content, 210 40% 98%) / 0.12);
+    --w4-menu-hover-color: hsl(var(--w4-primary-content, 210 40% 98%));
+    --w4-menu-active-bg: hsl(var(--w4-primary-content, 210 40% 98%));
+    --w4-menu-active-color: hsl(var(--w4-primary, 221 83% 53%));
+  }
 
-/* Vertical menu submenu toggling */
-.w4-menu li.w4-menu-open > ul,
-.w4-menu li[data-w4-state~="open"] > ul {
-  display: flex;
-}
+  .w4-menu-secondary {
+    --w4-menu-bg: hsl(var(--w4-secondary, 262 52% 47%));
+    --w4-menu-color: hsl(var(--w4-secondary-content, 210 40% 98%));
+    --w4-menu-hover-bg: hsl(var(--w4-secondary-content, 210 40% 98%) / 0.12);
+    --w4-menu-hover-color: hsl(var(--w4-secondary-content, 210 40% 98%));
+    --w4-menu-active-bg: hsl(var(--w4-secondary-content, 210 40% 98%));
+    --w4-menu-active-color: hsl(var(--w4-secondary, 262 52% 47%));
+  }
 
-/* Horizontal menu submenus */
-.w4-menu-horizontal > li > ul {
-  position: absolute;
-  inset-block-start: 100%;
-  inset-inline-start: 0;
-  background-color: var(--w4-base-100);
-  padding: var(--w4-spacing-2);
-  border-radius: var(--w4-radius-md);
-  box-shadow: var(--w4-shadow-lg);
-  min-inline-size: 12rem;
-  z-index: 50;
-  display: none; /* Controlled via JS or hover */
-}
+  .w4-menu-accent {
+    --w4-menu-bg: hsl(var(--w4-accent, 189 94% 43%));
+    --w4-menu-color: hsl(var(--w4-accent-content, 210 40% 98%));
+    --w4-menu-hover-bg: hsl(var(--w4-accent-content, 210 40% 98%) / 0.12);
+    --w4-menu-hover-color: hsl(var(--w4-accent-content, 210 40% 98%));
+    --w4-menu-active-bg: hsl(var(--w4-accent-content, 210 40% 98%));
+    --w4-menu-active-color: hsl(var(--w4-accent, 189 94% 43%));
+  }
 
-.w4-menu-horizontal > li.w4-menu-open > ul,
-.w4-menu-horizontal > li:hover > ul {
-  display: flex;
-}
+  .w4-menu-info {
+    --w4-menu-bg: hsl(var(--w4-info, 199 89% 48%));
+    --w4-menu-color: hsl(var(--w4-info-content, 210 40% 98%));
+    --w4-menu-hover-bg: hsl(var(--w4-info-content, 210 40% 98%) / 0.12);
+    --w4-menu-hover-color: hsl(var(--w4-info-content, 210 40% 98%));
+    --w4-menu-active-bg: hsl(var(--w4-info-content, 210 40% 98%));
+    --w4-menu-active-color: hsl(var(--w4-info, 199 89% 48%));
+  }
 
-/* Sizes */
-.w4-menu.w4-size-xs li > a { font-size: var(--w4-text-xs); padding: var(--w4-spacing-1) var(--w4-spacing-2); }
-.w4-menu.w4-size-sm li > a { font-size: var(--w4-text-sm); padding: var(--w4-spacing-1) var(--w4-spacing-3); }
-.w4-menu.w4-size-md li > a { font-size: var(--w4-text-base); }
-.w4-menu.w4-size-lg li > a { font-size: var(--w4-text-lg); padding: var(--w4-spacing-3) var(--w4-spacing-5); }
-.w4-menu.w4-size-xl li > a { font-size: var(--w4-text-xl); padding: var(--w4-spacing-4) var(--w4-spacing-6); }
+  .w4-menu-success {
+    --w4-menu-bg: hsl(var(--w4-success, 142 71% 45%));
+    --w4-menu-color: hsl(var(--w4-success-content, 210 40% 98%));
+    --w4-menu-hover-bg: hsl(var(--w4-success-content, 210 40% 98%) / 0.12);
+    --w4-menu-hover-color: hsl(var(--w4-success-content, 210 40% 98%));
+    --w4-menu-active-bg: hsl(var(--w4-success-content, 210 40% 98%));
+    --w4-menu-active-color: hsl(var(--w4-success, 142 71% 45%));
+  }
 
-/* Variants (applies active background colors) */
-.w4-menu.w4-variant-primary li > a.active { background-color: var(--w4-primary); color: var(--w4-primary-content); }
-.w4-menu.w4-variant-secondary li > a.active { background-color: var(--w4-secondary); color: var(--w4-secondary-content); }
-.w4-menu.w4-variant-accent li > a.active { background-color: var(--w4-accent); color: var(--w4-accent-content); }
-.w4-menu.w4-variant-info li > a.active { background-color: var(--w4-info); color: var(--w4-info-content); }
-.w4-menu.w4-variant-success li > a.active { background-color: var(--w4-success); color: var(--w4-success-content); }
-.w4-menu.w4-variant-warning li > a.active, .w4-menu.w4-variant-warning li > button.active { background-color: var(--w4-warning); color: var(--w4-warning-content); }
-.w4-menu.w4-variant-error li > a.active, .w4-menu.w4-variant-error li > button.active { background-color: var(--w4-error); color: var(--w4-error-content); }
+  .w4-menu-warning {
+    --w4-menu-bg: hsl(var(--w4-warning, 38 92% 50%));
+    --w4-menu-color: hsl(var(--w4-warning-content, 25 95% 11%));
+    --w4-menu-hover-bg: hsl(var(--w4-warning-content, 25 95% 11%) / 0.12);
+    --w4-menu-hover-color: hsl(var(--w4-warning-content, 25 95% 11%));
+    --w4-menu-active-bg: hsl(var(--w4-warning-content, 25 95% 11%));
+    --w4-menu-active-color: hsl(var(--w4-warning, 38 92% 50%));
+  }
 
-/* ==========================================================================
-   States & Modifiers (MenuComponentState Enum)
-   ========================================================================== */
+  .w4-menu-error {
+    --w4-menu-bg: hsl(var(--w4-error, 0 84% 60%));
+    --w4-menu-color: hsl(var(--w4-error-content, 210 40% 98%));
+    --w4-menu-hover-bg: hsl(var(--w4-error-content, 210 40% 98%) / 0.12);
+    --w4-menu-hover-color: hsl(var(--w4-error-content, 210 40% 98%));
+    --w4-menu-active-bg: hsl(var(--w4-error-content, 210 40% 98%));
+    --w4-menu-active-color: hsl(var(--w4-error, 0 84% 60%));
+  }
 
-.w4-menu-hidden,
-.w4-menu[data-w4-state~="hidden"],
-.w4-menu li[data-w4-state~="hidden"] {
-  display: none !important;
-}
+  .w4-menu-base-100 {
+    --w4-menu-bg: hsl(var(--w4-base-100, 0 0% 100%));
+    --w4-menu-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-menu-hover-bg: hsl(var(--w4-base-200, 210 40% 96.1%));
+    --w4-menu-hover-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-menu-active-bg: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-menu-active-color: hsl(var(--w4-base-100, 0 0% 100%));
+  }
 
-.w4-menu-disabled,
-.w4-menu[data-w4-state~="disabled"],
-.w4-menu li[data-w4-state~="disabled"] {
-  opacity: 0.5 !important;
-  pointer-events: none !important;
-  filter: grayscale(1);
-}
+  .w4-menu-base-200 {
+    --w4-menu-bg: hsl(var(--w4-base-200, 210 40% 96.1%));
+    --w4-menu-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-menu-hover-bg: hsl(var(--w4-base-300, 214 32% 91%));
+    --w4-menu-hover-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-menu-active-bg: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-menu-active-color: hsl(var(--w4-base-200, 210 40% 96.1%));
+  }
 
-/* Active state for individual menu items is already handled by .active class above,
-   but we add support for the data attribute for framework consistency */
-.w4-menu li[data-w4-state~="active"] > a,
-.w4-menu li[data-w4-state~="active"] > button {
-  background-color: var(--w4-neutral);
-  color: var(--w4-neutral-content);
-}
+  .w4-menu-base-300 {
+    --w4-menu-bg: hsl(var(--w4-base-300, 214 32% 91%));
+    --w4-menu-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-menu-hover-bg: hsl(var(--w4-base-100, 0 0% 100%));
+    --w4-menu-hover-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-menu-active-bg: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-menu-active-color: hsl(var(--w4-base-300, 214 32% 91%));
+  }
 
-.w4-menu.w4-variant-primary li[data-w4-state~="active"] > a, .w4-menu.w4-variant-primary li[data-w4-state~="active"] > button { background-color: var(--w4-primary); color: var(--w4-primary-content); }
-.w4-menu.w4-variant-secondary li[data-w4-state~="active"] > a, .w4-menu.w4-variant-secondary li[data-w4-state~="active"] > button { background-color: var(--w4-secondary); color: var(--w4-secondary-content); }
-.w4-menu.w4-variant-accent li[data-w4-state~="active"] > a, .w4-menu.w4-variant-accent li[data-w4-state~="active"] > button { background-color: var(--w4-accent); color: var(--w4-accent-content); }
+  /* ----------------------------------
+     Disabled state
+     ---------------------------------- */
+  .w4-menu li[data-w4-state~="disabled"]>a,
+  .w4-menu li[data-w4-state~="disabled"]>button,
+  .w4-menu li[data-w4-state~="disabled"]>.w4-menu-item,
+  .w4-menu li>a[disabled],
+  .w4-menu li>button[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
 
-/* Open State (for submenus) */
-.w4-menu li.w4-menu-open > ul,
-.w4-menu li[data-w4-state~="open"] > ul {
-  display: flex; /* Override the default hidden state of horizontal submenus */
-}
+  /* ----------------------------------
+     Loading state
+     ---------------------------------- */
+  .w4-menu li[data-w4-state~="loading"]>a,
+  .w4-menu li[data-w4-state~="loading"]>button,
+  .w4-menu li[data-w4-state~="loading"]>.w4-menu-item {
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: progress;
+  }
+
+  /* ----------------------------------
+     Submenu base
+     ---------------------------------- */
+  .w4-menu ul {
+    list-style: none;
+    margin: var(--w4-spacing-1, 0.25rem) 0 0 0;
+    padding: var(--w4-spacing-2, 0.5rem) var(--w4-spacing-4, 1rem);
+    padding-inline-start: var(--w4-spacing-4, 1rem);
+
+    display: none;
+    flex-direction: column;
+    gap: var(--w4-menu-gap);
+
+    inline-size: 100%;
+    width: 100%;
+
+    border-inline-start: 2px solid var(--w4-menu-border-color);
+    background: transparent;
+  }
+
+  /* ----------------------------------
+     Submenu theme overrides (per nested ul)
+     ---------------------------------- */
+  .w4-menu ul[class*="w4-submenu-"] {
+    background: var(--w4-submenu-bg, hsl(var(--w4-base-100, 0 0% 100%)));
+    color: var(--w4-submenu-color, hsl(var(--w4-base-content, 222 47% 11%)));
+    border-color: var(--w4-submenu-border-color, var(--w4-menu-border-color));
+    border-radius: var(--w4-menu-radius);
+  }
+
+  .w4-menu ul[class*="w4-submenu-"] li>a,
+  .w4-menu ul[class*="w4-submenu-"] li>button,
+  .w4-menu ul[class*="w4-submenu-"] li>.w4-menu-item {
+    background: transparent;
+    color: var(--w4-submenu-color, hsl(var(--w4-base-content, 222 47% 11%)));
+  }
+
+  .w4-menu ul[class*="w4-submenu-"] li>a:hover,
+  .w4-menu ul[class*="w4-submenu-"] li>button:hover,
+  .w4-menu ul[class*="w4-submenu-"] li>.w4-menu-item:hover {
+    background: var(--w4-submenu-hover-bg, hsl(var(--w4-base-200, 210 40% 96.1%)));
+    color: var(--w4-submenu-hover-color, var(--w4-submenu-color, hsl(var(--w4-base-content, 222 47% 11%))));
+  }
+
+  .w4-menu ul[class*="w4-submenu-"] li>a.active,
+  .w4-menu ul[class*="w4-submenu-"] li>button.active,
+  .w4-menu ul[class*="w4-submenu-"] li[data-w4-state~="active"]>a,
+  .w4-menu ul[class*="w4-submenu-"] li[data-w4-state~="active"]>button,
+  .w4-menu ul[class*="w4-submenu-"] li[data-w4-state~="active"]>.w4-menu-item {
+    background: var(--w4-submenu-active-bg, hsl(var(--w4-primary, 221 83% 53%)));
+    color: var(--w4-submenu-active-color, hsl(var(--w4-primary-content, 210 40% 98%)));
+  }
+
+  .w4-submenu-neutral {
+    --w4-submenu-bg: hsl(var(--w4-neutral, 220 13% 18%));
+    --w4-submenu-color: hsl(var(--w4-neutral-content, 210 40% 98%));
+    --w4-submenu-hover-bg: hsl(var(--w4-neutral-content, 210 40% 98%) / 0.12);
+    --w4-submenu-hover-color: hsl(var(--w4-neutral-content, 210 40% 98%));
+    --w4-submenu-active-bg: hsl(var(--w4-neutral-content, 210 40% 98%));
+    --w4-submenu-active-color: hsl(var(--w4-neutral, 220 13% 18%));
+  }
+
+  .w4-submenu-primary {
+    --w4-submenu-bg: hsl(var(--w4-primary, 221 83% 53%));
+    --w4-submenu-color: hsl(var(--w4-primary-content, 210 40% 98%));
+    --w4-submenu-hover-bg: hsl(var(--w4-primary-content, 210 40% 98%) / 0.12);
+    --w4-submenu-hover-color: hsl(var(--w4-primary-content, 210 40% 98%));
+    --w4-submenu-active-bg: hsl(var(--w4-primary-content, 210 40% 98%));
+    --w4-submenu-active-color: hsl(var(--w4-primary, 221 83% 53%));
+  }
+
+  .w4-submenu-secondary {
+    --w4-submenu-bg: hsl(var(--w4-secondary, 262 52% 47%));
+    --w4-submenu-color: hsl(var(--w4-secondary-content, 210 40% 98%));
+    --w4-submenu-hover-bg: hsl(var(--w4-secondary-content, 210 40% 98%) / 0.12);
+    --w4-submenu-hover-color: hsl(var(--w4-secondary-content, 210 40% 98%));
+    --w4-submenu-active-bg: hsl(var(--w4-secondary-content, 210 40% 98%));
+    --w4-submenu-active-color: hsl(var(--w4-secondary, 262 52% 47%));
+  }
+
+  .w4-submenu-accent {
+    --w4-submenu-bg: hsl(var(--w4-accent, 189 94% 43%));
+    --w4-submenu-color: hsl(var(--w4-accent-content, 210 40% 98%));
+    --w4-submenu-hover-bg: hsl(var(--w4-accent-content, 210 40% 98%) / 0.12);
+    --w4-submenu-hover-color: hsl(var(--w4-accent-content, 210 40% 98%));
+    --w4-submenu-active-bg: hsl(var(--w4-accent-content, 210 40% 98%));
+    --w4-submenu-active-color: hsl(var(--w4-accent, 189 94% 43%));
+  }
+
+  .w4-submenu-info {
+    --w4-submenu-bg: hsl(var(--w4-info, 199 89% 48%));
+    --w4-submenu-color: hsl(var(--w4-info-content, 210 40% 98%));
+    --w4-submenu-hover-bg: hsl(var(--w4-info-content, 210 40% 98%) / 0.12);
+    --w4-submenu-hover-color: hsl(var(--w4-info-content, 210 40% 98%));
+    --w4-submenu-active-bg: hsl(var(--w4-info-content, 210 40% 98%));
+    --w4-submenu-active-color: hsl(var(--w4-info, 199 89% 48%));
+  }
+
+  .w4-submenu-success {
+    --w4-submenu-bg: hsl(var(--w4-success, 142 71% 45%));
+    --w4-submenu-color: hsl(var(--w4-success-content, 210 40% 98%));
+    --w4-submenu-hover-bg: hsl(var(--w4-success-content, 210 40% 98%) / 0.12);
+    --w4-submenu-hover-color: hsl(var(--w4-success-content, 210 40% 98%));
+    --w4-submenu-active-bg: hsl(var(--w4-success-content, 210 40% 98%));
+    --w4-submenu-active-color: hsl(var(--w4-success, 142 71% 45%));
+  }
+
+  .w4-submenu-warning {
+    --w4-submenu-bg: hsl(var(--w4-warning, 38 92% 50%));
+    --w4-submenu-color: hsl(var(--w4-warning-content, 25 95% 11%));
+    --w4-submenu-hover-bg: hsl(var(--w4-warning-content, 25 95% 11%) / 0.12);
+    --w4-submenu-hover-color: hsl(var(--w4-warning-content, 25 95% 11%));
+    --w4-submenu-active-bg: hsl(var(--w4-warning-content, 25 95% 11%));
+    --w4-submenu-active-color: hsl(var(--w4-warning, 38 92% 50%));
+  }
+
+  .w4-submenu-error {
+    --w4-submenu-bg: hsl(var(--w4-error, 0 84% 60%));
+    --w4-submenu-color: hsl(var(--w4-error-content, 210 40% 98%));
+    --w4-submenu-hover-bg: hsl(var(--w4-error-content, 210 40% 98%) / 0.12);
+    --w4-submenu-hover-color: hsl(var(--w4-error-content, 210 40% 98%));
+    --w4-submenu-active-bg: hsl(var(--w4-error-content, 210 40% 98%));
+    --w4-submenu-active-color: hsl(var(--w4-error, 0 84% 60%));
+  }
+
+  .w4-submenu-base-100 {
+    --w4-submenu-bg: hsl(var(--w4-base-100, 0 0% 100%));
+    --w4-submenu-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-submenu-hover-bg: hsl(var(--w4-base-200, 210 40% 96.1%));
+    --w4-submenu-hover-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-submenu-active-bg: hsl(var(--w4-primary, 221 83% 53%));
+    --w4-submenu-active-color: hsl(var(--w4-primary-content, 210 40% 98%));
+  }
+
+  .w4-submenu-base-200 {
+    --w4-submenu-bg: hsl(var(--w4-base-200, 210 40% 96.1%));
+    --w4-submenu-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-submenu-hover-bg: hsl(var(--w4-base-300, 214 32% 91%));
+    --w4-submenu-hover-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-submenu-active-bg: hsl(var(--w4-primary, 221 83% 53%));
+    --w4-submenu-active-color: hsl(var(--w4-primary-content, 210 40% 98%));
+  }
+
+  .w4-submenu-base-300 {
+    --w4-submenu-bg: hsl(var(--w4-base-300, 214 32% 91%));
+    --w4-submenu-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-submenu-hover-bg: hsl(var(--w4-base-100, 0 0% 100%));
+    --w4-submenu-hover-color: hsl(var(--w4-base-content, 222 47% 11%));
+    --w4-submenu-active-bg: hsl(var(--w4-primary, 221 83% 53%));
+    --w4-submenu-active-color: hsl(var(--w4-primary-content, 210 40% 98%));
+  }
+
+  .w4-menu li[data-w4-state~="open"]>ul,
+  .w4-menu li.w4-menu-open>ul {
+    display: flex;
+  }
+
+  /* ----------------------------------
+     Vertical menu
+     ---------------------------------- */
+  .w4-menu-vertical {
+    flex-direction: column;
+  }
+
+  .w4-menu-center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .w4-menu-center li>a,
+  .w4-menu-center li>button,
+  .w4-menu-center li>.w4-menu-item {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .w4-menu-center .w4-menu-item-meta,
+  .w4-menu-center .w4-menu-item-caret {
+    margin-inline-start: 0;
+  }
+
+  .w4-menu-horizontal.w4-menu-center {
+    justify-content: center;
+  }
+
+  .w4-menu-vertical>li>ul {
+    position: static;
+  }
+
+  /* ----------------------------------
+     Horizontal menu
+     ---------------------------------- */
+  .w4-menu-horizontal {
+    flex-direction: row;
+    align-items: center;
+    inline-size: auto;
+    width: auto;
+  }
+
+  .w4-menu-horizontal>li {
+    position: relative;
+  }
+
+  .w4-menu-horizontal>li>a,
+  .w4-menu-horizontal>li>button,
+  .w4-menu-horizontal>li>.w4-menu-item {
+    inline-size: auto;
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .w4-menu-horizontal>li>ul {
+    position: absolute;
+    inset-block-start: calc(100% + var(--w4-spacing-1, 0.25rem));
+    inset-inline-start: 0;
+    z-index: var(--w4-menu-z-index);
+
+    min-inline-size: var(--w4-menu-submenu-min-width);
+    min-width: var(--w4-menu-submenu-min-width);
+    inline-size: max-content;
+    width: max-content;
+
+    margin: 0;
+    padding: var(--w4-spacing-2, 0.5rem);
+    border: 1px solid var(--w4-menu-border-color);
+    border-inline-start-width: 1px;
+    border-radius: var(--w4-menu-radius);
+    background: hsl(var(--w4-base-100, 0 0% 100%));
+    box-shadow: var(--w4-menu-shadow);
+  }
+
+  .w4-menu-horizontal>li[data-w4-state~="open"]>ul,
+  .w4-menu-horizontal>li.w4-menu-open>ul {
+    display: flex;
+  }
+
+  /* Directional dropdown (top-level) */
+  .w4-menu-horizontal>li.w4-menu-right>ul {
+    inset-inline-start: 0;
+    inset-inline-end: auto;
+  }
+
+  .w4-menu-horizontal>li.w4-menu-left>ul {
+    inset-inline-start: auto;
+    inset-inline-end: 0;
+  }
+
+  /* ----------------------------------
+     Nested submenu inside dropdown
+     ---------------------------------- */
+  .w4-menu-horizontal ul li {
+    position: relative;
+  }
+
+  .w4-menu-horizontal ul li>ul {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: calc(100% + var(--w4-spacing-1, 0.25rem));
+    z-index: calc(var(--w4-menu-z-index) + 1);
+
+    min-inline-size: var(--w4-menu-submenu-min-width);
+    min-width: var(--w4-menu-submenu-min-width);
+
+    margin: 0;
+    padding: var(--w4-spacing-2, 0.5rem);
+    border: 1px solid var(--w4-menu-border-color);
+    border-inline-start-width: 1px;
+    border-radius: var(--w4-menu-radius);
+    background: hsl(var(--w4-base-100, 0 0% 100%));
+    box-shadow: var(--w4-menu-shadow);
+  }
+
+  .w4-menu-horizontal ul li[data-w4-state~="open"]>ul,
+  .w4-menu-horizontal ul li.w4-menu-open>ul {
+    display: flex;
+  }
+
+  /* Optional left-opening nested submenu */
+  .w4-menu-horizontal ul li.w4-menu-left>ul {
+    inset-inline-start: auto;
+    inset-inline-end: calc(100% + var(--w4-spacing-1, 0.25rem));
+  }
+
+  .w4-menu-horizontal ul li.w4-menu-right>ul {
+    inset-inline-start: calc(100% + var(--w4-spacing-1, 0.25rem));
+    inset-inline-end: auto;
+  }
+
+  /* ----------------------------------
+     Item sections
+     ---------------------------------- */
+  .w4-menu-item-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .w4-menu-item-label {
+    flex: 1 1 auto;
+    min-inline-size: 0;
+  }
+
+  .w4-menu-item-meta {
+    margin-inline-start: auto;
+    opacity: 0.7;
+    font-size: 0.875em;
+    white-space: nowrap;
+  }
+
+  .w4-menu-item-caret {
+    margin-inline-start: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+  }
+
+  .w4-menu li[data-w4-state~="open"]>a .w4-menu-item-caret,
+  .w4-menu li[data-w4-state~="open"]>button .w4-menu-item-caret,
+  .w4-menu li[data-w4-state~="open"]>.w4-menu-item .w4-menu-item-caret,
+  .w4-menu li.w4-menu-open>a .w4-menu-item-caret,
+  .w4-menu li.w4-menu-open>button .w4-menu-item-caret,
+  .w4-menu li.w4-menu-open>.w4-menu-item .w4-menu-item-caret {
+    transform: rotate(180deg);
+  }
+
+  /* ----------------------------------
+     Compact variant
+     ---------------------------------- */
+  .w4-menu-compact {
+    --w4-menu-padding-x: var(--w4-spacing-2, 0.5rem);
+    --w4-menu-padding-y: var(--w4-spacing-1, 0.25rem);
+    --w4-menu-font-size: var(--w4-text-xs, 0.75rem);
+    --w4-menu-gap: 0.125rem;
+  }
+
+  /* ----------------------------------
+     Size variants
+     ---------------------------------- */
+  .w4-menu-xs {
+    --w4-menu-padding-x: var(--w4-spacing-2, 0.5rem);
+    --w4-menu-padding-y: var(--w4-spacing-1, 0.25rem);
+    --w4-menu-font-size: var(--w4-text-xs, 0.75rem);
+    --w4-menu-gap: var(--w4-spacing-0_5, 0.125rem);
+    --w4-menu-submenu-min-width: 10rem;
+  }
+
+  .w4-menu-sm {
+    --w4-menu-padding-x: var(--w4-spacing-3, 0.75rem);
+    --w4-menu-padding-y: var(--w4-spacing-1_5, 0.375rem);
+    --w4-menu-font-size: var(--w4-text-sm, 0.875rem);
+    --w4-menu-gap: var(--w4-spacing-1, 0.25rem);
+    --w4-menu-submenu-min-width: 12rem;
+  }
+
+  .w4-menu-md {
+    --w4-menu-padding-x: var(--w4-spacing-4, 1rem);
+    --w4-menu-padding-y: var(--w4-spacing-2, 0.5rem);
+    --w4-menu-font-size: var(--w4-text-base, 1rem);
+    --w4-menu-gap: var(--w4-spacing-1, 0.25rem);
+    --w4-menu-submenu-min-width: 14rem;
+  }
+
+  .w4-menu-lg {
+    --w4-menu-padding-x: var(--w4-spacing-5, 1.25rem);
+    --w4-menu-padding-y: var(--w4-spacing-2_5, 0.625rem);
+    --w4-menu-font-size: var(--w4-text-lg, 1.125rem);
+    --w4-menu-gap: var(--w4-spacing-1_5, 0.375rem);
+    --w4-menu-submenu-min-width: 16rem;
+  }
+
+  .w4-menu-xl {
+    --w4-menu-padding-x: var(--w4-spacing-6, 1.5rem);
+    --w4-menu-padding-y: var(--w4-spacing-3, 0.75rem);
+    --w4-menu-font-size: var(--w4-text-xl, 1.25rem);
+    --w4-menu-gap: var(--w4-spacing-2, 0.5rem);
+    --w4-menu-submenu-min-width: 18rem;
+  }
+
+  /* ----------------------------------
+     Rounded / pill variant
+     ---------------------------------- */
+  .w4-menu-pill {
+    --w4-menu-radius: 9999px;
+  }
+
+  /* ----------------------------------
+     Flush variant
+     ---------------------------------- */
+  .w4-menu-flush li>a,
+  .w4-menu-flush li>button,
+  .w4-menu-flush li>.w4-menu-item {
+    border-radius: 0;
+  }
+
+  /* ----------------------------------
+     Responsive
+     ---------------------------------- */
+  @media (max-width: 768px) {
+    .w4-menu-horizontal {
+      flex-direction: column;
+      align-items: stretch;
+      inline-size: 100%;
+      width: 100%;
+    }
+
+    .w4-menu-horizontal>li>a,
+    .w4-menu-horizontal>li>button,
+    .w4-menu-horizontal>li>.w4-menu-item {
+      inline-size: 100%;
+      width: 100%;
+    }
+
+    .w4-menu-horizontal>li>ul,
+    .w4-menu-horizontal ul li>ul {
+      position: static;
+      inset: auto;
+      min-inline-size: 100%;
+      min-width: 100%;
+      inline-size: 100%;
+      width: 100%;
+      margin-top: var(--w4-spacing-1, 0.25rem);
+      box-shadow: none;
+    }
+  }
 }
 
 /* ==========================================================================

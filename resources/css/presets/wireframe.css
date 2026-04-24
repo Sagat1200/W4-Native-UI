@@ -34,6 +34,15 @@
   --w4-shadow-sm: none;
   --w4-shadow-md: none;
   
+  /* Menu morphology */
+  --w4-menu-padding-x: var(--w4-spacing-2, 0.5rem);
+  --w4-menu-padding-y: var(--w4-spacing-1, 0.25rem);
+  --w4-menu-gap: 0.125rem;
+  --w4-menu-radius: 0px;
+  --w4-menu-border-color: hsl(var(--w4-base-content));
+  --w4-menu-shadow: none;
+  --w4-menu-submenu-min-width: 11rem;
+  
   --w4-checkbox-bg: transparent;
   --w4-checkbox-color: transparent;
   --w4-checkbox-mark-svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4 8 7 11 13 4'/%3E%3C/svg%3E");

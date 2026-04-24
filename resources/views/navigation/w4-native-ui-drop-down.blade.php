@@ -97,12 +97,9 @@
 
         <!-- EJEMPLOS BÁSICOS (MÉTODO DE APERTURA) -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Ejemplos Básicos (Click vs Hover)
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Ejemplos Básicos (Click vs Hover)
             </h2>
-            <hr class="w4-divider w4-divider-secondary">
-            <p class="w4-text w4-text-md w4-text-neutral mb-6">Por defecto el Dropdown se abre al hacer click o enfocar
-                (usando tabindex). Con la clase `.w4-dropdown-hover` se abre automáticamente al pasar el cursor por
-                encima.</p>
+            <hr class="w4-divider w4-divider-primary">
 
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
                 <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center">
@@ -119,7 +116,7 @@
 
                     <!-- Hover -->
                     <div class="w4-dropdown w4-dropdown-hover">
-                        <div tabindex="0" role="button" class="w4-button w4-button-secondary">Hover para abrir</div>
+                        <div tabindex="0" role="button" class="w4-button w4-button-primary">Hover para abrir</div>
                         <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
                             <li><a href="#" class="w4-link w4-link-neutral">Opción A</a></li>
                             <li><a href="#" class="w4-link w4-link-neutral">Opción B</a></li>
@@ -132,14 +129,10 @@
 
         <!-- POSICIONAMIENTO -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Posicionamiento</h2>
-            <hr class="w4-divider w4-divider-accent">
-            <p class="w4-text w4-text-md w4-text-neutral mb-6">Usa los modificadores `.w4-dropdown-top`,
-                `.w4-dropdown-bottom` (por defecto), `.w4-dropdown-left` y `.w4-dropdown-right`. Además puedes usar
-                `.w4-dropdown-end` para alinear el menú con el borde derecho del botón, o `.w4-dropdown-center` para
-                centrarlo perfectamente.</p>
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Posicionamiento</h2>
+            <hr class="w4-divider w4-divider-primary">
 
-            <div class="w4-grid w4-grid-2 mt-18">
+            <div class="w4-grid w4-grid-2">
 
                 <!-- Top -->
                 <div
@@ -250,7 +243,7 @@
 
                 <!-- Right Middle -->
                 <div
-                    class="w4-panel w4-panel-base-100 w4-panel-xl w4-stack w4-stack-vertical w4-stack-center w4-items-center">
+                    class="w4-panel w4-panel-base-200 w4-panel-md w4-stack w4-stack-vertical w4-stack-center w4-items-center">
                     <div class="w4-dropdown w4-dropdown-right w4-dropdown-middle w4-dropdown-hover">
                         <div tabindex="0" role="button" class="w4-button w4-button-outline">Right Center</div>
                         <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
@@ -263,18 +256,25 @@
             </div>
         </section>
 
-        <!-- VARIANTES SEMÁNTICAS -->
+        <!-- VARIANTES SEMÁNTICAS DE COLOR -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-success w4-heading-start">Variantes Semánticas y Tamaños</h2>
-            <hr class="w4-divider w4-divider-success">
-            <p class="w4-text w4-text-md w4-text-neutral mb-6">Usa `.w4-variant-*` para teñir el fondo del menú y
-                `.w4-size-*` para escalar su tipografía.</p>
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color</h2>
+            <hr class="w4-divider w4-divider-primary">
 
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
                 <div class="w4-stack w4-stack-horizontal w4-stack-lg w4-stack-center">
 
-                    <div class="w4-dropdown w4-dropdown-hover w4-dropdown-primary w4-dropdown-sm">
-                        <div tabindex="0" role="button" class="w4-button w4-button-primary w4-button-sm">Size SM &
+                    <div class="w4-dropdown w4-dropdown-hover w4-dropdown-neutral w4-dropdown-md">
+                        <div tabindex="0" role="button" class="w4-button w4-button-neutral w4-button-md">
+                            Neutral</div>
+                        <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
+                            <li><a href="#" class="w4-link w4-link-neutral-content">Item 1</a></li>
+                            <li><a href="#" class="w4-link w4-link-neutral-content">Item 2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w4-dropdown w4-dropdown-hover w4-dropdown-primary w4-dropdown-md">
+                        <div tabindex="0" role="button" class="w4-button w4-button-primary w4-button-md">
                             Primary</div>
                         <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
                             <li><a href="#" class="w4-link w4-link-primary-content">Item 1</a></li>
@@ -283,7 +283,7 @@
                     </div>
 
                     <div class="w4-dropdown w4-dropdown-hover w4-dropdown-secondary w4-dropdown-md">
-                        <div tabindex="0" role="button" class="w4-button w4-button-secondary w4-button-md">Size MD &
+                        <div tabindex="0" role="button" class="w4-button w4-button-secondary w4-button-md">
                             Secondary</div>
                         <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
                             <li><a href="#" class="w4-link w4-link-secondary-content">Item 1</a></li>
@@ -291,9 +291,93 @@
                         </ul>
                     </div>
 
+                    <div class="w4-dropdown w4-dropdown-hover w4-dropdown-accent w4-dropdown-md">
+                        <div tabindex="0" role="button" class="w4-button w4-button-accent w4-button-md">
+                            Accent</div>
+                        <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
+                            <li><a href="#" class="w4-link w4-link-accent-content">Item 1</a></li>
+                            <li><a href="#" class="w4-link w4-link-accent-content">Item 2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w4-dropdown w4-dropdown-hover w4-dropdown-info w4-dropdown-md">
+                        <div tabindex="0" role="button" class="w4-button w4-button-info w4-button-md">
+                            Info</div>
+                        <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
+                            <li><a href="#" class="w4-link w4-link-info-content">Item 1</a></li>
+                            <li><a href="#" class="w4-link w4-link-info-content">Item 2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w4-dropdown w4-dropdown-hover w4-dropdown-warning w4-dropdown-md">
+                        <div tabindex="0" role="button" class="w4-button w4-button-warning w4-button-md">
+                            Warning</div>
+                        <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
+                            <li><a href="#" class="w4-link w4-link-warning-content">Item 1</a></li>
+                            <li><a href="#" class="w4-link w4-link-warning-content">Item 2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w4-dropdown w4-dropdown-hover w4-dropdown-error w4-dropdown-md">
+                        <div tabindex="0" role="button" class="w4-button w4-button-error w4-button-md">
+                            Error</div>
+                        <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
+                            <li><a href="#" class="w4-link w4-link-error-content">Item 1</a></li>
+                            <li><a href="#" class="w4-link w4-link-error-content">Item 2</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- VARIANTES SEMÁNTICAS DE TAMAÑO -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Tamaños</h2>
+            <hr class="w4-divider w4-divider-primary">
+
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-stack w4-stack-horizontal w4-stack-lg w4-stack-center">
+
+                    <div class="w4-dropdown w4-dropdown-hover w4-dropdown-neutral w4-dropdown-xs">
+                        <div tabindex="0" role="button" class="w4-button w4-button-neutral w4-button-xs">
+                            xs</div>
+                        <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
+                            <li><a href="#" class="w4-link w4-link-neutral-content w4-link-xs">Item 1</a></li>
+                            <li><a href="#" class="w4-link w4-link-neutral-content w4-link-xs">Item 2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w4-dropdown w4-dropdown-hover w4-dropdown-neutral w4-dropdown-sm">
+                        <div tabindex="0" role="button" class="w4-button w4-button-neutral w4-button-sm">
+                            sm</div>
+                        <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
+                            <li><a href="#" class="w4-link w4-link-neutral-content">Item 1</a></li>
+                            <li><a href="#" class="w4-link w4-link-neutral-content">Item 2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w4-dropdown w4-dropdown-hover w4-dropdown-neutral w4-dropdown-md">
+                        <div tabindex="0" role="button" class="w4-button w4-button-neutral w4-button-md">
+                            md</div>
+                        <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
+                            <li><a href="#" class="w4-link w4-link-neutral-content">Item 1</a></li>
+                            <li><a href="#" class="w4-link w4-link-neutral-content">Item 2</a></li>
+                        </ul>
+                    </div>
+
                     <div class="w4-dropdown w4-dropdown-hover w4-dropdown-neutral w4-dropdown-lg">
-                        <div tabindex="0" role="button" class="w4-button w4-button-neutral w4-button-lg">Size LG &
-                            Neutral</div>
+                        <div tabindex="0" role="button" class="w4-button w4-button-neutral w4-button-lg">
+                            lg</div>
+                        <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
+                            <li><a href="#" class="w4-link w4-link-neutral-content">Item 1</a></li>
+                            <li><a href="#" class="w4-link w4-link-neutral-content">Item 2</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w4-dropdown w4-dropdown-hover w4-dropdown-neutral w4-dropdown-xl">
+                        <div tabindex="0" role="button" class="w4-button w4-button-neutral w4-button-xl">
+                            xl</div>
                         <ul tabindex="0" class="w4-dropdown-content w4-dropdown-body">
                             <li><a href="#" class="w4-link w4-link-neutral-content">Item 1</a></li>
                             <li><a href="#" class="w4-link w4-link-neutral-content">Item 2</a></li>
@@ -306,8 +390,8 @@
 
         <!-- ESTADOS INTERACTIVOS JS -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados Interactivos (JS)</h2>
-            <hr class="w4-divider w4-divider-error">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Estados Interactivos (JS)</h2>
+            <hr class="w4-divider w4-divider-primary">
 
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
                 <div class="w4-stack w4-stack-horizontal w4-stack-between w4-items-start">
@@ -331,14 +415,13 @@
                     </div>
 
                     <!-- Botonera -->
-                    <div class="w4-stack w4-stack-vertical w4-stack-sm w4-border-s w4-border-base-300 w4-ps-4 w-72">
-                        <span class="w4-text w4-text-sm w4-text-muted mb-2">data-w4-state:</span>
+                    <div class="w4-stack w4-stack-vertical w4-stack-sm w4-border-s w4-border-base-300 w-64">
                         <button class="w4-button w4-button-sm w4-button-outline w-full"
                             onclick="document.getElementById('jsInteractiveDropdown').removeAttribute('data-w4-state')">Clear
-                            (Ninguno)</button>
+                        </button>
                         <button class="w4-button w4-button-sm w4-button-info w-full"
                             onclick="document.getElementById('jsInteractiveDropdown').setAttribute('data-w4-state', 'open')">Open
-                            (Forzar Apertura)</button>
+                        </button>
                         <button class="w4-button w4-button-sm w4-button-warning w-full"
                             onclick="document.getElementById('jsInteractiveDropdown').setAttribute('data-w4-state', 'disabled')">Disabled</button>
                         <button class="w4-button w4-button-sm w4-button-error w-full"

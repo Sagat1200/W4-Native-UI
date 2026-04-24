@@ -28,5 +28,14 @@
   --w4-btn-border-width: 1px;
   --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
+  
+  /* Menu morphology */
+  --w4-menu-padding-x: var(--w4-spacing-4, 1rem);
+  --w4-menu-padding-y: var(--w4-spacing-2, 0.5rem);
+  --w4-menu-gap: var(--w4-spacing-1_5, 0.375rem);
+  --w4-menu-radius: 0.75rem;
+  --w4-menu-border-color: hsl(var(--w4-base-300));
+  --w4-menu-shadow: 0 12px 28px -12px rgb(0 0 0 / 0.55);
+  --w4-menu-submenu-min-width: 16rem;
 }
 

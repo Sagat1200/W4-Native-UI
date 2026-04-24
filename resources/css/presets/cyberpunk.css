@@ -31,6 +31,15 @@
   --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
   --w4-checkbox-shadow: 4px 4px 0px 0px hsl(var(--w4-primary));
   
+  /* Menu morphology */
+  --w4-menu-padding-x: var(--w4-spacing-4, 1rem);
+  --w4-menu-padding-y: var(--w4-spacing-2_5, 0.625rem);
+  --w4-menu-gap: var(--w4-spacing-1, 0.25rem);
+  --w4-menu-radius: 0px;
+  --w4-menu-border-color: hsl(var(--w4-base-content));
+  --w4-menu-shadow: var(--w4-shadow-md);
+  --w4-menu-submenu-min-width: 14rem;
+  
   /* Textarea */
   --w4-textarea-shadow: 4px 4px 0px 0px hsl(var(--w4-base-content));
   --w4-textarea-shadow-focus: 4px 4px 0px 0px hsl(var(--w4-base-content));
