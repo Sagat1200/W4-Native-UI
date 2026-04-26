@@ -1,0 +1,186 @@
+/* ==========================================================================
+   SideBar Component
+   Native W4 Visual Engine implementation Layout Morphology
+   ========================================================================== */
+
+@layer components {
+.w4-drawer {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(var(--w4-base-100));
+  color: hsl(var(--w4-base-content));
+  block-size: 100vh;
+  inline-size: 16rem; /* default md width */
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width 0.3s ease, transform 0.3s ease;
+  box-shadow: var(--w4-shadow-md);
+  flex-shrink: 0;
+  z-index: 30;
+}
+
+/* Fixed State */
+.w4-drawer-fixed {
+  position: fixed;
+  inset-block-start: 0;
+  inset-block-end: 0;
+}
+
+/* Alignments */
+.w4-drawer-left {
+  inset-inline-start: 0;
+  border-inline-end: 1px solid hsl(var(--w4-base-200));
+}
+
+.w4-drawer-right {
+  inset-inline-end: 0;
+  border-inline-start: 1px solid hsl(var(--w4-base-200));
+}
+
+.w4-drawer-top {
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  block-size: auto;
+  min-block-size: 16rem; /* default height for top/bottom */
+  inline-size: 100%;
+  border-block-end: 1px solid hsl(var(--w4-base-200));
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+.w4-drawer-bottom {
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  block-size: auto;
+  min-block-size: 16rem; /* default height for top/bottom */
+  inline-size: 100%;
+  border-block-start: 1px solid hsl(var(--w4-base-200));
+  transition: height 0.3s ease, transform 0.3s ease;
+}
+
+/* Fix fixed positions for top and bottom */
+.w4-drawer-top.w4-drawer-fixed,
+.w4-drawer-bottom.w4-drawer-fixed {
+  inset-block-end: auto; /* override the generic inset-block-end: 0 from .w4-drawer-fixed */
+}
+.w4-drawer-bottom.w4-drawer-fixed {
+  inset-block-start: auto; /* override inset-block-start: 0 */
+  inset-block-end: 0;
+}
+
+/* Off-canvas behavior (Open/Closed) */
+/* By default, we might want it transformed out on mobile, but here we provide the classes for JS toggling */
+.w4-drawer:not(.w4-drawer-open) {
+  /* Default closed state for mobile if handled via fixed off-canvas, but we use collapsed for desktop */
+}
+
+/* ==========================================================================
+   States & Modifiers (SideBarComponentState Enum)
+   ========================================================================== */
+
+.w4-drawer-hidden,
+.w4-drawer[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-drawer-disabled,
+.w4-drawer[data-w4-state~="disabled"] {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-drawer-active,
+.w4-drawer[data-w4-state~="active"] {
+  /* Highlight the drawer if it's explicitly focused or active */
+  box-shadow: var(--w4-shadow-lg);
+  z-index: 40;
+}
+
+/* Collapsed State */
+.w4-drawer-collapsed,
+.w4-drawer[data-w4-state~="collapsed"] {
+  inline-size: 4rem; /* icon-only mode */
+}
+
+.w4-drawer-collapsed .w4-drawer-text,
+.w4-drawer[data-w4-state~="collapsed"] .w4-drawer-text,
+.w4-drawer-collapsed .w4-menu li > a > span,
+.w4-drawer[data-w4-state~="collapsed"] .w4-menu li > a > span {
+  display: none;
+}
+
+/* Mobile Off-canvas Open State */
+.w4-drawer-left:not(.w4-drawer-open):not([data-w4-state~="open"]).w4-drawer-fixed {
+  transform: translateX(-100%);
+}
+.w4-drawer-left.w4-drawer-open.w4-drawer-fixed,
+.w4-drawer-left[data-w4-state~="open"].w4-drawer-fixed {
+  transform: translateX(0);
+}
+
+.w4-drawer-right:not(.w4-drawer-open):not([data-w4-state~="open"]).w4-drawer-fixed {
+  transform: translateX(100%);
+}
+.w4-drawer-right.w4-drawer-open.w4-drawer-fixed,
+.w4-drawer-right[data-w4-state~="open"].w4-drawer-fixed {
+  transform: translateX(0);
+}
+
+.w4-drawer-top:not(.w4-drawer-open):not([data-w4-state~="open"]).w4-drawer-fixed {
+  transform: translateY(-100%);
+}
+.w4-drawer-top.w4-drawer-open.w4-drawer-fixed,
+.w4-drawer-top[data-w4-state~="open"].w4-drawer-fixed {
+  transform: translateY(0);
+}
+
+.w4-drawer-bottom:not(.w4-drawer-open):not([data-w4-state~="open"]).w4-drawer-fixed {
+  transform: translateY(100%);
+}
+.w4-drawer-bottom.w4-drawer-open.w4-drawer-fixed,
+.w4-drawer-bottom[data-w4-state~="open"].w4-drawer-fixed {
+  transform: translateY(0);
+}
+
+/* Sizes (Widths) */
+.w4-drawer.w4-drawer-xs { inline-size: 12rem; }
+.w4-drawer.w4-drawer-sm { inline-size: 14rem; }
+.w4-drawer.w4-drawer-md { inline-size: 16rem; }
+.w4-drawer.w4-drawer-lg { inline-size: 20rem; }
+.w4-drawer.w4-drawer-xl { inline-size: 24rem; }
+.w4-drawer.w4-drawer-full { inline-size: 100%; }
+
+/* Percentages sizes */
+.w4-drawer.w4-drawer-5p { inline-size: 5vw; }
+.w4-drawer.w4-drawer-10p { inline-size: 10vw; }
+.w4-drawer.w4-drawer-15p { inline-size: 15vw; }
+.w4-drawer.w4-drawer-20p { inline-size: 20vw; }
+.w4-drawer.w4-drawer-25p { inline-size: 25vw; }
+
+.w4-drawer-top.w4-drawer-5p, .w4-drawer-bottom.w4-drawer-5p { block-size: 5vh; inline-size: 100vw; min-block-size: auto; }
+.w4-drawer-top.w4-drawer-10p, .w4-drawer-bottom.w4-drawer-10p { block-size: 10vh; inline-size: 100vw; min-block-size: auto; }
+.w4-drawer-top.w4-drawer-15p, .w4-drawer-bottom.w4-drawer-15p { block-size: 15vh; inline-size: 100vw; min-block-size: auto; }
+.w4-drawer-top.w4-drawer-20p, .w4-drawer-bottom.w4-drawer-20p { block-size: 20vh; inline-size: 100vw; min-block-size: auto; }
+.w4-drawer-top.w4-drawer-25p, .w4-drawer-bottom.w4-drawer-25p { block-size: 25vh; inline-size: 100vw; min-block-size: auto; }
+
+/* Collapsed sizes */
+.w4-drawer-collapsed.w4-drawer-xs, .w4-drawer[data-w4-state~="collapsed"].w4-drawer-xs { inline-size: 3rem; }
+.w4-drawer-collapsed.w4-drawer-sm, .w4-drawer[data-w4-state~="collapsed"].w4-drawer-sm { inline-size: 3.5rem; }
+.w4-drawer-collapsed.w4-drawer-md, .w4-drawer[data-w4-state~="collapsed"].w4-drawer-md { inline-size: 4rem; }
+.w4-drawer-collapsed.w4-drawer-lg, .w4-drawer[data-w4-state~="collapsed"].w4-drawer-lg { inline-size: 5rem; }
+.w4-drawer-collapsed.w4-drawer-xl, .w4-drawer[data-w4-state~="collapsed"].w4-drawer-xl { inline-size: 6rem; }
+
+/* Variants */
+.w4-drawer.w4-drawer-primary { background-color: hsl(var(--w4-primary)); color: hsl(var(--w4-primary-content)); border-color: transparent; }
+.w4-drawer.w4-drawer-secondary { background-color: hsl(var(--w4-secondary)); color: hsl(var(--w4-secondary-content)); border-color: transparent; }
+.w4-drawer.w4-drawer-accent { background-color: hsl(var(--w4-accent)); color: hsl(var(--w4-accent-content)); border-color: transparent; }
+.w4-drawer.w4-drawer-info { background-color: hsl(var(--w4-info)); color: hsl(var(--w4-info-content)); border-color: transparent; }
+.w4-drawer.w4-drawer-success { background-color: hsl(var(--w4-success)); color: hsl(var(--w4-success-content)); border-color: transparent; }
+.w4-drawer.w4-drawer-warning { background-color: hsl(var(--w4-warning)); color: hsl(var(--w4-warning-content)); border-color: transparent; }
+.w4-drawer.w4-drawer-error { background-color: hsl(var(--w4-error)); color: hsl(var(--w4-error-content)); border-color: transparent; }
+.w4-drawer.w4-drawer-neutral { background-color: hsl(var(--w4-neutral)); color: hsl(var(--w4-neutral-content)); border-color: transparent; }
+.w4-drawer.w4-drawer-base-200, .w4-drawer.w4-drawer-base-200 { background-color: hsl(var(--w4-base-200)); }
+.w4-drawer.w4-drawer-base-300, .w4-drawer.w4-drawer-base-300 { background-color: hsl(var(--w4-base-300)); }
+}

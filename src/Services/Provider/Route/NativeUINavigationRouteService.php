@@ -24,9 +24,9 @@ class NativeUINavigationRouteService
             return view('w4-native::navigation.w4-native-ui-nav-bar');
         })->name('w4-native.navbar');
 
-        Route::get('/w4/sidebar', function () {
-            return view('w4-native::navigation.w4-native-ui-sidebar');
-        })->name('w4-native.sidebar');
+        Route::get('/w4/drawer', function () {
+            return view('w4-native::navigation.w4-native-ui-drawer');
+        })->name('w4-native.drawer');
 
         Route::get('/w4/tab', function () {
             return view('w4-native::navigation.w4-native-ui-tab');

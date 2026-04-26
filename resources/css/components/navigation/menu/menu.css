@@ -201,6 +201,13 @@
   }
 
   /* ----------------------------------
+     Hidden state
+     ---------------------------------- */
+  .w4-menu li[data-w4-state~="hidden"] {
+    display: none !important;
+  }
+
+  /* ----------------------------------
      Disabled state
      ---------------------------------- */
   .w4-menu li[data-w4-state~="disabled"]>a,

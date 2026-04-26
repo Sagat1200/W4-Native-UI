@@ -23,7 +23,12 @@
             <button class="w4-button w4-button-ghost">Native UI</button>
         </div>
         <div class="w4-navbar-center">
-            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-neutral-content w4-menu-md">
+                <li class="w4-text w4-text-primary-content"><a href="">Home</a></li>
+                <li class="w4-text w4-text-primary-content"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-primary-content"><a href="">Productos</a></li>
+                <li class="w4-text w4-text-primary-content"><a href="">Contacto</a></li>
+            </ul>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
@@ -97,17 +102,16 @@
 
         <!-- VARIANTES DE COLOR -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-success w4-heading-start">Variantes de Color</h2>
-            <hr class="w4-divider w4-divider-success">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color</h2>
+            <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-md w4-text-neutral">
-                Aplica una variante al contenedor <code>ul</code> con clases <code>.w4-menu-*</code>. El elemento
-                activo usa <code>.active</code> para mostrar el estado seleccionado.
+                Menus basicos con diferentes variantes de color, con item activo.
             </p>
 
             <div class="w4-grid w4-grid-3">
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h3 w4-heading-center">Neutral</h3>
-                    <ul class="w4-menu w4-menu-neutral w4-menu-vertical">
+                    <ul class="w4-menu w4-menu-neutral w4-menu-sm">
                         <li><a href="">Inbox</a></li>
                         <li><a href="" class="active">Sent</a></li>
                         <li><a href="">Drafts</a></li>
@@ -206,18 +210,77 @@
             </div>
         </section>
 
+        <!-- MENÚS VERTICALES CON SUBMENÚS -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Menús Verticales con Submenús</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-md w4-text-primary">
+                Ejemplos de menús verticales anidados, orpima el item activo para probar.
+            </p>
+
+            <div class="w4-grid w4-grid-3">
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Base + Submenu Base</h3>
+                    <ul class="w4-menu w4-menu-base-100 w4-menu-sm w4-menu-vertical">
+                        <li><a href="">Dashboard</a></li>
+                        <li class="">
+                            <a href="" class="active">Gestión</a>
+                            <ul class="w4-submenu-base-200">
+                                <li><a href="">Usuarios</a></li>
+                                <li><a href="" class="active">Roles</a></li>
+                                <li><a href="">Permisos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Reportes</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-primary">Primary + Submenu Error</h3>
+                    <ul class="w4-menu w4-menu-primary w4-menu-sm w4-menu-vertical">
+                        <li><a href="">Inicio</a></li>
+                        <li>
+                            <a href="" class="active">Ventas</a>
+                            <ul class="w4-submenu-error">
+                                <li><a href="">Órdenes</a></li>
+                                <li><a href="" class="active">Facturas</a></li>
+                                <li><a href="">Cobranza</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Clientes</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-info">Info + Submenu Neutral</h3>
+                    <ul class="w4-menu w4-menu-info w4-menu-sm w4-menu-vertical">
+                        <li><a href="">Inicio</a></li>
+                        <li class="">
+                            <a href="" class="active">Configuración</a>
+                            <ul class="w4-submenu-neutral">
+                                <li><a href="">General</a></li>
+                                <li><a href="">Integraciones</a></li>
+                                <li><a href="" class="active">Notificaciones</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Auditoría</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <!-- MENÚS HORIZONTALES -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Menús Horizontales</h2>
-            <hr class="w4-divider w4-divider-accent">
-            <p class="w4-text w4-text-md w4-text-neutral">
-                Ejemplos de <code>.w4-menu-horizontal</code> sin submenús con todas las variantes de color disponibles.
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Menús Horizontales</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-md w4-text-primary">
+                Ejemplos de menús horizontales con diferentes variantes de color, con item activo.
             </p>
 
             <div class="w4-grid w4-grid-2">
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h3 w4-heading-center">Neutral</h3>
-                    <ul class="w4-menu w4-menu-horizontal w4-menu-neutral w4-menu-sm">
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-neutral w4-menu-md">
                         <li><a href="">Inicio</a></li>
                         <li><a href="" class="active">Explorar</a></li>
                         <li><a href="">Productos</a></li>
@@ -227,7 +290,7 @@
 
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-primary">Primary</h3>
-                    <ul class="w4-menu w4-menu-horizontal w4-menu-primary w4-menu-sm">
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-primary w4-menu-md">
                         <li><a href="">Inicio</a></li>
                         <li><a href="" class="active">Explorar</a></li>
                         <li><a href="">Productos</a></li>
@@ -237,7 +300,7 @@
 
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-secondary">Secondary</h3>
-                    <ul class="w4-menu w4-menu-horizontal w4-menu-secondary w4-menu-sm">
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-secondary w4-menu-md">
                         <li><a href="">Inicio</a></li>
                         <li><a href="" class="active">Explorar</a></li>
                         <li><a href="">Productos</a></li>
@@ -247,7 +310,7 @@
 
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-accent">Accent</h3>
-                    <ul class="w4-menu w4-menu-horizontal w4-menu-accent w4-menu-sm">
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-accent w4-menu-md">
                         <li><a href="">Inicio</a></li>
                         <li><a href="" class="active">Explorar</a></li>
                         <li><a href="">Productos</a></li>
@@ -257,7 +320,7 @@
 
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-info">Info</h3>
-                    <ul class="w4-menu w4-menu-horizontal w4-menu-info w4-menu-sm">
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-info w4-menu-md">
                         <li><a href="">Inicio</a></li>
                         <li><a href="" class="active">Explorar</a></li>
                         <li><a href="">Productos</a></li>
@@ -267,7 +330,7 @@
 
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-success">Success</h3>
-                    <ul class="w4-menu w4-menu-horizontal w4-menu-success w4-menu-sm">
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-success w4-menu-md">
                         <li><a href="">Inicio</a></li>
                         <li><a href="" class="active">Explorar</a></li>
                         <li><a href="">Productos</a></li>
@@ -277,7 +340,7 @@
 
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-warning">Warning</h3>
-                    <ul class="w4-menu w4-menu-horizontal w4-menu-warning w4-menu-sm">
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-warning w4-menu-md">
                         <li><a href="">Inicio</a></li>
                         <li><a href="" class="active">Explorar</a></li>
                         <li><a href="">Productos</a></li>
@@ -287,7 +350,7 @@
 
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-error">Error</h3>
-                    <ul class="w4-menu w4-menu-horizontal w4-menu-error w4-menu-sm">
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-error w4-menu-md">
                         <li><a href="">Inicio</a></li>
                         <li><a href="" class="active">Explorar</a></li>
                         <li><a href="">Productos</a></li>
@@ -297,7 +360,7 @@
 
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h3 w4-heading-center">Base-100</h3>
-                    <ul class="w4-menu w4-menu-horizontal w4-menu-base-100 w4-menu-sm">
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-100 w4-menu-md">
                         <li><a href="">Inicio</a></li>
                         <li><a href="" class="active">Explorar</a></li>
                         <li><a href="">Productos</a></li>
@@ -307,7 +370,7 @@
 
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h3 w4-heading-center">Base-200</h3>
-                    <ul class="w4-menu w4-menu-horizontal w4-menu-base-200 w4-menu-sm">
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-200 w4-menu-md">
                         <li><a href="">Inicio</a></li>
                         <li><a href="" class="active">Explorar</a></li>
                         <li><a href="">Productos</a></li>
@@ -317,7 +380,7 @@
 
                 <div class="w4-panel w4-panel-base-300 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h3 w4-heading-center">Base-300</h3>
-                    <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-sm">
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
                         <li><a href="">Inicio</a></li>
                         <li><a href="" class="active">Explorar</a></li>
                         <li><a href="">Productos</a></li>
@@ -327,12 +390,101 @@
             </div>
         </section>
 
+        <!-- MENÚS HORIZONTALES CON SUBMENÚS -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Menús Horizontales con Submenús
+            </h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-md w4-text-primary">
+                Ejemplos de menus horizontales, con sub-menus y sub-menus anidados, oprima los items activos para prbar.
+            </p>
+
+            <div class="w4-grid w4-grid-2">
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Submenú Básico</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-base-100 w4-menu-sm">
+                        <li><a href="">Inicio</a></li>
+                        <li class="">
+                            <a href="" class="active">Catálogo</a>
+                            <ul class="w4-submenu-base-100">
+                                <li><a href="">Categorías</a></li>
+                                <li><a href="" class="active">Productos</a></li>
+                                <li><a href="">Inventario</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Soporte</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-primary">Primary + Submenú Derecha
+                    </h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-primary w4-menu-sm">
+                        <li><a href="">Dashboard</a></li>
+                        <li><a href="">Reportes</a></li>
+                        <li class="w4-menu-right">
+                            <a href="" class="active">Cuenta</a>
+                            <ul class="w4-submenu-primary">
+                                <li><a href="">Perfil</a></li>
+                                <li><a href="" class="active">Seguridad</a></li>
+                                <li><a href="">Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-error">Error + Submenú Izquierda</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-error w4-menu-sm">
+                        <li><a href="">Panel</a></li>
+                        <li><a href="">Alertas</a></li>
+                        <li class="w4-menu-left">
+                            <a href="" class="active">Administrar</a>
+                            <ul class="w4-submenu-error">
+                                <li><a href="">Auditoría</a></li>
+                                <li><a href="" class="active">Permisos</a></li>
+                                <li><a href="">Registros</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center w4-text-success">Submenú Anidado</h3>
+                    <ul class="w4-menu w4-menu-horizontal w4-menu-success w4-menu-sm">
+                        <li><a href="">Inicio</a></li>
+                        <li class="">
+                            <a href="">Sistema</a>
+                            <ul class="w4-submenu-success">
+                                <li><a href="">Estado</a></li>
+                                <li class="w4-menu-right">
+                                    <a href="" class="active">Configuración</a>
+                                    <ul class="w4-submenu-info">
+                                        <li><a href="">General</a></li>
+                                        <li><a href="">API</a></li>
+                                        <li class="w4-menu-right">
+                                            <a href="" class="active">Webhooks</a>
+                                            <ul class="w4-submenu-accent">
+                                                <li><a href="">Webhooks</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Backups</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Ayuda</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <!-- TAMAÑOS -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Tamaños del Menú</h2>
-            <hr class="w4-divider w4-divider-info">
-            <p class="w4-text w4-text-md w4-text-neutral">
-                Las clases <code>.w4-menu-xs</code> a <code>.w4-menu-xl</code> ajustan padding, tipografía, separación
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Tamaños del Menú</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-md w4-text-primary">
+                Diferentes tamaños del menú, para diferentes usos, ajustan padding, tipografía, separación
                 y ancho mínimo de submenú para que el componente escale de forma consistente.
             </p>
 
@@ -386,11 +538,11 @@
 
         <!-- MENÚS CON ICONOS -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Menús con Iconos</h2>
-            <hr class="w4-divider w4-divider-secondary">
-            <p class="w4-text w4-text-md w4-text-neutral">
-                Ejemplos usando <code>.w4-menu-item-icon</code>, <code>.w4-menu-item-label</code> y
-                <code>.w4-menu-item-meta</code> para enriquecer navegación y acciones rápidas.
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Menús con Iconos</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-md w4-text-primary">
+                Ejemplos de menu vertical y horizontal con iconos, para diferentes usos, enriqueciendo navegación y
+                acciones rápidas.
             </p>
 
             <div class="w4-grid w4-grid-2">
@@ -472,6 +624,99 @@
                             </a>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESTADOS CSS -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-warning w4-heading-start">Estados CSS del Menú</h2>
+            <hr class="w4-divider w4-divider-warning">
+            <p class="w4-text w4-text-md w4-text-neutral">
+                Ejemplos estáticos de estados usando <code>.active</code> y <code>data-w4-state</code> en los
+                elementos <code>li</code>.
+            </p>
+
+            <div class="w4-grid w4-grid-4">
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Active</h3>
+                    <ul class="w4-menu w4-menu-primary w4-menu-sm">
+                        <li><a href="">Dashboard</a></li>
+                        <li><a href="" class="active">Ventas</a></li>
+                        <li><a href="">Reportes</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Disabled</h3>
+                    <ul class="w4-menu w4-menu-warning w4-menu-sm">
+                        <li><a href="">Perfil</a></li>
+                        <li data-w4-state="disabled"><a href="">Suscripción</a></li>
+                        <li><a href="">Facturación</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Loading</h3>
+                    <ul class="w4-menu w4-menu-info w4-menu-sm">
+                        <li><a href="">General</a></li>
+                        <li data-w4-state="loading"><a href="">Sincronizando...</a></li>
+                        <li><a href="">Integraciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Hidden</h3>
+                    <ul class="w4-menu w4-menu-secondary w4-menu-sm">
+                        <li><a href="">General</a></li>
+                        <li data-w4-state="hidden"><a href="">Elemento oculto</a></li>
+                        <li><a href="">Integraciones</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESTADOS JS -->
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados JS del Menú</h2>
+            <hr class="w4-divider w4-divider-error">
+            <p class="w4-text w4-text-md w4-text-neutral">
+                Cambia estados dinámicamente en tiempo real sobre los items del menú para validar
+                <code>active</code>, <code>disabled</code>, <code>loading</code> y <code>hidden</code>.
+            </p>
+
+            <div class="w4-grid w4-grid-2">
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Menú Controlado</h3>
+                    <ul id="jsInteractiveMenu" class="w4-menu w4-menu-error w4-menu-sm">
+                        <li><a href="">Dashboard</a></li>
+                        <li><a href="">Órdenes</a></li>
+                        <li><a href="">Clientes</a></li>
+                        <li><a href="">Configuración</a></li>
+                    </ul>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Controles</h3>
+                    <div class="w4-stack w4-stack-vertical w4-stack-sm">
+                        <select id="menuStateTarget" class="w4-select w4-select-sm w4-select-neutral">
+                            <option value="0">Item 1: Dashboard</option>
+                            <option value="1">Item 2: Órdenes</option>
+                            <option value="2">Item 3: Clientes</option>
+                            <option value="3">Item 4: Configuración</option>
+                        </select>
+                        <button type="button" id="menuStateClear" class="w4-button w4-button-sm w4-button-outline">Clear
+                            States</button>
+                        <button type="button" id="menuStateActive" class="w4-button w4-button-sm w4-button-success">Set
+                            Active</button>
+                        <button type="button" id="menuStateDisabled"
+                            class="w4-button w4-button-sm w4-button-warning">Set Disabled</button>
+                        <button type="button" id="menuStateLoading" class="w4-button w4-button-sm w4-button-info">Set
+                            Loading</button>
+                        <button type="button" id="menuStateHidden"
+                            class="w4-button w4-button-sm w4-button-secondary">Set
+                            Hidden</button>
+                    </div>
                 </div>
             </div>
         </section>

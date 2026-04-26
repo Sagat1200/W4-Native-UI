@@ -12,7 +12,7 @@ class W4Core {
         ".w4-label", ".w4-link", ".w4-text", ".w4-field-error", ".w4-helper-text",
         ".w4-divider", ".w4-input", ".w4-select", ".w4-textarea", ".w4-checkbox",
         ".w4-radio", ".w4-toggle", ".w4-tooltip", ".w4-alert", ".w4-badge", ".w4-loading",
-        ".w4-progress", ".w4-skeleton", ".w4-toast", ".w4-modal", ".w4-card", ".w4-container", ".w4-grid", ".w4-panel", ".w4-section", ".w4-stack", ".w4-breadcrumb", ".w4-dropdown", ".w4-menu", ".w4-navbar", ".w4-sidebar", ".w4-tab",
+        ".w4-progress", ".w4-skeleton", ".w4-toast", ".w4-modal", ".w4-card", ".w4-container", ".w4-grid", ".w4-panel", ".w4-section", ".w4-stack", ".w4-breadcrumb", ".w4-dropdown", ".w4-menu", ".w4-navbar", ".w4-drawer", ".w4-sidebar", ".w4-tab",
         "[data-w4-component]",
         "[data-w4-state]", "[data-w4-hook]"
     ].join(", ");
@@ -26,7 +26,7 @@ class W4Core {
         "w4-radio": "radio", "w4-toggle": "toggle", "w4-tooltip": "tooltip",
         "w4-alert": "alert", "w4-badge": "badge", "w4-loading": "loading",
         "w4-progress": "progress", "w4-skeleton": "skeleton", "w4-toast": "toast", "w4-modal": "modal",
-        "w4-card": "card", "w4-container": "container", "w4-grid": "grid", "w4-panel": "panel", "w4-section": "section", "w4-stack": "stack", "w4-breadcrumb": "breadcrumb", "w4-dropdown": "dropdown", "w4-menu": "menu", "w4-navbar": "navbar", "w4-sidebar": "sidebar", "w4-tab": "tab"
+        "w4-card": "card", "w4-container": "container", "w4-grid": "grid", "w4-panel": "panel", "w4-section": "section", "w4-stack": "stack", "w4-breadcrumb": "breadcrumb", "w4-dropdown": "dropdown", "w4-menu": "menu", "w4-navbar": "navbar", "w4-drawer": "drawer", "w4-sidebar": "drawer", "w4-tab": "tab"
     };
 
     static COMPONENT_STATES = {
@@ -64,6 +64,7 @@ class W4Core {
         dropdown: ["enabled", "disabled", "active", "hidden", "open"],
         menu: ["enabled", "disabled", "active", "hidden", "open"],
         navbar: ["enabled", "disabled", "active", "hidden", "collapsed"],
+        drawer: ["enabled", "disabled", "active", "hidden", "collapsed", "open"],
         sidebar: ["enabled", "disabled", "active", "hidden", "collapsed", "open"],
         tab: ["enabled", "disabled", "active", "hidden", "selected"]
     };
@@ -2342,8 +2343,13 @@ class W4Menu {
 
     static handleEnabled({ element }) {
         element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        if (element.getAttribute('data-w4-state') === 'hidden') {
+            element.removeAttribute('data-w4-state');
+        }
         element.style.pointerEvents = '';
         element.style.opacity = '';
+        element.style.display = '';
     }
 
     static handleDisabled({ element }) {
@@ -2358,6 +2364,9 @@ class W4Menu {
 
     static handleHidden({ element }) {
         element.classList.remove('w4-menu-open');
+        element.setAttribute('aria-hidden', 'true');
+        element.setAttribute('data-w4-state', 'hidden');
+        element.style.display = 'none';
     }
 
     static handleOpen({ element }) {
@@ -2471,8 +2480,14 @@ class W4Navbar {
 
     static handleEnabled({ element }) {
         element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
         element.style.pointerEvents = '';
         element.style.opacity = '';
+        element.style.display = '';
+        element.classList.remove('w4-navbar-hidden');
+        if (element.getAttribute('data-w4-state') === 'hidden') {
+            element.removeAttribute('data-w4-state');
+        }
         element.classList.remove('w4-navbar-collapsed');
     }
 
@@ -2487,6 +2502,8 @@ class W4Navbar {
     }
 
     static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        element.setAttribute('data-w4-state', 'hidden');
         element.classList.add('w4-navbar-hidden');
     }
 
@@ -2495,15 +2512,15 @@ class W4Navbar {
     }
 }
 
-class W4Sidebar {
+class W4Drawer {
     /**
-     * Initialize Sidebar component logic
+     * Initialize Drawer component logic
      */
     static init(root = document) {
         if (this.initialized) return;
         this.bindEvents(root);
 
-        // Register state handlers for the Sidebar component via W4Core
+        // Register state handlers for the Drawer component via W4Core
         this.registerStateHandlers();
 
         this.initialized = true;
@@ -2515,12 +2532,12 @@ class W4Sidebar {
     static registerStateHandlers() {
         if (this.handlersRegistered) return;
 
-        W4Core.on('sidebar:enabled', this.handleEnabled);
-        W4Core.on('sidebar:disabled', this.handleDisabled);
-        W4Core.on('sidebar:active', this.handleActive);
-        W4Core.on('sidebar:hidden', this.handleHidden);
-        W4Core.on('sidebar:collapsed', this.handleCollapsed);
-        W4Core.on('sidebar:open', this.handleOpen);
+        W4Core.on('drawer:enabled', this.handleEnabled);
+        W4Core.on('drawer:disabled', this.handleDisabled);
+        W4Core.on('drawer:active', this.handleActive);
+        W4Core.on('drawer:hidden', this.handleHidden);
+        W4Core.on('drawer:collapsed', this.handleCollapsed);
+        W4Core.on('drawer:open', this.handleOpen);
 
         this.handlersRegistered = true;
     }
@@ -2529,7 +2546,7 @@ class W4Sidebar {
         element.removeAttribute('aria-disabled');
         element.style.pointerEvents = '';
         element.style.opacity = '';
-        element.classList.remove('w4-sidebar-collapsed');
+        element.classList.remove('w4-drawer-collapsed');
     }
 
     static handleDisabled({ element }) {
@@ -2539,42 +2556,60 @@ class W4Sidebar {
     }
 
     static handleActive({ element }) {
-        element.classList.add('w4-sidebar-active');
+        element.classList.add('w4-drawer-active');
     }
 
     static handleHidden({ element }) {
-        element.classList.remove('w4-sidebar-open');
+        element.classList.remove('w4-drawer-open');
     }
 
     static handleCollapsed({ element }) {
-        element.classList.add('w4-sidebar-collapsed');
+        element.classList.add('w4-drawer-collapsed');
     }
 
     static handleOpen({ element }) {
-        element.classList.add('w4-sidebar-open');
+        element.classList.add('w4-drawer-open');
     }
 
     static bindEvents(root) {
+        const removeOpenState = (element) => {
+            const states = (element.getAttribute('data-w4-state') || '')
+                .split(/\s+/)
+                .filter(Boolean)
+                .filter((state) => state !== 'open');
+
+            if (states.length > 0) {
+                element.setAttribute('data-w4-state', states.join(' '));
+            } else {
+                element.removeAttribute('data-w4-state');
+            }
+        };
+
         // Handle toggling the sidebar via data attributes
         root.addEventListener('click', (e) => {
-            const toggleBtn = e.target.closest('[data-w4-toggle="sidebar"]');
+            const toggleBtn = e.target.closest('[data-w4-toggle="drawer"]');
             if (toggleBtn) {
                 const targetId = toggleBtn.getAttribute('data-w4-target');
-                const sidebar = targetId 
+                const drawer = targetId 
                     ? root.getElementById(targetId) || document.getElementById(targetId)
-                    : toggleBtn.closest('.w4-sidebar') || root.querySelector('.w4-sidebar');
+                    : toggleBtn.closest('.w4-drawer') || root.querySelector('.w4-drawer');
                 
-                if (sidebar) {
-                    sidebar.classList.toggle('w4-sidebar-open');
+                if (drawer) {
+                    const willOpen = !drawer.classList.contains('w4-drawer-open');
+                    drawer.classList.toggle('w4-drawer-open');
+                    if (!willOpen) {
+                        removeOpenState(drawer);
+                    }
                 }
             }
             
             // Handle closing when clicking a dismiss button inside the sidebar
-            const dismissBtn = e.target.closest('[data-w4-dismiss="sidebar"]');
+            const dismissBtn = e.target.closest('[data-w4-dismiss="drawer"]');
             if (dismissBtn) {
-                const sidebar = dismissBtn.closest('.w4-sidebar');
-                if (sidebar) {
-                    sidebar.classList.remove('w4-sidebar-open');
+                const drawer = dismissBtn.closest('.w4-drawer');
+                if (drawer) {
+                    drawer.classList.remove('w4-drawer-open');
+                    removeOpenState(drawer);    
                 }
             }
         });
@@ -3158,7 +3193,7 @@ class W4NativeUI {
         W4Dropdown.init();
         W4Menu.init();
         W4Navbar.init();
-        W4Sidebar.init();
+        W4Drawer.init();
         W4Tab.init();
 
         // 6. Initialize Core Event System (Data attributes, ARIA sync, Forms)
@@ -3207,7 +3242,8 @@ class W4NativeUI {
     static get Dropdown() { return W4Dropdown; }
     static get Menu() { return W4Menu; }
     static get Navbar() { return W4Navbar; }
-    static get Sidebar() { return W4Sidebar; }
+    static get Drawer() { return W4Drawer; }
+    static get Sidebar() { return W4Drawer; }
     static get Tab() { return W4Tab; }
 
     static get Core() { return W4Core; }

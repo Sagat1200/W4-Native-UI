@@ -29,8 +29,14 @@ export default class W4Navbar {
 
     static handleEnabled({ element }) {
         element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
         element.style.pointerEvents = '';
         element.style.opacity = '';
+        element.style.display = '';
+        element.classList.remove('w4-navbar-hidden');
+        if (element.getAttribute('data-w4-state') === 'hidden') {
+            element.removeAttribute('data-w4-state');
+        }
         element.classList.remove('w4-navbar-collapsed');
     }
 
@@ -45,6 +51,8 @@ export default class W4Navbar {
     }
 
     static handleHidden({ element }) {
+        element.setAttribute('aria-hidden', 'true');
+        element.setAttribute('data-w4-state', 'hidden');
         element.classList.add('w4-navbar-hidden');
     }
 

@@ -67,11 +67,30 @@
 }
 
 /* Sizes (affects min-height and padding) */
-.w4-navbar.w4-size-xs { min-block-size: 2.5rem; padding: var(--w4-spacing-1) var(--w4-spacing-2); }
-.w4-navbar.w4-size-sm { min-block-size: 3rem; padding: var(--w4-spacing-2) var(--w4-spacing-3); }
-.w4-navbar.w4-size-md { min-block-size: 4rem; }
-.w4-navbar.w4-size-lg { min-block-size: 5rem; padding: var(--w4-spacing-3) var(--w4-spacing-5); }
-.w4-navbar.w4-size-xl { min-block-size: 6rem; padding: var(--w4-spacing-4) var(--w4-spacing-6); }
+.w4-navbar-xs,
+.w4-navbar.w4-navbar-xs,
+.w4-nabvar-xs,
+.w4-navbar.w4-nabvar-xs { min-block-size: 2.5rem; padding: var(--w4-spacing-1) var(--w4-spacing-2); }
+
+.w4-navbar-sm,
+.w4-navbar.w4-navbar-sm,
+.w4-nabvar-sm,
+.w4-navbar.w4-nabvar-sm { min-block-size: 3rem; padding: var(--w4-spacing-2) var(--w4-spacing-3); }
+
+.w4-navbar-md,
+.w4-navbar.w4-navbar-md,
+.w4-nabvar-md,
+.w4-navbar.w4-nabvar-md { min-block-size: 4rem; }
+
+.w4-navbar-lg,
+.w4-navbar.w4-navbar-lg,
+.w4-nabvar-lg,
+.w4-navbar.w4-nabvar-lg { min-block-size: 5rem; padding: var(--w4-spacing-3) var(--w4-spacing-5); }
+
+.w4-navbar-xl,
+.w4-navbar.w4-navbar-xl,
+.w4-nabvar-xl,
+.w4-navbar.w4-nabvar-xl { min-block-size: 6rem; padding: var(--w4-spacing-4) var(--w4-spacing-6); }
 
 /* Variants */
 .w4-navbar.w4-variant-primary, .w4-navbar.w4-navbar-primary { background-color: hsl(var(--w4-primary)); color: hsl(var(--w4-primary-content)); }

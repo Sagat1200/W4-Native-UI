@@ -6,92 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Nav Bar Lab</title>
     @NativeUIStyles
-    <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-shell {
-            max-inline-size: 1280px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.25rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.72);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            min-inline-size: 180px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.25rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .demo-zone {
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-            padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
-    <div class="lab-shell">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: NavBar Lab</h1>
-                <p class="lab-subtitle">Pruebas de layout, variantes, tamaños y estados de `w4-navbar`.</p>
-            </div>
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+
+    <div class="w4-navbar w4-navbar-primary">
+        <div class="w4-navbar-start">
+            <button class="w4-button w4-button-ghost w4-button-square">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="w4-icon w4-icon-md stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <button class="w4-button w4-button-ghost">Native UI</button>
+        </div>
+        <div class="w4-navbar-center">
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-neutral-content w4-menu-md">
+                <li class="w4-text w4-text-primary-content"><a href="">Home</a></li>
+                <li class="w4-text w4-text-primary-content"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-primary-content"><a href="">Productos</a></li>
+                <li class="w4-text w4-text-primary-content"><a href="">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs mx-2">
+                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -126,20 +67,26 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section class="w4-section w4-section-md w4-section-base-100"
-            style="margin-block-end: 2rem; margin-block-start: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 NavBar</h1>
-            <p class="w4-text w4-text-base w4-text-start" style="margin-block-start: 1rem;">
+    <main class="w4-container w4-container-xl">
+        <div class="w4-section w4-section-xl">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Navbar</h1>
+            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente
+                w4-navbar</p>
+        </div>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Navbar</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>NavBar</strong> (barra de navegación) proporciona una cabecera para la interfaz de
                 usuario, típicamente ubicada en la parte superior de la página. Se utiliza para albergar el logotipo de
                 la marca, enlaces de navegación principal, búsqueda y perfiles de usuario.
             </p>
-            <br>
             <h2 class="w4-heading w4-heading-h3 w4-heading-secondary w4-heading-start">Casos de Uso Comunes:</h2>
-            <ul class="w4-text w4-text-base w4-text-start"
-                style="list-style-type: disc; padding-inline-start: 1.5rem; margin-block-start: 0.5rem;">
+            <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong>Cabeceras de sitios web:</strong> Navegación principal en la parte superior de sitios web
                     públicos o páginas de aterrizaje.</li>
                 <li><strong>Dashboards de aplicaciones:</strong> Barra superior que contiene acciones globales como
@@ -149,170 +96,106 @@
                 <li><strong>Barras de herramientas contextuales:</strong> Agrupar botones de acción, filtros o rutas de
                     migas de pan (breadcrumbs) en vistas o secciones específicas.</li>
             </ul>
+
         </section>
 
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title">Layouts</h2>
-            <div class="demo-zone">
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-primary">Start & End</div>
-                    <div class="w4-navbar w4-card-bordered w4-navbar-primary">
-                        <div class="w4-navbar-start w4-navbar-info">
-                            <a class="w4-button w4-button-ghost w4-text-xl">daisyUI</a>
-                        </div>
-                        <div class="w4-navbar-end">
-                            <button class="w4-button w4-button-ghost">Button</button>
-                        </div>
+
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-warning w4-heading-start">Estados CSS del Navbar</h2>
+            <hr class="w4-divider w4-divider-warning">
+            <p class="w4-text w4-text-md w4-text-neutral">
+                Ejemplos estáticos de estados con <code>data-w4-state</code>: <code>active</code>,
+                <code>disabled</code>, <code>collapsed</code> y <code>hidden</code>.
+            </p>
+
+            <div class="w4-stack w4-stack-vertical w4-stack-sm">
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-start">Active</h3>
+                    <div class="w4-navbar w4-navbar-info" data-w4-state="active">
+                        <div class="w4-navbar-start"><span class="w4-text">Analytics</span></div>
+                        <div class="w4-navbar-end"><span class="w4-badge w4-badge-info">ON</span></div>
                     </div>
                 </div>
 
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-primary">Start, Center & End</div>
-                    <div class="w4-navbar w4-card-bordered w4-variant-base-200">
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-start">Disabled</h3>
+                    <div class="w4-navbar w4-navbar-warning" data-w4-state="disabled">
+                        <div class="w4-navbar-start"><span class="w4-text">Maintenance</span></div>
+                        <div class="w4-navbar-end"><button class="w4-button w4-button-sm">Action</button></div>
+                    </div>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-start">Collapsed</h3>
+                    <div class="w4-navbar w4-navbar-secondary" data-w4-state="collapsed">
+                        <div class="w4-navbar-start"><span class="w4-text">Hidden Height</span></div>
+                        <div class="w4-navbar-end"><span class="w4-text">...</span></div>
+                    </div>
+                </div>
+
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-start">Hidden</h3>
+                    <div class="w4-navbar w4-navbar-error" data-w4-state="hidden">
+                        <div class="w4-navbar-start"><span class="w4-text">This is hidden</span></div>
+                        <div class="w4-navbar-end"><span class="w4-text">x</span></div>
+                    </div>
+                    <p class="w4-text w4-text-sm w4-text-neutral">El navbar no se muestra porque está en
+                        <code>hidden</code>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados JS del Navbar</h2>
+            <hr class="w4-divider w4-divider-error">
+            <p class="w4-text w4-text-md w4-text-neutral">
+                Cambia estados dinámicamente para validar <code>active</code>, <code>disabled</code>,
+                <code>collapsed</code> y <code>hidden</code>.
+            </p>
+
+            <div class="w4-grid w4-grid-2">
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Navbar Controlado</h3>
+                    <div id="jsInteractiveNavbar" class="w4-navbar w4-navbar-error">
                         <div class="w4-navbar-start">
-                            <button class="w4-button w4-button-ghost">Menu</button>
+                            <button class="w4-button w4-button-ghost">Admin</button>
                         </div>
                         <div class="w4-navbar-center">
-                            <a class="w4-button w4-button-ghost w4-text-xl">daisyUI</a>
+                            <span class="w4-text w4-text-error-content">Estado dinámico</span>
                         </div>
                         <div class="w4-navbar-end">
-                            <button class="w4-button w4-button-ghost">Search</button>
+                            <button class="w4-button w4-button-ghost">Cuenta</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-primary">Transparent</div>
-                    <div class="w4-navbar w4-navbar-transparent w4-card-bordered">
-                        <div class="w4-navbar-start w4-navbar-info">
-                            <a class="w4-button w4-button-ghost w4-text-xl">Ghost</a>
-                        </div>
-                        <div class="w4-navbar-end">
-                            <button class="w4-button w4-button-ghost">Login</button>
-                        </div>
+                <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-center">Controles</h3>
+                    <div class="w4-stack w4-stack-vertical w4-stack-sm">
+                        <button type="button" id="navbarStateClear"
+                            class="w4-button w4-button-sm w4-button-outline">Clear
+                            States</button>
+                        <button type="button" id="navbarStateActive"
+                            class="w4-button w4-button-sm w4-button-success">Set
+                            Active</button>
+                        <button type="button" id="navbarStateDisabled"
+                            class="w4-button w4-button-sm w4-button-warning">Set Disabled</button>
+                        <button type="button" id="navbarStateCollapsed"
+                            class="w4-button w4-button-sm w4-button-info">Set Collapsed</button>
+                        <button type="button" id="navbarStateHidden"
+                            class="w4-button w4-button-sm w4-button-secondary">Set
+                            Hidden</button>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary));">Variants</h2>
-            <div class="demo-zone">
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-primary">Primary (`w4-navbar-primary`)</div>
-                    <div class="w4-navbar w4-navbar-primary">
-                        <div class="w4-navbar-start w4-navbar-primary"><a class="w4-text-xl"
-                                style="padding-inline: 1rem; font-weight: bold; cursor: pointer;">Brand</a></div>
-                        <div class="w4-navbar-end"><button class="w4-button w4-button-ghost">Action</button></div>
-                    </div>
-                </div>
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-secondary">Secondary (`w4-navbar-secondary`)</div>
-                    <div class="w4-navbar w4-navbar-secondary">
-                        <div class="w4-navbar-start"><a class="w4-text-xl"
-                                style="padding-inline: 1rem; font-weight: bold; cursor: pointer;">Brand</a></div>
-                        <div class="w4-navbar-end"><button class="w4-button w4-button-ghost">Action</button></div>
-                    </div>
-                </div>
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-neutral">Neutral (`w4-navbar-neutral`)</div>
-                    <div class="w4-navbar w4-navbar-neutral">
-                        <div class="w4-navbar-start"><a class="w4-text-xl"
-                                style="padding-inline: 1rem; font-weight: bold; cursor: pointer;">Brand</a></div>
-                        <div class="w4-navbar-end"><button class="w4-button w4-button-ghost">Action</button></div>
-                    </div>
-                </div>
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-base-300">Base 300 (`w4-navbar-base-300`)</div>
-                    <div class="w4-navbar w4-navbar-base-300">
-                        <div class="w4-navbar-start"><a class="w4-text-xl"
-                                style="padding-inline: 1rem; font-weight: bold; cursor: pointer;">Brand</a></div>
-                        <div class="w4-navbar-end"><button class="w4-button w4-button-ghost">Action</button></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title" style="border-color: hsl(var(--w4-info));">Sizes</h2>
-            <div class="demo-zone">
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-info">Size XS</div>
-                    <div class="w4-navbar w4-size-xs w4-variant-base-200">
-                        <div class="w4-navbar-start"><a class="w4-button w4-button-ghost w4-button-sm">Brand</a></div>
-                        <div class="w4-navbar-end"><button class="w4-button w4-button-ghost w4-button-sm">Btn</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-info">Size SM</div>
-                    <div class="w4-navbar w4-size-sm w4-variant-base-200">
-                        <div class="w4-navbar-start"><a class="w4-button w4-button-ghost w4-button-sm">Brand</a></div>
-                        <div class="w4-navbar-end"><button class="w4-button w4-button-ghost w4-button-sm">Btn</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-info">Size MD</div>
-                    <div class="w4-navbar w4-size-md w4-variant-base-200">
-                        <div class="w4-navbar-start"><a class="w4-button w4-button-ghost">Brand</a></div>
-                        <div class="w4-navbar-end"><button class="w4-button w4-button-ghost">Btn</button></div>
-                    </div>
-                </div>
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-info">Size LG</div>
-                    <div class="w4-navbar w4-size-lg w4-variant-base-200">
-                        <div class="w4-navbar-start"><a class="w4-button w4-button-ghost w4-button-lg">Brand</a></div>
-                        <div class="w4-navbar-end"><button class="w4-button w4-button-ghost w4-button-lg">Btn</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title" style="border-color: hsl(var(--w4-accent));">States</h2>
-            <div class="demo-zone">
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-accent">Active</div>
-                    <div class="w4-navbar w4-navbar-active w4-variant-base-200">
-                        <div class="w4-navbar-start"><span style="padding-inline: 1rem; font-weight: bold;">Active
-                                Navbar</span></div>
-                    </div>
-                </div>
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-accent">Disabled</div>
-                    <div class="w4-navbar w4-navbar-disabled w4-variant-base-200">
-                        <div class="w4-navbar-start"><span style="padding-inline: 1rem; font-weight: bold;">Disabled
-                                Navbar</span></div>
-                    </div>
-                </div>
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-accent">Data Active / Disabled</div>
-                    <div class="w4-navbar w4-variant-base-200" data-w4-state="active">
-                        <div class="w4-navbar-start"><span style="padding-inline: 1rem; font-weight: bold;">Data
-                                Active</span></div>
-                    </div>
-                    <br>
-                    <div class="w4-navbar w4-variant-base-200" data-w4-state="disabled">
-                        <div class="w4-navbar-start"><span style="padding-inline: 1rem; font-weight: bold;">Data
-                                Disabled</span></div>
-                    </div>
-                </div>
-                <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-sm w4-card-body">
-                    <div class="w4-label w4-label-sm w4-label-accent">Hidden</div>
-                    <div class="w4-navbar w4-navbar-hidden w4-variant-base-200">
-                        <div class="w4-navbar-start">Hidden Navbar</div>
-                    </div>
-                    <div class="w4-text w4-text-sm w4-text-muted">(Navbar invisible por w4-navbar-hidden)</div>
-                </div>
-            </div>
-        </section>
-    </div>
+    </main>
 
     @NativeUIScripts
     @NativeUIInit
-    @NativeUILivewire
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

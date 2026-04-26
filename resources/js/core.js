@@ -12,7 +12,7 @@ export default class W4Core {
         ".w4-label", ".w4-link", ".w4-text", ".w4-field-error", ".w4-helper-text",
         ".w4-divider", ".w4-input", ".w4-select", ".w4-textarea", ".w4-checkbox",
         ".w4-radio", ".w4-toggle", ".w4-tooltip", ".w4-alert", ".w4-badge", ".w4-loading",
-        ".w4-progress", ".w4-skeleton", ".w4-toast", ".w4-modal", ".w4-card", ".w4-container", ".w4-grid", ".w4-panel", ".w4-section", ".w4-stack", ".w4-breadcrumb", ".w4-dropdown", ".w4-menu", ".w4-navbar", ".w4-sidebar", ".w4-tab",
+        ".w4-progress", ".w4-skeleton", ".w4-toast", ".w4-modal", ".w4-card", ".w4-container", ".w4-grid", ".w4-panel", ".w4-section", ".w4-stack", ".w4-breadcrumb", ".w4-dropdown", ".w4-menu", ".w4-navbar", ".w4-drawer", ".w4-sidebar", ".w4-tab",
         "[data-w4-component]",
         "[data-w4-state]", "[data-w4-hook]"
     ].join(", ");
@@ -26,7 +26,7 @@ export default class W4Core {
         "w4-radio": "radio", "w4-toggle": "toggle", "w4-tooltip": "tooltip",
         "w4-alert": "alert", "w4-badge": "badge", "w4-loading": "loading",
         "w4-progress": "progress", "w4-skeleton": "skeleton", "w4-toast": "toast", "w4-modal": "modal",
-        "w4-card": "card", "w4-container": "container", "w4-grid": "grid", "w4-panel": "panel", "w4-section": "section", "w4-stack": "stack", "w4-breadcrumb": "breadcrumb", "w4-dropdown": "dropdown", "w4-menu": "menu", "w4-navbar": "navbar", "w4-sidebar": "sidebar", "w4-tab": "tab"
+        "w4-card": "card", "w4-container": "container", "w4-grid": "grid", "w4-panel": "panel", "w4-section": "section", "w4-stack": "stack", "w4-breadcrumb": "breadcrumb", "w4-dropdown": "dropdown", "w4-menu": "menu", "w4-navbar": "navbar", "w4-drawer": "drawer", "w4-sidebar": "drawer", "w4-tab": "tab"
     };
 
     static COMPONENT_STATES = {
@@ -64,6 +64,7 @@ export default class W4Core {
         dropdown: ["enabled", "disabled", "active", "hidden", "open"],
         menu: ["enabled", "disabled", "active", "hidden", "open"],
         navbar: ["enabled", "disabled", "active", "hidden", "collapsed"],
+        drawer: ["enabled", "disabled", "active", "hidden", "collapsed", "open"],
         sidebar: ["enabled", "disabled", "active", "hidden", "collapsed", "open"],
         tab: ["enabled", "disabled", "active", "hidden", "selected"]
     };

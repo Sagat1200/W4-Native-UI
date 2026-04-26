@@ -30,8 +30,13 @@ export default class W4Menu {
 
     static handleEnabled({ element }) {
         element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        if (element.getAttribute('data-w4-state') === 'hidden') {
+            element.removeAttribute('data-w4-state');
+        }
         element.style.pointerEvents = '';
         element.style.opacity = '';
+        element.style.display = '';
     }
 
     static handleDisabled({ element }) {
@@ -46,6 +51,9 @@ export default class W4Menu {
 
     static handleHidden({ element }) {
         element.classList.remove('w4-menu-open');
+        element.setAttribute('aria-hidden', 'true');
+        element.setAttribute('data-w4-state', 'hidden');
+        element.style.display = 'none';
     }
 
     static handleOpen({ element }) {
