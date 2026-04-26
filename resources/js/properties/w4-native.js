@@ -46,6 +46,7 @@ import W4Dropdown from '../components/navigation/dropdown/dropdown.js';
 import W4Menu from '../components/navigation/menu/menu.js';
 import W4Navbar from '../components/navigation/navbar/navbar.js';
 import W4Drawer from '../components/navigation/drawer/drawer.js';
+import W4Sidebar from '../components/navigation/sidebar/sidebar.js';
 import W4Tab from '../components/navigation/tab/tab.js';
 
 // Import core logic (previous IIFE logic wrapped in a modern ES6 structure)
@@ -101,6 +102,7 @@ class W4NativeUI {
         W4Menu.init();
         W4Navbar.init();
         W4Drawer.init();
+        W4Sidebar.init();
         W4Tab.init();
 
         // 6. Initialize Core Event System (Data attributes, ARIA sync, Forms)
@@ -150,7 +152,7 @@ class W4NativeUI {
     static get Menu() { return W4Menu; }
     static get Navbar() { return W4Navbar; }
     static get Drawer() { return W4Drawer; }
-    static get Sidebar() { return W4Drawer; }
+    static get Sidebar() { return W4Sidebar; }
     static get Tab() { return W4Tab; }
 
     static get Core() { return W4Core; }

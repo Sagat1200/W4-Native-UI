@@ -3,6 +3,7 @@
 namespace W4\NativeUI\Services\Provider\Components\Navigation;
 
 use W4\NativeUI\Themes\Components\Navigation\BreadCrumb\BreadCrumbTheme;
+use W4\NativeUI\Themes\Components\Navigation\Drawer\DrawerTheme;
 use W4\NativeUI\Themes\Components\Navigation\DropDown\DropDownTheme;
 use W4\NativeUI\Themes\Components\Navigation\Menu\MenuTheme;
 use W4\NativeUI\Themes\Components\Navigation\NavBar\NavBarTheme;
@@ -21,8 +22,9 @@ class NativeUINavigationService
             'dropdown' => new DropDownTheme(),
             'menu' => new MenuTheme(),
             'navbar' => new NavBarTheme(),
-            'sidebar' => new SideBarTheme(),
+            'drawer' => new DrawerTheme(),
             'tab' => new TabTheme(),
+            'sidebar' => new SideBarTheme(),
         ];
     }
 }

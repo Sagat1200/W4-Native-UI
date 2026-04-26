@@ -20,60 +20,26 @@ export default class W4Drawer {
     static registerStateHandlers() {
         if (this.handlersRegistered) return;
 
-        W4Core.on('drawer:enabled', this.handleEnabled);
-        W4Core.on('drawer:disabled', this.handleDisabled);
-        W4Core.on('drawer:active', this.handleActive);
-        W4Core.on('drawer:hidden', this.handleHidden);
-        W4Core.on('drawer:collapsed', this.handleCollapsed);
         W4Core.on('drawer:open', this.handleOpen);
+        W4Core.on('drawer:closed', this.handleClosed);
 
         this.handlersRegistered = true;
     }
 
-    static handleEnabled({ element }) {
-        element.removeAttribute('aria-disabled');
-        element.style.pointerEvents = '';
-        element.style.opacity = '';
-        element.classList.remove('w4-drawer-collapsed');
-    }
-
-    static handleDisabled({ element }) {
-        element.setAttribute('aria-disabled', 'true');
-        element.style.pointerEvents = 'none';
-        element.style.opacity = '0.5';
-    }
-
-    static handleActive({ element }) {
-        element.classList.add('w4-drawer-active');
-    }
-
-    static handleHidden({ element }) {
-        element.classList.remove('w4-drawer-open');
-    }
-
-    static handleCollapsed({ element }) {
-        element.classList.add('w4-drawer-collapsed');
-    }
-
     static handleOpen({ element }) {
         element.classList.add('w4-drawer-open');
+        element.setAttribute('data-w4-state', 'open');
+        element.setAttribute('aria-hidden', 'false');
+    }
+
+    static handleClosed({ element }) {
+        element.classList.remove('w4-drawer-open');
+        element.setAttribute('data-w4-state', 'closed');
+        element.setAttribute('aria-hidden', 'true');
     }
 
     static bindEvents(root) {
-        const removeOpenState = (element) => {
-            const states = (element.getAttribute('data-w4-state') || '')
-                .split(/\s+/)
-                .filter(Boolean)
-                .filter((state) => state !== 'open');
-
-            if (states.length > 0) {
-                element.setAttribute('data-w4-state', states.join(' '));
-            } else {
-                element.removeAttribute('data-w4-state');
-            }
-        };
-
-        // Handle toggling the sidebar via data attributes
+        // Handle toggling the drawer via data attributes
         root.addEventListener('click', (e) => {
             const toggleBtn = e.target.closest('[data-w4-toggle="drawer"]');
             if (toggleBtn) {
@@ -83,21 +49,34 @@ export default class W4Drawer {
                     : toggleBtn.closest('.w4-drawer') || root.querySelector('.w4-drawer');
                 
                 if (drawer) {
-                    const willOpen = !drawer.classList.contains('w4-drawer-open');
-                    drawer.classList.toggle('w4-drawer-open');
-                    if (!willOpen) {
-                        removeOpenState(drawer);
+                    if (targetId) {
+                        toggleBtn.setAttribute('aria-controls', targetId);
+                    }
+                    const isOpen = drawer.classList.contains('w4-drawer-open') || drawer.getAttribute('data-w4-state') === 'open';
+                    if (isOpen) {
+                        this.handleClosed({ element: drawer });
+                        toggleBtn.setAttribute('aria-expanded', 'false');
+                    } else {
+                        this.handleOpen({ element: drawer });
+                        toggleBtn.setAttribute('aria-expanded', 'true');
                     }
                 }
             }
             
-            // Handle closing when clicking a dismiss button inside the sidebar
+            // Handle closing when clicking a dismiss button inside the drawer
             const dismissBtn = e.target.closest('[data-w4-dismiss="drawer"]');
             if (dismissBtn) {
                 const drawer = dismissBtn.closest('.w4-drawer');
                 if (drawer) {
-                    drawer.classList.remove('w4-drawer-open');
-                    removeOpenState(drawer);    
+                    this.handleClosed({ element: drawer });
+                    const drawerId = drawer.getAttribute('id');
+                    if (drawerId) {
+                        const toggles = root.querySelectorAll(`[data-w4-toggle="drawer"][data-w4-target="${drawerId}"]`);
+                        toggles.forEach((toggle) => {
+                            toggle.setAttribute('aria-controls', drawerId);
+                            toggle.setAttribute('aria-expanded', 'false');
+                        });
+                    }
                 }
             }
         });

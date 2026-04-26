@@ -18,20 +18,19 @@ class SideBarTheme extends AbstractComponentTheme
 
     protected function sizes(): array
     {
-        // Sidebar sizes typically refer to width
         return ['xs', 'sm', 'md', 'lg', 'xl', 'full'];
     }
 
     protected function states(): array
     {
-        return ['enabled', 'disabled', 'active', 'hidden', 'collapsed', 'open', 'right', 'left', 'fixed'];
+        return ['enabled', 'disabled', 'active', 'hidden', 'collapsed', 'expanded', 'left', 'right', 'fixed', 'sticky'];
     }
 
     public function stateMap(): array
     {
         return [
             'enabled' => [
-                'class' => '',
+                'class' => 'w4-sidebar-enabled',
                 'js' => 'sidebar:enabled',
             ],
             'disabled' => [
@@ -50,18 +49,21 @@ class SideBarTheme extends AbstractComponentTheme
                 'class' => 'w4-sidebar-collapsed',
                 'js' => 'sidebar:collapsed',
             ],
-            'open' => [
-                'class' => 'w4-sidebar-open',
-                'js' => 'sidebar:open',
-            ],
-            'right' => [
-                'class' => 'w4-sidebar-right',
+            'expanded' => [
+                'class' => 'w4-sidebar-expanded',
+                'js' => 'sidebar:expanded',
             ],
             'left' => [
                 'class' => 'w4-sidebar-left',
             ],
+            'right' => [
+                'class' => 'w4-sidebar-right',
+            ],
             'fixed' => [
                 'class' => 'w4-sidebar-fixed',
+            ],
+            'sticky' => [
+                'class' => 'w4-sidebar-sticky',
             ],
         ];
     }

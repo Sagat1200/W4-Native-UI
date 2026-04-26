@@ -76,42 +76,11 @@
 }
 
 /* ==========================================================================
-   States & Modifiers (SideBarComponentState Enum)
+   States & Modifiers (DrawerComponentState Enum)
    ========================================================================== */
 
-.w4-drawer-hidden,
-.w4-drawer[data-w4-state~="hidden"] {
-  display: none !important;
-}
-
-.w4-drawer-disabled,
-.w4-drawer[data-w4-state~="disabled"] {
-  opacity: 0.5 !important;
-  pointer-events: none !important;
-  filter: grayscale(1);
-}
-
-.w4-drawer-active,
-.w4-drawer[data-w4-state~="active"] {
-  /* Highlight the drawer if it's explicitly focused or active */
-  box-shadow: var(--w4-shadow-lg);
-  z-index: 40;
-}
-
-/* Collapsed State */
-.w4-drawer-collapsed,
-.w4-drawer[data-w4-state~="collapsed"] {
-  inline-size: 4rem; /* icon-only mode */
-}
-
-.w4-drawer-collapsed .w4-drawer-text,
-.w4-drawer[data-w4-state~="collapsed"] .w4-drawer-text,
-.w4-drawer-collapsed .w4-menu li > a > span,
-.w4-drawer[data-w4-state~="collapsed"] .w4-menu li > a > span {
-  display: none;
-}
-
 /* Mobile Off-canvas Open State */
+.w4-drawer-left.w4-drawer-fixed[data-w4-state~="closed"],
 .w4-drawer-left:not(.w4-drawer-open):not([data-w4-state~="open"]).w4-drawer-fixed {
   transform: translateX(-100%);
 }
@@ -120,6 +89,7 @@
   transform: translateX(0);
 }
 
+.w4-drawer-right.w4-drawer-fixed[data-w4-state~="closed"],
 .w4-drawer-right:not(.w4-drawer-open):not([data-w4-state~="open"]).w4-drawer-fixed {
   transform: translateX(100%);
 }
@@ -128,6 +98,7 @@
   transform: translateX(0);
 }
 
+.w4-drawer-top.w4-drawer-fixed[data-w4-state~="closed"],
 .w4-drawer-top:not(.w4-drawer-open):not([data-w4-state~="open"]).w4-drawer-fixed {
   transform: translateY(-100%);
 }
@@ -136,6 +107,7 @@
   transform: translateY(0);
 }
 
+.w4-drawer-bottom.w4-drawer-fixed[data-w4-state~="closed"],
 .w4-drawer-bottom:not(.w4-drawer-open):not([data-w4-state~="open"]).w4-drawer-fixed {
   transform: translateY(100%);
 }
@@ -164,13 +136,6 @@
 .w4-drawer-top.w4-drawer-15p, .w4-drawer-bottom.w4-drawer-15p { block-size: 15vh; inline-size: 100vw; min-block-size: auto; }
 .w4-drawer-top.w4-drawer-20p, .w4-drawer-bottom.w4-drawer-20p { block-size: 20vh; inline-size: 100vw; min-block-size: auto; }
 .w4-drawer-top.w4-drawer-25p, .w4-drawer-bottom.w4-drawer-25p { block-size: 25vh; inline-size: 100vw; min-block-size: auto; }
-
-/* Collapsed sizes */
-.w4-drawer-collapsed.w4-drawer-xs, .w4-drawer[data-w4-state~="collapsed"].w4-drawer-xs { inline-size: 3rem; }
-.w4-drawer-collapsed.w4-drawer-sm, .w4-drawer[data-w4-state~="collapsed"].w4-drawer-sm { inline-size: 3.5rem; }
-.w4-drawer-collapsed.w4-drawer-md, .w4-drawer[data-w4-state~="collapsed"].w4-drawer-md { inline-size: 4rem; }
-.w4-drawer-collapsed.w4-drawer-lg, .w4-drawer[data-w4-state~="collapsed"].w4-drawer-lg { inline-size: 5rem; }
-.w4-drawer-collapsed.w4-drawer-xl, .w4-drawer[data-w4-state~="collapsed"].w4-drawer-xl { inline-size: 6rem; }
 
 /* Variants */
 .w4-drawer.w4-drawer-primary { background-color: hsl(var(--w4-primary)); color: hsl(var(--w4-primary-content)); border-color: transparent; }

@@ -234,52 +234,32 @@
             <h2 class="w4-heading w4-heading-h2 w4-heading-warning w4-heading-start">Estados CSS del Drawer</h2>
             <hr class="w4-divider w4-divider-warning">
             <p class="w4-text w4-text-md w4-text-neutral">
-                Estados estáticos usando <code>data-w4-state</code>: <code>active</code>, <code>disabled</code>,
-                <code>collapsed</code> y <code>hidden</code>.
+                Estados estáticos soportados por el framework usando <code>data-w4-state</code>:
+                <code>closed</code> y <code>open</code>.
             </p>
 
             <div class="w4-grid w4-grid-2">
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h3">Active</h3>
-                    <aside class="w4-drawer w4-drawer-primary w4-drawer-md" data-w4-state="active"
-                        style="block-size: 10rem;">
+                    <h3 class="w4-heading w4-heading-h3">Closed</h3>
+                    <aside class="w4-drawer w4-drawer-left w4-drawer-fixed w4-drawer-primary w4-drawer-md"
+                        data-w4-state="closed">
                         <div class="w4-stack w4-stack-sm">
-                            <div class="w4-text">Drawer activo</div>
+                            <div class="w4-text">Drawer en estado cerrado</div>
                         </div>
                     </aside>
+                    <p class="w4-text w4-text-sm w4-text-neutral">Con <code>closed</code> se mantiene fuera de vista
+                        en modo off-canvas.</p>
                 </div>
 
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h3">Disabled</h3>
-                    <aside class="w4-drawer w4-drawer-info w4-drawer-md" data-w4-state="disabled"
-                        style="block-size: 10rem;">
+                    <h3 class="w4-heading w4-heading-h3">Open</h3>
+                    <aside class="w4-drawer w4-drawer-right w4-drawer-info h-24" data-w4-state="open">
                         <div class="w4-stack w4-stack-sm">
-                            <div class="w4-text">Drawer deshabilitado</div>
+                            <div class="w4-text">Drawer en estado abierto</div>
                         </div>
                     </aside>
-                </div>
-
-                <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h3">Collapsed</h3>
-                    <aside class="w4-drawer w4-drawer-secondary w4-drawer-lg" data-w4-state="collapsed"
-                        style="block-size: 10rem;">
-                        <div class="w4-stack w4-stack-sm">
-                            <div class="w4-text w4-drawer-text">Drawer colapsado</div>
-                        </div>
-                    </aside>
-                </div>
-
-                <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h3">Hidden</h3>
-                    <aside class="w4-drawer w4-drawer-error w4-drawer-md" data-w4-state="hidden"
-                        style="block-size: 10rem;">
-                        <div class="w4-stack w4-stack-sm">
-                            <div class="w4-text">Drawer oculto</div>
-                        </div>
-                    </aside>
-                    <p class="w4-text w4-text-sm w4-text-neutral">Este drawer no se muestra porque está en estado
-                        <code>hidden</code>.
-                    </p>
+                    <p class="w4-text w4-text-sm w4-text-neutral">Con <code>open</code> entra en pantalla en modo
+                        off-canvas.</p>
                 </div>
             </div>
         </section>
@@ -291,8 +271,9 @@
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
                 <div class="w4-stack w4-stack-sm w4-stack-vertical">
                     <div class="w4-stack w4-stack-sm">
-                        <aside id="jsInteractiveDrawer" class="w4-drawer w4-drawer-primary w4-drawer-md"
-                            data-w4-component="drawer" style="block-size: 12rem;">
+                        <aside id="jsInteractiveDrawer"
+                            class="w4-drawer w4-drawer-left w4-drawer-fixed w4-drawer-primary w4-drawer-md"
+                            data-w4-component="drawer">
                             <div class="w4-stack w4-stack-sm">
                                 <div class="w4-text">Dynamic JS Drawer</div>
                                 <div class="w4-text w4-text-sm">Cambia su estado con los controles.</div>
@@ -304,18 +285,7 @@
                         style="border-block-start: 1px solid hsl(var(--w4-base-300)); padding-block-start: 1rem;">
                         <span class="w4-text w4-text-sm w4-text-neutral">Set State:</span>
                         <button class="w4-button w4-button-sm w4-button-outline w4-button-info"
-                            onclick="document.getElementById('jsInteractiveDrawer').removeAttribute('data-w4-state')">Clear
-                            (Normal)</button>
-                        <button class="w4-button w4-button-sm w4-button-primary"
-                            onclick="document.getElementById('jsInteractiveDrawer').setAttribute('data-w4-state', 'enabled')">Enabled</button>
-                        <button class="w4-button w4-button-sm w4-button-info"
-                            onclick="document.getElementById('jsInteractiveDrawer').setAttribute('data-w4-state', 'active')">Active</button>
-                        <button class="w4-button w4-button-sm w4-button-warning"
-                            onclick="document.getElementById('jsInteractiveDrawer').setAttribute('data-w4-state', 'disabled')">Disabled</button>
-                        <button class="w4-button w4-button-sm w4-button-secondary"
-                            onclick="document.getElementById('jsInteractiveDrawer').setAttribute('data-w4-state', 'collapsed')">Collapsed</button>
-                        <button class="w4-button w4-button-sm w4-button-error"
-                            onclick="document.getElementById('jsInteractiveDrawer').setAttribute('data-w4-state', 'hidden')">Hidden</button>
+                            onclick="document.getElementById('jsInteractiveDrawer').setAttribute('data-w4-state', 'closed')">Closed</button>
                         <button class="w4-button w4-button-sm w4-button-success"
                             onclick="document.getElementById('jsInteractiveDrawer').setAttribute('data-w4-state', 'open')">Open</button>
                     </div>
@@ -330,7 +300,6 @@
 
     @NativeUIScripts
     @NativeUIInit
-    @NativeUILivewire
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

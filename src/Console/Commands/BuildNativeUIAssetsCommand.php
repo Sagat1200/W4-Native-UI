@@ -78,6 +78,7 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/components/navigation/tab/tab.css',
             $root . '/resources/css/components/navigation/tab/tabpane.css',
             $root . '/resources/css/components/navigation/drawer/drawer.css',
+            $root . '/resources/css/components/navigation/sidebar/sidebar.css',
             // Feedback
             $root . '/resources/css/components/feedback/alert/alert.css',
             $root . '/resources/css/components/feedback/badge/badge.css',
@@ -155,6 +156,7 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/js/components/navigation/menu/menu.js',
             $root . '/resources/js/components/navigation/navbar/navbar.js',
             $root . '/resources/js/components/navigation/drawer/drawer.js',
+            $root . '/resources/js/components/navigation/sidebar/sidebar.js',
             $root . '/resources/js/components/navigation/tab/tab.js',
             $root . '/resources/js/components/navigation/tab/tabpane.js',
             // UI

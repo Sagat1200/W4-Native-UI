@@ -1,0 +1,149 @@
+/* ==========================================================================
+   SideBar Component
+   Native W4 Visual Engine implementation Layout Morphology
+   ========================================================================== */
+
+@layer components {
+.w4-sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(var(--w4-base-100));
+  color: hsl(var(--w4-base-content));
+  block-size: 100%;
+  inline-size: 16rem; /* default md width */
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: var(--w4-shadow-sm);
+  flex-shrink: 0;
+  border-inline-end: 1px solid hsl(var(--w4-base-200));
+}
+
+.w4-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  inline-size: 100%;
+  min-inline-size: 0;
+  padding: .5rem .625rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.w4-sidebar-item:hover,
+.w4-sidebar-item:focus-visible {
+  background-color: hsl(var(--w4-base-content) / .08);
+  outline: none;
+}
+
+.w4-sidebar-label {
+  flex: 1 1 auto;
+  min-inline-size: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Optional placement helpers (always visible; no off-canvas transform) */
+.w4-sidebar-left {
+  inset-inline-start: 0;
+}
+
+.w4-sidebar-right {
+  inset-inline-end: 0;
+  border-inline-end: 0;
+  border-inline-start: 1px solid hsl(var(--w4-base-200));
+}
+
+.w4-sidebar-fixed {
+  position: fixed;
+  inset-block-start: 0;
+  inset-block-end: 0;
+}
+
+.w4-sidebar-sticky {
+  position: sticky;
+  inset-block-start: 0;
+}
+
+/* ==========================================================================
+   States & Modifiers (SideBarComponentState Enum)
+   ========================================================================== */
+
+.w4-sidebar-enabled,
+.w4-sidebar[data-w4-state~="enabled"] {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  filter: none !important;
+  display: flex !important;
+}
+
+.w4-sidebar-disabled,
+.w4-sidebar[data-w4-state~="disabled"] {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+  filter: grayscale(1);
+}
+
+.w4-sidebar-active,
+.w4-sidebar[data-w4-state~="active"] {
+  box-shadow: var(--w4-shadow-lg);
+  z-index: 40;
+}
+
+.w4-sidebar-hidden,
+.w4-sidebar[data-w4-state~="hidden"] {
+  display: none !important;
+}
+
+.w4-sidebar-collapsed,
+.w4-sidebar[data-w4-state~="collapsed"] {
+  inline-size: 4rem !important;
+}
+
+.w4-sidebar-expanded,
+.w4-sidebar[data-w4-state~="expanded"] {
+  inline-size: var(--w4-sidebar-expanded-size, 16rem) !important;
+}
+
+/* Optional pattern: icon-only content when collapsed */
+.w4-sidebar.w4-sidebar-collapsible-icons.w4-sidebar-collapsed .w4-sidebar-label,
+.w4-sidebar.w4-sidebar-collapsible-icons[data-w4-state~="collapsed"] .w4-sidebar-label {
+  display: none;
+}
+
+.w4-sidebar.w4-sidebar-collapsible-icons.w4-sidebar-collapsed .w4-sidebar-item,
+.w4-sidebar.w4-sidebar-collapsible-icons[data-w4-state~="collapsed"] .w4-sidebar-item {
+  justify-content: center;
+}
+
+.w4-sidebar.w4-sidebar-collapsible-icons.w4-sidebar-expanded .w4-sidebar-label,
+.w4-sidebar.w4-sidebar-collapsible-icons[data-w4-state~="expanded"] .w4-sidebar-label {
+  display: inline;
+}
+
+.w4-sidebar.w4-sidebar-collapsible-icons.w4-sidebar-expanded .w4-sidebar-item,
+.w4-sidebar.w4-sidebar-collapsible-icons[data-w4-state~="expanded"] .w4-sidebar-item {
+  justify-content: flex-start;
+}
+
+/* Sizes (Widths) */
+.w4-sidebar.w4-sidebar-xs { inline-size: 12rem; }
+.w4-sidebar.w4-sidebar-sm { inline-size: 14rem; }
+.w4-sidebar.w4-sidebar-md { inline-size: 16rem; }
+.w4-sidebar.w4-sidebar-lg { inline-size: 20rem; }
+.w4-sidebar.w4-sidebar-xl { inline-size: 24rem; }
+.w4-sidebar.w4-sidebar-full { inline-size: 100%; }
+
+/* Variants */
+.w4-sidebar.w4-sidebar-primary { background-color: hsl(var(--w4-primary)); color: hsl(var(--w4-primary-content)); border-color: transparent; }
+.w4-sidebar.w4-sidebar-secondary { background-color: hsl(var(--w4-secondary)); color: hsl(var(--w4-secondary-content)); border-color: transparent; }
+.w4-sidebar.w4-sidebar-accent { background-color: hsl(var(--w4-accent)); color: hsl(var(--w4-accent-content)); border-color: transparent; }
+.w4-sidebar.w4-sidebar-info { background-color: hsl(var(--w4-info)); color: hsl(var(--w4-info-content)); border-color: transparent; }
+.w4-sidebar.w4-sidebar-success { background-color: hsl(var(--w4-success)); color: hsl(var(--w4-success-content)); border-color: transparent; }
+.w4-sidebar.w4-sidebar-warning { background-color: hsl(var(--w4-warning)); color: hsl(var(--w4-warning-content)); border-color: transparent; }
+.w4-sidebar.w4-sidebar-error { background-color: hsl(var(--w4-error)); color: hsl(var(--w4-error-content)); border-color: transparent; }
+.w4-sidebar.w4-sidebar-neutral { background-color: hsl(var(--w4-neutral)); color: hsl(var(--w4-neutral-content)); border-color: transparent; }
+.w4-sidebar.w4-sidebar-base-200 { background-color: hsl(var(--w4-base-200)); }
+.w4-sidebar.w4-sidebar-base-300 { background-color: hsl(var(--w4-base-300)); }
+}

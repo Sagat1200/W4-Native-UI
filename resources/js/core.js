@@ -26,7 +26,7 @@ export default class W4Core {
         "w4-radio": "radio", "w4-toggle": "toggle", "w4-tooltip": "tooltip",
         "w4-alert": "alert", "w4-badge": "badge", "w4-loading": "loading",
         "w4-progress": "progress", "w4-skeleton": "skeleton", "w4-toast": "toast", "w4-modal": "modal",
-        "w4-card": "card", "w4-container": "container", "w4-grid": "grid", "w4-panel": "panel", "w4-section": "section", "w4-stack": "stack", "w4-breadcrumb": "breadcrumb", "w4-dropdown": "dropdown", "w4-menu": "menu", "w4-navbar": "navbar", "w4-drawer": "drawer", "w4-sidebar": "drawer", "w4-tab": "tab"
+        "w4-card": "card", "w4-container": "container", "w4-grid": "grid", "w4-panel": "panel", "w4-section": "section", "w4-stack": "stack", "w4-breadcrumb": "breadcrumb", "w4-dropdown": "dropdown", "w4-menu": "menu", "w4-navbar": "navbar", "w4-drawer": "drawer", "w4-sidebar": "sidebar", "w4-tab": "tab"
     };
 
     static COMPONENT_STATES = {
@@ -64,8 +64,8 @@ export default class W4Core {
         dropdown: ["enabled", "disabled", "active", "hidden", "open"],
         menu: ["enabled", "disabled", "active", "hidden", "open"],
         navbar: ["enabled", "disabled", "active", "hidden", "collapsed"],
-        drawer: ["enabled", "disabled", "active", "hidden", "collapsed", "open"],
-        sidebar: ["enabled", "disabled", "active", "hidden", "collapsed", "open"],
+        drawer: ["closed", "open"],
+        sidebar: ["enabled", "disabled", "active", "hidden", "collapsed", "expanded"],
         tab: ["enabled", "disabled", "active", "hidden", "selected"]
     };
 
@@ -188,6 +188,11 @@ export default class W4Core {
         if (element.type === "radio" && element.checked) states.push("selected");
         else if (element.type === "radio" && !element.checked) {
              states = states.filter(s => s !== "selected");
+        }
+
+        // Sidebar state normalization: expanded and collapsed are mutually exclusive.
+        if (component === "sidebar" && states.includes("expanded") && states.includes("collapsed")) {
+            states = states.filter(s => s !== "collapsed");
         }
 
         return [...new Set(states)];
