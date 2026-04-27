@@ -4,7 +4,7 @@ namespace W4\NativeUI\Themes\Components\Navigation\SideBar;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 
-class SideBarTheme extends AbstractComponentTheme
+class SidebarTheme extends AbstractComponentTheme
 {
     public function component(): string
     {

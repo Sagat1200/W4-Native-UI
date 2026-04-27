@@ -102,12 +102,13 @@
                 <div class="w4-stack w4-stack-horizontal" style="min-block-size: 20rem;">
                     <aside class="w4-sidebar w4-sidebar-md w4-sidebar-primary" data-w4-state="enabled">
                         <div class="w4-stack w4-stack-sm" style="padding: 1rem;">
-                            <h3 class="w4-heading w4-heading-h3 w4-sidebar-text">Sidebar Base</h3>
+                            <h3 class="w4-heading w4-heading-h3 w4-heading-primary-content">Sidebar Base</h3>
                             <ul class="w4-menu w4-menu-vertical">
-                                <li><a href="#"><span class="w4-sidebar-text">Dashboard</span></a></li>
-                                <li><a href="#"><span class="w4-sidebar-text">Usuarios</span></a></li>
-                                <li><a href="#"><span class="w4-sidebar-text">Reportes</span></a></li>
-                                <li><a href="#"><span class="w4-sidebar-text">Configuración</span></a></li>
+                                <li class="w4-text w4-text-primary-content"><a href="#"><span>Dashboard</span></a></li>
+                                <li class="w4-text w4-text-primary-content"><a href="#"><span>Usuarios</span></a></li>
+                                <li class="w4-text w4-text-primary-content"><a href="#"><span>Reportes</span></a></li>
+                                <li class="w4-text w4-text-primary-content"><a href="#"><span>Configuración</span></a>
+                                </li>
                             </ul>
                         </div>
                     </aside>
@@ -121,55 +122,54 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Variantes</h2>
-            <hr class="w4-divider w4-divider-secondary">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes</h2>
+            <hr class="w4-divider w4-divider-primary">
             <div class="w4-grid w4-grid-3">
                 <aside class="w4-sidebar w4-sidebar-sm w4-sidebar-primary">
-                    <div class="w4-stack w4-stack-sm"><span class="w4-sidebar-text">Primary</span></div>
+                    <div class="w4-stack w4-stack-sm"><span class="w4-text-primary-content">Primary</span></div>
                 </aside>
                 <aside class="w4-sidebar w4-sidebar-sm w4-sidebar-secondary">
-                    <div class="w4-stack w4-stack-sm"><span class="w4-sidebar-text">Secondary</span></div>
+                    <div class="w4-stack w4-stack-sm"><span class="w4-text-primary-content">Secondary</span></div>
                 </aside>
                 <aside class="w4-sidebar w4-sidebar-sm w4-sidebar-accent">
-                    <div class="w4-stack w4-stack-sm"><span class="w4-sidebar-text">Accent</span>
-                    </div>
+                    <div class="w4-stack w4-stack-sm"><span class="w4-text-primary-content">Accent</span></div>
                 </aside>
             </div>
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Tamaños</h2>
-            <hr class="w4-divider w4-divider-info">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Tamaños</h2>
+            <hr class="w4-divider w4-divider-primary">
             <div class="w4-stack w4-stack-sm">
                 <div class="w4-stack w4-stack-horizontal w4-stack-sm">
                     <aside class="w4-sidebar w4-sidebar-xs w4-sidebar-base-300">
-                        <div><span class="w4-sidebar-text">XS</span></div>
+                        <div><span class="w4-text-primary-content">XS</span></div>
                     </aside>
                     <aside class="w4-sidebar w4-sidebar-sm w4-sidebar-base-300">
-                        <div><span class="w4-sidebar-text">SM</span></div>
+                        <div><span class="w4-text-primary-content">SM</span></div>
                     </aside>
                     <aside class="w4-sidebar w4-sidebar-md w4-sidebar-base-300">
-                        <div><span class="w4-sidebar-text">MD</span></div>
+                        <div><span class="w4-text-primary-content">MD</span></div>
                     </aside>
                 </div>
                 <div class="w4-stack w4-stack-horizontal w4-stack-sm">
                     <aside class="w4-sidebar w4-sidebar-lg w4-sidebar-base-300">
-                        <div><span class="w4-sidebar-text">LG</span></div>
+                        <div><span class="w4-text-primary-content">LG</span></div>
                     </aside>
                     <aside class="w4-sidebar w4-sidebar-xl w4-sidebar-base-300">
-                        <div><span class="w4-sidebar-text">XL</span></div>
+                        <div><span class="w4-text-primary-content">XL</span></div>
                     </aside>
                     <aside class="w4-sidebar w4-sidebar-full w4-sidebar-base-300">
-                        <div><span class="w4-sidebar-text">FULL</span></div>
+                        <div><span class="w4-text-primary-content">FULL</span></div>
                     </aside>
                 </div>
             </div>
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-warning w4-heading-start">Estados CSS del Sidebar</h2>
-            <hr class="w4-divider w4-divider-warning">
-            <p class="w4-text w4-text-md w4-text-neutral">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Estados CSS del Sidebar</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-md w4-text-primary">
                 Estados estáticos soportados: <code>enabled</code>, <code>disabled</code>, <code>active</code>,
                 <code>hidden</code>, <code>collapsed</code>.
             </p>
@@ -177,41 +177,41 @@
                 <div class="w4-panel w4-panel-base-200 w4-panel-xl">
                     <h3 class="w4-heading w4-heading-h3">Enabled</h3>
                     <aside class="w4-sidebar w4-sidebar-md w4-sidebar-primary" data-w4-state="enabled">
-                        <div><span class="w4-sidebar-text">Sidebar habilitado</span></div>
+                        <div><span class="w4-text-primary-content">Sidebar habilitado</span></div>
                     </aside>
                 </div>
                 <div class="w4-panel w4-panel-base-200 w4-panel-xl">
                     <h3 class="w4-heading w4-heading-h3">Disabled</h3>
                     <aside class="w4-sidebar w4-sidebar-md w4-sidebar-info" data-w4-state="disabled">
-                        <div><span class="w4-sidebar-text">Sidebar deshabilitado</span></div>
+                        <div><span class="w4-text-primary-content">Sidebar deshabilitado</span></div>
                     </aside>
                 </div>
                 <div class="w4-panel w4-panel-base-200 w4-panel-xl">
                     <h3 class="w4-heading w4-heading-h3">Active</h3>
                     <aside class="w4-sidebar w4-sidebar-md w4-sidebar-success" data-w4-state="active">
-                        <div><span class="w4-sidebar-text">Sidebar activo</span></div>
+                        <div><span class="w4-text-primary-content">Sidebar activo</span></div>
                     </aside>
                 </div>
                 <div class="w4-panel w4-panel-base-200 w4-panel-xl">
                     <h3 class="w4-heading w4-heading-h3">Collapsed</h3>
                     <aside class="w4-sidebar w4-sidebar-lg w4-sidebar-secondary" data-w4-state="collapsed">
-                        <div><span class="w4-sidebar-text">Sidebar colapsado</span></div>
+                        <div><span class="w4-text-primary-content">Sidebar colapsado</span></div>
                     </aside>
                 </div>
                 <div class="w4-panel w4-panel-base-200 w4-panel-xl">
                     <h3 class="w4-heading w4-heading-h3">Hidden</h3>
                     <aside class="w4-sidebar w4-sidebar-md w4-sidebar-error" data-w4-state="hidden">
-                        <div><span class="w4-sidebar-text">Sidebar oculto</span></div>
+                        <div><span class="w4-text-primary-content">Sidebar oculto</span></div>
                     </aside>
-                    <p class="w4-text w4-text-sm w4-text-neutral">Este estado no se visualiza por diseño.</p>
+                    <p class="w4-text w4-text-sm w4-text-neutral-content">Este estado no se visualiza por diseño.</p>
                 </div>
             </div>
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-success w4-heading-start">Estados JS Soportados
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Estados JS Soportados
                 (data-w4-state)</h2>
-            <hr class="w4-divider w4-divider-success">
+            <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
                 <div class="w4-stack w4-stack-sm w4-stack-vertical">
                     <aside id="jsInteractiveSidebar"

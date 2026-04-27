@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Tab Pane Component
+   Native W4 Visual Engine implementation Layout Morphology
+   ========================================================================== */
+
+@layer components {
+.w4-tab-content,
+[data-w4-tab-panel] {
+  display: none;
+  inline-size: 100%;
+}
+
+.w4-tab-content-active,
+.w4-tab-content[data-w4-state~="active"],
+[data-w4-tab-panel].w4-tab-content-active,
+[data-w4-tab-panel][data-w4-state~="active"] {
+  display: block;
+}
+
+.w4-tab-content-hidden,
+.w4-tab-content[data-w4-state~="hidden"],
+[data-w4-tab-panel].w4-tab-content-hidden,
+[data-w4-tab-panel][data-w4-state~="hidden"] {
+  display: none !important;
+}
+}

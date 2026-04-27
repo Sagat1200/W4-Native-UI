@@ -2768,19 +2768,12 @@ class W4Sidebar {
 }
 
 class W4Tab {
-    /**
-     * Initialize Tab component logic
-     */
     static init(root = document) {
         this.bindEvents(root);
-        
-        // Register state handlers for the Tab component via W4Core
         this.registerStateHandlers();
+        this.syncInitialState(root);
     }
 
-    /**
-     * Listen for hook events emitted by W4Core
-     */
     static registerStateHandlers() {
         if (this.handlersRegistered) return;
 
@@ -2794,71 +2787,162 @@ class W4Tab {
     }
 
     static handleEnabled({ element }) {
+        if (!element) return;
+        element.classList.remove('w4-tab-disabled');
+        element.classList.remove('w4-tab-hidden');
         element.removeAttribute('disabled');
         element.removeAttribute('aria-disabled');
-        element.style.pointerEvents = '';
-        element.style.opacity = '';
+        element.removeAttribute('aria-hidden');
     }
 
     static handleDisabled({ element }) {
+        if (!element) return;
+        element.classList.add('w4-tab-disabled');
         element.setAttribute('disabled', 'true');
         element.setAttribute('aria-disabled', 'true');
-        element.style.pointerEvents = 'none';
-        element.style.opacity = '0.5';
     }
 
     static handleActive({ element }) {
-        // En tabs suele coincidir con selected o ser visual
-        element.classList.add('w4-tab-active');
+        this.activateTab(element);
     }
 
     static handleHidden({ element }) {
+        if (!element) return;
+        element.classList.add('w4-tab-hidden');
         element.setAttribute('aria-hidden', 'true');
-        if (element) {
-            element.style.display = 'none';
+
+        const tabGroup = element.closest('.w4-tabs');
+        if (!tabGroup) return;
+
+        const activeTab = tabGroup.querySelector('.w4-tab.w4-tab-active');
+        if (activeTab === element) {
+            const fallback = this.getTabs(tabGroup).find((tab) => !this.isTabDisabled(tab) && !this.isTabHidden(tab));
+            if (fallback) this.activateTab(fallback);
         }
     }
 
     static handleSelected({ element }) {
-        // Forzamos el click de JS para que se propague el cambio de panel y la lógica de tabs
-        if (!element.hasAttribute('disabled')) {
-            element.click();
-        }
+        this.activateTab(element);
     }
 
     static bindEvents(root) {
-        // Handle tab switching
         root.addEventListener('click', (e) => {
             const tab = e.target.closest('.w4-tab');
-            if (tab && !tab.hasAttribute('disabled')) {
-                const tabGroup = tab.closest('.w4-tabs');
-                if (tabGroup) {
-                    // Remove active from all siblings
-                    tabGroup.querySelectorAll('.w4-tab').forEach(t => t.classList.remove('w4-tab-active'));
-                    // Add active to clicked tab
-                    tab.classList.add('w4-tab-active');
+            if (!tab || this.isTabDisabled(tab) || this.isTabHidden(tab)) return;
+            this.activateTab(tab, true);
+        });
 
-                    // If tabs are linked to panels via data-w4-target
-                    const targetId = tab.getAttribute('data-w4-target');
-                    if (targetId) {
-                        const targetPanel = document.getElementById(targetId);
-                        if (targetPanel) {
-                            // Find all sibling panels and hide them
-                            const panelGroup = targetPanel.parentElement;
-                            if (panelGroup) {
-                                Array.from(panelGroup.children).forEach(sibling => {
-                                    if (sibling.hasAttribute('data-w4-tab-panel')) {
-                                        sibling.style.display = 'none';
-                                    }
-                                });
-                            }
-                            // Show target panel
-                            targetPanel.style.display = '';
-                        }
-                    }
-                }
+        root.addEventListener('keydown', (e) => {
+            const currentTab = e.target.closest('.w4-tab');
+            if (!currentTab) return;
+
+            const tabGroup = currentTab.closest('.w4-tabs');
+            if (!tabGroup) return;
+
+            const tabs = this.getTabs(tabGroup).filter((tab) => !this.isTabDisabled(tab) && !this.isTabHidden(tab));
+            if (!tabs.length) return;
+
+            const currentIndex = tabs.indexOf(currentTab);
+            let nextTab = null;
+
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                nextTab = tabs[(currentIndex + 1) % tabs.length];
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                nextTab = tabs[(currentIndex - 1 + tabs.length) % tabs.length];
+            } else if (e.key === 'Home') {
+                nextTab = tabs[0];
+            } else if (e.key === 'End') {
+                nextTab = tabs[tabs.length - 1];
+            } else {
+                return;
+            }
+
+            e.preventDefault();
+            this.activateTab(nextTab, true);
+        });
+    }
+
+    static syncInitialState(root = document) {
+        const groups = root.querySelectorAll('.w4-tabs');
+
+        groups.forEach((group) => {
+            group.setAttribute('role', group.getAttribute('role') || 'tablist');
+
+            const tabs = this.getTabs(group);
+            tabs.forEach((tab) => {
+                tab.setAttribute('role', tab.getAttribute('role') || 'tab');
+            });
+
+            const preferredTab = tabs.find((tab) => this.isTabSelected(tab) && !this.isTabDisabled(tab) && !this.isTabHidden(tab));
+            const firstAvailableTab = tabs.find((tab) => !this.isTabDisabled(tab) && !this.isTabHidden(tab));
+            const tabToActivate = preferredTab || firstAvailableTab;
+
+            if (tabToActivate) {
+                this.activateTab(tabToActivate);
             }
         });
+    }
+
+    static activateTab(tab, focus = false) {
+        if (!tab || this.isTabDisabled(tab) || this.isTabHidden(tab)) return;
+
+        const tabGroup = tab.closest('.w4-tabs');
+        if (!tabGroup) return;
+
+        const tabs = this.getTabs(tabGroup);
+        tabs.forEach((item) => {
+            const isActive = item === tab;
+
+            item.classList.toggle('w4-tab-active', isActive);
+            item.classList.toggle('w4-tab-selected', isActive);
+            item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            item.setAttribute('tabindex', isActive ? '0' : '-1');
+        });
+
+        this.syncPanels(tabGroup, tab);
+
+        if (focus) tab.focus();
+    }
+
+    static syncPanels(tabGroup, activeTab) {
+        const targetIds = this.getTabs(tabGroup)
+            .map((tab) => tab.getAttribute('data-w4-target'))
+            .filter(Boolean);
+
+        targetIds.forEach((targetId) => {
+            const panel = document.getElementById(targetId);
+            if (!panel) return;
+
+            const isActivePanel = activeTab.getAttribute('data-w4-target') === targetId;
+            panel.classList.add('w4-tab-content');
+            panel.classList.toggle('w4-tab-content-active', isActivePanel);
+            panel.classList.toggle('w4-tab-content-hidden', !isActivePanel);
+            panel.setAttribute('aria-hidden', isActivePanel ? 'false' : 'true');
+            panel.toggleAttribute('hidden', !isActivePanel);
+        });
+    }
+
+    static getTabs(tabGroup) {
+        return Array.from(tabGroup.querySelectorAll('.w4-tab'));
+    }
+
+    static isTabDisabled(tab) {
+        return tab.hasAttribute('disabled') || tab.classList.contains('w4-tab-disabled') || (tab.getAttribute('data-w4-state') || '').includes('disabled');
+    }
+
+    static isTabHidden(tab) {
+        return tab.classList.contains('w4-tab-hidden') || (tab.getAttribute('data-w4-state') || '').includes('hidden');
+    }
+
+    static isTabSelected(tab) {
+        const state = tab.getAttribute('data-w4-state') || '';
+        return (
+            tab.classList.contains('w4-tab-active') ||
+            tab.classList.contains('w4-tab-selected') ||
+            tab.getAttribute('aria-selected') === 'true' ||
+            state.includes('active') ||
+            state.includes('selected')
+        );
     }
 }
 
