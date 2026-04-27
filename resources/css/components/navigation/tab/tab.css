@@ -21,7 +21,7 @@
   background-color: transparent;
   border: none;
   text-decoration: none;
-  color: var(--w4-base-content);
+  color: hsl(var(--w4-base-content));
   opacity: 0.7;
   padding: var(--w4-spacing-2) var(--w4-spacing-4);
   font-size: var(--w4-text-sm);
@@ -65,7 +65,7 @@
 .w4-tab[aria-current="page"],
 .w4-tab:active {
   opacity: 1;
-  color: var(--w4-base-content);
+  color: hsl(var(--w4-base-content));
 }
 
 /* Bordered Tabs */
@@ -81,15 +81,25 @@
   [aria-current="true"],
   [aria-current="page"]
 ) {
-  border-block-end-color: var(--w4-base-content);
+  border-block-end-color: hsl(var(--w4-base-content));
 }
 
 /* Lifted Tabs */
 .w4-tab-lifted {
-  border: 1px solid transparent;
-  border-block-end: none;
+  background-color: hsl(var(--w4-base-200));
+  border: 1px solid hsl(var(--w4-base-300));
+  border-block-end: 1px solid hsl(var(--w4-base-300));
   border-start-start-radius: var(--w4-radius-md);
   border-start-end-radius: var(--w4-radius-md);
+  margin-inline-end: var(--w4-spacing-1);
+  margin-block-end: -1px;
+  position: relative;
+  z-index: 0;
+}
+.w4-tabs-lifted {
+  align-items: flex-end;
+  gap: 0;
+  border-block-end: 1px solid hsl(var(--w4-base-200));
 }
 .w4-tab-lifted:is(
   .w4-tab-active,
@@ -100,17 +110,16 @@
   [aria-current="true"],
   [aria-current="page"]
 ) {
-  background-color: var(--w4-base-100);
-  border-color: var(--w4-base-200);
-  border-block-end: 1px solid var(--w4-base-100);
-  margin-block-end: -1px; /* Overlap bottom border */
-  z-index: 1;
+  background-color: hsl(var(--w4-base-100));
+  border-color: hsl(var(--w4-base-300));
+  border-block-end: 1px solid hsl(var(--w4-base-100));
+  z-index: 2;
 }
 
 /* Boxed Tabs (Pills) */
 .w4-tabs-box,
 .w4-tabs-boxed {
-  background-color: var(--w4-base-200);
+  background-color: hsl(var(--w4-base-200));
   padding: var(--w4-spacing-1);
   border-radius: var(--w4-radius-md);
 }
@@ -126,7 +135,7 @@
   [aria-current="true"],
   [aria-current="page"]
 ) {
-  background-color: var(--w4-base-100);
+  background-color: hsl(var(--w4-base-100));
   box-shadow: var(--w4-shadow-sm);
 }
 
@@ -153,7 +162,7 @@
   [aria-current="true"],
   [aria-current="page"]
 ) {
-  border-block-start-color: var(--w4-base-content);
+  border-block-start-color: hsl(var(--w4-base-content));
 }
 
 /* Sizes (container + legacy per-tab classes) */
@@ -187,38 +196,58 @@
 }
 
 /* Variants */
-.w4-tab:is(.w4-tab-primary, .w4-variant-primary) { color: var(--w4-primary); }
-.w4-tab:is(.w4-tab-primary, .w4-variant-primary):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: var(--w4-primary); }
-.w4-tab-bordered:is(.w4-tab-primary, .w4-variant-primary):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: var(--w4-primary); }
-.w4-tab-boxed:is(.w4-tab-primary, .w4-variant-primary):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: var(--w4-primary); color: var(--w4-primary-content); }
+.w4-tab:is(.w4-tab-primary, .w4-variant-primary) { color: hsl(var(--w4-primary)); }
+.w4-tab:is(.w4-tab-primary, .w4-variant-primary):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: hsl(var(--w4-primary)); }
+.w4-tab-bordered:is(.w4-tab-primary, .w4-variant-primary):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: hsl(var(--w4-primary)); }
+.w4-tab-boxed:is(.w4-tab-primary, .w4-variant-primary):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: hsl(var(--w4-primary)); color: hsl(var(--w4-primary-content)); }
 
-.w4-tab:is(.w4-tab-secondary, .w4-variant-secondary) { color: var(--w4-secondary); }
-.w4-tab:is(.w4-tab-secondary, .w4-variant-secondary):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: var(--w4-secondary); }
-.w4-tab-bordered:is(.w4-tab-secondary, .w4-variant-secondary):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: var(--w4-secondary); }
-.w4-tab-boxed:is(.w4-tab-secondary, .w4-variant-secondary):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: var(--w4-secondary); color: var(--w4-secondary-content); }
+.w4-tab:is(.w4-tab-secondary, .w4-variant-secondary) { color: hsl(var(--w4-secondary)); }
+.w4-tab:is(.w4-tab-secondary, .w4-variant-secondary):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: hsl(var(--w4-secondary)); }
+.w4-tab-bordered:is(.w4-tab-secondary, .w4-variant-secondary):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: hsl(var(--w4-secondary)); }
+.w4-tab-boxed:is(.w4-tab-secondary, .w4-variant-secondary):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: hsl(var(--w4-secondary)); color: hsl(var(--w4-secondary-content)); }
 
-.w4-tab:is(.w4-tab-accent, .w4-variant-accent) { color: var(--w4-accent); }
-.w4-tab:is(.w4-tab-accent, .w4-variant-accent):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: var(--w4-accent); }
-.w4-tab-bordered:is(.w4-tab-accent, .w4-variant-accent):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: var(--w4-accent); }
-.w4-tab-boxed:is(.w4-tab-accent, .w4-variant-accent):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: var(--w4-accent); color: var(--w4-accent-content); }
+.w4-tab:is(.w4-tab-accent, .w4-variant-accent) { color: hsl(var(--w4-accent)); }
+.w4-tab:is(.w4-tab-accent, .w4-variant-accent):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: hsl(var(--w4-accent)); }
+.w4-tab-bordered:is(.w4-tab-accent, .w4-variant-accent):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: hsl(var(--w4-accent)); }
+.w4-tab-boxed:is(.w4-tab-accent, .w4-variant-accent):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: hsl(var(--w4-accent)); color: hsl(var(--w4-accent-content)); }
 
-.w4-tab:is(.w4-tab-info, .w4-variant-info) { color: var(--w4-info); }
-.w4-tab:is(.w4-tab-info, .w4-variant-info):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: var(--w4-info); }
-.w4-tab-bordered:is(.w4-tab-info, .w4-variant-info):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: var(--w4-info); }
-.w4-tab-boxed:is(.w4-tab-info, .w4-variant-info):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: var(--w4-info); color: var(--w4-info-content); }
+.w4-tab:is(.w4-tab-info, .w4-variant-info) { color: hsl(var(--w4-info)); }
+.w4-tab:is(.w4-tab-info, .w4-variant-info):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: hsl(var(--w4-info)); }
+.w4-tab-bordered:is(.w4-tab-info, .w4-variant-info):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: hsl(var(--w4-info)); }
+.w4-tab-boxed:is(.w4-tab-info, .w4-variant-info):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: hsl(var(--w4-info)); color: hsl(var(--w4-info-content)); }
 
-.w4-tab:is(.w4-tab-success, .w4-variant-success) { color: var(--w4-success); }
-.w4-tab:is(.w4-tab-success, .w4-variant-success):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: var(--w4-success); }
-.w4-tab-bordered:is(.w4-tab-success, .w4-variant-success):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: var(--w4-success); }
-.w4-tab-boxed:is(.w4-tab-success, .w4-variant-success):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: var(--w4-success); color: var(--w4-success-content); }
+.w4-tab:is(.w4-tab-success, .w4-variant-success) { color: hsl(var(--w4-success)); }
+.w4-tab:is(.w4-tab-success, .w4-variant-success):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: hsl(var(--w4-success)); }
+.w4-tab-bordered:is(.w4-tab-success, .w4-variant-success):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: hsl(var(--w4-success)); }
+.w4-tab-boxed:is(.w4-tab-success, .w4-variant-success):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: hsl(var(--w4-success)); color: hsl(var(--w4-success-content)); }
 
-.w4-tab:is(.w4-tab-warning, .w4-variant-warning) { color: var(--w4-warning); }
-.w4-tab:is(.w4-tab-warning, .w4-variant-warning):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: var(--w4-warning); }
-.w4-tab-bordered:is(.w4-tab-warning, .w4-variant-warning):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: var(--w4-warning); }
-.w4-tab-boxed:is(.w4-tab-warning, .w4-variant-warning):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: var(--w4-warning); color: var(--w4-warning-content); }
+.w4-tab:is(.w4-tab-warning, .w4-variant-warning) { color: hsl(var(--w4-warning)); }
+.w4-tab:is(.w4-tab-warning, .w4-variant-warning):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: hsl(var(--w4-warning)); }
+.w4-tab-bordered:is(.w4-tab-warning, .w4-variant-warning):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: hsl(var(--w4-warning)); }
+.w4-tab-boxed:is(.w4-tab-warning, .w4-variant-warning):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: hsl(var(--w4-warning)); color: hsl(var(--w4-warning-content)); }
 
-.w4-tab:is(.w4-tab-error, .w4-variant-error) { color: var(--w4-error); }
-.w4-tab:is(.w4-tab-error, .w4-variant-error):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: var(--w4-error); }
-.w4-tab-bordered:is(.w4-tab-error, .w4-variant-error):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: var(--w4-error); }
-.w4-tab-boxed:is(.w4-tab-error, .w4-variant-error):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: var(--w4-error); color: var(--w4-error-content); }
+.w4-tab:is(.w4-tab-error, .w4-variant-error) { color: hsl(var(--w4-error)); }
+.w4-tab:is(.w4-tab-error, .w4-variant-error):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: hsl(var(--w4-error)); }
+.w4-tab-bordered:is(.w4-tab-error, .w4-variant-error):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: hsl(var(--w4-error)); }
+.w4-tab-boxed:is(.w4-tab-error, .w4-variant-error):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: hsl(var(--w4-error)); color: hsl(var(--w4-error-content)); }
+
+.w4-tab:is(.w4-tab-neutral, .w4-variant-neutral) { color: hsl(var(--w4-neutral)); }
+.w4-tab:is(.w4-tab-neutral, .w4-variant-neutral):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: hsl(var(--w4-neutral)); }
+.w4-tab-bordered:is(.w4-tab-neutral, .w4-variant-neutral):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: hsl(var(--w4-neutral)); }
+.w4-tab-boxed:is(.w4-tab-neutral, .w4-variant-neutral):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: hsl(var(--w4-neutral)); color: hsl(var(--w4-neutral-content)); }
+
+.w4-tab:is(.w4-tab-base-100, .w4-variant-base-100) { color: hsl(var(--w4-base-content)); }
+.w4-tab:is(.w4-tab-base-100, .w4-variant-base-100):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: hsl(var(--w4-base-content)); }
+.w4-tab-bordered:is(.w4-tab-base-100, .w4-variant-base-100):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: hsl(var(--w4-base-content)); }
+.w4-tab-boxed:is(.w4-tab-base-100, .w4-variant-base-100):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: hsl(var(--w4-base-100)); color: hsl(var(--w4-base-content)); }
+
+.w4-tab:is(.w4-tab-base-200, .w4-variant-base-200) { color: hsl(var(--w4-base-content)); }
+.w4-tab:is(.w4-tab-base-200, .w4-variant-base-200):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: hsl(var(--w4-base-content)); }
+.w4-tab-bordered:is(.w4-tab-base-200, .w4-variant-base-200):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: hsl(var(--w4-base-content)); }
+.w4-tab-boxed:is(.w4-tab-base-200, .w4-variant-base-200):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: hsl(var(--w4-base-200)); color: hsl(var(--w4-base-content)); }
+
+.w4-tab:is(.w4-tab-base-300, .w4-variant-base-300) { color: hsl(var(--w4-base-content)); }
+.w4-tab:is(.w4-tab-base-300, .w4-variant-base-300):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { color: hsl(var(--w4-base-content)); }
+.w4-tab-bordered:is(.w4-tab-base-300, .w4-variant-base-300):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { border-block-end-color: hsl(var(--w4-base-content)); }
+.w4-tab-boxed:is(.w4-tab-base-300, .w4-variant-base-300):is(.w4-tab-active, .w4-tab-selected, [data-w4-state~="active"], [data-w4-state~="selected"], [aria-selected="true"], [aria-current="true"], [aria-current="page"]) { background-color: hsl(var(--w4-base-300)); color: hsl(var(--w4-base-content)); }
 }

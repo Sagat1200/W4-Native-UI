@@ -130,11 +130,29 @@ export default class W4Tab {
             item.classList.toggle('w4-tab-selected', isActive);
             item.setAttribute('aria-selected', isActive ? 'true' : 'false');
             item.setAttribute('tabindex', isActive ? '0' : '-1');
+            this.syncTabStateAttribute(item, isActive);
         });
 
         this.syncPanels(tabGroup, tab);
 
         if (focus) tab.focus();
+    }
+
+    static syncTabStateAttribute(tab, isActive) {
+        const rawState = tab.getAttribute('data-w4-state') || '';
+        const states = rawState.split(/[\s,]+/).filter(Boolean);
+        const nextStates = states.filter((state) => state !== 'active' && state !== 'selected');
+
+        if (isActive) {
+            nextStates.push('active', 'selected');
+        }
+
+        const uniqueStates = [...new Set(nextStates)];
+        if (uniqueStates.length) {
+            tab.setAttribute('data-w4-state', uniqueStates.join(' '));
+        } else {
+            tab.removeAttribute('data-w4-state');
+        }
     }
 
     static syncPanels(tabGroup, activeTab) {
