@@ -44,7 +44,7 @@
 </head>
 
 <body>
-    <div class="w4-navbar w4-navbar-primary w4-navbar-fixed">
+    <div class="w4-navbar w4-navbar-neutral w4-navbar-fixed">
         <div class="w4-navbar-start">
             <button class="w4-button w4-button-ghost w4-button-square w4-sidebar-expanend ml-2"
                 data-w4-target="appSidebar">
@@ -56,14 +56,14 @@
                     <path d="M14 10l2 2l-2 2"></path>
                 </svg>
             </button>
-            <a href="#" class="w4-button w4-button-ghost">W4 Admin</a>
+            <a href="#" class="w4-button w4-button-link ml-2">W4 Admin</a>
         </div>
         <div class="w4-navbar-center">
             <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-sm">
-                <li class="w4-text w4-text-primary-content"><a href="">Home</a></li>
-                <li class="w4-text w4-text-primary-content"><a href="">Documentacion</a></li>
-                <li class="w4-text w4-text-primary-content"><a href="">Productos</a></li>
-                <li class="w4-text w4-text-primary-content"><a href="">Contacto</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Home</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Productos</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Contacto</a></li>
             </ul>
         </div>
         <div class="w4-navbar-end mr-2">
@@ -108,7 +108,7 @@
 
     <div class="w4-page-layout">
         <aside id="appSidebar"
-            class="w4-sidebar w4-sidebar-primary w4-sidebar-xs w4-sidebar-fixed w4-sidebar-collapsible-icons"
+            class="w4-sidebar w4-sidebar-neutral w4-sidebar-xs w4-sidebar-fixed w4-sidebar-collapsible-icons"
             data-w4-component="sidebar" data-w4-state="collapsed">
             <div class="w4-stack w4-stack-sm">
                 <a href="#" class="w4-sidebar-item">
@@ -143,6 +143,11 @@
                     </svg>
                     <span class="w4-sidebar-label">Configuracion</span>
                 </a>
+
+
+
+
+
             </div>
         </aside>
 
@@ -150,7 +155,7 @@
             <!-- Content Page -->
             <div class="w4-section w4-section-lg">
                 <h1 class="w4-heading w4-heading-h1 w4-heading-primary">Panel Principal</h1>
-                <p class="w4-text w4-text-neutral">
+                <p class="w4-text w4-text-primary">
                     Plantilla base con <strong>navbar</strong> y <strong>sidebar</strong> para administrar contenido de
                     pagina.
                 </p>
@@ -180,11 +185,11 @@
             </section>
 
             <section class="w4-section w4-section-lg">
-                <h2 class="w4-heading w4-heading-h2 w4-heading-secondary">Contenido de Pagina</h2>
-                <hr class="w4-divider w4-divider-secondary">
+                <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Contenido de Pagina</h2>
+                <hr class="w4-divider w4-divider-primary">
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <div class="w4-stack w4-stack-sm">
-                        <p class="w4-text">
+                        <p class="w4-text w4-text-primary">
                             Aqui puedes renderizar listados, formularios, tablas y bloques dinamicos del modulo actual.
                         </p>
                         <div style="overflow-x:auto;">
