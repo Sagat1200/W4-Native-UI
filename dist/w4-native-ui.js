@@ -2777,11 +2777,11 @@ class W4Tab {
     static registerStateHandlers() {
         if (this.handlersRegistered) return;
 
-        W4Core.on('tab:enabled', this.handleEnabled);
-        W4Core.on('tab:disabled', this.handleDisabled);
-        W4Core.on('tab:active', this.handleActive);
-        W4Core.on('tab:hidden', this.handleHidden);
-        W4Core.on('tab:selected', this.handleSelected);
+        W4Core.on('tab:enabled', this.handleEnabled.bind(this));
+        W4Core.on('tab:disabled', this.handleDisabled.bind(this));
+        W4Core.on('tab:active', this.handleActive.bind(this));
+        W4Core.on('tab:hidden', this.handleHidden.bind(this));
+        W4Core.on('tab:selected', this.handleSelected.bind(this));
 
         this.handlersRegistered = true;
     }
@@ -2867,6 +2867,7 @@ class W4Tab {
 
         groups.forEach((group) => {
             group.setAttribute('role', group.getAttribute('role') || 'tablist');
+            this.syncPlacementLayout(group);
 
             const tabs = this.getTabs(group);
             tabs.forEach((tab) => {
@@ -2923,6 +2924,7 @@ class W4Tab {
     }
 
     static syncPanels(tabGroup, activeTab) {
+        const placement = this.getPlacement(tabGroup);
         const targetIds = this.getTabs(tabGroup)
             .map((tab) => tab.getAttribute('data-w4-target'))
             .filter(Boolean);
@@ -2936,8 +2938,60 @@ class W4Tab {
             panel.classList.toggle('w4-tab-content-active', isActivePanel);
             panel.classList.toggle('w4-tab-content-hidden', !isActivePanel);
             panel.setAttribute('aria-hidden', isActivePanel ? 'false' : 'true');
+            panel.setAttribute('data-w4-tab-placement', placement);
             panel.toggleAttribute('hidden', !isActivePanel);
         });
+    }
+
+    static syncPlacementLayout(tabGroup) {
+        const tabs = this.getTabs(tabGroup);
+        if (!tabs.length) return;
+
+        const placement = this.getPlacement(tabGroup, tabs);
+        tabGroup.setAttribute('data-w4-tab-placement', placement);
+
+        tabGroup.classList.toggle('w4-tabs-bottom', placement === 'bottom');
+        tabGroup.classList.toggle('w4-tabs-top', placement === 'top');
+
+        const targetIds = tabs
+            .map((tab) => tab.getAttribute('data-w4-target'))
+            .filter(Boolean);
+        if (!targetIds.length) return;
+
+        const firstPanel = document.getElementById(targetIds[0]);
+        if (!firstPanel) return;
+
+        const panelsContainer = firstPanel.parentElement;
+        const sharedParent = tabGroup.parentElement;
+        if (!panelsContainer || !sharedParent || panelsContainer.parentElement !== sharedParent) return;
+
+        if (placement === 'bottom') {
+            if (sharedParent.firstElementChild !== panelsContainer) {
+                sharedParent.insertBefore(panelsContainer, tabGroup);
+            }
+            return;
+        }
+
+        if (sharedParent.firstElementChild !== tabGroup) {
+            sharedParent.insertBefore(tabGroup, panelsContainer);
+        }
+    }
+
+    static getPlacement(tabGroup, cachedTabs = null) {
+        const tabs = cachedTabs || this.getTabs(tabGroup);
+        const isBottom =
+            tabGroup.classList.contains('w4-tabs-bottom') ||
+            tabs.some((tab) => tab.classList.contains('w4-tab-bottom'));
+        const isTop =
+            tabGroup.classList.contains('w4-tabs-top') ||
+            tabs.some((tab) => tab.classList.contains('w4-tab-top'));
+
+        // Group-level classes have priority, then per-tab fallback.
+        if (tabGroup.classList.contains('w4-tabs-bottom')) return 'bottom';
+        if (tabGroup.classList.contains('w4-tabs-top')) return 'top';
+        if (isBottom) return 'bottom';
+        if (isTop) return 'top';
+        return 'top';
     }
 
     static getTabs(tabGroup) {

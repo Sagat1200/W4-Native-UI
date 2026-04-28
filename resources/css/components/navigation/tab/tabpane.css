@@ -8,6 +8,15 @@
 [data-w4-tab-panel] {
   display: none;
   inline-size: 100%;
+  order: 1;
+}
+
+.w4-tabs-bottom > .w4-tab {
+  order: 1;
+}
+
+.w4-tabs-bottom > .w4-tab-content {
+  order: 0;
 }
 
 .w4-tab-content-active,
@@ -17,10 +26,29 @@
   display: block;
 }
 
+.w4-tab:checked + .w4-tab-content {
+  display: block;
+}
+
 .w4-tab-content-hidden,
 .w4-tab-content[data-w4-state~="hidden"],
 [data-w4-tab-panel].w4-tab-content-hidden,
 [data-w4-tab-panel][data-w4-state~="hidden"] {
   display: none !important;
+}
+
+.w4-tab-lifted-content-panels {
+  display: flex;
+  flex-direction: column;
+  --w4-stack-gap: 0px !important;
+  gap: 0 !important;
+}
+
+.w4-tab-lifted-content-panels > .w4-tabs-bottom {
+  order: 2;
+}
+
+.w4-tab-lifted-content-panels > .w4-stack {
+  order: 1;
 }
 }

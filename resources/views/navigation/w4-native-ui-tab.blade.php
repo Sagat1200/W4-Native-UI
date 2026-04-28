@@ -15,6 +15,12 @@
             border-block-end: 2px solid hsl(var(--w4-base-content, 220 9% 24%) / 0.28);
         }
 
+        .w4-tabs-folder.w4-tabs-bottom {
+            align-items: flex-start;
+            border-block-end: 0;
+            border-block-start: 2px solid hsl(var(--w4-base-content, 220 9% 24%) / 0.28);
+        }
+
         .w4-tabs-folder>.w4-tab-lifted {
             background-color: hsl(var(--w4-base-200, 220 14% 95%));
             border: 1px solid hsl(var(--w4-base-content, 220 9% 24%) / 0.28);
@@ -28,10 +34,22 @@
             z-index: 0;
         }
 
+        .w4-tabs-folder.w4-tabs-bottom>.w4-tab-lifted {
+            border-radius: 0 0 var(--w4-radius-md, 0.5rem) var(--w4-radius-md, 0.5rem);
+            margin-block-start: -1px;
+            margin-block-end: 0;
+            border-block-start-color: hsl(var(--w4-base-content, 220 9% 24%) / 0.28);
+        }
+
         .w4-tabs-folder>.w4-tab-lifted:is(.w4-tab-active, .w4-tab-selected, [aria-selected="true"], [data-w4-state~="active"], [data-w4-state~="selected"]) {
             background-color: hsl(var(--w4-base-100, 0 0% 100%));
             border-block-end-color: hsl(var(--w4-base-100, 0 0% 100%));
             z-index: 2;
+        }
+
+        .w4-tabs-folder.w4-tabs-bottom>.w4-tab-lifted:is(.w4-tab-active, .w4-tab-selected, [aria-selected="true"], [data-w4-state~="active"], [data-w4-state~="selected"]) {
+            border-block-end-color: hsl(var(--w4-base-content, 220 9% 24%) / 0.28);
+            border-block-start-color: hsl(var(--w4-base-100, 0 0% 100%));
         }
     </style>
 </head>
@@ -108,6 +126,29 @@
             <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Tab</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral-content">
+                <strong>Tabs</strong> (pestañas) Pure CSS estilo DaisyUI
+            </p>
+            <div class="w4-stack w4-stack-md w4-stack-center">
+                <div class="w4-tabs w4-tabs-lifted w4-tabs-top">
+                    <input type="radio" name="w4-tabs" class="w4-tab w4-tab-lifted w4-tab-primary" aria-label="Tab 1"
+                        checked="checked" />
+                    <div class="w4-tab-content w4-panel w4-panel-primary w4-tab-lifted-content">Tab content 1. This
+                        content merges visually with the active tab.</div>
+
+                    <input type="radio" name="w4-tabs" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                        aria-label="Tab 2" />
+                    <div class="w4-tab-content w4-panel w4-panel-secondary w4-tab-lifted-content">Tab content
+                        2 . Testing
+                        the daisyui pure CSS implementation.</div>
+
+                    <input type="radio" name="w4-tabs" class="w4-tab w4-tab-lifted w4-tab-neutral" aria-label="Tab 3" />
+                    <div class="w4-tab-content w4-panel w4-panel-base-100 w4-tab-lifted-content">Tab content 3. The
+                        radial gradients provide smooth curves!</div>
+                </div>
+            </div>
+
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
                 El componente <strong>Tab</strong> (pestañas) organiza contenido relacionado en múltiples vistas u
                 hojas, permitiendo a los usuarios navegar entre ellas sin tener que cambiar de página. Es excelente para
                 ahorrar espacio en pantalla y estructurar información densa.
@@ -126,102 +167,325 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de color</h2>
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes y Estilos</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                El componente <strong>Tab</strong> (pestañas) ofrece varias variantes y estilos para personalizar la
+                apariencia y
+                comportamiento de las pestañas.
+            </p>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral-content">
-                El componente <strong>Tab</strong> (pestañas) ofrece una variedad de variantes de color para
-                personalizar
-                la apariencia y la interacción con los usuarios.
+                <strong>Tabs</strong> (pestañas) sin borde
+            </p>
+            <div class="w4-stack w4-stack-md w4-stack-center">
+                <div class="w4-tabs" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-base-100 w4-tab-active">Base-100</button>
+                    <button type="button" class="w4-tab w4-tab-base-200">Base-200</button>
+                    <button type="button" class="w4-tab w4-tab-base-300">Base-300</button>
+                    <button type="button" class="w4-tab w4-tab-neutral">Neutral</button>
+                    <button type="button" class="w4-tab w4-tab-primary">Primary</button>
+                    <button type="button" class="w4-tab w4-tab-secondary">Secondary</button>
+                    <button type="button" class="w4-tab w4-tab-accent">Accent</button>
+                    <button type="button" class="w4-tab w4-tab-info">Info</button>
+                    <button type="button" class="w4-tab w4-tab-success">Success</button>
+                    <button type="button" class="w4-tab w4-tab-warning">Warning</button>
+                    <button type="button" class="w4-tab w4-tab-error">Error</button>
+                </div>
+            </div>
+
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                <strong>Tabs</strong> (pestañas) con borde
+            </p>
+            <div class="w4-stack w4-stack-md w4-stack-center">
+                <div class="w4-tabs" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-base-100 w4-tab-active">Base-100</button>
+                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-base-200">Base-200</button>
+                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-base-300">Base-300</button>
+                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-neutral">Neutral</button>
+                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-primary">Primary</button>
+                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-secondary">Secondary</button>
+                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-accent">Accent</button>
+                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-info">Info</button>
+                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-success">Success</button>
+                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-warning">Warning</button>
+                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-error">Error</button>
+                </div>
+            </div>
+
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                <strong>Tabs</strong> (pestañas) estilo lifted
+            </p>
+            <div class="w4-stack w4-stack-md w4-stack-center">
+
+                <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-base-100 w4-tab-active">Base-100</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-base-200">Base-200</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-base-300">Base-300</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-neutral">Neutral</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary">Primary</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary">Secondary</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-accent">Accent</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-info">Info</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-success">Success</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-warning">Warning</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-error">Error</button>
+                </div>
+            </div>
+
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                <strong>Tabs</strong> (pestañas) estilo folder
+            </p>
+            <div class="w4-stack w4-stack-md w4-stack-center">
+                <div class="w4-tabs w4-tabs-folder" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-base-100 w4-tab-active">Base-100</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-base-200">Base-200</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-base-300">Base-300</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-neutral">Neutral</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary">Primary</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary">Secondary</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-accent">Accent</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-info">Info</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-success">Success</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-warning">Warning</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-error">Error</button>
+                </div>
+            </div>
+
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                <strong>Tabs</strong> (pestañas) estilo boxed
+            </p>
+            <div class="w4-stack w4-stack-md w4-stack-center">
+
+                <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-base-100 w4-tab-active">Base-100</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-base-200">Base-200</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-base-300">Base-300</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-neutral">Neutral</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary">Primary</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary">Secondary</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-accent">Accent</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-info">Info</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-success">Success</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-warning">Warning</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-error">Error</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Posiciones</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                El componente <strong>Tab</strong> (pestañas) ofrece varias posiciones para colocar las pestañas en la
+                interfaz
+                de usuario
             </p>
             <div class="w4-panel w4-panel-base-100 w4-panel-md">
                 <div class="w4-stack w4-stack-md w4-stack-center">
                     <div class="w4-tabs w4-tabs-top" data-w4-component="tab">
                         <button type="button" class="w4-tab w4-tab-bordered w4-tab-active w4-tab-base-100 mx-2"
-                            data-w4-target="tabBaseDeDatos">Base de Datos</button>
-                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-active w4-tab-base-200 mx-2"
-                            data-w4-target="tabLaravel">Laravel</button>
-                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-active w4-tab-base-300 mx-2"
-                            data-w4-target="tabLivewire">Livewire</button>
-                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-active w4-tab-primary mx-2"
-                            data-w4-target="tabBaseInertia">Inertia</button>
+                            data-w4-target="tabBase100">Base-100</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-base-200 mx-2"
+                            data-w4-target="tabBase200">Base-200</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-base-300 mx-2"
+                            data-w4-target="tabBase300">Base-300</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-neutral mx-2"
+                            data-w4-target="tabNeutral">Neutral</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-primary mx-2"
+                            data-w4-target="tabPrimary">Primary</button>
                         <button type="button" class="w4-tab w4-tab-bordered w4-tab-secondary mx-2"
-                            data-w4-target="tabBaseMetrics">Metricas</button>
+                            data-w4-target="tabSecondary">Secondary</button>
                         <button type="button" class="w4-tab w4-tab-bordered w4-tab-accent mx-2"
-                            data-w4-target="tabBaseActivity">Actividad</button>
+                            data-w4-target="tabAccent">Accent</button>
                         <button type="button" class="w4-tab w4-tab-bordered w4-tab-info mx-2"
-                            data-w4-target="tabBaseResumen">Resumen</button>
+                            data-w4-target="tabInfo">Info</button>
                         <button type="button" class="w4-tab w4-tab-bordered w4-tab-success mx-2"
-                            data-w4-target="tabBaseReport">Reporte</button>
+                            data-w4-target="tabSuccess">Success</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-warning mx-2"
+                            data-w4-target="tabWarning">Warning</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-error mx-2"
+                            data-w4-target="tabError">Error</button>
                     </div>
-                    <div class="w4-stack w4-stack-sm">
-                        <div id="tabBaseDeDatos" data-w4-tab-panel
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div id="tabBase100" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
-                            <p class="w4-text w4-text-sm w4-text-base-100-content">Base de Datos soportadas por Laravel:
-                                MySQL, PostgreSQL, SQLite, Oracle, SQL Server, MongoDB, Redis, Memcached, and more.</p>
+                            <p class="w4-text w4-text-sm w4-text-base-100-content">Base-100</p>
                         </div>
-                        <div id="tabLaravel" data-w4-tab-panel
+                        <div id="tabBase200" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
-                            <p class="w4-text w4-text-sm w4-text-base-200-content">Laravel es:
-                                un framework de desarrollo web PHP que ofrece una variedad de herramientas y
-                                características para
-                                crear aplicaciones web eficientes y seguras.</p>
+                            <p class="w4-text w4-text-sm w4-text-base-200-content">Base-200</p>
                         </div>
-                        <div id="tabLivewire" data-w4-tab-panel
+                        <div id="tabBase300" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-300 w4-panel-sm" hidden aria-hidden="true">
-                            <p class="w4-text w4-text-sm w4-text-base-300-content">Livewire es:
-                                un paquete de Laravel que proporciona una forma de crear interfaces de usuario
-                                interactivas
-                                en PHP.
-                            </p>
+                            <p class="w4-text w4-text-sm w4-text-base-300-content">Base-300</p>
                         </div>
-                        <div id="tabLivewire" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-300 w4-panel-sm" hidden aria-hidden="true">
-                            <p class="w4-text w4-text-sm w4-text-base-300-content">Livewire es:
-                                un paquete de Laravel que proporciona una forma de crear interfaces de usuario
-                                interactivas
-                                en PHP.
-                            </p>
+                        <div id="tabNeutral" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-neutral w4-panel-sm" hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-neutral-content">Neutral</p>
                         </div>
-                        <div id="tabBaseInertia" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-info w4-panel-sm" hidden aria-hidden="true">
-                            <p class="w4-text w4-text-sm w4-text-info-content">Inertia es:
-                                un paquete de Laravel que proporciona una forma de crear interfaces de usuario
-                                interactivas
-                                en PHP.
-                            </p>
+                        <div id="tabPrimary" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-primary w4-panel-sm" hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-primary-content">Primary</p>
                         </div>
-                        <div id="tabBaseMetrics" data-w4-tab-panel
+                        <div id="tabSecondary" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-secondary w4-panel-sm" hidden aria-hidden="true">
-                            <p class="w4-text w4-text-sm w4-text-secondary-content">Metricas detalladas del modulo:
-                                estadisticas,
-                                reportes y
-                                analisis.</p>
+                            <p class="w4-text w4-text-sm w4-text-secondary-content">Secondary</p>
                         </div>
-                        <div id="tabBaseActivity" data-w4-tab-panel
+                        <div id="tabAccent" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-accent w4-panel-sm" hidden aria-hidden="true">
-                            <p class="w4-text w4-text-sm w4-text-accent-content">Actividad detallada del modulo:
-                                estadisticas,
-                                reportes y
-                                analisis.</p>
+                            <p class="w4-text w4-text-sm w4-text-accent-content">Accent</p>
                         </div>
-                        <div id="tabBaseResumen" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-info w4-panel-sm" hidden aria-hidden="true">
-                            <p class="w4-text w4-text-sm w4-text-info-content">Resumen detallado del modulo:
-                                estadisticas,
-                                reportes y
-                                analisis.</p>
+                        <div id="tabInfo" data-w4-tab-panel class="w4-tab-content w4-panel w4-panel-info w4-panel-sm"
+                            hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-info-content">Info</p>
                         </div>
-                        <div id="tabBaseReport" data-w4-tab-panel
+                        <div id="tabSuccess" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-success w4-panel-sm" hidden aria-hidden="true">
-                            <p class="w4-text w4-text-sm w4-text-success-content">Reporte detallado del modulo:
-                                estadisticas,
-                                reportes y
-                                analisis.</p>
+                            <p class="w4-text w4-text-sm w4-text-success-content">Success</p>
                         </div>
-
-
+                        <div id="tabWarning" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-warning w4-panel-sm" hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-warning-content">Warning</p>
+                        </div>
+                        <div id="tabError" data-w4-tab-panel class="w4-tab-content w4-panel w4-panel-error w4-panel-sm"
+                            hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-error-content">Error</p>
+                        </div>
                     </div>
-                </div>
+
+
+
+                    <div class="w4-tabs w4-tabs-bottom" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-active w4-tab-base-100 mx-2"
+                            data-w4-target="tabBottomBase100">Base-100</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-base-200 mx-2"
+                            data-w4-target="tabBottomBase200">Base-200</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-base-300 mx-2"
+                            data-w4-target="tabBottomBase300">Base-300</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-neutral mx-2"
+                            data-w4-target="tabBottomNeutral">Neutral</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-primary mx-2"
+                            data-w4-target="tabBottomPrimary">Primary</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-secondary mx-2"
+                            data-w4-target="tabBottomSecondary">Secondary</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-accent mx-2"
+                            data-w4-target="tabBottomAccent">Accent</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-info mx-2"
+                            data-w4-target="tabBottomInfo">Info</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-success mx-2"
+                            data-w4-target="tabBottomSuccess">Success</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-warning mx-2"
+                            data-w4-target="tabBottomWarning">Warning</button>
+                        <button type="button" class="w4-tab w4-tab-bordered w4-tab-error mx-2"
+                            data-w4-target="tabBottomError">Error</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div id="tabBottomBase100" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <p class="w4-text w4-text-sm w4-text-base-100-content">Bottom Base-100</p>
+                        </div>
+                        <div id="tabBottomBase200" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-base-200-content">Bottom Base-200</p>
+                        </div>
+                        <div id="tabBottomBase300" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-300 w4-panel-sm" hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-base-300-content">Bottom Base-300</p>
+                        </div>
+                        <div id="tabBottomNeutral" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-neutral w4-panel-sm" hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-neutral-content">Bottom Neutral</p>
+                        </div>
+                        <div id="tabBottomPrimary" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-primary w4-panel-sm" hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-primary-content">Bottom Primary</p>
+                        </div>
+                        <div id="tabBottomSecondary" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-secondary w4-panel-sm" hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-secondary-content">Bottom Secondary</p>
+                        </div>
+                        <div id="tabBottomAccent" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-accent w4-panel-sm" hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-accent-content">Bottom Accent</p>
+                        </div>
+                        <div id="tabBottomInfo" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-info w4-panel-sm" hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-info-content">Bottom Info</p>
+                        </div>
+                        <div id="tabBottomSuccess" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-success w4-panel-sm" hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-success-content">Bottom Success</p>
+                        </div>
+                        <div id="tabBottomWarning" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-warning w4-panel-sm" hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-warning-content">Bottom Warning</p>
+                        </div>
+                        <div id="tabBottomError" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-error w4-panel-sm" hidden aria-hidden="true">
+                            <p class="w4-text w4-text-sm w4-text-error-content">Bottom Error</p>
+                        </div>
+                    </div>
+
+                    <hr class="w4-divider w4-divider-primary">
+                    <div class="w4-stack w4-stack-md w4-stack-center">
+                        <div class="w4-tabs w4-tabs-lifted w4-tabs-top">
+                            <input type="radio" name="w4-tabs" class="w4-tab w4-tab-lifted w4-tab-base-100"
+                                aria-label="Base-100" checked="checked" />
+                            <div class="w4-tab-content w4-panel w4-panel-base-100 w4-tab-lifted-content">Tab content 1.
+                                This
+                                content merges visually with the active tab.</div>
+                            <input type="radio" name="w4-tabs" class="w4-tab w4-tab-lifted w4-tab-base-200"
+                                aria-label="Base-200" checked="checked" />
+                            <div class="w4-tab-content w4-panel w4-panel-base-200 w4-tab-lifted-content">Tab content 2.
+                                This
+                                content merges visually with the active tab.</div>
+                            <input type="radio" name="w4-tabs" class="w4-tab w4-tab-lifted w4-tab-base-300"
+                                aria-label="Base-300" checked="checked" />
+                            <div class="w4-tab-content w4-panel w4-panel-base-300 w4-tab-lifted-content">Tab content 3.
+                                This
+                                content merges visually with the active tab.</div>
+                            <input type="radio" name="w4-tabs" class="w4-tab w4-tab-lifted w4-tab-primary"
+                                aria-label="Primary" checked="checked" />
+                            <div class="w4-tab-content w4-panel w4-panel-primary w4-tab-lifted-content">Tab content 4.
+                                This
+                                content merges visually with the active tab.</div>
+                            <input type="radio" name="w4-tabs" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                aria-label="Secondary" checked="checked" />
+                            <div class="w4-tab-content w4-panel w4-panel-secondary w4-tab-lifted-content">Tab content 5.
+                                This
+                                content merges visually with the active tab.</div>
+                            <input type="radio" name="w4-tabs" class="w4-tab w4-tab-lifted w4-tab-accent"
+                                aria-label="Accent" checked="checked" />
+                            <div class="w4-tab-content w4-panel w4-panel-accent w4-tab-lifted-content">Tab content 6.
+                                This
+                                content merges visually with the active tab.</div>
+                            <input type="radio" name="w4-tabs" class="w4-tab w4-tab-lifted w4-tab-info"
+                                aria-label="Info" checked="checked" />
+                            <div class="w4-tab-content w4-panel w4-panel-info w4-tab-lifted-content">Tab content 7.
+                                This
+                                content merges visually with the active tab.</div>
+                            <input type="radio" name="w4-tabs" class="w4-tab w4-tab-lifted w4-tab-success"
+                                aria-label="Success" checked="checked" />
+                            <div class="w4-tab-content w4-panel w4-panel-success w4-tab-lifted-content">Tab content 8.
+                                This
+                                content merges visually with the active tab.</div>
+                            <input type="radio" name="w4-tabs" class="w4-tab w4-tab-lifted w4-tab-warning"
+                                aria-label="Warning" checked="checked" />
+                            <div class="w4-tab-content w4-panel w4-panel-warning w4-tab-lifted-content">Tab content 9.
+                                This
+                                content merges visually with the active tab.</div>
+                            <input type="radio" name="w4-tabs" class="w4-tab w4-tab-lifted w4-tab-error"
+                                aria-label="Error" checked="checked" />
+                            <div class="w4-tab-content w4-panel w4-panel-error w4-tab-lifted-content">Tab content 10.
+                                This
+                                content merges visually with the active tab.</div>
+
+                        </div>
+                    </div>
         </section>
 
         <section class="w4-section w4-section-xl">
@@ -229,7 +493,7 @@
             <hr class="w4-divider w4-divider-secondary">
             <div class="w4-stack w4-stack-lg w4-stack-center">
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h3 w4-heading-secondary">Lifted</h3>
+                    <h3 class="w4-heading w4-heading-h3 w4-heading-secondary">Folder</h3>
                     <div class="w4-tabs w4-tabs-folder" data-w4-component="tab">
                         <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active">Perfil</button>
                         <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary">Seguridad</button>
@@ -237,39 +501,15 @@
                     </div>
                 </div>
 
-                <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h3 w4-heading-secondary">Lifted</h3>
-                    <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
-                        <button type="button"
-                            class="w4-tab w4-tab-lifted w4-tab-lifted-primary w4-tab-active">Perfil</button>
-                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary">Seguridad</button>
-                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-accent">Notificaciones</button>
-                    </div>
-                </div>
+
 
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h3 w4-heading-secondary">Boxed</h3>
                     <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
-                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-active">Mensual</button>
-                        <button type="button" class="w4-tab w4-tab-boxed">Trimestral</button>
-                        <button type="button" class="w4-tab w4-tab-boxed">Anual</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active">Mensual</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary">Trimestral</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-accent">Anual</button>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary">Variantes</h2>
-            <hr class="w4-divider w4-divider-secondary">
-            <div class="w4-stack w4-stack-md">
-                <div class="w4-tabs" data-w4-component="tab">
-                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-primary w4-tab-active">Primary</button>
-                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-secondary">Secondary</button>
-                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-accent">Accent</button>
-                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-info">Info</button>
-                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-success">Success</button>
-                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-warning">Warning</button>
-                    <button type="button" class="w4-tab w4-tab-bordered w4-tab-error">Error</button>
                 </div>
             </div>
         </section>
