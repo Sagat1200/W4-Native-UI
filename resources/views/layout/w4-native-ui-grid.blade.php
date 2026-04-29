@@ -100,7 +100,7 @@
         <section class="w4-section w4-section-xl">
             <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Ejemplos Básicos y Columnas</h2>
             <hr class="w4-divider w4-divider-primary">
-            <p class="w4-text w4-text-md w4-text-neutral w4-mb-6">
+            <p class="w4-text w4-text-md w4-text-neutral mb-6">
                 El grid permite distribuir el contenido en columnas iguales. Usa las clases <code>.w4-grid-1</code>
                 hasta <code>.w4-grid-6</code> y <code>.w4-grid-12</code> para definir el número de columnas.
             </p>
@@ -109,10 +109,10 @@
 
                 <!-- 2 Columnas -->
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-4">2 Columnas (.w4-grid-2)</h3>
+                    <h3 class="w4-heading w4-heading-h4 w4-text-muted mb-4">2 Columnas (.w4-grid-2)</h3>
                     <div class="w4-grid w4-grid-2">
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">Columna 1</div>
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">Columna 2</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">Columna 1</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">Columna 2</div>
                     </div>
                 </div>
 
@@ -120,12 +120,12 @@
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-4">3 Columnas (.w4-grid-3)</h3>
                     <div class="w4-grid w4-grid-3">
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">Col 1</div>
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">Col 2</div>
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">Col 3</div>
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">Col 4 (Pasa a la siguiente fila)
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">Col 1</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">Col 2</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">Col 3</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">Col 4 (Pasa a la siguiente fila)
                         </div>
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">Col 5</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">Col 5</div>
                     </div>
                 </div>
 
@@ -133,10 +133,10 @@
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-4">4 Columnas (.w4-grid-4)</h3>
                     <div class="w4-grid w4-grid-4">
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">Col 1</div>
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">Col 2</div>
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">Col 3</div>
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">Col 4</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">Col 1</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">Col 2</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">Col 3</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">Col 4</div>
                     </div>
                 </div>
 
@@ -144,12 +144,12 @@
                 <div class="w4-panel w4-panel-base-200 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-4">6 Columnas (.w4-grid-6)</h3>
                     <div class="w4-grid w4-grid-6">
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">1</div>
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">2</div>
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">3</div>
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">4</div>
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">5</div>
-                        <div class="w4-panel w4-panel-base-100 w4-p-4 w4-text-center">6</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">1</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">2</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">3</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">4</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">5</div>
+                        <div class="w4-panel w4-panel-base-100 p-4 w4-text-center">6</div>
                     </div>
                 </div>
 
@@ -173,10 +173,10 @@
                     <div>
                         <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-2">.w4-grid-bordered-primary</h3>
                         <div class="w4-grid w4-grid-2 w4-grid-bordered-primary">
-                            <div class="w4-p-4 w4-text-center">Item A</div>
-                            <div class="w4-p-4 w4-text-center">Item B</div>
-                            <div class="w4-p-4 w4-text-center">Item C</div>
-                            <div class="w4-p-4 w4-text-center">Item D</div>
+                            <div class="p-4 w4-text-center">Item A</div>
+                            <div class="p-4 w4-text-center">Item B</div>
+                            <div class="p-4 w4-text-center">Item C</div>
+                            <div class="p-4 w4-text-center">Item D</div>
                         </div>
                     </div>
 
@@ -184,10 +184,10 @@
                     <div>
                         <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-2">.w4-grid-bordered-secondary</h3>
                         <div class="w4-grid w4-grid-2 w4-grid-bordered-secondary">
-                            <div class="w4-p-4 w4-text-center">Item A</div>
-                            <div class="w4-p-4 w4-text-center">Item B</div>
-                            <div class="w4-p-4 w4-text-center">Item C</div>
-                            <div class="w4-p-4 w4-text-center">Item D</div>
+                            <div class="p-4 w4-text-center">Item A</div>
+                            <div class="p-4 w4-text-center">Item B</div>
+                            <div class="p-4 w4-text-center">Item C</div>
+                            <div class="p-4 w4-text-center">Item D</div>
                         </div>
                     </div>
 
@@ -195,10 +195,10 @@
                     <div>
                         <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-2">.w4-grid-bordered-accent</h3>
                         <div class="w4-grid w4-grid-2 w4-grid-bordered-accent">
-                            <div class="w4-p-4 w4-text-center">Item A</div>
-                            <div class="w4-p-4 w4-text-center">Item B</div>
-                            <div class="w4-p-4 w4-text-center">Item C</div>
-                            <div class="w4-p-4 w4-text-center">Item D</div>
+                            <div class="p-4 w4-text-center">Item A</div>
+                            <div class="p-4 w4-text-center">Item B</div>
+                            <div class="p-4 w4-text-center">Item C</div>
+                            <div class="p-4 w4-text-center">Item D</div>
                         </div>
                     </div>
 
@@ -221,9 +221,9 @@
                     <div>
                         <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-2">.w4-grid-xs</h3>
                         <div class="w4-grid w4-grid-3 w4-grid-xs w4-grid-bordered-neutral">
-                            <div class="w4-p-4 w4-text-center">Caja</div>
-                            <div class="w4-p-4 w4-text-center">Caja</div>
-                            <div class="w4-p-4 w4-text-center">Caja</div>
+                            <div class="p-4 w4-text-center">Caja</div>
+                            <div class="p-4 w4-text-center">Caja</div>
+                            <div class="p-4 w4-text-center">Caja</div>
                         </div>
                     </div>
 
@@ -231,9 +231,9 @@
                     <div>
                         <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-2">.w4-grid-md (Por defecto)</h3>
                         <div class="w4-grid w4-grid-3 w4-grid-md w4-grid-bordered-neutral">
-                            <div class="w4-p-4 w4-text-center">Caja</div>
-                            <div class="w4-p-4 w4-text-center">Caja</div>
-                            <div class="w4-p-4 w4-text-center">Caja</div>
+                            <div class="p-4 w4-text-center">Caja</div>
+                            <div class="p-4 w4-text-center">Caja</div>
+                            <div class="p-4 w4-text-center">Caja</div>
                         </div>
                     </div>
 
@@ -241,9 +241,9 @@
                     <div>
                         <h3 class="w4-heading w4-heading-h4 w4-text-muted w4-mb-2">.w4-grid-xl</h3>
                         <div class="w4-grid w4-grid-3 w4-grid-xl w4-grid-bordered-neutral">
-                            <div class="w4-p-4 w4-text-center">Caja</div>
-                            <div class="w4-p-4 w4-text-center">Caja</div>
-                            <div class="w4-p-4 w4-text-center">Caja</div>
+                            <div class="p-4 w4-text-center">Caja</div>
+                            <div class="p-4 w4-text-center">Caja</div>
+                            <div class="p-4 w4-text-center">Caja</div>
                         </div>
                     </div>
 
@@ -263,14 +263,14 @@
                     <div class="w4-stack w4-stack-vertical w4-stack-md">
                         <h3 class="w4-heading w4-heading-h4 w4-text-muted">Estados CSS</h3>
 
-                        <div class="w4-grid w4-grid-2 w4-grid-active w4-p-2">
-                            <div class="w4-panel w4-panel-base-100 w4-p-2 w4-text-center">.w4-grid-active</div>
-                            <div class="w4-panel w4-panel-base-100 w4-p-2 w4-text-center">Resalta borde</div>
+                        <div class="w4-grid w4-grid-2 w4-grid-active p-2">
+                            <div class="w4-panel w4-panel-base-100 p-2 w4-text-center">.w4-grid-active</div>
+                            <div class="w4-panel w4-panel-base-100 p-2 w4-text-center">Resalta borde</div>
                         </div>
 
-                        <div class="w4-grid w4-grid-2 w4-grid-disabled w4-p-2">
-                            <div class="w4-panel w4-panel-base-100 w4-p-2 w4-text-center">.w4-grid-disabled</div>
-                            <div class="w4-panel w4-panel-base-100 w4-p-2 w4-text-center">Opacidad y Grises</div>
+                        <div class="w4-grid w4-grid-2 w4-grid-disabled p-2">
+                            <div class="w4-panel w4-panel-base-100 p-2 w4-text-center">.w4-grid-disabled</div>
+                            <div class="w4-panel w4-panel-base-100 p-2 w4-text-center">Opacidad y Grises</div>
                         </div>
                     </div>
 
