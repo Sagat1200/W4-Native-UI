@@ -14,6 +14,9 @@
   --w4-accent: 175 70% 41%;          /* Default Teal */
   --w4-accent-content: 210 40% 98%;
 
+  --w4-neutral: 215 28% 17%;         /* Default Neutral Surface */
+  --w4-neutral-content: 210 40% 98%; /* Default Neutral Text */
+
   /* Semantic State Colors */
   --w4-success: 142 71% 45%;
   --w4-success-content: 210 40% 98%;

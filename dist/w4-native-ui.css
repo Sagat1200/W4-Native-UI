@@ -84,6 +84,9 @@ html[data-theme] body {
   --w4-accent: 175 70% 41%;          /* Default Teal */
   --w4-accent-content: 210 40% 98%;
 
+  --w4-neutral: 215 28% 17%;         /* Default Neutral Surface */
+  --w4-neutral-content: 210 40% 98%; /* Default Neutral Text */
+
   /* Semantic State Colors */
   --w4-success: 142 71% 45%;
   --w4-success-content: 210 40% 98%;
@@ -1417,6 +1420,14 @@ html[data-theme] body {
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
 ---------------------------------- */
+
+.w4-button-neutral {
+  --w4-btn-bg: hsl(var(--w4-neutral));
+  --w4-btn-fg: hsl(var(--w4-neutral-content));
+  --w4-btn-border: hsl(var(--w4-neutral));
+  --w4-focus-ring-color: var(--w4-neutral);
+}
+
 .w4-button-primary {
   
   --w4-btn-bg: hsl(var(--w4-primary));
@@ -1501,6 +1512,25 @@ html[data-theme] body {
   --w4-btn-bg: transparent;
   --w4-btn-border: transparent;
   filter: brightness(0.8);
+}
+
+.w4-button-soft {
+  --w4-btn-bg: color-mix(in srgb, var(--w4-btn-border, hsl(var(--w4-base-300))) 18%, transparent);
+  --w4-btn-fg: var(--w4-btn-border, hsl(var(--w4-base-content)));
+  --w4-btn-shadow: none;
+}
+.w4-button-soft:hover {
+  --w4-btn-bg: color-mix(in srgb, var(--w4-btn-border, hsl(var(--w4-base-300))) 26%, transparent);
+}
+
+.w4-button-dash {
+  --w4-btn-bg: transparent;
+  --w4-btn-fg: var(--w4-btn-border, hsl(var(--w4-base-content)));
+  --w4-btn-shadow: none;
+  border-style: dashed;
+}
+.w4-button-dash:hover {
+  --w4-btn-bg: hsl(var(--w4-base-200));
 }
 
 /* ----------------------------------
