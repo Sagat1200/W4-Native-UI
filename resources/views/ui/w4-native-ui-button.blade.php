@@ -106,16 +106,16 @@
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-100 w4-panel-md">
                 <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
-                    <button class="w4-button w4-button-neutral">Neutral</button>
-                    <button class="w4-button w4-button-primary">Primary</button>
-                    <button class="w4-button w4-button-secondary">Secondary</button>
-                    <button class="w4-button w4-button-accent">Accent</button>
-                    <button class="w4-button w4-button-info">Info</button>
-                    <button class="w4-button w4-button-success">Success</button>
-                    <button class="w4-button w4-button-warning">Warning</button>
-                    <button class="w4-button w4-button-error">Error</button>
-                    <button class="w4-button w4-button-ghost">Ghost</button>
-                    <button class="w4-button w4-button-link">Link</button>
+                    <button class="w4-btn w4-btn-neutral">Neutral</button>
+                    <button class="w4-btn w4-btn-primary">Primary</button>
+                    <button class="w4-btn w4-btn-secondary">Secondary</button>
+                    <button class="w4-btn w4-btn-accent">Accent</button>
+                    <button class="w4-btn w4-btn-info">Info</button>
+                    <button class="w4-btn w4-btn-success">Success</button>
+                    <button class="w4-btn w4-btn-warning">Warning</button>
+                    <button class="w4-btn w4-btn-error">Error</button>
+                    <button class="w4-btn w4-btn-ghost">Ghost</button>
+                    <button class="w4-btn w4-btn-link">Link</button>
                 </div>
             </div>
         </section>
@@ -127,14 +127,14 @@
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
-                <button class="w4-button w4-button-outline w4-button-neutral">Neutral</button>
-                <button class="w4-button w4-button-outline w4-button-primary">Primary</button>
-                <button class="w4-button w4-button-outline w4-button-secondary">Secondary</button>
-                <button class="w4-button w4-button-outline w4-button-accent">Accent</button>
-                <button class="w4-button w4-button-outline w4-button-info">Info</button>
-                <button class="w4-button w4-button-outline w4-button-success">Success</button>
-                <button class="w4-button w4-button-outline w4-button-warning">Warning</button>
-                <button class="w4-button w4-button-outline w4-button-error">Error</button>
+                <button class="w4-btn w4-btn-outline">Neutral</button>
+                <button class="w4-btn w4-btn-outline w4-btn-primary">Primary</button>
+                <button class="w4-btn w4-btn-outline w4-btn-secondary">Secondary</button>
+                <button class="w4-btn w4-btn-outline w4-btn-accent">Accent</button>
+                <button class="w4-btn w4-btn-outline w4-btn-info">Info</button>
+                <button class="w4-btn w4-btn-outline w4-btn-success">Success</button>
+                <button class="w4-btn w4-btn-outline w4-btn-warning">Warning</button>
+                <button class="w4-btn w4-btn-outline w4-btn-error">Error</button>
             </div>
         </section>
 
@@ -145,14 +145,14 @@
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
-                <button class="w4-button w4-button-soft">Neutral</button>
-                <button class="w4-button w4-button-soft w4-button-primary">Primary</button>
-                <button class="w4-button w4-button-soft w4-button-secondary">Secondary</button>
-                <button class="w4-button w4-button-soft w4-button-accent">Accent</button>
-                <button class="w4-button w4-button-soft w4-button-info">Info</button>
-                <button class="w4-button w4-button-soft w4-button-success">Success</button>
-                <button class="w4-button w4-button-soft w4-button-warning">Warning</button>
-                <button class="w4-button w4-button-soft w4-button-error">Error</button>
+                <button class="w4-btn w4-btn-soft w4-btn-neutral">Neutral</button>
+                <button class="w4-btn w4-btn-soft w4-btn-primary">Primary</button>
+                <button class="w4-btn w4-btn-soft w4-btn-secondary">Secondary</button>
+                <button class="w4-btn w4-btn-soft w4-btn-accent">Accent</button>
+                <button class="w4-btn w4-btn-soft w4-btn-info">Info</button>
+                <button class="w4-btn w4-btn-soft w4-btn-success">Success</button>
+                <button class="w4-btn w4-btn-soft w4-btn-warning">Warning</button>
+                <button class="w4-btn w4-btn-soft w4-btn-error">Error</button>
             </div>
         </section>
 
@@ -163,14 +163,14 @@
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
-                <button class="w4-button w4-button-dash w4-button-neutral">Neutral</button>
-                <button class="w4-button w4-button-dash w4-button-primary">Primary</button>
-                <button class="w4-button w4-button-dash w4-button-secondary">Secondary</button>
-                <button class="w4-button w4-button-dash w4-button-accent">Accent</button>
-                <button class="w4-button w4-button-dash w4-button-info">Info</button>
-                <button class="w4-button w4-button-dash w4-button-success">Success</button>
-                <button class="w4-button w4-button-dash w4-button-warning">Warning</button>
-                <button class="w4-button w4-button-dash w4-button-error">Error</button>
+                <button class="w4-btn w4-btn-dash w4-btn-neutral">Neutral</button>
+                <button class="w4-btn w4-btn-dash w4-btn-primary">Primary</button>
+                <button class="w4-btn w4-btn-dash w4-btn-secondary">Secondary</button>
+                <button class="w4-btn w4-btn-dash w4-btn-accent">Accent</button>
+                <button class="w4-btn w4-btn-dash w4-btn-info">Info</button>
+                <button class="w4-btn w4-btn-dash w4-btn-success">Success</button>
+                <button class="w4-btn w4-btn-dash w4-btn-warning">Warning</button>
+                <button class="w4-btn w4-btn-dash w4-btn-error">Error</button>
             </div>
         </section>
 
@@ -181,12 +181,12 @@
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                    <button class="w4-button w4-button-primary w4-button-xs">XSmall</button>
-                    <button class="w4-button w4-button-primary w4-button-sm">Small</button>
-                    <button class="w4-button w4-button-primary w4-button-md">Medium</button>
-                    <button class="w4-button w4-button-primary w4-button-lg">Large</button>
-                    <button class="w4-button w4-button-primary w4-button-xl">XLarge</button>
+                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-stack-center">
+                    <button class="w4-btn w4-btn-primary w4-btn-xs">XSmall</button>
+                    <button class="w4-btn w4-btn-primary w4-btn-sm">Small</button>
+                    <button class="w4-btn w4-btn-primary w4-btn-md">Medium</button>
+                    <button class="w4-btn w4-btn-primary w4-btn-lg">Large</button>
+                    <button class="w4-btn w4-btn-primary w4-btn-xl">XLarge</button>
                 </div>
             </div>
         </section>
@@ -216,10 +216,16 @@
                             </svg>
                         </button>
                     </div>
+                    <hr class="w4-divider w4-divider-primary">
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-secondary">Botones Anchos</h3>
+                    <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-horizontal w4-stack-around">
+                        <button class="w4-button w4-button-accent w4-btn-wide">Open</button>
+                        <button class="w4-button w4-button-accent w4-btn-wide">Close</button>
+                    </div>
                 </div>
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h4 w4-heading-secondary">Block</h3>
-                    <div class="w4-stack w4-stack-sm">
+                    <div class="w4-stack w4-stack-sm w4-stack-vertical">
                         <button class="w4-button w4-button-primary w4-button-block">Acción Principal</button>
                         <button class="w4-button w4-button-outline w4-button-secondary w4-button-block">Acción
                             Secundaria</button>
@@ -272,15 +278,15 @@
                     </div>
                     <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
                         <button class="w4-button w4-button-sm w4-button-neutral"
-                            onclick="setButtonState('enabled')">Enabled</button>
+                            onclick="document.getElementById('labButtonTarget').removeAttribute('data-w4-state')">Enabled</button>
                         <button class="w4-button w4-button-sm w4-button-secondary"
-                            onclick="setButtonState('active')">Active</button>
+                            onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'active')">Active</button>
                         <button class="w4-button w4-button-sm w4-button-info"
-                            onclick="setButtonState('loading')">Loading</button>
+                            onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'loading')">Loading</button>
                         <button class="w4-button w4-button-sm w4-button-warning"
-                            onclick="setButtonState('readonly')">Readonly</button>
+                            onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'readonly')">Readonly</button>
                         <button class="w4-button w4-button-sm w4-button-error"
-                            onclick="setButtonState('disabled')">Disabled</button>
+                            onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'disabled')">Disabled</button>
                     </div>
                     <p class="w4-text w4-text-sm w4-text-neutral-content">
                         El estado se aplica al botón de prueba y refleja los hooks visuales del componente.
@@ -316,50 +322,6 @@
             }
         });
 
-        function setButtonState(state) {
-            var target = document.getElementById("labButtonTarget");
-            if (!target) return;
-
-            target.classList.remove("w4-button-active", "w4-button-loading", "w4-button-disabled", "w4-button-readonly");
-            target.removeAttribute("disabled");
-            target.removeAttribute("readonly");
-            target.removeAttribute("aria-disabled");
-            target.removeAttribute("aria-busy");
-            target.removeAttribute("aria-pressed");
-            target.removeAttribute("data-w4-state");
-
-            if (state === "enabled") return;
-
-            if (state === "active") {
-                target.classList.add("w4-button-active");
-                target.setAttribute("aria-pressed", "true");
-                target.setAttribute("data-w4-state", "active");
-                return;
-            }
-
-            if (state === "loading") {
-                target.classList.add("w4-button-loading");
-                target.setAttribute("aria-busy", "true");
-                target.setAttribute("disabled", "true");
-                target.setAttribute("data-w4-state", "loading");
-                return;
-            }
-
-            if (state === "readonly") {
-                target.classList.add("w4-button-readonly");
-                target.setAttribute("readonly", "true");
-                target.setAttribute("disabled", "true");
-                target.setAttribute("data-w4-state", "readonly");
-                return;
-            }
-
-            if (state === "disabled") {
-                target.classList.add("w4-button-disabled");
-                target.setAttribute("disabled", "true");
-                target.setAttribute("aria-disabled", "true");
-                target.setAttribute("data-w4-state", "disabled");
-            }
-        }
     </script>
 </body>
 

@@ -4,6 +4,7 @@
    ========================================= */
 
 @layer components {
+  .w4-btn,
   .w4-button {
     display: inline-flex;
   flex-shrink: 0;
@@ -39,16 +40,21 @@
 /* ----------------------------------
    INTERACTION STATES & Modifiers (ButtonComponentState Enum)
    ---------------------------------- */
+
+.w4-btn:hover,
 .w4-button:hover {
   filter: brightness(var(--w4-hover-brightness));
   transform: translateY(var(--w4-hover-translate-y));
 }
 
+.w4-btn:focus-visible,
 .w4-button:focus-visible {
   outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color) / var(--w4-focus-ring-opacity));
 }
 
 /* Active State */
+.w4-btn:active,
+.w4-btn-active,
 .w4-button:active,
 .w4-button-active,
 .w4-button[data-w4-state~="active"] {
@@ -56,6 +62,8 @@
 }
 
 /* Disabled State */
+.w4-btn-disabled,
+.w4-btn:disabled,
 .w4-button-disabled,
 .w4-button[data-w4-state~="disabled"],
 .w4-button[disabled] {
@@ -65,6 +73,7 @@
 }
 
 /* Loading State */
+.w4-btn-loading,
 .w4-button-loading,
 .w4-button[data-w4-state~="loading"] {
   pointer-events: none !important;
@@ -72,6 +81,7 @@
 }
 
 /* Readonly State */
+.w4-btn-readonly,
 .w4-button-readonly,
 .w4-button[data-w4-state~="readonly"],
 .w4-button[readonly] {
@@ -82,6 +92,7 @@
    SEMANTIC VARIANTS (Color System)
 ---------------------------------- */
 
+.w4-btn-neutral,
 .w4-button-neutral {
   --w4-btn-bg: hsl(var(--w4-neutral));
   --w4-btn-fg: hsl(var(--w4-neutral-content));
@@ -89,14 +100,14 @@
   --w4-focus-ring-color: var(--w4-neutral);
 }
 
+.w4-btn-primary,
 .w4-button-primary {
-  
   --w4-btn-bg: hsl(var(--w4-primary));
   --w4-btn-fg: hsl(var(--w4-primary-content));
   --w4-btn-border: hsl(var(--w4-primary));
   --w4-focus-ring-color: var(--w4-primary);
 }
-
+.w4-btn-secondary,
 .w4-button-secondary {
   --w4-btn-bg: hsl(var(--w4-secondary));
   --w4-btn-fg: hsl(var(--w4-secondary-content));
@@ -104,6 +115,7 @@
   --w4-focus-ring-color: var(--w4-secondary);
 }
 
+.w4-btn-accent,
 .w4-button-accent {
   --w4-btn-bg: hsl(var(--w4-accent));
   --w4-btn-fg: hsl(var(--w4-accent-content));
@@ -111,6 +123,7 @@
   --w4-focus-ring-color: var(--w4-accent);
 }
 
+.w4-btn-info,
 .w4-button-info {
   --w4-btn-bg: hsl(var(--w4-info));
   --w4-btn-fg: hsl(var(--w4-info-content));
@@ -118,6 +131,7 @@
   --w4-focus-ring-color: var(--w4-info);
 }
 
+.w4-btn-success,
 .w4-button-success {
   --w4-btn-bg: hsl(var(--w4-success));
   --w4-btn-fg: hsl(var(--w4-success-content));
@@ -125,6 +139,7 @@
   --w4-focus-ring-color: var(--w4-success);
 }
 
+.w4-btn-warning,
 .w4-button-warning {
   --w4-btn-bg: hsl(var(--w4-warning));
   --w4-btn-fg: hsl(var(--w4-warning-content));
@@ -132,6 +147,7 @@
   --w4-focus-ring-color: var(--w4-warning);
 }
 
+.w4-btn-error,
 .w4-button-error {
   --w4-btn-bg: hsl(var(--w4-error));
   --w4-btn-fg: hsl(var(--w4-error-content));
@@ -142,26 +158,31 @@
 /* ----------------------------------
    STYLISTIC VARIANTS (Surface System)
    ---------------------------------- */
+.w4-btn-outline,
 .w4-button-outline {
   --w4-btn-bg: transparent;
   --w4-btn-fg: var(--w4-btn-border, hsl(var(--w4-base-content)));
   --w4-btn-shadow: none;
 }
+.w4-btn-outline:hover,
 .w4-button-outline:hover {
   --w4-btn-bg: var(--w4-btn-border, hsl(var(--w4-base-content)));
   --w4-btn-fg: hsl(var(--w4-base-100));
 }
 
+.w4-btn-ghost,
 .w4-button-ghost {
   --w4-btn-bg: transparent;
   --w4-btn-border: transparent;
   --w4-btn-fg: currentColor;
   --w4-btn-shadow: none;
 }
+.w4-btn-ghost:hover,
 .w4-button-ghost:hover {
   --w4-btn-bg: hsl(var(--w4-base-content) / 0.1);
 }
 
+.w4-btn-link,
 .w4-button-link {
   --w4-btn-bg: transparent;
   --w4-btn-border: transparent;
@@ -169,27 +190,35 @@
   --w4-btn-shadow: none;
   text-decoration: underline;
 }
+
+.w4-btn-link:hover,
 .w4-button-link:hover {
   --w4-btn-bg: transparent;
   --w4-btn-border: transparent;
   filter: brightness(0.8);
 }
 
+.w4-btn-soft,
 .w4-button-soft {
   --w4-btn-bg: color-mix(in srgb, var(--w4-btn-border, hsl(var(--w4-base-300))) 18%, transparent);
   --w4-btn-fg: var(--w4-btn-border, hsl(var(--w4-base-content)));
   --w4-btn-shadow: none;
 }
+
+.w4-btn-soft:hover,
 .w4-button-soft:hover {
   --w4-btn-bg: color-mix(in srgb, var(--w4-btn-border, hsl(var(--w4-base-300))) 26%, transparent);
 }
 
+.w4-btn-dash,
 .w4-button-dash {
   --w4-btn-bg: transparent;
   --w4-btn-fg: var(--w4-btn-border, hsl(var(--w4-base-content)));
   --w4-btn-shadow: none;
   border-style: dashed;
 }
+
+.w4-btn-dash:hover,
 .w4-button-dash:hover {
   --w4-btn-bg: hsl(var(--w4-base-200));
 }
@@ -197,30 +226,36 @@
 /* ----------------------------------
    SIZE SCALES (Morphology System)
    ---------------------------------- */
+
+.w4-btn-xs,
 .w4-button-xs {
   --w4-btn-height: var(--w4-control-height-xs);
   --w4-btn-padding-x: var(--w4-control-padding-x-xs);
   --w4-btn-font-size: 0.75rem;
 }
 
+.w4-btn-sm,
 .w4-button-sm {
   --w4-btn-height: var(--w4-control-height-sm);
   --w4-btn-padding-x: var(--w4-control-padding-x-sm);
   --w4-btn-font-size: 0.875rem;
 }
 
+.w4-btn-md,
 .w4-button-md {
   --w4-btn-height: var(--w4-control-height-md);
   --w4-btn-padding-x: var(--w4-control-padding-x-md);
   --w4-btn-font-size: 0.875rem;
 }
 
+.w4-btn-lg,
 .w4-button-lg {
   --w4-btn-height: var(--w4-control-height-lg);
   --w4-btn-padding-x: var(--w4-control-padding-x-lg);
   --w4-btn-font-size: 1rem;
 }
 
+.w4-btn-xl,
 .w4-button-xl {
   --w4-btn-height: var(--w4-control-height-xl);
   --w4-btn-padding-x: var(--w4-control-padding-x-xl);
@@ -230,18 +265,29 @@
 /* ----------------------------------
    SHAPE MODIFIERS
    ---------------------------------- */
+
+.w4-btn-square,
 .w4-button-square {
   padding-inline: 0;
   inline-size: var(--w4-btn-height, var(--w4-control-height-md));
 }
 
+.w4-btn-circle,
 .w4-button-circle {
   padding-inline: 0;
   inline-size: var(--w4-btn-height, var(--w4-control-height-md));
   border-radius: var(--w4-radius-pill);
 }
 
+.w4-btn-block,
 .w4-button-block {
   inline-size: 100%;
 }
+
+.w4-btn-wide,
+.w4-button-wide {
+  inline-size: w-full;
+  max-inline-size: 64rem;
+}
+
 }
