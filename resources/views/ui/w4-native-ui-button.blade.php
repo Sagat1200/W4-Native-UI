@@ -105,17 +105,44 @@
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
-                    <button class="w4-btn w4-btn-neutral">Neutral</button>
-                    <button class="w4-btn w4-btn-primary">Primary</button>
-                    <button class="w4-btn w4-btn-secondary">Secondary</button>
-                    <button class="w4-btn w4-btn-accent">Accent</button>
-                    <button class="w4-btn w4-btn-info">Info</button>
-                    <button class="w4-btn w4-btn-success">Success</button>
-                    <button class="w4-btn w4-btn-warning">Warning</button>
-                    <button class="w4-btn w4-btn-error">Error</button>
-                    <button class="w4-btn w4-btn-ghost">Ghost</button>
-                    <button class="w4-btn w4-btn-link">Link</button>
+                <div class="w4-stack w4-stack-sm w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="buttonSemanticPreview">Vista previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="buttonSemanticCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="buttonSemanticPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
+                                <button class="w4-btn w4-btn-neutral">Neutral</button>
+                                <button class="w4-btn w4-btn-primary">Primary</button>
+                                <button class="w4-btn w4-btn-secondary">Secondary</button>
+                                <button class="w4-btn w4-btn-accent">Accent</button>
+                                <button class="w4-btn w4-btn-info">Info</button>
+                                <button class="w4-btn w4-btn-success">Success</button>
+                                <button class="w4-btn w4-btn-warning">Warning</button>
+                                <button class="w4-btn w4-btn-error">Error</button>
+                                <button class="w4-btn w4-btn-ghost">Ghost</button>
+                                <button class="w4-btn w4-btn-link">Link</button>
+                            </div>
+                        </div>
+                        <div id="buttonSemanticCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code >
+&lt;button class="w4-btn w4-btn-neutral"&gt;Neutral&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-accent"&gt;Accent&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-info"&gt;Info&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-error"&gt;Error&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-ghost"&gt;Ghost&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-link"&gt;Link&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -126,15 +153,42 @@
                 Estilos visuales alternativos para priorizar o suavizar acciones.
             </p>
             <hr class="w4-divider w4-divider-primary">
-            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
-                <button class="w4-btn w4-btn-outline">Neutral</button>
-                <button class="w4-btn w4-btn-outline w4-btn-primary">Primary</button>
-                <button class="w4-btn w4-btn-outline w4-btn-secondary">Secondary</button>
-                <button class="w4-btn w4-btn-outline w4-btn-accent">Accent</button>
-                <button class="w4-btn w4-btn-outline w4-btn-info">Info</button>
-                <button class="w4-btn w4-btn-outline w4-btn-success">Success</button>
-                <button class="w4-btn w4-btn-outline w4-btn-warning">Warning</button>
-                <button class="w4-btn w4-btn-outline w4-btn-error">Error</button>
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="buttonOutlinePreview">Vista previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="buttonOutlineCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="buttonOutlinePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
+                                <button class="w4-btn w4-btn-outline">Neutral</button>
+                                <button class="w4-btn w4-btn-outline w4-btn-primary">Primary</button>
+                                <button class="w4-btn w4-btn-outline w4-btn-secondary">Secondary</button>
+                                <button class="w4-btn w4-btn-outline w4-btn-accent">Accent</button>
+                                <button class="w4-btn w4-btn-outline w4-btn-info">Info</button>
+                                <button class="w4-btn w4-btn-outline w4-btn-success">Success</button>
+                                <button class="w4-btn w4-btn-outline w4-btn-warning">Warning</button>
+                                <button class="w4-btn w4-btn-outline w4-btn-error">Error</button>
+                            </div>
+                        </div>
+                        <div id="buttonOutlineCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code>
+&lt;button class="w4-btn w4-btn-outline"&gt;Neutral&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-outline w4-btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-outline w4-btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-outline w4-btn-accent"&gt;Accent&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-outline w4-btn-info"&gt;Info&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-outline w4-btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-outline w4-btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-outline w4-btn-error"&gt;Error&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -144,15 +198,42 @@
                 Estilos visuales alternativos para mostrar acciones con fondo suave.
             </p>
             <hr class="w4-divider w4-divider-primary">
-            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
-                <button class="w4-btn w4-btn-soft w4-btn-neutral">Neutral</button>
-                <button class="w4-btn w4-btn-soft w4-btn-primary">Primary</button>
-                <button class="w4-btn w4-btn-soft w4-btn-secondary">Secondary</button>
-                <button class="w4-btn w4-btn-soft w4-btn-accent">Accent</button>
-                <button class="w4-btn w4-btn-soft w4-btn-info">Info</button>
-                <button class="w4-btn w4-btn-soft w4-btn-success">Success</button>
-                <button class="w4-btn w4-btn-soft w4-btn-warning">Warning</button>
-                <button class="w4-btn w4-btn-soft w4-btn-error">Error</button>
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="buttonSoftPreview">Vista previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="buttonSoftCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="buttonSoftPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
+                                <button class="w4-btn w4-btn-soft w4-btn-neutral">Neutral</button>
+                                <button class="w4-btn w4-btn-soft w4-btn-primary">Primary</button>
+                                <button class="w4-btn w4-btn-soft w4-btn-secondary">Secondary</button>
+                                <button class="w4-btn w4-btn-soft w4-btn-accent">Accent</button>
+                                <button class="w4-btn w4-btn-soft w4-btn-info">Info</button>
+                                <button class="w4-btn w4-btn-soft w4-btn-success">Success</button>
+                                <button class="w4-btn w4-btn-soft w4-btn-warning">Warning</button>
+                                <button class="w4-btn w4-btn-soft w4-btn-error">Error</button>
+                            </div>
+                        </div>
+                        <div id="buttonSoftCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code>
+&lt;button class="w4-btn w4-btn-soft w4-btn-neutral"&gt;Neutral&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-soft w4-btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-soft w4-btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-soft w4-btn-accent"&gt;Accent&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-soft w4-btn-info"&gt;Info&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-soft w4-btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-soft w4-btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-soft w4-btn-error"&gt;Error&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -162,15 +243,42 @@
                 Estilos visuales alternativos para mostrar acciones con contorno discontinuo.
             </p>
             <hr class="w4-divider w4-divider-primary">
-            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
-                <button class="w4-btn w4-btn-dash w4-btn-neutral">Neutral</button>
-                <button class="w4-btn w4-btn-dash w4-btn-primary">Primary</button>
-                <button class="w4-btn w4-btn-dash w4-btn-secondary">Secondary</button>
-                <button class="w4-btn w4-btn-dash w4-btn-accent">Accent</button>
-                <button class="w4-btn w4-btn-dash w4-btn-info">Info</button>
-                <button class="w4-btn w4-btn-dash w4-btn-success">Success</button>
-                <button class="w4-btn w4-btn-dash w4-btn-warning">Warning</button>
-                <button class="w4-btn w4-btn-dash w4-btn-error">Error</button>
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="buttonDashPreview">Vista previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="buttonDashCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="buttonDashPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
+                                <button class="w4-btn w4-btn-dash w4-btn-neutral">Neutral</button>
+                                <button class="w4-btn w4-btn-dash w4-btn-primary">Primary</button>
+                                <button class="w4-btn w4-btn-dash w4-btn-secondary">Secondary</button>
+                                <button class="w4-btn w4-btn-dash w4-btn-accent">Accent</button>
+                                <button class="w4-btn w4-btn-dash w4-btn-info">Info</button>
+                                <button class="w4-btn w4-btn-dash w4-btn-success">Success</button>
+                                <button class="w4-btn w4-btn-dash w4-btn-warning">Warning</button>
+                                <button class="w4-btn w4-btn-dash w4-btn-error">Error</button>
+                            </div>
+                        </div>
+                        <div id="buttonDashCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code>
+&lt;button class="w4-btn w4-btn-dash w4-btn-neutral"&gt;Neutral&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-dash w4-btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-dash w4-btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-dash w4-btn-accent"&gt;Accent&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-dash w4-btn-info"&gt;Info&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-dash w4-btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-dash w4-btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-dash w4-btn-error"&gt;Error&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -181,12 +289,34 @@
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-stack-center">
-                    <button class="w4-btn w4-btn-primary w4-btn-xs">XSmall</button>
-                    <button class="w4-btn w4-btn-primary w4-btn-sm">Small</button>
-                    <button class="w4-btn w4-btn-primary w4-btn-md">Medium</button>
-                    <button class="w4-btn w4-btn-primary w4-btn-lg">Large</button>
-                    <button class="w4-btn w4-btn-primary w4-btn-xl">XLarge</button>
+                <div class="w4-stack w4-stack-sm w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="buttonSizePreview">Vista previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="buttonSizeCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="buttonSizePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-stack-center">
+                                <button class="w4-btn w4-btn-primary w4-btn-xs">XSmall</button>
+                                <button class="w4-btn w4-btn-primary w4-btn-sm">Small</button>
+                                <button class="w4-btn w4-btn-primary w4-btn-md">Medium</button>
+                                <button class="w4-btn w4-btn-primary w4-btn-lg">Large</button>
+                                <button class="w4-btn w4-btn-primary w4-btn-xl">XLarge</button>
+                            </div>
+                        </div>
+                        <div id="buttonSizeCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="w4-m-0"><code>
+&lt;button class="w4-btn w4-btn-primary w4-btn-xs"&gt;XSmall&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-primary w4-btn-sm"&gt;Small&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-primary w4-btn-md"&gt;Medium&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-primary w4-btn-lg"&gt;Large&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-primary w4-btn-xl"&gt;XLarge&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -200,27 +330,65 @@
             <div class="w4-grid w4-grid-2 w4-gap-md">
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
                     <h3 class="w4-heading w4-heading-h4 w4-heading-secondary">Square / Circle</h3>
-                    <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                        <button class="w4-button w4-button-secondary w4-button-square" aria-label="Square">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                class="w4-icon w4-icon-md stroke-current">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 4v16m8-8H4"></path>
-                            </svg>
-                        </button>
-                        <button class="w4-button w4-button-accent w4-button-circle" aria-label="Circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                class="w4-icon w4-icon-md stroke-current">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 6v12m6-6H6"></path>
-                            </svg>
-                        </button>
+                    <div class="w4-stack w4-stack-sm">
+                        <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                                data-w4-target="buttonShapePreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                                data-w4-target="buttonShapeCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="buttonShapePreview" data-w4-tab-panel
+                                class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                    <button class="w4-btn w4-btn-secondary w4-btn-square" aria-label="Square">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            class="w4-icon w4-icon-md stroke-current">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 4v16m8-8H4"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="w4-btn w4-btn-accent w4-btn-circle" aria-label="Circle">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            class="w4-icon w4-icon-md stroke-current">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 6v12m6-6H6"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="buttonShapeCode" data-w4-tab-panel
+                                class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                                <pre class="w4-m-0"><code class="w4-text w4-text-xs">
+&lt;button class="w4-btn w4-btn-secondary w4-btn-square"&gt;...&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-accent w4-btn-circle"&gt;...&lt;/button&gt;</code></pre>
+                            </div>
+                        </div>
                     </div>
                     <hr class="w4-divider w4-divider-primary">
                     <h3 class="w4-heading w4-heading-h4 w4-heading-secondary">Botones Anchos</h3>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-horizontal w4-stack-around">
-                        <button class="w4-button w4-button-accent w4-btn-wide">Open</button>
-                        <button class="w4-button w4-button-accent w4-btn-wide">Close</button>
+                    <div class="w4-stack w4-stack-sm">
+                        <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                                data-w4-target="buttonWidePreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                                data-w4-target="buttonWideCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="buttonWidePreview" data-w4-tab-panel
+                                class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-horizontal w4-stack-around">
+                                    <button class="w4-btn w4-btn-accent w4-btn-wide">Open</button>
+                                    <button class="w4-btn w4-btn-accent w4-btn-wide">Close</button>
+                                </div>
+                            </div>
+                            <div id="buttonWideCode" data-w4-tab-panel
+                                class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;button class="w4-button w4-button-accent w4-btn-wide"&gt;Open&lt;/button&gt;
+&lt;button class="w4-button w4-button-accent w4-btn-wide"&gt;Close&lt;/button&gt;</code></pre>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
