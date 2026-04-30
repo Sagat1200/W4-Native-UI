@@ -44,7 +44,7 @@
 </head>
 
 <body>
-    <div class="w4-navbar w4-navbar-neutral w4-navbar-fixed">
+    <div class="w4-navbar w4-navbar-neutral w4-navbar-fixed p-0">
         <div class="w4-navbar-start">
             <button class="w4-button w4-button-ghost w4-button-square w4-sidebar-expanend ml-2"
                 data-w4-target="appSidebar">
