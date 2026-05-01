@@ -6,120 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Icon Lab</title>
     @NativeUIStyles
-
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Carga de FontAwesome para el testeo visual de íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-container {
-            max-inline-size: 1200px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.5rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.7);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            font-size: 1rem;
-            min-inline-size: 200px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .preview-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding: 2rem;
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .preview-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-            background-color: hsl(var(--w4-base-100));
-            padding: 1.5rem;
-            border-radius: var(--w4-radius-card);
-            box-shadow: var(--w4-shadow-sm);
-            min-inline-size: 120px;
-            text-align: center;
-        }
-
-        .preview-label {
-            font-size: 0.75rem;
-            color: hsl(var(--w4-base-content) / 0.6);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 600;
-        }
-    </style>
 </head>
 
 <body>
 
-    <div class="lab-container">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: Icon Lab</h1>
-                <p class="lab-subtitle">Entorno de pruebas visuales para el componente w4-icon</p>
-            </div>
+    <div class="w4-navbar  w4-navbar-fixed">
+        <div class="w4-navbar-start">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="w4-icon w4-icon-md stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
+            </button>
 
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar Tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+        </div>
+        <div class="w4-navbar-center">
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral-content"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Soporte</a></li>
+            </ul>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs mx-2">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral-content">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -154,168 +79,339 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section style="margin-block-end: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Icon</h1>
-            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
-                El componente Icon proporciona una capa de abstracción visual unificada para renderizar iconografía en
-                tu aplicación. Funciona con cualquier librería de fuentes de íconos (como FontAwesome, Heroicons o SVG
-                directos) mientras respeta el sistema de tokens de color, tamaño y animaciones de W4.
+    <main class="w4-container w4-container-xl">
+        <section class="w4-section w4-section-xl">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center mt-12">Native UI Icon</h1>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Icon:</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                El componente <strong>Icon</strong> permite renderizar iconografía con colores, tamaños y estados
+                consistentes usando tokens de W4 Native UI.
             </p>
-
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
-                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral"
-                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                <li><strong class="w4-text-active">Soporte visual:</strong> Acompañar texto en botones (ej. ícono de
-                    "Guardar" junto a la palabra).</li>
-                <li><strong class="w4-text-active">Feedback de estado:</strong> Mostrar íconos de éxito, error o
-                    advertencia coloreados semánticamente.</li>
-                <li><strong class="w4-text-active">Procesamiento en curso:</strong> Reemplazar temporalmente un ícono
-                    con una animación de carga usando <code>data-w4-state="loading"</code> o <code>w4-icon-spin</code>.
+            <h2 class="w4-heading w4-heading-h3 w4-heading-primary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start">
+                <li><strong class="w4-text-active">Soporte visual:</strong> Acompañar acciones en botones y enlaces.
                 </li>
-                <li><strong class="w4-text-active">Navegación:</strong> Íconos decorativos en Sidebars, Dropdowns o
-                    Menús de usuario.</li>
+                <li><strong class="w4-text-active">Feedback:</strong> Comunicar estados como éxito, advertencia o error.
+                </li>
+                <li><strong class="w4-text-active">Carga:</strong> Mostrar actividad con <code>w4-icon-spin</code>.</li>
+                <li><strong class="w4-text-active">Navegación:</strong> Dar contexto visual en menús y barras.</li>
             </ul>
         </section>
 
-        <section>
-            <h2 class="section-title">Variantes de Color</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-heart w4-icon-xl"></i>
-                    <span class="preview-label">Default (Inherit)</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-star w4-icon-primary w4-icon-xl"></i>
-                    <span class="preview-label">Primary</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-bolt w4-icon-secondary w4-icon-xl"></i>
-                    <span class="preview-label">Secondary</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-droplet w4-icon-accent w4-icon-xl"></i>
-                    <span class="preview-label">Accent</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-circle-info w4-icon-info w4-icon-xl"></i>
-                    <span class="preview-label">Info</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-circle-check w4-icon-success w4-icon-xl"></i>
-                    <span class="preview-label">Success</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-triangle-exclamation w4-icon-warning w4-icon-xl"></i>
-                    <span class="preview-label">Warning</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-circle-xmark w4-icon-error w4-icon-xl"></i>
-                    <span class="preview-label">Error</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-bell-slash w4-icon-muted w4-icon-xl"></i>
-                    <span class="preview-label">Muted</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary))">Tamaños Explícitos (XS - XL)</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-user w4-icon-primary w4-icon-xs"></i>
-                    <span class="preview-label">Extra Small (xs)</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-user w4-icon-primary w4-icon-sm"></i>
-                    <span class="preview-label">Small (sm)</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-user w4-icon-primary w4-icon-md"></i>
-                    <span class="preview-label">Medium (md)</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-user w4-icon-primary w4-icon-lg"></i>
-                    <span class="preview-label">Large (lg)</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-user w4-icon-primary w4-icon-xl"></i>
-                    <span class="preview-label">Extra Large (xl)</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-error))">Estados (CSS Classes & Atributos)</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-shield w4-icon-primary w4-icon-xl"></i>
-                    <span class="preview-label">Normal</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-shield w4-icon-primary w4-icon-active w4-icon-xl"></i>
-                    <span class="preview-label">Active (w4-icon-active)</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-shield w4-icon-primary w4-icon-disabled w4-icon-xl"></i>
-                    <span class="preview-label">Disabled</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-spinner w4-icon-primary w4-icon-spin w4-icon-xl"></i>
-                    <span class="preview-label">Spin (w4-icon-spin)</span>
-                </div>
-                <div class="preview-item">
-                    <i class="w4-icon fa-solid fa-shield w4-icon-primary w4-icon-decorative w4-icon-xl"></i>
-                    <span class="preview-label">Decorative (No pointer)</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-success))">Estados JS Soportados (data-w4-state)
-            </h2>
-            <div class="preview-group" style="flex-direction: column; align-items: flex-start; padding: 2rem;">
-
-                <div style="display: flex; gap: 2rem; align-items: center; inline-size: 100%;">
-                    <div
-                        style="background: hsl(var(--w4-base-100)); padding: 2rem; border-radius: var(--w4-radius-card); box-shadow: var(--w4-shadow-md); display: flex; justify-content: center; align-items: center; min-inline-size: 150px;">
-                        <i id="jsInteractiveIcon" class="w4-icon fa-solid fa-rocket w4-icon-primary"
-                            style="font-size: 3rem;" data-w4-component="icon"></i>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes Semánticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Colores de íconos alineados al sistema de tokens.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="iconSemanticPreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="iconSemanticCode">Codigo</button>
                     </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="iconSemanticPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                <i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-neutral" aria-hidden="true"></i>
+                                <i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-primary" aria-hidden="true"></i>
+                                <i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-secondary"
+                                    aria-hidden="true"></i>
+                                <i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-accent" aria-hidden="true"></i>
+                                <i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-info" aria-hidden="true"></i>
+                                <i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-success" aria-hidden="true"></i>
+                                <i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-warning" aria-hidden="true"></i>
+                                <i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-error" aria-hidden="true"></i>
+                                <i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-muted" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div id="iconSemanticCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-neutral"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-primary"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-secondary"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-accent"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-info"&gt;&lt;/i&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <div style="display: flex; flex-direction: column; gap: 1rem; inline-size: 100%;">
-                        <p style="font-size: 0.875rem; color: hsl(var(--w4-base-content) / 0.7); margin: 0;">
-                            Modifica el atributo <code>data-w4-state</code> en tiempo real. Observa cómo cambian las
-                            propiedades visuales y las animaciones a través del motor CSS nativo:
-                        </p>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Tamaños y Jerarquía</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Escalas de tamaño aplicadas al mismo ícono.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="iconSizePreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="iconSizeCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="iconSizePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-stack-center">
+                                <i class="fa-solid fa-star w4-icon w4-icon-xs w4-icon-primary" aria-hidden="true"></i>
+                                <i class="fa-solid fa-star w4-icon w4-icon-sm w4-icon-primary" aria-hidden="true"></i>
+                                <i class="fa-solid fa-star w4-icon w4-icon-md w4-icon-primary" aria-hidden="true"></i>
+                                <i class="fa-solid fa-star w4-icon w4-icon-lg w4-icon-primary" aria-hidden="true"></i>
+                                <i class="fa-solid fa-star w4-icon w4-icon-xl w4-icon-primary" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div id="iconSizeCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;i class="fa-solid fa-star w4-icon w4-icon-xs w4-icon-primary"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-star w4-icon w4-icon-sm w4-icon-primary"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-star w4-icon w4-icon-md w4-icon-primary"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-star w4-icon w4-icon-lg w4-icon-primary"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-star w4-icon w4-icon-xl w4-icon-primary"&gt;&lt;/i&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                            <button class="w4-button w4-button-sm w4-button-outline"
-                                onclick="document.getElementById('jsInteractiveIcon').removeAttribute('data-w4-state')">Clear
-                                (Normal)</button>
-                            <button class="w4-button w4-button-sm w4-button-info"
-                                onclick="document.getElementById('jsInteractiveIcon').setAttribute('data-w4-state', 'active')">Active</button>
-                            <button class="w4-button w4-button-sm w4-button-warning"
-                                onclick="document.getElementById('jsInteractiveIcon').setAttribute('data-w4-state', 'disabled')">Disabled</button>
-                            <button class="w4-button w4-button-sm w4-button-secondary"
-                                onclick="document.getElementById('jsInteractiveIcon').setAttribute('data-w4-state', 'loading')">Loading
-                                (Spin)</button>
-                            <button class="w4-button w4-button-sm w4-button-error"
-                                onclick="document.getElementById('jsInteractiveIcon').setAttribute('data-w4-state', 'hidden')">Hidden</button>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Alineación</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Ejemplos de íconos en inicio, centro y final dentro de un contenedor.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="iconAlignPreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="iconAlignCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="iconAlignPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-between w4-item-center">
+                                <i class="fa-solid fa-arrow-left w4-icon w4-icon-lg w4-icon-secondary"
+                                    aria-hidden="true"></i>
+                                <i class="fa-solid fa-compass w4-icon w4-icon-lg w4-icon-primary"
+                                    aria-hidden="true"></i>
+                                <i class="fa-solid fa-arrow-right w4-icon w4-icon-lg w4-icon-accent"
+                                    aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div id="iconAlignCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;i class="fa-solid fa-arrow-left w4-icon w4-icon-lg w4-icon-secondary"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-compass w4-icon w4-icon-lg w4-icon-primary"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-arrow-right w4-icon w4-icon-lg w4-icon-accent"&gt;&lt;/i&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Escala Tipográfica</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Demostración de <code>w4-icon-xs</code>, <code>w4-icon-sm</code>, <code>w4-icon-md</code>,
+                <code>w4-icon-lg</code> y <code>w4-icon-xl</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="iconScalePreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="iconScaleCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="iconScalePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                <i class="fa-solid fa-circle w4-icon w4-icon-xs w4-icon-primary" title="w4-icon-xs"></i>
+                                <i class="fa-solid fa-circle w4-icon w4-icon-sm w4-icon-primary" title="w4-icon-sm"></i>
+                                <i class="fa-solid fa-circle w4-icon w4-icon-md w4-icon-primary" title="w4-icon-md"></i>
+                                <i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-primary" title="w4-icon-lg"></i>
+                                <i class="fa-solid fa-circle w4-icon w4-icon-xl w4-icon-primary" title="w4-icon-xl"></i>
+                            </div>
+                        </div>
+                        <div id="iconScaleCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;i class="fa-solid fa-circle w4-icon w4-icon-xs w4-icon-primary"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-circle w4-icon w4-icon-sm w4-icon-primary"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-circle w4-icon w4-icon-md w4-icon-primary"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-primary"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-circle w4-icon w4-icon-xl w4-icon-primary"&gt;&lt;/i&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Estados soportados por clase y por atributo <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-2 w4-gap-md">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Clase</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="iconClassPreview">Vista</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="iconClassCode">Codigo</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="iconClassPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                    <i class="fa-solid fa-heart w4-icon w4-icon-xl w4-icon-primary w4-icon-active"
+                                        aria-hidden="true"></i>
+                                    <i class="fa-solid fa-heart w4-icon w4-icon-xl w4-icon-secondary w4-icon-disabled"
+                                        aria-hidden="true"></i>
+                                    <i class="fa-solid fa-gear w4-icon w4-icon-xl w4-icon-info w4-icon-loading"
+                                        aria-hidden="true"></i>
+                                    <i class="fa-solid fa-rotate w4-icon w4-icon-xl w4-icon-warning w4-icon-spin"
+                                        aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div id="iconClassCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;i class="fa-solid fa-heart w4-icon w4-icon-xl w4-icon-primary w4-icon-active"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-heart w4-icon w4-icon-xl w4-icon-secondary w4-icon-disabled"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-gear w4-icon w4-icon-xl w4-icon-info w4-icon-loading"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-rotate w4-icon w4-icon-xl w4-icon-warning w4-icon-spin"&gt;&lt;/i&gt;</code></pre>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Atributo</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="iconAttrPreview">Vista</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="iconAttrCode">Codigo</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="iconAttrPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                    <i class="fa-solid fa-star w4-icon w4-icon-xl w4-icon-primary"
+                                        data-w4-state="active" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star w4-icon w4-icon-xl w4-icon-warning"
+                                        data-w4-state="disabled" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-gear w4-icon w4-icon-xl w4-icon-info" data-w4-state="loading"
+                                        aria-hidden="true"></i>
+                                    <i class="fa-solid fa-star w4-icon w4-icon-xl w4-icon-error" data-w4-state="hidden"
+                                        aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div id="iconAttrCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;i class="fa-solid fa-star w4-icon w4-icon-xl w4-icon-primary" data-w4-state="active"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-star w4-icon w4-icon-xl w4-icon-warning" data-w4-state="disabled"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-gear w4-icon w4-icon-xl w4-icon-info" data-w4-state="loading"&gt;&lt;/i&gt;
+&lt;i class="fa-solid fa-star w4-icon w4-icon-xl w4-icon-error" data-w4-state="hidden"&gt;&lt;/i&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-    </div>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Nativos Javascript Soportados al Componente
+                Icon</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Prueba de cambios de estado del componente con <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <p class="w4-text w4-text-sm w4-text-neutral-content">
+                    Playground: cambia estados para ver su efecto sobre el icono de prueba.
+                </p>
+                <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                    <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                            data-w4-target="iconJsPreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                            data-w4-target="iconJsCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="iconJsPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-center w4-stack-sm">
+                                <i id="labIconTarget" class="fa-solid fa-gear w4-icon w4-icon-xl w4-icon-primary mb-6"
+                                    aria-hidden="true"></i>
+                            </div>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                <button class="w4-btn w4-btn-sm w4-btn-neutral"
+                                    onclick="document.getElementById('labIconTarget').removeAttribute('data-w4-state')">Enabled</button>
+                                <button class="w4-btn w4-btn-sm w4-btn-secondary"
+                                    onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'active')">Active</button>
+                                <button class="w4-btn w4-btn-sm w4-btn-info"
+                                    onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'loading')">Loading</button>
+                                <button class="w4-btn w4-btn-sm w4-btn-warning"
+                                    onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'disabled')">Disabled</button>
+                                <button class="w4-btn w4-btn-sm w4-btn-error"
+                                    onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'hidden')">Hidden</button>
+                            </div>
+                        </div>
+                        <div id="iconJsCode" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                            aria-hidden="true">
+                            <pre
+                                class="m-0"><code class="w4-text w4-text-xs">
+&lt;i id="labIconTarget" class="fa-solid fa-gear w4-icon w4-icon-xl w4-icon-primary"&gt;&lt;/i&gt;
+&lt;button onclick="document.getElementById('labIconTarget').removeAttribute('data-w4-state')"&gt;Enabled&lt;/button&gt;
+&lt;button onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'active')"&gt;Active&lt;/button&gt;
+&lt;button onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'loading')"&gt;Loading&lt;/button&gt;
+&lt;button onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'disabled')"&gt;Disabled&lt;/button&gt;
+&lt;button onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'hidden')"&gt;Hidden&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <p class="w4-text w4-text-sm w4-text-neutral-content">
+                    El estado se aplica al icono de prueba y refleja los hooks visuales del componente.
+                </p>
+            </div>
+        </section>
+    </main>
 
     @NativeUIScripts
     @NativeUIInit
-    @NativeUILivewire
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

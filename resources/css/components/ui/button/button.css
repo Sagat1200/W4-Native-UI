@@ -286,7 +286,7 @@
 
 .w4-btn-wide,
 .w4-button-wide {
-  inline-size: w-full;
+  inline-size: 25%;
   max-inline-size: 64rem;
 }
 

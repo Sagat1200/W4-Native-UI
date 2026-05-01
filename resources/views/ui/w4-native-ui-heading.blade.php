@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en" data-theme="native-ui.light">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,107 +7,42 @@
     <title>W4 Native Heading Lab</title>
     @NativeUIStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-container {
-            max-inline-size: 1200px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.5rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.7);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            font-size: 1rem;
-            min-inline-size: 200px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .preview-group {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            padding: 1.5rem;
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-        }
-
-        /* .preview-item {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-        } */
-
-        .preview-label {
-            font-size: 0.75rem;
-            color: hsl(var(--w4-base-content) / 0.5);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-    </style>
 </head>
 
 <body>
 
-    <div class="lab-container">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: Heading Lab</h1>
-                <p class="lab-subtitle">Entorno de pruebas visuales para el componente w4-heading</p>
-            </div>
+    <div class="w4-navbar  w4-navbar-fixed">
+        <div class="w4-navbar-start">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="w4-icon w4-icon-md stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
+            </button>
 
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar Tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+        </div>
+        <div class="w4-navbar-center">
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral-content"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Soporte</a></li>
+            </ul>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs mx-2">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral-content">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -142,21 +77,26 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section class="w4-section w4-section-md w4-section-base-100"
-            style="margin-block-end: 2rem; margin-block-start: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Heading</h1>
-            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
-                El componente Heading se utiliza para crear jerarquía tipográfica y estructura semántica en las páginas.
+    <main class="w4-container w4-container-xl">
+        <section class="w4-section w4-section-xl">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center mt-12">Native UI Heading</h1>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Heading:</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                El componente <strong>Heading</strong> se utiliza para crear jerarquía tipográfica y estructura
+                semántica en las páginas.
                 Soporta tamaños explícitos, colores temáticos y clases de alineación, asegurando que el SEO y la
                 accesibilidad se mantengan intactos.
-            </p>
 
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
-                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral"
-                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            </p>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-primary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Títulos de página:</strong> Nivel H1 principal usando
                     <code>w4-heading-h1</code>.
                 </li>
@@ -169,220 +109,316 @@
             </ul>
         </section>
 
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title w4-heading w4-heading-h2 mb-2 w4-heading-info">Niveles semanticos (H1 - H6)</h2>
-            <div class="w4-card w4-card-bordered w4-card-base-100 w4-card-body" style="padding: 0;">
-                <div class="w4-tabs w4-tabs-boxed"
-                    style="margin: 1rem; border-radius: var(--w4-radius-md); background-color: hsl(var(--w4-base-200));"
-                    id="semanticTabs">
-                    <a class="w4-tab w4-tab-lifted w4-tab-active" onclick="switchTab(0)">H1</a>
-                    <a class="w4-tab w4-tab-lifted" onclick="switchTab(1)">H2</a>
-                    <a class="w4-tab w4-tab-lifted" onclick="switchTab(2)">H3</a>
-                    <a class="w4-tab w4-tab-lifted" onclick="switchTab(3)">H4</a>
-                    <a class="w4-tab w4-tab-lifted" onclick="switchTab(4)">H5</a>
-                    <a class="w4-tab w4-tab-lifted" onclick="switchTab(5)">H6</a>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes Semánticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Colores de heading alineados al sistema de tokens.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="headingSemanticPreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="headingSemanticCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="headingSemanticPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-sm">
+                                <h3 class="w4-heading w4-heading-h3 w4-heading-neutral">Heading Neutral</h3>
+                                <h3 class="w4-heading w4-heading-h3 w4-heading-primary">Heading Primary</h3>
+                                <h3 class="w4-heading w4-heading-h3 w4-heading-secondary">Heading Secondary</h3>
+                                <h3 class="w4-heading w4-heading-h3 w4-heading-accent">Heading Accent</h3>
+                                <h3 class="w4-heading w4-heading-h3 w4-heading-info">Heading Info</h3>
+                                <h3 class="w4-heading w4-heading-h3 w4-heading-success">Heading Success</h3>
+                                <h3 class="w4-heading w4-heading-h3 w4-heading-warning">Heading Warning</h3>
+                                <h3 class="w4-heading w4-heading-h3 w4-heading-error">Heading Error</h3>
+                                <h3 class="w4-heading w4-heading-h3 w4-heading-muted">Heading Muted</h3>
+                            </div>
+                        </div>
+                        <div id="headingSemanticCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;h3 class="w4-heading w4-heading-h3 w4-heading-neutral"&gt;Heading Neutral&lt;/h3&gt;
+&lt;h3 class="w4-heading w4-heading-h3 w4-heading-primary"&gt;Heading Primary&lt;/h3&gt;
+&lt;h3 class="w4-heading w4-heading-h3 w4-heading-secondary"&gt;Heading Secondary&lt;/h3&gt;
+&lt;h3 class="w4-heading w4-heading-h3 w4-heading-accent"&gt;Heading Accent&lt;/h3&gt;
+&lt;h3 class="w4-heading w4-heading-h3 w4-heading-info"&gt;Heading Info&lt;/h3&gt;
+&lt;h3 class="w4-heading w4-heading-h3 w4-heading-success"&gt;Heading Success&lt;/h3&gt;
+&lt;h3 class="w4-heading w4-heading-h3 w4-heading-warning"&gt;Heading Warning&lt;/h3&gt;
+&lt;h3 class="w4-heading w4-heading-h3 w4-heading-error"&gt;Heading Error&lt;/h3&gt;
+&lt;h3 class="w4-heading w4-heading-h3 w4-heading-muted"&gt;Heading Muted&lt;/h3&gt;
+</code></pre>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div id="semanticContent" style="padding: 2rem; border-block-start: 1px solid hsl(var(--w4-base-300));">
-                    <div class="w4-tab-pane">
-                        <h6 class="w4-heading w4-heading-h6 w4-heading-primary">Default (H1)</h6>
-                        <h1 class="w4-heading w4-heading-h1">The quick brown fox jumps over the lazy dog</h1>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Tamaños y Jerarquía</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Escalas tipográficas y aliases de encabezado.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="headingSizePreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="headingSizeCode">Codigo</button>
                     </div>
-                    <div class="w4-tab-pane" style="display: none;">
-                        <h6 class="w4-heading w4-heading-h6 w4-heading-primary">H2</h6>
-                        <h2 class="w4-heading w4-heading-h2">The quick brown fox jumps over the lazy dog</h2>
-                    </div>
-                    <div class="w4-tab-pane" style="display: none;">
-                        <h6 class="w4-heading w4-heading-h6 w4-heading-primary">H3</h6>
-                        <h3 class="w4-heading w4-heading-h3">The quick brown fox jumps over the lazy dog</h3>
-                    </div>
-                    <div class="w4-tab-pane" style="display: none;">
-                        <h6 class="w4-heading w4-heading-h6 w4-heading-primary">H4</h6>
-                        <h4 class="w4-heading w4-heading-h4">The quick brown fox jumps over the lazy dog</h4>
-                    </div>
-                    <div class="w4-tab-pane" style="display: none;">
-                        <h6 class="w4-heading w4-heading-h6 w4-heading-primary">H5</h6>
-                        <h5 class="w4-heading w4-heading-h5">The quick brown fox jumps over the lazy dog</h5>
-                    </div>
-                    <div class="w4-tab-pane" style="display: none;">
-                        <h6 class="w4-heading w4-heading-h6 w4-heading-primary">H6</h6>
-                        <h6 class="w4-heading w4-heading-h6">The quick brown fox jumps over the lazy dog</h6>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="headingSizePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-sm">
+                                <h1 class="w4-heading w4-heading-h1">Heading H1</h1>
+                                <h2 class="w4-heading w4-heading-h2">Heading H2</h2>
+                                <h3 class="w4-heading w4-heading-h3">Heading H3</h3>
+                                <h4 class="w4-heading w4-heading-h4">Heading H4</h4>
+                                <h5 class="w4-heading w4-heading-h5">Heading H5</h5>
+                                <h6 class="w4-heading w4-heading-h6">Heading H6</h6>
+                            </div>
+                        </div>
+                        <div id="headingSizeCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;h1 class="w4-heading w4-heading-h1"&gt;Heading H1&lt;/h1&gt;
+&lt;h2 class="w4-heading w4-heading-h2"&gt;Heading H2&lt;/h2&gt;
+&lt;h3 class="w4-heading w4-heading-h3"&gt;Heading H3&lt;/h3&gt;
+&lt;h4 class="w4-heading w4-heading-h4"&gt;Heading H4&lt;/h4&gt;
+&lt;h5 class="w4-heading w4-heading-h5"&gt;Heading H5&lt;/h5&gt;
+&lt;h6 class="w4-heading w4-heading-h6"&gt;Heading H6&lt;/h6&gt;
+</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title w4-heading w4-heading-h2 mb-2 w4-heading-secondary">Tamaños Explícitos (XS - XL)
-            </h2>
-            <div class="w4-card w4-card-bordered w4-card-base-200 w4-card-body" style="gap: 1.5rem;">
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">w4-heading-xs</span>
-                    <div class="w4-heading w4-heading-xs">The quick brown fox jumps over the lazy dog</div>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">w4-heading-sm</span>
-                    <div class="w4-heading w4-heading-sm">The quick brown fox jumps over the lazy dog</div>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">w4-heading-md</span>
-                    <div class="w4-heading w4-heading-md">The quick brown fox jumps over the lazy dog</div>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">w4-heading-lg</span>
-                    <div class="w4-heading w4-heading-lg">The quick brown fox jumps over the lazy dog</div>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">w4-heading-xl</span>
-                    <div class="w4-heading w4-heading-xl">The quick brown fox jumps over the lazy dog</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title w4-heading w4-heading-h2 mb-2 w4-heading-accent">Variantes de Color</h2>
-            <div class="w4-card w4-card-bordered w4-card-base-200 w4-card-body"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">Neutral</span>
-                    <h3 class="w4-heading w4-heading-neutral">Neutral Heading</h3>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">Primary</span>
-                    <h3 class="w4-heading w4-heading-primary">Primary Heading</h3>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">Secondary</span>
-                    <h3 class="w4-heading w4-heading-secondary">Secondary Heading</h3>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">Accent</span>
-                    <h3 class="w4-heading w4-heading-accent">Accent Heading</h3>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">Info</span>
-                    <h3 class="w4-heading w4-heading-info">Info Heading</h3>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">Success</span>
-                    <h3 class="w4-heading w4-heading-success">Success Heading</h3>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">Warning</span>
-                    <h3 class="w4-heading w4-heading-warning">Warning Heading</h3>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">Error</span>
-                    <h3 class="w4-heading w4-heading-error">Error Heading</h3>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">Muted</span>
-                    <h3 class="w4-heading w4-heading-muted">Muted Heading</h3>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title w4-heading w4-heading-h2 mb-2 w4-heading-error">Estados (CSS Classes)</h2>
-            <div class="w4-card w4-card-bordered w4-card-base-200 w4-card-body" style="gap: 1.5rem;">
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">Normal</span>
-                    <h3 class="w4-heading">Heading in normal state</h3>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">Active
-                        (w4-heading-active)</span>
-                    <h3 class="w4-heading w4-heading-active">Heading in active state</h3>
-                </div>
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">Disabled
-                        (w4-heading-disabled)</span>
-                    <h3 class="w4-heading w4-heading-disabled">Heading in disabled state</h3>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-md w4-section-base-100">
-            <h2 class="section-title w4-heading w4-heading-h2 mb-2 w4-heading-success">Estados JS Soportados
-                (data-w4-state)
-            </h2>
-            <div class="w4-card w4-card-bordered w4-card-base-200 w4-card-body" style="gap: 1.5rem;">
-                <div>
-                    <span class="w4-label w4-label-sm w4-label-muted"
-                        style="text-transform: uppercase; letter-spacing: 0.05em; margin-block-end: 0.25rem;">Heading
-                        Interactivo</span>
-                    <h3 id="jsInteractiveHeading" class="w4-heading w4-heading-primary" data-w4-component="heading">
-                        Dynamic JS Heading</h3>
-                    <p class="w4-text w4-text-sm w4-text-muted" style="margin-block-start: 0.5rem;">
-                        Usa los botones para modificar el atributo <code>data-w4-state</code> en tiempo real:
-                    </p>
-                    <div style="display: flex; gap: 0.5rem; margin-block-start: 0.5rem; flex-wrap: wrap;">
-                        <button class="w4-button w4-button-sm w4-button-outline"
-                            onclick="document.getElementById('jsInteractiveHeading').removeAttribute('data-w4-state')">Clear
-                            (Normal)</button>
-                        <button class="w4-button w4-button-sm w4-button-info"
-                            onclick="document.getElementById('jsInteractiveHeading').setAttribute('data-w4-state', 'active')">Set
-                            Active</button>
-                        <button class="w4-button w4-button-sm w4-button-warning"
-                            onclick="document.getElementById('jsInteractiveHeading').setAttribute('data-w4-state', 'disabled')">Set
-                            Disabled</button>
-                        <button class="w4-button w4-button-sm w4-button-error"
-                            onclick="document.getElementById('jsInteractiveHeading').setAttribute('data-w4-state', 'hidden')">Set
-                            Hidden</button>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Alineación</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Control de alineación con modificadores start, center y end.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="headingAlignPreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="headingAlignCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="headingAlignPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <h3 class="w4-heading w4-heading-h3 w4-heading-start">Alineado al inicio</h3>
+                            <h3 class="w4-heading w4-heading-h3 w4-heading-center">Alineado al centro</h3>
+                            <h3 class="w4-heading w4-heading-h3 w4-heading-end">Alineado al final</h3>
+                        </div>
+                        <div id="headingAlignCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;h3 class="w4-heading w4-heading-h3 w4-heading-start"&gt;Alineado al inicio&lt;/h3&gt;
+&lt;h3 class="w4-heading w4-heading-h3 w4-heading-center"&gt;Alineado al centro&lt;/h3&gt;
+&lt;h3 class="w4-heading w4-heading-h3 w4-heading-end"&gt;Alineado al final&lt;/h3&gt;</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Escala Tipográfica</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Demostración de los modificadores de tamaño: <code>w4-heading-xs</code>, <code>w4-heading-sm</code>,
+                <code>w4-heading-md</code>, <code>w4-heading-lg</code> y <code>w4-heading-xl</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="headingScalePreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="headingScaleCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="headingScalePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-sm">
+                                <p class="w4-heading w4-heading-xs w4-heading-primary">w4-heading-xs</p>
+                                <p class="w4-heading w4-heading-sm w4-heading-primary">w4-heading-sm</p>
+                                <p class="w4-heading w4-heading-md w4-heading-primary">w4-heading-md</p>
+                                <p class="w4-heading w4-heading-lg w4-heading-primary">w4-heading-lg</p>
+                                <p class="w4-heading w4-heading-xl w4-heading-primary">w4-heading-xl</p>
+                            </div>
+                        </div>
+                        <div id="headingScaleCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class="w4-heading w4-heading-xs w4-heading-primary"&gt;w4-heading-xs&lt;/p&gt;
+&lt;p class="w4-heading w4-heading-sm w4-heading-primary"&gt;w4-heading-sm&lt;/p&gt;
+&lt;p class="w4-heading w4-heading-md w4-heading-primary"&gt;w4-heading-md&lt;/p&gt;
+&lt;p class="w4-heading w4-heading-lg w4-heading-primary"&gt;w4-heading-lg&lt;/p&gt;
+&lt;p class="w4-heading w4-heading-xl w4-heading-primary"&gt;w4-heading-xl&lt;/p&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Estados soportados por clase y por atributo <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-2 w4-gap-md">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Clase</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="headingClassPreview">Vista</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="headingClassCode">Codigo</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="headingClassPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <h4 class="w4-heading w4-heading-h4 w4-heading-primary w4-heading-active">Heading
+                                        Active</h4>
+                                    <h4 class="w4-heading w4-heading-h4 w4-heading-secondary w4-heading-disabled">
+                                        Heading Disabled</h4>
+                                    <h4 class="w4-heading w4-heading-h4 w4-heading-info">Heading Visible</h4>
+                                </div>
+                            </div>
+                            <div id="headingClassCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;h4 class="w4-heading w4-heading-h4 w4-heading-primary w4-heading-active"&gt;Active&lt;/h4&gt;
+&lt;h4 class="w4-heading w4-heading-h4 w4-heading-secondary w4-heading-disabled"&gt;Disabled&lt;/h4&gt;
+&lt;h4 class="w4-heading w4-heading-h4 w4-heading-error w4-heading-hidden"&gt;Hidden&lt;/h4&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Atributo</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="headingAttrPreview">Vista</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="headingAttrCode">Codigo</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="headingAttrPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <h4 class="w4-heading w4-heading-h4 w4-heading-primary" data-w4-state="active">
+                                        data-w4-state="active"</h4>
+                                    <h4 class="w4-heading w4-heading-h4 w4-heading-warning" data-w4-state="disabled">
+                                        data-w4-state="disabled"</h4>
+                                    <h4 class="w4-heading w4-heading-h4 w4-heading-error" data-w4-state="hidden">
+                                        data-w4-state="hidden"</h4>
+                                </div>
+                            </div>
+                            <div id="headingAttrCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;h4 class="w4-heading w4-heading-h4 w4-heading-primary" data-w4-state="active"&gt;...&lt;/h4&gt;
+&lt;h4 class="w4-heading w4-heading-h4 w4-heading-warning" data-w4-state="disabled"&gt;...&lt;/h4&gt;
+&lt;h4 class="w4-heading w4-heading-h4 w4-heading-error" data-w4-state="hidden"&gt;...&lt;/h4&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Nativos Javascript Soportados al Componente
+                Heading</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Prueba de cambios de estado del componente con <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <p class="w4-text w4-text-sm w4-text-neutral-content">
+                    Playground: Juega con los estados JS soportados para ver su efecto en el heading de prueba.
+                </p>
+                <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                    <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                            data-w4-target="headingJsPreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                            data-w4-target="headingJsCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="headingJsPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <h3 id="labHeadingTarget" class="w4-heading w4-heading-h3 w4-heading-primary mb-6">
+                                Heading de Prueba
+                            </h3>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                <button class="w4-btn w4-btn-sm w4-btn-neutral"
+                                    onclick="document.getElementById('labHeadingTarget').removeAttribute('data-w4-state')">Enabled</button>
+                                <button class="w4-btn w4-btn-sm w4-btn-secondary"
+                                    onclick="document.getElementById('labHeadingTarget').setAttribute('data-w4-state', 'active')">Active</button>
+                                <button class="w4-btn w4-btn-sm w4-btn-warning"
+                                    onclick="document.getElementById('labHeadingTarget').setAttribute('data-w4-state', 'disabled')">Disabled</button>
+                                <button class="w4-btn w4-btn-sm w4-btn-error"
+                                    onclick="document.getElementById('labHeadingTarget').setAttribute('data-w4-state', 'hidden')">Hidden</button>
+                            </div>
+                        </div>
+                        <div id="headingJsCode" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                            aria-hidden="true">
+                            <pre
+                                class="m-0"><code class="w4-text w4-text-xs">
+&lt;h3 id="labHeadingTarget" class="w4-heading w4-heading-h3 w4-heading-primary"&gt;Heading de Prueba&lt;/h3&gt;
+&lt;button onclick="document.getElementById('labHeadingTarget').removeAttribute('data-w4-state')"&gt;Enabled&lt;/button&gt;
+&lt;button onclick="document.getElementById('labHeadingTarget').setAttribute('data-w4-state', 'active')"&gt;Active&lt;/button&gt;
+&lt;button onclick="document.getElementById('labHeadingTarget').setAttribute('data-w4-state', 'disabled')"&gt;Disabled&lt;/button&gt;
+&lt;button onclick="document.getElementById('labHeadingTarget').setAttribute('data-w4-state', 'hidden')"&gt;Hidden&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <p class="w4-text w4-text-sm w4-text-neutral-content">
+                    El estado se aplica al heading de prueba y refleja los hooks visuales del componente.
+                </p>
+            </div>
+        </section>
+    </main>
+
+
 
     @NativeUIScripts
     @NativeUIInit
-    @NativeUILivewire
 
     <script>
-        function switchTab(index) {
-            const tabs = document.querySelectorAll('#semanticTabs .w4-tab');
-            const panes = document.querySelectorAll('#semanticContent .w4-tab-pane');
-
-            tabs.forEach((tab, i) => {
-                if (i === index) {
-                    tab.classList.add('w4-tab-active');
-                } else {
-                    tab.classList.remove('w4-tab-active');
-                }
-            });
-
-            panes.forEach((pane, i) => {
-                if (i === index) {
-                    pane.style.display = 'block';
-                } else {
-                    pane.style.display = 'none';
-                }
-            });
-        }
-
         document.addEventListener("DOMContentLoaded", function () {
             var storageKey = "w4-native-ui-theme";
             var switcher = document.getElementById("themeSwitcher");
 
+            // Intenta obtener el tema de localStorage, si no, usa el data-theme actual o light por defecto
             var currentTheme = localStorage.getItem(storageKey) || document.documentElement.getAttribute("data-theme") || "native-ui.light";
+
+            // Aplica el tema al documento
             document.documentElement.setAttribute("data-theme", currentTheme);
 
             if (switcher) {
@@ -395,6 +431,7 @@
                 });
             }
         });
+
     </script>
 </body>
 

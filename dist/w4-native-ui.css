@@ -1625,7 +1625,7 @@ html[data-theme] body {
 
 .w4-btn-wide,
 .w4-button-wide {
-  inline-size: w-full;
+  inline-size: 25%;
   max-inline-size: 64rem;
 }
 
@@ -1675,7 +1675,7 @@ html[data-theme] body {
 }
 
 .w4-heading-neutral {
-  --w4-heading-color: hsl(var(--w4-base-content));
+  --w4-heading-color: hsl(var(--w4-neutral));
 }
 
 .w4-heading-neutral-content {
@@ -1833,7 +1833,7 @@ html[data-theme] body {
 }
 
 .w4-icon-neutral-content {
-  --w4-icon-color: hsl(var(--w4-base-content-content));
+  --w4-icon-color: hsl(var(--w4-neutral-content));
 }
 
 .w4-icon-primary {

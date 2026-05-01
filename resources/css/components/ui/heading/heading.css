@@ -42,7 +42,7 @@
 }
 
 .w4-heading-neutral {
-  --w4-heading-color: hsl(var(--w4-base-content));
+  --w4-heading-color: hsl(var(--w4-neutral));
 }
 
 .w4-heading-neutral-content {

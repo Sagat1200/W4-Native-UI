@@ -14,6 +14,30 @@ export default class W4Heading {
         this.registerStateHandlers();
     }
 
+    static resolveElement(targetOrId) {
+        if (!targetOrId) return null;
+        if (targetOrId instanceof HTMLElement) return targetOrId;
+        if (typeof targetOrId === 'string') return document.getElementById(targetOrId);
+        return null;
+    }
+
+    static setState(targetOrId, state = 'enabled') {
+        const element = this.resolveElement(targetOrId);
+        if (!element) return;
+
+        const nextState = String(state || 'enabled').toLowerCase();
+
+        if (nextState === 'enabled') {
+            element.removeAttribute('data-w4-state');
+        } else {
+            element.setAttribute('data-w4-state', nextState);
+        }
+
+        if (typeof W4Core.syncElement === 'function') {
+            W4Core.syncElement(element);
+        }
+    }
+
     /**
      * Listen for hook events emitted by W4Core
      */
@@ -31,6 +55,7 @@ export default class W4Heading {
     static handleEnabled({ element }) {
         element.removeAttribute('aria-disabled');
         element.removeAttribute('aria-hidden');
+        element.removeAttribute('aria-current');
     }
 
     static handleDisabled({ element }) {
@@ -38,8 +63,7 @@ export default class W4Heading {
     }
 
     static handleActive({ element }) {
-        // Headings don't typically have aria-pressed, but could have aria-current
-        // We leave it empty or map it to a custom state if needed.
+        element.setAttribute('aria-current', 'true');
     }
 
     static handleHidden({ element }) {

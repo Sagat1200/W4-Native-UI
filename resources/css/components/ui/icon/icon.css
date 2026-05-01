@@ -25,7 +25,7 @@
 }
 
 .w4-icon-neutral-content {
-  --w4-icon-color: hsl(var(--w4-base-content-content));
+  --w4-icon-color: hsl(var(--w4-neutral-content));
 }
 
 .w4-icon-primary {

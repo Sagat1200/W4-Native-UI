@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="native-ui.light">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,28 +11,38 @@
 
 <body>
 
-    <div class="w4-navbar w4-navbar-primary">
+    <div class="w4-navbar  w4-navbar-fixed">
         <div class="w4-navbar-start">
-            <button class="w4-button w4-button-ghost w4-button-square">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     class="w4-icon w4-icon-md stroke-current">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
                 </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
             </button>
-            <button class="w4-button w4-button-ghost">Native UI</button>
+
         </div>
         <div class="w4-navbar-center">
-            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-neutral-content w4-menu-md">
-                <li class="w4-text w4-text-primary-content"><a href="">Home</a></li>
-                <li class="w4-text w4-text-primary-content"><a href="">Documentacion</a></li>
-                <li class="w4-text w4-text-primary-content"><a href="">Productos</a></li>
-                <li class="w4-text w4-text-primary-content"><a href="">Contacto</a></li>
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral-content"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Soporte</a></li>
             </ul>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral-content">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -72,13 +82,11 @@
 
     <main class="w4-container w4-container-xl">
         <div class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Button</h1>
-            <p class="w4-text w4-text-primary w4-text-center">Entorno de pruebas visuales para el componente
-                w4-button</p>
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center mt-12">Native UI Button</h1>
         </div>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Button</h2>
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Button:</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 El componente <strong>Button</strong> es un elemento de interfaz fundamental utilizado para desencadenar
@@ -88,7 +96,7 @@
             <h2 class="w4-heading w4-heading-h3 w4-heading-primary w4-heading-start">Casos de Uso Comunes:</h2>
             <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Formularios:</strong> Enviar, guardar o cancelar datos (usando
-                    Primary, Secondary o Ghost).</li>
+                    multiples variantes de color y tamaño).</li>
                 <li><strong class="w4-text-active">Acciones destructivas:</strong> Eliminar registros (usando variante
                     Error).</li>
                 <li><strong class="w4-text-active">Navegación:</strong> Simular enlaces con la variante Link o
@@ -309,7 +317,7 @@
                         </div>
                         <div id="buttonSizeCode" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
-                            <pre class="w4-m-0"><code>
+                            <pre class="m-0"><code>
 &lt;button class="w4-btn w4-btn-primary w4-btn-xs"&gt;XSmall&lt;/button&gt;
 &lt;button class="w4-btn w4-btn-primary w4-btn-sm"&gt;Small&lt;/button&gt;
 &lt;button class="w4-btn w4-btn-primary w4-btn-md"&gt;Medium&lt;/button&gt;
@@ -329,7 +337,7 @@
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-grid w4-grid-2 w4-gap-md">
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-secondary">Square / Circle</h3>
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Square / Circle</h3>
                     <div class="w4-stack w4-stack-sm">
                         <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
                             <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
@@ -366,7 +374,7 @@
                         </div>
                     </div>
                     <hr class="w4-divider w4-divider-primary">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-secondary">Botones Anchos</h3>
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Botones Anchos</h3>
                     <div class="w4-stack w4-stack-sm">
                         <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
                             <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
@@ -377,8 +385,8 @@
                         <div class="w4-stack w4-stack-sm">
                             <div id="buttonWidePreview" data-w4-tab-panel
                                 class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
-                                <div class="w4-stack w4-stack-horizontal w4-stack-around">
-                                    <button class="w4-btn w4-btn-accent w4-btn-wide">Open</button>
+                                <div class="w4-stack w4-stack-vertical w4-stack-center">
+                                    <button class="w4-btn w4-btn-primary w4-btn-wide">Open</button>
                                     <button class="w4-btn w4-btn-accent w4-btn-wide">Close</button>
                                 </div>
                             </div>
@@ -392,11 +400,32 @@
                     </div>
                 </div>
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-secondary">Block</h3>
-                    <div class="w4-stack w4-stack-sm w4-stack-vertical">
-                        <button class="w4-button w4-button-primary w4-button-block">Acción Principal</button>
-                        <button class="w4-button w4-button-outline w4-button-secondary w4-button-block">Acción
-                            Secundaria</button>
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Block</h3>
+                    <div class="w4-stack w4-stack-sm">
+                        <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                                data-w4-target="buttonBlockPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                                data-w4-target="buttonBlockCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="buttonBlockPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm w4-stack-vertical">
+                                    <button class="w4-button w4-button-primary w4-button-block">Acción
+                                        Principal</button>
+                                    <button
+                                        class="w4-button w4-button-outline w4-button-secondary w4-button-block">Acción
+                                        Secundaria</button>
+                                </div>
+                            </div>
+                            <div id="buttonBlockCode" data-w4-tab-panel
+                                class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;button class="w4-button w4-button-primary w4-button-block"&gt;...&lt;/button&gt;
+&lt;button class="w4-button w4-button-outline w4-button-secondary w4-button-block"&gt;...&lt;/button&gt;</code></pre>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -405,56 +434,130 @@
         <section class="w4-section w4-section-xl">
             <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Visuales</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
-                Estados soportados por clases y atributos.
+                Estados soportados por clases y atributo <code>data-w4-state</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-grid w4-grid-2 w4-gap-md">
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-secondary">Por Clase</h3>
-                    <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                        <button class="w4-button w4-button-primary w4-button-active">Active</button>
-                        <button class="w4-button w4-button-secondary w4-button-disabled">Disabled</button>
-                        <button class="w4-button w4-button-info w4-button-loading">Loading</button>
-                        <button class="w4-button w4-button-warning w4-button-readonly">Readonly</button>
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Clase</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="buttonStateClassPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="buttonStateClassCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="buttonStateClassPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                    <button class="w4-btn w4-btn-primary w4-btn-active">Active</button>
+                                    <button class="w4-btn w4-btn-secondary w4-btn-disabled">Disabled</button>
+                                    <button class="w4-btn w4-btn-info w4-btn-loading">Loading</button>
+                                    <button class="w4-btn w4-btn-warning w4-btn-readonly">Readonly</button>
+                                </div>
+                            </div>
+                            <div id="buttonStateClassCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;button class="w4-btn w4-btn-primary w4-btn-active"&gt;Active&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-secondary w4-btn-disabled"&gt;Disabled&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-info w4-btn-loading"&gt;Loading&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-warning w4-btn-readonly"&gt;Readonly&lt;/button&gt;</code></pre>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-secondary">Por Atributo</h3>
-                    <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                        <button class="w4-button w4-button-primary"
-                            data-w4-state="active">data-w4-state="active"</button>
-                        <button class="w4-button w4-button-secondary" disabled>disabled</button>
-                        <button class="w4-button w4-button-info"
-                            data-w4-state="loading">data-w4-state="loading"</button>
-                        <button class="w4-button w4-button-warning" readonly>readonly</button>
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Atributo</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="buttonStateAttrPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="buttonStateAttrCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="buttonStateAttrPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                    <button class="w4-btn w4-btn-primary"
+                                        data-w4-state="active">data-w4-state="active"</button>
+                                    <button class="w4-btn w4-btn-secondary" disabled>disabled</button>
+                                    <button class="w4-btn w4-btn-info"
+                                        data-w4-state="loading">data-w4-state="loading"</button>
+                                    <button class="w4-btn w4-btn-warning" readonly>readonly</button>
+                                </div>
+                            </div>
+                            <div id="buttonStateAttrCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;button class="w4-btn w4-btn-primary" data-w4-state="active"&gt;data-w4-state="active"&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-secondary" disabled&gt;disabled&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-info" data-w4-state="loading"&gt;data-w4-state="loading"&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-warning" readonly&gt;readonly&lt;/button&gt;</code></pre>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados JS Soportados</h2>
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Nativos Javascript Soportados al Componente
+                Button</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Controles para probar transiciones del componente usando <code>data-w4-state</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <p class="w4-text w4-text-sm w4-text-neutral-content">
+                    Playground: Juega con los estados JS soportados para ver su efecto en el botón de prueba.
+                </p>
                 <div class="w4-stack w4-stack-md">
-                    <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                        <button id="labButtonTarget" class="w4-button w4-button-primary w4-button-md">Botón de
-                            Prueba</button>
-                    </div>
-                    <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                        <button class="w4-button w4-button-sm w4-button-neutral"
-                            onclick="document.getElementById('labButtonTarget').removeAttribute('data-w4-state')">Enabled</button>
-                        <button class="w4-button w4-button-sm w4-button-secondary"
-                            onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'active')">Active</button>
-                        <button class="w4-button w4-button-sm w4-button-info"
-                            onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'loading')">Loading</button>
-                        <button class="w4-button w4-button-sm w4-button-warning"
-                            onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'readonly')">Readonly</button>
-                        <button class="w4-button w4-button-sm w4-button-error"
-                            onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'disabled')">Disabled</button>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="buttonJsStatePreview">Vista</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="buttonJsStateCode">Codigo</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="buttonJsStatePreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                    <button id="labButtonTarget" class="w4-btn w4-btn-primary w4-btn-md mb-6">Botón
+                                        de
+                                        Prueba</button>
+                                </div>
+                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                    <button class="w4-btn w4-btn-sm w4-btn-neutral"
+                                        onclick="document.getElementById('labButtonTarget').removeAttribute('data-w4-state')">Enabled</button>
+                                    <button class="w4-btn w4-btn-sm w4-btn-secondary"
+                                        onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'active')">Active</button>
+                                    <button class="w4-btn w4-btn-sm w4-btn-info"
+                                        onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'loading')">Loading</button>
+                                    <button class="w4-btn w4-btn-sm w4-btn-warning"
+                                        onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'readonly')">Readonly</button>
+                                    <button class="w4-btn w4-btn-sm w4-btn-error"
+                                        onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'disabled')">Disabled</button>
+                                </div>
+                            </div>
+                            <div id="buttonJsStateCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre
+                                    class="m-0"><code class="w4-text w4-text-xs">
+&lt;button id="labButtonTarget" class="w4-button w4-button-primary w4-button-md"&gt;Botón de Prueba&lt;/button&gt;
+&lt;button onclick="document.getElementById('labButtonTarget').removeAttribute('data-w4-state')"&gt;Enabled&lt;/button&gt;
+&lt;button onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'active')"&gt;Active&lt;/button&gt;
+&lt;button onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'loading')"&gt;Loading&lt;/button&gt;
+&lt;button onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'readonly')"&gt;Readonly&lt;/button&gt;
+&lt;button onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'disabled')"&gt;Disabled&lt;/button&gt;</code></pre>
+                            </div>
+                        </div>
                     </div>
                     <p class="w4-text w4-text-sm w4-text-neutral-content">
                         El estado se aplica al botón de prueba y refleja los hooks visuales del componente.
