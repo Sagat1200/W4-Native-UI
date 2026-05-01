@@ -377,16 +377,16 @@
                                     aria-hidden="true"></i>
                             </div>
                             <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                                <button class="w4-btn w4-btn-sm w4-btn-neutral"
-                                    onclick="document.getElementById('labIconTarget').removeAttribute('data-w4-state')">Enabled</button>
-                                <button class="w4-btn w4-btn-sm w4-btn-secondary"
-                                    onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'active')">Active</button>
-                                <button class="w4-btn w4-btn-sm w4-btn-info"
-                                    onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'loading')">Loading</button>
-                                <button class="w4-btn w4-btn-sm w4-btn-warning"
-                                    onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'disabled')">Disabled</button>
-                                <button class="w4-btn w4-btn-sm w4-btn-error"
-                                    onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'hidden')">Hidden</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-neutral"
+                                    data-w4-icon-state="enabled">Enabled</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-secondary"
+                                    data-w4-icon-state="active">Active</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-info"
+                                    data-w4-icon-state="loading">Loading</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
+                                    data-w4-icon-state="disabled">Disabled</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-error"
+                                    data-w4-icon-state="hidden">Hidden</button>
                             </div>
                         </div>
                         <div id="iconJsCode" data-w4-tab-panel
@@ -395,11 +395,19 @@
                             <pre
                                 class="m-0"><code class="w4-text w4-text-xs">
 &lt;i id="labIconTarget" class="fa-solid fa-gear w4-icon w4-icon-xl w4-icon-primary"&gt;&lt;/i&gt;
-&lt;button onclick="document.getElementById('labIconTarget').removeAttribute('data-w4-state')"&gt;Enabled&lt;/button&gt;
-&lt;button onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'active')"&gt;Active&lt;/button&gt;
-&lt;button onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'loading')"&gt;Loading&lt;/button&gt;
-&lt;button onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'disabled')"&gt;Disabled&lt;/button&gt;
-&lt;button onclick="document.getElementById('labIconTarget').setAttribute('data-w4-state', 'hidden')"&gt;Hidden&lt;/button&gt;</code></pre>
+&lt;button data-w4-icon-state="enabled"&gt;Enabled&lt;/button&gt;
+&lt;button data-w4-icon-state="active"&gt;Active&lt;/button&gt;
+&lt;button data-w4-icon-state="loading"&gt;Loading&lt;/button&gt;
+&lt;button data-w4-icon-state="disabled"&gt;Disabled&lt;/button&gt;
+&lt;button data-w4-icon-state="hidden"&gt;Hidden&lt;/button&gt;
+
+&lt;script&gt;
+document.querySelectorAll('[data-w4-icon-state]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    window.W4NativeUI.Icon.setState('labIconTarget', btn.dataset.w4IconState);
+  });
+});
+&lt;/script&gt;</code></pre>
                         </div>
                     </div>
                 </div>
@@ -430,6 +438,15 @@
                     localStorage.setItem(storageKey, theme);
                 });
             }
+
+            document.querySelectorAll("[data-w4-icon-state]").forEach(function (button) {
+                button.addEventListener("click", function () {
+                    var state = button.getAttribute("data-w4-icon-state");
+                    if (window.W4NativeUI && window.W4NativeUI.Icon) {
+                        window.W4NativeUI.Icon.setState("labIconTarget", state);
+                    }
+                });
+            });
         });
     </script>
 </body>
