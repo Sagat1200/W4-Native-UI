@@ -84,17 +84,17 @@
 
     <main class="w4-container w4-container-xl">
         <section class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center mt-12">Native UI Icon</h1>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Icon</h1>
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Icon:</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Icon:</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 El componente <strong>Icon</strong> permite renderizar iconografía con colores, tamaños y estados
                 consistentes usando tokens de W4 Native UI.
             </p>
-            <h2 class="w4-heading w4-heading-h3 w4-heading-primary w4-heading-start">Casos de Uso Comunes:</h2>
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
             <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Soporte visual:</strong> Acompañar acciones en botones y enlaces.
                 </li>
@@ -106,7 +106,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes Semánticas</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Variantes Semánticas</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Colores de íconos alineados al sistema de tokens.
             </p>
@@ -151,7 +151,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Tamaños y Jerarquía</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Tamaños y Jerarquía</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Escalas de tamaño aplicadas al mismo ícono.
             </p>
@@ -191,7 +191,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Alineación</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Alineación</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Ejemplos de íconos en inicio, centro y final dentro de un contenedor.
             </p>
@@ -230,7 +230,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Escala Tipográfica</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Escala Tipográfica</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Demostración de <code>w4-icon-xs</code>, <code>w4-icon-sm</code>, <code>w4-icon-md</code>,
                 <code>w4-icon-lg</code> y <code>w4-icon-xl</code>.
@@ -271,7 +271,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Visuales</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Visuales</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Estados soportados por clase y por atributo <code>data-w4-state</code>.
             </p>
@@ -314,7 +314,7 @@
                 </div>
 
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Atributo</h3>
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Por Atributo</h3>
                     <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
                         <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                             <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
@@ -352,7 +352,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Nativos Javascript Soportados al Componente
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Nativos Javascript Soportados al Componente
                 Icon</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Prueba de cambios de estado del componente con <code>data-w4-state</code>.

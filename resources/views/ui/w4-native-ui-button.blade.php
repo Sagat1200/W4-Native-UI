@@ -82,18 +82,18 @@
 
     <main class="w4-container w4-container-xl">
         <div class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center mt-12">Native UI Button</h1>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Button</h1>
         </div>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Button:</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Button:</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 El componente <strong>Button</strong> es un elemento de interfaz fundamental utilizado para desencadenar
                 acciones.
                 Soporta múltiples variantes semánticas, tamaños, formas y estados de interacción.
             </p>
-            <h2 class="w4-heading w4-heading-h3 w4-heading-primary w4-heading-start">Casos de Uso Comunes:</h2>
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
             <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Formularios:</strong> Enviar, guardar o cancelar datos (usando
                     multiples variantes de color y tamaño).</li>
@@ -107,7 +107,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes de colores semánticos</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Variantes de colores semánticos</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Botones con colores del sistema semántico.
             </p>
@@ -156,7 +156,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Botones con semantica de contorno</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Botones con semantica de contorno</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Estilos visuales alternativos para priorizar o suavizar acciones.
             </p>
@@ -201,7 +201,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Botones con semantica de fondo suave</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Botones con semantica de fondo suave</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Estilos visuales alternativos para mostrar acciones con fondo suave.
             </p>
@@ -246,7 +246,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Botones con semantica de contorno discontinuo</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Botones con semantica de contorno discontinuo</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Estilos visuales alternativos para mostrar acciones con contorno discontinuo.
             </p>
@@ -291,7 +291,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Tamaños</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Tamaños</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Escalas morfológicas del botón.
             </p>
@@ -330,14 +330,14 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Formas y Layout</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Formas y Layout</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Modificadores de forma y distribución.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-grid w4-grid-2 w4-gap-md">
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Square / Circle</h3>
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Square / Circle</h3>
                     <div class="w4-stack w4-stack-sm">
                         <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
                             <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
@@ -374,7 +374,7 @@
                         </div>
                     </div>
                     <hr class="w4-divider w4-divider-primary">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Botones Anchos</h3>
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Botones Anchos</h3>
                     <div class="w4-stack w4-stack-sm">
                         <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
                             <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
@@ -432,7 +432,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Visuales</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Visuales</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Estados soportados por clases y atributo <code>data-w4-state</code>.
             </p>
@@ -470,7 +470,7 @@
                     </div>
                 </div>
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Atributo</h3>
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Por Atributo</h3>
                     <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
                         <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                             <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
@@ -506,7 +506,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Nativos Javascript Soportados al Componente
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Nativos Javascript Soportados al Componente
                 Button</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Controles para probar transiciones del componente usando <code>data-w4-state</code>.
@@ -540,17 +540,18 @@
                                     <button type="button" class="w4-btn w4-btn-sm w4-btn-info"
                                         data-w4-button-state="loading" data-w4-target="labButtonTarget">Loading</button>
                                     <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
-                                        data-w4-button-state="readonly" data-w4-target="labButtonTarget">Readonly</button>
+                                        data-w4-button-state="readonly"
+                                        data-w4-target="labButtonTarget">Readonly</button>
                                     <button type="button" class="w4-btn w4-btn-sm w4-btn-error"
-                                        data-w4-button-state="disabled" data-w4-target="labButtonTarget">Disabled</button>
+                                        data-w4-button-state="disabled"
+                                        data-w4-target="labButtonTarget">Disabled</button>
                                 </div>
                             </div>
                             <div id="buttonJsStateCode" data-w4-tab-panel
                                 class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
                                 hidden aria-hidden="true">
-                                <pre
-                                    class="m-0"><code class="w4-text w4-text-xs">
-&lt;button id="labButtonTarget" class="w4-button w4-button-primary w4-button-md"&gt;Botón de Prueba&lt;/button&gt;
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;button id="labButtonTarget" class="w4-btn w4-btn-primary w4-btn-md"&gt;Botón de Prueba&lt;/button&gt;
 &lt;button data-w4-button-state="enabled" data-w4-target="labButtonTarget"&gt;Enabled&lt;/button&gt;
 &lt;button data-w4-button-state="active" data-w4-target="labButtonTarget"&gt;Active&lt;/button&gt;
 &lt;button data-w4-button-state="loading" data-w4-target="labButtonTarget"&gt;Loading&lt;/button&gt;

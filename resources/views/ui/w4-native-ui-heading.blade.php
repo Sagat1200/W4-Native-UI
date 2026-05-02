@@ -98,7 +98,7 @@
             <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
             <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Títulos de página:</strong> Nivel H1 principal usando
-                    <code>w4-heading-h1</code>.
+                    <code>w4-hdg-h1</code>.
                 </li>
                 <li><strong class="w4-text-active">Separación de secciones:</strong> Jerarquía secundaria con H2 y H3.
                 </li>

@@ -6,118 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Label Lab</title>
     @NativeUIStyles
-
-    <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-container {
-            max-inline-size: 1200px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.5rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.7);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            font-size: 1rem;
-            min-inline-size: 200px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .preview-group {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            padding: 1.5rem;
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-        }
-
-        .preview-item {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            background-color: hsl(var(--w4-base-100));
-            padding: 1rem;
-            border-radius: var(--w4-radius-card);
-            box-shadow: var(--w4-shadow-sm);
-        }
-
-        .preview-label-desc {
-            font-size: 0.75rem;
-            color: hsl(var(--w4-base-content) / 0.5);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
 
-    <div class="lab-container">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: Label Lab</h1>
-                <p class="lab-subtitle">Entorno de pruebas visuales para el componente w4-label</p>
-            </div>
+    <div class="w4-navbar  w4-navbar-fixed">
+        <div class="w4-navbar-start">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="w4-icon w4-icon-md stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
+            </button>
 
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar Tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+        </div>
+        <div class="w4-navbar-center">
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral-content"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Soporte</a></li>
+            </ul>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs mx-2">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral-content">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -152,164 +77,248 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section style="margin-block-end: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Label</h1>
-            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
-                El componente Label proporciona consistencia tipográfica para describir inputs, controles de formularios
-                o agrupaciones de datos. Soporta estados visuales nativos como "obligatorio" (required) y se adapta
-                dinámicamente al sistema de diseño de W4.
+    <main class="w4-container w4-container-xl">
+        <section class="w4-section w4-section-xl">
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Label</h1>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Label:</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                El componente <strong>Label</strong> proporciona consistencia tipográfica para describir inputs y
+                controles.
             </p>
-
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
-                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral"
-                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                <li><strong class="w4-text-active">Formularios de entrada:</strong> Asociar un texto descriptivo (usando
-                    <code>for=""</code>) con un campo de texto, select o checkbox.</li>
-                <li><strong class="w4-text-active">Indicador de obligatoriedad:</strong> Añadir automáticamente un
-                    asterisco rojo (*) usando la clase <code>w4-label-required</code>.</li>
-                <li><strong class="w4-text-active">Estados de validación:</strong> Colorear la etiqueta en rojo (Error)
-                    o verde (Success) cuando el campo asociado tiene problemas.</li>
-                <li><strong class="w4-text-active">Desactivación sincronizada:</strong> Aplicar
-                    <code>w4-label-disabled</code> para atenuar visualmente la etiqueta cuando su input también está
-                    deshabilitado.</li>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-primary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start">
+                <li><strong class="w4-text-active">Formularios:</strong> asociar texto descriptivo mediante
+                    <code>for=""</code>.
+                </li>
+                <li><strong class="w4-text-active">Obligatoriedad:</strong> usar <code>w4-label-required</code> o
+                    <code>data-w4-state="required"</code>.
+                </li>
+                <li><strong class="w4-text-active">Validación:</strong> aplicar colores semánticos según contexto.</li>
+                <li><strong class="w4-text-active">Desactivación:</strong> sincronizar con el estado del control
+                    asociado.</li>
             </ul>
         </section>
 
-        <section>
-            <h2 class="section-title">Variantes de Color</h2>
-            <div class="preview-group grid-container">
-                <div class="preview-item">
-                    <span class="preview-label-desc">Neutral (Default)</span>
-                    <label class="w4-label w4-label-neutral">Dirección de Envío</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Primary</span>
-                    <label class="w4-label w4-label-primary">Nombre de Usuario</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Secondary</span>
-                    <label class="w4-label w4-label-secondary">Correo Electrónico</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Accent</span>
-                    <label class="w4-label w4-label-accent">Contraseña Fuerte</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Info</span>
-                    <label class="w4-label w4-label-info">Nota Informativa</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Success</span>
-                    <label class="w4-label w4-label-success">Código Verificado</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Warning</span>
-                    <label class="w4-label w4-label-warning">Alerta de Seguridad</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Error</span>
-                    <label class="w4-label w4-label-error">Mensaje de Error</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Muted</span>
-                    <label class="w4-label w4-label-muted">Texto Secundario</label>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary))">Tamaños Explícitos (XS - XL)</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-label-xs</span>
-                    <label class="w4-label w4-label-xs">Etiqueta Extra Pequeña</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-label-sm</span>
-                    <label class="w4-label w4-label-sm">Etiqueta Pequeña</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-label-md (Default)</span>
-                    <label class="w4-label w4-label-md">Etiqueta Mediana</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-label-lg</span>
-                    <label class="w4-label w4-label-lg">Etiqueta Grande</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-label-xl</span>
-                    <label class="w4-label w4-label-xl">Etiqueta Extra Grande</label>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-error))">Estados (CSS Classes & Atributos)</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <span class="preview-label-desc">Normal</span>
-                    <label class="w4-label">Etiqueta Normal</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Required (Agrega asterisco)</span>
-                    <label class="w4-label w4-label-required">Campo Obligatorio</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Active (w4-label-active)</span>
-                    <label class="w4-label w4-label-active">Etiqueta Activa</label>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Disabled (w4-label-disabled)</span>
-                    <label class="w4-label w4-label-disabled">Etiqueta Deshabilitada</label>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-success))">Estados JS Soportados (data-w4-state)
-            </h2>
-            <div class="preview-group">
-                <div class="preview-item" style="padding: 2rem;">
-                    <div style="margin-block-end: 1.5rem;">
-                        <label id="jsInteractiveLabel" class="w4-label w4-label-lg w4-label-primary"
-                            data-w4-component="label">
-                            Etiqueta Interactiva JS
-                        </label>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Variantes Semánticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Colores semánticos disponibles para etiquetas.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="labelSemanticPreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="labelSemanticCode">Codigo</button>
                     </div>
-
-                    <p
-                        style="font-size: 0.875rem; color: hsl(var(--w4-base-content) / 0.7); margin-block-end: 0.5rem; margin-block-start: 0;">
-                        Modifica el atributo <code>data-w4-state</code> en tiempo real usando estos botones:
-                    </p>
-
-                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                        <button class="w4-button w4-button-sm w4-button-outline"
-                            onclick="document.getElementById('jsInteractiveLabel').removeAttribute('data-w4-state')">Clear
-                            (Normal)</button>
-                        <button class="w4-button w4-button-sm w4-button-info"
-                            onclick="document.getElementById('jsInteractiveLabel').setAttribute('data-w4-state', 'active')">Set
-                            Active</button>
-                        <button class="w4-button w4-button-sm w4-button-warning"
-                            onclick="document.getElementById('jsInteractiveLabel').setAttribute('data-w4-state', 'disabled')">Set
-                            Disabled</button>
-                        <button class="w4-button w4-button-sm w4-button-error"
-                            onclick="document.getElementById('jsInteractiveLabel').setAttribute('data-w4-state', 'required')">Set
-                            Required</button>
-                        <button class="w4-button w4-button-sm w4-button-neutral"
-                            onclick="document.getElementById('jsInteractiveLabel').setAttribute('data-w4-state', 'hidden')">Set
-                            Hidden</button>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="labelSemanticPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-vertical w4-stack-xs">
+                                <label class="w4-label w4-label-neutral">Neutral Label</label>
+                                <label class="w4-label w4-label-primary">Primary Label</label>
+                                <label class="w4-label w4-label-secondary">Secondary Label</label>
+                                <label class="w4-label w4-label-accent">Accent Label</label>
+                                <label class="w4-label w4-label-info">Info Label</label>
+                                <label class="w4-label w4-label-success">Success Label</label>
+                                <label class="w4-label w4-label-warning">Warning Label</label>
+                                <label class="w4-label w4-label-error">Error Label</label>
+                            </div>
+                        </div>
+                        <div id="labelSemanticCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;label class="w4-label w4-label-primary"&gt;Primary Label&lt;/label&gt;
+&lt;label class="w4-label w4-label-secondary"&gt;Secondary Label&lt;/label&gt;
+&lt;label class="w4-label w4-label-accent"&gt;Accent Label&lt;/label&gt;
+&lt;label class="w4-label w4-label-error"&gt;Error Label&lt;/label&gt;</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Tamaños</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Escalas tipográficas para labels.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="labelSizePreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="labelSizeCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="labelSizePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-vertical w4-stack-xs">
+                                <label class="w4-label w4-label-primary w4-label-xs">Label XS</label>
+                                <label class="w4-label w4-label-primary w4-label-sm">Label SM</label>
+                                <label class="w4-label w4-label-primary w4-label-md">Label MD</label>
+                                <label class="w4-label w4-label-primary w4-label-lg">Label LG</label>
+                                <label class="w4-label w4-label-primary w4-label-xl">Label XL</label>
+                            </div>
+                        </div>
+                        <div id="labelSizeCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;label class="w4-label w4-label-primary w4-label-xs"&gt;Label XS&lt;/label&gt;
+&lt;label class="w4-label w4-label-primary w4-label-sm"&gt;Label SM&lt;/label&gt;
+&lt;label class="w4-label w4-label-primary w4-label-md"&gt;Label MD&lt;/label&gt;
+&lt;label class="w4-label w4-label-primary w4-label-lg"&gt;Label LG&lt;/label&gt;
+&lt;label class="w4-label w4-label-primary w4-label-xl"&gt;Label XL&lt;/label&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Estados por clase y por atributo <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-2 w4-gap-md">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Clase</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="labelClassPreview">Vista</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="labelClassCode">Codigo</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="labelClassPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-vertical w4-stack-xs">
+                                    <label class="w4-label w4-label-primary w4-label-active">Label Active</label>
+                                    <label class="w4-label w4-label-warning w4-label-required">Label Required</label>
+                                    <label class="w4-label w4-label-error w4-label-disabled">Label Disabled</label>
+                                    <label class="w4-label w4-label-secondary w4-label-hidden">Label Hidden</label>
+                                </div>
+                            </div>
+                            <div id="labelClassCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;label class="w4-label w4-label-primary w4-label-active"&gt;Label Active&lt;/label&gt;
+&lt;label class="w4-label w4-label-warning w4-label-required"&gt;Label Required&lt;/label&gt;
+&lt;label class="w4-label w4-label-error w4-label-disabled"&gt;Label Disabled&lt;/label&gt;
+&lt;label class="w4-label w4-label-secondary w4-label-hidden"&gt;Label Hidden&lt;/label&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Por Atributo</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="labelAttrPreview">Vista</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="labelAttrCode">Codigo</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="labelAttrPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-vertical w4-stack-xs">
+                                    <label class="w4-label w4-label-primary"
+                                        data-w4-state="active">data-w4-state="active"</label>
+                                    <label class="w4-label w4-label-warning"
+                                        data-w4-state="required">data-w4-state="required"</label>
+                                    <label class="w4-label w4-label-error"
+                                        data-w4-state="disabled">data-w4-state="disabled"</label>
+                                    <label class="w4-label w4-label-secondary"
+                                        data-w4-state="hidden">data-w4-state="hidden"</label>
+                                </div>
+                            </div>
+                            <div id="labelAttrCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;label class="w4-label w4-label-primary" data-w4-state="active"&gt;...&lt;/label&gt;
+&lt;label class="w4-label w4-label-warning" data-w4-state="required"&gt;...&lt;/label&gt;
+&lt;label class="w4-label w4-label-error" data-w4-state="disabled"&gt;...&lt;/label&gt;
+&lt;label class="w4-label w4-label-secondary" data-w4-state="hidden"&gt;...&lt;/label&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados JS Soportados</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Playground de estados usando <code>data-w4-label-state</code> + <code>data-w4-target</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                    <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                            data-w4-target="labelJsPreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                            data-w4-target="labelJsCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="labelJsPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-vertical w4-stack-sm mb-6">
+                                <label id="labLabelTarget" class="w4-label w4-label-primary w4-label-lg">Label de
+                                    Prueba</label>
+                                <input type="text" class="w4-input w4-input-bordered" placeholder="Campo asociado" />
+                            </div>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-neutral"
+                                    data-w4-label-state="enabled" data-w4-target="labLabelTarget">Enabled</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-secondary"
+                                    data-w4-label-state="active" data-w4-target="labLabelTarget">Active</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-info"
+                                    data-w4-label-state="required" data-w4-target="labLabelTarget">Required</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
+                                    data-w4-label-state="disabled" data-w4-target="labLabelTarget">Disabled</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-error" data-w4-label-state="hidden"
+                                    data-w4-target="labLabelTarget">Hidden</button>
+                            </div>
+                        </div>
+                        <div id="labelJsCode" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                            aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;label id="labLabelTarget" class="w4-label w4-label-primary"&gt;Label de Prueba&lt;/label&gt;
+&lt;button data-w4-label-state="enabled" data-w4-target="labLabelTarget"&gt;Clear&lt;/button&gt;
+&lt;button data-w4-label-state="active" data-w4-target="labLabelTarget"&gt;Active&lt;/button&gt;
+&lt;button data-w4-label-state="required" data-w4-target="labLabelTarget"&gt;Required&lt;/button&gt;
+&lt;button data-w4-label-state="disabled" data-w4-target="labLabelTarget"&gt;Disabled&lt;/button&gt;
+&lt;button data-w4-label-state="hidden" data-w4-target="labLabelTarget"&gt;Hidden&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
 
     @NativeUIScripts
     @NativeUIInit
-    @NativeUILivewire
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

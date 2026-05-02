@@ -84,17 +84,17 @@
 
     <main class="w4-container w4-container-xl">
         <section class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center mt-12">Native UI IconButton</h1>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI IconButton</h1>
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">IconButton:</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">IconButton:</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 El componente <strong>IconButton</strong> es una variación especializada del botón diseñada para
                 acciones compactas con iconografía.
             </p>
-            <h2 class="w4-heading w4-heading-h3 w4-heading-primary w4-heading-start">Casos de Uso Comunes:</h2>
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
             <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Barras de herramientas:</strong> acciones rápidas en espacios
                     reducidos.</li>
@@ -105,7 +105,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Ejemplo De Barra De Herramientas</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Ejemplo De Barra De Herramientas</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Composición típica de acciones de edición usando icon buttons compactos.
             </p>
@@ -174,7 +174,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes Semánticas</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Variantes Semánticas</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Colores semánticos aplicados a icon buttons.
             </p>
@@ -222,7 +222,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes De Superficie</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Variantes De Superficie</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Estilos `outline` y `ghost` para acciones secundarias.
             </p>
@@ -262,7 +262,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Tamaños</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Tamaños</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Escalas morfológicas del icon button.
             </p>
@@ -306,7 +306,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Visuales</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Visuales</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Estados por clase y por atributo <code>data-w4-state</code>.
             </p>
@@ -349,7 +349,7 @@
                 </div>
 
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Atributo</h3>
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Por Atributo</h3>
                     <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
                         <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                             <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
@@ -387,7 +387,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados JS Soportados</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados JS Soportados</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Playground de estados con <code>data-w4-icon-button-state</code> y <code>data-w4-target</code>.
             </p>
