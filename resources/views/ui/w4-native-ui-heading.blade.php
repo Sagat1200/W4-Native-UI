@@ -126,17 +126,35 @@
                     </div>
                     <div class="w4-stack w4-stack-sm">
                         <div id="headingSemanticPreview" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
-                            <div class="w4-stack w4-stack-sm">
-                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-neutral">Heading Neutral</h3>
-                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-primary">Heading Primary</h3>
-                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-secondary">Heading Secondary</h3>
-                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-accent">Heading Accent</h3>
-                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-info">Heading Info</h3>
-                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-success">Heading Success</h3>
-                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-warning">Heading Warning</h3>
-                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-error">Heading Error</h3>
-                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-muted">Heading Muted</h3>
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm">
+                            <div class="w4-grid w4-grid-4 w4-grid-bordered-primary">
+                                {{-- <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <h6 class="w4-hdg w4-hdg-h6 w4-hdg-neutral">Heading Neutral</h6>
+                                </div> --}}
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <h3 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-center">Heading Primary</h3>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <h3 class="w4-hdg w4-hdg-h3 w4-hdg-secondary w4-hdg-center">Heading Secondary</h3>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <h3 class="w4-hdg w4-hdg-h3 w4-hdg-accent w4-hdg-center">Heading Accent</h3>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <h3 class="w4-hdg w4-hdg-h3 w4-hdg-info w4-hdg-center">Heading Info</h3>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <h3 class="w4-hdg w4-hdg-h3 w4-hdg-success w4-hdg-center">Heading Success</h3>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <h3 class="w4-hdg w4-hdg-h3 w4-hdg-warning w4-hdg-center">Heading Warning</h3>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <h3 class="w4-hdg w4-hdg-h3 w4-hdg-error w4-hdg-center">Heading Error</h3>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <h3 class="w4-hdg w4-hdg-h3 w4-hdg-muted w4-hdg-center">Heading Muted</h3>
+                                </div>
                             </div>
                         </div>
                         <div id="headingSemanticCode" data-w4-tab-panel
@@ -175,7 +193,7 @@
                     </div>
                     <div class="w4-stack w4-stack-sm">
                         <div id="headingSizePreview" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm">
                             <div class="w4-stack w4-stack-sm">
                                 <h1 class="w4-hdg w4-hdg-h1">Heading H1</h1>
                                 <h2 class="w4-hdg w4-hdg-h2">Heading H2</h2>
@@ -218,7 +236,7 @@
                     </div>
                     <div class="w4-stack w4-stack-sm">
                         <div id="headingAlignPreview" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm">
                             <h3 class="w4-hdg w4-hdg-h3 w4-hdg-start">Alineado al inicio</h3>
                             <h3 class="w4-hdg w4-hdg-h3 w4-hdg-center">Alineado al centro</h3>
                             <h3 class="w4-hdg w4-hdg-h3 w4-hdg-end">Alineado al final</h3>
@@ -254,7 +272,7 @@
                     </div>
                     <div class="w4-stack w4-stack-sm">
                         <div id="headingScalePreview" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm">
                             <div class="w4-stack w4-stack-sm">
                                 <p class="w4-hdg w4-hdg-xs w4-hdg-primary">w4-hdg-xs</p>
                                 <p class="w4-hdg w4-hdg-sm w4-hdg-primary">w4-hdg-sm</p>
@@ -295,7 +313,7 @@
                         </div>
                         <div class="w4-stack w4-stack-sm">
                             <div id="headingClassPreview" data-w4-tab-panel
-                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm">
                                 <div class="w4-stack w4-stack-sm">
                                     <h4 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-active">Heading
                                         Active</h4>
@@ -327,7 +345,7 @@
                         </div>
                         <div class="w4-stack w4-stack-sm">
                             <div id="headingAttrPreview" data-w4-tab-panel
-                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm">
                                 <div class="w4-stack w4-stack-sm">
                                     <h4 class="w4-hdg w4-hdg-h4 w4-hdg-primary" data-w4-state="active">
                                         data-w4-state="active"</h4>
