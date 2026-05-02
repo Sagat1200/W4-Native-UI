@@ -14,6 +14,7 @@ export default class W4Button {
         
         // Register state handlers for the Button component
         this.registerStateHandlers();
+        this.bindStateTriggers(root);
     }
 
     /**
@@ -105,6 +106,21 @@ export default class W4Button {
         return document.getElementById(String(targetOrId));
     }
 
+    static bindStateTriggers(root = document) {
+        if (this.triggersBound) return;
+
+        root.addEventListener('click', (event) => {
+            const trigger = event.target.closest('[data-w4-button-state]');
+            if (!trigger) return;
+
+            const state = trigger.getAttribute('data-w4-button-state') || 'enabled';
+            const targetId = trigger.getAttribute('data-w4-target') || 'labButtonTarget';
+            this.setState(targetId, state);
+        });
+
+        this.triggersBound = true;
+    }
+
     static resetState(element) {
         element.classList.remove('w4-button-active', 'w4-button-loading', 'w4-button-disabled', 'w4-button-readonly');
         element.removeAttribute('disabled');
@@ -113,5 +129,6 @@ export default class W4Button {
         element.removeAttribute('aria-busy');
         element.removeAttribute('aria-pressed');
         element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
     }
 }

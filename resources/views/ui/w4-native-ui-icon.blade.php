@@ -358,7 +358,7 @@
                 Prueba de cambios de estado del componente con <code>data-w4-state</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
                 <p class="w4-text w4-text-sm w4-text-neutral-content">
                     Playground: cambia estados para ver su efecto sobre el icono de prueba.
                 </p>
@@ -373,41 +373,33 @@
                         <div id="iconJsPreview" data-w4-tab-panel
                             class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
                             <div class="w4-stack w4-stack-horizontal w4-stack-center w4-stack-sm">
-                                <i id="labIconTarget" class="fa-solid fa-gear w4-icon w4-icon-xl w4-icon-primary mb-6"
+                                <i id="labIconTarget" class="fa-solid fa-gear w4-icon w4-icon-xl w4-icon-info mb-6"
                                     aria-hidden="true"></i>
                             </div>
                             <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
                                 <button type="button" class="w4-btn w4-btn-sm w4-btn-neutral"
-                                    data-w4-icon-state="enabled">Enabled</button>
+                                    data-w4-icon-state="enabled" data-w4-target="labIconTarget">Enabled</button>
                                 <button type="button" class="w4-btn w4-btn-sm w4-btn-secondary"
-                                    data-w4-icon-state="active">Active</button>
-                                <button type="button" class="w4-btn w4-btn-sm w4-btn-info"
-                                    data-w4-icon-state="loading">Loading</button>
+                                    data-w4-icon-state="active" data-w4-target="labIconTarget">Active</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-info" data-w4-icon-state="loading"
+                                    data-w4-target="labIconTarget">Loading</button>
                                 <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
-                                    data-w4-icon-state="disabled">Disabled</button>
-                                <button type="button" class="w4-btn w4-btn-sm w4-btn-error"
-                                    data-w4-icon-state="hidden">Hidden</button>
+                                    data-w4-icon-state="disabled" data-w4-target="labIconTarget">Disabled</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-error" data-w4-icon-state="hidden"
+                                    data-w4-target="labIconTarget">Hidden</button>
                             </div>
                         </div>
                         <div id="iconJsCode" data-w4-tab-panel
                             class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
                             aria-hidden="true">
-                            <pre
-                                class="m-0"><code class="w4-text w4-text-xs">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
 &lt;i id="labIconTarget" class="fa-solid fa-gear w4-icon w4-icon-xl w4-icon-primary"&gt;&lt;/i&gt;
-&lt;button data-w4-icon-state="enabled"&gt;Enabled&lt;/button&gt;
-&lt;button data-w4-icon-state="active"&gt;Active&lt;/button&gt;
-&lt;button data-w4-icon-state="loading"&gt;Loading&lt;/button&gt;
-&lt;button data-w4-icon-state="disabled"&gt;Disabled&lt;/button&gt;
-&lt;button data-w4-icon-state="hidden"&gt;Hidden&lt;/button&gt;
-
-&lt;script&gt;
-document.querySelectorAll('[data-w4-icon-state]').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    window.W4NativeUI.Icon.setState('labIconTarget', btn.dataset.w4IconState);
-  });
-});
-&lt;/script&gt;</code></pre>
+&lt;button data-w4-icon-state="enabled" data-w4-target="labIconTarget"&gt;Clear&lt;/button&gt;
+&lt;button data-w4-icon-state="enabled" data-w4-target="labIconTarget"&gt;Enabled&lt;/button&gt;
+&lt;button data-w4-icon-state="active" data-w4-target="labIconTarget"&gt;Active&lt;/button&gt;
+&lt;button data-w4-icon-state="loading" data-w4-target="labIconTarget"&gt;Loading&lt;/button&gt;
+&lt;button data-w4-icon-state="disabled" data-w4-target="labIconTarget"&gt;Disabled&lt;/button&gt;
+&lt;button data-w4-icon-state="hidden" data-w4-target="labIconTarget"&gt;Hidden&lt;/button&gt;</code></pre>
                         </div>
                     </div>
                 </div>
@@ -438,15 +430,6 @@ document.querySelectorAll('[data-w4-icon-state]').forEach(function (btn) {
                     localStorage.setItem(storageKey, theme);
                 });
             }
-
-            document.querySelectorAll("[data-w4-icon-state]").forEach(function (button) {
-                button.addEventListener("click", function () {
-                    var state = button.getAttribute("data-w4-icon-state");
-                    if (window.W4NativeUI && window.W4NativeUI.Icon) {
-                        window.W4NativeUI.Icon.setState("labIconTarget", state);
-                    }
-                });
-            });
         });
     </script>
 </body>

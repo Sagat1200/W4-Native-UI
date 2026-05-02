@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -82,11 +82,11 @@
 
     <main class="w4-container w4-container-xl">
         <section class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center mt-12">Native UI Heading</h1>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Heading</h1>
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Heading:</h2>
+            <h1 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Heading:</h1>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 El componente <strong>Heading</strong> se utiliza para crear jerarquía tipográfica y estructura
@@ -95,7 +95,7 @@
                 accesibilidad se mantengan intactos.
 
             </p>
-            <h2 class="w4-heading w4-heading-h3 w4-heading-primary w4-heading-start">Casos de Uso Comunes:</h2>
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
             <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Títulos de página:</strong> Nivel H1 principal usando
                     <code>w4-heading-h1</code>.
@@ -110,7 +110,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes Semánticas</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Variantes Semánticas</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Colores de heading alineados al sistema de tokens.
             </p>
@@ -128,29 +128,29 @@
                         <div id="headingSemanticPreview" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
                             <div class="w4-stack w4-stack-sm">
-                                <h3 class="w4-heading w4-heading-h3 w4-heading-neutral">Heading Neutral</h3>
-                                <h3 class="w4-heading w4-heading-h3 w4-heading-primary">Heading Primary</h3>
-                                <h3 class="w4-heading w4-heading-h3 w4-heading-secondary">Heading Secondary</h3>
-                                <h3 class="w4-heading w4-heading-h3 w4-heading-accent">Heading Accent</h3>
-                                <h3 class="w4-heading w4-heading-h3 w4-heading-info">Heading Info</h3>
-                                <h3 class="w4-heading w4-heading-h3 w4-heading-success">Heading Success</h3>
-                                <h3 class="w4-heading w4-heading-h3 w4-heading-warning">Heading Warning</h3>
-                                <h3 class="w4-heading w4-heading-h3 w4-heading-error">Heading Error</h3>
-                                <h3 class="w4-heading w4-heading-h3 w4-heading-muted">Heading Muted</h3>
+                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-neutral">Heading Neutral</h3>
+                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-primary">Heading Primary</h3>
+                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-secondary">Heading Secondary</h3>
+                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-accent">Heading Accent</h3>
+                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-info">Heading Info</h3>
+                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-success">Heading Success</h3>
+                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-warning">Heading Warning</h3>
+                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-error">Heading Error</h3>
+                                <h3 class="w4-hdg w4-hdg-h3 w4-hdg-muted">Heading Muted</h3>
                             </div>
                         </div>
                         <div id="headingSemanticCode" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
                             <pre class="m-0"><code class="w4-text w4-text-xs">
-&lt;h3 class="w4-heading w4-heading-h3 w4-heading-neutral"&gt;Heading Neutral&lt;/h3&gt;
-&lt;h3 class="w4-heading w4-heading-h3 w4-heading-primary"&gt;Heading Primary&lt;/h3&gt;
-&lt;h3 class="w4-heading w4-heading-h3 w4-heading-secondary"&gt;Heading Secondary&lt;/h3&gt;
-&lt;h3 class="w4-heading w4-heading-h3 w4-heading-accent"&gt;Heading Accent&lt;/h3&gt;
-&lt;h3 class="w4-heading w4-heading-h3 w4-heading-info"&gt;Heading Info&lt;/h3&gt;
-&lt;h3 class="w4-heading w4-heading-h3 w4-heading-success"&gt;Heading Success&lt;/h3&gt;
-&lt;h3 class="w4-heading w4-heading-h3 w4-heading-warning"&gt;Heading Warning&lt;/h3&gt;
-&lt;h3 class="w4-heading w4-heading-h3 w4-heading-error"&gt;Heading Error&lt;/h3&gt;
-&lt;h3 class="w4-heading w4-heading-h3 w4-heading-muted"&gt;Heading Muted&lt;/h3&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-neutral"&gt;Heading Neutral&lt;/h3&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-primary"&gt;Heading Primary&lt;/h3&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-secondary"&gt;Heading Secondary&lt;/h3&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-accent"&gt;Heading Accent&lt;/h3&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-info"&gt;Heading Info&lt;/h3&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-success"&gt;Heading Success&lt;/h3&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-warning"&gt;Heading Warning&lt;/h3&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-error"&gt;Heading Error&lt;/h3&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-muted"&gt;Heading Muted&lt;/h3&gt;
 </code></pre>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Tamaños y Jerarquía</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Tamaños y Jerarquía</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Escalas tipográficas y aliases de encabezado.
             </p>
@@ -177,23 +177,23 @@
                         <div id="headingSizePreview" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
                             <div class="w4-stack w4-stack-sm">
-                                <h1 class="w4-heading w4-heading-h1">Heading H1</h1>
-                                <h2 class="w4-heading w4-heading-h2">Heading H2</h2>
-                                <h3 class="w4-heading w4-heading-h3">Heading H3</h3>
-                                <h4 class="w4-heading w4-heading-h4">Heading H4</h4>
-                                <h5 class="w4-heading w4-heading-h5">Heading H5</h5>
-                                <h6 class="w4-heading w4-heading-h6">Heading H6</h6>
+                                <h1 class="w4-hdg w4-hdg-h1">Heading H1</h1>
+                                <h2 class="w4-hdg w4-hdg-h2">Heading H2</h2>
+                                <h3 class="w4-hdg w4-hdg-h3">Heading H3</h3>
+                                <h4 class="w4-hdg w4-hdg-h4">Heading H4</h4>
+                                <h5 class="w4-hdg w4-hdg-h5">Heading H5</h5>
+                                <h6 class="w4-hdg w4-hdg-h6">Heading H6</h6>
                             </div>
                         </div>
                         <div id="headingSizeCode" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
                             <pre class="m-0"><code class="w4-text w4-text-xs">
-&lt;h1 class="w4-heading w4-heading-h1"&gt;Heading H1&lt;/h1&gt;
-&lt;h2 class="w4-heading w4-heading-h2"&gt;Heading H2&lt;/h2&gt;
-&lt;h3 class="w4-heading w4-heading-h3"&gt;Heading H3&lt;/h3&gt;
-&lt;h4 class="w4-heading w4-heading-h4"&gt;Heading H4&lt;/h4&gt;
-&lt;h5 class="w4-heading w4-heading-h5"&gt;Heading H5&lt;/h5&gt;
-&lt;h6 class="w4-heading w4-heading-h6"&gt;Heading H6&lt;/h6&gt;
+&lt;h1 class="w4-hdg w4-hdg-h1"&gt;Heading H1&lt;/h1&gt;
+&lt;h2 class="w4-hdg w4-hdg-h2"&gt;Heading H2&lt;/h2&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3"&gt;Heading H3&lt;/h3&gt;
+&lt;h4 class="w4-hdg w4-hdg-h4"&gt;Heading H4&lt;/h4&gt;
+&lt;h5 class="w4-hdg w4-hdg-h5"&gt;Heading H5&lt;/h5&gt;
+&lt;h6 class="w4-hdg w4-hdg-h6"&gt;Heading H6&lt;/h6&gt;
 </code></pre>
                         </div>
                     </div>
@@ -202,7 +202,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Alineación</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Alineación</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Control de alineación con modificadores start, center y end.
             </p>
@@ -219,16 +219,17 @@
                     <div class="w4-stack w4-stack-sm">
                         <div id="headingAlignPreview" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
-                            <h3 class="w4-heading w4-heading-h3 w4-heading-start">Alineado al inicio</h3>
-                            <h3 class="w4-heading w4-heading-h3 w4-heading-center">Alineado al centro</h3>
-                            <h3 class="w4-heading w4-heading-h3 w4-heading-end">Alineado al final</h3>
+                            <h3 class="w4-hdg w4-hdg-h3 w4-hdg-start">Alineado al inicio</h3>
+                            <h3 class="w4-hdg w4-hdg-h3 w4-hdg-center">Alineado al centro</h3>
+                            <h3 class="w4-hdg w4-hdg-h3 w4-hdg-end">Alineado al final</h3>
                         </div>
                         <div id="headingAlignCode" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
                             <pre class="m-0"><code class="w4-text w4-text-xs">
-&lt;h3 class="w4-heading w4-heading-h3 w4-heading-start"&gt;Alineado al inicio&lt;/h3&gt;
-&lt;h3 class="w4-heading w4-heading-h3 w4-heading-center"&gt;Alineado al centro&lt;/h3&gt;
-&lt;h3 class="w4-heading w4-heading-h3 w4-heading-end"&gt;Alineado al final&lt;/h3&gt;</code></pre>
+&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-start"&gt;Alineado al inicio&lt;/h3&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-center"&gt;Alineado al centro&lt;/h3&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-end"&gt;Alineado al final&lt;/h3&gt;
+</code></pre>
                         </div>
                     </div>
                 </div>
@@ -236,10 +237,10 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Escala Tipográfica</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Escala Tipográfica</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
-                Demostración de los modificadores de tamaño: <code>w4-heading-xs</code>, <code>w4-heading-sm</code>,
-                <code>w4-heading-md</code>, <code>w4-heading-lg</code> y <code>w4-heading-xl</code>.
+                Demostración de los modificadores de tamaño: <code>w4-hdg-xs</code>, <code>w4-hdg-sm</code>,
+                <code>w4-hdg-md</code>, <code>w4-hdg-lg</code> y <code>w4-hdg-xl</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-100 w4-panel-md">
@@ -255,21 +256,21 @@
                         <div id="headingScalePreview" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
                             <div class="w4-stack w4-stack-sm">
-                                <p class="w4-heading w4-heading-xs w4-heading-primary">w4-heading-xs</p>
-                                <p class="w4-heading w4-heading-sm w4-heading-primary">w4-heading-sm</p>
-                                <p class="w4-heading w4-heading-md w4-heading-primary">w4-heading-md</p>
-                                <p class="w4-heading w4-heading-lg w4-heading-primary">w4-heading-lg</p>
-                                <p class="w4-heading w4-heading-xl w4-heading-primary">w4-heading-xl</p>
+                                <p class="w4-hdg w4-hdg-xs w4-hdg-primary">w4-hdg-xs</p>
+                                <p class="w4-hdg w4-hdg-sm w4-hdg-primary">w4-hdg-sm</p>
+                                <p class="w4-hdg w4-hdg-md w4-hdg-primary">w4-hdg-md</p>
+                                <p class="w4-hdg w4-hdg-lg w4-hdg-primary">w4-hdg-lg</p>
+                                <p class="w4-hdg w4-hdg-xl w4-hdg-primary">w4-hdg-xl</p>
                             </div>
                         </div>
                         <div id="headingScaleCode" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
                             <pre class="m-0"><code class="w4-text w4-text-xs">
-&lt;p class="w4-heading w4-heading-xs w4-heading-primary"&gt;w4-heading-xs&lt;/p&gt;
-&lt;p class="w4-heading w4-heading-sm w4-heading-primary"&gt;w4-heading-sm&lt;/p&gt;
-&lt;p class="w4-heading w4-heading-md w4-heading-primary"&gt;w4-heading-md&lt;/p&gt;
-&lt;p class="w4-heading w4-heading-lg w4-heading-primary"&gt;w4-heading-lg&lt;/p&gt;
-&lt;p class="w4-heading w4-heading-xl w4-heading-primary"&gt;w4-heading-xl&lt;/p&gt;</code></pre>
+&lt;p class="w4-hdg w4-hdg-xs w4-hdg-primary"&gt;w4-hdg-xs&lt;/p&gt;
+&lt;p class="w4-hdg w4-hdg-sm w4-hdg-primary"&gt;w4-hdg-sm&lt;/p&gt;
+&lt;p class="w4-hdg w4-hdg-md w4-hdg-primary"&gt;w4-hdg-md&lt;/p&gt;
+&lt;p class="w4-hdg w4-hdg-lg w4-hdg-primary"&gt;w4-hdg-lg&lt;/p&gt;
+&lt;p class="w4-hdg w4-hdg-xl w4-hdg-primary"&gt;w4-hdg-xl&lt;/p&gt;</code></pre>
                         </div>
                     </div>
                 </div>
@@ -277,14 +278,14 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Visuales</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Visuales</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Estados soportados por clase y por atributo <code>data-w4-state</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-grid w4-grid-2 w4-gap-md">
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Clase</h3>
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Por Clase</h3>
                     <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
                         <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                             <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
@@ -296,27 +297,27 @@
                             <div id="headingClassPreview" data-w4-tab-panel
                                 class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
                                 <div class="w4-stack w4-stack-sm">
-                                    <h4 class="w4-heading w4-heading-h4 w4-heading-primary w4-heading-active">Heading
+                                    <h4 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-active">Heading
                                         Active</h4>
-                                    <h4 class="w4-heading w4-heading-h4 w4-heading-secondary w4-heading-disabled">
+                                    <h4 class="w4-hdg w4-hdg-h4 w4-hdg-secondary w4-hdg-disabled">
                                         Heading Disabled</h4>
-                                    <h4 class="w4-heading w4-heading-h4 w4-heading-info">Heading Visible</h4>
+                                    <h4 class="w4-hdg w4-hdg-h4 w4-hdg-info">Heading Visible</h4>
                                 </div>
                             </div>
                             <div id="headingClassCode" data-w4-tab-panel
                                 class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
                                 hidden aria-hidden="true">
                                 <pre class="m-0"><code class="w4-text w4-text-xs">
-&lt;h4 class="w4-heading w4-heading-h4 w4-heading-primary w4-heading-active"&gt;Active&lt;/h4&gt;
-&lt;h4 class="w4-heading w4-heading-h4 w4-heading-secondary w4-heading-disabled"&gt;Disabled&lt;/h4&gt;
-&lt;h4 class="w4-heading w4-heading-h4 w4-heading-error w4-heading-hidden"&gt;Hidden&lt;/h4&gt;</code></pre>
+&lt;h4 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-active"&gt;Active&lt;/h4&gt;
+&lt;h4 class="w4-hdg w4-hdg-h4 w4-hdg-secondary w4-hdg-disabled"&gt;Disabled&lt;/h4&gt;
+&lt;h4 class="w4-hdg w4-hdg-h4 w4-hdg-info w4-hdg-hidden"&gt;Hidden&lt;/h4&gt;</code></pre>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Atributo</h3>
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Por Atributo</h3>
                     <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
                         <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                             <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
@@ -328,11 +329,11 @@
                             <div id="headingAttrPreview" data-w4-tab-panel
                                 class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
                                 <div class="w4-stack w4-stack-sm">
-                                    <h4 class="w4-heading w4-heading-h4 w4-heading-primary" data-w4-state="active">
+                                    <h4 class="w4-hdg w4-hdg-h4 w4-hdg-primary" data-w4-state="active">
                                         data-w4-state="active"</h4>
-                                    <h4 class="w4-heading w4-heading-h4 w4-heading-warning" data-w4-state="disabled">
+                                    <h4 class="w4-hdg w4-hdg-h4 w4-hdg-warning" data-w4-state="disabled">
                                         data-w4-state="disabled"</h4>
-                                    <h4 class="w4-heading w4-heading-h4 w4-heading-error" data-w4-state="hidden">
+                                    <h4 class="w4-hdg w4-hdg-h4 w4-hdg-info" data-w4-state="hidden">
                                         data-w4-state="hidden"</h4>
                                 </div>
                             </div>
@@ -340,9 +341,9 @@
                                 class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
                                 hidden aria-hidden="true">
                                 <pre class="m-0"><code class="w4-text w4-text-xs">
-&lt;h4 class="w4-heading w4-heading-h4 w4-heading-primary" data-w4-state="active"&gt;...&lt;/h4&gt;
-&lt;h4 class="w4-heading w4-heading-h4 w4-heading-warning" data-w4-state="disabled"&gt;...&lt;/h4&gt;
-&lt;h4 class="w4-heading w4-heading-h4 w4-heading-error" data-w4-state="hidden"&gt;...&lt;/h4&gt;</code></pre>
+&lt;h4 class="w4-hdg w4-hdg-h4 w4-hdg-primary" data-w4-state="active"&gt;...&lt;/h4&gt;
+&lt;h4 class="w4-hdg w4-hdg-h4 w4-hdg-warning" data-w4-state="disabled"&gt;...&lt;/h4&gt;
+&lt;h4 class="w4-hdg w4-hdg-h4 w4-hdg-info" data-w4-state="hidden"&gt;...&lt;/h4&gt;</code></pre>
                             </div>
                         </div>
                     </div>
@@ -351,7 +352,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Nativos Javascript Soportados al Componente
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Nativos Javascript Soportados al Componente
                 Heading</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Prueba de cambios de estado del componente con <code>data-w4-state</code>.
@@ -371,30 +372,29 @@
                     <div class="w4-stack w4-stack-sm">
                         <div id="headingJsPreview" data-w4-tab-panel
                             class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
-                            <h3 id="labHeadingTarget" class="w4-heading w4-heading-h3 w4-heading-primary mb-6">
+                            <h3 id="labHeadingTarget" class="w4-hdg w4-hdg-h3 w4-hdg-primary mb-6">
                                 Heading de Prueba
                             </h3>
                             <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                                <button class="w4-btn w4-btn-sm w4-btn-neutral"
-                                    onclick="document.getElementById('labHeadingTarget').removeAttribute('data-w4-state')">Enabled</button>
-                                <button class="w4-btn w4-btn-sm w4-btn-secondary"
-                                    onclick="document.getElementById('labHeadingTarget').setAttribute('data-w4-state', 'active')">Active</button>
-                                <button class="w4-btn w4-btn-sm w4-btn-warning"
-                                    onclick="document.getElementById('labHeadingTarget').setAttribute('data-w4-state', 'disabled')">Disabled</button>
-                                <button class="w4-btn w4-btn-sm w4-btn-error"
-                                    onclick="document.getElementById('labHeadingTarget').setAttribute('data-w4-state', 'hidden')">Hidden</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-neutral"
+                                    data-w4-heading-state="enabled" data-w4-target="labHeadingTarget">Enabled</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-secondary"
+                                    data-w4-heading-state="active" data-w4-target="labHeadingTarget">Active</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
+                                    data-w4-heading-state="disabled" data-w4-target="labHeadingTarget">Disabled</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-error"
+                                    data-w4-heading-state="hidden" data-w4-target="labHeadingTarget">Hidden</button>
                             </div>
                         </div>
                         <div id="headingJsCode" data-w4-tab-panel
                             class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
                             aria-hidden="true">
-                            <pre
-                                class="m-0"><code class="w4-text w4-text-xs">
-&lt;h3 id="labHeadingTarget" class="w4-heading w4-heading-h3 w4-heading-primary"&gt;Heading de Prueba&lt;/h3&gt;
-&lt;button onclick="document.getElementById('labHeadingTarget').removeAttribute('data-w4-state')"&gt;Enabled&lt;/button&gt;
-&lt;button onclick="document.getElementById('labHeadingTarget').setAttribute('data-w4-state', 'active')"&gt;Active&lt;/button&gt;
-&lt;button onclick="document.getElementById('labHeadingTarget').setAttribute('data-w4-state', 'disabled')"&gt;Disabled&lt;/button&gt;
-&lt;button onclick="document.getElementById('labHeadingTarget').setAttribute('data-w4-state', 'hidden')"&gt;Hidden&lt;/button&gt;</code></pre>
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;h3 id="labHeadingTarget" class="w4-hdg w4-hdg-h3 w4-hdg-primary"&gt;Heading de Prueba&lt;/h3&gt;
+&lt;button data-w4-heading-state="enabled" data-w4-target="labHeadingTarget"&gt;Enabled&lt;/button&gt;
+&lt;button data-w4-heading-state="active" data-w4-target="labHeadingTarget"&gt;Active&lt;/button&gt;
+&lt;button data-w4-heading-state="disabled" data-w4-target="labHeadingTarget"&gt;Disabled&lt;/button&gt;
+&lt;button data-w4-heading-state="hidden" data-w4-target="labHeadingTarget"&gt;Hidden&lt;/button&gt;</code></pre>
                         </div>
                     </div>
                 </div>

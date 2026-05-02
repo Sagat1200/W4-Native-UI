@@ -1637,6 +1637,7 @@ html[data-theme] body {
    ========================================= */
 
 @layer components {
+.w4-hdg,
 .w4-heading {
   margin: 0;
   color: var(--w4-heading-color, hsl(var(--w4-base-content)));
@@ -1650,74 +1651,97 @@ html[data-theme] body {
    SEMANTIC VARIANTS (Color System)
    ---------------------------------- */
 
+.w4-hdg-primary,   
 .w4-heading-primary {
    --w4-heading-color: hsl(var(--w4-primary));
 }
 
+.w4-hdg-primary-content,
 .w4-heading-primary-content {
   --w4-heading-color: hsl(var(--w4-primary-content));
 }
 
+.w4-hdg-secondary,
 .w4-heading-secondary {
   --w4-heading-color: hsl(var(--w4-secondary));
 }
 
+.w4-hdg-secondary-content,
 .w4-heading-secondary-content {
   --w4-heading-color: hsl(var(--w4-secondary-content));
 }
 
+.w4-hdg-accent,
 .w4-heading-accent {
   --w4-heading-color: hsl(var(--w4-accent));
 }
 
+.w4-hdg-accent-content,
 .w4-heading-accent-content {
   --w4-heading-color: hsl(var(--w4-accent-content));
 }
 
+.w4-hdg-neutral,
 .w4-heading-neutral {
   --w4-heading-color: hsl(var(--w4-neutral));
 }
 
+.w4-hdg-neutral-content,
 .w4-heading-neutral-content {
   --w4-heading-color: hsl(var(--w4-neutral-content));
 }
 
+.w4-hdg-base,
+.w4-heading-base {
+  --w4-heading-color: hsl(var(--w4-base));
+}
+
+.w4-hdg-base-content,
 .w4-heading-base-content {
   --w4-heading-color: hsl(var(--w4-base-content));
 }
 
+.w4-hdg-info,
 .w4-heading-info {
   --w4-heading-color: hsl(var(--w4-info));
 }
 
+.w4-hdg-info-content,
 .w4-heading-info-content {
   --w4-heading-color: hsl(var(--w4-info-content));
 }
 
+.w4-hdg-success,
 .w4-heading-success {
   --w4-heading-color: hsl(var(--w4-success));
 }
 
+.w4-hdg-success-content,
 .w4-heading-success-content {
   --w4-heading-color: hsl(var(--w4-success-content));
 }
 
+.w4-hdg-warning,
 .w4-heading-warning {
   --w4-heading-color: hsl(var(--w4-warning));
 }
 
+.w4-hdg-warning-content,
 .w4-heading-warning-content {
   --w4-heading-color: hsl(var(--w4-warning-content));
 }
 
+.w4-hdg-error,
 .w4-heading-error {
   --w4-heading-color: hsl(var(--w4-error));
 }
 
+.w4-hdg-error-content,
 .w4-heading-error-content {
   --w4-heading-color: hsl(var(--w4-error-content));
 }
 
+.w4-hdg-muted,
 .w4-heading-muted {
   opacity: 0.75;
 }
@@ -1725,47 +1749,59 @@ html[data-theme] body {
 /* ----------------------------------
    SIZE SCALES
    ---------------------------------- */
+
+.w4-hdg-xs,
 .w4-heading-xs {
   --w4-heading-font-size: 0.875rem;
 }
 
+.w4-hdg-sm,
 .w4-heading-sm {
   --w4-heading-font-size: 1rem;
 }
 
+.w4-hdg-md,
 .w4-heading-md {
   --w4-heading-font-size: 1.25rem;
 }
 
+.w4-hdg-lg,
 .w4-heading-lg {
   --w4-heading-font-size: 1.5rem;
 }
 
+.w4-hdg-xl,
 .w4-heading-xl {
   --w4-heading-font-size: 2rem;
 }
 
 /* Header Tags Aliases */
+.w4-hdg-h1,
 .w4-heading-h1 {
   --w4-heading-font-size: 2rem;
 }
 
+.w4-hdg-h2,
 .w4-heading-h2 {
   --w4-heading-font-size: 1.5rem;
 }
 
+.w4-hdg-h3,
 .w4-heading-h3 {
   --w4-heading-font-size: 1.25rem;
 }
 
+.w4-hdg-h4,
 .w4-heading-h4 {
   --w4-heading-font-size: 1.125rem;
 }
 
+.w4-hdg-h5,
 .w4-heading-h5 {
   --w4-heading-font-size: 1rem;
 }
 
+.w4-hdg-h6,
 .w4-heading-h6 {
   --w4-heading-font-size: 0.875rem;
 }
@@ -1773,14 +1809,19 @@ html[data-theme] body {
 /* ----------------------------------
    ALIGNMENT MODIFIERS
    ---------------------------------- */
+
+
+.w4-hdg-start,
 .w4-heading-start {
   text-align: start;
 }
 
+.w4-hdg-center,
 .w4-heading-center {
   text-align: center;
 }
 
+.w4-hdg-end,
 .w4-heading-end {
   text-align: end;
 }
@@ -1788,17 +1829,21 @@ html[data-theme] body {
 /* ----------------------------------
    STATES & MODIFIERS (HeadingComponentState Enum)
    ---------------------------------- */
+
+.w4-hdg-hidden,
 .w4-heading-hidden,
 .w4-heading[data-w4-state~="hidden"] {
   display: none !important;
 }
 
+.w4-hdg-disabled,
 .w4-heading-disabled,
 .w4-heading[data-w4-state~="disabled"] {
   opacity: var(--w4-disabled-opacity, 0.6) !important;
   pointer-events: none !important;
 }
 
+.w4-hdg-active,
 .w4-heading-active,
 .w4-heading[data-w4-state~="active"] {
   text-decoration: underline;

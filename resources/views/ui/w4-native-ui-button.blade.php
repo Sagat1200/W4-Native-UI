@@ -533,16 +533,16 @@
                                         Prueba</button>
                                 </div>
                                 <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                                    <button class="w4-btn w4-btn-sm w4-btn-neutral"
-                                        onclick="document.getElementById('labButtonTarget').removeAttribute('data-w4-state')">Enabled</button>
-                                    <button class="w4-btn w4-btn-sm w4-btn-secondary"
-                                        onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'active')">Active</button>
-                                    <button class="w4-btn w4-btn-sm w4-btn-info"
-                                        onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'loading')">Loading</button>
-                                    <button class="w4-btn w4-btn-sm w4-btn-warning"
-                                        onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'readonly')">Readonly</button>
-                                    <button class="w4-btn w4-btn-sm w4-btn-error"
-                                        onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'disabled')">Disabled</button>
+                                    <button type="button" class="w4-btn w4-btn-sm w4-btn-neutral"
+                                        data-w4-button-state="enabled" data-w4-target="labButtonTarget">Enabled</button>
+                                    <button type="button" class="w4-btn w4-btn-sm w4-btn-secondary"
+                                        data-w4-button-state="active" data-w4-target="labButtonTarget">Active</button>
+                                    <button type="button" class="w4-btn w4-btn-sm w4-btn-info"
+                                        data-w4-button-state="loading" data-w4-target="labButtonTarget">Loading</button>
+                                    <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
+                                        data-w4-button-state="readonly" data-w4-target="labButtonTarget">Readonly</button>
+                                    <button type="button" class="w4-btn w4-btn-sm w4-btn-error"
+                                        data-w4-button-state="disabled" data-w4-target="labButtonTarget">Disabled</button>
                                 </div>
                             </div>
                             <div id="buttonJsStateCode" data-w4-tab-panel
@@ -551,11 +551,11 @@
                                 <pre
                                     class="m-0"><code class="w4-text w4-text-xs">
 &lt;button id="labButtonTarget" class="w4-button w4-button-primary w4-button-md"&gt;Botón de Prueba&lt;/button&gt;
-&lt;button onclick="document.getElementById('labButtonTarget').removeAttribute('data-w4-state')"&gt;Enabled&lt;/button&gt;
-&lt;button onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'active')"&gt;Active&lt;/button&gt;
-&lt;button onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'loading')"&gt;Loading&lt;/button&gt;
-&lt;button onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'readonly')"&gt;Readonly&lt;/button&gt;
-&lt;button onclick="document.getElementById('labButtonTarget').setAttribute('data-w4-state', 'disabled')"&gt;Disabled&lt;/button&gt;</code></pre>
+&lt;button data-w4-button-state="enabled" data-w4-target="labButtonTarget"&gt;Enabled&lt;/button&gt;
+&lt;button data-w4-button-state="active" data-w4-target="labButtonTarget"&gt;Active&lt;/button&gt;
+&lt;button data-w4-button-state="loading" data-w4-target="labButtonTarget"&gt;Loading&lt;/button&gt;
+&lt;button data-w4-button-state="readonly" data-w4-target="labButtonTarget"&gt;Readonly&lt;/button&gt;
+&lt;button data-w4-button-state="disabled" data-w4-target="labButtonTarget"&gt;Disabled&lt;/button&gt;</code></pre>
                             </div>
                         </div>
                     </div>

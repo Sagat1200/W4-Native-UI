@@ -12,6 +12,7 @@ export default class W4Heading {
     static init(root = document) {
         // Register state handlers for the Heading component
         this.registerStateHandlers();
+        this.bindStateTriggers(root);
     }
 
     static resolveElement(targetOrId) {
@@ -25,17 +26,43 @@ export default class W4Heading {
         const element = this.resolveElement(targetOrId);
         if (!element) return;
 
+        this.resetState(element);
+
         const nextState = String(state || 'enabled').toLowerCase();
 
-        if (nextState === 'enabled') {
-            element.removeAttribute('data-w4-state');
-        } else {
+        if (nextState !== 'enabled') {
             element.setAttribute('data-w4-state', nextState);
+        }
+
+        if (nextState === 'active') {
+            element.classList.add('w4-heading-active');
+            element.setAttribute('aria-current', 'true');
+        } else if (nextState === 'disabled') {
+            element.classList.add('w4-heading-disabled');
+            element.setAttribute('aria-disabled', 'true');
+        } else if (nextState === 'hidden') {
+            element.classList.add('w4-heading-hidden');
+            element.setAttribute('aria-hidden', 'true');
         }
 
         if (typeof W4Core.syncElement === 'function') {
             W4Core.syncElement(element);
         }
+    }
+
+    static bindStateTriggers(root = document) {
+        if (this.triggersBound) return;
+
+        root.addEventListener('click', (event) => {
+            const trigger = event.target.closest('[data-w4-heading-state]');
+            if (!trigger) return;
+
+            const state = trigger.getAttribute('data-w4-heading-state') || 'enabled';
+            const targetId = trigger.getAttribute('data-w4-target') || 'labHeadingTarget';
+            this.setState(targetId, state);
+        });
+
+        this.triggersBound = true;
     }
 
     /**
@@ -68,5 +95,14 @@ export default class W4Heading {
 
     static handleHidden({ element }) {
         element.setAttribute('aria-hidden', 'true');
+    }
+
+    static resetState(element) {
+        element.classList.remove('w4-heading-active', 'w4-heading-disabled', 'w4-heading-hidden');
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
+        element.removeAttribute('aria-current');
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
     }
 }

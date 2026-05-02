@@ -15,6 +15,47 @@ export default class W4IconButton {
         
         // Register state handlers for the IconButton component
         this.registerStateHandlers();
+        this.bindStateTriggers(root);
+    }
+
+    static resolveElement(targetOrId) {
+        if (!targetOrId) return null;
+        if (targetOrId instanceof HTMLElement) return targetOrId;
+        if (typeof targetOrId === 'string') return document.getElementById(targetOrId);
+        return null;
+    }
+
+    static setState(targetOrId, state = 'enabled') {
+        const element = this.resolveElement(targetOrId);
+        if (!element) return;
+
+        this.resetState(element);
+
+        const nextState = String(state || 'enabled').toLowerCase();
+        if (nextState !== 'enabled') {
+            element.setAttribute('data-w4-state', nextState);
+        }
+
+        if (nextState === 'active') {
+            element.classList.add('w4-icon-button-active');
+            element.setAttribute('aria-pressed', 'true');
+        } else if (nextState === 'loading') {
+            element.classList.add('w4-icon-button-loading');
+            element.setAttribute('aria-busy', 'true');
+            element.setAttribute('disabled', 'true');
+        } else if (nextState === 'readonly') {
+            element.classList.add('w4-icon-button-readonly');
+            element.setAttribute('readonly', 'true');
+            element.setAttribute('disabled', 'true');
+        } else if (nextState === 'disabled') {
+            element.classList.add('w4-icon-button-disabled');
+            element.setAttribute('disabled', 'true');
+            element.setAttribute('aria-disabled', 'true');
+        }
+
+        if (typeof W4Core.syncElement === 'function') {
+            W4Core.syncElement(element);
+        }
     }
 
     /**
@@ -36,7 +77,9 @@ export default class W4IconButton {
         element.removeAttribute('disabled');
         element.removeAttribute('readonly');
         element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-readonly');
         element.removeAttribute('aria-busy');
+        if ('readOnly' in element) element.readOnly = false;
     }
 
     static handleDisabled({ element }) {
@@ -59,5 +102,33 @@ export default class W4IconButton {
         if (element.tagName === 'BUTTON') {
             element.setAttribute('disabled', 'true');
         }
+    }
+
+    static bindStateTriggers(root = document) {
+        if (this.triggersBound) return;
+
+        root.addEventListener('click', (event) => {
+            const trigger = event.target.closest('[data-w4-icon-button-state]');
+            if (!trigger) return;
+
+            const state = trigger.getAttribute('data-w4-icon-button-state') || 'enabled';
+            const targetId = trigger.getAttribute('data-w4-target') || 'labIconButtonTarget';
+            this.setState(targetId, state);
+        });
+
+        this.triggersBound = true;
+    }
+
+    static resetState(element) {
+        element.classList.remove('w4-icon-button-active', 'w4-icon-button-loading', 'w4-icon-button-disabled', 'w4-icon-button-readonly');
+        element.removeAttribute('disabled');
+        element.removeAttribute('readonly');
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-readonly');
+        element.removeAttribute('aria-busy');
+        element.removeAttribute('aria-pressed');
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
+        if ('readOnly' in element) element.readOnly = false;
     }
 }
