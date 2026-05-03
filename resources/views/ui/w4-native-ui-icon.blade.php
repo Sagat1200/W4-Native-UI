@@ -123,7 +123,7 @@
                     <div class="w4-stack w4-stack-sm">
                         <div id="iconSemanticPreview" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
-                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-stack-center">
                                 <i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-neutral" aria-hidden="true"></i>
                                 <i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-primary" aria-hidden="true"></i>
                                 <i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-secondary"

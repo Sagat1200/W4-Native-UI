@@ -156,14 +156,14 @@
             </div>
         </section>
 
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Ejemplos Basicos</h2>
+        {{-- <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Ejemplo Basico</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
-                Casos basicos para formularios, acciones destructivas, navegacion y procesamiento asincrono.
+                Procesamiento asincrono interno entre boton e Icono.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                <div class="w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-sm w4-stack-center">
                     <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
                         <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
                             data-w4-target="buttonBasicPreview">Vista previa</button>
@@ -173,55 +173,27 @@
                     <div class="w4-stack w4-stack-sm">
                         <div id="buttonBasicPreview" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
-                            <div class="w4-stack w4-stack-vertical w4-stack-md">
-                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                                    <span class="w4-text w4-text-sm w4-text-neutral-content">Formulario:</span>
-                                    <button class="w4-btn w4-btn-primary">Guardar</button>
-                                    <button class="w4-btn w4-btn-secondary">Enviar</button>
-                                    <button class="w4-btn w4-btn-ghost">Cancelar</button>
-                                </div>
-                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                                    <span class="w4-text w4-text-sm w4-text-neutral-content">Accion destructiva:</span>
-                                    <button class="w4-btn w4-btn-error">Eliminar Registro</button>
-                                </div>
-                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                                    <span class="w4-text w4-text-sm w4-text-neutral-content">Navegacion:</span>
-                                    <button class="w4-btn w4-btn-link">Ir al Dashboard</button>
-                                    <button class="w4-btn w4-btn-outline">Ver Detalles</button>
-                                </div>
-                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                                    <span class="w4-text w4-text-sm w4-text-neutral-content">Procesamiento:</span>
-                                    <button class="w4-btn w4-btn-info w4-btn-md" data-w4-state="loading">
-                                        <i class=" fa-solid fa-rotate w4-icon w4-icon-md w4-icon-secondary
-                                        w4-icon-spin"></i>Procesando...
-                                    </button>
-                                </div>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                <span class="w4-text w4-text-sm w4-text-neutral-content">Procesamiento:</span>
+                                <button class="w4-btn w4-btn-info w4-btn-md" data-w4-state="loading">
+                                    <i class=" fa-solid fa-rotate w4-icon w4-icon-md w4-icon-secondary"
+                                        data-w4-state="loading"></i>Procesando...
+                                </button>
                             </div>
                         </div>
-                        <div id="buttonBasicCode" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
-                            <pre
-                                class="m-0"><code>
-&lt;!-- Formularios --&gt;
-&lt;button class="w4-btn w4-btn-primary"&gt;Guardar&lt;/button&gt;
-&lt;button class="w4-btn w4-btn-secondary"&gt;Enviar&lt;/button&gt;
-&lt;button class="w4-btn w4-btn-ghost"&gt;Cancelar&lt;/button&gt;
-
-&lt;!-- Accion destructiva --&gt;
-&lt;button class="w4-btn w4-btn-error"&gt;Eliminar Registro&lt;/button&gt;
-
-&lt;!-- Navegacion --&gt;
-&lt;button class="w4-btn w4-btn-link"&gt;Ir al Dashboard&lt;/button&gt;
-&lt;button class="w4-btn w4-btn-outline"&gt;Ver Detalles&lt;/button&gt;
-
+                    </div>
+                    <div id="buttonBasicCode" data-w4-tab-panel
+                        class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                        <pre
+                            class="m-0"><code>
 &lt;!-- Procesamiento --&gt;
 &lt;button class="w4-btn w4-btn-info w4-btn-md" data-w4-state="loading"&gt;
-&lt;i class=" fa-solid fa-rotate w4-icon w4-icon-xl w4-icon-secondary w4-icon-spin"&gt;&lt;/i&gt;Procesando...&lt;/button&gt;</code></pre>
-                        </div>
+&lt;i class="fa-solid fa-rotate w4-icon w4-icon-md w4-icon-secondary" data-w4-state="loading"&gt;Procesando...&lt;/button&gt;</code></pre>
                     </div>
                 </div>
             </div>
-        </section>
+            </div>
+        </section> --}}
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Botones con semantica de contorno</h2>
@@ -588,9 +560,9 @@
                     <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
                         <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                             <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
-                                data-w4-target="buttonJsStatePreview">Vista</button>
+                                data-w4-target="buttonJsStatePreview">Vista previa</button>
                             <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
-                                data-w4-target="buttonJsStateCode">Codigo</button>
+                                data-w4-target="buttonJsStateCode">Codigo HTML</button>
                         </div>
                         <div class="w4-stack w4-stack-sm">
                             <div id="buttonJsStatePreview" data-w4-tab-panel
@@ -598,11 +570,13 @@
                                 <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
                                     <button id="labButtonTarget" class="w4-btn w4-btn-primary w4-btn-md mb-6">Botón de
                                         Prueba
-                                        <i class="fa-solid fa-rotate w4-icon w4-icon-md w4-icon-info"></i>
+                                        <i
+                                            class="fa-solid fa-rotate w4-icon w4-icon-md w4-icon-info w4-btn-loading-icon"></i>
                                     </button>
                                 </div>
                                 <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                                    <button type="button" class="w4-btn w4-btn-sm w4-btn-neutral"
+
+                                    <button type="button" class="w4-btn w4-btn-sm w4-btn-primary"
                                         data-w4-button-state="enabled" data-w4-target="labButtonTarget">Enabled</button>
 
                                     <button type="button" class="w4-btn w4-btn-sm w4-btn-secondary"
@@ -611,9 +585,9 @@
                                     <button type="button" class="w4-btn w4-btn-sm w4-btn-info"
                                         data-w4-button-state="loading" data-w4-target="labButtonTarget">Loading</button>
 
-                                    <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
+                                    {{-- <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
                                         data-w4-button-state="readonly"
-                                        data-w4-target="labButtonTarget">Readonly</button>
+                                        data-w4-target="labButtonTarget">Readonly</button> --}}
 
                                     <button type="button" class="w4-btn w4-btn-sm w4-btn-error"
                                         data-w4-button-state="disabled"
@@ -626,7 +600,7 @@
                                 <pre class="m-0"><code class="w4-text w4-text-xs">
 &lt;button id="labButtonTarget" class="w4-btn w4-btn-primary w4-btn-md"&gt;
   Botón de Prueba
-  &lt;i class="fa-solid fa-rotate w4-icon w4-icon-md"&gt;&lt;/i&gt;
+  &lt;i class="fa-solid fa-rotate w4-icon w4-icon-md w4-btn-loading-icon"&gt;&lt;/i&gt;
 &lt;/button&gt;
 &lt;button data-w4-button-state="enabled" data-w4-target="labButtonTarget"&gt;Clear&lt;/button&gt;
 &lt;button data-w4-button-state="enabled" data-w4-target="labButtonTarget"&gt;Enabled&lt;/button&gt;

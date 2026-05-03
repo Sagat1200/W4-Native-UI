@@ -120,17 +120,18 @@
                     <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
                         data-w4-component="tab">
                         <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
-                            data-w4-target="headingSemanticPreview">Vista</button>
+                            data-w4-target="headingSemanticPreview">Vista Previa</button>
                         <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
-                            data-w4-target="headingSemanticCode">Codigo</button>
+                            data-w4-target="headingSemanticCode">Código HTML</button>
                     </div>
                     <div class="w4-stack w4-stack-sm">
                         <div id="headingSemanticPreview" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm">
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
                             <div class="w4-grid w4-grid-4 w4-grid-bordered-primary">
-                                {{-- <div class="w4-panel w4-panel-base-100 w4-panel-xs">
-                                    <h6 class="w4-hdg w4-hdg-h6 w4-hdg-neutral">Heading Neutral</h6>
-                                </div> --}}
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <h3 class="w4-hdg w4-hdg-h3 w4-hdg-center">Heading Neutral
+                                    </h3>
+                                </div>
                                 <div class="w4-panel w4-panel-base-100 w4-panel-xs">
                                     <h3 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-center">Heading Primary</h3>
                                 </div>
@@ -160,7 +161,7 @@
                         <div id="headingSemanticCode" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
                             <pre class="m-0"><code class="w4-text w4-text-xs">
-&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-neutral"&gt;Heading Neutral&lt;/h3&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3"&gt;Heading Neutral&lt;/h3&gt;
 &lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-primary"&gt;Heading Primary&lt;/h3&gt;
 &lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-secondary"&gt;Heading Secondary&lt;/h3&gt;
 &lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-accent"&gt;Heading Accent&lt;/h3&gt;
@@ -289,6 +290,44 @@
 &lt;p class="w4-hdg w4-hdg-md w4-hdg-primary"&gt;w4-hdg-md&lt;/p&gt;
 &lt;p class="w4-hdg w4-hdg-lg w4-hdg-primary"&gt;w4-hdg-lg&lt;/p&gt;
 &lt;p class="w4-hdg w4-hdg-xl w4-hdg-primary"&gt;w4-hdg-xl&lt;/p&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Ejemplos de uso</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Ejemplo visual para destacar informacion en una landing page usando jerarquia y color.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="headingHeroPreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="headingHeroCode">Código HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="headingHeroPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-md">
+                            <p class="w4-hdg w4-hdg-sm w4-hdg-secondary w4-hdg-center">NUEVA COLECCION 2026</p>
+                            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-center">Disena Interfaces Que</h2>
+                            <h3 class="w4-hdg w4-hdg-h3 w4-hdg-accent w4-hdg-center">Convierten Mas Rapido</h3>
+                            <p class="w4-text w4-text-base w4-text-neutral-content w4-text-center">
+                                Combina variantes <strong>Primary</strong> y <strong>Accent</strong> para dirigir la
+                                atencion
+                                del usuario al mensaje principal.
+                            </p>
+                        </div>
+                        <div id="headingHeroCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class="w4-hdg w4-hdg-sm w4-hdg-secondary w4-hdg-center"&gt;NUEVA COLECCION 2026&lt;/p&gt;
+&lt;h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-center"&gt;Disena Interfaces Que&lt;/h2&gt;
+&lt;h3 class="w4-hdg w4-hdg-h3 w4-hdg-accent w4-hdg-center"&gt;Convierten Mas Rapido&lt;/h3&gt;</code></pre>
                         </div>
                     </div>
                 </div>

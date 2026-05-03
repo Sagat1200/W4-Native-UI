@@ -36,7 +36,9 @@ export default class W4Button {
         element.removeAttribute('disabled');
         element.removeAttribute('readonly');
         element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-readonly');
         element.removeAttribute('aria-busy');
+        if ('readOnly' in element) element.readOnly = false;
     }
 
     static handleDisabled({ element }) {
@@ -55,10 +57,12 @@ export default class W4Button {
 
     static handleReadonly({ element }) {
         element.setAttribute('readonly', 'true');
+        element.setAttribute('aria-readonly', 'true');
         // If it's a native button, readonly doesn't exist natively, so we mimic it with disabled
         if (element.tagName === 'BUTTON') {
             element.setAttribute('disabled', 'true');
         }
+        if ('readOnly' in element) element.readOnly = true;
     }
 
     /**
@@ -88,7 +92,9 @@ export default class W4Button {
         } else if (nextState === 'readonly') {
             element.classList.add('w4-button-readonly');
             element.setAttribute('readonly', 'true');
+            element.setAttribute('aria-readonly', 'true');
             element.setAttribute('disabled', 'true');
+            if ('readOnly' in element) element.readOnly = true;
         } else if (nextState === 'disabled') {
             element.classList.add('w4-button-disabled');
             element.setAttribute('disabled', 'true');
@@ -126,9 +132,11 @@ export default class W4Button {
         element.removeAttribute('disabled');
         element.removeAttribute('readonly');
         element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-readonly');
         element.removeAttribute('aria-busy');
         element.removeAttribute('aria-pressed');
         element.removeAttribute('data-w4-state');
         element.removeAttribute('data-w4-hook');
+        if ('readOnly' in element) element.readOnly = false;
     }
 }

@@ -105,75 +105,6 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Ejemplo De Barra De Herramientas</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
-                Composición típica de acciones de edición usando icon buttons compactos.
-            </p>
-            <hr class="w4-divider w4-divider-primary">
-            <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                <div class="w4-stack w4-stack-sm w4-stack-center">
-                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
-                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
-                            data-w4-target="iconButtonToolbarPreview">Vista Previa</button>
-                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
-                            data-w4-target="iconButtonToolbarCode">Código HTML</button>
-                    </div>
-                    <div class="w4-stack w4-stack-sm w4-stack-center">
-                        <div id="iconButtonToolbarPreview" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
-                            <div class="w4-panel w4-panel-base-200 w4-panel-sm">
-                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                                    <button
-                                        class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-secondary"
-                                        aria-label="Negrita">
-                                        <i class="fa-solid fa-bold"></i>
-                                    </button>
-                                    <button
-                                        class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-secondary"
-                                        aria-label="Cursiva">
-                                        <i class="fa-solid fa-italic"></i>
-                                    </button>
-                                    <button
-                                        class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-secondary"
-                                        aria-label="Subrayado">
-                                        <i class="fa-solid fa-underline"></i>
-                                    </button>
-                                    <button
-                                        class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-info"
-                                        aria-label="Alinear">
-                                        <i class="fa-solid fa-align-left"></i>
-                                    </button>
-                                    <button
-                                        class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-success"
-                                        aria-label="Guardar">
-                                        <i class="fa-solid fa-floppy-disk"></i>
-                                    </button>
-                                    <button
-                                        class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-error"
-                                        aria-label="Eliminar">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="iconButtonToolbarCode" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
-                            <pre class="m-0"><code class="w4-text w4-text-xs">
-&lt;div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm"&gt;
-  &lt;button class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-secondary"&gt;&lt;i class="fa-solid fa-bold"&gt;&lt;/i&gt;&lt;/button&gt;
-  &lt;button class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-secondary"&gt;&lt;i class="fa-solid fa-italic"&gt;&lt;/i&gt;&lt;/button&gt;
-  &lt;button class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-secondary"&gt;&lt;i class="fa-solid fa-underline"&gt;&lt;/i&gt;&lt;/button&gt;
-  &lt;button class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-info"&gt;&lt;i class="fa-solid fa-align-left"&gt;&lt;/i&gt;&lt;/button&gt;
-  &lt;button class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-success"&gt;&lt;i class="fa-solid fa-floppy-disk"&gt;&lt;/i&gt;&lt;/button&gt;
-  &lt;button class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-error"&gt;&lt;i class="fa-solid fa-trash"&gt;&lt;/i&gt;&lt;/button&gt;
-&lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Variantes Semánticas</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Colores semánticos aplicados a icon buttons.
@@ -299,6 +230,75 @@
 &lt;button class="w4-icon-button w4-icon-button-primary w4-icon-button-md"&gt;...&lt;/button&gt;
 &lt;button class="w4-icon-button w4-icon-button-primary w4-icon-button-lg"&gt;...&lt;/button&gt;
 &lt;button class="w4-icon-button w4-icon-button-primary w4-icon-button-xl"&gt;...&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Ejemplo De Barra De Herramientas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Composición típica de acciones de edición usando icon buttons compactos.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="iconButtonToolbarPreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="iconButtonToolbarCode">Código HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm w4-stack-center">
+                        <div id="iconButtonToolbarPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                    <button
+                                        class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-secondary"
+                                        aria-label="Negrita">
+                                        <i class="fa-solid fa-bold"></i>
+                                    </button>
+                                    <button
+                                        class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-secondary"
+                                        aria-label="Cursiva">
+                                        <i class="fa-solid fa-italic"></i>
+                                    </button>
+                                    <button
+                                        class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-secondary"
+                                        aria-label="Subrayado">
+                                        <i class="fa-solid fa-underline"></i>
+                                    </button>
+                                    <button
+                                        class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-info"
+                                        aria-label="Alinear">
+                                        <i class="fa-solid fa-align-left"></i>
+                                    </button>
+                                    <button
+                                        class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-success"
+                                        aria-label="Guardar">
+                                        <i class="fa-solid fa-floppy-disk"></i>
+                                    </button>
+                                    <button
+                                        class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-error"
+                                        aria-label="Eliminar">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="iconButtonToolbarCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+        &lt;div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm"&gt;
+          &lt;button class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-secondary"&gt;&lt;i class="fa-solid fa-bold"&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;button class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-secondary"&gt;&lt;i class="fa-solid fa-italic"&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;button class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-secondary"&gt;&lt;i class="fa-solid fa-underline"&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;button class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-info"&gt;&lt;i class="fa-solid fa-align-left"&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;button class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-success"&gt;&lt;i class="fa-solid fa-floppy-disk"&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;button class="w4-icon-button w4-icon-button-xs w4-icon-button-outline w4-icon-button-error"&gt;&lt;i class="fa-solid fa-trash"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </div>

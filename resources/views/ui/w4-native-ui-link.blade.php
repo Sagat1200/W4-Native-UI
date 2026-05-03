@@ -176,6 +176,46 @@
         </section>
 
         <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Tamaños</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Escalas tipográficas para links.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="linkSizePreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="linkSizeCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="linkSizePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-xs w4-stack-center">
+                                <a href="" class="w4-link w4-link-primary w4-link-xs">Link XS</a>
+                                <a href="" class="w4-link w4-link-primary w4-link-sm">Link SM</a>
+                                <a href="" class="w4-link w4-link-primary w4-link-md">Link MD</a>
+                                <a href="" class="w4-link w4-link-primary w4-link-lg">Link LG</a>
+                                <a href="" class="w4-link w4-link-primary w4-link-xl">Link XL</a>
+                            </div>
+                        </div>
+                        <div id="linkSizeCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;a class="w4-link w4-link-primary w4-link-xs" href="#"&gt;Link XS&lt;/a&gt;
+&lt;a class="w4-link w4-link-primary w4-link-sm" href="#"&gt;Link SM&lt;/a&gt;
+&lt;a class="w4-link w4-link-primary w4-link-md" href="#"&gt;Link MD&lt;/a&gt;
+&lt;a class="w4-link w4-link-primary w4-link-lg" href="#"&gt;Link LG&lt;/a&gt;
+&lt;a class="w4-link w4-link-primary w4-link-xl" href="#"&gt;Link XL&lt;/a&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
             <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Ejemplos Basicos</h2>
             <p class="w4-text w4-text-lg w4-text-neutral-content">
                 Casos rapidos de uso para navegacion textual, acciones secundarias, breadcrumbs y links legales.
@@ -220,67 +260,27 @@
                         <div id="linkBasicCode" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
                             <pre class="m-0"><code class="w4-text w4-text-xs">
-&lt;p class="w4-text w4-text-base"&gt;
-  Lee nuestra &lt;a href="#" class="w4-link w4-link-primary"&gt;documentacion de implementacion&lt;/a&gt;
-  para conocer mas detalles.
-&lt;/p&gt;
-&lt;a href="#" class="w4-link w4-link-primary w4-link-sm"&gt;Olvide mi contrasena&lt;/a&gt;
-&lt;nav class="w4-breadcrumb w4-breadcrumb-size-sm w4-breadcrumb-primary"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;a href="#" class="w4-link w4-link-neutral"&gt;Inicio&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href="#" class="w4-link w4-link-neutral"&gt;Cuenta&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href="#" class="w4-link w4-link-primary w4-link-active"&gt;Seguridad&lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;p class="w4-text w4-text-sm w4-text-neutral-content"&gt;
-  Al continuar aceptas nuestros &lt;a href="#" class="w4-link w4-link-primary"&gt;Terminos de Servicio&lt;/a&gt; y la &lt;a href="#" class="w4-link w4-link-primary"&gt;Politica de Privacidad&lt;/a&gt;.
-&lt;/p&gt;</code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Tamaños</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
-                Escalas tipográficas para links.
-            </p>
-            <hr class="w4-divider w4-divider-primary">
-            <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                <div class="w4-stack w4-stack-sm">
-                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
-                        data-w4-component="tab">
-                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
-                            data-w4-target="linkSizePreview">Vista Previa</button>
-                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
-                            data-w4-target="linkSizeCode">Codigo HTML</button>
-                    </div>
-                    <div class="w4-stack w4-stack-sm">
-                        <div id="linkSizePreview" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
-                            <div class="w4-stack w4-stack-horizontal w4-stack-xs w4-stack-center">
-                                <a href="" class="w4-link w4-link-primary w4-link-xs">Link XS</a>
-                                <a href="" class="w4-link w4-link-primary w4-link-sm">Link SM</a>
-                                <a href="" class="w4-link w4-link-primary w4-link-md">Link MD</a>
-                                <a href="" class="w4-link w4-link-primary w4-link-lg">Link LG</a>
-                                <a href="" class="w4-link w4-link-primary w4-link-xl">Link XL</a>
-                            </div>
-                        </div>
-                        <div id="linkSizeCode" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
-                            <pre class="m-0"><code class="w4-text w4-text-xs">
-&lt;a class="w4-link w4-link-primary w4-link-xs" href="#"&gt;Link XS&lt;/a&gt;
-&lt;a class="w4-link w4-link-primary w4-link-sm" href="#"&gt;Link SM&lt;/a&gt;
-&lt;a class="w4-link w4-link-primary w4-link-md" href="#"&gt;Link MD&lt;/a&gt;
-&lt;a class="w4-link w4-link-primary w4-link-lg" href="#"&gt;Link LG&lt;/a&gt;
-&lt;a class="w4-link w4-link-primary w4-link-xl" href="#"&gt;Link XL&lt;/a&gt;</code></pre>
+        &lt;p class="w4-text w4-text-base"&gt;
+          Lee nuestra &lt;a href="#" class="w4-link w4-link-primary"&gt;documentacion de implementacion&lt;/a&gt;
+          para conocer mas detalles.
+        &lt;/p&gt;
+        &lt;a href="#" class="w4-link w4-link-primary w4-link-sm"&gt;Olvide mi contrasena&lt;/a&gt;
+        &lt;nav class="w4-breadcrumb w4-breadcrumb-size-sm w4-breadcrumb-primary"&gt;
+          &lt;ul&gt;
+            &lt;li&gt;
+              &lt;a href="#" class="w4-link w4-link-neutral"&gt;Inicio&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="#" class="w4-link w4-link-neutral"&gt;Cuenta&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href="#" class="w4-link w4-link-primary w4-link-active"&gt;Seguridad&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;p class="w4-text w4-text-sm w4-text-neutral-content"&gt;
+          Al continuar aceptas nuestros &lt;a href="#" class="w4-link w4-link-primary"&gt;Terminos de Servicio&lt;/a&gt; y la &lt;a href="#" class="w4-link w4-link-primary"&gt;Politica de Privacidad&lt;/a&gt;.
+        &lt;/p&gt;</code></pre>
                         </div>
                     </div>
                 </div>
