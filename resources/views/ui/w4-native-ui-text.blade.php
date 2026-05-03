@@ -6,119 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Text Lab</title>
     @NativeUIStyles
-    <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-container {
-            max-inline-size: 1200px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.5rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.7);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            font-size: 1rem;
-            min-inline-size: 200px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .preview-group {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            padding: 1.5rem;
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-        }
-
-        .preview-item {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            background-color: hsl(var(--w4-base-100));
-            padding: 1.5rem;
-            border-radius: var(--w4-radius-card);
-            box-shadow: var(--w4-shadow-sm);
-        }
-
-        .preview-label-desc {
-            font-size: 0.75rem;
-            color: hsl(var(--w4-base-content) / 0.5);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-block-end: 0.5rem;
-            display: block;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
 
-    <div class="lab-container">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: Text Lab</h1>
-                <p class="lab-subtitle">Entorno de pruebas visuales para el componente w4-text</p>
-            </div>
+    <div class="w4-navbar  w4-navbar-fixed">
+        <div class="w4-navbar-start">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="w4-icon w4-icon-md stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
+            </button>
 
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar Tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+        </div>
+        <div class="w4-navbar-center">
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Soporte</a></li>
+            </ul>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs mx-2">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral-content">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -153,184 +77,400 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section style="margin-block-end: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Text</h1>
-            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
-                El componente Text es la base fundamental para el renderizado de contenido escrito en la aplicación.
-                Garantiza una legibilidad óptima ajustando dinámicamente el interlineado, los pesos tipográficos y el
-                contraste de colores según el tema activo y las convenciones de accesibilidad (WCAG).
+    <main class="w4-container w4-container-xl">
+        <section class="w4-section w4-section-xl">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center mt-12">Native UI Text</h1>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Text:</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                El componente <strong>Text</strong> es la base para el contenido escrito en la interfaz y asegura
+                legibilidad, contraste y consistencia tipográfica.
             </p>
-
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
-                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral"
-                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                <li><strong class="w4-text-active">Cuerpos de texto:</strong> Artículos, descripciones largas o entradas
-                    de blog utilizando la variante Default/Neutral.</li>
-                <li><strong class="w4-text-active">Introducciones (Leads):</strong> Resaltar el primer párrafo de una
-                    sección importante utilizando el modificador especial <code>w4-text-lead</code>.</li>
-                <li><strong class="w4-text-active">Feedback de sistema:</strong> Mostrar mensajes de éxito, error o
-                    advertencia dentro de alertas o notificaciones Toast.</li>
-                <li><strong class="w4-text-active">Metadatos:</strong> Mostrar fechas, autores o información auxiliar
-                    utilizando el tamaño <code>w4-text-xs</code> junto a la variante <code>w4-text-muted</code>.</li>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-primary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start">
+                <li><strong class="w4-text-active">Cuerpos de texto:</strong> artículos y descripciones largas.</li>
+                <li><strong class="w4-text-active">Leads:</strong> párrafos introductorios con
+                    <code>w4-text-lead</code>.
+                </li>
+                <li><strong class="w4-text-active">Feedback:</strong> mensajes de éxito, error y advertencia.</li>
+                <li><strong class="w4-text-active">Metadatos:</strong> texto auxiliar con <code>w4-text-xs</code> y
+                    <code>w4-text-muted</code>.
+                </li>
             </ul>
         </section>
 
-        <section>
-            <h2 class="w4-heading w4-heading-h2 mb-2">Variantes de Color Semánticas</h2>
-            <div class="preview-group grid-container">
-                <div class="preview-item">
-                    <span class="preview-label-desc">Neutral (Default)</span>
-                    <p class="w4-text w4-text-neutral">Este es un bloque de texto neutral estándar. Utiliza el color de
-                        contenido base del tema actual. Perfecto para la mayoría de los párrafos y descripciones largas
-                        en la interfaz.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Primary</span>
-                    <p class="w4-text w4-text-primary">Texto destacado utilizando el color primario del tema. Ideal para
-                        resaltar información importante o métricas clave.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Secondary</span>
-                    <p class="w4-text w4-text-secondary">Texto secundario que complementa la información primaria,
-                        usando el color secundario de la paleta actual.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Accent</span>
-                    <p class="w4-text w4-text-accent">Texto de acento diseñado para romper la monotonía visual y atraer
-                        la mirada hacia detalles específicos.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Info</span>
-                    <p class="w4-text w4-text-info">El servidor se ha reiniciado correctamente a las 04:00 AM. Todos los
-                        servicios están operando normalmente.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Success</span>
-                    <p class="w4-text w4-text-success">¡Tu perfil ha sido actualizado con éxito! Los cambios ya son
-                        visibles para otros usuarios.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Warning</span>
-                    <p class="w4-text w4-text-warning">Tu suscripción expirará en 3 días. Por favor, actualiza tu método
-                        de pago para evitar interrupciones.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Error</span>
-                    <p class="w4-text w4-text-error">No se pudo establecer conexión con la base de datos. Revisa la
-                        configuración de red e inténtalo de nuevo.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Muted</span>
-                    <p class="w4-text w4-text-muted">Texto atenuado con menor opacidad. Usado frecuentemente para notas
-                        al pie, marcas de tiempo, o descripciones legales que no requieren atención inmediata.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary))">Tamaños Explícitos y Modificadores
-            </h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-text-xs</span>
-                    <p class="w4-text w4-text-xs">Este es un texto extra pequeño (0.75rem). Útil para meta-información o
-                        tooltips.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-text-sm</span>
-                    <p class="w4-text w4-text-sm">Este es un texto pequeño (0.875rem). Común en leyendas o detalles
-                        secundarios.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-text-md (Default)</span>
-                    <p class="w4-text w4-text-md">Este es un texto mediano (1rem). El tamaño de lectura estándar para
-                        párrafos de contenido.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-text-lg</span>
-                    <p class="w4-text w4-text-lg">Este es un texto grande (1.125rem). Llama un poco más la atención que
-                        el cuerpo normal.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-text-xl</span>
-                    <p class="w4-text w4-text-xl">Este es un texto extra grande (1.25rem). A menudo usado como subtítulo
-                        suave o cita destacada.</p>
-                </div>
-                <div class="preview-item" style="border-left: 4px solid hsl(var(--w4-primary));">
-                    <span class="preview-label-desc">w4-text-lead (Modificador de Estilo)</span>
-                    <p class="w4-text w4-text-lead w4-text-lg">El modificador "lead" aumenta el peso de la fuente y el
-                        interlineado. Está diseñado específicamente para párrafos introductorios que necesitan guiar al
-                        usuario hacia el contenido principal.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-error))">Estados (CSS Classes & Atributos)</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <span class="preview-label-desc">Normal</span>
-                    <p class="w4-text">Texto en estado base sin modificaciones adicionales.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Active (w4-text-active)</span>
-                    <p class="w4-text w4-text-active">Texto en estado activo. Aumenta el grosor de la fuente y añade un
-                        subrayado, indicando selección o estado resaltado permanente.</p>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Disabled (w4-text-disabled)</span>
-                    <p class="w4-text w4-text-disabled">Texto deshabilitado. La opacidad se reduce drásticamente y no
-                        responde a eventos del puntero. Generalmente indica que una opción u bloque de información no
-                        está disponible.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-success))">Estados JS Soportados (data-w4-state)
-            </h2>
-            <div class="preview-group">
-                <div class="preview-item" style="padding: 2rem;">
-                    <div style="margin-bottom: 1.5rem; min-height: 80px;">
-                        <p id="jsInteractiveText" class="w4-text w4-text-lg w4-text-primary" data-w4-component="text">
-                            Este es un bloque de texto interactivo. Altera su estado utilizando los controles inferiores
-                            para observar cómo el motor CSS aplica las transformaciones en tiempo real basándose en el
-                            atributo <code>data-w4-state</code>.
-                        </p>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes Semánticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">Colores semánticos para textos informativos y de
+                estado.</p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                        <div class="w4-tabs w4-tabs-boxed " data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                                data-w4-target="textSemanticPreview">Vista Previa</button>
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                                data-w4-target="textSemanticCode">Codigo HTML</button>
+                        </div>
                     </div>
-
-                    <div style="border-top: 1px solid hsl(var(--w4-base-300)); padding-top: 1.5rem;">
-                        <p
-                            style="font-size: 0.875rem; color: hsl(var(--w4-base-content) / 0.7); margin-bottom: 0.75rem; margin-top: 0;">
-                            Panel de Control de Estados:
-                        </p>
-
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                            <button class="w4-button w4-button-sm w4-button-outline"
-                                onclick="document.getElementById('jsInteractiveText').removeAttribute('data-w4-state')">Clear
-                                (Normal)</button>
-                            <button class="w4-button w4-button-sm w4-button-info"
-                                onclick="document.getElementById('jsInteractiveText').setAttribute('data-w4-state', 'active')">Set
-                                Active</button>
-                            <button class="w4-button w4-button-sm w4-button-warning"
-                                onclick="document.getElementById('jsInteractiveText').setAttribute('data-w4-state', 'disabled')">Set
-                                Disabled</button>
-                            <button class="w4-button w4-button-sm w4-button-error"
-                                onclick="document.getElementById('jsInteractiveText').setAttribute('data-w4-state', 'hidden')">Set
-                                Hidden</button>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="textSemanticPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-grid w4-grid-4 w4-grid-bordered-primary">
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <p class="w4-text w4-text-neutral w4-text-center">Texto Neutral</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <p class="w4-text w4-text-primary w4-text-center">Texto Primary</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <p class="w4-text w4-text-secondary w4-text-center">Texto Secondary</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <p class="w4-text w4-text-accent w4-text-center">Texto Accent</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <p class="w4-text w4-text-info w4-text-center">Texto Info</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <p class="w4-text w4-text-success w4-text-center">Texto Success</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <p class="w4-text w4-text-warning w4-text-center">Texto Warning</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <p class="w4-text w4-text-error w4-text-center">Texto Error</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <p class="w4-text w4-text-muted w4-text-center">Texto Muted</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="textSemanticCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class="w4-text w4-text-primary"&gt;Texto Primary&lt;/p&gt;
+&lt;p class="w4-text w4-text-secondary"&gt;Texto Secondary&lt;/p&gt;
+&lt;p class="w4-text w4-text-accent"&gt;Texto Accent&lt;/p&gt;
+&lt;p class="w4-text w4-text-error"&gt;Texto Error&lt;/p&gt;</code></pre>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Tamaños y Estilos</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">Escalas de texto y estilo lead.</p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                        <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                                data-w4-target="textSizePreview">Vista Previa</button>
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                                data-w4-target="textSizeCode">Codigo HTML</button>
+                        </div>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="textSizePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-vertical w4-stack-xs">
+                                <p class="w4-text w4-text-primary w4-text-xs">Texto XS</p>
+                                <p class="w4-text w4-text-primary w4-text-sm">Texto SM</p>
+                                <p class="w4-text w4-text-primary w4-text-md">Texto MD</p>
+                                <p class="w4-text w4-text-primary w4-text-lg">Texto LG</p>
+                                <p class="w4-text w4-text-primary w4-text-xl">Texto XL</p>
+                            </div>
+                        </div>
+                        <div id="textSizeCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class="w4-text w4-text-primary w4-text-xs"&gt;Texto XS&lt;/p&gt;
+&lt;p class="w4-text w4-text-primary w4-text-sm"&gt;Texto SM&lt;/p&gt;
+&lt;p class="w4-text w4-text-primary w4-text-md"&gt;Texto MD&lt;/p&gt;
+&lt;p class="w4-text w4-text-primary w4-text-lg"&gt;Texto LG&lt;/p&gt;
+&lt;p class="w4-text w4-text-primary w4-text-xl"&gt;Texto XL&lt;/p&gt;
+&lt;p class="w4-text w4-text-lead"&gt;Lead&lt;/p&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Alineación</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">Control de alineación horizontal del texto.</p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                        <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                                data-w4-target="textAlignPreview">Vista Previa</button>
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                                data-w4-target="textAlignCode">Codigo HTML</button>
+                        </div>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="textAlignPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <p class="w4-text w4-text-start">Texto alineado al inicio.</p>
+                            <p class="w4-text w4-text-center">Texto alineado al centro.</p>
+                            <p class="w4-text w4-text-end">Texto alineado al final.</p>
+                        </div>
+                        <div id="textAlignCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class="w4-text w4-text-start"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-center"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-end"&gt;...&lt;/p&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Ejemplos Basicos</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Muestra de textos diversos aplicando todas las variantes de color del componente.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                        <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                                data-w4-target="textBasicPreview">Vista Previa</button>
+                            <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                                data-w4-target="textBasicCode">Codigo HTML</button>
+                        </div>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="textBasicPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-grid w4-grid-6 w4-gap-sm">
+
+                                <div class="w4-panel w4-panel-base-100 w4-panel-sm">
+                                    <p class="w4-text w4-text-neutral">Neutral: texto base para lectura general.</p>
+                                </div>
+                                <div class="w4-panel w4-panel-neutral w4-panel-sm">
+                                    <p class="w4-text w4-text-neutral-content">Neutral Content: texto auxiliar en
+                                        superficies.</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                                    <p class="w4-text w4-text-primary">Primary: mensaje principal o CTA textual.</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-300 w4-panel-sm">
+                                    <p class="w4-text w4-text-base-content">Base Content: color principal del sistema.
+                                    </p>
+                                </div>
+                                <div class="w4-panel w4-panel-primary w4-panel-sm">
+                                    <p class="w4-text w4-text-primary-content">Primary Content: texto sobre fondo
+                                        primario.</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-sm">
+                                    <p class="w4-text w4-text-secondary">Secondary: información complementaria.</p>
+                                </div>
+                                <div class="w4-panel w4-panel-secondary w4-panel-sm">
+                                    <p class="w4-text w4-text-secondary-content">Secondary Content: contraste sobre
+                                        secundario.</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-sm">
+                                    <p class="w4-text w4-text-accent">Accent: resaltado visual puntual.</p>
+                                </div>
+                                <div class="w4-panel w4-panel-accent w4-panel-sm">
+                                    <p class="w4-text w4-text-accent-content">Accent Content: texto sobre acento.</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-sm">
+                                    <p class="w4-text w4-text-info">Info: nota informativa del sistema.</p>
+                                </div>
+                                <div class="w4-panel w4-panel-info w4-panel-sm">
+                                    <p class="w4-text w4-text-info-content">Info Content: contraste sobre fondo info.
+                                    </p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-sm">
+                                    <p class="w4-text w4-text-success">Success: operación completada.</p>
+                                </div>
+                                <div class="w4-panel w4-panel-success w4-panel-sm">
+                                    <p class="w4-text w4-text-success-content">Success Content: contraste sobre success.
+                                    </p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-sm">
+                                    <p class="w4-text w4-text-warning">Warning: advertencia preventiva.</p>
+                                </div>
+                                <div class="w4-panel w4-panel-warning w4-panel-sm">
+                                    <p class="w4-text w4-text-warning-content">Warning Content: contraste sobre warning.
+                                    </p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-sm">
+                                    <p class="w4-text w4-text-error">Error: validación o falla crítica.</p>
+                                </div>
+                                <div class="w4-panel w4-panel-error w4-panel-sm">
+                                    <p class="w4-text w4-text-error-content">Error Content: contraste sobre error.</p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-sm">
+                                    <p class="w4-text w4-text-muted">Muted: metadata o texto secundario.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="textBasicCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class="w4-text w4-text-neutral"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-neutral-content"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-base-content"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-primary"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-primary-content"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-secondary"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-secondary-content"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-accent"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-accent-content"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-info"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-info-content"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-success"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-success-content"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-warning"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-warning-content"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-error"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-error-content"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-muted"&gt;...&lt;/p&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">Estados por clase y por atributo
+                <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-2 w4-gap-md">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Clase</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="textClassPreview">Vista</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="textClassCode">Codigo</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="textClassPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-vertical w4-stack-xs">
+                                    <p class="w4-text w4-text-primary w4-text-active">Texto Active</p>
+                                    <p class="w4-text w4-text-warning w4-text-disabled">Texto Disabled</p>
+                                    <p class="w4-text w4-text-error w4-text-hidden">Texto Hidden</p>
+                                </div>
+                            </div>
+                            <div id="textClassCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class="w4-text w4-text-primary w4-text-active"&gt;Texto Active&lt;/p&gt;
+&lt;p class="w4-text w4-text-warning w4-text-disabled"&gt;Texto Disabled&lt;/p&gt;
+&lt;p class="w4-text w4-text-error w4-text-hidden"&gt;Texto Hidden&lt;/p&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Atributo</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="textAttrPreview">Vista</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="textAttrCode">Codigo</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="textAttrPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-vertical w4-stack-xs">
+                                    <p class="w4-text w4-text-primary" data-w4-state="active">data-w4-state="active"</p>
+                                    <p class="w4-text w4-text-warning" data-w4-state="disabled">data-w4-state="disabled"
+                                    </p>
+                                    <p class="w4-text w4-text-error" data-w4-state="hidden">data-w4-state="hidden"</p>
+                                </div>
+                            </div>
+                            <div id="textAttrCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class="w4-text w4-text-primary" data-w4-state="active"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-warning" data-w4-state="disabled"&gt;...&lt;/p&gt;
+&lt;p class="w4-text w4-text-error" data-w4-state="hidden"&gt;...&lt;/p&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados JS Soportados</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">Playground declarativo con
+                <code>data-w4-text-state</code> y <code>data-w4-target</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                    <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                            data-w4-target="textJsPreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                            data-w4-target="textJsCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="textJsPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <p id="labTextTarget" class="w4-text w4-text-lg w4-text-primary mb-6">Texto de Prueba</p>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-outline"
+                                    data-w4-text-state="enabled" data-w4-target="labTextTarget">Clear</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-neutral"
+                                    data-w4-text-state="enabled" data-w4-target="labTextTarget">Enabled</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-secondary"
+                                    data-w4-text-state="active" data-w4-target="labTextTarget">Active</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
+                                    data-w4-text-state="disabled" data-w4-target="labTextTarget">Disabled</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-error" data-w4-text-state="hidden"
+                                    data-w4-target="labTextTarget">Hidden</button>
+                            </div>
+                        </div>
+                        <div id="textJsCode" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                            aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p id="labTextTarget" class="w4-text w4-text-primary"&gt;Texto de Prueba&lt;/p&gt;
+&lt;button data-w4-text-state="enabled" data-w4-target="labTextTarget"&gt;Clear&lt;/button&gt;
+&lt;button data-w4-text-state="active" data-w4-target="labTextTarget"&gt;Active&lt;/button&gt;
+&lt;button data-w4-text-state="disabled" data-w4-target="labTextTarget"&gt;Disabled&lt;/button&gt;
+&lt;button data-w4-text-state="hidden" data-w4-target="labTextTarget"&gt;Hidden&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
 
     @NativeUIScripts
     @NativeUIInit
-    @NativeUILivewire
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

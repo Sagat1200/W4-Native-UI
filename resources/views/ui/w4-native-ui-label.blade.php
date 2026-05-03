@@ -153,10 +153,15 @@
                         <div id="labelSemanticCode" data-w4-tab-panel
                             class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
                             <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;label class="w4-label w4-label-neutral"&gt;Neutral Label&lt;/label&gt;
 &lt;label class="w4-label w4-label-primary"&gt;Primary Label&lt;/label&gt;
 &lt;label class="w4-label w4-label-secondary"&gt;Secondary Label&lt;/label&gt;
 &lt;label class="w4-label w4-label-accent"&gt;Accent Label&lt;/label&gt;
-&lt;label class="w4-label w4-label-error"&gt;Error Label&lt;/label&gt;</code></pre>
+&lt;label class="w4-label w4-label-info"&gt;Info Label&lt;/label&gt;
+&lt;label class="w4-label w4-label-success"&gt;Success Label&lt;/label&gt;
+&lt;label class="w4-label w4-label-warning"&gt;Warning Label&lt;/label&gt;
+&lt;label class="w4-label w4-label-error"&gt;Error Label&lt;/label&gt;
+</code></pre>
                         </div>
                     </div>
                 </div>

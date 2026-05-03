@@ -40,6 +40,13 @@
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
    ---------------------------------- */
+
+.w4-panel-neutral {
+  --w4-panel-bg: hsl(var(--w4-neutral));
+  --w4-panel-color: hsl(var(--w4-neutral-content));
+  --w4-panel-border-color: hsl(var(--w4-neutral));
+}
+
 .w4-panel-primary {
   --w4-panel-bg: hsl(var(--w4-primary));
   --w4-panel-color: hsl(var(--w4-primary-content));

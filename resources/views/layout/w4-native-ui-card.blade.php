@@ -107,7 +107,7 @@
                             <h3 class="w4-heading w4-heading-h3 w4-heading-primary">Card Básica</h3>
                             <p class="w4-text w4-text-md w4-text-neutral">Esta es una tarjeta simple con su fondo por
                                 defecto y contenido básico. Ideal para textos y descripciones.</p>
-                            <div class="w4-stack w4-stack-horizontal w4-stack-end w4-mt-4">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-end mt-4">
                                 <button class="w4-button w4-button-primary">Aceptar</button>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                             <p class="w4-text w4-text-md w4-text-neutral">Esta tarjeta utiliza la clase
                                 <code>.w4-card-bordered</code> para destacar su contorno con un color semántico.
                             </p>
-                            <div class="w4-stack w4-stack-horizontal w4-stack-end w4-mt-4">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-end mt-4">
                                 <button class="w4-button w4-button-secondary w4-button-outline">Detalles</button>
                             </div>
                         </div>
