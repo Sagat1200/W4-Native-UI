@@ -209,6 +209,78 @@
         </section>
 
         <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Ejemplos de Uso</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Casos prácticos para formularios, obligatoriedad, validación y desactivación.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="labelUsePreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="labelUseCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="labelUsePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-grid w4-grid-2 w4-grid-sm">
+                                <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                                    <span class="w4-text w4-text-sm w4-text-muted">Formularios</span>
+                                    <label for="useEmailField" class="w4-label w4-label-primary">Correo
+                                        electrónico</label>
+                                    <input id="useEmailField" type="email" class="w4-input w4-input-bordered"
+                                        placeholder="usuario@correo.com">
+                                </div>
+                                <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                                    <span class="w4-text w4-text-sm w4-text-muted">Obligatoriedad</span>
+                                    <label for="useNameField" class="w4-label w4-label-warning w4-label-required">Nombre
+                                        completo</label>
+                                    <input id="useNameField" type="text" class="w4-input w4-input-bordered"
+                                        placeholder="Campo obligatorio">
+                                </div>
+                                <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                                    <span class="w4-text w4-text-sm w4-text-muted">Validación</span>
+                                    <label for="usePhoneField" class="w4-label w4-label-error">Teléfono inválido</label>
+                                    <input id="usePhoneField" type="tel" class="w4-input w4-input-error"
+                                        placeholder="Formato: 555-123-4567">
+                                </div>
+                                <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                                    <span class="w4-text w4-text-sm w4-text-muted">Desactivación</span>
+                                    <label for="useCodeField" class="w4-label w4-label-neutral w4-label-disabled">Código
+                                        de
+                                        invitación</label>
+                                    <input id="useCodeField" type="text" class="w4-input w4-input-bordered" disabled
+                                        placeholder="No disponible">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="labelUseCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">&lt;!-- Formularios --&gt;
+&lt;label for=&quot;email&quot; class=&quot;w4-label w4-label-primary&quot;&gt;Correo electrónico&lt;/label&gt;
+&lt;input id=&quot;email&quot; class=&quot;w4-input w4-input-bordered&quot; /&gt;
+
+&lt;!-- Obligatoriedad --&gt;
+&lt;label for=&quot;name&quot; class=&quot;w4-label w4-label-warning w4-label-required&quot;&gt;Nombre completo&lt;/label&gt;
+&lt;input id=&quot;name&quot; class=&quot;w4-input w4-input-bordered&quot; /&gt;
+
+&lt;!-- Validación --&gt;
+&lt;label for=&quot;phone&quot; class=&quot;w4-label w4-label-error&quot;&gt;Teléfono inválido&lt;/label&gt;
+&lt;input id=&quot;phone&quot; class=&quot;w4-input w4-input-error&quot; /&gt;
+
+&lt;!-- Desactivación --&gt;
+&lt;label for=&quot;invite&quot; class=&quot;w4-label w4-label-neutral w4-label-disabled&quot;&gt;Código de invitación&lt;/label&gt;
+&lt;input id=&quot;invite&quot; class=&quot;w4-input w4-input-bordered&quot; disabled /&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Visuales</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">
                 Estados por clase y por atributo <code>data-w4-state</code>.

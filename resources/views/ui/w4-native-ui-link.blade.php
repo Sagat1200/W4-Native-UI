@@ -125,35 +125,35 @@
                             class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm">
                             <div class="w4-grid w4-grid-4 w4-grid-bordered-primary">
                                 <div class="w4-panel w4-panel-base-100 w4-panel-xs">
-                                    <div class="w4-text w4-text-xs w4-text-neutral">Neutral</div>
+                                    <div class="w4-text w4-text-xs w4-text-neutral w4-text-center">Neutral</div>
                                     <a href="" class="w4-link w4-link-neutral">Link Neutral</a>
                                 </div>
                                 <div class="w4-panel w4-panel-base-100 w4-panel-xs">
-                                    <div class="w4-text w4-text-xs w4-text-primary">Primary</div>
+                                    <div class="w4-text w4-text-xs w4-text-primary w4-text-center">Primary</div>
                                     <a href="" class="w4-link w4-link-primary">Link Primary</a>
                                 </div>
                                 <div class="w4-panel w4-panel-base-100 w4-panel-xs">
-                                    <div class="w4-text w4-text-xs w4-text-secondary">Secondary</div>
+                                    <div class="w4-text w4-text-xs w4-text-secondary w4-text-center">Secondary</div>
                                     <a href="" class="w4-link w4-link-secondary">Link Secondary</a>
                                 </div>
                                 <div class="w4-panel w4-panel-base-100 w4-panel-xs">
-                                    <div class="w4-text w4-text-xs w4-text-accent">Accent</div>
+                                    <div class="w4-text w4-text-xs w4-text-accent w4-text-center">Accent</div>
                                     <a href="" class="w4-link w4-link-accent">Link Accent</a>
                                 </div>
                                 <div class="w4-panel w4-panel-base-100 w4-panel-xs">
-                                    <div class="w4-text w4-text-xs w4-text-info">Info</div>
+                                    <div class="w4-text w4-text-xs w4-text-info w4-text-center">Info</div>
                                     <a href="" class="w4-link w4-link-info">Link Info</a>
                                 </div>
                                 <div class="w4-panel w4-panel-base-100 w4-panel-xs">
-                                    <div class="w4-text w4-text-xs w4-text-success">Success</div>
+                                    <div class="w4-text w4-text-xs w4-text-success w4-text-center">Success</div>
                                     <a href="" class="w4-link w4-link-success">Link Success</a>
                                 </div>
                                 <div class="w4-panel w4-panel-base-100 w4-panel-xs">
-                                    <div class="w4-text w4-text-xs w4-text-warning">Warning</div>
+                                    <div class="w4-text w4-text-xs w4-text-warning w4-text-center">Warning</div>
                                     <a href="" class="w4-link w4-link-warning">Link Warning</a>
                                 </div>
                                 <div class="w4-panel w4-panel-base-100 w4-panel-xs">
-                                    <div class="w4-text w4-text-xs w4-text-error">Error</div>
+                                    <div class="w4-text w4-text-xs w4-text-error w4-text-center">Error</div>
                                     <a href="" class="w4-link w4-link-error">Link Error</a>
                                 </div>
                             </div>

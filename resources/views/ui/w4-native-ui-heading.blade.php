@@ -256,7 +256,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Escala Tipográfica</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Tamaños</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">
                 Demostración de los modificadores de tamaño: <code>w4-hdg-xs</code>, <code>w4-hdg-sm</code>,
                 <code>w4-hdg-md</code>, <code>w4-hdg-lg</code> y <code>w4-hdg-xl</code>.

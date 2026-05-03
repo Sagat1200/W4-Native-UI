@@ -230,7 +230,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Escala Tipográfica</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Tamaños</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">
                 Demostración de <code>w4-icon-xs</code>, <code>w4-icon-sm</code>, <code>w4-icon-md</code>,
                 <code>w4-icon-lg</code> y <code>w4-icon-xl</code>.
@@ -264,6 +264,96 @@
 &lt;i class="fa-solid fa-circle w4-icon w4-icon-md w4-icon-primary"&gt;&lt;/i&gt;
 &lt;i class="fa-solid fa-circle w4-icon w4-icon-lg w4-icon-primary"&gt;&lt;/i&gt;
 &lt;i class="fa-solid fa-circle w4-icon w4-icon-xl w4-icon-primary"&gt;&lt;/i&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Ejemplos de Uso</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Casos prácticos de íconos para soporte visual, feedback, carga y navegación.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="iconUsePreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="iconUseCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="iconUsePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-grid w4-grid-2 w4-grid-sm">
+                                <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                                    <span class="w4-text w4-text-sm w4-text-muted">Soporte visual</span>
+                                    <button type="button" class="w4-btn w4-btn-primary w4-btn-sm">
+                                        <i class="fa-solid fa-floppy-disk w4-icon w4-icon-sm" aria-hidden="true"></i>
+                                        <span>Guardar cambios</span>
+                                    </button>
+                                </div>
+                                <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                                    <span class="w4-text w4-text-sm w4-text-muted">Feedback</span>
+                                    <div class="w4-alert w4-alert-success w4-alert-sm">
+                                        <i class="fa-solid fa-circle-check w4-icon w4-icon-sm" aria-hidden="true"></i>
+                                        <span>Perfil actualizado correctamente.</span>
+                                    </div>
+                                </div>
+                                <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                                    <span class="w4-text w4-text-sm w4-text-muted">Carga</span>
+                                    <div class="w4-stack w4-stack-horizontal w4-stack-sm w4-item-center">
+                                        <i class="fa-solid fa-rotate w4-icon w4-icon-md w4-icon-info w4-icon-spin"
+                                            aria-hidden="true"></i>
+                                        <span class="w4-text w4-text-sm">Sincronizando datos...</span>
+                                    </div>
+                                </div>
+                                <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                                    <span class="w4-text w4-text-sm w4-text-muted">Navegación</span>
+                                    <ul class="w4-menu w4-menu-base-100 w4-menu-sm">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-house w4-icon w4-icon-sm w4-icon-primary"
+                                                    aria-hidden="true"></i>
+                                                <span>Inicio</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-gear w4-icon w4-icon-sm w4-icon-secondary"
+                                                    aria-hidden="true"></i>
+                                                <span>Configuración</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="iconUseCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">&lt;!-- Soporte visual --&gt;
+&lt;button class=&quot;w4-button w4-button-primary w4-button-sm&quot;&gt;
+  &lt;i class=&quot;fa-solid fa-floppy-disk w4-icon w4-icon-sm&quot;&gt;&lt;/i&gt;
+  &lt;span&gt;Guardar cambios&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- Feedback --&gt;
+&lt;div class=&quot;w4-alert w4-alert-success w4-alert-sm&quot;&gt;
+  &lt;i class=&quot;fa-solid fa-circle-check w4-icon w4-icon-sm&quot;&gt;&lt;/i&gt;
+  &lt;span&gt;Perfil actualizado correctamente.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Carga --&gt;
+&lt;i class=&quot;fa-solid fa-rotate w4-icon w4-icon-md w4-icon-info w4-icon-spin&quot;&gt;&lt;/i&gt;
+
+&lt;!-- Navegación --&gt;
+&lt;a href=&quot;#&quot;&gt;
+  &lt;i class=&quot;fa-solid fa-house w4-icon w4-icon-sm w4-icon-primary&quot;&gt;&lt;/i&gt;
+  &lt;span&gt;Inicio&lt;/span&gt;
+&lt;/a&gt;</code></pre>
                         </div>
                     </div>
                 </div>
