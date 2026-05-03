@@ -89,7 +89,7 @@
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Button:</h2>
             <hr class="w4-divider w4-divider-primary">
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Button</strong> es un elemento de interfaz fundamental utilizado para desencadenar
                 acciones.
                 Soporta múltiples variantes semánticas, tamaños, formas y estados de interacción.
@@ -109,7 +109,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Variantes de colores semánticos</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Botones con colores del sistema semántico.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -197,7 +197,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Botones con semantica de contorno</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Estilos visuales alternativos para priorizar o suavizar acciones.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -242,7 +242,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Botones con semantica de fondo suave</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Estilos visuales alternativos para mostrar acciones con fondo suave.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -287,7 +287,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Botones con semantica de contorno discontinuo</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Estilos visuales alternativos para mostrar acciones con contorno discontinuo.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -332,7 +332,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Tamaños</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Escalas morfológicas del botón.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -371,7 +371,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Formas y Layout</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Modificadores de forma y distribución.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -473,7 +473,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Visuales</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Estados soportados por clases y atributo <code>data-w4-state</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -548,12 +548,12 @@
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Nativos Javascript Soportados al Componente
                 Button</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Controles para probar transiciones del componente usando <code>data-w4-state</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <p class="w4-text w4-text-sm w4-text-neutral-content">
+                <p class="w4-text w4-text-sm w4-text-neutral">
                     Playground: Juega con los estados JS soportados para ver su efecto en el botón de prueba.
                 </p>
                 <div class="w4-stack w4-stack-md">
@@ -611,7 +611,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="w4-text w4-text-sm w4-text-neutral-content">
+                    <p class="w4-text w4-text-sm w4-text-neutral">
                         El estado se aplica al botón de prueba y refleja los hooks visuales del componente.
                     </p>
                 </div>

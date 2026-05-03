@@ -34,6 +34,15 @@
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
    ---------------------------------- */
+
+.w4-alert-neutral {
+  --w4-alert-raw-color: var(--w4-neutral);
+  --w4-alert-raw-content: var(--w4-neutral-content);
+  --w4-alert-bg: hsl(var(--w4-neutral) / 0.15);
+  --w4-alert-text: hsl(var(--w4-neutral));
+  --w4-alert-border-color: hsl(var(--w4-neutral) / 0.3);
+}
+
 .w4-alert-info {
   --w4-alert-raw-color: var(--w4-info);
   --w4-alert-raw-content: var(--w4-info-content);
@@ -112,6 +121,20 @@
   /* Reset variables */
   --w4-alert-bg: transparent;
   --w4-alert-border-color: hsl(var(--w4-alert-raw-color, var(--w4-base-content)));
+}
+
+.w4-alert-dash {
+  background-color: transparent;
+  border-color: hsl(var(--w4-alert-raw-color, var(--w4-base-content)));
+  border-style: dashed;
+
+  /* Reset variables */
+  --w4-alert-bg: transparent;
+  --w4-alert-border-color: hsl(var(--w4-alert-raw-color, var(--w4-base-content)));
+}
+
+.w4-alert-dash:hover {
+  background-color: hsl(var(--w4-base-200));
 }
 
 /* ----------------------------------

@@ -300,11 +300,10 @@ class W4Core {
 
 
 class W4Alert {
-    static init() {
-        document.addEventListener('click', this.handleClick.bind(this));
-        
-        // Register state handlers for the Alert component
+    static init(root = document) {
+        root.addEventListener('click', this.handleClick.bind(this));
         this.registerStateHandlers();
+        this.bindStateTriggers(root);
     }
 
     /**
@@ -322,9 +321,71 @@ class W4Alert {
         this.handlersRegistered = true;
     }
 
+    static resolveElement(targetOrId) {
+        if (!targetOrId) return null;
+        if (targetOrId instanceof Element) return targetOrId;
+        return document.getElementById(String(targetOrId));
+    }
+
+    static setState(targetOrId, state = 'enabled') {
+        const element = this.resolveElement(targetOrId);
+        if (!element) return;
+
+        this.resetState(element);
+
+        const nextState = String(state || 'enabled').toLowerCase();
+        if (nextState === 'enabled') {
+            if (typeof W4Core.syncElement === 'function') W4Core.syncElement(element);
+            return;
+        }
+
+        element.setAttribute('data-w4-state', nextState);
+        if (typeof W4Core.syncElement === 'function') {
+            W4Core.syncElement(element);
+        }
+
+        if (nextState === 'dismissed') {
+            this.dismiss(element);
+        }
+    }
+
+    static bindStateTriggers(root = document) {
+        if (this.triggersBound) return;
+
+        root.addEventListener('click', (event) => {
+            const trigger = event.target.closest('[data-w4-alert-state]');
+            if (!trigger) return;
+
+            event.preventDefault();
+            const state = trigger.getAttribute('data-w4-alert-state') || 'enabled';
+            const targetId = trigger.getAttribute('data-w4-target') || 'labAlertTarget';
+            this.setState(targetId, state);
+        });
+
+        this.triggersBound = true;
+    }
+
+    static resetState(element) {
+        element.classList.remove('w4-alert-active', 'w4-alert-disabled', 'w4-alert-hidden', 'w4-alert-dismissed');
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.style.opacity = '';
+        element.style.transition = '';
+        element.style.display = '';
+        element.style.filter = '';
+        element.style.transform = '';
+    }
+
     static handleEnabled({ element }) {
         element.removeAttribute('aria-disabled');
         element.removeAttribute('aria-hidden');
+        element.style.opacity = '';
+        element.style.transition = '';
+        element.style.display = '';
+        element.style.filter = '';
+        element.style.transform = '';
     }
 
     static handleDisabled({ element }) {
@@ -332,7 +393,7 @@ class W4Alert {
     }
 
     static handleActive({ element }) {
-        // Active alerts might trigger an animation or bring to front
+        element.style.transform = 'scale(1.01)';
     }
 
     static handleHidden({ element }) {
@@ -340,7 +401,7 @@ class W4Alert {
     }
 
     static handleDismissedState({ element }) {
-        W4Alert.dismiss(element);
+        this.dismiss(element);
     }
 
     static handleClick(event) {
@@ -350,9 +411,7 @@ class W4Alert {
         const alert = dismissBtn.closest('.w4-alert');
         if (alert) {
             event.preventDefault();
-            // Trigger the state change via core or directly dismiss
-            alert.setAttribute('data-w4-state', 'dismissed');
-            W4Core.syncElement(alert);
+            this.setState(alert, 'dismissed');
         }
     }
 
