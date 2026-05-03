@@ -4,20 +4,20 @@
 
 Este documento extiende la arquitectura de componentes del ecosistema W4 definiendo cómo los componentes visuales interactúan con:
 
-* W4-UI-Framework
-* Motor de Resolución de Temas (Theme Resolver Engine)
-* W4-Native-UI
-* Tokens de Diseño (Design Tokens)
-* Presets de Morfología
+- W4-UI-Framework
+- Motor de Resolución de Temas (Theme Resolver Engine)
+- W4-Native-UI
+- Tokens de Diseño (Design Tokens)
+- Presets de Morfología
 
 El objetivo es estandarizar el **Contrato Visual** entre la lógica del componente (PHP) y la capa visual (CSS + tiempo de ejecución).
 
 Esto garantiza que:
 
-* los componentes sigan siendo independientes del framework
-* los temas puedan transformar la apariencia de la UI dinámicamente
-* la morfología pueda variar entre temas
-* los sistemas visuales escalen a más de 150 componentes
+- los componentes sigan siendo independientes del framework
+- los temas puedan transformar la apariencia de la UI dinámicamente
+- la morfología pueda variar entre temas
+- los sistemas visuales escalen a más de 150 componentes
 
 ---
 
@@ -27,11 +27,11 @@ El **Contrato Visual** define la interfaz estable entre la abstracción del comp
 
 Un componente debe exponer las siguientes dimensiones visuales:
 
-* nombre del componente
-* variante (variant)
-* tamaño (size)
-* estado (state)
-* atributos
+- nombre del componente
+- variante (variant)
+- tamaño (size)
+- estado (state)
+- atributos
 
 Ejemplo conceptual del objeto de estado:
 
@@ -144,8 +144,7 @@ data-w4-state="loading"
 El JS en runtime los traduce a:
 
 ```html
-class="w4-button-loading"
-aria-busy="true"
+class="w4-button-loading" aria-busy="true"
 ```
 
 ---
@@ -280,9 +279,7 @@ w4-button-lg
 HTML Renderizado:
 
 ```html
-<button class="w4-button w4-button-primary w4-button-lg">
-Guardar
-</button>
+<button class="w4-button w4-button-primary w4-button-lg">Guardar</button>
 ```
 
 Implementación CSS:
@@ -326,14 +323,14 @@ Estas aún consumen tokens.
 
 Todos los componentes deben reaccionar automáticamente a:
 
-* cambios de tema
-* cambios de preset
-* sobrescritura de tokens
+- cambios de tema
+- cambios de preset
+- sobrescritura de tokens
 
 Ejemplo de cambio de tema en runtime:
 
 ```html
-<html data-theme="native.dark">
+<html data-theme="native.dark"></html>
 ```
 
 El HTML permanece idéntico.
@@ -400,11 +397,11 @@ HTML
 
 Este modelo proporciona:
 
-* flexibilidad total de temas
-* cambio de tema en tiempo de ejecución (runtime)
-* morfología consistente
-* biblioteca de componentes escalable
-* compatibilidad con más de 150 componentes
+- flexibilidad total de temas
+- cambio de tema en tiempo de ejecución (runtime)
+- morfología consistente
+- biblioteca de componentes escalable
+- compatibilidad con más de 150 componentes
 
 ---
 
@@ -412,11 +409,11 @@ Este modelo proporciona:
 
 Las mejoras futuras pueden incluir:
 
-* tokens visuales de morfología
-* tokens de movimiento (motion tokens)
-* tokens de elevación (elevation tokens)
-* composición de temas
-* constructor visual de temas (visual theme builder)
+- tokens visuales de morfología
+- tokens de movimiento (motion tokens)
+- tokens de elevación (elevation tokens)
+- composición de temas
+- constructor visual de temas (visual theme builder)
 
 ---
 
@@ -425,3 +422,98 @@ Las mejoras futuras pueden incluir:
 El **Contrato Visual** asegura que los componentes permanezcan estables mientras los temas controlan el lenguaje visual de la interfaz.
 
 Esta separación permite que el ecosistema W4 evolucione hacia un sistema de diseño completamente escalable capaz de soportar aplicaciones complejas y plataformas SaaS.
+
+---
+
+# 17. Contrato Operativo de Morfología para Presets
+
+Esta sección define un contrato práctico para estandarizar todos los archivos de `resources/css/presets`.
+
+## 17.1 Nivel Mínimo (obligatorio en cada preset)
+
+Cada tema debe declarar como mínimo:
+
+```css
+--w4-radius-button
+--w4-radius-input
+--w4-radius-card
+--w4-radius-badge
+```
+
+Estos cuatro tokens son los que hoy más impactan los componentes UI (`button`, `iconbutton`, `forms`, `layout`).
+
+## 17.2 Nivel Extendido (recomendado para homogeneidad total)
+
+Para una morfología completamente consistente entre dominios, cada preset debería incluir además:
+
+```css
+--w4-radius-panel
+--w4-radius-select
+--w4-radius-alert
+--w4-radius-progress
+--w4-radius-skeleton
+--w4-radius-toast
+--w4-radius-checkbox
+--w4-radius-radio
+--w4-radius-toggle
+--w4-radius-modal
+--w4-radius-menu
+--w4-radius-dropdown
+```
+
+## 17.3 Densidad Global (opcional avanzado)
+
+Solo si el preset busca una identidad de densidad propia (compacta, comfy, spacious):
+
+```css
+--w4-control-height-xs
+--w4-control-height-sm
+--w4-control-height-md
+--w4-control-height-lg
+--w4-control-height-xl
+
+--w4-control-padding-x-xs
+--w4-control-padding-x-sm
+--w4-control-padding-x-md
+--w4-control-padding-x-lg
+--w4-control-padding-x-xl
+
+--w4-button-padding-x
+--w4-input-padding-x
+```
+
+## 17.4 Estado Actual del Proyecto
+
+Resumen del análisis actual:
+
+1. Todos los presets ya cumplen el **Nivel Mínimo**.
+2. Solo algunos presets sobrescriben `--w4-radius-checkbox`.
+3. Ningún preset sobrescribe hoy el bloque extendido completo (`panel`, `select`, `modal`, `menu`, etc.).
+4. Ningún preset redefine aún densidad global (`control-height` y `control-padding`).
+
+## 17.5 Plan de Adopción Recomendado
+
+Fase 1 (segura y rápida):
+
+1. Mantener los 4 tokens mínimos actuales por tema.
+2. Agregar explícitamente el bloque extendido con valores heredados de la personalidad del tema.
+
+Fase 2 (curación visual):
+
+1. Revisar contraste y forma en `forms`, `navigation`, `feedback`, `interactive`.
+2. Ajustar `checkbox/radio/toggle/menu/dropdown/modal` por tema.
+
+Fase 3 (densidad):
+
+1. Definir 2 o 3 perfiles de densidad base (compacto, estándar, amplio).
+2. Aplicarlos solo a presets que realmente lo requieran.
+
+## 17.6 Checklist de Validación por Preset
+
+Antes de cerrar un tema:
+
+1. Botón e IconButton respetan `radius + size`.
+2. Input/Select/Checkbox/Radio/Toggle respetan radios de forms.
+3. Card/Panel/Modal/Dropdown/Menu respetan radios del dominio.
+4. No hay valores hardcodeados cuando existe token equivalente.
+5. El cambio de `data-theme` no rompe consistencia morfológica.
