@@ -35,14 +35,14 @@
         </div>
         <div class="w4-navbar-center">
             <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
-                <li class="w4-text w4-text-neutral-content"><a href="">Inicio</a></li>
-                <li class="w4-text w4-text-neutral-content"><a href="">Documentacion</a></li>
-                <li class="w4-text w4-text-neutral-content"><a href="">Soporte</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Soporte</a></li>
             </ul>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral-content">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -88,7 +88,7 @@
         <section class="w4-section w4-section-xl">
             <h1 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Heading:</h1>
             <hr class="w4-divider w4-divider-primary">
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Heading</strong> se utiliza para crear jerarquía tipográfica y estructura
                 semántica en las páginas.
                 Soporta tamaños explícitos, colores temáticos y clases de alineación, asegurando que el SEO y la
@@ -111,7 +111,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Variantes Semánticas</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Colores de heading alineados al sistema de tokens.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -179,7 +179,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Tamaños y Jerarquía</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Escalas tipográficas y aliases de encabezado.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -222,7 +222,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Alineación</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Control de alineación con modificadores start, center y end.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -257,7 +257,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Escala Tipográfica</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Demostración de los modificadores de tamaño: <code>w4-hdg-xs</code>, <code>w4-hdg-sm</code>,
                 <code>w4-hdg-md</code>, <code>w4-hdg-lg</code> y <code>w4-hdg-xl</code>.
             </p>
@@ -298,7 +298,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Ejemplos de uso</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Ejemplo visual para destacar informacion en una landing page usando jerarquia y color.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -316,7 +316,7 @@
                             <p class="w4-hdg w4-hdg-sm w4-hdg-secondary w4-hdg-center">NUEVA COLECCION 2026</p>
                             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-center">Disena Interfaces Que</h2>
                             <h3 class="w4-hdg w4-hdg-h3 w4-hdg-accent w4-hdg-center">Convierten Mas Rapido</h3>
-                            <p class="w4-text w4-text-base w4-text-neutral-content w4-text-center">
+                            <p class="w4-text w4-text-base w4-text-neutral w4-text-center">
                                 Combina variantes <strong>Primary</strong> y <strong>Accent</strong> para dirigir la
                                 atencion
                                 del usuario al mensaje principal.
@@ -336,7 +336,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Visuales</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Estados soportados por clase y por atributo <code>data-w4-state</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -411,12 +411,13 @@
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Nativos Javascript Soportados al Componente
                 Heading</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
-                Prueba de cambios de estado del componente con <code>data-w4-state</code>.
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Prueba de cambios de estado del componente con <code>data-w4-heading-state</code> y
+                <code>data-w4-target</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <p class="w4-text w4-text-sm w4-text-neutral-content">
+                <p class="w4-text w4-text-sm w4-text-neutral">
                     Playground: Juega con los estados JS soportados para ver su efecto en el heading de prueba.
                 </p>
                 <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
@@ -455,7 +456,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="w4-text w4-text-sm w4-text-neutral-content">
+                <p class="w4-text w4-text-sm w4-text-neutral">
                     El estado se aplica al heading de prueba y refleja los hooks visuales del componente.
                 </p>
             </div>

@@ -549,7 +549,8 @@
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Nativos Javascript Soportados al Componente
                 Button</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">
-                Controles para probar transiciones del componente usando <code>data-w4-state</code>.
+                Controles para probar transiciones del componente usando <code>data-w4-button-state</code> y
+                <code>data-w4-target</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">

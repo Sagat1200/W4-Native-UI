@@ -82,17 +82,17 @@
 
     <main class="w4-container w4-container-xl">
         <section class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center mt-12">Native UI Text</h1>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Text</h1>
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Text:</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Text:</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Text</strong> es la base para el contenido escrito en la interfaz y asegura
                 legibilidad, contraste y consistencia tipográfica.
             </p>
-            <h2 class="w4-heading w4-heading-h3 w4-heading-primary w4-heading-start">Casos de Uso Comunes:</h2>
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
             <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Cuerpos de texto:</strong> artículos y descripciones largas.</li>
                 <li><strong class="w4-text-active">Leads:</strong> párrafos introductorios con
@@ -106,7 +106,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes Semánticas</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Variantes Semánticas</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">Colores semánticos para textos informativos y de
                 estado.</p>
             <hr class="w4-divider w4-divider-primary">
@@ -167,7 +167,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Tamaños y Estilos</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Tamaños y Estilos</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">Escalas de texto y estilo lead.</p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-100 w4-panel-md">
@@ -207,7 +207,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Alineación</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Alineación</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">Control de alineación horizontal del texto.</p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-100 w4-panel-md">
@@ -240,8 +240,8 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Ejemplos Basicos</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Ejemplos Basicos</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Muestra de textos diversos aplicando todas las variantes de color del componente.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -351,7 +351,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Visuales</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Visuales</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">Estados por clase y por atributo
                 <code>data-w4-state</code>.
             </p>
@@ -388,7 +388,7 @@
                 </div>
 
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Atributo</h3>
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Por Atributo</h3>
                     <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
                         <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                             <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
@@ -421,12 +421,17 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados JS Soportados</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral">Playground declarativo con
-                <code>data-w4-text-state</code> y <code>data-w4-target</code>.
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Nativos Javascript Soportados al Componente
+                Text</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">Controles para probar transiciones del componente
+                usando <code>data-w4-text-state</code> y
+                <code>data-w4-target</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    Playground: Juega con los estados JS soportados para ver su efecto en el Text de prueba.
+                </p>
                 <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
                     <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                         <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
@@ -463,6 +468,9 @@
                         </div>
                     </div>
                 </div>
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    El estado se aplica al texto de prueba y refleja los hooks visuales del componente.
+                </p>
             </div>
         </section>
     </main>

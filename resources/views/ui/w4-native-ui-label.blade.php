@@ -35,14 +35,14 @@
         </div>
         <div class="w4-navbar-center">
             <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
-                <li class="w4-text w4-text-neutral-content"><a href="">Inicio</a></li>
-                <li class="w4-text w4-text-neutral-content"><a href="">Documentacion</a></li>
-                <li class="w4-text w4-text-neutral-content"><a href="">Soporte</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Soporte</a></li>
             </ul>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral-content">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -88,7 +88,7 @@
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Label:</h2>
             <hr class="w4-divider w4-divider-primary">
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Label</strong> proporciona consistencia tipográfica para describir inputs y
                 controles.
             </p>
@@ -108,13 +108,14 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Variantes Semánticas</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Colores semánticos disponibles para etiquetas.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-100 w4-panel-md">
                 <div class="w4-stack w4-stack-sm">
-                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
                         <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
                             data-w4-target="labelSemanticPreview">Vista</button>
                         <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
@@ -170,7 +171,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Tamaños</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Escalas tipográficas para labels.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -209,7 +210,7 @@
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Visuales</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Estados por clase y por atributo <code>data-w4-state</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -285,12 +286,17 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados JS Soportados</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
-                Playground de estados usando <code>data-w4-label-state</code> + <code>data-w4-target</code>.
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Nativos Javascript Soportados al Componente
+                Label</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Controles para probar transiciones del componente usando <code>data-w4-label-state</code> y
+                <code>data-w4-target</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    Playground: Juega con los estados JS soportados para ver su efecto en el Label de prueba.
+                </p>
                 <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
                     <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                         <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
@@ -332,6 +338,9 @@
                         </div>
                     </div>
                 </div>
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    El estado se aplica al label de prueba y refleja los hooks visuales del componente.
+                </p>
             </div>
         </section>
     </main>

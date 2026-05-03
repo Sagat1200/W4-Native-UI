@@ -35,14 +35,14 @@
         </div>
         <div class="w4-navbar-center">
             <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
-                <li class="w4-text w4-text-neutral-content"><a href="">Inicio</a></li>
-                <li class="w4-text w4-text-neutral-content"><a href="">Documentacion</a></li>
-                <li class="w4-text w4-text-neutral-content"><a href="">Soporte</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Soporte</a></li>
             </ul>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral-content">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -82,20 +82,20 @@
 
     <main class="w4-container w4-container-xl">
         <section class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center mt-12">Native UI Link</h1>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Link</h1>
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Link:</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Link:</h2>
             <hr class="w4-divider w4-divider-primary">
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Link</strong> se encarga de estilizar hipervínculos (etiquetas
                 <code>&lt;a&gt;</code>) de manera
                 consistente. Soporta variantes de color para indicar la naturaleza del enlace, hereda automáticamente el
                 tamaño de la tipografía donde se encuentre insertado y cuenta con estados accesibles (focus ring)
                 integrados.
             </p>
-            <h2 class="w4-heading w4-heading-h3 w4-heading-primary w4-heading-start">Casos de Uso Comunes:</h2>
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
             <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Navegación textual:</strong> enlaces dentro de contenido.</li>
                 <li><strong class="w4-text-active">Acciones secundarias:</strong> recuperar contraseña, ayuda, soporte.
@@ -106,8 +106,8 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes Semánticas</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Variantes Semánticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Colores semánticos para enlaces.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -176,8 +176,8 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Tamaños</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Tamaños</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Escalas tipográficas para links.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -216,8 +216,8 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Ejemplos Basicos</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Ejemplos Basicos</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Casos rapidos de uso para navegacion textual, acciones secundarias, breadcrumbs y links legales.
             </p>
             <hr class="w4-divider w4-divider-primary">
@@ -249,7 +249,7 @@
                                         <li><a href="" class="w4-link w4-link-primary w4-link-active">Seguridad</a></li>
                                     </ul>
                                 </nav>
-                                <p class="w4-text w4-text-sm w4-text-neutral-content">
+                                <p class="w4-text w4-text-sm w4-text-neutral">
                                     Al continuar aceptas nuestros
                                     <a href="" class="w4-link w4-link-primary">Terminos de Servicio</a>
                                     y la
@@ -288,14 +288,14 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Visuales</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
                 Estados por clase y por atributo <code>data-w4-state</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-grid w4-grid-2 w4-gap-md">
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Clase</h3>
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Por Clase</h3>
                     <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
                         <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                             <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
@@ -325,7 +325,7 @@
                 </div>
 
                 <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Atributo</h3>
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Por Atributo</h3>
                     <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
                         <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                             <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
@@ -360,12 +360,17 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados JS Soportados</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral-content">
-                Playground de estados usando <code>data-w4-link-state</code> y <code>data-w4-target</code>.
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Nativos Javascript Soportados al Componente
+                Link</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Controles para probar transiciones del componente usando <code>data-w4-link-state</code> y
+                <code>data-w4-target</code>.
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    Playground: Juega con los estados JS soportados para ver su efecto en el Link de prueba.
+                </p>
                 <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
                     <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                         <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
@@ -405,6 +410,9 @@
                         </div>
                     </div>
                 </div>
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    El estado se aplica al link de prueba y refleja los hooks visuales del componente.
+                </p>
             </div>
         </section>
     </main>
