@@ -7,6 +7,7 @@
     <title>W4 Native Button Lab</title>
     @NativeUIStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -149,6 +150,73 @@
 &lt;button class="w4-btn w4-btn-error"&gt;Error&lt;/button&gt;
 &lt;button class="w4-btn w4-btn-ghost"&gt;Ghost&lt;/button&gt;
 &lt;button class="w4-btn w4-btn-link"&gt;Link&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Ejemplos Basicos</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Casos basicos para formularios, acciones destructivas, navegacion y procesamiento asincrono.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="buttonBasicPreview">Vista previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="buttonBasicCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="buttonBasicPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-vertical w4-stack-md">
+                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                    <span class="w4-text w4-text-sm w4-text-neutral-content">Formulario:</span>
+                                    <button class="w4-btn w4-btn-primary">Guardar</button>
+                                    <button class="w4-btn w4-btn-secondary">Enviar</button>
+                                    <button class="w4-btn w4-btn-ghost">Cancelar</button>
+                                </div>
+                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                    <span class="w4-text w4-text-sm w4-text-neutral-content">Accion destructiva:</span>
+                                    <button class="w4-btn w4-btn-error">Eliminar Registro</button>
+                                </div>
+                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                    <span class="w4-text w4-text-sm w4-text-neutral-content">Navegacion:</span>
+                                    <button class="w4-btn w4-btn-link">Ir al Dashboard</button>
+                                    <button class="w4-btn w4-btn-outline">Ver Detalles</button>
+                                </div>
+                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                    <span class="w4-text w4-text-sm w4-text-neutral-content">Procesamiento:</span>
+                                    <button class="w4-btn w4-btn-info w4-btn-md" data-w4-state="loading">
+                                        <i class=" fa-solid fa-rotate w4-icon w4-icon-md w4-icon-secondary
+                                        w4-icon-spin"></i>Procesando...
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="buttonBasicCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre
+                                class="m-0"><code>
+&lt;!-- Formularios --&gt;
+&lt;button class="w4-btn w4-btn-primary"&gt;Guardar&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-secondary"&gt;Enviar&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-ghost"&gt;Cancelar&lt;/button&gt;
+
+&lt;!-- Accion destructiva --&gt;
+&lt;button class="w4-btn w4-btn-error"&gt;Eliminar Registro&lt;/button&gt;
+
+&lt;!-- Navegacion --&gt;
+&lt;button class="w4-btn w4-btn-link"&gt;Ir al Dashboard&lt;/button&gt;
+&lt;button class="w4-btn w4-btn-outline"&gt;Ver Detalles&lt;/button&gt;
+
+&lt;!-- Procesamiento --&gt;
+&lt;button class="w4-btn w4-btn-info w4-btn-md" data-w4-state="loading"&gt;
+&lt;i class=" fa-solid fa-rotate w4-icon w4-icon-xl w4-icon-secondary w4-icon-spin"&gt;&lt;/i&gt;Procesando...&lt;/button&gt;</code></pre>
                         </div>
                     </div>
                 </div>
@@ -528,20 +596,25 @@
                             <div id="buttonJsStatePreview" data-w4-tab-panel
                                 class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
                                 <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                                    <button id="labButtonTarget" class="w4-btn w4-btn-primary w4-btn-md mb-6">Botón
-                                        de
-                                        Prueba</button>
+                                    <button id="labButtonTarget" class="w4-btn w4-btn-primary w4-btn-md mb-6">Botón de
+                                        Prueba
+                                        <i class="fa-solid fa-rotate w4-icon w4-icon-md w4-icon-info"></i>
+                                    </button>
                                 </div>
                                 <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
                                     <button type="button" class="w4-btn w4-btn-sm w4-btn-neutral"
                                         data-w4-button-state="enabled" data-w4-target="labButtonTarget">Enabled</button>
+
                                     <button type="button" class="w4-btn w4-btn-sm w4-btn-secondary"
                                         data-w4-button-state="active" data-w4-target="labButtonTarget">Active</button>
+
                                     <button type="button" class="w4-btn w4-btn-sm w4-btn-info"
                                         data-w4-button-state="loading" data-w4-target="labButtonTarget">Loading</button>
+
                                     <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
                                         data-w4-button-state="readonly"
                                         data-w4-target="labButtonTarget">Readonly</button>
+
                                     <button type="button" class="w4-btn w4-btn-sm w4-btn-error"
                                         data-w4-button-state="disabled"
                                         data-w4-target="labButtonTarget">Disabled</button>
@@ -551,7 +624,11 @@
                                 class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
                                 hidden aria-hidden="true">
                                 <pre class="m-0"><code class="w4-text w4-text-xs">
-&lt;button id="labButtonTarget" class="w4-btn w4-btn-primary w4-btn-md"&gt;Botón de Prueba&lt;/button&gt;
+&lt;button id="labButtonTarget" class="w4-btn w4-btn-primary w4-btn-md"&gt;
+  Botón de Prueba
+  &lt;i class="fa-solid fa-rotate w4-icon w4-icon-md"&gt;&lt;/i&gt;
+&lt;/button&gt;
+&lt;button data-w4-button-state="enabled" data-w4-target="labButtonTarget"&gt;Clear&lt;/button&gt;
 &lt;button data-w4-button-state="enabled" data-w4-target="labButtonTarget"&gt;Enabled&lt;/button&gt;
 &lt;button data-w4-button-state="active" data-w4-target="labButtonTarget"&gt;Active&lt;/button&gt;
 &lt;button data-w4-button-state="loading" data-w4-target="labButtonTarget"&gt;Loading&lt;/button&gt;

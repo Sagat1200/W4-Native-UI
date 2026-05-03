@@ -122,16 +122,32 @@
                     </div>
                     <div class="w4-stack w4-stack-sm">
                         <div id="labelSemanticPreview" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
-                            <div class="w4-stack w4-stack-vertical w4-stack-xs">
-                                <label class="w4-label w4-label-neutral">Neutral Label</label>
-                                <label class="w4-label w4-label-primary">Primary Label</label>
-                                <label class="w4-label w4-label-secondary">Secondary Label</label>
-                                <label class="w4-label w4-label-accent">Accent Label</label>
-                                <label class="w4-label w4-label-info">Info Label</label>
-                                <label class="w4-label w4-label-success">Success Label</label>
-                                <label class="w4-label w4-label-warning">Warning Label</label>
-                                <label class="w4-label w4-label-error">Error Label</label>
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm">
+                            <div class="w4-grid w4-grid-4 w4-grid-bordered-primary">
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <label class="w4-label w4-label-neutral">Neutral Label</label>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <label class="w4-label w4-label-primary">Primary Label</label>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <label class="w4-label w4-label-secondary">Secondary Label</label>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <label class="w4-label w4-label-accent">Accent Label</label>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <label class="w4-label w4-label-info">Info Label</label>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <label class="w4-label w4-label-success">Success Label</label>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <label class="w4-label w4-label-warning">Warning Label</label>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <label class="w4-label w4-label-error">Error Label</label>
+                                </div>
                             </div>
                         </div>
                         <div id="labelSemanticCode" data-w4-tab-panel

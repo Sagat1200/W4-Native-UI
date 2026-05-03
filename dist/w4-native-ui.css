@@ -1414,9 +1414,17 @@ html[data-theme] body {
 /* Loading State */
 .w4-btn-loading,
 .w4-button-loading,
+.w4-btn[data-w4-state~="loading"],
 .w4-button[data-w4-state~="loading"] {
   pointer-events: none !important;
   opacity: var(--w4-loading-opacity) !important;
+}
+
+.w4-btn-loading .w4-icon,
+.w4-button-loading .w4-icon,
+.w4-btn[data-w4-state~="loading"] .w4-icon,
+.w4-button[data-w4-state~="loading"] .w4-icon {
+  animation: w4-icon-spin 1s linear infinite;
 }
 
 /* Readonly State */

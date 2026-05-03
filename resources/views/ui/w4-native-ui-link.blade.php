@@ -6,117 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4 Native Link Lab</title>
     @NativeUIStyles
-    <style>
-        body {
-            background-color: hsl(var(--w4-base-200));
-            color: hsl(var(--w4-base-content));
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            margin: 0;
-            padding: 2rem;
-            min-block-size: 100vh;
-        }
-
-        .lab-container {
-            max-inline-size: 1200px;
-            margin: 0 auto;
-            background-color: hsl(var(--w4-base-100));
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
-        .lab-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-block-end: 1px solid hsl(var(--w4-base-300));
-            padding-block-end: 1.5rem;
-        }
-
-        .lab-title {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .lab-subtitle {
-            margin: 0.5rem 0 0 0;
-            color: hsl(var(--w4-base-content) / 0.7);
-        }
-
-        .theme-selector-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .theme-selector {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            border: 1px solid hsl(var(--w4-base-300));
-            background-color: hsl(var(--w4-base-100));
-            color: hsl(var(--w4-base-content));
-            font-size: 1rem;
-            min-inline-size: 200px;
-        }
-
-        .section-title {
-            margin: 0 0 1rem 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-            border-inline-start: 4px solid hsl(var(--w4-primary));
-            padding-inline-start: 0.75rem;
-        }
-
-        .preview-group {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            padding: 1.5rem;
-            background-color: hsl(var(--w4-base-200));
-            border-radius: 0.75rem;
-        }
-
-        .preview-item {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            background-color: hsl(var(--w4-base-100));
-            padding: 1rem;
-            border-radius: var(--w4-radius-card);
-            box-shadow: var(--w4-shadow-sm);
-        }
-
-        .preview-label-desc {
-            font-size: 0.75rem;
-            color: hsl(var(--w4-base-content) / 0.5);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
 
-    <div class="lab-container">
-        <header class="lab-header">
-            <div>
-                <h1 class="lab-title">W4 Native: Link Lab</h1>
-                <p class="lab-subtitle">Entorno de pruebas visuales para el componente w4-link</p>
-            </div>
+    <div class="w4-navbar  w4-navbar-fixed">
+        <div class="w4-navbar-start">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="w4-icon w4-icon-md stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
+            </button>
 
-            <div class="theme-selector-wrapper">
-                <label for="themeSwitcher" style="font-weight: 600; font-size: 0.875rem;">Cambiar Tema:</label>
-                <select id="themeSwitcher" class="theme-selector">
+        </div>
+        <div class="w4-navbar-center">
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral-content"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral-content"><a href="">Soporte</a></li>
+            </ul>
+        </div>
+        <div class="w4-navbar-end">
+            <div class="w4-stack w4-stack-xs mx-2">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral-content">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -151,174 +77,342 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section style="margin-block-end: 2rem;">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-start">Componente: W4 Link</h1>
-            <p class="w4-text w4-text-lg w4-text-neutral" style="margin-block-start: 1rem;">
-                El componente Link se encarga de estilizar hipervínculos (etiquetas <code>&lt;a&gt;</code>) de manera
+    <main class="w4-container w4-container-xl">
+        <section class="w4-section w4-section-xl">
+            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center mt-12">Native UI Link</h1>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Link:</h2>
+            <hr class="w4-divider w4-divider-primary">
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                El componente <strong>Link</strong> se encarga de estilizar hipervínculos (etiquetas
+                <code>&lt;a&gt;</code>) de manera
                 consistente. Soporta variantes de color para indicar la naturaleza del enlace, hereda automáticamente el
                 tamaño de la tipografía donde se encuentre insertado y cuenta con estados accesibles (focus ring)
                 integrados.
             </p>
-
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary"
-                style="margin-block-start: 2rem; margin-block-end: 1rem;">Casos de uso comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral"
-                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                <li><strong class="w4-text-active">Navegación textual:</strong> Enlaces integrados dentro de párrafos o
-                    artículos.</li>
-                <li><strong class="w4-text-active">Acciones secundarias:</strong> Textos como "Olvidé mi contraseña" en
-                    formularios de login.</li>
-                <li><strong class="w4-text-active">Breadcrumbs:</strong> Estilizar las rutas de navegación estructural
-                    del sitio.</li>
-                <li><strong class="w4-text-active">Políticas y Legales:</strong> Resaltar términos de servicio, cookies
-                    o acuerdos de privacidad con las variantes Secondary o Neutral.</li>
+            <h2 class="w4-heading w4-heading-h3 w4-heading-primary w4-heading-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start">
+                <li><strong class="w4-text-active">Navegación textual:</strong> enlaces dentro de contenido.</li>
+                <li><strong class="w4-text-active">Acciones secundarias:</strong> recuperar contraseña, ayuda, soporte.
+                </li>
+                <li><strong class="w4-text-active">Breadcrumbs:</strong> rutas de navegación estructural.</li>
+                <li><strong class="w4-text-active">Legal:</strong> términos, privacidad y políticas.</li>
             </ul>
         </section>
 
-        <section>
-            <h2 class="section-title">Variantes de Color</h2>
-            <div class="preview-group grid-container">
-                <div class="preview-item">
-                    <span class="preview-label-desc">Primary (Default)</span>
-                    <a href="#" class="w4-link">Ir a inicio</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Secondary</span>
-                    <a href="#" class="w4-link w4-link-secondary">Términos y condiciones</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Accent</span>
-                    <a href="#" class="w4-link w4-link-accent">Ofertas especiales</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Info</span>
-                    <a href="#" class="w4-link w4-link-info">Saber más</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Success</span>
-                    <a href="#" class="w4-link w4-link-success">Verificar cuenta</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Warning</span>
-                    <a href="#" class="w4-link w4-link-warning">Atención al cliente</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Error</span>
-                    <a href="#" class="w4-link w4-link-error">Reportar un problema</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Neutral</span>
-                    <a href="#" class="w4-link w4-link-neutral">Volver atrás</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Muted</span>
-                    <a href="#" class="w4-link w4-link-muted">Cancelar suscripción</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-secondary))">Comportamiento en Línea (Inline)
-            </h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <span class="preview-label-desc">Texto Integrado</span>
-                    <p style="margin: 0; line-height: 1.5;">
-                        Al hacer clic en <a href="#" class="w4-link w4-link-primary">Aceptar</a>, usted confirma que ha
-                        leído nuestra
-                        <a href="#" class="w4-link w4-link-secondary">Política de Privacidad</a> y está de acuerdo con
-                        el
-                        <a href="#" class="w4-link w4-link-neutral">Uso de Cookies</a> en este sitio web.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-accent))">Tamaños Explícitos (XS - XL)</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-link-xs</span>
-                    <a href="#" class="w4-link w4-link-xs">Enlace extra pequeño</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-link-sm</span>
-                    <a href="#" class="w4-link w4-link-sm">Enlace pequeño</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-link-md (Default/Inherit)</span>
-                    <a href="#" class="w4-link w4-link-md">Enlace mediano</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-link-lg</span>
-                    <a href="#" class="w4-link w4-link-lg">Enlace grande</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">w4-link-xl</span>
-                    <a href="#" class="w4-link w4-link-xl">Enlace extra grande</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-error))">Estados (CSS Classes & Atributos)</h2>
-            <div class="preview-group">
-                <div class="preview-item">
-                    <span class="preview-label-desc">Normal (Con focus-visible)</span>
-                    <a href="#" class="w4-link">Navega usando la tecla Tab para ver el Focus Ring</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Active (w4-link-active)</span>
-                    <a href="#" class="w4-link w4-link-active">Enlace activo presionado</a>
-                </div>
-                <div class="preview-item">
-                    <span class="preview-label-desc">Disabled (w4-link-disabled)</span>
-                    <a href="#" class="w4-link w4-link-disabled">Enlace deshabilitado</a>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="section-title" style="border-color: hsl(var(--w4-success))">Estados JS Soportados (data-w4-state)
-            </h2>
-            <div class="preview-group">
-                <div class="preview-item" style="padding: 2rem;">
-                    <div style="margin-bottom: 1.5rem;">
-                        <a href="#" id="jsInteractiveLink" class="w4-link w4-link-lg" data-w4-component="link"
-                            onclick="event.preventDefault()">
-                            Enlace Interactivo Dinámico
-                        </a>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes Semánticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Colores semánticos para enlaces.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="linkSemanticPreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="linkSemanticCode">Codigo HTML</button>
                     </div>
-
-                    <p
-                        style="font-size: 0.875rem; color: hsl(var(--w4-base-content) / 0.7); margin-bottom: 0.5rem; margin-top: 0;">
-                        Modifica el atributo <code>data-w4-state</code> en tiempo real usando estos botones:
-                    </p>
-
-                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                        <button class="w4-button w4-button-sm w4-button-outline"
-                            onclick="document.getElementById('jsInteractiveLink').removeAttribute('data-w4-state')">Clear
-                            (Normal)</button>
-                        <button class="w4-button w4-button-sm w4-button-info"
-                            onclick="document.getElementById('jsInteractiveLink').setAttribute('data-w4-state', 'active')">Set
-                            Active</button>
-                        <button class="w4-button w4-button-sm w4-button-warning"
-                            onclick="document.getElementById('jsInteractiveLink').setAttribute('data-w4-state', 'disabled')">Set
-                            Disabled</button>
-                        <button class="w4-button w4-button-sm w4-button-error"
-                            onclick="document.getElementById('jsInteractiveLink').setAttribute('data-w4-state', 'hidden')">Set
-                            Hidden</button>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="linkSemanticPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm">
+                            <div class="w4-grid w4-grid-4 w4-grid-bordered-primary">
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <div class="w4-text w4-text-xs w4-text-neutral">Neutral</div>
+                                    <a href="" class="w4-link w4-link-neutral">Link Neutral</a>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <div class="w4-text w4-text-xs w4-text-primary">Primary</div>
+                                    <a href="" class="w4-link w4-link-primary">Link Primary</a>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <div class="w4-text w4-text-xs w4-text-secondary">Secondary</div>
+                                    <a href="" class="w4-link w4-link-secondary">Link Secondary</a>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <div class="w4-text w4-text-xs w4-text-accent">Accent</div>
+                                    <a href="" class="w4-link w4-link-accent">Link Accent</a>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <div class="w4-text w4-text-xs w4-text-info">Info</div>
+                                    <a href="" class="w4-link w4-link-info">Link Info</a>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <div class="w4-text w4-text-xs w4-text-success">Success</div>
+                                    <a href="" class="w4-link w4-link-success">Link Success</a>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <div class="w4-text w4-text-xs w4-text-warning">Warning</div>
+                                    <a href="" class="w4-link w4-link-warning">Link Warning</a>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-xs">
+                                    <div class="w4-text w4-text-xs w4-text-error">Error</div>
+                                    <a href="" class="w4-link w4-link-error">Link Error</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="linkSemanticCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;a class="w4-link w4-link-neutral" href="#"&gt;Link Neutral&lt;/a&gt;
+&lt;a class="w4-link w4-link-primary" href="#"&gt;Link Primary&lt;/a&gt;
+&lt;a class="w4-link w4-link-secondary" href="#"&gt;Link Secondary&lt;/a&gt;
+&lt;a class="w4-link w4-link-accent" href="#"&gt;Link Accent&lt;/a&gt;
+&lt;a class="w4-link w4-link-info" href="#"&gt;Link Info&lt;/a&gt;
+&lt;a class="w4-link w4-link-success" href="#"&gt;Link Success&lt;/a&gt;
+&lt;a class="w4-link w4-link-warning" href="#"&gt;Link Warning&lt;/a&gt;
+&lt;a class="w4-link w4-link-error" href="#"&gt;Link Error&lt;/a&gt;</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Ejemplos Basicos</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Casos rapidos de uso para navegacion textual, acciones secundarias, breadcrumbs y links legales.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="linkBasicPreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="linkBasicCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="linkBasicPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-vertical w4-stack-sm">
+                                <p class="w4-text w4-text-base">
+                                    Lee nuestra
+                                    <a href="" class="w4-link w4-link-primary">documentacion de implementacion</a>
+                                    para conocer mas detalles.
+                                </p>
+                                <p class="w4-text w4-text-base">
+                                    <a href="" class="w4-link w4-link-primary w4-link-sm">Olvide mi contrasena</a>
+                                </p>
+                                <nav class="w4-breadcrumb w4-breadcrumb-size-sm w4-breadcrumb-primary">
+                                    <ul>
+                                        <li><a href="" class="w4-link w4-link-neutral">Inicio</a></li>
+                                        <li><a href="" class="w4-link w4-link-neutral">Cuenta</a></li>
+                                        <li><a href="" class="w4-link w4-link-primary w4-link-active">Seguridad</a></li>
+                                    </ul>
+                                </nav>
+                                <p class="w4-text w4-text-sm w4-text-neutral-content">
+                                    Al continuar aceptas nuestros
+                                    <a href="" class="w4-link w4-link-primary">Terminos de Servicio</a>
+                                    y la
+                                    <a href="" class="w4-link w4-link-primary">Politica de Privacidad</a>.
+                                </p>
+                            </div>
+                        </div>
+                        <div id="linkBasicCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class="w4-text w4-text-base"&gt;
+  Lee nuestra &lt;a href="#" class="w4-link w4-link-primary"&gt;documentacion de implementacion&lt;/a&gt;
+  para conocer mas detalles.
+&lt;/p&gt;
+&lt;a href="#" class="w4-link w4-link-primary w4-link-sm"&gt;Olvide mi contrasena&lt;/a&gt;
+&lt;nav class="w4-breadcrumb w4-breadcrumb-size-sm w4-breadcrumb-primary"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="#" class="w4-link w4-link-neutral"&gt;Inicio&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#" class="w4-link w4-link-neutral"&gt;Cuenta&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#" class="w4-link w4-link-primary w4-link-active"&gt;Seguridad&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;p class="w4-text w4-text-sm w4-text-neutral-content"&gt;
+  Al continuar aceptas nuestros &lt;a href="#" class="w4-link w4-link-primary"&gt;Terminos de Servicio&lt;/a&gt; y la &lt;a href="#" class="w4-link w4-link-primary"&gt;Politica de Privacidad&lt;/a&gt;.
+&lt;/p&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Tamaños</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Escalas tipográficas para links.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm">
+                    <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center"
+                        data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="linkSizePreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="linkSizeCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="linkSizePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-xs w4-stack-center">
+                                <a href="" class="w4-link w4-link-primary w4-link-xs">Link XS</a>
+                                <a href="" class="w4-link w4-link-primary w4-link-sm">Link SM</a>
+                                <a href="" class="w4-link w4-link-primary w4-link-md">Link MD</a>
+                                <a href="" class="w4-link w4-link-primary w4-link-lg">Link LG</a>
+                                <a href="" class="w4-link w4-link-primary w4-link-xl">Link XL</a>
+                            </div>
+                        </div>
+                        <div id="linkSizeCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;a class="w4-link w4-link-primary w4-link-xs" href="#"&gt;Link XS&lt;/a&gt;
+&lt;a class="w4-link w4-link-primary w4-link-sm" href="#"&gt;Link SM&lt;/a&gt;
+&lt;a class="w4-link w4-link-primary w4-link-md" href="#"&gt;Link MD&lt;/a&gt;
+&lt;a class="w4-link w4-link-primary w4-link-lg" href="#"&gt;Link LG&lt;/a&gt;
+&lt;a class="w4-link w4-link-primary w4-link-xl" href="#"&gt;Link XL&lt;/a&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Estados por clase y por atributo <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-2 w4-gap-md">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Clase</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="linkClassPreview">Vista</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="linkClassCode">Codigo</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="linkClassPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-vertical w4-stack-xs">
+                                    <a href="" class="w4-link w4-link-primary w4-link-active">Link Active</a>
+                                    <a href="" class="w4-link w4-link-warning w4-link-disabled">Link Disabled</a>
+                                    <a href="" class="w4-link w4-link-error w4-link-hidden">Link Hidden</a>
+                                </div>
+                            </div>
+                            <div id="linkClassCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;a class="w4-link w4-link-primary w4-link-active" href="#"&gt;Link Active&lt;/a&gt;
+&lt;a class="w4-link w4-link-warning w4-link-disabled" href="#"&gt;Link Disabled&lt;/a&gt;
+&lt;a class="w4-link w4-link-error w4-link-hidden" href="#"&gt;Link Hidden&lt;/a&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Por Atributo</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="linkAttrPreview">Vista</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="linkAttrCode">Codigo</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="linkAttrPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-vertical w4-stack-xs">
+                                    <a href="" class="w4-link w4-link-primary"
+                                        data-w4-state="active">data-w4-state="active"</a>
+                                    <a href="" class="w4-link w4-link-warning"
+                                        data-w4-state="disabled">data-w4-state="disabled"</a>
+                                    <a href="" class="w4-link w4-link-error"
+                                        data-w4-state="hidden">data-w4-state="hidden"</a>
+                                </div>
+                            </div>
+                            <div id="linkAttrCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;a class="w4-link w4-link-primary" data-w4-state="active" href="#"&gt;...&lt;/a&gt;
+&lt;a class="w4-link w4-link-warning" data-w4-state="disabled" href="#"&gt;...&lt;/a&gt;
+&lt;a class="w4-link w4-link-error" data-w4-state="hidden" href="#"&gt;...&lt;/a&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados JS Soportados</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral-content">
+                Playground de estados usando <code>data-w4-link-state</code> y <code>data-w4-target</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                    <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                            data-w4-target="linkJsPreview">Vista</button>
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                            data-w4-target="linkJsCode">Codigo</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="linkJsPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-vertical w4-stack-sm">
+                                <a id="labLinkTarget" href="" class="w4-link w4-link-primary w4-link-lg">Link de
+                                    Prueba</a>
+                                <p class="w4-text w4-text-sm w4-text-neutral-content">El link no navega en este
+                                    laboratorio.</p>
+                            </div>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-neutral"
+                                    data-w4-link-state="enabled" data-w4-target="labLinkTarget">Enabled</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-secondary"
+                                    data-w4-link-state="active" data-w4-target="labLinkTarget">Active</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
+                                    data-w4-link-state="disabled" data-w4-target="labLinkTarget">Disabled</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-error" data-w4-link-state="hidden"
+                                    data-w4-target="labLinkTarget">Hidden</button>
+                            </div>
+                        </div>
+                        <div id="linkJsCode" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                            aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;a id="labLinkTarget" class="w4-link w4-link-primary" href="#"&gt;Link de Prueba&lt;/a&gt;
+&lt;button data-w4-link-state="enabled" data-w4-target="labLinkTarget"&gt;Enabled&lt;/button&gt;
+&lt;button data-w4-link-state="active" data-w4-target="labLinkTarget"&gt;Active&lt;/button&gt;
+&lt;button data-w4-link-state="disabled" data-w4-target="labLinkTarget"&gt;Disabled&lt;/button&gt;
+&lt;button data-w4-link-state="hidden" data-w4-target="labLinkTarget"&gt;Hidden&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
 
     @NativeUIScripts
     @NativeUIInit
-    @NativeUILivewire
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
