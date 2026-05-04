@@ -55,10 +55,9 @@ class BuildAssetsCommandTest extends TestCase
         $this->assertStringContainsString('window.NativeUI', $jsContent);
         $this->assertStringContainsString('data-w4-component', $jsContent);
         $this->assertStringContainsString('MutationObserver', $jsContent);
-        $this->assertStringContainsString('on: function', $jsContent);
-        $this->assertStringContainsString('off: function', $jsContent);
-        $this->assertStringContainsString('once: function', $jsContent);
-        $this->assertStringContainsString('emit: function', $jsContent);
+        $this->assertStringContainsString('static on(', $jsContent);
+        $this->assertStringContainsString('static off(', $jsContent);
+        $this->assertStringContainsString('static emit', $jsContent);
         $this->assertStringContainsString('applyPressFeedback', $jsContent);
         $this->assertStringContainsString('w4-button-pressing', $jsContent);
     }

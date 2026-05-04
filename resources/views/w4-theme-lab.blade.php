@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>W4 Theme Lab</title>
-    @W4NativeStyles
+    @NativeUIStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -367,9 +367,9 @@
         </section>
     </main>
 
-    @W4NativeScripts
-    @W4NativeInit
-    @W4NativeLivewire
+    @NativeUIScripts
+    @NativeUIInit
+    @NativeUILivewire
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             if (!window.W4NativeUI) {

@@ -42,4 +42,5 @@ return [
     ],
     'assets_path' => 'vendor/w4-native-ui',
     'theme_attribute' => 'data-theme',
+    'enable_demo_routes' => env('W4_NATIVE_UI_ENABLE_DEMO_ROUTES', app()->environment(['local', 'testing'])),
 ];

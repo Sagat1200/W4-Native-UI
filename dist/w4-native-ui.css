@@ -1249,85 +1249,6 @@ html[data-theme] body {
   --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
 }
 
-[data-theme="native-ui.sunset"] {
-  --w4-primary: 16 100% 68%;
-  --w4-primary-content: 11 78% 5%;
-  --w4-secondary: 341 97% 71%;
-  --w4-secondary-content: 344 68% 5%;
-  --w4-accent: 263 92% 75%;
-  --w4-accent-content: 262 54% 5%;
-  --w4-neutral: 204 23% 14%;
-  --w4-neutral-content: 204 11% 62%;
-  --w4-base-100: 204 31% 10%;
-  --w4-base-200: 204 37% 9%;
-  --w4-base-300: 204 45% 7%;
-  --w4-base-content: 208 34% 72%;
-  --w4-info: 187 71% 73%;
-  --w4-info-content: 187 49% 5%;
-  --w4-success: 120 44% 78%;
-  --w4-success-content: 120 23% 6%;
-  --w4-warning: 34 77% 76%;
-  --w4-warning-content: 34 46% 5%;
-  --w4-error: 358 100% 87%;
-  --w4-error-content: 358 26% 7%;
-  /* --- Variables Estructurales del Tema --- */
-  --w4-radius-button: 0.5rem;
-  --w4-radius-badge: 0.5rem;
-  --w4-radius-card: 0.5rem;
-  --w4-radius-input: 0.5rem;
-  
-  --w4-btn-border-width: 1px;
-  --w4-shadow-sm: var(--w4-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
-  --w4-shadow-md: var(--w4-shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
-}
-
-[data-theme="native-ui.cyberpunk"] {
-  --w4-primary: 343 128% 74%;
-  --w4-primary-content: 347 74% 5%;
-  --w4-secondary: 184 249% 29%;
-  --w4-secondary-content: 187 140% 4%;
-  --w4-accent: 277 111% 74%;
-  --w4-accent-content: 275 66% 5%;
-  --w4-base-100: 55 102% 65%;
-  --w4-base-200: 55 92% 60%;
-  --w4-base-300: 56 88% 47%;
-  --w4-base-content: 0 0% 0%;
-  --w4-info: 194 201% 34%;
-  --w4-info-content: 0 0% 0%;
-  --w4-success: 161 124% 30%;
-  --w4-success-content: 0 0% 0%;
-  --w4-warning: 46 169% 39%;
-  --w4-warning-content: 0 0% 0%;
-  --w4-error: 357 126% 71%;
-  --w4-error-content: 0 0% 0%;
-
-  /* --- Variables Estructurales del Tema --- */
-  --w4-radius-button: 0px;      /* Botones cuadrados */
-  --w4-radius-badge: 0px;       /* Badges cuadrados */
-  --w4-radius-card: 0px;        /* Cards cuadradas */
-  --w4-radius-input: 0px;       /* Inputs cuadrados */
-  --w4-radius-checkbox: 0px;
-  
-  --w4-btn-border-width: 2px;   /* Bordes más gruesos y agresivos para botones */
-  --w4-border-width-control: 2px;
-  --w4-shadow-sm: 4px 4px 0px 0px hsl(var(--w4-base-content)); /* Sombra dura estilo cyberpunk */
-  --w4-shadow-md: 6px 6px 0px 0px hsl(var(--w4-base-content));
-  --w4-checkbox-shadow: 4px 4px 0px 0px hsl(var(--w4-primary));
-  
-  /* Menu morphology */
-  --w4-menu-padding-x: var(--w4-spacing-4, 1rem);
-  --w4-menu-padding-y: var(--w4-spacing-2_5, 0.625rem);
-  --w4-menu-gap: var(--w4-spacing-1, 0.25rem);
-  --w4-menu-radius: 0px;
-  --w4-menu-border-color: hsl(var(--w4-base-content));
-  --w4-menu-shadow: var(--w4-shadow-md);
-  --w4-menu-submenu-min-width: 14rem;
-  
-  /* Textarea */
-  --w4-textarea-shadow: 4px 4px 0px 0px hsl(var(--w4-base-content));
-  --w4-textarea-shadow-focus: 4px 4px 0px 0px hsl(var(--w4-base-content));
-}
-
 @keyframes w4-icon-spin {
   from {
     transform: rotate(0deg);
@@ -1394,8 +1315,10 @@ html[data-theme] body {
 /* Active State */
 .w4-btn:active,
 .w4-btn-active,
+.w4-btn-pressing,
 .w4-button:active,
 .w4-button-active,
+.w4-button-pressing,
 .w4-button[data-w4-state~="active"] {
   transform: scale(var(--w4-active-scale)) translateY(var(--w4-active-translate-y));
 }
@@ -2065,6 +1988,7 @@ html[data-theme] body {
 /* Active State */
 .w4-icon-button:active,
 .w4-icon-button-active,
+.w4-icon-button-pressing,
 .w4-icon-button[data-w4-state~="active"] {
   transform: scale(var(--w4-active-scale)) translateY(var(--w4-active-translate-y));
 }

@@ -72,13 +72,20 @@ class NativeUIServiceProvider extends ServiceProvider
 
         NativeUIDirectiveService::register();
 
-        NativeUIUIRouteService::registerRoutes();
-        NativeUIFeedbackRouteService::registerRoutes();
-        NativeUIFormsRouteService::registerRoutes();
-        NativeUIInteractiveRouteService::registerRoutes();
-        NativeUILayoutRouteService::registerRoutes();
-        NativeUINavigationRouteService::registerRoutes();
-        NativeUITemplatesRouteService::registerRoutes();
+        $enableDemoRoutes = (bool) config(
+            'w4-native-ui.enable_demo_routes',
+            $this->app->environment(['local', 'testing'])
+        );
+
+        if ($enableDemoRoutes) {
+            NativeUIUIRouteService::registerRoutes();
+            NativeUIFeedbackRouteService::registerRoutes();
+            NativeUIFormsRouteService::registerRoutes();
+            NativeUIInteractiveRouteService::registerRoutes();
+            NativeUILayoutRouteService::registerRoutes();
+            NativeUINavigationRouteService::registerRoutes();
+            NativeUITemplatesRouteService::registerRoutes();
+        }
 
         if ($this->app->runningInConsole()) {
             if (is_file($configPath)) {

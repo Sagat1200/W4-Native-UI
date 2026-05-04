@@ -51,7 +51,6 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/presets/winter.css',
             $root . '/resources/css/presets/dim.css',
             $root . '/resources/css/presets/nord.css',
-            $root . '/resources/css/presets/sunset.css',
             $root . '/resources/css/properties/w4-components.css',
             // UI
             $root . '/resources/css/components/ui/button/button.css',
@@ -190,7 +189,7 @@ class BuildNativeUIAssetsCommand extends Command
             file_put_contents($distJs, implode(PHP_EOL . PHP_EOL, $jsContent) . PHP_EOL);
             $this->components->info('Assets CSS y JS compilados en dist/w4-native-ui.css y dist/w4-native-ui.js');
         } else {
-            $this->components->info('Assets CSS compilados en dist/w4-native.css');
+            $this->components->info('Assets CSS compilados en dist/w4-native-ui.css');
         }
 
         return self::SUCCESS;

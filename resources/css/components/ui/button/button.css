@@ -55,8 +55,10 @@
 /* Active State */
 .w4-btn:active,
 .w4-btn-active,
+.w4-btn-pressing,
 .w4-button:active,
 .w4-button-active,
+.w4-button-pressing,
 .w4-button[data-w4-state~="active"] {
   transform: scale(var(--w4-active-scale)) translateY(var(--w4-active-translate-y));
 }

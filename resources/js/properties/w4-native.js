@@ -180,6 +180,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
 
     // Expose to window for external scripts (backward compatibility & global access)
     window.W4NativeUI = W4NativeUI;
+    window.NativeUI = W4NativeUI;
 }
 
 export default W4NativeUI;
