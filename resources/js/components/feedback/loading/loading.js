@@ -15,6 +15,7 @@ export default class W4Loading {
         window.W4.Loading = this;
 
         this.bindStateTriggers(root);
+        this.bindShapeTriggers(root);
         this.registerStateHandlers();
     }
 
@@ -54,6 +55,32 @@ export default class W4Loading {
         });
 
         this.triggersBound = true;
+    }
+
+    static setShape(targetOrId, shape = 'spinner') {
+        const element = this.resolveElement(targetOrId);
+        if (!element) return;
+
+        const allowedShapes = ['spinner', 'dots', 'ring', 'bars', 'infinity'];
+        const nextShape = allowedShapes.includes(String(shape).toLowerCase()) ? String(shape).toLowerCase() : 'spinner';
+
+        element.classList.remove('w4-loading-spinner', 'w4-loading-dots', 'w4-loading-ring', 'w4-loading-bars', 'w4-loading-infinity');
+        element.classList.add(`w4-loading-${nextShape}`);
+    }
+
+    static bindShapeTriggers(root = document) {
+        if (this.shapeTriggersBound) return;
+
+        root.addEventListener('change', (event) => {
+            const trigger = event.target.closest('[data-w4-loading-shape]');
+            if (!trigger) return;
+
+            const shape = trigger.value || trigger.getAttribute('data-w4-loading-shape') || 'spinner';
+            const targetId = trigger.getAttribute('data-w4-target') || 'labLoadingTarget';
+            this.setShape(targetId, shape);
+        });
+
+        this.shapeTriggersBound = true;
     }
 
     /**

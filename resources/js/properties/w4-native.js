@@ -5,14 +5,18 @@
  * =========================================
  */
 
-// Import interactive components
-import W4Modal from '../components/interactive/modal/modal.js';
-import W4Tooltip from '../components/interactive/tooltip/tooltip.js';
+
+// Import Feedback componentes
 import W4Alert from '../components/feedback/alert/alert.js';
 import W4Badge from '../components/feedback/badge/badge.js';
 import W4Loading from '../components/feedback/loading/loading.js';
+import W4Progress from '../components/feedback/progress/progress.js';
 import W4Toast from '../components/feedback/toast/toast.js';
 import W4Skeleton from '../components/feedback/skeleton/skeleton.js';
+
+// Import interactive components
+import W4Modal from '../components/interactive/modal/modal.js';
+import W4Tooltip from '../components/interactive/tooltip/tooltip.js';
 
 // Import forms components
 import W4Checkbox from '../components/forms/checkbox/checkbox.js';
@@ -69,6 +73,7 @@ class W4NativeUI {
         W4Alert.init();
         W4Badge.init();
         W4Loading.init();
+        W4Progress.init();
         W4Toast.init();
         W4Skeleton.init();
 
@@ -121,6 +126,7 @@ class W4NativeUI {
     static get Alert() { return W4Alert; }
     static get Badge() { return W4Badge; }
     static get Loading() { return W4Loading; }
+    static get Progress() { return W4Progress; }
     static get Toast() { return W4Toast; }
     static get Skeleton() { return W4Skeleton; }
     

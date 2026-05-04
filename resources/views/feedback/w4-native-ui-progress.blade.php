@@ -12,23 +12,38 @@
 
 <body>
 
-    <div id="navbar-progress" class="w4-navbar w4-navbar-primary">
+    <div class="w4-navbar  w4-navbar-fixed">
         <div class="w4-navbar-start">
-            <button class="w4-button w4-button-ghost w4-button-square mx-2">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    class="inline-block h-5 w-5 stroke-current">
+                    class="w4-icon w4-icon-md stroke-current">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
                 </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
             </button>
-            <button class="w4-button w4-button-ghost">Native UI</button>
+
         </div>
         <div class="w4-navbar-center">
-            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Soporte</a></li>
+            </ul>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -66,16 +81,13 @@
         </div>
     </div>
 
-    <main id="main-progress" class="w4-container w4-container-xl">
-
+    <main class="w4-container w4-container-xl">
         <div class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Progress</h1>
-            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente de estado
-                w4-progress</p>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Progress</h1>
         </div>
 
-        <div id="description-progress" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Progress</h2>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Progress:</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente Progress estiliza la etiqueta nativa <code>&lt;progress&gt;</code> de HTML5. Se utiliza
@@ -83,10 +95,8 @@
                 múltiples), ofreciendo tanto estados determinados (porcentajes) como indeterminados (animación de carga
                 continua).
             </p>
-
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-2">Casos de uso comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs mt-2"
-                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; list-style-type: disc;">
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Subida/Descarga de archivos:</strong> Mostrar el porcentaje exacto de
                     un archivo que se está procesando usando el atributo <code>value</code>.</li>
                 <li><strong class="w4-text-active">Wizards y Formularios por pasos:</strong> Indicar en qué paso se
@@ -96,165 +106,322 @@
                 <li><strong class="w4-text-active">Cuotas y límites:</strong> Representar visualmente el uso de
                     almacenamiento de una cuenta (cambiando a color Warning o Error al acercarse al 100%).</li>
             </ul>
-        </div>
+        </section>
 
-        <section id="example-progress-variant" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color Semánticas</h2>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Variantes Semanticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Barras de progreso con colores del sistema semántico.
+            </p>
             <hr class="w4-divider w4-divider-primary">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="flex-wrap: wrap;">
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress" value="0" max="100"></progress>
-                        <span class="w4-label w4-label-xs w4-label-neutral">Default (0%)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-primary" value="10" max="100"></progress>
-                        <span class="w4-label w4-label-xs w4-label-primary">Primary (10%)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-secondary" value="25" max="100"></progress>
-                        <span class="w4-label w4-label-xs w4-label-secondary">Secondary (25%)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-accent" value="40" max="100"></progress>
-                        <span class="w4-label w4-label-xs w4-label-accent">Accent (40%)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-info" value="55" max="100"></progress>
-                        <span class="w4-label w4-label-xs w4-label-info">Info (55%)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-success" value="70" max="100"></progress>
-                        <span class="w4-label w4-label-xs w4-label-success">Success (70%)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-warning" value="85" max="100"></progress>
-                        <span class="w4-label w4-label-xs w4-label-warning">Warning (85%)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-error" value="100" max="100"></progress>
-                        <span class="w4-label w4-label-xs w4-label-error">Error (100%)</span>
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="progressSemanticPreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="progressSemanticCode">Codigo HTML</button>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="example-progress-sizes" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Tamaños Explícitos (XS - XL)</h2>
-            <hr class="w4-divider w4-divider-secondary">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="flex-wrap: wrap;">
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-primary w4-progress-xs" value="40"
-                            max="100"></progress>
-                        <span class="w4-label w4-label-xs">XS (0.25rem)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-primary w4-progress-sm" value="50"
-                            max="100"></progress>
-                        <span class="w4-label w4-label-xs">SM (0.375rem)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-primary w4-progress-md" value="60"
-                            max="100"></progress>
-                        <span class="w4-label w4-label-xs">MD (0.5rem)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-primary w4-progress-lg" value="70"
-                            max="100"></progress>
-                        <span class="w4-label w4-label-xs">LG (0.75rem)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-primary w4-progress-xl" value="80"
-                            max="100"></progress>
-                        <span class="w4-label w4-label-xs">XL (1rem)</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="example-progress-indeterminate" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Indeterminate / Loading State</h2>
-            <hr class="w4-divider w4-divider-accent">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="flex-wrap: wrap;">
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 250px;">
-                        <progress class="w4-progress w4-progress-primary w4-progress-indeterminate"
-                            max="100"></progress>
-                        <span class="w4-label w4-label-xs text-center">Indeterminate
-                            Class<br>(.w4-progress-indeterminate)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 250px;">
-                        <progress class="w4-progress w4-progress-secondary" max="100"
-                            data-w4-state="loading"></progress>
-                        <span class="w4-label w4-label-xs text-center">Data State<br>(data-w4-state="loading")</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 250px;">
-                        <progress class="w4-progress w4-progress-accent" max="100"></progress>
-                        <span class="w4-label w4-label-xs text-center">HTML Attribute<br>(No value attribute)</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="example-progress-states" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados CSS / Data-States</h2>
-            <hr class="w4-divider w4-divider-error">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="flex-wrap: wrap;">
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-success" value="50" max="100"></progress>
-                        <span class="w4-label w4-label-xs">Normal</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-success w4-progress-active" value="50"
-                            max="100"></progress>
-                        <span class="w4-label w4-label-xs text-center">Active<br>(.w4-progress-active)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-success w4-progress-disabled" value="50"
-                            max="100"></progress>
-                        <span class="w4-label w4-label-xs text-center">Disabled<br>(.w4-progress-disabled)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center" style="min-inline-size: 150px;">
-                        <progress class="w4-progress w4-progress-success w4-progress-hidden" value="50"
-                            max="100"></progress>
-                        <span class="w4-label w4-label-xs text-center">Hidden<br>(.w4-progress-hidden)</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="example-progress-integration" class="w4-section w4-section-xl" style="padding-block-end: 2rem;">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Integración Dinámica (JS)</h2>
-            <hr class="w4-divider w4-divider-info">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-stack w4-stack-md" style="flex-direction: column; align-items: center;">
-                    <div class="w4-panel w4-panel-base-100 w4-panel-md"
-                        style="box-shadow: var(--w4-shadow-md); inline-size: 100%; max-inline-size: 400px; margin-block-end: 1.5rem;">
-                        <div class="w4-stack w4-stack-xs">
-                            <progress id="jsProgressBar" class="w4-progress w4-progress-primary w4-progress-lg"
-                                value="0" max="100"></progress>
-                            <div
-                                style="display: flex; justify-content: space-between; margin-block-top: 0.5rem; inline-size: 100%;">
-                                <span class="w4-text w4-text-sm"
-                                    style="color: hsl(var(--w4-base-content) / 0.7)">Descargando archivos...</span>
-                                <span id="jsProgressText" class="w4-text w4-text-sm" style="font-weight: 700;">0%</span>
-                            </div>
+                <div id="progressSemanticPreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-grid w4-grid-8 w4-grid-sm">
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-xs w4-text-neutral">Default</span>
+                            <progress class="w4-progress" value="25" max="100"></progress>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-xs w4-text-neutral">Primary</span>
+                            <progress class="w4-progress w4-progress-primary" value="35" max="100"></progress>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-xs w4-text-neutral">Secondary</span>
+                            <progress class="w4-progress w4-progress-secondary" value="45" max="100"></progress>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-xs w4-text-neutral">Accent</span>
+                            <progress class="w4-progress w4-progress-accent" value="55" max="100"></progress>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-xs w4-text-neutral">Info</span>
+                            <progress class="w4-progress w4-progress-info" value="65" max="100"></progress>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-xs w4-text-neutral">Success</span>
+                            <progress class="w4-progress w4-progress-success" value="75" max="100"></progress>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-xs w4-text-neutral">Warning</span>
+                            <progress class="w4-progress w4-progress-warning" value="85" max="100"></progress>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-xs w4-text-neutral">Error</span>
+                            <progress class="w4-progress w4-progress-error" value="95" max="100"></progress>
                         </div>
                     </div>
+                </div>
+                <div id="progressSemanticCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre
+                        class="m-0"><code class="w4-text w4-text-xs">&lt;progress class=&quot;w4-progress&quot; value=&quot;25&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-primary&quot; value=&quot;35&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-secondary&quot; value=&quot;45&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-accent&quot; value=&quot;55&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-info&quot; value=&quot;65&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-success&quot; value=&quot;75&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-warning&quot; value=&quot;85&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-error&quot; value=&quot;95&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+                </div>
+            </div>
+        </section>
 
-                    <div class="w4-stack w4-stack-horizontal w4-stack-xs w4-stack-center" style="flex-wrap: wrap;">
-                        <button class="w4-button w4-button-sm w4-button-outline" onclick="simulateProgress()">Simular
-                            Descarga</button>
-                        <button class="w4-button w4-button-sm w4-button-outline w4-button-error"
-                            onclick="resetProgress()">Reset</button>
-                        <button class="w4-button w4-button-sm w4-button-outline w4-button-warning"
-                            onclick="toggleIndeterminate()">Alternar Indeterminado</button>
-                        <button class="w4-button w4-button-sm w4-button-outline w4-button-secondary"
-                            onclick="toggleDisabled()">Alternar Disabled</button>
-                        <button class="w4-button w4-button-sm w4-button-outline w4-button-neutral"
-                            onclick="toggleHidden()">Alternar Hidden</button>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Tamaños de Progress</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Escala morfológica disponible para barras de progreso.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="progressSizePreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="progressSizeCode">Codigo HTML</button>
+                    </div>
+                </div>
+                <div id="progressSizePreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-stack w4-stack-sm">
+                        <div class="w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-xs w4-text-neutral">XS · 0.25rem</span>
+                            <progress class="w4-progress w4-progress-primary w4-progress-xs" value="45"
+                                max="100"></progress>
+                        </div>
+                        <div class="w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-xs w4-text-neutral">SM · 0.375rem</span>
+                            <progress class="w4-progress w4-progress-primary w4-progress-sm" value="55"
+                                max="100"></progress>
+                        </div>
+                        <div class="w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-xs w4-text-neutral">MD · 0.5rem</span>
+                            <progress class="w4-progress w4-progress-primary w4-progress-md" value="65"
+                                max="100"></progress>
+                        </div>
+                        <div class="w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-xs w4-text-neutral">LG · 0.75rem</span>
+                            <progress class="w4-progress w4-progress-primary w4-progress-lg" value="75"
+                                max="100"></progress>
+                        </div>
+                        <div class="w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-xs w4-text-neutral">XL · 1rem</span>
+                            <progress class="w4-progress w4-progress-primary w4-progress-xl" value="85"
+                                max="100"></progress>
+                        </div>
+                    </div>
+                </div>
+                <div id="progressSizeCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre
+                        class="m-0"><code class="w4-text w4-text-xs">&lt;progress class=&quot;w4-progress w4-progress-primary w4-progress-xs&quot; value=&quot;45&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-primary w4-progress-sm&quot; value=&quot;55&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-primary w4-progress-md&quot; value=&quot;65&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-primary w4-progress-lg&quot; value=&quot;75&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-primary w4-progress-xl&quot; value=&quot;85&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Ejemplos de Uso</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Casos prácticos de uso para progreso determinado e indeterminado.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="progressUsePreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="progressUseCode">Codigo HTML</button>
+                    </div>
+                </div>
+                <div id="progressUsePreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-grid w4-grid-2 w4-grid-sm">
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-sm w4-text-neutral">Carga de archivo</span>
+                            <progress class="w4-progress w4-progress-info w4-progress-md" value="32"
+                                max="100"></progress>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-sm w4-text-neutral">Wizard de registro</span>
+                            <progress class="w4-progress w4-progress-primary w4-progress-md" value="60"
+                                max="100"></progress>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-sm w4-text-neutral">Sincronización de datos</span>
+                            <progress
+                                class="w4-progress w4-progress-secondary w4-progress-lg w4-progress-loading"></progress>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-sm w4-text-neutral">Uso de almacenamiento</span>
+                            <progress class="w4-progress w4-progress-warning w4-progress-lg" value="88"
+                                max="100"></progress>
+                        </div>
+                    </div>
+                </div>
+                <div id="progressUseCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre
+                        class="m-0"><code class="w4-text w4-text-xs">&lt;progress class=&quot;w4-progress w4-progress-info&quot; value=&quot;32&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-primary&quot; value=&quot;60&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-secondary w4-progress-loading&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-warning&quot; value=&quot;88&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Estados soportados por clase y por atributo <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                        data-w4-target="progressStateClassPreview">Por Clase</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                        data-w4-target="progressStateAttrPreview">Por Atributo</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-accent"
+                        data-w4-target="progressStateCode">Codigo HTML</button>
+                </div>
+                <div class="w4-tab-lifted-content-panels">
+                    <div id="progressStateClassPreview" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                        <div class="w4-stack w4-stack-sm">
+                            <progress class="w4-progress w4-progress-success w4-progress-active" value="66"
+                                max="100"></progress>
+                            <progress class="w4-progress w4-progress-warning w4-progress-disabled" value="40"
+                                max="100"></progress>
+                            <progress class="w4-progress w4-progress-info w4-progress-loading"></progress>
+                            <p class="w4-text w4-text-sm w4-text-neutral">
+                                El estado <code>hidden</code> oculta el componente por completo.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="progressStateAttrPreview" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm" hidden
+                        aria-hidden="true">
+                        <div class="w4-stack w4-stack-sm">
+                            <progress class="w4-progress w4-progress-success" value="66" max="100"
+                                data-w4-state="active"></progress>
+                            <progress class="w4-progress w4-progress-warning" value="40" max="100"
+                                data-w4-state="disabled"></progress>
+                            <progress class="w4-progress w4-progress-info" data-w4-state="loading"></progress>
+                            <p class="w4-text w4-text-sm w4-text-neutral">
+                                Usa <code>data-w4-state="hidden"</code> para ocultar.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="progressStateCode" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                        aria-hidden="true">
+                        <pre
+                            class="m-0"><code class="w4-text w4-text-xs">&lt;!-- Por clase --&gt;
+&lt;progress class=&quot;w4-progress w4-progress-success w4-progress-active&quot; value=&quot;66&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-warning w4-progress-disabled&quot; value=&quot;40&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-info w4-progress-loading&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-error w4-progress-hidden&quot; value=&quot;50&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+
+&lt;!-- Por atributo --&gt;
+&lt;progress class=&quot;w4-progress w4-progress-success&quot; value=&quot;66&quot; max=&quot;100&quot; data-w4-state=&quot;active&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-warning&quot; value=&quot;40&quot; max=&quot;100&quot; data-w4-state=&quot;disabled&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-info&quot; data-w4-state=&quot;loading&quot;&gt;&lt;/progress&gt;
+&lt;progress class=&quot;w4-progress w4-progress-error&quot; value=&quot;50&quot; max=&quot;100&quot; data-w4-state=&quot;hidden&quot;&gt;&lt;/progress&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @php
+            $progressConfig = $progressConfig ?? [
+                'bar_id' => 'jsProgressBar',
+                'text_id' => 'jsProgressText',
+                'initial_state' => 'enabled',
+                'autostart' => false,
+                'initial_value' => 0,
+            ];
+        @endphp
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Nativos Javascript Soportados al Componente
+                Progress</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Controles para probar transiciones del componente usando <code>data-w4-progress-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                        data-w4-target="progressJsPreview">Vista Previa</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                        data-w4-target="progressJsCode">Codigo HTML</button>
+                </div>
+                <div class="w4-tab-lifted-content-panels">
+                    <div id="progressJsPreview" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                        <div class="w4-stack w4-stack-sm">
+                            <span id="{{ $progressConfig['text_id'] }}" class="w4-text w4-text-sm w4-text-neutral"
+                                data-w4-progress-text-for="{{ $progressConfig['bar_id'] }}">{{ $progressConfig['initial_value'] }}%</span>
+                            <progress id="{{ $progressConfig['bar_id'] }}"
+                                class="w4-progress w4-progress-primary w4-progress-lg"
+                                value="{{ $progressConfig['initial_value'] }}" max="100"
+                                data-w4-progress-initial-state="{{ $progressConfig['initial_state'] }}"
+                                data-w4-progress-autostart="{{ $progressConfig['autostart'] ? 'true' : 'false' }}"></progress>
+                        </div>
+                        <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm mt-3">
+                            <button type="button" class="w4-btn w4-btn-sm w4-btn-neutral"
+                                data-w4-progress-state="enabled"
+                                data-w4-target="{{ $progressConfig['bar_id'] }}">Clear</button>
+
+                            <button type="button" class="w4-btn w4-btn-sm w4-btn-primary"
+                                data-w4-progress-state="active"
+                                data-w4-target="{{ $progressConfig['bar_id'] }}">Active</button>
+
+                            <button type="button" class="w4-btn w4-btn-sm w4-btn-secondary"
+                                data-w4-progress-state="loading"
+                                data-w4-target="{{ $progressConfig['bar_id'] }}">Loading</button>
+
+                            <button type="button" class="w4-btn w4-btn-sm w4-btn-info"
+                                data-w4-progress-state="indeterminate"
+                                data-w4-target="{{ $progressConfig['bar_id'] }}">Indeterminate</button>
+
+                            <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
+                                data-w4-progress-state="disabled"
+                                data-w4-target="{{ $progressConfig['bar_id'] }}">Disabled</button>
+
+                            <button type="button" class="w4-btn w4-btn-sm w4-btn-error" data-w4-progress-state="hidden"
+                                data-w4-target="{{ $progressConfig['bar_id'] }}">Hidden</button>
+
+                        </div>
+                    </div>
+                    <div id="progressJsCode" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                        aria-hidden="true">
+                        <pre
+                            class="m-0"><code class="w4-text w4-text-xs">&lt;span id=&quot;jsProgressText&quot; data-w4-progress-text-for=&quot;jsProgressBar&quot;&gt;0%&lt;/span&gt;
+&lt;progress id=&quot;jsProgressBar&quot; class=&quot;w4-progress w4-progress-primary w4-progress-lg&quot; value=&quot;0&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
+
+&lt;button data-w4-progress-state=&quot;active&quot; data-w4-target=&quot;jsProgressBar&quot;&gt;Active&lt;/button&gt;
+&lt;button data-w4-progress-state=&quot;enabled&quot; data-w4-target=&quot;jsProgressBar&quot;&gt;Clear&lt;/button&gt;
+&lt;button data-w4-progress-state=&quot;loading&quot; data-w4-target=&quot;jsProgressBar&quot;&gt;Loading&lt;/button&gt;
+&lt;button data-w4-progress-state=&quot;indeterminate&quot; data-w4-target=&quot;jsProgressBar&quot;&gt;Indeterminate&lt;/button&gt;
+&lt;button data-w4-progress-state=&quot;disabled&quot; data-w4-target=&quot;jsProgressBar&quot;&gt;Disabled&lt;/button&gt;
+&lt;button data-w4-progress-state=&quot;hidden&quot; data-w4-target=&quot;jsProgressBar&quot;&gt;Hidden&lt;/button&gt;
+&lt;button data-w4-progress-state=&quot;success&quot; data-w4-target=&quot;jsProgressBar&quot;&gt;Success&lt;/button&gt;</code></pre>
                     </div>
                 </div>
             </div>
@@ -282,92 +449,41 @@
                     localStorage.setItem(storageKey, theme);
                 });
             }
+
+            var progressBar = document.getElementById(@json($progressConfig['bar_id']));
+            var progressText = document.getElementById(@json($progressConfig['text_id']));
+
+            if (progressBar && progressText) {
+                var syncProgressText = function () {
+                    if (progressBar.hasAttribute("data-w4-state")) {
+                        var state = progressBar.getAttribute("data-w4-state");
+
+                        if (state === "indeterminate" || state === "loading") {
+                            progressText.textContent = "Cargando...";
+                            return;
+                        }
+
+                        if (state === "disabled") {
+                            progressText.textContent = "Pausado / Deshabilitado";
+                            return;
+                        }
+
+                        if (state === "hidden") {
+                            progressText.textContent = "Oculto";
+                            return;
+                        }
+                    }
+
+                    progressText.textContent = (progressBar.getAttribute("value") || "0") + "%";
+                };
+
+                syncProgressText();
+                new MutationObserver(syncProgressText).observe(progressBar, {
+                    attributes: true,
+                    attributeFilter: ["value", "data-w4-state", "class"]
+                });
+            }
         });
-
-        // Simulador de Progreso
-        let progressInterval;
-        function simulateProgress() {
-            const bar = document.getElementById('jsProgressBar');
-            const text = document.getElementById('jsProgressText');
-
-            bar.removeAttribute('data-w4-state');
-            if (!bar.hasAttribute('value')) bar.setAttribute('value', '0');
-
-            clearInterval(progressInterval);
-            let val = parseInt(bar.getAttribute('value') || 0);
-
-            if (val >= 100) {
-                val = 0;
-            }
-
-            bar.className = "w4-progress w4-progress-primary w4-progress-lg w4-progress-active";
-
-            progressInterval = setInterval(() => {
-                val += Math.floor(Math.random() * 10) + 1;
-                if (val >= 100) {
-                    val = 100;
-                    clearInterval(progressInterval);
-                    bar.className = "w4-progress w4-progress-success w4-progress-lg";
-                }
-                bar.setAttribute('value', val);
-                text.innerText = val + '%';
-            }, 300);
-        }
-
-        function resetProgress() {
-            clearInterval(progressInterval);
-            const bar = document.getElementById('jsProgressBar');
-            const text = document.getElementById('jsProgressText');
-            bar.className = "w4-progress w4-progress-primary w4-progress-lg";
-            bar.setAttribute('value', '0');
-            bar.removeAttribute('data-w4-state');
-            text.innerText = '0%';
-        }
-
-        function toggleIndeterminate() {
-            clearInterval(progressInterval);
-            const bar = document.getElementById('jsProgressBar');
-            const text = document.getElementById('jsProgressText');
-
-            if (bar.hasAttribute('data-w4-state') && bar.getAttribute('data-w4-state') === 'indeterminate') {
-                bar.removeAttribute('data-w4-state');
-                bar.setAttribute('value', '0');
-                text.innerText = '0%';
-                bar.className = "w4-progress w4-progress-primary w4-progress-lg";
-            } else {
-                bar.setAttribute('data-w4-state', 'indeterminate');
-                bar.removeAttribute('value');
-                text.innerText = 'Cargando...';
-                bar.className = "w4-progress w4-progress-primary w4-progress-lg";
-            }
-        }
-
-        function toggleDisabled() {
-            clearInterval(progressInterval);
-            const bar = document.getElementById('jsProgressBar');
-            const text = document.getElementById('jsProgressText');
-
-            if (bar.hasAttribute('data-w4-state') && bar.getAttribute('data-w4-state') === 'disabled') {
-                bar.removeAttribute('data-w4-state');
-                bar.className = "w4-progress w4-progress-primary w4-progress-lg";
-                text.innerText = bar.getAttribute('value') ? bar.getAttribute('value') + '%' : '0%';
-            } else {
-                bar.setAttribute('data-w4-state', 'disabled');
-                bar.className = "w4-progress w4-progress-primary w4-progress-lg w4-progress-disabled";
-                text.innerText = 'Pausado / Deshabilitado';
-            }
-        }
-
-        function toggleHidden() {
-            const barContainer = document.getElementById('jsProgressBar').parentElement;
-
-            if (barContainer.style.display === 'none') {
-                barContainer.style.display = 'flex';
-                barContainer.style.flexDirection = 'column';
-            } else {
-                barContainer.style.display = 'none';
-            }
-        }
     </script>
 </body>
 
