@@ -12,15 +12,56 @@
   block-size: var(--w4-skeleton-height, 1rem);
   
   /* Color & Surface Tokens */
-  /* Incrementado el contraste mezclando con base-content para hacerlo más visible/oscuro */
+  --w4-skeleton-raw-color: var(--w4-base-content);
+  --w4-skeleton-bg-start: color-mix(in srgb, hsl(var(--w4-base-200)) 80%, hsl(var(--w4-skeleton-raw-color)) 20%);
+  --w4-skeleton-bg-mid: color-mix(in srgb, hsl(var(--w4-base-300)) 70%, hsl(var(--w4-skeleton-raw-color)) 30%);
+  --w4-skeleton-bg-end: color-mix(in srgb, hsl(var(--w4-base-200)) 80%, hsl(var(--w4-skeleton-raw-color)) 20%);
+
   background: linear-gradient(
     90deg,
-    color-mix(in srgb, hsl(var(--w4-base-200)) 80%, hsl(var(--w4-base-content)) 20%) 25%,
-    color-mix(in srgb, hsl(var(--w4-base-300)) 70%, hsl(var(--w4-base-content)) 30%) 37%,
-    color-mix(in srgb, hsl(var(--w4-base-200)) 80%, hsl(var(--w4-base-content)) 20%) 63%
+    var(--w4-skeleton-bg-start) 25%,
+    var(--w4-skeleton-bg-mid) 37%,
+    var(--w4-skeleton-bg-end) 63%
   );
   background-size: 400% 100%;
 }
+
+/* ----------------------------------
+   SEMANTIC VARIANTS (Color System)
+   ---------------------------------- */
+.w4-skeleton-neutral {
+  --w4-skeleton-raw-color: var(--w4-neutral);
+}
+
+.w4-skeleton-primary {
+  --w4-skeleton-raw-color: var(--w4-primary);
+}
+
+.w4-skeleton-secondary {
+  --w4-skeleton-raw-color: var(--w4-secondary);
+}
+
+.w4-skeleton-accent {
+  --w4-skeleton-raw-color: var(--w4-accent);
+}
+
+.w4-skeleton-info {
+  --w4-skeleton-raw-color: var(--w4-info);
+}
+
+.w4-skeleton-success {
+  --w4-skeleton-raw-color: var(--w4-success);
+}
+
+.w4-skeleton-warning {
+  --w4-skeleton-raw-color: var(--w4-warning);
+}
+
+.w4-skeleton-error {
+  --w4-skeleton-raw-color: var(--w4-error);
+}
+
+
 
 /* ----------------------------------
    SHAPE MODIFIERS (Morphology System)
@@ -28,6 +69,7 @@
 .w4-skeleton-circle {
   --w4-skeleton-radius: var(--w4-radius-pill);
   --w4-skeleton-width: var(--w4-skeleton-height); /* Ensure aspect ratio 1:1 */
+  flex: 0 0 auto; /* Prevent deformation in horizontal flex layouts */
 }
 
 .w4-skeleton-square {

@@ -182,7 +182,7 @@
                 <div id="alertSurfacePreview" data-w4-tab-panel
                     class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
                     <div class="w4-stack w4-stack-vertical w4-stack-sm">
-                        <h3 class="w4-heading w4-heading-h4 w4-heading-secondary">Solid</h3>
+                        <h3 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-secondary">Solid</h3>
                         <div class="w4-grid w4-grid-4 w4-grid-sm">
                             <div class="w4-alert w4-alert-neutral w4-alert-solid"><span>Neutral Solid</span></div>
                             <div class="w4-alert w4-alert-primary w4-alert-solid"><span>Primary Solid</span></div>
@@ -193,7 +193,7 @@
                             <div class="w4-alert w4-alert-warning w4-alert-solid"><span>Warning Solid</span></div>
                             <div class="w4-alert w4-alert-error w4-alert-solid"><span>Error Solid</span></div>
                         </div>
-                        <h3 class="w4-heading w4-heading-h4 w4-heading-secondary">Outline</h3>
+                        <h3 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-secondary">Outline</h3>
                         <div class="w4-grid w4-grid-4 w4-grid-sm">
                             <div class="w4-alert w4-alert-outline"><span>Default Outline</span></div>
                             <div class="w4-alert w4-alert-primary w4-alert-outline"><span>Primary Outline</span></div>
@@ -439,11 +439,11 @@
                     <div id="alertJsPreview" data-w4-tab-panel
                         class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
                         <div class="w4-stack w4-stack-sm">
-                            <div id="labAlertTarget" class="w4-alert w4-alert-info w4-alert-md">
+                            <div id="labAlertTarget" class="w4-alert w4-alert-info w4-alert-solid w4-alert-md">
                                 <i class="fa-solid fa-circle-info"></i>
                                 <span>Alerta de prueba para cambios de estado.</span>
-                                <button type="button" class="w4-button w4-button-ghost w4-button-sm"
-                                    data-w4-dismiss="alert" aria-label="Cerrar">
+                                <button type="button" class="w4-btn w4-btn-ghost w4-btn-sm" data-w4-dismiss="alert"
+                                    aria-label="Cerrar">
                                     <i class="fa-solid fa-xmark"></i>
                                 </button>
                             </div>
