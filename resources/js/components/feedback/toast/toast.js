@@ -12,6 +12,7 @@ export default class W4Toast {
     static init(root = document) {
         // Inicializa listeners manuales (ej: click en botones de dismiss)
         root.addEventListener('click', this.handleClick.bind(this));
+        this.bindStateTriggers(root);
         
         // Auto-dismiss initialization for existing toasts in the DOM
         const toasts = root.querySelectorAll('.w4-toast[data-w4-duration]');
@@ -24,6 +25,78 @@ export default class W4Toast {
 
         // Register state handlers for the Toast component via W4Core
         this.registerStateHandlers();
+    }
+
+    static resolveElement(targetOrId) {
+        if (!targetOrId) return null;
+        if (targetOrId instanceof HTMLElement) return targetOrId;
+        if (typeof targetOrId === 'string') {
+            return document.getElementById(targetOrId) || document.querySelector(targetOrId);
+        }
+        return null;
+    }
+
+    static resetState(element) {
+        if (!element) return;
+
+        element.classList.remove(
+            'w4-toast-active',
+            'w4-toast-disabled',
+            'w4-toast-hidden',
+            'w4-toast-dismissed'
+        );
+
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.style.display = '';
+        element.style.opacity = '';
+        element.style.transition = '';
+        element.style.filter = '';
+        element.style.transform = '';
+    }
+
+    static setState(targetOrId, state = 'enabled') {
+        const element = this.resolveElement(targetOrId);
+        if (!element) return;
+
+        this.resetState(element);
+
+        const normalized = String(state || 'enabled').toLowerCase();
+        if (normalized === 'enabled') {
+            if (typeof W4Core?.syncElement === 'function') W4Core.syncElement(element);
+            return;
+        }
+
+        element.classList.add(`w4-toast-${normalized}`);
+        element.setAttribute('data-w4-state', normalized);
+
+        if (typeof W4Core?.syncElement === 'function') {
+            W4Core.syncElement(element, `toast:${normalized}`);
+        }
+
+        if (normalized === 'dismissed') {
+            this.dismiss(element);
+        }
+    }
+
+    static bindStateTriggers(root = document) {
+        if (this.triggersBound) return;
+
+        root.addEventListener('click', (event) => {
+            if (!(event.target instanceof Element)) return;
+
+            const trigger = event.target.closest('[data-w4-toast-state]');
+            if (!trigger) return;
+
+            event.preventDefault();
+            const state = trigger.getAttribute('data-w4-toast-state') || 'enabled';
+            const targetId = trigger.getAttribute('data-w4-toast-target') || trigger.getAttribute('data-w4-target');
+            this.setState(targetId, state);
+        });
+
+        this.triggersBound = true;
     }
 
     /**
@@ -119,20 +192,14 @@ export default class W4Toast {
     static show(message, options = {}) {
         const type = options.type || 'info';
         const duration = options.duration || 3000;
+        const position = options.position || 'bottom-right';
         
         // Determine container or create one
-        let container = document.querySelector('.w4-toast-container');
+        let container = document.querySelector(`.w4-toast-container[data-w4-toast-position="${position}"]`);
         if (!container) {
             container = document.createElement('div');
             container.className = 'w4-toast-container';
-            // These should ideally be in css, but added here for fallback
-            container.style.position = 'fixed';
-            container.style.bottom = '1rem';
-            container.style.right = '1rem';
-            container.style.display = 'flex';
-            container.style.flexDirection = 'column';
-            container.style.gap = '0.5rem';
-            container.style.zIndex = '9999';
+            container.setAttribute('data-w4-toast-position', position);
             document.body.appendChild(container);
         }
 

@@ -6545,6 +6545,82 @@ html[data-theme] body {
 }
 
 /* ----------------------------------
+   CONTAINERS & LAB PLAYGROUND
+   ---------------------------------- */
+.w4-toast-container,
+.w4-toast-playground-wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: var(--w4-spacing-2, 0.5rem);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.w4-toast-container .w4-toast,
+.w4-toast-playground-wrapper .w4-toast {
+  pointer-events: auto;
+}
+
+.w4-toast-container[data-w4-toast-position="top-right"],
+.w4-toast-playground-wrapper.w4-toast-pos-top-right {
+  inset-block-start: 1rem;
+  inset-inline-end: 1rem;
+  align-items: flex-end;
+}
+
+.w4-toast-container[data-w4-toast-position="top-left"],
+.w4-toast-playground-wrapper.w4-toast-pos-top-left {
+  inset-block-start: 1rem;
+  inset-inline-start: 1rem;
+  align-items: flex-start;
+}
+
+.w4-toast-container[data-w4-toast-position="bottom-right"],
+.w4-toast-playground-wrapper.w4-toast-pos-bottom-right {
+  inset-block-end: 1rem;
+  inset-inline-end: 1rem;
+  align-items: flex-end;
+}
+
+.w4-toast-container[data-w4-toast-position="bottom-left"],
+.w4-toast-playground-wrapper.w4-toast-pos-bottom-left {
+  inset-block-end: 1rem;
+  inset-inline-start: 1rem;
+  align-items: flex-start;
+}
+
+.w4-toast-container[data-w4-toast-position="top-center"],
+.w4-toast-playground-wrapper.w4-toast-pos-top-center {
+  inset-block-start: 1rem;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+.w4-toast-container[data-w4-toast-position="bottom-center"],
+.w4-toast-playground-wrapper.w4-toast-pos-bottom-center {
+  inset-block-end: 1rem;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+.w4-toast-playground {
+  position: relative;
+  min-block-size: 22rem;
+  border: 2px dashed hsl(var(--w4-base-300));
+  border-radius: var(--w4-radius-panel, var(--w4-radius-lg));
+  background-color: hsl(var(--w4-base-200));
+  overflow: hidden;
+}
+
+.w4-toast-playground .w4-toast-playground-wrapper {
+  position: absolute;
+  padding: var(--w4-spacing-3, 0.75rem);
+}
+
+/* ----------------------------------
    ANIMATIONS
    ---------------------------------- */
 @keyframes w4-toast-pop {
