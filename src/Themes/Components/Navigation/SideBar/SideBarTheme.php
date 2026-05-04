@@ -1,6 +1,6 @@
 <?php
 
-namespace W4\NativeUI\Themes\Components\Navigation\SideBar;
+namespace W4\NativeUI\Themes\Components\Navigation\Sidebar;
 
 use W4\NativeUI\Tools\Themes\AbstractComponentTheme;
 

@@ -7,7 +7,7 @@ use W4\NativeUI\Themes\Components\Navigation\Drawer\DrawerTheme;
 use W4\NativeUI\Themes\Components\Navigation\DropDown\DropDownTheme;
 use W4\NativeUI\Themes\Components\Navigation\Menu\MenuTheme;
 use W4\NativeUI\Themes\Components\Navigation\NavBar\NavBarTheme;
-use W4\NativeUI\Themes\Components\Navigation\SideBar\SideBarTheme;
+use W4\NativeUI\Themes\Components\Navigation\Sidebar\SidebarTheme;
 use W4\NativeUI\Themes\Components\Navigation\Tab\TabTheme;
 
 class NativeUINavigationService
@@ -24,7 +24,7 @@ class NativeUINavigationService
             'navbar' => new NavBarTheme(),
             'drawer' => new DrawerTheme(),
             'tab' => new TabTheme(),
-            'sidebar' => new SideBarTheme(),
+            'sidebar' => new SidebarTheme(),
         ];
     }
 }
