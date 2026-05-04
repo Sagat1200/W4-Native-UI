@@ -364,6 +364,9 @@
             </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    Playground: Juega con los estados JS soportados para ver su efecto en el Progress de prueba.
+                </p>
                 <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                     <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
                         data-w4-target="progressJsPreview">Vista Previa</button>
@@ -424,6 +427,9 @@
 &lt;button data-w4-progress-state=&quot;success&quot; data-w4-target=&quot;jsProgressBar&quot;&gt;Success&lt;/button&gt;</code></pre>
                     </div>
                 </div>
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    El estado se aplica al Progress de prueba y refleja los hooks visuales del componente.
+                </p>
             </div>
         </section>
 
