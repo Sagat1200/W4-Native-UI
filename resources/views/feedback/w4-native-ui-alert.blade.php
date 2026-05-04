@@ -110,7 +110,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes Semanticas</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Variantes Semanticas</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">
                 Alertas con colores del sistema semántico.
             </p>
@@ -165,7 +165,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes Solid Y Outline</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Variantes Solid Y Outline</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">
                 Alertas con variantes sólidas,contornos y superficie.
             </p>
@@ -252,7 +252,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">
                 Tamaños de alerta
             </h2>
             <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
@@ -296,7 +296,65 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Visuales</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Ejemplos de Uso</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Casos prácticos de alertas para feedback de sistema, anuncios, validación y banner global.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="alertUsePreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="alertUseCode">Codigo HTML</button>
+                    </div>
+                </div>
+                <div id="alertUsePreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-grid w4-grid-2 w4-grid-sm">
+                        <div class="w4-alert w4-alert-success w4-alert-solid">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Feedback de sistema: Guardado exitosamente.</span>
+                        </div>
+                        <div class="w4-alert w4-alert-info w4-alert-outline">
+                            <i class="fa-solid fa-bullhorn"></i>
+                            <span>¿Deseas confirmar el mantenimiento programado para las 22:00?</span>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-xs">
+                                <button type="button" class="w4-button w4-button-sm w4-button-ghost">Cancelar</button>
+                                <button type="button" class="w4-button w4-button-sm w4-button-info">Aceptar</button>
+                            </div>
+                        </div>
+                        <div class="w4-alert w4-alert-error">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <span>Validación de formularios: Revisa los campos obligatorios marcados.</span>
+                        </div>
+                        <div class="w4-alert w4-alert-warning w4-alert-lg w4-alert-solid">
+                            <i class="fa-solid fa-bell"></i>
+                            <span>Banner global: Intermitencia detectada en el servicio de pagos.</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="alertUseCode" data-w4-tab-panel class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm"
+                    hidden aria-hidden="true">
+                    <pre
+                        class="m-0"><code class="w4-text w4-text-xs">&lt;!-- Feedback de sistema --&gt;
+&lt;div class=&quot;w4-alert w4-alert-success w4-alert-solid&quot;&gt;Guardado exitosamente.&lt;/div&gt;
+
+&lt;!-- Anuncio informativo --&gt;
+&lt;div class=&quot;w4-alert w4-alert-info w4-alert-outline&quot;&gt;Mantenimiento programado.&lt;/div&gt;
+
+&lt;!-- Validación de formularios --&gt;
+&lt;div class=&quot;w4-alert w4-alert-error&quot;&gt;Revisa los campos obligatorios.&lt;/div&gt;
+
+&lt;!-- Banner global --&gt;
+&lt;div class=&quot;w4-alert w4-alert-warning w4-alert-lg w4-alert-solid&quot;&gt;Alerta global del sistema.&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Visuales</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">
                 Estados soportados por clases y atributo <code>data-w4-state</code>.
             </p>
@@ -361,7 +419,7 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Estados Nativos Javascript Soportados al Componente
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Nativos Javascript Soportados al Componente
                 Alert</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">
                 Controles para probar transiciones del componente usando <code>data-w4-alert-state</code>.
@@ -421,10 +479,6 @@
 
         </section>
     </main>
-
-
-
-
 
     @NativeUIScripts
     @NativeUIInit

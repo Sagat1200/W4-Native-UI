@@ -454,8 +454,46 @@ class W4Alert {
 
 class W4Badge {
     static init(root = document) {
-        // Register state handlers for the Badge component
+        this.bindStateTriggers(root);
         this.registerStateHandlers();
+    }
+
+    static resolveElement(targetOrId) {
+        if (!targetOrId) return null;
+        if (targetOrId instanceof Element) return targetOrId;
+        return document.getElementById(String(targetOrId));
+    }
+
+    static setState(targetOrId, state = 'enabled') {
+        const element = this.resolveElement(targetOrId);
+        if (!element) return;
+
+        this.resetState(element);
+
+        const nextState = String(state || 'enabled').toLowerCase();
+        if (nextState !== 'enabled') {
+            element.setAttribute('data-w4-state', nextState);
+        }
+
+        if (typeof W4Core.syncElement === 'function') {
+            W4Core.syncElement(element);
+        }
+    }
+
+    static bindStateTriggers(root = document) {
+        if (this.triggersBound) return;
+
+        root.addEventListener('click', (event) => {
+            const trigger = event.target.closest('[data-w4-badge-state]');
+            if (!trigger) return;
+
+            event.preventDefault();
+            const state = trigger.getAttribute('data-w4-badge-state') || 'enabled';
+            const targetId = trigger.getAttribute('data-w4-target') || 'labBadgeTarget';
+            this.setState(targetId, state);
+        });
+
+        this.triggersBound = true;
     }
 
     /**
@@ -474,8 +512,15 @@ class W4Badge {
     }
 
     static handleEnabled({ element }) {
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
         element.removeAttribute('aria-disabled');
         element.removeAttribute('aria-hidden');
+        element.removeAttribute('aria-current');
+        element.style.filter = '';
+        element.style.transform = '';
+        element.style.display = '';
+        element.style.animation = '';
     }
 
     static handleDisabled({ element }) {
@@ -483,7 +528,7 @@ class W4Badge {
     }
 
     static handleActive({ element }) {
-        // Handled via CSS or custom aria attributes if needed
+        element.setAttribute('aria-current', 'true');
     }
 
     static handleHidden({ element }) {
@@ -491,7 +536,20 @@ class W4Badge {
     }
 
     static handleHighlighted({ element }) {
-        // Handled via CSS class, or could trigger animation
+        element.removeAttribute('aria-hidden');
+    }
+
+    static resetState(element) {
+        element.classList.remove('w4-badge-active', 'w4-badge-disabled', 'w4-badge-hidden', 'w4-badge-highlighted');
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.removeAttribute('aria-current');
+        element.style.filter = '';
+        element.style.transform = '';
+        element.style.display = '';
+        element.style.animation = '';
     }
 }
 
@@ -506,13 +564,51 @@ class W4Badge {
 
 
 class W4Loading {
-    static init() {
+    static init(root = document) {
         // Expose a global API for manipulating loading states dynamically
         window.W4 = window.W4 || {};
         window.W4.Loading = this;
 
-        // Register state handlers for the Loading component
+        this.bindStateTriggers(root);
         this.registerStateHandlers();
+    }
+
+    static resolveElement(targetOrId) {
+        if (!targetOrId) return null;
+        if (targetOrId instanceof Element) return targetOrId;
+        return document.getElementById(String(targetOrId));
+    }
+
+    static setState(targetOrId, state = 'enabled') {
+        const element = this.resolveElement(targetOrId);
+        if (!element) return;
+
+        this.resetState(element);
+
+        const nextState = String(state || 'enabled').toLowerCase();
+        if (nextState !== 'enabled') {
+            element.setAttribute('data-w4-state', nextState);
+        }
+
+        if (typeof W4Core.syncElement === 'function') {
+            W4Core.syncElement(element);
+        }
+    }
+
+    static bindStateTriggers(root = document) {
+        if (this.triggersBound) return;
+
+        root.addEventListener('click', (event) => {
+            const trigger = event.target.closest('[data-w4-loading-state]');
+            if (!trigger) return;
+
+            event.preventDefault();
+            const state = trigger.getAttribute('data-w4-loading-state') || 'enabled';
+            const targetId = trigger.getAttribute('data-w4-target') || 'labLoadingTarget';
+            this.setState(targetId, state);
+        });
+
+        this.triggersBound = true;
     }
 
     /**
@@ -531,8 +627,14 @@ class W4Loading {
     }
 
     static handleEnabled({ element }) {
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
         element.removeAttribute('aria-disabled');
         element.removeAttribute('aria-hidden');
+        element.removeAttribute('aria-current');
+        element.removeAttribute('aria-busy');
+        element.style.filter = '';
+        element.style.display = '';
     }
 
     static handleDisabled({ element }) {
@@ -540,7 +642,7 @@ class W4Loading {
     }
 
     static handleActive({ element }) {
-        // May adjust visual state
+        element.setAttribute('aria-current', 'true');
     }
 
     static handleHidden({ element }) {
@@ -548,8 +650,19 @@ class W4Loading {
     }
 
     static handleLoadingState({ element }) {
-        // Custom loading behavior on the spinner itself if needed
         element.setAttribute('aria-busy', 'true');
+    }
+
+    static resetState(element) {
+        element.classList.remove('w4-loading-active', 'w4-loading-disabled', 'w4-loading-hidden');
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.removeAttribute('aria-current');
+        element.removeAttribute('aria-busy');
+        element.style.filter = '';
+        element.style.display = '';
     }
 
     /**
@@ -3948,6 +4061,8 @@ class W4Text {
 
 
 
+
+
 // Import forms components
 
 
@@ -4001,6 +4116,8 @@ class W4NativeUI {
         W4Modal.init();
         W4Tooltip.init();
         W4Alert.init();
+        W4Badge.init();
+        W4Loading.init();
         W4Toast.init();
         W4Skeleton.init();
 
@@ -4051,6 +4168,8 @@ class W4NativeUI {
     static get Modal() { return W4Modal; }
     static get Tooltip() { return W4Tooltip; }
     static get Alert() { return W4Alert; }
+    static get Badge() { return W4Badge; }
+    static get Loading() { return W4Loading; }
     static get Toast() { return W4Toast; }
     static get Skeleton() { return W4Skeleton; }
     

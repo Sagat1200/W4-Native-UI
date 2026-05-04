@@ -9,6 +9,8 @@
 import W4Modal from '../components/interactive/modal/modal.js';
 import W4Tooltip from '../components/interactive/tooltip/tooltip.js';
 import W4Alert from '../components/feedback/alert/alert.js';
+import W4Badge from '../components/feedback/badge/badge.js';
+import W4Loading from '../components/feedback/loading/loading.js';
 import W4Toast from '../components/feedback/toast/toast.js';
 import W4Skeleton from '../components/feedback/skeleton/skeleton.js';
 
@@ -65,6 +67,8 @@ class W4NativeUI {
         W4Modal.init();
         W4Tooltip.init();
         W4Alert.init();
+        W4Badge.init();
+        W4Loading.init();
         W4Toast.init();
         W4Skeleton.init();
 
@@ -115,6 +119,8 @@ class W4NativeUI {
     static get Modal() { return W4Modal; }
     static get Tooltip() { return W4Tooltip; }
     static get Alert() { return W4Alert; }
+    static get Badge() { return W4Badge; }
+    static get Loading() { return W4Loading; }
     static get Toast() { return W4Toast; }
     static get Skeleton() { return W4Skeleton; }
     

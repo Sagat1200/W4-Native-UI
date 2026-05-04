@@ -12,24 +12,38 @@
 
 <body>
 
-    <div id="navbar-badge" class="w4-navbar w4-navbar-primary">
+    <div class="w4-navbar  w4-navbar-fixed">
         <div class="w4-navbar-start">
-            <button class="w4-button w4-button-ghost w4-button-square mx-2">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    class="inline-block h-5 w-5 stroke-current">
+                    class="w4-icon w4-icon-md stroke-current">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
                 </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
             </button>
 
-            <button class="w4-button w4-button-ghost">Native UI</button>
         </div>
         <div class="w4-navbar-center">
-            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Soporte</a></li>
+            </ul>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -64,31 +78,25 @@
                     <option value="native-ui.sunset">Sunset</option>
                 </select>
             </div>
-
-
         </div>
     </div>
 
-    <main id="main-badge" class="w4-container w4-container-xl">
-
+    <main class="w4-container w4-container-xl">
         <div class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Badge</h1>
-            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales</p>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Badge</h1>
         </div>
 
-        <div id="description-badge" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Badge</h2>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Badge:</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral">
-                El componente Badge es un pequeño indicador visual utilizado para resaltar metadatos, contadores,
+                El componente <strong>Badge</strong> es un pequeño indicador visual utilizado para resaltar metadatos,
+                contadores,
                 etiquetas de estado o atributos clave. Es altamente flexible y está diseñado para ser anidado dentro de
                 otros componentes más grandes como botones, tarjetas o elementos de navegación.
-
             </p>
-
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-2">Casos de uso comunes:</h3>
-
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs mt-2">
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Contadores de notificaciones:</strong> Mostrar el número de mensajes
                     sin leer (ej. "+99") anidado en un icono de campana o avatar.</li>
                 <li><strong class="w4-text-active">Etiquetas de estado:</strong> Indicar el ciclo de vida de un registro
@@ -100,158 +108,360 @@
                     funcionalidad (ej. etiqueta "Nuevo").
                 </li>
             </ul>
+        </section>
 
-            <section id="example-badge-variant" class="w4-section w4-section-xl">
-                <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color</h2>
-                <hr class="w4-divider w4-divider-primary">
-                <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                    <div class="w4-stack w4-stack-horizontal w4-stack-md" style="flex-wrap: wrap;">
-                        <div class="w4-badge w4-badge-primary">Primary</div>
-                        <div class="w4-badge w4-badge-secondary">Secondary</div>
-                        <div class="w4-badge w4-badge-accent">Accent</div>
-                        <div class="w4-badge w4-badge-info">Info</div>
-                        <div class="w4-badge w4-badge-success">Success</div>
-                        <div class="w4-badge w4-badge-warning">Warning</div>
-                        <div class="w4-badge w4-badge-error">Error</div>
-                        <div class="w4-badge w4-badge-neutral">Neutral</div>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Variantes Semanticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Badges con colores del sistema semántico.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="badgeSemanticPreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="badgeSemanticCode">Codigo HTML</button>
                     </div>
                 </div>
-            </section>
-
-            <section id="example-badge-styles" class="w4-section w4-section-xl">
-                <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Modificadores Estilísticos
-                </h2>
-                <hr class="w4-divider w4-divider-secondary">
-                <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                    <div class="w4-stack w4-stack-horizontal w4-stack-md" style="flex-wrap: wrap;">
-                        <div class="w4-stack w4-stack-xs w4-stack-center">
-                            <span class="w4-label w4-label-xs">Solid (Defecto)</span>
-                            <div class="w4-badge w4-badge-primary">Solid</div>
-                        </div>
-                        <div class="w4-stack w4-stack-xs w4-stack-center">
-                            <span class="w4-label w4-label-xs">Outline</span>
-                            <div class="w4-badge w4-badge-primary w4-badge-outline">Outline</div>
-                        </div>
-                        <div class="w4-stack w4-stack-xs w4-stack-center">
-                            <span class="w4-label w4-label-xs">Soft</span>
-                            <div class="w4-badge w4-badge-primary w4-badge-soft">Soft</div>
-                        </div>
-                    </div>
-
-                    <div class="w4-divider"></div>
-
-                    <div class="w4-stack w4-stack-horizontal w4-stack-md" style="flex-wrap: wrap;">
-                        <div class="w4-badge w4-badge-info w4-badge-soft">Info Soft</div>
-                        <div class="w4-badge w4-badge-success w4-badge-soft">Success Soft</div>
-                        <div class="w4-badge w4-badge-warning w4-badge-soft">Warning Soft</div>
-                        <div class="w4-badge w4-badge-error w4-badge-soft">Error Soft</div>
+                <div id="badgeSemanticPreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-grid w4-grid-4 w4-grid-sm">
+                        <span class="w4-badge w4-badge-neutral">Neutral</span>
+                        <span class="w4-badge w4-badge-primary">Primary</span>
+                        <span class="w4-badge w4-badge-secondary">Secondary</span>
+                        <span class="w4-badge w4-badge-accent">Accent</span>
+                        <span class="w4-badge w4-badge-info">Info</span>
+                        <span class="w4-badge w4-badge-success">Success</span>
+                        <span class="w4-badge w4-badge-warning">Warning</span>
+                        <span class="w4-badge w4-badge-error">Error</span>
                     </div>
                 </div>
-            </section>
+                <div id="badgeSemanticCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">
+        &lt;span class=&quot;w4-badge w4-badge-neutral&quot;&gt;Neutral&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-primary&quot;&gt;Primary&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-secondary&quot;&gt;Secondary&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-accent&quot;&gt;Accent&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-info&quot;&gt;Info&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-success&quot;&gt;Success&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-warning&quot;&gt;Warning&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-error&quot;&gt;Error&lt;/span&gt;</code></pre>
+                </div>
+            </div>
+        </section>
 
-            <section id="example-badge-sizes" class="w4-section w4-section-xl">
-                <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Escalas de Tamaño</h2>
-                <hr class="w4-divider w4-divider-accent">
-                <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                    <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="flex-wrap: wrap;">
-                        <div class="w4-badge w4-badge-neutral w4-badge-xs">Extra Small (XS)</div>
-                        <div class="w4-badge w4-badge-neutral w4-badge-sm">Small (SM)</div>
-                        <div class="w4-badge w4-badge-neutral w4-badge-md">Medium (MD)</div>
-                        <div class="w4-badge w4-badge-neutral w4-badge-lg">Large (LG)</div>
-                        <div class="w4-badge w4-badge-neutral w4-badge-xl">Extra Large (XL)</div>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Variantes Outline Y Soft</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Badges para superficies discretas y etiquetas secundarias.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="badgeSurfacePreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="badgeSurfaceCode">Codigo HTML</button>
                     </div>
                 </div>
-            </section>
+                <div id="badgeSurfacePreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-stack w4-stack-sm">
+                        <h3 class="w4-heading w4-heading-h4 w4-heading-secondary">Outline</h3>
+                        <div class="w4-grid w4-grid-4 w4-grid-sm">
+                            <span class="w4-badge w4-badge-outline w4-badge-neutral">Neutral</span>
+                            <span class="w4-badge w4-badge-outline w4-badge-primary">Primary</span>
+                            <span class="w4-badge w4-badge-outline w4-badge-secondary">Secondary</span>
+                            <span class="w4-badge w4-badge-outline w4-badge-accent">Accent</span>
+                            <span class="w4-badge w4-badge-outline w4-badge-info">Info</span>
+                            <span class="w4-badge w4-badge-outline w4-badge-success">Success</span>
+                            <span class="w4-badge w4-badge-outline w4-badge-warning">Warning</span>
+                            <span class="w4-badge w4-badge-outline w4-badge-error">Error</span>
+                        </div>
+                        <h3 class="w4-heading w4-heading-h4 w4-heading-secondary">Soft</h3>
+                        <div class="w4-grid w4-grid-4 w4-grid-sm">
+                            <span class="w4-badge w4-badge-soft w4-badge-neutral">Neutral</span>
+                            <span class="w4-badge w4-badge-soft w4-badge-primary">Primary</span>
+                            <span class="w4-badge w4-badge-soft w4-badge-secondary">Secondary</span>
+                            <span class="w4-badge w4-badge-soft w4-badge-accent">Accent</span>
+                            <span class="w4-badge w4-badge-soft w4-badge-info">Info</span>
+                            <span class="w4-badge w4-badge-soft w4-badge-success">Success</span>
+                            <span class="w4-badge w4-badge-soft w4-badge-warning">Warning</span>
+                            <span class="w4-badge w4-badge-soft w4-badge-error">Error</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="badgeSurfaceCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">
 
-            <section id="example-badge-complex" class="w4-section w4-section-xl">
-                <h2 class="w4-heading w4-heading-h2 w4-heading-success w4-heading-start">Composición e Integración</h2>
-                <hr class="w4-divider w4-divider-success">
-                <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                    <div class="w4-grid w4-grid-2">
+        &lt;span class=&quot;w4-badge w4-badge-outline w4-badge-neutral&quot;&gt;Neutral&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-outline w4-badge-primary&quot;&gt;Primary&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-outline w4-badge-secondary&quot;&gt;Secondary&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-outline w4-badge-accent&quot;&gt;Accent&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-outline w4-badge-info&quot;&gt;Info&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-outline w4-badge-success&quot;&gt;Success&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-outline w4-badge-warning&quot;&gt;Warning&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-outline w4-badge-error&quot;&gt;Error&lt;/span&gt;
+        
+        &lt;span class=&quot;w4-badge w4-badge-soft w4-badge-neutral&quot;&gt;Neutral&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-soft w4-badge-primary&quot;&gt;Primary&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-soft w4-badge-secondary&quot;&gt;Secondary&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-soft w4-badge-accent&quot;&gt;Accent&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-soft w4-badge-info&quot;&gt;Info&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-soft w4-badge-success&quot;&gt;Success&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-soft w4-badge-warning&quot;&gt;Warning&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-soft w4-badge-error&quot;&gt;Error&lt;/span&gt;
+    </code></pre>
+                </div>
+            </div>
+        </section>
 
-                        <div class="w4-stack w4-stack-xs">
-                            <span class="w4-label w4-label-sm">En Botones (Notificaciones)</span>
-                            <button class="w4-button w4-button-primary">
-                                Mensajes
-                                <div class="w4-badge w4-badge-secondary w4-badge-sm">+99</div>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Tamaños</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Escalas de tamaño disponibles para badge.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="badgeSizePreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="badgeSizeCode">Codigo
+                            HTML</button>
+                    </div>
+                </div>
+                <div id="badgeSizePreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-stack-center">
+                        <span class="w4-badge w4-badge-primary w4-badge-xs">XS</span>
+                        <span class="w4-badge w4-badge-primary w4-badge-sm">SM</span>
+                        <span class="w4-badge w4-badge-primary w4-badge-md">MD</span>
+                        <span class="w4-badge w4-badge-primary w4-badge-lg">LG</span>
+                        <span class="w4-badge w4-badge-primary w4-badge-xl">XL</span>
+                    </div>
+                </div>
+                <div id="badgeSizeCode" data-w4-tab-panel class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm"
+                    hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">
+        &lt;span class=&quot;w4-badge w4-badge-primary w4-badge-xs&quot;&gt;XS&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-primary w4-badge-sm&quot;&gt;SM&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-primary w4-badge-md&quot;&gt;MD&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-primary w4-badge-lg&quot;&gt;LG&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-primary w4-badge-xl&quot;&gt;XL&lt;/span&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Ejemplos de Uso</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Casos prácticos basados en notificaciones, estado, categorización y llamadas de atención.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="badgeUsePreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="badgeUseCode">Codigo
+                            HTML</button>
+                    </div>
+                </div>
+                <div id="badgeUsePreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-grid w4-grid-2 w4-grid-sm">
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-sm w4-text-muted">Contadores de notificaciones</span>
+                            <button type="button" class="w4-button w4-button-ghost w4-button-sm">
+                                <i class="fa-solid fa-bell"></i>
+                                <span>Notificaciones</span>
+                                <span class="w4-badge w4-badge-error w4-badge-sm">+99</span>
                             </button>
                         </div>
-
-                        <div class="w4-stack w4-stack-xs">
-                            <span class="w4-label w4-label-sm">Como Etiquetas / Categorías</span>
-                            <div class="w4-stack w4-stack-horizontal w4-stack-xs">
-                                <span class="w4-text w4-text-md w4-text-neutral" style="font-weight: 600;">Artículo
-                                    UI</span>
-                                <div class="w4-badge w4-badge-info w4-badge-outline w4-badge-sm">Nuevo</div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-sm w4-text-muted">Etiquetas de estado</span>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-xs">
+                                <span class="w4-badge w4-badge-warning">Pendiente</span>
+                                <span class="w4-badge w4-badge-success">Completado</span>
                             </div>
                         </div>
-
-                        <div class="w4-stack w4-stack-xs">
-                            <span class="w4-label w4-label-sm">Indicador de Estado</span>
-                            <div class="w4-stack w4-stack-horizontal w4-stack-xs w4-stack-center">
-                                <div class="w4-badge w4-badge-success w4-badge-xs"
-                                    style="padding-inline: 0; inline-size: 0.875rem;"></div>
-                                <span class="w4-text w4-text-sm w4-text-neutral">Servidor Online</span>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-sm w4-text-muted">Categorizacion</span>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-xs">
+                                <span class="w4-badge w4-badge-outline w4-badge-info">API</span>
+                                <span class="w4-badge w4-badge-soft w4-badge-secondary">Laravel</span>
+                                <span class="w4-badge w4-badge-soft w4-badge-accent">UI</span>
                             </div>
                         </div>
-
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-sm w4-text-muted">Llamadas de atencion</span>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-xs">
+                                <span class="w4-badge w4-badge-primary w4-badge-highlighted">Nuevo</span>
+                                <span class="w4-badge w4-badge-info">Beta</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
+                <div id="badgeUseCode" data-w4-tab-panel class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm"
+                    hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">&lt;!-- Contador --&gt;
+        &lt;button class=&quot;w4-button w4-button-ghost w4-button-sm&quot;&gt;
+          &lt;i class=&quot;fa-solid fa-bell&quot;&gt;&lt;/i&gt;
+          &lt;span&gt;Notificaciones&lt;/span&gt;
+          &lt;span class=&quot;w4-badge w4-badge-error w4-badge-sm&quot;&gt;+99&lt;/span&gt;
+        &lt;/button&gt;
+        
+        &lt;!-- Estado --&gt;
+        &lt;span class=&quot;w4-badge w4-badge-warning&quot;&gt;Pendiente&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-success&quot;&gt;Completado&lt;/span&gt;
+        
+        &lt;!-- Categorización --&gt;
+        &lt;span class=&quot;w4-badge w4-badge-outline w4-badge-info&quot;&gt;API&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-soft w4-badge-secondary&quot;&gt;Laravel&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-soft w4-badge-accent&quot;&gt;UI&lt;/span&gt;
+        
+        &lt;!-- Llamada de atención --&gt;
+        &lt;span class=&quot;w4-badge w4-badge-primary w4-badge-highlighted&quot;&gt;Nuevo&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-info&quot;&gt;Beta&lt;/span&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Estados soportados por clase y por atributo <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                        data-w4-target="badgeStateClassPreview">Por Clase</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                        data-w4-target="badgeStateAttrPreview">Por Atributo</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-accent"
+                        data-w4-target="badgeStateCode">Codigo
+                        HTML</button>
+                </div>
+                <div class="w4-tab-lifted-content-panels">
+                    <div id="badgeStateClassPreview" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                        <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-item-center">
+                            <span class="w4-badge w4-badge-primary w4-badge-active">Active</span>
+                            <span class="w4-badge w4-badge-warning w4-badge-disabled">Disabled</span>
+                            <span class="w4-badge w4-badge-info w4-badge-highlighted">Highlighted</span>
+                        </div>
+                        <p class="w4-text w4-text-sm w4-text-neutral">
+                            El estado <code>hidden</code> oculta completamente el badge.
+                        </p>
+                    </div>
+                    <div id="badgeStateAttrPreview" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm" hidden
+                        aria-hidden="true">
+                        <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-item-center">
+                            <span class="w4-badge w4-badge-primary" data-w4-state="active">data-w4-state="active"</span>
+                            <span class="w4-badge w4-badge-warning"
+                                data-w4-state="disabled">data-w4-state="disabled"</span>
+                            <span class="w4-badge w4-badge-info"
+                                data-w4-state="highlighted">data-w4-state="highlighted"</span>
+                        </div>
+                        <p class="w4-text w4-text-sm w4-text-neutral">
+                            Usa <code>data-w4-state="hidden"</code> para ocultar.
+                        </p>
+                    </div>
+                    <div id="badgeStateCode" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                        aria-hidden="true">
+                        <pre
+                            class="m-0"><code class="w4-text w4-text-xs">&lt;!-- Por clase --&gt;
+        &lt;span class=&quot;w4-badge w4-badge-primary w4-badge-active&quot;&gt;Active&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-warning w4-badge-disabled&quot;&gt;Disabled&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-info w4-badge-highlighted&quot;&gt;Highlighted&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-error w4-badge-hidden&quot;&gt;Hidden&lt;/span&gt;
+        
+        &lt;!-- Por atributo --&gt;
+        &lt;span class=&quot;w4-badge w4-badge-primary&quot; data-w4-state=&quot;active&quot;&gt;...&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-warning&quot; data-w4-state=&quot;disabled&quot;&gt;...&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-info&quot; data-w4-state=&quot;highlighted&quot;&gt;...&lt;/span&gt;
+        &lt;span class=&quot;w4-badge w4-badge-error&quot; data-w4-state=&quot;hidden&quot;&gt;...&lt;/span&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Nativos Javascript Soportados al Componente
+                Badge</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Controles para probar transiciones del componente usando <code>data-w4-badge-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    Playground: Juega con los estados JS soportados para ver su efecto en el Badge de prueba.
+                </p>
+                <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                        data-w4-target="badgeJsPreview">Vista Previa</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                        data-w4-target="badgeJsCode">Codigo
+                        HTML</button>
+                </div>
+                <div class="w4-tab-lifted-content-panels">
+                    <div id="badgeJsPreview" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                        <div class="w4-stack w4-stack-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-sm w4-item-center">
+                                <span>Estado actual:</span>
+                                <span id="labBadgeTarget" class="w4-badge w4-badge-primary w4-badge-md">Activo</span>
+                            </div>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-neutral"
+                                    data-w4-badge-state="enabled" data-w4-target="labBadgeTarget">Clear</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-secondary"
+                                    data-w4-badge-state="active" data-w4-target="labBadgeTarget">Active</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-info"
+                                    data-w4-badge-state="highlighted"
+                                    data-w4-target="labBadgeTarget">Highlighted</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
+                                    data-w4-badge-state="disabled" data-w4-target="labBadgeTarget">Disabled</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-error" data-w4-badge-state="hidden"
+                                    data-w4-target="labBadgeTarget">Hidden</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="badgeJsCode" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                        aria-hidden="true">
+                        <pre
+                            class="m-0"><code class="w4-text w4-text-xs">&lt;span id=&quot;labBadgeTarget&quot; class=&quot;w4-badge w4-badge-primary&quot;&gt;Activo&lt;/span&gt;
+        &lt;button data-w4-badge-state=&quot;active&quot; data-w4-target=&quot;labBadgeTarget&quot;&gt;Active&lt;/button&gt;
+        &lt;button data-w4-badge-state=&quot;highlighted&quot; data-w4-target=&quot;labBadgeTarget&quot;&gt;Highlighted&lt;/button&gt;
+        &lt;button data-w4-badge-state=&quot;disabled&quot; data-w4-target=&quot;labBadgeTarget&quot;&gt;Disabled&lt;/button&gt;
+        &lt;button data-w4-badge-state=&quot;hidden&quot; data-w4-target=&quot;labBadgeTarget&quot;&gt;Hidden&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    El estado se aplica al Badge de prueba y refleja los hooks visuales del componente.
+                </p>
+            </div>
+        </section>
+
+
+
+
+
+
 
     </main>
-
-    <section id="example-badge-states-css" class="w4-container w4-container-xl w4-section w4-section-xl"
-        style="padding-block-end: 0;">
-        <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados (CSS Classes & Atributos)</h2>
-        <hr class="w4-divider w4-divider-error">
-        <div class="w4-panel w4-panel-base-200 w4-panel-md">
-            <div class="w4-stack w4-stack-horizontal w4-stack-md" style="flex-wrap: wrap; align-items: center;">
-                <div class="w4-badge w4-badge-primary">Normal</div>
-                <div class="w4-badge w4-badge-primary w4-badge-active">Active</div>
-                <div class="w4-badge w4-badge-primary w4-badge-highlighted">Highlighted</div>
-                <div class="w4-badge w4-badge-primary" disabled>Disabled (Attr)</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="example-badge-states-js" class="w4-container w4-container-xl w4-section w4-section-xl">
-        <h2 class="w4-heading w4-heading-h2 w4-heading-success w4-heading-start">Estados JS Soportados (data-w4-state)
-        </h2>
-        <hr class="w4-divider w4-divider-success">
-        <div class="w4-panel w4-panel-base-200 w4-panel-md">
-
-            <div class="w4-stack w4-stack-md" style="flex-direction: column; align-items: flex-start;">
-
-                <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="inline-size: 100%;">
-                    <div id="jsInteractiveBadge" class="w4-badge w4-badge-primary w4-badge-lg"
-                        data-w4-component="badge">
-                        <i class="w4-icon fa-solid fa-bell"></i>
-                        <span>Dynamic JS Badge</span>
-                    </div>
-
-                    <div class="w4-stack w4-stack-horizontal w4-stack-xs w4-stack-center"
-                        style="flex-wrap: wrap; margin-inline-start: auto; border-inline-start: 1px solid hsl(var(--w4-base-300)); padding-inline-start: 1rem;">
-                        <span class="w4-text w4-text-sm w4-text-neutral"
-                            style="opacity: 0.7; margin-inline-end: 0.5rem;">Set State:</span>
-                        <button class="w4-button w4-button-sm w4-button-outline"
-                            onclick="document.getElementById('jsInteractiveBadge').removeAttribute('data-w4-state')">Clear
-                            (Normal)</button>
-                        <button class="w4-button w4-button-sm w4-button-info"
-                            onclick="document.getElementById('jsInteractiveBadge').setAttribute('data-w4-state', 'active')">Active</button>
-                        <button class="w4-button w4-button-sm w4-button-warning"
-                            onclick="document.getElementById('jsInteractiveBadge').setAttribute('data-w4-state', 'highlighted')">Highlighted</button>
-                        <button class="w4-button w4-button-sm w4-button-error"
-                            onclick="document.getElementById('jsInteractiveBadge').setAttribute('data-w4-state', 'disabled')">Disabled</button>
-                        <button class="w4-button w4-button-sm w4-button-neutral"
-                            onclick="document.getElementById('jsInteractiveBadge').setAttribute('data-w4-state', 'hidden')">Hidden</button>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
 
     @NativeUIScripts
     @NativeUIInit

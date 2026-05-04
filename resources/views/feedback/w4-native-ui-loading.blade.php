@@ -12,24 +12,38 @@
 
 <body>
 
-    <div id="navbar-loading" class="w4-navbar w4-navbar-primary">
+    <div class="w4-navbar  w4-navbar-fixed">
         <div class="w4-navbar-start">
-            <button class="w4-button w4-button-ghost w4-button-square mx-2">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    class="inline-block h-5 w-5 stroke-current">
+                    class="w4-icon w4-icon-md stroke-current">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
                 </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
             </button>
 
-            <button class="w4-button w4-button-ghost">Native UI</button>
         </div>
         <div class="w4-navbar-center">
-            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Soporte</a></li>
+            </ul>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -67,24 +81,21 @@
         </div>
     </div>
 
-    <main id="main-loading" class="w4-container w4-container-xl">
-
+    <main class="w4-container w4-container-xl">
         <div class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Loading</h1>
-            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales</p>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Loading</h1>
         </div>
 
-        <div id="description-loading" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Loading</h2>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Loading:</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente Loading (o Spinner) proporciona retroalimentación visual sobre operaciones asíncronas en
                 curso. Es ligero, renderizado completamente en CSS (sin SVGs o GIFs pesados) y se adapta a cualquier
                 contexto de tamaño o color del sistema de diseño.
             </p>
-
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-2">Casos de uso comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs mt-2">
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Carga de página/sección:</strong> Centrado en un contenedor vacío
                     mientras se obtienen los datos de una API (usando <code>w4-loading-lg</code> o <code>xl</code>).
                 </li>
@@ -95,294 +106,410 @@
                 <li><strong class="w4-text-active">Sincronización:</strong> Indicar procesos de guardado automático en
                     segundo plano usando la variante Dots (<code>w4-loading-dots</code>).</li>
             </ul>
-        </div>
+        </section>
 
-        <section id="example-loading-variant" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color Semánticas</h2>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Variantes Semanticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Spinners con los colores semánticos del sistema.
+            </p>
             <hr class="w4-divider w4-divider-primary">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="flex-wrap: wrap;">
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-md"></span>
-                        <label class="w4-label w4-label-sm w4-label-neutral">Neutral</label>
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                        data-w4-target="loadingSemanticPreview">Vista Previa</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                        data-w4-target="loadingSemanticCode">Codigo HTML</button>
+                </div>
+                <div id="loadingSemanticPreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-grid w4-grid-4 w4-grid-sm">
+                        {{-- <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Default</span>
+                        </div> --}}
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading w4-loading-neutral"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Neutral</span>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading w4-loading-primary"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Primary</span>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading w4-loading-secondary"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Secondary</span>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading w4-loading-accent"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Accent</span>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading w4-loading-info"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Info</span>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading w4-loading-success"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Success</span>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading w4-loading-warning"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Warning</span>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading w4-loading-error"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Error</span>
+                        </div>
                     </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-md w4-loading-primary"></span>
-                        <label class="w4-label w4-label-sm w4-label-primary">Primary</label>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-md w4-loading-secondary"></span>
-                        <label class="w4-label w4-label-sm w4-label-secondary">Secondary</label>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-md w4-loading-accent"></span>
-                        <label class="w4-label w4-label-sm w4-label-accent">Accent</label>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-md w4-loading-info"></span>
-                        <label class="w4-label w4-label-sm w4-label-info">Info</label>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-md w4-loading-success"></span>
-                        <label class="w4-label w4-label-sm w4-label-success">Success</label>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-md w4-loading-warning"></span>
-                        <label class="w4-label w4-label-sm w4-label-warning">Warning</label>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-md w4-loading-error"></span>
-                        <label class="w4-label w4-label-sm w4-label-error">Error</label>
-                    </div>
+                </div>
+                <div id="loadingSemanticCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;span class=&quot;w4-loading w4-loading-neutral&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-primary&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-secondary&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-accent&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-info&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-success&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-warning&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-error&quot;&gt;&lt;/span&gt;</code></pre>
                 </div>
             </div>
         </section>
 
-        <section id="example-loading-shapes" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Formas (Shape Variants)</h2>
-            <hr class="w4-divider w4-divider-secondary">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="flex-wrap: wrap;">
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-spinner"></span>
-                        <span class="w4-label w4-label-xs">Spinner (Default)</span>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Default Loadings</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Variantes visuales de loading para distintos contextos de interfaz.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                        data-w4-target="loadingShapePreview">Vista Previa</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                        data-w4-target="loadingShapeCode">Codigo HTML</button>
+                </div>
+                <div id="loadingShapePreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-grid w4-grid-5 w4-grid-sm">
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading w4-loading-spinner w4-loading-primary"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Spinner</span>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading w4-loading-dots w4-loading-info"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Dots</span>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading w4-loading-ring w4-loading-success"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Ring</span>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading w4-loading-bars w4-loading-warning"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Bars</span>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs">
+                            <span class="w4-loading w4-loading-infinity w4-loading-secondary"></span>
+                            <span class="w4-text w4-text-xs w4-text-neutral">Infinity</span>
+                        </div>
                     </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-dots"></span>
-                        <span class="w4-label w4-label-xs">Dots</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-ring"></span>
-                        <span class="w4-label w4-label-xs">Ring</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-bars"></span>
-                        <span class="w4-label w4-label-xs">Bars</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-infinity"></span>
-                        <span class="w4-label w4-label-xs">Infinity</span>
-                    </div>
+                </div>
+                <div id="loadingShapeCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">&lt;span class=&quot;w4-loading w4-loading-spinner&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-dots&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-ring&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-bars&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-infinity&quot;&gt;&lt;/span&gt;</code></pre>
                 </div>
             </div>
         </section>
 
-        <section id="example-loading-shapes-corporate" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Variantes Empresariales
-                (Corporate Shapes)</h2>
-            <hr class="w4-divider w4-divider-secondary">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1.5rem;">
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-pulse"></span>
-                        <span class="w4-label w4-label-xs">Pulse</span>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Loadings Empresariales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Variantes avanzadas para contextos corporativos y dashboards operativos.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                        data-w4-target="loadingBusinessPreview">Vista Previa</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                        data-w4-target="loadingBusinessCode">Codigo HTML</button>
+                </div>
+                <div id="loadingBusinessPreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-grid w4-grid-4 w4-grid-sm">
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-pulse w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Pulse</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-eclipse w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Eclipse</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-radar w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Radar</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-square w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Square</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-diamond w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Diamond</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-wave w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Wave</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-clock w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Clock</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-hex w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Hex</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-dual-ring w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Dual Ring</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-orbit w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Orbit</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-crescent w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Crescent</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-steps w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Steps</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-scan w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Scan</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-cross w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Cross</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-corner w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Corner</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-triangle w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Triangle</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-beacon w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Beacon</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-matrix w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Matrix</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-helix w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Helix</span></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center w4-stack-xs"><span
+                                class="w4-loading w4-loading-arc w4-loading-primary"></span><span
+                                class="w4-text w4-text-xs w4-text-neutral">Arc</span></div>
                     </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-eclipse"></span>
-                        <span class="w4-label w4-label-xs">Eclipse</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-radar"></span>
-                        <span class="w4-label w4-label-xs">Radar</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-square"></span>
-                        <span class="w4-label w4-label-xs">Square</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-diamond"></span>
-                        <span class="w4-label w4-label-xs">Diamond</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-wave"></span>
-                        <span class="w4-label w4-label-xs">Wave</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-clock"></span>
-                        <span class="w4-label w4-label-xs">Clock</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-hex"></span>
-                        <span class="w4-label w4-label-xs">Hexagon</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-dual-ring"></span>
-                        <span class="w4-label w4-label-xs">Dual Ring</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-orbit"></span>
-                        <span class="w4-label w4-label-xs">Orbit</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-crescent"></span>
-                        <span class="w4-label w4-label-xs">Crescent</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-steps"></span>
-                        <span class="w4-label w4-label-xs">Steps</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-scan"></span>
-                        <span class="w4-label w4-label-xs">Scan</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-cross"></span>
-                        <span class="w4-label w4-label-xs">Cross</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
-                        <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-corner"></span>
-                        <span class="w4-label w4-label-xs">Corner</span>
-                    </div>
+                </div>
+                <div id="loadingBusinessCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">&lt;span class=&quot;w4-loading w4-loading-pulse&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-eclipse&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-radar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-square&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-diamond&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-wave&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-clock&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-hex&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-dual-ring&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-orbit&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-crescent&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-steps&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-scan&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-cross&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-corner&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-triangle&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-beacon&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-matrix&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-helix&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-arc&quot;&gt;&lt;/span&gt;</code></pre>
                 </div>
             </div>
         </section>
 
-        <section id="example-loading-sizes" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Tamaños Explícitos (XS - XL)</h2>
-            <hr class="w4-divider w4-divider-accent">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="flex-wrap: wrap;">
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Tamaños</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Escalas de tamaño para micro acciones y cargas de bloque.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                        data-w4-target="loadingSizePreview">Vista Previa</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                        data-w4-target="loadingSizeCode">Codigo HTML</button>
+                </div>
+                <div id="loadingSizePreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-item-center">
                         <span class="w4-loading w4-loading-primary w4-loading-xs"></span>
-                        <span class="w4-label w4-label-xs">XS (1rem)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
                         <span class="w4-loading w4-loading-primary w4-loading-sm"></span>
-                        <span class="w4-label w4-label-xs">SM (1.25rem)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
                         <span class="w4-loading w4-loading-primary w4-loading-md"></span>
-                        <span class="w4-label w4-label-xs">MD (1.5rem)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
                         <span class="w4-loading w4-loading-primary w4-loading-lg"></span>
-                        <span class="w4-label w4-label-xs">LG (2rem)</span>
-                    </div>
-                    <div class="w4-stack w4-stack-xs w4-stack-center">
                         <span class="w4-loading w4-loading-primary w4-loading-xl"></span>
-                        <span class="w4-label w4-label-xs">XL (2.5rem)</span>
                     </div>
+                </div>
+                <div id="loadingSizeCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">&lt;span class=&quot;w4-loading w4-loading-primary w4-loading-xs&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-primary w4-loading-sm&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-primary w4-loading-md&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-primary w4-loading-lg&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-primary w4-loading-xl&quot;&gt;&lt;/span&gt;</code></pre>
                 </div>
             </div>
         </section>
 
-        <section id="example-loading-complex" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-success w4-heading-start">Ejemplos de Integración
-                (Composición)</h2>
-            <hr class="w4-divider w4-divider-success">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid w4-grid-3">
-
-                    <div class="w4-stack w4-stack-xs">
-                        <span class="w4-label w4-label-sm">Dentro de un botón</span>
-                        <button class="w4-button w4-button-primary">
-                            <span class="w4-loading w4-loading-sm"></span>
-                            Guardando...
-                        </button>
-                    </div>
-
-                    <div class="w4-stack w4-stack-xs">
-                        <span class="w4-label w4-label-sm">Botón de icono</span>
-                        <button class="w4-button w4-button-square w4-button-outline w4-button-secondary">
-                            <span class="w4-loading w4-loading-md"></span>
-                        </button>
-                    </div>
-
-                    <div class="w4-stack w4-stack-xs">
-                        <span class="w4-label w4-label-sm">Junto a texto (Notificación)</span>
-                        <div class="w4-panel w4-panel-base-100 w4-panel-sm" style="box-shadow: var(--w4-shadow-sm);">
-                            <div class="w4-stack w4-stack-horizontal w4-stack-xs w4-stack-center">
-                                <span class="w4-loading w4-loading-accent w4-loading-sm"></span>
-                                <span class="w4-text w4-text-sm">Sincronizando...</span>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Ejemplos de Uso</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Casos prácticos basados en los escenarios de carga más frecuentes.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-tabs w4-tabs-boxed w4-stack w4-stack-horizontal w4-stack-center" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                        data-w4-target="loadingUsePreview">Vista Previa</button>
+                    <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                        data-w4-target="loadingUseCode">Codigo HTML</button>
+                </div>
+                <div id="loadingUsePreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-grid w4-grid-2 w4-grid-sm">
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-sm w4-text-muted">Carga de página/sección</span>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                                <span class="w4-loading w4-loading-ring w4-loading-primary w4-loading-xl"></span>
+                            </div>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-sm w4-text-muted">Acciones en botones</span>
+                            <button type="button" class="w4-button w4-button-primary w4-button-sm" disabled>
+                                <span class="w4-loading w4-loading-spinner w4-loading-xs"></span>
+                                <span>Enviando...</span>
+                            </button>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-sm w4-text-muted">Infinite Scroll</span>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                                <span class="w4-loading w4-loading-bars w4-loading-info w4-loading-md"></span>
+                                <span class="w4-text w4-text-sm">Cargando más resultados...</span>
+                            </div>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xs">
+                            <span class="w4-text w4-text-sm w4-text-muted">Sincronización</span>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                                <span class="w4-loading w4-loading-dots w4-loading-success w4-loading-sm"></span>
+                                <span class="w4-text w4-text-sm">Guardando cambios automáticamente...</span>
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <div id="loadingUseCode" data-w4-tab-panel class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm"
+                    hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">&lt;span class=&quot;w4-loading w4-loading-ring w4-loading-xl&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-spinner w4-loading-xs&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-bars w4-loading-md&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;w4-loading w4-loading-dots w4-loading-sm&quot;&gt;&lt;/span&gt;</code></pre>
                 </div>
             </div>
         </section>
-    </main>
 
-    <section id="example-loading-states-css" class="w4-container w4-container-xl w4-section w4-section-xl"
-        style="padding-block-end: 0;">
-        <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados (CSS Classes & Atributos)</h2>
-        <hr class="w4-divider w4-divider-error">
-        <div class="w4-panel w4-panel-base-200 w4-panel-md">
-            <div class="w4-stack w4-stack-horizontal w4-stack-md" style="flex-wrap: wrap; align-items: center;">
-                <div class="w4-stack w4-stack-xs w4-stack-center">
-                    <span class="w4-loading w4-loading-primary w4-loading-xl"></span>
-                    <span class="w4-label w4-label-xs">Normal</span>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Estados soportados por clase y por atributo <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                        data-w4-target="loadingStateClassPreview">Por Clase</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                        data-w4-target="loadingStateAttrPreview">Por Atributo</button>
                 </div>
-                <div class="w4-stack w4-stack-xs w4-stack-center">
-                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-active"></span>
-                    <span class="w4-label w4-label-xs">Active (Glow Effect)</span>
-                </div>
-                <div class="w4-stack w4-stack-xs w4-stack-center">
-                    <span class="w4-loading w4-loading-primary w4-loading-xl w4-loading-disabled"></span>
-                    <span class="w4-label w4-label-xs">Disabled (Opacity 0.5)</span>
+                <div class="w4-tab-lifted-content-panels">
+                    <div id="loadingStateClassPreview" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                        <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-item-center">
+                            <span class="w4-loading w4-loading-primary w4-loading-active"></span>
+                            <span class="w4-loading w4-loading-warning w4-loading-disabled"></span>
+                            <span class="w4-loading w4-loading-info w4-loading-loading"></span>
+                        </div>
+                        <p class="w4-text w4-text-sm w4-text-neutral">El estado <code>hidden</code> oculta el
+                            componente.</p>
+                    </div>
+                    <div id="loadingStateAttrPreview" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm" hidden
+                        aria-hidden="true">
+                        <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-item-center">
+                            <span class="w4-loading w4-loading-primary" data-w4-state="active"></span>
+                            <span class="w4-loading w4-loading-warning" data-w4-state="disabled"></span>
+                            <span class="w4-loading w4-loading-info" data-w4-state="loading"></span>
+                        </div>
+                        <p class="w4-text w4-text-sm w4-text-neutral">Usa <code>data-w4-state="hidden"</code> para
+                            ocultar.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="example-loading-states-js" class="w4-container w4-container-xl w4-section w4-section-xl">
-        <h2 class="w4-heading w4-heading-h2 w4-heading-success w4-heading-start">Estados JS Soportados (data-w4-state)
-        </h2>
-        <hr class="w4-divider w4-divider-success">
-        <div class="w4-panel w4-panel-base-200 w4-panel-md">
-
-            <div class="w4-stack w4-stack-md" style="flex-direction: column; align-items: flex-start;">
-
-                <!-- Shape Switcher -->
-                <div class="w4-stack w4-stack-horizontal w4-stack-xs" style="flex-wrap: wrap; margin-block-end: 1rem;">
-                    <span class="w4-text w4-text-sm w4-text-neutral"
-                        style="opacity: 0.7; margin-inline-end: 0.5rem; align-self: center;">Change Shape:</span>
-                    <button class="w4-button w4-button-xs w4-button-outline"
-                        onclick="document.getElementById('jsInteractiveLoading').className = 'w4-loading w4-loading-primary w4-loading-xl'">Spinner</button>
-                    <button class="w4-button w4-button-xs w4-button-outline"
-                        onclick="document.getElementById('jsInteractiveLoading').className = 'w4-loading w4-loading-primary w4-loading-xl w4-loading-dots'">Dots</button>
-                    <button class="w4-button w4-button-xs w4-button-outline"
-                        onclick="document.getElementById('jsInteractiveLoading').className = 'w4-loading w4-loading-primary w4-loading-xl w4-loading-ring'">Ring</button>
-                    <button class="w4-button w4-button-xs w4-button-outline"
-                        onclick="document.getElementById('jsInteractiveLoading').className = 'w4-loading w4-loading-primary w4-loading-xl w4-loading-bars'">Bars</button>
-                    <button class="w4-button w4-button-xs w4-button-outline"
-                        onclick="document.getElementById('jsInteractiveLoading').className = 'w4-loading w4-loading-primary w4-loading-xl w4-loading-infinity'">Infinity</button>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Nativos Javascript Soportados al Componente
+                Loading</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Controles para probar transiciones del componente usando <code>data-w4-loading-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                        data-w4-target="loadingJsPreview">Vista Previa</button>
+                    <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                        data-w4-target="loadingJsCode">Codigo HTML</button>
                 </div>
-
-                <div class="w4-stack w4-stack-horizontal w4-stack-md w4-stack-center" style="inline-size: 100%;">
-
-                    <!-- Dynamic Component -->
-                    <div class="w4-panel w4-panel-base-100 w4-panel-md"
-                        style="box-shadow: var(--w4-shadow-md); min-inline-size: 200px;">
-                        <div class="w4-stack w4-stack-xs w4-stack-center">
-                            <span id="jsInteractiveLoading" class="w4-loading w4-loading-primary w4-loading-xl"
-                                data-w4-component="loading"></span>
-                            <span class="w4-text w4-text-sm w4-text-neutral" style="opacity: 0.7;">Conectando...</span>
+                <div class="w4-tab-lifted-content-panels">
+                    <div id="loadingJsPreview" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                        <div class="w4-stack w4-stack-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-sm w4-item-center">
+                                <span>Estado actual:</span>
+                                <span id="labLoadingTarget" class="w4-loading w4-loading-primary w4-loading-lg"></span>
+                            </div>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-neutral"
+                                    data-w4-loading-state="enabled" data-w4-target="labLoadingTarget">Clear</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-secondary"
+                                    data-w4-loading-state="active" data-w4-target="labLoadingTarget">Active</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-info"
+                                    data-w4-loading-state="loading" data-w4-target="labLoadingTarget">Loading</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-warning"
+                                    data-w4-loading-state="disabled" data-w4-target="labLoadingTarget">Disabled</button>
+                                <button type="button" class="w4-btn w4-btn-sm w4-btn-error"
+                                    data-w4-loading-state="hidden" data-w4-target="labLoadingTarget">Hidden</button>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- State Actions -->
-                    <div class="w4-stack w4-stack-horizontal w4-stack-xs w4-stack-center"
-                        style="flex-wrap: wrap; margin-inline-start: auto; border-inline-start: 1px solid hsl(var(--w4-base-300)); padding-inline-start: 1rem;">
-                        <span class="w4-text w4-text-sm w4-text-neutral"
-                            style="opacity: 0.7; margin-inline-end: 0.5rem;">Set State:</span>
-                        <button class="w4-button w4-button-sm w4-button-outline"
-                            onclick="document.getElementById('jsInteractiveLoading').removeAttribute('data-w4-state')">Clear
-                            (Normal)</button>
-                        <button class="w4-button w4-button-sm w4-button-info"
-                            onclick="document.getElementById('jsInteractiveLoading').setAttribute('data-w4-state', 'active')">Active
-                            (Glow)</button>
-                        <button class="w4-button w4-button-sm w4-button-error"
-                            onclick="document.getElementById('jsInteractiveLoading').setAttribute('data-w4-state', 'disabled')">Disabled</button>
-                        <button class="w4-button w4-button-sm w4-button-neutral"
-                            onclick="document.getElementById('jsInteractiveLoading').setAttribute('data-w4-state', 'hidden')">Hidden</button>
+                    <div id="loadingJsCode" data-w4-tab-panel
+                        class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                        aria-hidden="true">
+                        <pre
+                            class="m-0"><code class="w4-text w4-text-xs">&lt;span id=&quot;labLoadingTarget&quot; class=&quot;w4-loading w4-loading-primary&quot;&gt;&lt;/span&gt;
+&lt;button data-w4-loading-state=&quot;active&quot; data-w4-target=&quot;labLoadingTarget&quot;&gt;Active&lt;/button&gt;
+&lt;button data-w4-loading-state=&quot;loading&quot; data-w4-target=&quot;labLoadingTarget&quot;&gt;Loading&lt;/button&gt;
+&lt;button data-w4-loading-state=&quot;disabled&quot; data-w4-target=&quot;labLoadingTarget&quot;&gt;Disabled&lt;/button&gt;
+&lt;button data-w4-loading-state=&quot;hidden&quot; data-w4-target=&quot;labLoadingTarget&quot;&gt;Hidden&lt;/button&gt;</code></pre>
                     </div>
-
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
+
+    </main>
 
     @NativeUIScripts
     @NativeUIInit

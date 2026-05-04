@@ -9,13 +9,51 @@
 import W4Core from '../../../core.js';
 
 export default class W4Loading {
-    static init() {
+    static init(root = document) {
         // Expose a global API for manipulating loading states dynamically
         window.W4 = window.W4 || {};
         window.W4.Loading = this;
 
-        // Register state handlers for the Loading component
+        this.bindStateTriggers(root);
         this.registerStateHandlers();
+    }
+
+    static resolveElement(targetOrId) {
+        if (!targetOrId) return null;
+        if (targetOrId instanceof Element) return targetOrId;
+        return document.getElementById(String(targetOrId));
+    }
+
+    static setState(targetOrId, state = 'enabled') {
+        const element = this.resolveElement(targetOrId);
+        if (!element) return;
+
+        this.resetState(element);
+
+        const nextState = String(state || 'enabled').toLowerCase();
+        if (nextState !== 'enabled') {
+            element.setAttribute('data-w4-state', nextState);
+        }
+
+        if (typeof W4Core.syncElement === 'function') {
+            W4Core.syncElement(element);
+        }
+    }
+
+    static bindStateTriggers(root = document) {
+        if (this.triggersBound) return;
+
+        root.addEventListener('click', (event) => {
+            const trigger = event.target.closest('[data-w4-loading-state]');
+            if (!trigger) return;
+
+            event.preventDefault();
+            const state = trigger.getAttribute('data-w4-loading-state') || 'enabled';
+            const targetId = trigger.getAttribute('data-w4-target') || 'labLoadingTarget';
+            this.setState(targetId, state);
+        });
+
+        this.triggersBound = true;
     }
 
     /**
@@ -34,8 +72,14 @@ export default class W4Loading {
     }
 
     static handleEnabled({ element }) {
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
         element.removeAttribute('aria-disabled');
         element.removeAttribute('aria-hidden');
+        element.removeAttribute('aria-current');
+        element.removeAttribute('aria-busy');
+        element.style.filter = '';
+        element.style.display = '';
     }
 
     static handleDisabled({ element }) {
@@ -43,7 +87,7 @@ export default class W4Loading {
     }
 
     static handleActive({ element }) {
-        // May adjust visual state
+        element.setAttribute('aria-current', 'true');
     }
 
     static handleHidden({ element }) {
@@ -51,8 +95,19 @@ export default class W4Loading {
     }
 
     static handleLoadingState({ element }) {
-        // Custom loading behavior on the spinner itself if needed
         element.setAttribute('aria-busy', 'true');
+    }
+
+    static resetState(element) {
+        element.classList.remove('w4-loading-active', 'w4-loading-disabled', 'w4-loading-hidden');
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+        element.removeAttribute('aria-current');
+        element.removeAttribute('aria-busy');
+        element.style.filter = '';
+        element.style.display = '';
     }
 
     /**
