@@ -52,7 +52,6 @@ class BuildNativeUIAssetsCommand extends Command
             $root . '/resources/css/presets/dim.css',
             $root . '/resources/css/presets/nord.css',
             $root . '/resources/css/presets/sunset.css',
-            $root . '/resources/css/presets/cyberpunk.css',
             $root . '/resources/css/properties/w4-components.css',
             // UI
             $root . '/resources/css/components/ui/button/button.css',
