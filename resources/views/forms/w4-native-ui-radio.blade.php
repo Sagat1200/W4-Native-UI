@@ -12,23 +12,38 @@
 
 <body>
 
-    <div class="w4-navbar w4-navbar-primary">
+    <div class="w4-navbar  w4-navbar-fixed">
         <div class="w4-navbar-start">
-            <button class="w4-button w4-button-ghost w4-button-square">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     class="w4-icon w4-icon-md stroke-current">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
                 </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
             </button>
-            <button class="w4-button w4-button-ghost">Native UI</button>
+
         </div>
         <div class="w4-navbar-center">
-            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Soporte</a></li>
+            </ul>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -67,15 +82,12 @@
     </div>
 
     <main class="w4-container w4-container-xl">
-
         <div class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Radio</h1>
-            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente de estado
-                w4-radio</p>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Radio</h1>
         </div>
 
-        <div class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Radio</h2>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Radio:</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Radio</strong> (botón de opción) permite a los usuarios seleccionar una única
@@ -83,9 +95,8 @@
                 radio button, cualquier otro botón previamente seleccionado en el mismo grupo se deselecciona
                 automáticamente.
             </p>
-
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-2">Casos de Uso Comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical mt-2">
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Selección de planes:</strong> Elegir un nivel de suscripción (Básico,
                     Pro, Enterprise).</li>
                 <li><strong class="w4-text-active">Métodos de pago:</strong> Seleccionar una única forma de pago
@@ -98,179 +109,302 @@
                     solo se admite una
                     respuesta correcta.</li>
             </ul>
-        </div>
+        </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color Semánticas</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Variantes Semanticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Variantes de color para radio buttons dentro de grupos de selección única.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="radioSemanticPreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="radioSemanticCode">Codigo HTML</button>
+                    </div>
+                </div>
+                <div id="radioSemanticPreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-grid w4-grid-4 w4-grid-sm">
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><label class="w4-label"><input type="radio"
+                                    name="semantic-demo" class="w4-radio" checked>Default</label></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><label class="w4-label"><input type="radio"
+                                    name="semantic-demo" class="w4-radio w4-radio-primary" checked>Primary</label></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><label class="w4-label"><input type="radio"
+                                    name="semantic-demo-2" class="w4-radio w4-radio-secondary" checked>Secondary</label>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><label class="w4-label"><input type="radio"
+                                    name="semantic-demo-3" class="w4-radio w4-radio-accent" checked>Accent</label></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><label class="w4-label"><input type="radio"
+                                    name="semantic-demo-4" class="w4-radio w4-radio-info" checked>Info</label></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><label class="w4-label"><input type="radio"
+                                    name="semantic-demo-5" class="w4-radio w4-radio-success" checked>Success</label>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><label class="w4-label"><input type="radio"
+                                    name="semantic-demo-6" class="w4-radio w4-radio-warning" checked>Warning</label>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><label class="w4-label"><input type="radio"
+                                    name="semantic-demo-7" class="w4-radio w4-radio-error" checked>Error</label></div>
+                    </div>
+                </div>
+                <div id="radioSemanticCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-primary&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-secondary&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-accent&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-info&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-success&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-warning&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-error&quot;&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Tamaños</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Escalas morfológicas del componente radio de <code>xs</code> a <code>xl</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="radioSizePreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="radioSizeCode">Codigo HTML</button>
+                    </div>
+                </div>
+                <div id="radioSizePreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-stack-center">
+                        <label class="w4-label"><input type="radio" name="size-demo" class="w4-radio w4-radio-xs"
+                                checked>XS</label>
+                        <label class="w4-label"><input type="radio" name="size-demo-2" class="w4-radio w4-radio-sm"
+                                checked>SM</label>
+                        <label class="w4-label"><input type="radio" name="size-demo-3" class="w4-radio w4-radio-md"
+                                checked>MD</label>
+                        <label class="w4-label"><input type="radio" name="size-demo-4" class="w4-radio w4-radio-lg"
+                                checked>LG</label>
+                        <label class="w4-label"><input type="radio" name="size-demo-5" class="w4-radio w4-radio-xl"
+                                checked>XL</label>
+                    </div>
+                </div>
+                <div id="radioSizeCode" data-w4-tab-panel class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm"
+                    hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-xs&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-sm&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-md&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-lg&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-xl&quot;&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Casos de Uso Aplicados</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Ejemplos de planes, método de pago y preferencia única.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-3 w4-grid-sm">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <h3 class="w4-hdg w4-hdg-h5 w4-hdg-primary">Plan de Suscripción</h3>
+                    <label class="w4-label"><input type="radio" name="planDemo" class="w4-radio w4-radio-primary"
+                            checked>Básico</label>
+                    <label class="w4-label"><input type="radio" name="planDemo"
+                            class="w4-radio w4-radio-primary">Pro</label>
+                    <label class="w4-label"><input type="radio" name="planDemo"
+                            class="w4-radio w4-radio-primary">Enterprise</label>
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <h3 class="w4-hdg w4-hdg-h5 w4-hdg-primary">Método de Pago</h3>
+                    <label class="w4-label"><input type="radio" name="payDemo" class="w4-radio w4-radio-secondary"
+                            checked>Tarjeta</label>
+                    <label class="w4-label"><input type="radio" name="payDemo"
+                            class="w4-radio w4-radio-secondary">PayPal</label>
+                    <label class="w4-label"><input type="radio" name="payDemo"
+                            class="w4-radio w4-radio-secondary">Transferencia</label>
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <h3 class="w4-hdg w4-hdg-h5 w4-hdg-primary">Idioma Principal</h3>
+                    <label class="w4-label"><input type="radio" name="langDemo" class="w4-radio w4-radio-accent"
+                            checked>Español</label>
+                    <label class="w4-label"><input type="radio" name="langDemo"
+                            class="w4-radio w4-radio-accent">Inglés</label>
+                    <label class="w4-label"><input type="radio" name="langDemo"
+                            class="w4-radio w4-radio-accent">Portugués</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Estados soportados por clase y por atributo <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-2 w4-grid-sm">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-start">Por Clase</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="radioStateClassPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="radioStateClassCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="radioStateClassPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <label class="w4-label"><input type="radio" class="w4-radio w4-radio-selected"
+                                            checked>Selected</label>
+                                    <label class="w4-label"><input type="radio"
+                                            class="w4-radio w4-radio-disabled">Disabled</label>
+                                    <label class="w4-label"><input type="radio"
+                                            class="w4-radio w4-radio-readonly">Readonly</label>
+                                    <label class="w4-label"><input type="radio"
+                                            class="w4-radio w4-radio-invalid">Invalid</label>
+                                    <label class="w4-label"><input type="radio"
+                                            class="w4-radio w4-radio-valid">Valid</label>
+                                    <label class="w4-label"><input type="radio"
+                                            class="w4-radio w4-radio-loading">Loading</label>
+                                </div>
+                            </div>
+                            <div id="radioStateClassCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-selected&quot; checked&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-disabled&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-readonly&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-invalid&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-valid&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio w4-radio-loading&quot;&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-start">Por Atributo</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="radioStateAttrPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="radioStateAttrCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="radioStateAttrPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <label class="w4-label"><input type="radio" class="w4-radio"
+                                            data-w4-state="selected" checked>selected</label>
+                                    <label class="w4-label"><input type="radio" class="w4-radio"
+                                            data-w4-state="disabled">disabled</label>
+                                    <label class="w4-label"><input type="radio" class="w4-radio"
+                                            data-w4-state="readonly">readonly</label>
+                                    <label class="w4-label"><input type="radio" class="w4-radio"
+                                            data-w4-state="invalid">invalid</label>
+                                    <label class="w4-label"><input type="radio" class="w4-radio"
+                                            data-w4-state="valid">valid</label>
+                                    <label class="w4-label"><input type="radio" class="w4-radio"
+                                            data-w4-state="loading">loading</label>
+                                </div>
+                            </div>
+                            <div id="radioStateAttrCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">&lt;input type=&quot;radio&quot; class=&quot;w4-radio&quot; data-w4-state=&quot;selected&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio&quot; data-w4-state=&quot;disabled&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio&quot; data-w4-state=&quot;readonly&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio&quot; data-w4-state=&quot;invalid&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio&quot; data-w4-state=&quot;valid&quot;&gt;
+&lt;input type=&quot;radio&quot; class=&quot;w4-radio&quot; data-w4-state=&quot;loading&quot;&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">
+                Estados Nativos Javascript Soportados al Componente Radio
+            </h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Controles para probar transiciones usando <code>data-w4-radio-state</code> y
+                <code>data-w4-target</code>.
+            </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-lg w4-stack-wrap">
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs w4-label-neutral">Default</span>
-                        <input type="radio" name="semantic" class="w4-radio w4-radio-md" checked />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs w4-label-primary">Primary</span>
-                        <input type="radio" name="semantic" class="w4-radio w4-radio-md w4-radio-primary" checked />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs w4-label-secondary">Secondary</span>
-                        <input type="radio" name="semantic" class="w4-radio w4-radio-md w4-radio-secondary" checked />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs w4-label-accent">Accent</span>
-                        <input type="radio" name="semantic" class="w4-radio w4-radio-md w4-radio-accent" checked />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs w4-label-info">Info</span>
-                        <input type="radio" name="semantic" class="w4-radio w4-radio-md w4-radio-info" checked />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs w4-label-success">Success</span>
-                        <input type="radio" name="semantic" class="w4-radio w4-radio-md w4-radio-success" checked />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs w4-label-warning">Warning</span>
-                        <input type="radio" name="semantic" class="w4-radio w4-radio-md w4-radio-warning" checked />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs w4-label-error">Error</span>
-                        <input type="radio" name="semantic" class="w4-radio w4-radio-md w4-radio-error" checked />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Tamaños Explícitos (XS - XL)</h2>
-            <hr class="w4-divider w4-divider-secondary">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-lg w4-stack-wrap">
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs">XS (1rem)</span>
-                        <input type="radio" name="sizes" class="w4-radio w4-radio-primary w4-radio-xs" checked />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs">SM (1.25rem)</span>
-                        <input type="radio" name="sizes" class="w4-radio w4-radio-primary w4-radio-sm" checked />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs">MD (1.5rem)</span>
-                        <input type="radio" name="sizes" class="w4-radio w4-radio-primary w4-radio-md" checked />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs">LG (2rem)</span>
-                        <input type="radio" name="sizes" class="w4-radio w4-radio-primary w4-radio-lg" checked />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs">XL (2.5rem)</span>
-                        <input type="radio" name="sizes" class="w4-radio w4-radio-primary w4-radio-xl" checked />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Estados Pseudo-Classes</h2>
-            <hr class="w4-divider w4-divider-accent">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-lg w4-stack-wrap">
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs">Unchecked</span>
-                        <input type="radio" name="states" class="w4-radio w4-radio-primary w4-radio-md" />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs">Checked</span>
-                        <input type="radio" name="states" class="w4-radio w4-radio-primary w4-radio-md" checked />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados CSS / Data-States /
-                Validation</h2>
-            <hr class="w4-divider w4-divider-error">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-lg w4-stack-wrap">
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs w4-text-center">Disabled<br>(.w4-radio-disabled)</span>
-                        <input type="radio" class="w4-radio w4-radio-primary w4-radio-md w4-radio-disabled" checked />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs w4-text-center">Readonly<br>(.w4-radio-readonly)</span>
-                        <input type="radio" class="w4-radio w4-radio-primary w4-radio-md w4-radio-readonly" checked />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs w4-text-center">Invalid<br>(Border Error)</span>
-                        <input type="radio" class="w4-radio w4-radio-primary w4-radio-md w4-radio-invalid" />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs w4-text-center">Valid<br>(Border Success)</span>
-                        <input type="radio" class="w4-radio w4-radio-primary w4-radio-md w4-radio-valid" />
-                    </div>
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-center">
-                        <span class="w4-label w4-label-xs w4-text-center">Loading<br>(.w4-radio-loading)</span>
-                        <input type="radio" class="w4-radio w4-radio-primary w4-radio-md w4-radio-loading" checked />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Integración con Labels</h2>
-            <hr class="w4-divider w4-divider-info">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-stack w4-stack-horizontal w4-stack-lg w4-stack-wrap">
-
-                    <!-- Radio Group Example -->
-                    <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-md w4-stack-vertical">
-                        <span class="w4-heading w4-heading-h4 w4-heading-start">Selecciona un plan:</span>
-
-                        <div class="w4-stack w4-stack-horizontal w4-stack-sm w4-stack-center">
-                            <input type="radio" id="rad_basic" name="plan"
-                                class="w4-radio w4-radio-primary w4-radio-md" />
-                            <label for="rad_basic" class="w4-label w4-label-md">Plan Básico</label>
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    Playground: aplica estados JS al radio de prueba.
+                </p>
+                <div class="w4-stack w4-stack-md">
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="radioJsPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="radioJsCode">Codigo HTML</button>
                         </div>
-
-                        <div class="w4-stack w4-stack-horizontal w4-stack-sm w4-stack-center">
-                            <input type="radio" id="rad_pro" name="plan" class="w4-radio w4-radio-primary w4-radio-md"
-                                checked />
-                            <label for="rad_pro" class="w4-label w4-label-primary w4-label-md w4-text-active">Plan
-                                Profesional</label>
-                        </div>
-
-                        <div class="w4-stack w4-stack-horizontal w4-stack-sm w4-stack-center">
-                            <input type="radio" id="rad_ent" name="plan"
-                                class="w4-radio w4-radio-primary w4-radio-md w4-radio-disabled" disabled />
-                            <label for="rad_ent" class="w4-label w4-label-md w4-label-disabled">Plan Enterprise
-                                (Próximamente)</label>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="radioJsPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <label class="w4-label"><input id="labRadioTarget" type="radio"
+                                            class="w4-radio w4-radio-primary w4-radio-md">Radio de prueba</label>
+                                    <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                        <button type="button" class="w4-button w4-button-sm w4-button-neutral"
+                                            data-w4-radio-state="enabled"
+                                            data-w4-target="labRadioTarget">Enabled</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-primary"
+                                            data-w4-radio-state="selected"
+                                            data-w4-target="labRadioTarget">Selected</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-warning"
+                                            data-w4-radio-state="readonly"
+                                            data-w4-target="labRadioTarget">Readonly</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-error"
+                                            data-w4-radio-state="disabled"
+                                            data-w4-target="labRadioTarget">Disabled</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-info"
+                                            data-w4-radio-state="loading"
+                                            data-w4-target="labRadioTarget">Loading</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-warning"
+                                            data-w4-radio-state="invalid"
+                                            data-w4-target="labRadioTarget">Invalid</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-accent"
+                                            data-w4-radio-state="valid" data-w4-target="labRadioTarget">Valid</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="radioJsCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre
+                                    class="m-0"><code class="w4-text w4-text-xs">&lt;input id=&quot;labRadioTarget&quot; type=&quot;radio&quot; class=&quot;w4-radio w4-radio-primary w4-radio-md&quot;&gt;
+&lt;button data-w4-radio-state=&quot;enabled&quot; data-w4-target=&quot;labRadioTarget&quot;&gt;Enabled&lt;/button&gt;
+&lt;button data-w4-radio-state=&quot;selected&quot; data-w4-target=&quot;labRadioTarget&quot;&gt;Selected&lt;/button&gt;
+&lt;button data-w4-radio-state=&quot;readonly&quot; data-w4-target=&quot;labRadioTarget&quot;&gt;Readonly&lt;/button&gt;
+&lt;button data-w4-radio-state=&quot;disabled&quot; data-w4-target=&quot;labRadioTarget&quot;&gt;Disabled&lt;/button&gt;
+&lt;button data-w4-radio-state=&quot;loading&quot; data-w4-target=&quot;labRadioTarget&quot;&gt;Loading&lt;/button&gt;
+&lt;button data-w4-radio-state=&quot;invalid&quot; data-w4-target=&quot;labRadioTarget&quot;&gt;Invalid&lt;/button&gt;
+&lt;button data-w4-radio-state=&quot;valid&quot; data-w4-target=&quot;labRadioTarget&quot;&gt;Valid&lt;/button&gt;</code></pre>
+                            </div>
                         </div>
                     </div>
-
+                    <p class="w4-text w4-text-sm w4-text-neutral">
+                        El estado se aplica al radio de prueba y sincroniza sus atributos visuales.
+                    </p>
                 </div>
             </div>
         </section>
+
     </main>
 
     @NativeUIScripts
@@ -282,7 +416,8 @@
             var storageKey = "w4-native-ui-theme";
             var switcher = document.getElementById("themeSwitcher");
 
-            var currentTheme = localStorage.getItem(storageKey) || document.documentElement.getAttribute("data-theme") || "native-ui.light";
+            var currentTheme = localStorage.getItem(storageKey) || document.documentElement.getAttribute(
+                "data-theme") || "native-ui.light";
             document.documentElement.setAttribute("data-theme", currentTheme);
 
             if (switcher) {
