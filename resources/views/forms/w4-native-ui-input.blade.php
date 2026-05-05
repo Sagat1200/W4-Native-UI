@@ -12,23 +12,38 @@
 
 <body>
 
-    <div class="w4-navbar w4-navbar-primary">
+    <div class="w4-navbar  w4-navbar-fixed">
         <div class="w4-navbar-start">
-            <button class="w4-button w4-button-ghost w4-button-square">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     class="w4-icon w4-icon-md stroke-current">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
                 </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
             </button>
-            <button class="w4-button w4-button-ghost">Native UI</button>
+
         </div>
         <div class="w4-navbar-center">
-            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Soporte</a></li>
+            </ul>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -67,24 +82,20 @@
     </div>
 
     <main class="w4-container w4-container-xl">
-
         <div class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Input</h1>
-            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente w4-input
-            </p>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Input</h1>
         </div>
 
-        <div class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Input</h2>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Input:</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Input</strong> es el elemento principal para la entrada de texto libre por parte
                 del usuario. Permite capturar datos como nombres, correos electrónicos, contraseñas o números, y es
                 fundamental para cualquier formulario interactivo.
             </p>
-
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-2">Casos de Uso Comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical mt-2">
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Captura de datos personales:</strong> Para solicitar información como
                     nombre, apellido o
                     dirección.</li>
@@ -98,190 +109,261 @@
                     códigos postales o
                     identificadores cortos.</li>
             </ul>
-        </div>
+        </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color Semánticas</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Variantes Semanticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Variantes de color para campos de entrada según contexto visual.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="inputSemanticPreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="inputSemanticCode">Codigo HTML</button>
+                    </div>
+                </div>
+                <div id="inputSemanticPreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-grid w4-grid-4 w4-grid-sm">
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><input class="w4-input w4-input-neutral"
+                                placeholder="Neutral"></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><input class="w4-input w4-input-primary"
+                                placeholder="Primary"></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><input class="w4-input w4-input-secondary"
+                                placeholder="Secondary"></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><input class="w4-input w4-input-accent"
+                                placeholder="Accent"></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><input class="w4-input w4-input-info"
+                                placeholder="Info"></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><input class="w4-input w4-input-success"
+                                placeholder="Success"></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><input class="w4-input w4-input-warning"
+                                placeholder="Warning"></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><input class="w4-input w4-input-error"
+                                placeholder="Error"></div>
+                    </div>
+                </div>
+                <div id="inputSemanticCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">&lt;input class=&quot;w4-input w4-input-neutral&quot; placeholder=&quot;Neutral&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-primary&quot; placeholder=&quot;Primary&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-secondary&quot; placeholder=&quot;Secondary&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-accent&quot; placeholder=&quot;Accent&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-info&quot; placeholder=&quot;Info&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-success&quot; placeholder=&quot;Success&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-warning&quot; placeholder=&quot;Warning&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-error&quot; placeholder=&quot;Error&quot;&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Tamaños</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Escalas morfológicas del componente input para distintas densidades.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="inputSizePreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="inputSizeCode">Codigo HTML</button>
+                    </div>
+                </div>
+                <div id="inputSizePreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-stack w4-stack-sm">
+                        <input class="w4-input w4-input-xs" placeholder="Input XS">
+                        <input class="w4-input w4-input-sm" placeholder="Input SM">
+                        <input class="w4-input w4-input-md" placeholder="Input MD">
+                        <input class="w4-input w4-input-lg" placeholder="Input LG">
+                        <input class="w4-input w4-input-xl" placeholder="Input XL">
+                    </div>
+                </div>
+                <div id="inputSizeCode" data-w4-tab-panel class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm"
+                    hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">&lt;input class=&quot;w4-input w4-input-xs&quot; placeholder=&quot;Input XS&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-sm&quot; placeholder=&quot;Input SM&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-md&quot; placeholder=&quot;Input MD&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-lg&quot; placeholder=&quot;Input LG&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-xl&quot; placeholder=&quot;Input XL&quot;&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Casos de Uso Aplicados</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Ejemplos de captura de datos, credenciales y búsqueda.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-2 w4-grid-sm">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <label class="w4-label" for="inputNameDemo">Nombre completo</label>
+                    <input id="inputNameDemo" class="w4-input" placeholder="Juan Pérez">
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <label class="w4-label" for="inputEmailDemo">Correo electrónico</label>
+                    <input id="inputEmailDemo" class="w4-input w4-input-primary" placeholder="correo@dominio.com">
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <label class="w4-label" for="inputPasswordDemo">Contraseña</label>
+                    <input id="inputPasswordDemo" class="w4-input w4-input-secondary" type="password"
+                        placeholder="••••••••">
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <label class="w4-label" for="inputSearchDemo">Búsqueda</label>
+                    <input id="inputSearchDemo" class="w4-input w4-input-accent" placeholder="Buscar por nombre o ID">
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Estados soportados por clase y por atributo <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-2 w4-grid-sm">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-start">Por Clase</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="inputStateClassPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="inputStateClassCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="inputStateClassPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <input class="w4-input w4-input-disabled" value="Disabled">
+                                    <input class="w4-input w4-input-readonly" value="Readonly">
+                                    <input class="w4-input w4-input-invalid" value="Invalid">
+                                    <input class="w4-input w4-input-valid" value="Valid">
+                                    <input class="w4-input w4-input-loading" value="Loading">
+                                </div>
+                            </div>
+                            <div id="inputStateClassCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">&lt;input class=&quot;w4-input w4-input-disabled&quot; value=&quot;Disabled&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-readonly&quot; value=&quot;Readonly&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-invalid&quot; value=&quot;Invalid&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-valid&quot; value=&quot;Valid&quot;&gt;
+&lt;input class=&quot;w4-input w4-input-loading&quot; value=&quot;Loading&quot;&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-start">Por Atributo</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="inputStateAttrPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="inputStateAttrCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="inputStateAttrPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <input class="w4-input" data-w4-state="disabled" value="disabled">
+                                    <input class="w4-input" data-w4-state="readonly" value="readonly">
+                                    <input class="w4-input" data-w4-state="invalid" value="invalid">
+                                    <input class="w4-input" data-w4-state="valid" value="valid">
+                                    <input class="w4-input" data-w4-state="loading" value="loading">
+                                </div>
+                            </div>
+                            <div id="inputStateAttrCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">&lt;input class=&quot;w4-input&quot; data-w4-state=&quot;disabled&quot; value=&quot;disabled&quot;&gt;
+&lt;input class=&quot;w4-input&quot; data-w4-state=&quot;readonly&quot; value=&quot;readonly&quot;&gt;
+&lt;input class=&quot;w4-input&quot; data-w4-state=&quot;invalid&quot; value=&quot;invalid&quot;&gt;
+&lt;input class=&quot;w4-input&quot; data-w4-state=&quot;valid&quot; value=&quot;valid&quot;&gt;
+&lt;input class=&quot;w4-input&quot; data-w4-state=&quot;loading&quot; value=&quot;loading&quot;&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">
+                Estados Nativos Javascript Soportados al Componente Input
+            </h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Controles para probar transiciones usando <code>data-w4-input-state</code> y
+                <code>data-w4-target</code>.
+            </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs w4-label-neutral">Default (Base Content)</span>
-                        <input type="text" class="w4-input w4-input-md" placeholder="Escribe aquí..." />
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    Playground: aplica estados JS al input de prueba.
+                </p>
+                <div class="w4-stack w4-stack-md">
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="inputJsPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="inputJsCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="inputJsPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <input id="labInputTarget" class="w4-input w4-input-primary"
+                                        placeholder="Input de prueba">
+                                    <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                        <button type="button" class="w4-button w4-button-sm w4-button-neutral"
+                                            data-w4-input-state="enabled"
+                                            data-w4-target="labInputTarget">Enabled</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-warning"
+                                            data-w4-input-state="readonly"
+                                            data-w4-target="labInputTarget">Readonly</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-error"
+                                            data-w4-input-state="disabled"
+                                            data-w4-target="labInputTarget">Disabled</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-info"
+                                            data-w4-input-state="loading"
+                                            data-w4-target="labInputTarget">Loading</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-warning"
+                                            data-w4-input-state="invalid"
+                                            data-w4-target="labInputTarget">Invalid</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-accent"
+                                            data-w4-input-state="valid" data-w4-target="labInputTarget">Valid</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="inputJsCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre
+                                    class="m-0"><code class="w4-text w4-text-xs">
+&lt;input id=&quot;labInputTarget&quot; class=&quot;w4-input w4-input-primary&quot; placeholder=&quot;Input de prueba&quot;&gt;
+&lt;button data-w4-input-state=&quot;enabled&quot; data-w4-target=&quot;labInputTarget&quot;&gt;Enabled&lt;/button&gt;
+&lt;button data-w4-input-state=&quot;readonly&quot; data-w4-target=&quot;labInputTarget&quot;&gt;Readonly&lt;/button&gt;
+&lt;button data-w4-input-state=&quot;disabled&quot; data-w4-target=&quot;labInputTarget&quot;&gt;Disabled&lt;/button&gt;
+&lt;button data-w4-input-state=&quot;loading&quot; data-w4-target=&quot;labInputTarget&quot;&gt;Loading&lt;/button&gt;
+&lt;button data-w4-input-state=&quot;invalid&quot; data-w4-target=&quot;labInputTarget&quot;&gt;Invalid&lt;/button&gt;
+&lt;button data-w4-input-state=&quot;valid&quot; data-w4-target=&quot;labInputTarget&quot;&gt;Valid&lt;/button&gt;</code></pre>
+                            </div>
+                        </div>
                     </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs w4-label-primary">Primary</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-primary"
-                            placeholder="Enfoque principal..." />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs w4-label-secondary">Secondary</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-secondary"
-                            placeholder="Secundario..." />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs w4-label-accent">Accent</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-accent"
-                            placeholder="Dato resaltado..." />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs w4-label-info">Info</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-info" placeholder="Info input..." />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs w4-label-success">Success</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-success" placeholder="Dato válido..." />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs w4-label-warning">Warning</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-warning" placeholder="Precaución..." />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs w4-label-error">Error</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-error"
-                            placeholder="Error al escribir..." />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Variantes Especiales</h2>
-            <hr class="w4-divider w4-divider-secondary">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs">Ghost (Fondo transparente)</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-ghost"
-                            placeholder="Escribe algo aquí..." />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Tamaños Explícitos (XS - XL)</h2>
-            <hr class="w4-divider w4-divider-accent">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs">XS (0.75rem / Height XS)</span>
-                        <input type="text" class="w4-input w4-input-xs w4-input-primary"
-                            placeholder="Tamaño Extra Small" />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs">SM (0.875rem / Height SM)</span>
-                        <input type="text" class="w4-input w4-input-sm w4-input-primary" placeholder="Tamaño Small" />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs">MD (0.875rem / Height MD) Default</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-primary" placeholder="Tamaño Medium" />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs">LG (1.125rem / Height LG)</span>
-                        <input type="text" class="w4-input w4-input-lg w4-input-primary" placeholder="Tamaño Large" />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs">XL (1.25rem / Height XL)</span>
-                        <input type="text" class="w4-input w4-input-xl w4-input-primary"
-                            placeholder="Tamaño Extra Large" />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados CSS / Atributos HTML</h2>
-            <hr class="w4-divider w4-divider-error">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs">Normal</span>
-                        <input type="text" class="w4-input w4-input-md" placeholder="Input normal..." />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs">Focus (.w4-input-focus)</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-focus" placeholder="Foco simulado..." />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs">Disabled (Atributo o .w4-input-disabled)</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-disabled"
-                            placeholder="No puedes escribir" disabled />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs">Readonly (Atributo o .w4-input-readonly)</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-readonly" value="Solo lectura..."
-                            readonly />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs">Invalid (.w4-input-invalid)</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-invalid" value="usuario@invalido" />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs">Valid (.w4-input-valid)</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-valid" value="usuario@valido.com" />
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical">
-                        <span class="w4-label w4-label-xs">Loading (.w4-input-loading / Opacity Pulse)</span>
-                        <input type="text" class="w4-input w4-input-md w4-input-loading"
-                            placeholder="Cargando datos..." />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Integración con Label y Helper Text
-            </h2>
-            <hr class="w4-divider w4-divider-info">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-
-                    <!-- Caso de Uso 1: Éxito -->
-                    <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-xs w4-stack-vertical">
-                        <label for="username" class="w4-label w4-label-md w4-label-required">Nombre de Usuario</label>
-                        <input type="text" id="username" class="w4-input w4-input-md w4-input-valid w4-input-bordered"
-                            value="w4_admin_pro" />
-                        <span
-                            class="w4-helper-text w4-helper-text-sm w4-helper-text-success w4-stack w4-stack-horizontal w4-stack-xs">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                class="w4-icon w4-icon-sm">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            Nombre de usuario disponible.
-                        </span>
-                    </div>
-
-                    <!-- Caso de Uso 2: Error -->
-                    <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-xs w4-stack-vertical">
-                        <label for="email" class="w4-label w4-label-md w4-label-error w4-label-required">Correo
-                            Electrónico</label>
-                        <input type="email" id="email" class="w4-input w4-input-md w4-input-invalid w4-input-bordered"
-                            value="correo.invalido" />
-                        <span
-                            class="w4-field-error w4-field-error-sm w4-field-error-error w4-stack w4-stack-horizontal w4-stack-xs">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                class="w4-icon w4-icon-sm">
-                                <path fill-rule="evenodd"
-                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            El dominio no pertenece a la empresa.
-                        </span>
-                    </div>
-
-                    <!-- Caso de Uso 3: Normal con helper -->
-                    <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-xs w4-stack-vertical">
-                        <label for="api_key" class="w4-label w4-label-md">Clave de API</label>
-                        <input type="text" id="api_key" class="w4-input w4-input-md w4-input-bordered"
-                            placeholder="sk_live_123456789..." />
-                        <span class="w4-helper-text w4-helper-text-sm w4-helper-text-muted">
-                            Asegúrate de no compartir tu clave de API en repositorios públicos.
-                        </span>
-                    </div>
-
+                    <p class="w4-text w4-text-sm w4-text-neutral">
+                        El estado se aplica al input de prueba y sincroniza sus hooks visuales.
+                    </p>
                 </div>
             </div>
         </section>

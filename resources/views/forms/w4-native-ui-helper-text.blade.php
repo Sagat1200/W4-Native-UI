@@ -210,17 +210,17 @@
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-grid w4-grid-3 w4-grid-sm">
                 <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
-                    <label class="w4-label" for="helperDateField">Fecha de nacimiento</label>
+                    <label class="w4-label w4-label-primary" for="helperDateField">Fecha de nacimiento</label>
                     <input id="helperDateField" class="w4-input w4-input-primary" placeholder="DD/MM/AAAA">
                     <p class="w4-helper-text w4-helper-text-info">Usa formato DD/MM/AAAA.</p>
                 </div>
                 <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
-                    <label class="w4-label" for="helperEmailField">Correo electrónico</label>
+                    <label class="w4-label w4-label-primary" for="helperEmailField">Correo electrónico</label>
                     <input id="helperEmailField" class="w4-input w4-input-primary" placeholder="correo@dominio.com">
-                    <p class="w4-helper-text w4-helper-text-neutral">Tu correo no será compartido.</p>
+                    <p class="w4-helper-text w4-helper-text-success">Tu correo no será compartido.</p>
                 </div>
                 <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
-                    <label class="w4-label" for="helperFileField">Nombre del archivo</label>
+                    <label class="w4-label w4-label-primary" for="helperFileField">Nombre del archivo</label>
                     <input id="helperFileField" class="w4-input w4-input-primary" placeholder="reporte.pdf">
                     <p class="w4-helper-text w4-helper-text-warning">Máximo 2MB y 64 caracteres.</p>
                 </div>
@@ -258,7 +258,8 @@
                             <div id="helperStateClassCode" data-w4-tab-panel
                                 class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
                                 hidden aria-hidden="true">
-                                <pre class="m-0"><code class="w4-text w4-text-xs">&lt;p class=&quot;w4-helper-text w4-helper-text-info w4-helper-text-active&quot;&gt;...&lt;/p&gt;
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class=&quot;w4-helper-text w4-helper-text-info w4-helper-text-active&quot;&gt;...&lt;/p&gt;
 &lt;p class=&quot;w4-helper-text w4-helper-text-warning w4-helper-text-disabled&quot;&gt;...&lt;/p&gt;
 &lt;p class=&quot;w4-helper-text w4-helper-text-neutral w4-helper-text-hidden&quot;&gt;...&lt;/p&gt;</code></pre>
                             </div>
@@ -290,7 +291,8 @@
                                 class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
                                 hidden aria-hidden="true">
                                 <pre
-                                    class="m-0"><code class="w4-text w4-text-xs">&lt;p class=&quot;w4-helper-text w4-helper-text-info&quot; data-w4-state=&quot;active&quot;&gt;...&lt;/p&gt;
+                                    class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class=&quot;w4-helper-text w4-helper-text-info&quot; data-w4-state=&quot;active&quot;&gt;...&lt;/p&gt;
 &lt;p class=&quot;w4-helper-text w4-helper-text-warning&quot; data-w4-state=&quot;disabled&quot;&gt;...&lt;/p&gt;
 &lt;p class=&quot;w4-helper-text w4-helper-text-neutral&quot; data-w4-state=&quot;hidden&quot;&gt;...&lt;/p&gt;</code></pre>
                             </div>
