@@ -2238,8 +2238,80 @@ class W4Textarea {
             el.setAttribute('data-w4-textarea-bound', 'true');
         });
 
+        this.bindStateTriggers(root);
         // Register state handlers for the Textarea component via W4Core
         this.registerStateHandlers();
+    }
+
+    static resolveElement(targetOrId) {
+        if (!targetOrId) return null;
+        if (targetOrId instanceof HTMLTextAreaElement) return targetOrId;
+        if (typeof targetOrId === 'string') {
+            return document.getElementById(targetOrId) || document.querySelector(targetOrId);
+        }
+        return null;
+    }
+
+    static resetState(element) {
+        if (!element) return;
+
+        element.classList.remove(
+            'w4-textarea-disabled',
+            'w4-textarea-readonly',
+            'w4-textarea-invalid',
+            'w4-textarea-valid',
+            'w4-textarea-loading'
+        );
+
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-readonly');
+        element.removeAttribute('aria-invalid');
+        element.removeAttribute('aria-busy');
+        element.removeAttribute('readonly');
+        element.readOnly = false;
+        element.disabled = false;
+        element.style.pointerEvents = '';
+    }
+
+    static setState(targetOrId, state = 'enabled') {
+        const element = this.resolveElement(targetOrId);
+        if (!element) return;
+
+        this.resetState(element);
+
+        const normalized = String(state || 'enabled').toLowerCase();
+        if (normalized === 'enabled') {
+            this.handleEnabled({ element });
+            if (typeof W4Core?.syncElement === 'function') W4Core.syncElement(element, 'textarea:enabled');
+            return;
+        }
+
+        element.classList.add(`w4-textarea-${normalized}`);
+        element.setAttribute('data-w4-state', normalized);
+
+        if (typeof W4Core?.syncElement === 'function') {
+            W4Core.syncElement(element, `textarea:${normalized}`);
+        }
+    }
+
+    static bindStateTriggers(root = document) {
+        if (this.triggersBound) return;
+
+        root.addEventListener('click', (event) => {
+            if (!(event.target instanceof Element)) return;
+
+            const trigger = event.target.closest('[data-w4-textarea-state]');
+            if (!trigger) return;
+
+            event.preventDefault();
+            const state = trigger.getAttribute('data-w4-textarea-state') || 'enabled';
+            const targetId = trigger.getAttribute('data-w4-textarea-target') || trigger.getAttribute('data-w4-target');
+            this.setState(targetId, state);
+        });
+
+        this.triggersBound = true;
     }
 
     /**
@@ -2261,8 +2333,11 @@ class W4Textarea {
     static handleEnabled({ element }) {
         element.disabled = false;
         element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-readonly');
         element.removeAttribute('readonly');
+        element.readOnly = false;
         element.removeAttribute('aria-busy');
+        element.style.pointerEvents = '';
     }
 
     static handleDisabled({ element }) {
@@ -2277,6 +2352,7 @@ class W4Textarea {
     }
 
     static handleReadonly({ element }) {
+        element.setAttribute('aria-readonly', 'true');
         element.setAttribute('readonly', 'true');
     }
 
