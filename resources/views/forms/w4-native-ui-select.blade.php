@@ -11,23 +11,38 @@
 
 <body>
 
-    <div class="w4-navbar w4-navbar-primary">
+    <div class="w4-navbar  w4-navbar-fixed">
         <div class="w4-navbar-start">
-            <button class="w4-button w4-button-ghost w4-button-square">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     class="w4-icon w4-icon-md stroke-current">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
                 </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
             </button>
-            <button class="w4-button w4-button-ghost">Native UI</button>
+
         </div>
         <div class="w4-navbar-center">
-            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Soporte</a></li>
+            </ul>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-info">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -66,24 +81,20 @@
     </div>
 
     <main class="w4-container w4-container-xl">
-
         <div class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Select</h1>
-            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente w4-select
-            </p>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Select</h1>
         </div>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Select</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Select:</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Select</strong> (lista desplegable) permite a los usuarios elegir una opción de
                 una lista de valores predefinidos. Es ideal cuando el espacio es limitado y hay múltiples opciones
                 disponibles, manteniendo la interfaz limpia.
             </p>
-
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-2">Casos de Uso Comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical mt-2">
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Selección de país o región:</strong> Elegir una ubicación de una
                     lista extensa de países.
                 </li>
@@ -99,302 +110,311 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color Semánticas</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Variantes Semanticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Variantes de color para listas desplegables según contexto visual.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="selectSemanticPreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="selectSemanticCode">Codigo HTML</button>
+                    </div>
+                </div>
+                <div id="selectSemanticPreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-grid w4-grid-4 w4-grid-sm">
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><select class="w4-select w4-select-primary">
+                                <option>Primary</option>
+                            </select></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><select
+                                class="w4-select w4-select-secondary">
+                                <option>Secondary</option>
+                            </select></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><select class="w4-select w4-select-accent">
+                                <option>Accent</option>
+                            </select></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><select class="w4-select w4-select-info">
+                                <option>Info</option>
+                            </select></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><select class="w4-select w4-select-success">
+                                <option>Success</option>
+                            </select></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><select class="w4-select w4-select-warning">
+                                <option>Warning</option>
+                            </select></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><select class="w4-select w4-select-error">
+                                <option>Error</option>
+                            </select></div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm"><select class="w4-select w4-select-ghost">
+                                <option>Ghost</option>
+                            </select></div>
+                    </div>
+                </div>
+                <div id="selectSemanticCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">&lt;select class=&quot;w4-select w4-select-primary&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-secondary&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-accent&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-info&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-success&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-warning&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-error&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-ghost&quot;&gt;...&lt;/select&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Tamaños</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Escalas morfológicas del componente select de <code>xs</code> a <code>xl</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="selectSizePreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="selectSizeCode">Codigo HTML</button>
+                    </div>
+                </div>
+                <div id="selectSizePreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-stack w4-stack-sm">
+                        <select class="w4-select w4-select-xs">
+                            <option>Select XS</option>
+                        </select>
+                        <select class="w4-select w4-select-sm">
+                            <option>Select SM</option>
+                        </select>
+                        <select class="w4-select w4-select-md">
+                            <option>Select MD</option>
+                        </select>
+                        <select class="w4-select w4-select-lg">
+                            <option>Select LG</option>
+                        </select>
+                        <select class="w4-select w4-select-xl">
+                            <option>Select XL</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="selectSizeCode" data-w4-tab-panel class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm"
+                    hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">&lt;select class=&quot;w4-select w4-select-xs&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-sm&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-md&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-lg&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-xl&quot;&gt;...&lt;/select&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Casos de Uso Aplicados</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Ejemplos reales para región, ordenamiento y estado de tareas.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-3 w4-grid-sm">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <label class="w4-label" for="selectCountryDemo">País o región</label>
+                    <select id="selectCountryDemo" class="w4-select">
+                        <option>México</option>
+                        <option>Colombia</option>
+                        <option>Argentina</option>
+                    </select>
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <label class="w4-label" for="selectSortDemo">Ordenar resultados</label>
+                    <select id="selectSortDemo" class="w4-select w4-select-primary">
+                        <option>Más recientes</option>
+                        <option>Más antiguos</option>
+                        <option>Precio menor a mayor</option>
+                    </select>
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <label class="w4-label" for="selectTaskDemo">Estado de tarea</label>
+                    <select id="selectTaskDemo" class="w4-select w4-select-secondary">
+                        <option>Pendiente</option>
+                        <option>En progreso</option>
+                        <option>Completada</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Estados soportados por clase y por atributo <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-2 w4-grid-sm">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-start">Por Clase</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="selectStateClassPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="selectStateClassCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="selectStateClassPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <select class="w4-select w4-select-disabled">
+                                        <option>Disabled</option>
+                                    </select>
+                                    <select class="w4-select w4-select-readonly">
+                                        <option>Readonly</option>
+                                    </select>
+                                    <select class="w4-select w4-select-invalid">
+                                        <option>Invalid</option>
+                                    </select>
+                                    <select class="w4-select w4-select-valid">
+                                        <option>Valid</option>
+                                    </select>
+                                    <select class="w4-select w4-select-loading">
+                                        <option>Loading</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="selectStateClassCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">&lt;select class=&quot;w4-select w4-select-disabled&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-readonly&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-invalid&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-valid&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select w4-select-loading&quot;&gt;...&lt;/select&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-start">Por Atributo</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="selectStateAttrPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="selectStateAttrCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="selectStateAttrPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <select class="w4-select" data-w4-state="disabled">
+                                        <option>disabled</option>
+                                    </select>
+                                    <select class="w4-select" data-w4-state="readonly">
+                                        <option>readonly</option>
+                                    </select>
+                                    <select class="w4-select" data-w4-state="invalid">
+                                        <option>invalid</option>
+                                    </select>
+                                    <select class="w4-select" data-w4-state="valid">
+                                        <option>valid</option>
+                                    </select>
+                                    <select class="w4-select" data-w4-state="loading">
+                                        <option>loading</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="selectStateAttrCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">&lt;select class=&quot;w4-select&quot; data-w4-state=&quot;disabled&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select&quot; data-w4-state=&quot;readonly&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select&quot; data-w4-state=&quot;invalid&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select&quot; data-w4-state=&quot;valid&quot;&gt;...&lt;/select&gt;
+&lt;select class=&quot;w4-select&quot; data-w4-state=&quot;loading&quot;&gt;...&lt;/select&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">
+                Estados Nativos Javascript Soportados al Componente Select
+            </h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Controles para probar transiciones usando <code>data-w4-select-state</code> y
+                <code>data-w4-target</code>.
+            </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid w4-grid-md w4-grid-4">
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <label class="w4-label w4-label-neutral">Default</label>
-                        <select class="w4-select w4-select-md">
-                            <option disabled selected>Selecciona una opción</option>
-                            <option>Homer Simpson</option>
-                            <option>Marge Simpson</option>
-                        </select>
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    Playground: aplica estados JS al select de prueba.
+                </p>
+                <div class="w4-stack w4-stack-md">
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="selectJsPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="selectJsCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="selectJsPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <select id="labSelectTarget" class="w4-select w4-select-primary">
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="one">Opción 1</option>
+                                        <option value="two">Opción 2</option>
+                                        <option value="three">Opción 3</option>
+                                    </select>
+                                    <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                        <button type="button" class="w4-button w4-button-sm w4-button-neutral"
+                                            data-w4-select-state="enabled"
+                                            data-w4-target="labSelectTarget">Enabled</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-warning"
+                                            data-w4-select-state="readonly"
+                                            data-w4-target="labSelectTarget">Readonly</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-error"
+                                            data-w4-select-state="disabled"
+                                            data-w4-target="labSelectTarget">Disabled</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-info"
+                                            data-w4-select-state="loading"
+                                            data-w4-target="labSelectTarget">Loading</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-warning"
+                                            data-w4-select-state="invalid"
+                                            data-w4-target="labSelectTarget">Invalid</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-accent"
+                                            data-w4-select-state="valid" data-w4-target="labSelectTarget">Valid</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="selectJsCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre
+                                    class="m-0"><code class="w4-text w4-text-xs">&lt;select id=&quot;labSelectTarget&quot; class=&quot;w4-select w4-select-primary&quot;&gt;...&lt;/select&gt;
+&lt;button data-w4-select-state=&quot;enabled&quot; data-w4-target=&quot;labSelectTarget&quot;&gt;Enabled&lt;/button&gt;
+&lt;button data-w4-select-state=&quot;readonly&quot; data-w4-target=&quot;labSelectTarget&quot;&gt;Readonly&lt;/button&gt;
+&lt;button data-w4-select-state=&quot;disabled&quot; data-w4-target=&quot;labSelectTarget&quot;&gt;Disabled&lt;/button&gt;
+&lt;button data-w4-select-state=&quot;loading&quot; data-w4-target=&quot;labSelectTarget&quot;&gt;Loading&lt;/button&gt;
+&lt;button data-w4-select-state=&quot;invalid&quot; data-w4-target=&quot;labSelectTarget&quot;&gt;Invalid&lt;/button&gt;
+&lt;button data-w4-select-state=&quot;valid&quot; data-w4-target=&quot;labSelectTarget&quot;&gt;Valid&lt;/button&gt;</code></pre>
+                            </div>
+                        </div>
                     </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <label class="w4-label w4-label-primary">Primary</label>
-                        <select class="w4-select w4-select-md w4-select-primary">
-                            <option disabled selected>Opción Principal</option>
-                            <option>Iron Man</option>
-                            <option>Spider-Man</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <label class="w4-label w4-label-secondary">Secondary</label>
-                        <select class="w4-select w4-select-md w4-select-secondary">
-                            <option disabled selected>Opción Secundaria</option>
-                            <option>Batman</option>
-                            <option>Superman</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <label class="w4-label w4-label-accent">Accent</label>
-                        <select class="w4-select w4-select-md w4-select-accent">
-                            <option disabled selected>Dato Resaltado</option>
-                            <option>Flash</option>
-                            <option>Aquaman</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <label class="w4-label w4-label-info">Info</label>
-                        <select class="w4-select w4-select-md w4-select-info">
-                            <option disabled selected>Información</option>
-                            <option>Documento PDF</option>
-                            <option>Hoja de Cálculo</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <label class="w4-label w4-label-success">Success</label>
-                        <select class="w4-select w4-select-md w4-select-success">
-                            <option disabled selected>Acción Exitosa</option>
-                            <option>Guardar y Continuar</option>
-                            <option>Solo Guardar</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <label class="w4-label w4-label-warning">Warning</label>
-                        <select class="w4-select w4-select-md w4-select-warning">
-                            <option disabled selected>Precaución</option>
-                            <option>Sobrescribir</option>
-                            <option>Ignorar</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <label class="w4-label w4-label-error">Error</label>
-                        <select class="w4-select w4-select-md w4-select-error">
-                            <option disabled selected>Selección de Error</option>
-                            <option>Forzar Borrado</option>
-                            <option>Eliminar Todo</option>
-                        </select>
-                    </div>
-
+                    <p class="w4-text w4-text-sm w4-text-neutral">
+                        El estado se aplica al select de prueba y sincroniza sus hooks visuales.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Variantes Especiales</h2>
-            <hr class="w4-divider w4-divider-secondary">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid w4-grid-md">
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <span class="w4-label w4-label-xs w4-text-muted">Ghost (Fondo transparente)</span>
-                        <select class="w4-select w4-select-md w4-select-ghost">
-                            <option disabled selected>Select Ghost...</option>
-                            <option>Opción 1</option>
-                            <option>Opción 2</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Tamaños Explícitos (XS - XL)</h2>
-            <hr class="w4-divider w4-divider-accent">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid w4-grid-md w4-grid-5">
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <span class="w4-label w4-label-xs w4-text-muted">XS (0.75rem)</span>
-                        <select class="w4-select w4-select-primary w4-select-xs">
-                            <option disabled selected>Tamaño XS</option>
-                            <option>Pequeño 1</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <span class="w4-label w4-label-xs w4-text-muted">SM (0.875rem)</span>
-                        <select class="w4-select w4-select-primary w4-select-sm">
-                            <option disabled selected>Tamaño SM</option>
-                            <option>Pequeño 2</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <span class="w4-label w4-label-xs w4-text-muted">MD (0.875rem)</span>
-                        <select class="w4-select w4-select-primary w4-select-md">
-                            <option disabled selected>Tamaño MD (Default)</option>
-                            <option>Normal</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <span class="w4-label w4-label-xs w4-text-muted">LG (1.125rem)</span>
-                        <select class="w4-select w4-select-primary w4-select-lg">
-                            <option disabled selected>Tamaño LG</option>
-                            <option>Grande</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <span class="w4-label w4-label-xs w4-text-muted">XL (1.25rem)</span>
-                        <select class="w4-select w4-select-primary w4-select-xl">
-                            <option disabled selected>Tamaño XL</option>
-                            <option>Muy Grande</option>
-                        </select>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados CSS / Atributos HTML</h2>
-            <hr class="w4-divider w4-divider-error">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid w4-grid-md" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <span class="w4-label w4-label-xs w4-text-muted">Normal</span>
-                        <select class="w4-select w4-select-md">
-                            <option disabled selected>Select normal...</option>
-                            <option>A</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <span class="w4-label w4-label-xs w4-text-muted">Focus (.w4-select-focus)</span>
-                        <select class="w4-select w4-select-md w4-select-focus">
-                            <option disabled selected>Foco simulado...</option>
-                            <option>B</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <span class="w4-label w4-label-xs w4-text-muted">Disabled</span>
-                        <select class="w4-select w4-select-md w4-select-disabled" disabled>
-                            <option disabled selected>No puedes elegir</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <span class="w4-label w4-label-xs w4-text-muted">Readonly</span>
-                        <select class="w4-select w4-select-md w4-select-readonly" readonly>
-                            <option disabled selected>Solo lectura...</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <span class="w4-label w4-label-xs w4-text-muted">Invalid</span>
-                        <select class="w4-select w4-select-md w4-select-invalid">
-                            <option disabled selected>Selección inválida</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <span class="w4-label w4-label-xs w4-text-muted">Valid</span>
-                        <select class="w4-select w4-select-md w4-select-valid">
-                            <option disabled selected>Selección válida</option>
-                        </select>
-                    </div>
-
-                    <div
-                        class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical w4-stack-start">
-                        <span class="w4-label w4-label-xs w4-text-muted">Loading</span>
-                        <select class="w4-select w4-select-md w4-select-loading">
-                            <option disabled selected>Cargando opciones...</option>
-                        </select>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Integración con Label y Helper Text
-            </h2>
-            <hr class="w4-divider w4-divider-info">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid w4-grid-md" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-
-                    <!-- Caso de Uso 1: Éxito -->
-                    <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-xs w4-stack-vertical">
-                        <label for="country" class="w4-label w4-label-md w4-label-required">País de Residencia</label>
-                        <select id="country" class="w4-select w4-select-md w4-select-valid">
-                            <option disabled>Selecciona tu país</option>
-                            <option selected>México</option>
-                            <option>Colombia</option>
-                            <option>España</option>
-                            <option>Argentina</option>
-                        </select>
-                        <span class="w4-helper-text w4-helper-text-sm w4-helper-text-success">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            País verificado.
-                        </span>
-                    </div>
-
-                    <!-- Caso de Uso 2: Error -->
-                    <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-xs w4-stack-vertical">
-                        <label for="role" class="w4-label w4-label-md w4-label-error w4-label-required">Rol de
-                            Usuario</label>
-                        <select id="role" class="w4-select w4-select-md w4-select-invalid">
-                            <option disabled selected>Selecciona un rol</option>
-                            <option>Administrador</option>
-                            <option>Editor</option>
-                            <option>Lector</option>
-                        </select>
-                        <span class="w4-field-error w4-field-error-sm w4-field-error-error">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            Debes seleccionar un rol válido.
-                        </span>
-                    </div>
-
-                    <!-- Caso de Uso 3: Normal con helper -->
-                    <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-xs w4-stack-vertical">
-                        <label for="secondaryThemeSwitcher" class="w4-label w4-label-md">Preferencia de Tema</label>
-                        <select id="secondaryThemeSwitcher" class="w4-select w4-select-md">
-                            <option disabled selected>Por defecto del sistema</option>
-                            <option value="native-ui.light">Light</option>
-                            <option value="native-ui.dark">Dark</option>
-                            <option value="native-ui.corporate">Corporate</option>
-                        </select>
-                        <span class="w4-helper-text w4-helper-text-sm w4-helper-text-muted">
-                            Esta configuración solo afectará a tu cuenta en este dispositivo.
-                        </span>
-                    </div>
-
-                </div>
-            </div>
-        </section>
 
     </main>
 
@@ -405,7 +425,6 @@
         document.addEventListener("DOMContentLoaded", function () {
             var storageKey = "w4-native-ui-theme";
             var mainSwitcher = document.getElementById("themeSwitcher");
-            var secondarySwitcher = document.getElementById("secondaryThemeSwitcher");
 
             var currentTheme = localStorage.getItem(storageKey) || document.documentElement.getAttribute("data-theme") || "native-ui.light";
             document.documentElement.setAttribute("data-theme", currentTheme);
@@ -413,22 +432,11 @@
             function updateTheme(theme) {
                 document.documentElement.setAttribute("data-theme", theme);
                 localStorage.setItem(storageKey, theme);
-
-                // Sync both selects if they exist
-                if (mainSwitcher) mainSwitcher.value = theme;
-                if (secondarySwitcher) secondarySwitcher.value = theme;
             }
 
             if (mainSwitcher) {
                 mainSwitcher.value = currentTheme;
                 mainSwitcher.addEventListener("change", function (event) {
-                    updateTheme(event.target.value);
-                });
-            }
-
-            if (secondarySwitcher) {
-                secondarySwitcher.value = currentTheme;
-                secondarySwitcher.addEventListener("change", function (event) {
                     updateTheme(event.target.value);
                 });
             }
