@@ -134,6 +134,11 @@
                     <div class="w4-grid w4-grid-4 w4-grid-sm">
                         <label
                             class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-horizontal w4-stack-center">
+                            <input type="checkbox" class="w4-toggle w4-toggle-md" checked>
+                            <span>Neutral</span>
+                        </label>
+                        <label
+                            class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-horizontal w4-stack-center">
                             <input type="checkbox" class="w4-toggle w4-toggle-primary w4-toggle-md" checked>
                             <span>Primary</span>
                         </label>

@@ -38,7 +38,8 @@
 
 /* ----------------------------------
    NATIVE PSEUDO-CLASSES (Checked)
-   ---------------------------------- */
+   ---------------------------------- 
+*/
 .w4-toggle:checked,
 .w4-toggle-checked,
 .w4-toggle[data-w4-state~="checked"] {
@@ -49,7 +50,8 @@
 
 /* ----------------------------------
    INTERACTION STATES
-   ---------------------------------- */
+   ---------------------------------- 
+*/
 .w4-toggle:focus-visible {
   outline: var(--w4-focus-ring-width) solid hsl(var(--w4-focus-ring-color, var(--w4-primary)) / var(--w4-focus-ring-opacity));
 }
@@ -60,7 +62,14 @@
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
-   ---------------------------------- */
+   ---------------------------------- 
+*/
+
+.w4-toggle-neutral {
+  --w4-toggle-color: hsl(var(--w4-neutral));
+  --w4-focus-ring-color: var(--w4-neutral);
+}
+
 .w4-toggle-primary {
   --w4-toggle-color: hsl(var(--w4-primary));
   --w4-focus-ring-color: var(--w4-primary);
