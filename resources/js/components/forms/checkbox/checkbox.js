@@ -22,8 +22,88 @@ export default class W4Checkbox {
             checkbox.indeterminate = true;
         });
 
+        this.bindStateTriggers(root);
         // Register state handlers for the Checkbox component via W4Core
         this.registerStateHandlers();
+    }
+
+    static resolveElement(targetOrId) {
+        if (!targetOrId) return null;
+        if (targetOrId instanceof HTMLInputElement) return targetOrId;
+        if (typeof targetOrId === 'string') {
+            return document.getElementById(targetOrId) || document.querySelector(targetOrId);
+        }
+        return null;
+    }
+
+    static resetState(element) {
+        if (!element) return;
+
+        element.classList.remove(
+            'w4-checkbox-disabled',
+            'w4-checkbox-readonly',
+            'w4-checkbox-invalid',
+            'w4-checkbox-valid',
+            'w4-checkbox-loading',
+            'w4-checkbox-checked',
+            'w4-checkbox-indeterminate'
+        );
+
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-invalid');
+        element.removeAttribute('aria-busy');
+        element.removeAttribute('readonly');
+        element.disabled = false;
+        element.checked = false;
+        element.indeterminate = false;
+        element.style.pointerEvents = '';
+    }
+
+    static setState(targetOrId, state = 'enabled') {
+        const element = this.resolveElement(targetOrId);
+        if (!element) return;
+
+        this.resetState(element);
+
+        const normalized = String(state || 'enabled').toLowerCase();
+        if (normalized === 'enabled') {
+            if (typeof W4Core?.syncElement === 'function') W4Core.syncElement(element);
+            return;
+        }
+
+        if (normalized === 'checked') {
+            element.checked = true;
+        } else if (normalized === 'indeterminate') {
+            element.indeterminate = true;
+        } else {
+            element.classList.add(`w4-checkbox-${normalized}`);
+        }
+
+        element.setAttribute('data-w4-state', normalized);
+
+        if (typeof W4Core?.syncElement === 'function') {
+            W4Core.syncElement(element, `checkbox:${normalized}`);
+        }
+    }
+
+    static bindStateTriggers(root = document) {
+        if (this.triggersBound) return;
+
+        root.addEventListener('click', (event) => {
+            if (!(event.target instanceof Element)) return;
+
+            const trigger = event.target.closest('[data-w4-checkbox-state]');
+            if (!trigger) return;
+
+            event.preventDefault();
+            const state = trigger.getAttribute('data-w4-checkbox-state') || 'enabled';
+            const targetId = trigger.getAttribute('data-w4-checkbox-target') || trigger.getAttribute('data-w4-target');
+            this.setState(targetId, state);
+        });
+
+        this.triggersBound = true;
     }
 
     /**
@@ -38,7 +118,8 @@ export default class W4Checkbox {
         W4Core.on('checkbox:invalid', this.handleInvalid);
         W4Core.on('checkbox:valid', this.handleValid);
         W4Core.on('checkbox:loading', this.handleLoading);
-        W4Core.on('checkbox:check', this.handleCheck);
+        W4Core.on('checkbox:check', this.handleChecked);
+        W4Core.on('checkbox:checked', this.handleChecked);
         W4Core.on('checkbox:indeterminate', this.handleIndeterminateEvent);
 
         this.handlersRegistered = true;
@@ -47,7 +128,9 @@ export default class W4Checkbox {
     static handleEnabled({ element }) {
         element.disabled = false;
         element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-busy');
         element.removeAttribute('readonly');
+        element.style.pointerEvents = '';
     }
 
     static handleDisabled({ element }) {

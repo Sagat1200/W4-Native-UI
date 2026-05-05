@@ -8,34 +8,42 @@
     @NativeUIStyles
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <style>
-        /* Example icons for field errors */
-        .icon-sm {
-            inline-size: 16px;
-            block-size: 16px;
-        }
-    </style>
 </head>
 
 <body>
 
-    <div id="navbar-field-error" class="w4-navbar w4-navbar-primary">
+    <div class="w4-navbar  w4-navbar-fixed">
         <div class="w4-navbar-start">
-            <button class="w4-button w4-button-ghost w4-button-square mx-2">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    class="inline-block h-5 w-5 stroke-current">
+                    class="w4-icon w4-icon-md stroke-current">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
                 </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
             </button>
-            <button class="w4-button w4-button-ghost">Native UI</button>
+
         </div>
         <div class="w4-navbar-center">
-            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Soporte</a></li>
+            </ul>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -73,26 +81,21 @@
         </div>
     </div>
 
-    <main id="main-field-error" class="w4-container w4-container-xl">
-
+    <main class="w4-container w4-container-xl">
         <div class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Field Error</h1>
-            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para mensajes de validación
-                (w4-field-error)</p>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Field Error</h1>
         </div>
 
-        <div id="description-field-error" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Field Error</h2>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Field Error:</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Field Error</strong> se utiliza para mostrar mensajes de validación o
                 retroalimentación contextual asociados directamente a un campo de formulario específico. Ayuda a los
                 usuarios a identificar y corregir errores de entrada de datos de forma clara y accesible.
             </p>
-
-            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary mt-2">Casos de Uso Comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs mt-2"
-                style="padding-inline-start: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; list-style-type: disc;">
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong class="w4-text-active">Validación de formularios:</strong> Mostrar errores cuando un campo
                     requerido está vacío o
                     tiene un formato incorrecto.</li>
@@ -103,192 +106,270 @@
                     formato (ej. "La contraseña
                     debe tener al menos 8 caracteres") debajo del input.</li>
             </ul>
-        </div>
+        </section>
 
-        <section id="example-field-error-variant" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Variantes de Color Semánticas</h2>
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Variantes Semanticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Variantes de color para mensajes de error y retroalimentación contextual.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="fieldErrorSemanticPreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="fieldErrorSemanticCode">Codigo HTML</button>
+                    </div>
+                </div>
+                <div id="fieldErrorSemanticPreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-grid w4-grid-4 w4-grid-sm">
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                            <p class="w4-field-error">Field error default</p>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                            <p class="w4-field-error w4-field-error-primary">Field error primary</p>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                            <p class="w4-field-error w4-field-error-secondary">Field error secondary</p>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                            <p class="w4-field-error w4-field-error-accent">Field error accent</p>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                            <p class="w4-field-error w4-field-error-success">Field error success</p>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                            <p class="w4-field-error w4-field-error-info">Field error info</p>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                            <p class="w4-field-error w4-field-error-warning">Field error warning</p>
+                        </div>
+                        <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                            <p class="w4-field-error w4-field-error-error">Field error error</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="fieldErrorSemanticCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class=&quot;w4-field-error&quot;&gt;Field error default&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-primary&quot;&gt;Field error primary&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-secondary&quot;&gt;Field error secondary&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-accent&quot;&gt;Field error accent&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-success&quot;&gt;Field error success&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-info&quot;&gt;Field error info&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-warning&quot;&gt;Field error warning&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-error&quot;&gt;Field error error&lt;/p&gt;
+</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Tamaños</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Escalas tipográficas para adaptar el mensaje al contexto del formulario.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <div class="w4-stack w4-stack-horizontal w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="fieldErrorSizePreview">Vista Previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="fieldErrorSizeCode">Codigo HTML</button>
+                    </div>
+                </div>
+                <div id="fieldErrorSizePreview" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                    <div class="w4-stack w4-stack-sm w4-stack-center">
+                        <p class="w4-field-error w4-field-error-error w4-field-error-xs">XS: campo requerido</p>
+                        <p class="w4-field-error w4-field-error-error w4-field-error-sm">SM: campo requerido</p>
+                        <p class="w4-field-error w4-field-error-error w4-field-error-md">MD: campo requerido</p>
+                        <p class="w4-field-error w4-field-error-error w4-field-error-lg">LG: campo requerido</p>
+                        <p class="w4-field-error w4-field-error-error w4-field-error-xl">XL: campo requerido</p>
+                    </div>
+                </div>
+                <div id="fieldErrorSizeCode" data-w4-tab-panel
+                    class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                    <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class=&quot;w4-field-error w4-field-error-error w4-field-error-xs&quot;&gt;XS&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-error w4-field-error-sm&quot;&gt;SM&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-error w4-field-error-md&quot;&gt;MD&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-error w4-field-error-lg&quot;&gt;LG&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-error w4-field-error-xl&quot;&gt;XL&lt;/p&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Casos de Uso Aplicados</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Ejemplos reales de validación, éxito y sugerencias de formato.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-2 w4-grid-sm">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <label class="w4-label" for="demoFieldEmail">Correo electrónico</label>
+                    <input id="demoFieldEmail" class="w4-input w4-input-error" value="correo@">
+                    <p class="w4-field-error w4-field-error-error">Ingresa un correo electrónico válido.</p>
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <label class="w4-label" for="demoFieldUser">Nombre de usuario</label>
+                    <input id="demoFieldUser" class="w4-input w4-input-success" value="w4_user">
+                    <p class="w4-field-error w4-field-error-success">Nombre de usuario disponible.</p>
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <label class="w4-label" for="demoFieldPass">Contraseña</label>
+                    <input id="demoFieldPass" class="w4-input w4-input-warning" value="abc123">
+                    <p class="w4-field-error w4-field-error-warning">Debe tener al menos 8 caracteres.</p>
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                    <label class="w4-label" for="demoFieldPhone">Teléfono</label>
+                    <input id="demoFieldPhone" class="w4-input w4-input-info" value="+52">
+                    <p class="w4-field-error w4-field-error-info">Formato sugerido: +52 55 1234 5678.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Estados soportados por clase y por atributo <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-2 w4-grid-sm">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-start">Por Clase</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="fieldStateClassPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="fieldStateClassCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="fieldStateClassPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <p class="w4-field-error w4-field-error-error w4-field-error-active">Estado active
+                                        por clase</p>
+                                    <p class="w4-field-error w4-field-error-warning w4-field-error-disabled">Estado
+                                        disabled por clase</p>
+                                    <p class="w4-field-error w4-field-error-info w4-field-error-hidden">Estado hidden
+                                        por clase</p>
+                                </div>
+                            </div>
+                            <div id="fieldStateClassCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class=&quot;w4-field-error w4-field-error-error w4-field-error-active&quot;&gt;...&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-warning w4-field-error-disabled&quot;&gt;...&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-info w4-field-error-hidden&quot;&gt;...&lt;/p&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-start">Por Atributo</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="fieldStateAttrPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="fieldStateAttrCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="fieldStateAttrPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <p class="w4-field-error w4-field-error-error" data-w4-state="active">Estado active
+                                        por atributo</p>
+                                    <p class="w4-field-error w4-field-error-warning" data-w4-state="disabled">Estado
+                                        disabled por atributo</p>
+                                    <p class="w4-field-error w4-field-error-info" data-w4-state="hidden">Estado hidden
+                                        por atributo</p>
+                                </div>
+                            </div>
+                            <div id="fieldStateAttrCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre
+                                    class="m-0"><code class="w4-text w4-text-xs">
+&lt;p class=&quot;w4-field-error w4-field-error-error&quot; data-w4-state=&quot;active&quot;&gt;...&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-warning&quot; data-w4-state=&quot;disabled&quot;&gt;...&lt;/p&gt;
+&lt;p class=&quot;w4-field-error w4-field-error-info&quot; data-w4-state=&quot;hidden&quot;&gt;...&lt;/p&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">
+                Estados Nativos Javascript Soportados al Componente Field Error
+            </h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Controles para probar transiciones usando <code>data-w4-field-error-state</code> y
+                <code>data-w4-target</code>.
+            </p>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error">Este campo es requerido.</span>
-                        <span class="w4-label w4-label-xs w4-label-neutral" style="margin-block-start: auto;">Default
-                            (Inherit Error)</span>
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    Playground: aplica estados JS al mensaje de error de prueba.
+                </p>
+                <div class="w4-stack w4-stack-md">
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="fieldJsPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="fieldJsCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="fieldJsPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <p id="labFieldErrorTarget"
+                                        class="w4-field-error w4-field-error-error w4-field-error-md">
+                                        El correo es obligatorio.
+                                    </p>
+                                    <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                        <button type="button" class="w4-button w4-button-sm w4-button-secondary"
+                                            data-w4-field-error-state="active"
+                                            data-w4-target="labFieldErrorTarget">Active</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-warning"
+                                            data-w4-field-error-state="disabled"
+                                            data-w4-target="labFieldErrorTarget">Disabled</button>
+                                        <button type="button" class="w4-button w4-button-sm w4-button-error"
+                                            data-w4-field-error-state="hidden"
+                                            data-w4-target="labFieldErrorTarget">Hidden</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="fieldJsCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre
+                                    class="m-0"><code class="w4-text w4-text-xs">
+&lt;p id=&quot;labFieldErrorTarget&quot; class=&quot;w4-field-error w4-field-error-error w4-field-error-md&quot;&gt;
+  El correo es obligatorio.
+&lt;/p&gt;
+&lt;button data-w4-field-error-state=&quot;enabled&quot; data-w4-target=&quot;labFieldErrorTarget&quot;&gt;Enabled&lt;/button&gt;
+&lt;button data-w4-field-error-state=&quot;active&quot; data-w4-target=&quot;labFieldErrorTarget&quot;&gt;Active&lt;/button&gt;
+&lt;button data-w4-field-error-state=&quot;disabled&quot; data-w4-target=&quot;labFieldErrorTarget&quot;&gt;Disabled&lt;/button&gt;
+&lt;button data-w4-field-error-state=&quot;hidden&quot; data-w4-target=&quot;labFieldErrorTarget&quot;&gt;Hidden&lt;/button&gt;</code></pre>
+                            </div>
+                        </div>
                     </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-primary">Información principal necesaria.</span>
-                        <span class="w4-label w4-label-xs w4-label-primary"
-                            style="margin-block-start: auto;">Primary</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-secondary">Sugerencia secundaria.</span>
-                        <span class="w4-label w4-label-xs w4-label-secondary"
-                            style="margin-block-start: auto;">Secondary</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-accent">Atención requerida.</span>
-                        <span class="w4-label w4-label-xs w4-label-accent"
-                            style="margin-block-start: auto;">Accent</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-info">La contraseña debe tener 8 caracteres.</span>
-                        <span class="w4-label w4-label-xs w4-label-info" style="margin-block-start: auto;">Info</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-success">¡Nombre de usuario disponible!</span>
-                        <span class="w4-label w4-label-xs w4-label-success"
-                            style="margin-block-start: auto;">Success</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-warning">El correo parece no ser corporativo.</span>
-                        <span class="w4-label w4-label-xs w4-label-warning"
-                            style="margin-block-start: auto;">Warning</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-error">El formato de email es inválido.</span>
-                        <span class="w4-label w4-label-xs w4-label-error" style="margin-block-start: auto;">Error
-                            (Explicit)</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="example-field-error-sizes" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Tamaños Explícitos (XS - XL)</h2>
-            <hr class="w4-divider w4-divider-secondary">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-xs">Error tamaño XS (0.75rem)</span>
-                        <span class="w4-label w4-label-xs" style="margin-block-start: auto;">XS</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-sm">Error tamaño SM (0.875rem)</span>
-                        <span class="w4-label w4-label-xs" style="margin-block-start: auto;">SM (Default general)</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-md">Error tamaño MD (1rem)</span>
-                        <span class="w4-label w4-label-xs" style="margin-block-start: auto;">MD</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-lg">Error tamaño LG (1.125rem)</span>
-                        <span class="w4-label w4-label-xs" style="margin-block-start: auto;">LG</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-xl">Error tamaño XL (1.25rem)</span>
-                        <span class="w4-label w4-label-xs" style="margin-block-start: auto;">XL</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="example-field-error-icons" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-accent w4-heading-start">Con Íconos (Inline Flex Gap)</h2>
-            <hr class="w4-divider w4-divider-accent">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid" style="grid-template-columns: 1fr; gap: 1.5rem;">
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start;">
-                        <span class="w4-field-error w4-field-error-error">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon-sm" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            La contraseña ingresada no coincide con nuestros registros.
-                        </span>
-                        <span class="w4-label w4-label-xs" style="margin-block-start: auto;">Error with SVG Icon</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start;">
-                        <span class="w4-field-error w4-field-error-success">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon-sm" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            Cambios guardados correctamente.
-                        </span>
-                        <span class="w4-label w4-label-xs" style="margin-block-start: auto;">Success with SVG
-                            Icon</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="example-field-error-states" class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados CSS / Data-States</h2>
-            <hr class="w4-divider w4-divider-error">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error">Estado normal del mensaje.</span>
-                        <span class="w4-label w4-label-xs" style="margin-block-start: auto;">Normal</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-active">Estado activo (Más negrita).</span>
-                        <span class="w4-label w4-label-xs" style="margin-block-start: auto;">Active
-                            (.w4-field-error-active)</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <span class="w4-field-error w4-field-error-disabled">Mensaje deshabilitado (Opaco).</span>
-                        <span class="w4-label w4-label-xs" style="margin-block-start: auto;">Disabled
-                            (.w4-field-error-disabled)</span>
-                    </div>
-                    <div class="w4-panel w4-panel-base-100 w4-panel-sm w4-stack w4-stack-xs w4-stack-vertical"
-                        style="box-shadow: var(--w4-shadow-sm); align-items: flex-start; justify-content: space-between; block-size: 100%;">
-                        <p class="w4-text w4-text-sm w4-text-neutral" style="margin: 0;">
-                            Texto antes del error... <span class="w4-field-error w4-field-error-inline">Error en
-                                línea</span> ...texto después.
-                        </p>
-                        <span class="w4-label w4-label-xs" style="margin-block-start: auto;">Inline
-                            (.w4-field-error-inline)</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="example-field-error-integration" class="w4-section w4-section-xl" style="padding-block-end: 2rem;">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-info w4-heading-start">Integración con Input de Formulario
-            </h2>
-            <hr class="w4-divider w4-divider-info">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid" style="grid-template-columns: 1fr; gap: 1.5rem;">
-                    <!-- Field Group Example -->
-                    <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-xs w4-stack-vertical"
-                        style="max-inline-size: 400px; box-shadow: var(--w4-shadow-sm);">
-                        <label class="w4-label w4-label-md" style="font-weight: 500;">Correo Electrónico</label>
-                        <input type="text" value="usuario@invalido"
-                            class="w4-input w4-input-error w4-input-md w4-input-bordered" style="inline-size: 100%;" />
-                        <span class="w4-field-error w4-field-error-sm w4-field-error-error"
-                            style="margin-block-start: 0.25rem;">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon-sm" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            El dominio del correo no está permitido.
-                        </span>
-                    </div>
+                    <p class="w4-text w4-text-sm w4-text-neutral">
+                        El estado se aplica al mensaje de error de prueba y sincroniza sus hooks visuales.
+                    </p>
                 </div>
             </div>
         </section>

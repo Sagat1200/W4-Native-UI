@@ -276,7 +276,7 @@
             </div>
         </section>
 
-        <section class="w4-section w4-section-xl">
+        {{-- <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Ejemplos Reales</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">
                 Integración con API JS: reemplazo de skeleton y ocultado masivo en contenedores.
@@ -305,7 +305,7 @@
                     </button>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Visuales</h2>
