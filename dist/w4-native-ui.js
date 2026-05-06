@@ -2562,13 +2562,38 @@ class W4Modal {
         return document.getElementById(String(targetOrId)) || document.querySelector(String(targetOrId));
     }
 
+    static resetState(element, options = {}) {
+        const keepHidden = options.keepHidden === true;
+
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-busy');
+        if (!keepHidden) {
+            element.removeAttribute('aria-hidden');
+        }
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+        element.style.zIndex = '';
+    }
+
     static setState(targetOrId, state = 'enabled') {
         const modal = this.resolveElement(targetOrId);
         if (!modal) return;
 
         const normalized = String(state || 'enabled').toLowerCase();
+        // Always start from a clean state to avoid sticky hooks/styles.
+        this.resetState(modal);
+
+        if (normalized === 'clear') {
+            this.close(modal);
+            if (typeof W4Core?.syncElement === 'function') W4Core.syncElement(modal, 'modal:enabled');
+            return;
+        }
+
         if (normalized === 'enabled') {
             this.handleEnabled({ element: modal });
+            modal.setAttribute('data-w4-state', 'enabled');
             if (typeof W4Core?.syncElement === 'function') W4Core.syncElement(modal, 'modal:enabled');
             return;
         }
@@ -2576,10 +2601,16 @@ class W4Modal {
         if (normalized === 'open') {
             this.open(modal);
         } else if (normalized === 'hidden') {
-            this.close(modal);
+            this.open(modal);
+            modal.setAttribute('aria-hidden', 'true');
         } else if (normalized === 'disabled') {
+            // Keep disabled modal closed and non-interactive.
+            modal.classList.remove('w4-modal-open', 'w4-modal-closing');
+            modal.removeAttribute('open');
+            modal.setAttribute('aria-hidden', 'true');
             this.handleDisabled({ element: modal });
         } else if (normalized === 'active') {
+            this.open(modal);
             this.handleActive({ element: modal });
         }
 
@@ -2709,6 +2740,8 @@ class W4Modal {
      */
     static open(modal) {
         if (!modal) return;
+        if (modal.getAttribute('aria-disabled') === 'true') return;
+        if ((modal.getAttribute('data-w4-state') || '').split(/\s+/).includes('disabled')) return;
         
         // Remove closing class if it was in the middle of closing
         modal.classList.remove('w4-modal-closing');
@@ -2730,7 +2763,13 @@ class W4Modal {
      * @param {HTMLElement} modal 
      */
     static close(modal) {
-        if (!modal || !modal.classList.contains('w4-modal-open')) return;
+        if (!modal) return;
+
+        if (!modal.classList.contains('w4-modal-open')) {
+            this.resetState(modal, { keepHidden: true });
+            modal.setAttribute('aria-hidden', 'true');
+            return;
+        }
 
         // Apply closing class to trigger CSS animation
         modal.classList.add('w4-modal-closing');
@@ -2741,17 +2780,9 @@ class W4Modal {
         
         const finishClose = () => {
             modal.classList.remove('w4-modal-open', 'w4-modal-closing');
-            modal.setAttribute('aria-hidden', 'true');
             modal.removeAttribute('open');
-
-            // Remove 'open' from data-w4-state if it exists
-            let currentStates = (modal.getAttribute('data-w4-state') || '').split(' ');
-            currentStates = currentStates.filter(s => s !== 'open');
-            if (currentStates.length > 0) {
-                modal.setAttribute('data-w4-state', currentStates.join(' '));
-            } else {
-                modal.removeAttribute('data-w4-state');
-            }
+            this.resetState(modal, { keepHidden: true });
+            modal.setAttribute('aria-hidden', 'true');
             
             // Dispatch custom event
             modal.dispatchEvent(new CustomEvent('w4.modal.closed', { bubbles: true }));

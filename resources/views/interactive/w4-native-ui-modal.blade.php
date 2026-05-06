@@ -106,6 +106,8 @@
                     importantes del sistema.</li>
             </ul>
         </section>
+
+
         <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Variantes Semanticas</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">
@@ -161,10 +163,16 @@
                 <div id="modalSemanticCode" data-w4-tab-panel
                     class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
                     <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;button data-w4-toggle=&quot;modal&quot; data-w4-target=&quot;modalNeutral&quot;&gt;Neutral&lt;/button&gt;
 &lt;button data-w4-toggle=&quot;modal&quot; data-w4-target=&quot;modalPrimary&quot;&gt;Primary&lt;/button&gt;
 &lt;button data-w4-toggle=&quot;modal&quot; data-w4-target=&quot;modalSecondary&quot;&gt;Secondary&lt;/button&gt;
 &lt;button data-w4-toggle=&quot;modal&quot; data-w4-target=&quot;modalAccent&quot;&gt;Accent&lt;/button&gt;
-&lt;button data-w4-toggle=&quot;modal&quot; data-w4-target=&quot;modalInfo&quot;&gt;Info&lt;/button&gt;</code></pre>
+&lt;button data-w4-toggle=&quot;modal&quot; data-w4-target=&quot;modalInfo&quot;&gt;Info&lt;/button&gt;
+&lt;button data-w4-toggle=&quot;modal&quot; data-w4-target=&quot;modalSuccess&quot;&gt;Success&lt;/button&gt;
+&lt;button data-w4-toggle=&quot;modal&quot; data-w4-target=&quot;modalWarning&quot;&gt;Warning&lt;/button&gt;
+&lt;button data-w4-toggle=&quot;modal&quot; data-w4-target=&quot;modalError&quot;&gt;Error&lt;/button&gt;
+
+</code></pre>
                 </div>
             </div>
         </section>
@@ -379,13 +387,126 @@
         </section>
 
         <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Estados soportados por clase y por atributo <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-2 w4-grid-sm">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-start">Por Clase</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="modalStateClassPreview">Vista Previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="modalStateClassCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="modalStateClassPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <button type="button" class="w4-button w4-button-sm w4-button-primary"
+                                        data-w4-toggle="modal" data-w4-target="modalStateClassActive">
+                                        Demo .w4-modal-active
+                                    </button>
+                                    <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                                        <p class="w4-text w4-text-sm"><code>.w4-modal-hidden</code>: oculta
+                                            completamente
+                                            el modal.</p>
+                                    </div>
+                                    <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                                        <p class="w4-text w4-text-sm"><code>.w4-modal-disabled</code>: desactiva
+                                            interacción del overlay.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="modalStateClassCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;div class=&quot;w4-modal w4-modal-active&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;w4-modal w4-modal-hidden&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;w4-modal w4-modal-disabled&quot;&gt;...&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-start">Por Atributo</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="modalStateAttrPreview">Vista Previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="modalStateAttrCode">Codigo HTML</button>
+                        </div>
+                        <div class="w4-stack w4-stack-sm">
+                            <div id="modalStateAttrPreview" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                                <div class="w4-stack w4-stack-sm">
+                                    <button type="button" class="w4-button w4-button-sm w4-button-secondary"
+                                        data-w4-toggle="modal" data-w4-target="modalStateAttrActive">
+                                        Demo data-w4-state="active"
+                                    </button>
+                                    <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                                        <p class="w4-text w4-text-sm"><code>data-w4-state="hidden"</code>: oculta el
+                                            modal.</p>
+                                    </div>
+                                    <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                                        <p class="w4-text w4-text-sm"><code>data-w4-state="disabled"</code>: desactiva
+                                            interacción del modal.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="modalStateAttrCode" data-w4-tab-panel
+                                class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm"
+                                hidden aria-hidden="true">
+                                <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;div class=&quot;w4-modal&quot; data-w4-state=&quot;active&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;w4-modal&quot; data-w4-state=&quot;hidden&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;w4-modal&quot; data-w4-state=&quot;disabled&quot;&gt;...&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
             <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Nativos Javascript Soportados al Componente
                 Modal</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">
-                Prueba de estados con <code>data-w4-modal-state</code> y <code>data-w4-target</code>.
+                Controles para probar transiciones usando <code>data-w4-modal-state</code> y
+                <code>data-w4-target</code>.
             </p>
+            <div class="w4-panel w4-panel-base-100 w4-panel-md w4-stack w4-stack-sm">
+                <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary w4-hdg-start">Instrucciones De Uso</h3>
+                <ol class="w4-text w4-text-sm w4-text-neutral">
+                    <li><strong class="w4-text-primary">Estado Modal:</strong> Abre el modal con comportamiento normal
+                        (se puede cerrar con botón interno o clic en el backdrop).</li>
+                    <li><strong class="w4-text-primary">Enabled Modal:</strong> Deja el modal habilitado para
+                        interacción
+                        y apertura normal.</li>
+                    <li><strong class="w4-text-primary">Active Modal:</strong> Abre el modal y le da prioridad visual
+                        como estado activo.</li>
+                    <li><strong class="w4-text-primary">Disabled Modal:</strong> Deja el modal bloqueado; no debe abrir
+                        hasta volver a <code>Enabled</code> o <code>Clear</code>.</li>
+                    <li><strong class="w4-text-primary">Hidden Modal:</strong> Mantiene el modal en estado oculto
+                        (preserva estado visual sin mostrar overlay).</li>
+                    <li><strong class="w4-text-primary">Clear Modal States:</strong> Limpia estados residuales y regresa
+                        el modal al estado base.</li>
+                    <li><strong class="w4-text-primary">Flujo recomendado:</strong> Usa
+                        <code>Disabled/Hidden</code> para probar bloqueos y luego <code>Clear</code> antes de repetir la
+                        prueba.
+                    </li>
+                </ol>
+            </div>
             <hr class="w4-divider w4-divider-primary">
             <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    Playground: aplica estados JS al Modal de prueba.
+                </p>
                 <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
                     <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
                         <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
@@ -396,17 +517,28 @@
                     <div class="w4-stack w4-stack-sm">
                         <div id="modalJsPreview" data-w4-tab-panel
                             class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
-                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
-                                <button type="button" class="w4-button w4-button-sm w4-button-success"
-                                    data-w4-modal-state="open" data-w4-target="labModalTarget">Open</button>
-                                <button type="button" class="w4-button w4-button-sm w4-button-neutral"
-                                    data-w4-modal-state="enabled" data-w4-target="labModalTarget">Enabled</button>
-                                <button type="button" class="w4-button w4-button-sm w4-button-warning"
-                                    data-w4-modal-state="active" data-w4-target="labModalTarget">Active</button>
-                                <button type="button" class="w4-button w4-button-sm w4-button-error"
-                                    data-w4-modal-state="disabled" data-w4-target="labModalTarget">Disabled</button>
-                                <button type="button" class="w4-button w4-button-sm w4-button-info"
-                                    data-w4-modal-state="hidden" data-w4-target="labModalTarget">Close</button>
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-stack-between">
+                                <div class="w4-panel w4-panel-base-200 w4-panel-sm">
+                                    <button type="button" class="w4-button w4-button-sm w4-button-success"
+                                        data-w4-toggle="modal" data-w4-target="labModalTarget">Estado Modal</button>
+                                </div>
+                                <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xl">
+                                    <button type="button" class="w4-button w4-button-sm w4-button-neutral"
+                                        data-w4-modal-state="enabled" data-w4-target="labModalTarget">Enabled
+                                        Modal</button>
+                                    <button type="button" class="w4-button w4-button-sm w4-button-warning"
+                                        data-w4-modal-state="active" data-w4-target="labModalTarget">Active
+                                        Modal</button>
+                                    <button type="button" class="w4-button w4-button-sm w4-button-error"
+                                        data-w4-modal-state="disabled" data-w4-target="labModalTarget">Disabled
+                                        Modal</button>
+                                    <button type="button" class="w4-button w4-button-sm w4-button-info"
+                                        data-w4-modal-state="hidden" data-w4-target="labModalTarget">Hidden
+                                        Modal</button>
+                                    <button type="button" class="w4-button w4-button-sm w4-button-secondary"
+                                        data-w4-modal-state="clear" data-w4-target="labModalTarget">Clear Modal
+                                        states</button>
+                                </div>
                             </div>
                         </div>
                         <div id="modalJsCode" data-w4-tab-panel
@@ -414,22 +546,26 @@
                             aria-hidden="true">
                             <pre
                                 class="m-0"><code class="w4-text w4-text-xs">
-&lt;button data-w4-modal-state=&quot;open&quot; data-w4-target=&quot;labModalTarget&quot;&gt;Open&lt;/button&gt;
+&lt;button data-w4-toggle=&quot;modal&quot; data-w4-target=&quot;labModalTarget&quot;&gt;Estado Modal&lt;/button&gt;
 &lt;button data-w4-modal-state=&quot;enabled&quot; data-w4-target=&quot;labModalTarget&quot;&gt;Enabled&lt;/button&gt;
 &lt;button data-w4-modal-state=&quot;active&quot; data-w4-target=&quot;labModalTarget&quot;&gt;Active&lt;/button&gt;
 &lt;button data-w4-modal-state=&quot;disabled&quot; data-w4-target=&quot;labModalTarget&quot;&gt;Disabled&lt;/button&gt;
-&lt;button data-w4-modal-state=&quot;hidden&quot; data-w4-target=&quot;labModalTarget&quot;&gt;Close&lt;/button&gt;</code></pre>
+&lt;button data-w4-modal-state=&quot;hidden&quot; data-w4-target=&quot;labModalTarget&quot;&gt;Hidden&lt;/button&gt;
+&lt;button data-w4-modal-state=&quot;clear&quot; data-w4-target=&quot;labModalTarget&quot;&gt;Clear&lt;/button&gt;</code></pre>
                         </div>
                     </div>
                 </div>
+                <p class="w4-text w4-text-sm w4-text-neutral">
+                    El estado se aplica al Modal de prueba y sincroniza sus atributos visuales.
+                </p>
             </div>
         </section>
 
         <div id="modalNeutral" class="w4-modal w4-modal-neutral" aria-hidden="true">
             <div class="w4-modal-box">
-                <h3 class="w4-hdg w4-hdg-h4 w4-hdg-neutral-content">Modal Neutral</h3>
+                <h3 class="w4-hdg w4-hdg-h4 w4-hdg-neutral">Modal Neutral</h3>
                 <p class="w4-text">Contenido de ejemplo para variante neutral.</p>
-                <div class="w4-modal-action"><button class="w4-button w4-button-sm"
+                <div class="w4-modal-action"><button class="w4-button w4-button-sm w4-btn-neutral"
                         data-w4-dismiss="modal">Cerrar</button></div>
             </div>
         </div>
@@ -437,80 +573,80 @@
             <div class="w4-modal-box">
                 <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Modal Primary</h3>
                 <p class="w4-text">Contenido de ejemplo para variante primary.</p>
-                <div class="w4-modal-action"><button class="w4-button w4-button-sm"
+                <div class="w4-modal-action"><button class="w4-button w4-button-sm w4-btn-primary"
                         data-w4-dismiss="modal">Cerrar</button></div>
             </div>
         </div>
         <div id="modalSecondary" class="w4-modal w4-modal-secondary" aria-hidden="true">
             <div class="w4-modal-box">
-                <h3 class="w4-hdg w4-hdg-h4">Modal Secondary</h3>
+                <h3 class="w4-hdg w4-hdg-h4 w4-hdg-secondary">Modal Secondary</h3>
                 <p class="w4-text">Contenido de ejemplo.</p>
-                <div class="w4-modal-action"><button class="w4-button w4-button-sm"
+                <div class="w4-modal-action"><button class="w4-button w4-button-sm w4-btn-secondary"
                         data-w4-dismiss="modal">Cerrar</button></div>
             </div>
         </div>
         <div id="modalAccent" class="w4-modal w4-modal-accent" aria-hidden="true">
             <div class="w4-modal-box">
-                <h3 class="w4-hdg w4-hdg-h4">Modal Accent</h3>
+                <h3 class="w4-hdg w4-hdg-h4 w4-hdg-accent">Modal Accent</h3>
                 <p class="w4-text">Contenido de ejemplo.</p>
-                <div class="w4-modal-action"><button class="w4-button w4-button-sm"
+                <div class="w4-modal-action"><button class="w4-button w4-button-sm w4-btn-accent"
                         data-w4-dismiss="modal">Cerrar</button></div>
             </div>
         </div>
         <div id="modalInfo" class="w4-modal w4-modal-info" aria-hidden="true">
             <div class="w4-modal-box">
-                <h3 class="w4-hdg w4-hdg-h4">Modal Info</h3>
+                <h3 class="w4-hdg w4-hdg-h4 w4-hdg-info">Modal Info</h3>
                 <p class="w4-text">Contenido de ejemplo.</p>
-                <div class="w4-modal-action"><button class="w4-button w4-button-sm"
+                <div class="w4-modal-action"><button class="w4-button w4-button-sm w4-btn-info"
                         data-w4-dismiss="modal">Cerrar</button></div>
             </div>
         </div>
         <div id="modalSuccess" class="w4-modal w4-modal-success" aria-hidden="true">
             <div class="w4-modal-box">
-                <h3 class="w4-hdg w4-hdg-h4">Modal Success</h3>
+                <h3 class="w4-hdg w4-hdg-h4 w4-hdg-success">Modal Success</h3>
                 <p class="w4-text">Contenido de ejemplo.</p>
-                <div class="w4-modal-action"><button class="w4-button w4-button-sm"
+                <div class="w4-modal-action"><button class="w4-button w4-button-sm w4-btn-success"
                         data-w4-dismiss="modal">Cerrar</button></div>
             </div>
         </div>
         <div id="modalWarning" class="w4-modal w4-modal-warning" aria-hidden="true">
             <div class="w4-modal-box">
-                <h3 class="w4-hdg w4-hdg-h4">Modal Warning</h3>
+                <h3 class="w4-hdg w4-hdg-h4 w4-hdg-warning">Modal Warning</h3>
                 <p class="w4-text">Contenido de ejemplo.</p>
-                <div class="w4-modal-action"><button class="w4-button w4-button-sm"
+                <div class="w4-modal-action"><button class="w4-button w4-button-sm w4-btn-warning"
                         data-w4-dismiss="modal">Cerrar</button></div>
             </div>
         </div>
         <div id="modalError" class="w4-modal w4-modal-error" aria-hidden="true">
             <div class="w4-modal-box">
-                <h3 class="w4-hdg w4-hdg-h4">Modal Error</h3>
+                <h3 class="w4-hdg w4-hdg-h4 w4-hdg-error">Modal Error</h3>
                 <p class="w4-text">Contenido de ejemplo.</p>
-                <div class="w4-modal-action"><button class="w4-button w4-button-sm"
+                <div class="w4-modal-action"><button class="w4-button w4-button-sm w4-btn-error"
                         data-w4-dismiss="modal">Cerrar</button></div>
             </div>
         </div>
 
-        <div id="modalTop" class="w4-modal w4-modal-top" aria-hidden="true">
+        <div id="modalTop" class="w4-modal w4-modal-top w4-modal-primary" aria-hidden="true">
             <div class="w4-modal-box">
-                <h3 class="w4-hdg w4-hdg-h4">Modal Top</h3>
+                <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Modal Top</h3>
                 <p class="w4-text">Posición superior.</p>
-                <div class="w4-modal-action"><button class="w4-button w4-button-sm"
+                <div class="w4-modal-action"><button class="w4-button w4-button-sm w4-btn-primary"
                         data-w4-dismiss="modal">Cerrar</button></div>
             </div>
         </div>
-        <div id="modalMiddle" class="w4-modal w4-modal-middle" aria-hidden="true">
+        <div id="modalMiddle" class="w4-modal w4-modal-middle w4-modal-primary" aria-hidden="true">
             <div class="w4-modal-box">
-                <h3 class="w4-hdg w4-hdg-h4">Modal Middle</h3>
+                <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Modal Middle</h3>
                 <p class="w4-text">Posición centrada.</p>
-                <div class="w4-modal-action"><button class="w4-button w4-button-sm"
+                <div class="w4-modal-action"><button class="w4-button w4-button-sm w4-btn-primary"
                         data-w4-dismiss="modal">Cerrar</button></div>
             </div>
         </div>
-        <div id="modalBottom" class="w4-modal w4-modal-bottom" aria-hidden="true">
+        <div id="modalBottom" class="w4-modal w4-modal-bottom w4-modal-primary" aria-hidden="true">
             <div class="w4-modal-box">
-                <h3 class="w4-hdg w4-hdg-h4">Modal Bottom</h3>
+                <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Modal Bottom</h3>
                 <p class="w4-text">Posición inferior.</p>
-                <div class="w4-modal-action"><button class="w4-button w4-button-sm"
+                <div class="w4-modal-action"><button class="w4-button w4-button-sm w4-btn-primary"
                         data-w4-dismiss="modal">Cerrar</button></div>
             </div>
         </div>
@@ -605,6 +741,26 @@
                 <p class="w4-text">Se adapta según el ancho y la altura seleccionados en el panel de configuración.</p>
                 <div class="w4-modal-action">
                     <button type="button" class="w4-button w4-button-sm w4-button-primary"
+                        data-w4-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+        <div id="modalStateClassActive" class="w4-modal w4-modal-md w4-modal-active" aria-hidden="true">
+            <div class="w4-modal-box">
+                <h3 class="w4-hdg w4-hdg-h4">Estado por Clase: Active</h3>
+                <p class="w4-text">Ejemplo de modal con clase <code>w4-modal-active</code>.</p>
+                <div class="w4-modal-action">
+                    <button type="button" class="w4-button w4-button-sm w4-button-primary"
+                        data-w4-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+        <div id="modalStateAttrActive" class="w4-modal w4-modal-md" data-w4-state="active" aria-hidden="true">
+            <div class="w4-modal-box">
+                <h3 class="w4-hdg w4-hdg-h4">Estado por Atributo: Active</h3>
+                <p class="w4-text">Ejemplo de modal con <code>data-w4-state="active"</code>.</p>
+                <div class="w4-modal-action">
+                    <button type="button" class="w4-button w4-button-sm w4-button-secondary"
                         data-w4-dismiss="modal">Cerrar</button>
                 </div>
             </div>
