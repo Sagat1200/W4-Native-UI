@@ -2550,9 +2550,60 @@ class W4Modal {
     static init(root = document) {
         root.addEventListener('click', this.handleClick.bind(this));
         root.addEventListener('keydown', this.handleKeydown.bind(this));
+        this.bindStateTriggers(root);
 
         // Register state handlers for the Modal component via W4Core
         this.registerStateHandlers();
+    }
+
+    static resolveElement(targetOrId) {
+        if (!targetOrId) return null;
+        if (targetOrId instanceof HTMLElement) return targetOrId;
+        return document.getElementById(String(targetOrId)) || document.querySelector(String(targetOrId));
+    }
+
+    static setState(targetOrId, state = 'enabled') {
+        const modal = this.resolveElement(targetOrId);
+        if (!modal) return;
+
+        const normalized = String(state || 'enabled').toLowerCase();
+        if (normalized === 'enabled') {
+            this.handleEnabled({ element: modal });
+            if (typeof W4Core?.syncElement === 'function') W4Core.syncElement(modal, 'modal:enabled');
+            return;
+        }
+
+        if (normalized === 'open') {
+            this.open(modal);
+        } else if (normalized === 'hidden') {
+            this.close(modal);
+        } else if (normalized === 'disabled') {
+            this.handleDisabled({ element: modal });
+        } else if (normalized === 'active') {
+            this.handleActive({ element: modal });
+        }
+
+        modal.setAttribute('data-w4-state', normalized);
+        if (typeof W4Core?.syncElement === 'function') {
+            W4Core.syncElement(modal, `modal:${normalized}`);
+        }
+    }
+
+    static bindStateTriggers(root = document) {
+        if (this.triggersBound) return;
+
+        root.addEventListener('click', (event) => {
+            if (!(event.target instanceof Element)) return;
+            const trigger = event.target.closest('[data-w4-modal-state]');
+            if (!trigger) return;
+
+            event.preventDefault();
+            const state = trigger.getAttribute('data-w4-modal-state') || 'enabled';
+            const targetId = trigger.getAttribute('data-w4-modal-target') || trigger.getAttribute('data-w4-target');
+            this.setState(targetId, state);
+        });
+
+        this.triggersBound = true;
     }
 
     /**

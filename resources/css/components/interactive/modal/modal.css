@@ -59,7 +59,8 @@
 
 /* ----------------------------------
    OPEN/CLOSING STATES (Interaction)
-   ---------------------------------- */
+   ---------------------------------- 
+*/
 .w4-modal-open,
 .w4-modal[open], /* Native dialog support */
 .w4-modal:target, /* URL hash support */
@@ -87,7 +88,8 @@
 
 /* ----------------------------------
    POSITION MODIFIERS
-   ---------------------------------- */
+   ---------------------------------- 
+*/
 .w4-modal-top {
   --w4-modal-align: flex-start;
 }
@@ -112,7 +114,9 @@
 
 /* ----------------------------------
    SEMANTIC VARIANTS (Color System)
----------------------------------- */
+---------------------------------- 
+*/
+.w4-modal-neutral { --w4-modal-border-color: hsl(var(--w4-neutral)); }
 .w4-modal-primary { --w4-modal-border-color: hsl(var(--w4-primary)); }
 .w4-modal-secondary { --w4-modal-border-color: hsl(var(--w4-secondary)); }
 .w4-modal-accent { --w4-modal-border-color: hsl(var(--w4-accent)); }
