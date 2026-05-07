@@ -107,6 +107,79 @@
         </section>
 
         <section class="w4-section w4-section-xl">
+            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes Semanticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">Color del tooltip y caret.</p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="tooltipVariantPreview">Vista previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="tooltipVariantCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="tooltipVariantPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
+                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-neutral" data-w4-tip="Neutral">
+                                    <button class="w4-btn w4-btn-neutral">Neutral</button>
+                                </div>
+                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-primary" data-w4-tip="Primary">
+                                    <button class="w4-btn w4-btn-primary">Primary</button>
+                                </div>
+                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-secondary" data-w4-tip="Secondary">
+                                    <button class="w4-btn w4-btn-secondary">Secondary</button>
+                                </div>
+                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-accent" data-w4-tip="Accent">
+                                    <button class="w4-btn w4-btn-accent">Accent</button>
+                                </div>
+                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-info" data-w4-tip="Info">
+                                    <button class="w4-btn w4-btn-info">Info</button>
+                                </div>
+                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-success" data-w4-tip="Success">
+                                    <button class="w4-btn w4-btn-success">Success</button>
+                                </div>
+                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-warning" data-w4-tip="Warning">
+                                    <button class="w4-btn w4-btn-warning">Warning</button>
+                                </div>
+                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-error" data-w4-tip="Error">
+                                    <button class="w4-btn w4-btn-error">Error</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tooltipVariantCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+                        &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-primary" data-w4-tip="Primary"&gt;
+                          &lt;button class="w4-button w4-button-primary"&gt;Primary&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-secondary" data-w4-tip="Secondary"&gt;
+                          &lt;button class="w4-button w4-button-secondary"&gt;Secondary&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-accent" data-w4-tip="Accent"&gt;
+                          &lt;button class="w4-button w4-button-accent"&gt;Accent&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-info" data-w4-tip="Info"&gt;
+                          &lt;button class="w4-button w4-button-info"&gt;Info&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-success" data-w4-tip="Success"&gt;
+                          &lt;button class="w4-button w4-button-success"&gt;Success&lt;/button&gt;
+                        &lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-warning" data-w4-tip="Warning"&gt;
+                          &lt;button class="w4-button w4-button-warning"&gt;Warning&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-error" data-w4-tip="Error"&gt;
+                          &lt;button class="w4-button w4-button-error"&gt;Error&lt;/button&gt;
+                        &lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
             <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Posiciones Base</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">Top, Bottom, Left y Right.</p>
             <hr class="w4-divider w4-divider-primary">
@@ -268,79 +341,6 @@
         </section>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Variantes Semanticas</h2>
-            <p class="w4-text w4-text-lg w4-text-neutral">Color del tooltip y caret.</p>
-            <hr class="w4-divider w4-divider-primary">
-            <div class="w4-panel w4-panel-base-100 w4-panel-md">
-                <div class="w4-stack w4-stack-sm w4-stack-center">
-                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
-                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
-                            data-w4-target="tooltipVariantPreview">Vista previa</button>
-                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
-                            data-w4-target="tooltipVariantCode">Codigo HTML</button>
-                    </div>
-                    <div class="w4-stack w4-stack-sm">
-                        <div id="tooltipVariantPreview" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
-                            <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-center w4-stack-sm">
-                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-neutral" data-w4-tip="Neutral">
-                                    <button class="w4-btn w4-btn-neutral w4-btn-sm">Neutral</button>
-                                </div>
-                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-primary" data-w4-tip="Primary">
-                                    <button class="w4-btn w4-btn-primary w4-btn-sm">Primary</button>
-                                </div>
-                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-secondary" data-w4-tip="Secondary">
-                                    <button class="w4-btn w4-btn-secondary w4-btn-sm">Secondary</button>
-                                </div>
-                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-accent" data-w4-tip="Accent">
-                                    <button class="w4-btn w4-btn-accent w4-btn-sm">Accent</button>
-                                </div>
-                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-info" data-w4-tip="Info">
-                                    <button class="w4-btn w4-btn-info w4-btn-sm">Info</button>
-                                </div>
-                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-success" data-w4-tip="Success">
-                                    <button class="w4-btn w4-btn-success w4-btn-sm">Success</button>
-                                </div>
-                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-warning" data-w4-tip="Warning">
-                                    <button class="w4-btn w4-btn-warning w4-btn-sm">Warning</button>
-                                </div>
-                                <div class="w4-tooltip w4-tooltip-top w4-tooltip-error" data-w4-tip="Error">
-                                    <button class="w4-btn w4-btn-error w4-btn-sm">Error</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tooltipVariantCode" data-w4-tab-panel
-                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
-                            <pre class="m-0"><code class="w4-text w4-text-xs">
-                &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-primary" data-w4-tip="Primary"&gt;
-                  &lt;button class="w4-button w4-button-primary"&gt;Primary&lt;/button&gt;
-                &lt;/div&gt;
-                &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-secondary" data-w4-tip="Secondary"&gt;
-                  &lt;button class="w4-button w4-button-secondary"&gt;Secondary&lt;/button&gt;
-                &lt;/div&gt;
-                &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-accent" data-w4-tip="Accent"&gt;
-                  &lt;button class="w4-button w4-button-accent"&gt;Accent&lt;/button&gt;
-                &lt;/div&gt;
-                &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-info" data-w4-tip="Info"&gt;
-                  &lt;button class="w4-button w4-button-info"&gt;Info&lt;/button&gt;
-                &lt;/div&gt;
-                &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-success" data-w4-tip="Success"&gt;
-                  &lt;button class="w4-button w4-button-success"&gt;Success&lt;/button&gt;
-                &lt;/button&gt;
-                &lt;/div&gt;
-                &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-warning" data-w4-tip="Warning"&gt;
-                  &lt;button class="w4-button w4-button-warning"&gt;Warning&lt;/button&gt;
-                &lt;/div&gt;
-                &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-error" data-w4-tip="Error"&gt;
-                  &lt;button class="w4-button w4-button-error"&gt;Error&lt;/button&gt;
-                &lt;/div&gt;</code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="w4-section w4-section-xl">
             <h2 class="w4-heading w4-heading-h2 w4-heading-primary">Ejemplos de Usos Comunes</h2>
             <p class="w4-text w4-text-lg w4-text-neutral">
                 Escenarios reales para aplicar tooltips en interfaces productivas.
@@ -483,33 +483,33 @@
                             class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
                             aria-hidden="true">
                             <pre class="m-0"><code class="w4-text w4-text-xs">
-&lt;!-- Por clase --&gt;
-&lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-open" data-w4-tip="Tooltip Open"&gt;
-  &lt;button class="w4-button w4-button-primary"&gt;Open&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-active" data-w4-tip="Tooltip Active"&gt;
-  &lt;button class="w4-button w4-button-primary"&gt;Active&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-disabled" data-w4-tip="Tooltip Disabled"&gt;
-  &lt;button class="w4-button w4-button-primary"&gt;Disabled&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-hidden" data-w4-tip="Tooltip Hidden"&gt;
-  &lt;button class="w4-button w4-button-primary"&gt;Hidden&lt;/button&gt;
-&lt;/div&gt;
-
-&lt;!-- Por atributo --&gt;
-&lt;div class="w4-tooltip w4-tooltip-top" data-w4-state="open" data-w4-tip="data-w4-state open"&gt;
-  &lt;button class="w4-button w4-button-primary"&gt;Open&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class="w4-tooltip w4-tooltip-top" data-w4-state="active" data-w4-tip="data-w4-state active"&gt;
-  &lt;button class="w4-button w4-button-primary"&gt;Active&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class="w4-tooltip w4-tooltip-top" data-w4-state="disabled" data-w4-tip="data-w4-state disabled"&gt;
-  &lt;button class="w4-button w4-button-primary"&gt;Disabled&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class="w4-tooltip w4-tooltip-top" data-w4-state="hidden" data-w4-tip="data-w4-state hidden"&gt;
-  &lt;button class="w4-button w4-button-primary"&gt;Hidden&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+                &lt;!-- Por clase --&gt;
+                &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-open" data-w4-tip="Tooltip Open"&gt;
+                  &lt;button class="w4-button w4-button-primary"&gt;Open&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-active" data-w4-tip="Tooltip Active"&gt;
+                  &lt;button class="w4-button w4-button-primary"&gt;Active&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-disabled" data-w4-tip="Tooltip Disabled"&gt;
+                  &lt;button class="w4-button w4-button-primary"&gt;Disabled&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="w4-tooltip w4-tooltip-top w4-tooltip-hidden" data-w4-tip="Tooltip Hidden"&gt;
+                  &lt;button class="w4-button w4-button-primary"&gt;Hidden&lt;/button&gt;
+                &lt;/div&gt;
+                
+                &lt;!-- Por atributo --&gt;
+                &lt;div class="w4-tooltip w4-tooltip-top" data-w4-state="open" data-w4-tip="data-w4-state open"&gt;
+                  &lt;button class="w4-button w4-button-primary"&gt;Open&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="w4-tooltip w4-tooltip-top" data-w4-state="active" data-w4-tip="data-w4-state active"&gt;
+                  &lt;button class="w4-button w4-button-primary"&gt;Active&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="w4-tooltip w4-tooltip-top" data-w4-state="disabled" data-w4-tip="data-w4-state disabled"&gt;
+                  &lt;button class="w4-button w4-button-primary"&gt;Disabled&lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class="w4-tooltip w4-tooltip-top" data-w4-state="hidden" data-w4-tip="data-w4-state hidden"&gt;
+                  &lt;button class="w4-button w4-button-primary"&gt;Hidden&lt;/button&gt;
+                &lt;/div&gt;</code></pre>
                         </div>
                     </div>
                 </div>

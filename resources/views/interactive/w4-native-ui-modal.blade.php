@@ -336,7 +336,7 @@
                     class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
                     <div class="w4-grid w4-grid-3 w4-grid-sm">
                         <div class="w4-stack w4-stack-xs">
-                            <label class="w4-label" for="modalConfigWidth">Width</label>
+                            <label class="w4-label w4-label-primary" for="modalConfigWidth">Width</label>
                             <select id="modalConfigWidth" class="w4-select w4-select-sm w4-select-primary">
                                 <option value="w4-modal-xs">XS</option>
                                 <option value="w4-modal-sm">SM</option>
@@ -345,12 +345,12 @@
                                 <option value="w4-modal-xl">XL</option>
                                 <option value="w4-modal-2xl">2XL</option>
                                 <option value="w4-modal-3xl">3XL</option>
-                                <option value="w4-modal-full">FULL</option>
+                                {{-- <option value="w4-modal-full">FULL</option> --}}
                             </select>
                         </div>
                         <div class="w4-stack w4-stack-xs">
-                            <label class="w4-label" for="modalConfigHeight">Height</label>
-                            <select id="modalConfigHeight" class="w4-select w4-select-sm w4-select-secondary">
+                            <label class="w4-label w4-label-primary" for="modalConfigHeight">Height</label>
+                            <select id="modalConfigHeight" class="w4-select w4-select-sm w4-select-primary">
                                 <option value="w4-modal-h-auto" selected>AUTO</option>
                                 <option value="w4-modal-h-sm">H-SM</option>
                                 <option value="w4-modal-h-md">H-MD</option>
@@ -360,9 +360,9 @@
                         </div>
                         <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-center">
                             <button id="modalConfigOpenBtn" type="button"
-                                class="w4-button w4-button-sm w4-button-primary" data-w4-toggle="modal"
+                                class="w4-button w4-button-md w4-button-primary" data-w4-toggle="modal"
                                 data-w4-target="modalConfigurable">
-                                Abrir Configurable
+                                Abrir Modal Configurable
                             </button>
                         </div>
                     </div>
