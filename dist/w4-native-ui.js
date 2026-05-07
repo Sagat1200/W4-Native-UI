@@ -2995,8 +2995,8 @@ class W4Tooltip {
 
 class W4Card {
     static init(root = document) {
-        // Register state handlers for the Card component via W4Core
         this.registerStateHandlers();
+        this.bindStateTriggers(root);
     }
 
     /**
@@ -3014,38 +3014,92 @@ class W4Card {
         this.handlersRegistered = true;
     }
 
+    static bindStateTriggers(root = document) {
+        if (this.triggersBound) return;
+
+        root.addEventListener('click', (event) => {
+            const trigger = event.target.closest('[data-w4-card-state]');
+            if (!trigger) return;
+
+            const state = trigger.getAttribute('data-w4-card-state') || 'enabled';
+            const targetId = trigger.getAttribute('data-w4-target') || 'labCardTarget';
+            this.setState(targetId, state);
+        });
+
+        this.triggersBound = true;
+    }
+
     static handleEnabled({ element }) {
-        element.removeAttribute('aria-disabled');
-        element.removeAttribute('aria-hidden');
-        element.classList.remove('w4-card-collapsed');
-        element.style.pointerEvents = '';
-        element.style.opacity = '';
+        this.resetState(element);
     }
 
     static handleDisabled({ element }) {
+        element.classList.add('w4-card-disabled');
+        element.setAttribute('data-w4-state', 'disabled');
         element.setAttribute('aria-disabled', 'true');
-        element.style.pointerEvents = 'none';
-        element.style.opacity = '0.5';
     }
 
     static handleActive({ element }) {
         element.classList.add('w4-card-active');
+        element.setAttribute('data-w4-state', 'active');
     }
 
     static handleHidden({ element }) {
+        element.classList.add('w4-card-hidden');
+        element.setAttribute('data-w4-state', 'hidden');
         element.setAttribute('aria-hidden', 'true');
-        if (element) {
-            element.style.opacity = '0';
-            setTimeout(() => {
-                element.style.display = 'none';
-            }, 300); // Wait for transition
-        }
     }
 
     static handleCollapsed({ element }) {
         element.classList.add('w4-card-collapsed');
-        // Additional DOM logic to hide card body could go here if needed,
-        // but typically handled via CSS `.w4-card-collapsed .w4-card-body { display: none; }`
+        element.setAttribute('data-w4-state', 'collapsed');
+    }
+
+    static setState(targetOrId, state = 'enabled') {
+        const element = this.resolveElement(targetOrId);
+        if (!element) return;
+
+        this.resetState(element);
+
+        const nextState = String(state || 'enabled').toLowerCase();
+        if (nextState === 'enabled') {
+            if (typeof W4Core.syncElement === 'function') {
+                W4Core.syncElement(element);
+            }
+            return;
+        }
+
+        element.setAttribute('data-w4-state', nextState);
+
+        if (nextState === 'active') {
+            element.classList.add('w4-card-active');
+        } else if (nextState === 'disabled') {
+            element.classList.add('w4-card-disabled');
+            element.setAttribute('aria-disabled', 'true');
+        } else if (nextState === 'hidden') {
+            element.classList.add('w4-card-hidden');
+            element.setAttribute('aria-hidden', 'true');
+        } else if (nextState === 'collapsed') {
+            element.classList.add('w4-card-collapsed');
+        }
+
+        if (typeof W4Core.syncElement === 'function') {
+            W4Core.syncElement(element);
+        }
+    }
+
+    static resetState(element) {
+        element.classList.remove('w4-card-active', 'w4-card-disabled', 'w4-card-hidden', 'w4-card-collapsed');
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
+        element.removeAttribute('aria-disabled');
+        element.removeAttribute('aria-hidden');
+    }
+
+    static resolveElement(targetOrId) {
+        if (!targetOrId) return null;
+        if (targetOrId instanceof Element) return targetOrId;
+        return document.getElementById(String(targetOrId));
     }
 }
 

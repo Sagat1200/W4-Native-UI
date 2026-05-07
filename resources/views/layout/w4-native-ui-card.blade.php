@@ -11,23 +11,38 @@
 
 <body>
 
-    <div class="w4-navbar w4-navbar-primary">
+    <div class="w4-navbar  w4-navbar-fixed">
         <div class="w4-navbar-start">
-            <button class="w4-button w4-button-ghost w4-button-square">
+            {{-- <button class="w4-btn w4-btn-ghost w4-btn-square">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     class="w4-icon w4-icon-md stroke-current">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
                 </svg>
+            </button> --}}
+            <button class="w4-button w4-button-ghost" aria-label="Native UI">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    class="w4-icon w4-icon-md stroke-current" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke-width="1.75"></rect>
+                    <path d="M7 7L12 12L17 7" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>Native UI</span>
             </button>
-            <button class="w4-button w4-button-ghost">Native UI</button>
+
         </div>
         <div class="w4-navbar-center">
-            <a href="#" class="w4-button w4-button-link w4-button-neutral">DOCUMENTACION</a>
+            <ul class="w4-menu w4-menu-horizontal w4-menu-center w4-menu-base-300 w4-menu-md">
+                <li class="w4-text w4-text-neutral"><a href="">Inicio</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Documentacion</a></li>
+                <li class="w4-text w4-text-neutral"><a href="">Soporte</a></li>
+            </ul>
         </div>
         <div class="w4-navbar-end">
             <div class="w4-stack w4-stack-xs mx-2">
-                <select id="themeSwitcher" class="w4-select w4-select-xs w4-select-neutral">
+                <select id="themeSwitcher" class="w4-select w4-select-sm w4-select-neutral">
                     <option value="native-ui.light">Light</option>
                     <option value="native-ui.dark">Dark</option>
                     <option value="native-ui.corporate">Corporate</option>
@@ -67,21 +82,19 @@
 
     <main class="w4-container w4-container-xl">
         <div class="w4-section w4-section-xl">
-            <h1 class="w4-heading w4-heading-h1 w4-heading-primary w4-heading-center">Native Card</h1>
-            <p class="w4-text w4-text-neutral w4-text-center">Entorno de pruebas visuales para el componente w4-card</p>
+            <h1 class="w4-hdg w4-hdg-h1 w4-hdg-primary w4-hdg-center mt-12">Native UI Card</h1>
         </div>
 
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Componente: W4 Card</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Card:</h2>
             <hr class="w4-divider w4-divider-primary">
             <p class="w4-text w4-text-lg w4-text-neutral">
                 El componente <strong>Card</strong> (tarjeta) es un contenedor versátil y flexible utilizado para
                 agrupar contenido relacionado y acciones. Es fundamental en el diseño de interfaces modernas para
                 organizar información de manera estructurada, legible y visualmente atractiva.
             </p>
-
-            <h3 class="w4-heading w4-heading-h3 w4-heading-primary mt-2">Casos de Uso Comunes:</h3>
-            <ul class="w4-text w4-text-md w4-text-neutral w4-stack w4-stack-xs w4-stack-vertical mt-2">
+            <h2 class="w4-hdg w4-hdg-h3 w4-hdg-primary w4-hdg-start">Casos de Uso Comunes:</h2>
+            <ul class="w4-text w4-text-base w4-text-start">
                 <li><strong>Listados de contenido:</strong> Mostrar productos de una tienda, artículos de un blog o
                     perfiles de usuario en una cuadrícula.</li>
                 <li><strong>Paneles de control (Dashboards):</strong> Agrupar métricas, gráficos o resúmenes de
@@ -93,324 +106,579 @@
             </ul>
         </section>
 
-        <!-- EJEMPLOS BASICOS -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-primary w4-heading-start">Ejemplos Básicos</h2>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Card</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">Ejemplo basico de una tarjeta con contenido y accion.</p>
             <hr class="w4-divider w4-divider-primary">
-
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid w4-grid-md w4-grid-3">
-
-                    <!-- Card Básica -->
-                    <div class="w4-card w4-card-base-100">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3 w4-heading-primary">Card Básica</h3>
-                            <p class="w4-text w4-text-md w4-text-neutral">Esta es una tarjeta simple con su fondo por
-                                defecto y contenido básico. Ideal para textos y descripciones.</p>
-                            <div class="w4-stack w4-stack-horizontal w4-stack-end mt-4">
-                                <button class="w4-button w4-button-primary">Aceptar</button>
-                            </div>
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-stack-center w4-tab-boxed-content-panels">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="cardBasicPreview">Vista previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="cardBasicCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="cardBasicPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <article class="w4-card w4-card-base-100">
+                                <div class="w4-card-body">
+                                    <h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary">Card Basica</h3>
+                                    <p class="w4-text w4-text-neutral">
+                                        Esta card organiza contenido relacionado y mantiene una accion principal clara.
+                                    </p>
+                                    <div class="w4-stack w4-stack-horizontal w4-stack-sm">
+                                        <button class="w4-button w4-button-primary w4-button-sm">Ver Mas</button>
+                                        <button class="w4-button w4-button-ghost w4-button-sm">Cancelar</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="cardBasicCode" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                            aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;article class="w4-card w4-card-base-100"&gt;
+  &lt;div class="w4-card-body"&gt;
+    &lt;h3 class="w4-hdg w4-hdg-h4 w4-hdg-primary"&gt;Card Basica&lt;/h3&gt;
+    &lt;p class="w4-text w4-text-neutral"&gt;
+      Esta card organiza contenido relacionado y mantiene una accion principal clara.
+    &lt;/p&gt;
+    &lt;div class="w4-stack w4-stack-horizontal w4-stack-sm"&gt;
+      &lt;button class="w4-button w4-button-primary w4-button-sm"&gt;Ver Mas&lt;/button&gt;
+      &lt;button class="w4-button w4-button-ghost w4-button-sm"&gt;Cancelar&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
                         </div>
                     </div>
-
-                    <!-- Card con Borde -->
-                    <div class="w4-card w4-card-base-100 w4-card-bordered w4-card-bordered-primary">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary">Card con Borde</h3>
-                            <p class="w4-text w4-text-md w4-text-neutral">Esta tarjeta utiliza la clase
-                                <code>.w4-card-bordered</code> para destacar su contorno con un color semántico.
-                            </p>
-                            <div class="w4-stack w4-stack-horizontal w4-stack-end mt-4">
-                                <button class="w4-button w4-button-secondary w4-button-outline">Detalles</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card Elevada -->
-                    <div class="w4-card w4-card-base-100 w4-card-elevated">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3 w4-heading-accent">Card Elevada</h3>
-                            <p class="w4-text w4-text-md w4-text-neutral">Utiliza <code>.w4-card-elevated</code> para
-                                agregar una sombra más pronunciada (shadow-lg), dándole profundidad.</p>
-                            <div class="w4-stack w4-stack-horizontal w4-stack-end w4-mt-4">
-                                <button class="w4-button w4-button-accent">Comprar</button>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-
-                <!-- Segunda Fila: Ejemplos con Imágenes -->
-                <div class="w4-grid w4-grid-md w4-grid-3 mt-6">
-
-                    <!-- Solo Imagen -->
-                    <div class="w4-card w4-card-base-100 w4-card-elevated">
-                        <figure class="w4-card-figure">
-                            <img src="https://picsum.photos/id/1015/400/225" alt="Paisaje natural" />
-                        </figure>
-                    </div>
-
-                    <!-- Imagen + Texto -->
-                    <div class="w4-card w4-card-base-100 w4-card-elevated">
-                        <figure class="w4-card-figure">
-                            <img src="https://picsum.photos/id/1016/400/225" alt="Montañas" />
-                        </figure>
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3">Explora el mundo</h3>
-                            <p class="w4-text w4-text-md w4-text-neutral">Descubre paisajes increíbles y conecta con la
-                                naturaleza en tus próximas vacaciones.</p>
-                        </div>
-                    </div>
-
-                    <!-- Imagen + Texto + Botones -->
-                    <div class="w4-card w4-card-base-100 w4-card-elevated">
-                        <figure class="w4-card-figure">
-                            <img src="https://picsum.photos/id/1018/400/225" alt="Bosque" />
-                        </figure>
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3 w4-heading-primary">Aventura Extrema</h3>
-                            <p class="w4-text w4-text-md w4-text-neutral">Reserva ahora tu paquete de senderismo guiado
-                                por profesionales.</p>
-                            <div class="w4-stack w4-stack-horizontal w4-stack-end w4-mt-4">
-                                <button class="w4-button w4-button-ghost">Ignorar</button>
-                                <button class="w4-button w4-button-primary">Reservar Ahora</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Tercera Fila: Imagen Abajo y con Padding -->
-                <div class="w4-grid w4-grid-md w4-grid-3 mt-6">
-
-                    <!-- Imagen Abajo -->
-                    <div class="w4-card w4-card-base-100 w4-card-elevated">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3 w4-heading-secondary">Vista al Océano</h3>
-                            <p class="w4-text w4-text-md w4-text-neutral">Disfruta de nuestras cabañas con vista directa
-                                al mar.
-                                Relájate con el sonido de las olas.</p>
-                            <div class="w4-stack w4-stack-horizontal w4-stack-start w4-mt-4">
-                                <button class="w4-button w4-button-secondary">Ver Galería</button>
-                            </div>
-                        </div>
-                        <figure class="w4-card-figure">
-                            <img src="https://picsum.photos/id/1019/400/225" alt="Océano" />
-                        </figure>
-                    </div>
-
-                    <!-- Imagen con Padding (Dentro del body) -->
-                    <div class="w4-card w4-card-base-100 w4-card-elevated">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3">Fotografía Artística</h3>
-                            <p class="w4-text w4-text-md w4-text-neutral">La imagen se encuentra dentro del cuerpo de la
-                                tarjeta, heredando su padding.</p>
-                            <figure class="w4-card-figure mt-4">
-                                <img src="https://picsum.photos/id/1020/400/225" alt="Arte" class="w4-rounded-lg" />
-                            </figure>
-                        </div>
-                    </div>
-
-                    <!-- Imagen con Padding Constante -->
-                    <div class="w4-card w4-card-base-100 w4-card-elevated w4-p-4">
-                        <figure class="w4-card-figure">
-                            <img src="https://picsum.photos/id/1021/400/225" alt="Bosque con niebla"
-                                class="w4-rounded-lg" />
-                        </figure>
-                        <div class="w4-card-body w4-px-0 w4-pb-0">
-                            <h3 class="w4-heading w4-heading-h3 w4-heading-info">Bosque Místico</h3>
-                            <p class="w4-text w4-text-md w4-text-neutral">Aplicando padding al contenedor principal para
-                                crear un efecto de marco interior alrededor de la foto.</p>
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
         </section>
 
-        <!-- VARIANTES SEMÁNTICAS -->
         <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-secondary w4-heading-start">Variantes Semánticas (Colores)
-            </h2>
-            <hr class="w4-divider w4-divider-secondary">
-
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-                <div class="w4-grid w4-grid-md w4-grid-4">
-
-                    <!-- Primary -->
-                    <div class="w4-card w4-card-primary">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3">Primary</h3>
-                            <p class="w4-text w4-text-md">Fondo primary con texto primary-content.</p>
-                        </div>
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Variantes Semanticas</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">Variantes de color para enfatizar contexto visual.</p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="cardSemanticPreview">Vista previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="cardSemanticCode">Codigo HTML</button>
                     </div>
-
-                    <!-- Secondary -->
-                    <div class="w4-card w4-card-secondary">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3">Secondary</h3>
-                            <p class="w4-text w4-text-md">Fondo secondary con texto secondary-content.</p>
-                        </div>
-                    </div>
-
-                    <!-- Accent -->
-                    <div class="w4-card w4-card-accent">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3">Accent</h3>
-                            <p class="w4-text w4-text-md">Fondo accent con texto accent-content.</p>
-                        </div>
-                    </div>
-
-                    <!-- Info -->
-                    <div class="w4-card w4-card-info">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3">Info</h3>
-                            <p class="w4-text w4-text-md">Fondo info con texto info-content.</p>
-                        </div>
-                    </div>
-
-                    <!-- Success -->
-                    <div class="w4-card w4-card-success">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3">Success</h3>
-                            <p class="w4-text w4-text-md">Fondo success con texto success-content.</p>
-                        </div>
-                    </div>
-
-                    <!-- Warning -->
-                    <div class="w4-card w4-card-warning">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3">Warning</h3>
-                            <p class="w4-text w4-text-md">Fondo warning con texto warning-content.</p>
-                        </div>
-                    </div>
-
-                    <!-- Error -->
-                    <div class="w4-card w4-card-error">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3">Error</h3>
-                            <p class="w4-text w4-text-md">Fondo error con texto error-content.</p>
-                        </div>
-                    </div>
-
-                    <!-- Base 300 -->
-                    <div class="w4-card w4-card-base-300">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3">Base 300</h3>
-                            <p class="w4-text w4-text-md">Fondo oscuro del tema (base-300).</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ESTADOS CSS -->
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-error w4-heading-start">Estados CSS (Clases Estáticas)</h2>
-            <hr class="w4-divider w4-divider-error">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-
-                <h3 class="w4-heading w4-heading-h4 w4-heading-error w4-mb-4">Modificadores de Estado (.w4-card-*)</h3>
-
-                <div class="w4-grid w4-grid-md w4-grid-4 mt-6">
-
-                    <!-- Active (CSS) -->
-                    <div class="w4-card w4-card-base-100 w4-card-bordered w4-card-active">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3 w4-heading-primary">.w4-card-active</h3>
-                            <p class="w4-text w4-text-sm w4-text-neutral">Simula una tarjeta activa o seleccionada,
-                                elevándola y resaltando sus bordes con el color primary.</p>
-                        </div>
-                    </div>
-
-                    <!-- Disabled (CSS) -->
-                    <div class="w4-card w4-card-base-100 w4-card-bordered w4-card-disabled">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3">.w4-card-disabled</h3>
-                            <p class="w4-text w4-text-sm">Tarjeta deshabilitada. Reduce la opacidad y desactiva la
-                                interacción del ratón.</p>
-                            <button class="w4-button w4-button-primary w4-button-sm w4-mt-2">No clickeable</button>
-                        </div>
-                    </div>
-
-                    <!-- Collapsed (CSS) -->
-                    <div class="w4-card w4-card-base-100 w4-card-bordered w4-card-collapsed">
-                        <!-- El body se ocultará debido a la clase collapsed -->
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3">.w4-card-collapsed</h3>
-                            <p class="w4-text w4-text-sm">Este contenido no debería verse, ya que el body está
-                                colapsado.</p>
-                        </div>
-                        <!-- Usamos un header falso fuera del body para mostrar que la tarjeta existe -->
-                        <div class="w4-p-4 w4-border-b w4-border-base-300">
-                            <h3 class="w4-heading w4-heading-h4">.w4-card-collapsed</h3>
-                            <p class="w4-text w4-text-xs w4-text-muted">El contenido principal (w4-card-body) está
-                                oculto.</p>
-                        </div>
-                    </div>
-
-                    <!-- Hidden (CSS) -->
-                    <div class="w4-card w4-card-base-100 w4-card-bordered w4-card-hidden">
-                        <div class="w4-card-body">
-                            <h3 class="w4-heading w4-heading-h3">.w4-card-hidden</h3>
-                            <p class="w4-text w4-text-sm">Esta tarjeta está oculta en el DOM (display: none) y no
-                                deberías poder verla.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ESTADOS DINÁMICOS JS -->
-        <section class="w4-section w4-section-xl">
-            <h2 class="w4-heading w4-heading-h2 w4-heading-success w4-heading-start">Estados Dinámicos JS (w4-state)
-            </h2>
-            <hr class="w4-divider w4-divider-success">
-            <div class="w4-panel w4-panel-base-200 w4-panel-md">
-
-                <div class="w4-stack w4-stack-horizontal w4-stack-between w4-stack-start w-full mt-6">
-
-                    <!-- Card Interactiva -->
-                    <div class="w4-grid w4-grid-1 w-72">
-                        <div id="jsInteractiveCard" class="w4-card w4-card-base-100 w4-card-bordered"
-                            data-w4-component="card">
-                            <div class="w4-card-body">
-                                <h3 class="w4-heading w4-heading-h3 w4-heading-primary">Tarjeta Interactiva</h3>
-                                <p class="w4-text w4-text-md w4-text-neutral">Utiliza los botones de la derecha para
-                                    cambiar mi estado a través del atributo <code>data-w4-state</code>.</p>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="cardSemanticPreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-grid w4-grid-4 w4-gap-md">
+                                <article class="w4-card w4-card-neutral">
+                                    <div class="w4-card-body">
+                                        <h3 class="w4-hdg w4-hdg-h5 w4-hdg-neutral-content">Neutral</h3>
+                                        <p class="w4-text w4-text-sm w4-text-neutral-content">Estado neutral.</p>
+                                    </div>
+                                </article>
+                                <article class="w4-card w4-card-primary">
+                                    <div class="w4-card-body">
+                                        <h3 class="w4-hdg w4-hdg-h5 w4-hdg-primary-content">Primary</h3>
+                                        <p class="w4-text w4-text-sm w4-text-primary-content">Estado principal.</p>
+                                    </div>
+                                </article>
+                                <article class="w4-card w4-card-secondary">
+                                    <div class="w4-card-body">
+                                        <h3 class="w4-hdg w4-hdg-h5 w4-hdg-secondary-content">Secondary</h3>
+                                        <p class="w4-text w4-text-sm w4-text-secondary-content">Estado secundario.</p>
+                                    </div>
+                                </article>
+                                <article class="w4-card w4-card-accent">
+                                    <div class="w4-card-body">
+                                        <h3 class="w4-hdg w4-hdg-h5 w4-hdg-accent-content">Accent</h3>
+                                        <p class="w4-text w4-text-sm w4-text-accent-content">Color de destaque.</p>
+                                    </div>
+                                </article>
+                                <article class="w4-card w4-card-success">
+                                    <div class="w4-card-body">
+                                        <h3 class="w4-hdg w4-hdg-h5 w4-hdg-success-content">Success</h3>
+                                        <p class="w4-text w4-text-sm w4-text-success-content">Confirmacion o exito.</p>
+                                    </div>
+                                </article>
+                                <article class="w4-card w4-card-info">
+                                    <div class="w4-card-body">
+                                        <h3 class="w4-hdg w4-hdg-h5 w4-hdg-info-content">Info</h3>
+                                        <p class="w4-text w4-text-sm w4-text-info-content">Informacion adicional.</p>
+                                    </div>
+                                </article>
+                                <article class="w4-card w4-card-warning">
+                                    <div class="w4-card-body">
+                                        <h3 class="w4-hdg w4-hdg-h5 w4-hdg-warning-content">Warning</h3>
+                                        <p class="w4-text w4-text-sm w4-text-warning-content">Atencion requerida.</p>
+                                    </div>
+                                </article>
+                                <article class="w4-card w4-card-error">
+                                    <div class="w4-card-body">
+                                        <h3 class="w4-hdg w4-hdg-h5 w4-hdg-error-content">Error</h3>
+                                        <p class="w4-text w4-text-sm w4-text-error-content">Falla o bloqueo.</p>
+                                    </div>
+                                </article>
                             </div>
                         </div>
-                    </div>
+                        <div id="cardSemanticCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;article class="w4-card w4-card-primary"&gt;
+  &lt;div class="w4-card-body"&gt;
+    &lt;h3 class="w4-hdg w4-hdg-h5 w4-hdg-primary-content"&gt;Primary&lt;/h3&gt;
+    &lt;p class="w4-text w4-text-sm w4-text-primary-content"&gt;Estado principal.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
 
-                    <!-- Botonera -->
-                    <div class="w4-stack w4-stack-vertical w4-stack-sm w4-border-s w4-border-base-300">
-                        <span class="w4-text w4-text-sm w4-text-muted w4-mb-2">Cambiar Estado:</span>
-                        <div class="w4-stack w4-stack-horizontal w4-stack-sm w4-stack-wrap">
-                            <button class="w4-button w4-button-sm w4-button-outline"
-                                onclick="document.getElementById('jsInteractiveCard').removeAttribute('data-w4-state')">Limpiar
-                                (Clear)</button>
-                            <button class="w4-button w4-button-sm w4-button-info"
-                                onclick="document.getElementById('jsInteractiveCard').setAttribute('data-w4-state', 'active')">Active</button>
-                            <button class="w4-button w4-button-sm w4-button-warning"
-                                onclick="document.getElementById('jsInteractiveCard').setAttribute('data-w4-state', 'disabled')">Disabled</button>
-                            <button class="w4-button w4-button-sm w4-button-error"
-                                onclick="document.getElementById('jsInteractiveCard').setAttribute('data-w4-state', 'hidden')">Hidden</button>
-                            <button class="w4-button w4-button-sm w4-button-secondary"
-                                onclick="document.getElementById('jsInteractiveCard').setAttribute('data-w4-state', 'collapsed')">Collapsed</button>
+&lt;article class="w4-card w4-card-success"&gt;...&lt;/article&gt;
+&lt;article class="w4-card w4-card-warning"&gt;...&lt;/article&gt;
+&lt;article class="w4-card w4-card-error"&gt;...&lt;/article&gt;</code></pre>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </section>
 
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Superficie y Bordes</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">Modificadores para profundidad, borde y estilo.</p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-stack-center">
+                    <div class="w4-tabs w4-tabs-boxed" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-primary w4-tab-active"
+                            data-w4-target="cardSurfacePreview">Vista previa</button>
+                        <button type="button" class="w4-tab w4-tab-boxed w4-tab-secondary"
+                            data-w4-target="cardSurfaceCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="cardSurfacePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-grid w4-grid-3 w4-gap-md">
+                                <article class="w4-card w4-card-bordered w4-card-bordered-primary">
+                                    <div class="w4-card-body">
+                                        <h3 class="w4-heading w4-heading-h5 w4-heading-primary">Bordered</h3>
+                                        <p class="w4-text w4-text-sm w4-text-neutral">Card con borde destacado.</p>
+                                    </div>
+                                </article>
+                                <article class="w4-card w4-card-elevated">
+                                    <div class="w4-card-body">
+                                        <h3 class="w4-heading w4-heading-h5 w4-heading-primary">Elevated</h3>
+                                        <p class="w4-text w4-text-sm w4-text-neutral">Mayor elevacion visual.</p>
+                                    </div>
+                                </article>
+                                <article class="w4-card w4-card-ghost">
+                                    <div class="w4-card-body">
+                                        <h3 class="w4-heading w4-heading-h5 w4-heading-primary">Ghost</h3>
+                                        <p class="w4-text w4-text-sm w4-text-neutral">Sin fondo ni borde visible.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div id="cardSurfaceCode" data-w4-tab-panel
+                            class="w4-tab-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;article class="w4-card w4-card-bordered w4-card-bordered-primary"&gt;
+  &lt;div class="w4-card-body"&gt;
+    &lt;h3&gt;Bordered&lt;/h3&gt;
+    &lt;p&gt;Card con borde destacado.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
 
+&lt;article class="w4-card w4-card-elevated"&gt;...&lt;/article&gt;
+&lt;article class="w4-card w4-card-ghost"&gt;...&lt;/article&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Tamanos</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">Escalas de padding para densidad visual.</p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                    <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                            data-w4-target="cardSizePreview">Vista previa</button>
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                            data-w4-target="cardSizeCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="cardSizePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-grid w4-grid-2 w4-gap-md">
+                                <article class="w4-card w4-card-xs">
+                                    <div class="w4-card-body"><strong>XS</strong>
+                                        <p class="w4-text w4-text-sm">Padding compacto.</p>
+                                    </div>
+                                </article>
+                                <article class="w4-card w4-card-sm">
+                                    <div class="w4-card-body"><strong>SM</strong>
+                                        <p class="w4-text w4-text-sm">Uso denso.</p>
+                                    </div>
+                                </article>
+                                <article class="w4-card w4-card-md">
+                                    <div class="w4-card-body"><strong>MD</strong>
+                                        <p class="w4-text w4-text-sm">Tamaño base.</p>
+                                    </div>
+                                </article>
+                                <article class="w4-card w4-card-lg">
+                                    <div class="w4-card-body"><strong>LG</strong>
+                                        <p class="w4-text w4-text-sm">Contenido destacado.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div id="cardSizeCode" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                            aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;article class="w4-card w4-card-xs"&gt;&lt;div class="w4-card-body"&gt;...&lt;/div&gt;&lt;/article&gt;
+&lt;article class="w4-card w4-card-sm"&gt;&lt;div class="w4-card-body"&gt;...&lt;/div&gt;&lt;/article&gt;
+&lt;article class="w4-card w4-card-md"&gt;&lt;div class="w4-card-body"&gt;...&lt;/div&gt;&lt;/article&gt;
+&lt;article class="w4-card w4-card-lg"&gt;&lt;div class="w4-card-body"&gt;...&lt;/div&gt;&lt;/article&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Ejemplos de Cards por Caso de Uso</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Ejemplos aplicados a contenido, analitica, elementos interactivos y formularios estructurados.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-grid w4-grid-2 w4-gap-md">
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h5 w4-hdg-primary">Card XS con Imagen Superior</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="cardUseXsPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="cardUseXsCode">Codigo HTML</button>
+                        </div>
+                        <div id="cardUseXsPreview" data-w4-tab-panel class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <article class="w4-card w4-card-xs w4-card-base-100">
+                                <figure class="w4-card-figure">
+                                    <img src="https://picsum.photos/640/220?random=77" alt="Portada del articulo de viaje">
+                                </figure>
+                                <div class="w4-card-body">
+                                    <h4 class="w4-hdg w4-hdg-h6 w4-hdg-primary">Viaje a la Sierra Norte</h4>
+                                    <p class="w4-text w4-text-sm w4-text-neutral">Ruta breve con miradores y pueblos magicos.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="cardUseXsCode" data-w4-tab-panel class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">&lt;article class="w4-card w4-card-xs w4-card-base-100"&gt;
+  &lt;figure class="w4-card-figure"&gt;&lt;img src="..." alt="Portada del articulo de viaje"&gt;&lt;/figure&gt;
+  &lt;div class="w4-card-body"&gt;
+    &lt;h4&gt;Viaje a la Sierra Norte&lt;/h4&gt;
+    &lt;p&gt;Ruta breve con miradores y pueblos magicos.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h5 w4-hdg-primary">Card SM con Grafico</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="cardUseSmPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="cardUseSmCode">Codigo HTML</button>
+                        </div>
+                        <div id="cardUseSmPreview" data-w4-tab-panel class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <article class="w4-card w4-card-sm w4-card-base-100">
+                                <figure class="w4-card-figure">
+                                    <svg viewBox="0 0 320 140" role="img" aria-label="Grafico de tendencia semanal">
+                                        <rect x="0" y="0" width="320" height="140" fill="hsl(var(--w4-base-200))"></rect>
+                                        <polyline fill="none" stroke="hsl(var(--w4-primary))" stroke-width="4" points="20,110 70,90 120,100 170,62 220,74 270,42 300,48"></polyline>
+                                        <line x1="20" y1="118" x2="300" y2="118" stroke="hsl(var(--w4-base-300))" stroke-width="2"></line>
+                                    </svg>
+                                </figure>
+                                <div class="w4-card-body">
+                                    <h4 class="w4-hdg w4-hdg-h6 w4-hdg-primary">Trafico Semanal</h4>
+                                    <p class="w4-text w4-text-sm w4-text-neutral">Crecimiento sostenido en los ultimos siete dias.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="cardUseSmCode" data-w4-tab-panel class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">&lt;article class="w4-card w4-card-sm w4-card-base-100"&gt;
+  &lt;figure class="w4-card-figure"&gt;&lt;svg viewBox="0 0 320 140"&gt;...&lt;/svg&gt;&lt;/figure&gt;
+  &lt;div class="w4-card-body"&gt;
+    &lt;h4&gt;Trafico Semanal&lt;/h4&gt;
+    &lt;p&gt;Crecimiento sostenido en los ultimos siete dias.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h5 w4-hdg-primary">Card MD Interactiva</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="cardUseMdPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="cardUseMdCode">Codigo HTML</button>
+                        </div>
+                        <div id="cardUseMdPreview" data-w4-tab-panel class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <article class="w4-card w4-card-md w4-card-base-100">
+                                <div class="w4-card-body">
+                                    <h4 class="w4-hdg w4-hdg-h6 w4-hdg-primary">Detalle de Destino Interactivo</h4>
+                                    <p class="w4-text w4-text-sm w4-text-neutral">Card clicable para navegar a una vista detallada.</p>
+                                    <a href="#" class="w4-button w4-button-primary w4-button-sm">Abrir Detalle</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="cardUseMdCode" data-w4-tab-panel class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">&lt;article class="w4-card w4-card-md w4-card-base-100"&gt;
+  &lt;div class="w4-card-body"&gt;
+    &lt;h4&gt;Detalle de Destino Interactivo&lt;/h4&gt;
+    &lt;p&gt;Card clicable para navegar a una vista detallada.&lt;/p&gt;
+    &lt;a href="#" class="w4-button w4-button-primary w4-button-sm"&gt;Abrir Detalle&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                    <h3 class="w4-hdg w4-hdg-h5 w4-hdg-primary">Card LG con Formulario</h3>
+                    <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                        <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                                data-w4-target="cardUseLgPreview">Vista previa</button>
+                            <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                                data-w4-target="cardUseLgCode">Codigo HTML</button>
+                        </div>
+                        <div id="cardUseLgPreview" data-w4-tab-panel class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <article class="w4-card w4-card-lg w4-card-base-100">
+                                <div class="w4-card-body">
+                                    <h4 class="w4-hdg w4-hdg-h6 w4-hdg-primary">Datos Personales</h4>
+                                    <p class="w4-text w4-text-sm w4-text-neutral">Seccion de formulario estructurado.</p>
+                                    <div class="w4-stack w4-stack-sm">
+                                        <input type="text" class="w4-input w4-input-bordered" placeholder="Nombre completo">
+                                        <input type="email" class="w4-input w4-input-bordered" placeholder="Correo electronico">
+                                    </div>
+                                    <div class="w4-stack w4-stack-horizontal w4-stack-sm">
+                                        <button class="w4-button w4-button-primary w4-button-sm">Guardar</button>
+                                        <button class="w4-button w4-button-ghost w4-button-sm">Cancelar</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="cardUseLgCode" data-w4-tab-panel class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">&lt;article class="w4-card w4-card-lg w4-card-base-100"&gt;
+  &lt;div class="w4-card-body"&gt;
+    &lt;h4&gt;Datos Personales&lt;/h4&gt;
+    &lt;input type="text" class="w4-input w4-input-bordered" placeholder="Nombre completo"&gt;
+    &lt;input type="email" class="w4-input w4-input-bordered" placeholder="Correo electronico"&gt;
+    &lt;button class="w4-button w4-button-primary w4-button-sm"&gt;Guardar&lt;/button&gt;
+    &lt;button class="w4-button w4-button-ghost w4-button-sm"&gt;Cancelar&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary">Estados Visuales</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">Demostracion de estados por clase y atributo
+                <code>data-w4-state</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                    <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                            data-w4-target="cardVisualStatePreview">Vista previa</button>
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                            data-w4-target="cardVisualStateCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="cardVisualStatePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-grid w4-grid-2 w4-gap-md">
+                                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                                    <h3 class="w4-heading w4-heading-h5 w4-heading-primary">Por Clase</h3>
+                                    <div class="w4-grid w4-grid-2 w4-gap-md">
+                                        <article class="w4-card">
+                                            <div class="w4-card-body">
+                                                <h4 class="w4-hdg w4-hdg-h6 w4-hdg-primary">Enabled</h4>
+                                                <p class="w4-text w4-text-xs w4-text-neutral"><code>.w4-card</code></p>
+                                            </div>
+                                        </article>
+                                        <article class="w4-card w4-card-active">
+                                            <div class="w4-card-body">
+                                                <h4 class="w4-hdg w4-hdg-h6 w4-hdg-primary">Active</h4>
+                                                <p class="w4-text w4-text-xs w4-text-neutral">
+                                                    <code>.w4-card-active</code>
+                                                </p>
+                                            </div>
+                                        </article>
+                                        <article class="w4-card w4-card-disabled">
+                                            <div class="w4-card-body">
+                                                <h4 class="w4-hdg w4-hdg-h6 w4-hdg-primary">Disabled</h4>
+                                                <p class="w4-text w4-text-xs w4-text-neutral">
+                                                    <code>.w4-card-disabled</code>
+                                                </p>
+                                            </div>
+                                        </article>
+                                        <article class="w4-card w4-card-collapsed">
+                                            <div class="w4-card-body">
+                                                <h4 class="w4-hdg w4-hdg-h6 w4-hdg-primary">Collapsed</h4>
+                                                <p class="w4-text w4-text-xs w4-text-neutral">
+                                                    <code>.w4-card-collapsed</code>
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <p class="w4-text w4-text-xs w4-text-neutral mt-2">
+                                        <code>.w4-card-hidden</code> oculta completamente el elemento (no visible en
+                                        preview).
+                                    </p>
+                                </div>
+                                <div class="w4-panel w4-panel-base-100 w4-panel-md">
+                                    <h3 class="w4-heading w4-heading-h5 w4-heading-primary">Por Atributo</h3>
+                                    <div class="w4-grid w4-grid-2 w4-gap-md">
+                                        <article class="w4-card" data-w4-state="enabled">
+                                            <div class="w4-card-body">
+                                                <h4 class="w4-hdg w4-hdg-h6 w4-hdg-primary">Enabled</h4>
+                                                <p class="w4-text w4-text-xs w4-text-neutral">
+                                                    <code>data-w4-state="enabled"</code>
+                                                </p>
+                                            </div>
+                                        </article>
+                                        <article class="w4-card" data-w4-state="active">
+                                            <div class="w4-card-body">
+                                                <h4 class="w4-hdg w4-hdg-h6 w4-hdg-primary">Active</h4>
+                                                <p class="w4-text w4-text-xs w4-text-neutral">
+                                                    <code>data-w4-state="active"</code>
+                                                </p>
+                                            </div>
+                                        </article>
+                                        <article class="w4-card" data-w4-state="disabled">
+                                            <div class="w4-card-body">
+                                                <h4 class="w4-hdg w4-hdg-h6 w4-hdg-primary">Disabled</h4>
+                                                <p class="w4-text w4-text-xs w4-text-neutral">
+                                                    <code>data-w4-state="disabled"</code>
+                                                </p>
+                                            </div>
+                                        </article>
+                                        <article class="w4-card" data-w4-state="collapsed">
+                                            <div class="w4-card-body">
+                                                <h4 class="w4-hdg w4-hdg-h6 w4-hdg-primary">Collapsed</h4>
+                                                <p class="w4-text w4-text-xs w4-text-neutral">
+                                                    <code>data-w4-state="collapsed"</code>
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <p class="w4-text w4-text-xs w4-text-neutral mt-2">
+                                        <code>data-w4-state="hidden"</code> oculta completamente el elemento (no visible
+                                        en preview).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="cardVisualStateCode" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                            aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;!-- Estados por clase --&gt;
+&lt;article class="w4-card"&gt;...enabled...&lt;/article&gt;
+&lt;article class="w4-card w4-card-active"&gt;...&lt;/article&gt;
+&lt;article class="w4-card w4-card-disabled"&gt;...&lt;/article&gt;
+&lt;article class="w4-card w4-card-collapsed"&gt;...&lt;/article&gt;
+&lt;article class="w4-card w4-card-hidden"&gt;...&lt;/article&gt;
+
+&lt;!-- Estados por atributo --&gt;
+&lt;article class="w4-card" data-w4-state="enabled"&gt;...&lt;/article&gt;
+&lt;article class="w4-card" data-w4-state="active"&gt;...&lt;/article&gt;
+&lt;article class="w4-card" data-w4-state="disabled"&gt;...&lt;/article&gt;
+&lt;article class="w4-card" data-w4-state="collapsed"&gt;...&lt;/article&gt;
+&lt;article class="w4-card" data-w4-state="hidden"&gt;...&lt;/article&gt;</code></pre>
+                        </div>
+                        </article>
+                    </div>
+                </div>
+        </section>
+
+        <section class="w4-section w4-section-xl">
+            <h2 class="w4-hdg w4-hdg-h2 w4-hdg-primary w4-hdg-start">Estados Nativos Javascript Soportados al Componente
+                Card</h2>
+            <p class="w4-text w4-text-lg w4-text-neutral">
+                Controles para probar transiciones usando <code>data-w4-card-state</code> y <code>data-w4-target</code>.
+            </p>
+            <hr class="w4-divider w4-divider-primary">
+            <div class="w4-panel w4-panel-base-200 w4-panel-md">
+                <p class="w4-text w4-text-sm w4-text-neutral">Playground: aplica estados JS al Card de prueba.</p>
+                <div class="w4-stack w4-stack-sm w4-tab-lifted-content-panels">
+                    <div class="w4-tabs w4-tabs-lifted" data-w4-component="tab">
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-primary w4-tab-active"
+                            data-w4-target="cardJsStatePreview">Vista previa</button>
+                        <button type="button" class="w4-tab w4-tab-lifted w4-tab-secondary"
+                            data-w4-target="cardJsStateCode">Codigo HTML</button>
+                    </div>
+                    <div class="w4-stack w4-stack-sm">
+                        <div id="cardJsStatePreview" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-100 w4-panel-sm">
+                            <div class="w4-stack w4-stack-md">
+                                <article id="labCardTarget" class="w4-card w4-card-base-100" data-w4-component="card">
+                                    <div class="w4-card-body">
+                                        <h3 class="w4-heading w4-heading-h4 w4-heading-primary">Card de Prueba</h3>
+                                        <p class="w4-text w4-text-neutral">Usa los botones para cambiar el estado.</p>
+                                        <button class="w4-button w4-button-primary w4-button-sm">Accion Interna</button>
+                                    </div>
+                                </article>
+                                <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm">
+                                    <button type="button" class="w4-button w4-button-sm w4-button-ghost"
+                                        data-w4-card-state="enabled" data-w4-target="labCardTarget">State Clear</button>
+                                    <button type="button" class="w4-button w4-button-sm w4-button-info"
+                                        data-w4-card-state="active" data-w4-target="labCardTarget">Active</button>
+                                    <button type="button" class="w4-button w4-button-sm w4-button-warning"
+                                        data-w4-card-state="disabled" data-w4-target="labCardTarget">Disabled</button>
+                                    <button type="button" class="w4-button w4-button-sm w4-button-error"
+                                        data-w4-card-state="hidden" data-w4-target="labCardTarget">Hidden</button>
+                                    <button type="button" class="w4-button w4-button-sm w4-button-secondary"
+                                        data-w4-card-state="collapsed" data-w4-target="labCardTarget">Collapsed</button>
+                                </div>
+                                <p class="w4-text w4-text-sm w4-text-neutral">
+                                    Los controles usan la API declarativa del componente:
+                                    <code>data-w4-card-state</code>.
+                                </p>
+                            </div>
+                        </div>
+                        <div id="cardJsStateCode" data-w4-tab-panel
+                            class="w4-tab-content w4-tab-lifted-content w4-panel w4-panel-base-200 w4-panel-sm" hidden
+                            aria-hidden="true">
+                            <pre class="m-0"><code class="w4-text w4-text-xs">
+&lt;article id="labCardTarget" class="w4-card w4-card-base-100" data-w4-component="card"&gt;
+  &lt;div class="w4-card-body"&gt;...&lt;/div&gt;
+&lt;/article&gt;
+
+&lt;button data-w4-card-state="enabled" data-w4-target="labCardTarget"&gt;State Clear&lt;/button&gt;
+&lt;button data-w4-card-state="active" data-w4-target="labCardTarget"&gt;Active&lt;/button&gt;
+&lt;button data-w4-card-state="disabled" data-w4-target="labCardTarget"&gt;Disabled&lt;/button&gt;
+&lt;button data-w4-card-state="hidden" data-w4-target="labCardTarget"&gt;Hidden&lt;/button&gt;
+&lt;button data-w4-card-state="collapsed" data-w4-target="labCardTarget"&gt;Collapsed&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
