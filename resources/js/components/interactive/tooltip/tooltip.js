@@ -10,12 +10,10 @@ import W4Core from '../../../core.js';
 
 export default class W4Tooltip {
     static init(root = document) {
-        // We use event delegation on the document to handle touch events for mobile tooltips
-        root.addEventListener('touchstart', this.handleTouchStart.bind(this));
-        root.addEventListener('click', this.handleClickOutside.bind(this));
-
         // Register state handlers for the Tooltip component via W4Core
         this.registerStateHandlers();
+        this.bindInteractionHandlers(root);
+        this.bindStateTriggers(root);
     }
 
     /**
@@ -31,6 +29,31 @@ export default class W4Tooltip {
         W4Core.on('tooltip:open', this.handleOpen);
 
         this.handlersRegistered = true;
+    }
+
+    static bindInteractionHandlers(root = document) {
+        if (this.interactionsBound) return;
+
+        // We use event delegation on the document to handle touch events for mobile tooltips
+        root.addEventListener('touchstart', this.handleTouchStart.bind(this));
+        root.addEventListener('click', this.handleClickOutside.bind(this));
+
+        this.interactionsBound = true;
+    }
+
+    static bindStateTriggers(root = document) {
+        if (this.triggersBound) return;
+
+        root.addEventListener('click', (event) => {
+            const trigger = event.target.closest('[data-w4-tooltip-state]');
+            if (!trigger) return;
+
+            const state = trigger.getAttribute('data-w4-tooltip-state') || 'enabled';
+            const targetId = trigger.getAttribute('data-w4-target') || 'labTooltipTarget';
+            this.setState(targetId, state);
+        });
+
+        this.triggersBound = true;
     }
 
     static handleEnabled({ element }) {
@@ -94,5 +117,52 @@ export default class W4Tooltip {
     static closeAll() {
         const activeTooltips = document.querySelectorAll('.w4-tooltip.w4-tooltip-active');
         activeTooltips.forEach(t => t.classList.remove('w4-tooltip-active'));
+    }
+
+    static setState(targetOrId, state = 'enabled') {
+        const element = this.resolveElement(targetOrId);
+        if (!element) return;
+
+        const nextState = String(state || 'enabled').toLowerCase();
+        this.resetState(element);
+
+        if (nextState === 'enabled') {
+            if (typeof W4Core?.syncElement === 'function') {
+                W4Core.syncElement(element);
+            }
+            return;
+        }
+
+        element.setAttribute('data-w4-state', nextState);
+
+        if (nextState === 'open') {
+            element.classList.add('w4-tooltip-open');
+        } else if (nextState === 'active') {
+            element.classList.add('w4-tooltip-active');
+        } else if (nextState === 'disabled') {
+            element.classList.add('w4-tooltip-disabled');
+            element.setAttribute('aria-disabled', 'true');
+        } else if (nextState === 'hidden') {
+            element.classList.add('w4-tooltip-hidden');
+        }
+
+        if (typeof W4Core?.syncElement === 'function') {
+            W4Core.syncElement(element);
+        }
+    }
+
+    static resetState(element) {
+        element.classList.remove('w4-tooltip-open', 'w4-tooltip-active', 'w4-tooltip-hidden', 'w4-tooltip-disabled');
+        element.removeAttribute('data-w4-state');
+        element.removeAttribute('data-w4-hook');
+        element.removeAttribute('aria-disabled');
+        element.style.pointerEvents = '';
+        element.style.opacity = '';
+    }
+
+    static resolveElement(targetOrId) {
+        if (!targetOrId) return null;
+        if (targetOrId instanceof Element) return targetOrId;
+        return document.getElementById(String(targetOrId));
     }
 }

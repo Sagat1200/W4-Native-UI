@@ -520,7 +520,7 @@
                             <div class="w4-stack w4-stack-horizontal w4-stack-wrap w4-stack-sm w4-stack-between">
                                 <div class="w4-panel w4-panel-base-200 w4-panel-sm">
                                     <button type="button" class="w4-button w4-button-sm w4-button-success"
-                                        data-w4-toggle="modal" data-w4-target="labModalTarget">Estado Modal</button>
+                                        data-w4-toggle="modal" data-w4-target="labModalTarget">Modal de Prueba</button>
                                 </div>
                                 <div class="w4-panel w4-panel-base-200 w4-panel-sm w4-stack w4-stack-xl">
                                     <button type="button" class="w4-button w4-button-sm w4-button-neutral"
